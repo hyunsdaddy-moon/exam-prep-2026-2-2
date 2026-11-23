@@ -10,11 +10,11 @@
  * 점수는 과목·회차마다 「처음 응시한 것」으로 센다 — 진단은 한 번이 의미가 있으므로.
  */
 
-import { el, newId } from './dom.js?v=20261123-1818';
-import { loadRecords, getCurrentLearner, getSavedLearners, setCurrentLearner } from './store.js?v=20261123-1818';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261123-1818';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261123-1818';
-import { avatar } from './characters.js?v=20261123-1818';
+import { el, newId } from './dom.js?v=20261123-1840';
+import { loadRecords, getCurrentLearner, getSavedLearners, setCurrentLearner } from './store.js?v=20261123-1840';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261123-1840';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261123-1840';
+import { avatar } from './characters.js?v=20261123-1840';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
@@ -26,6 +26,8 @@ const MINUTES = 25;
 
 /** 그래프 색 — 1차·2차는 같은 파랑의 옅음·짙음, 나·경쟁자는 파랑·주황 (dataviz 검사 통과) */
 const COLOR = { d1: '#8fbaf0', d2: '#0071e3', me: '#0071e3', rival: '#d9730d' };
+/** 경쟁자들 색 — 나(파랑) 다음으로 주황·초록·보라·분홍·청록 순 */
+const RIVAL_COLORS = ['#d9730d', '#2e9d5b', '#8e5bd0', '#d6457a', '#1a9aa0', '#8a8f98'];
 
 const papers = new Map();
 function loadAssess(ctx, code) {
@@ -117,7 +119,7 @@ function barPath(x, y, w, h, r = 4) {
  * 값 글자는 막대 위에 검은 글씨로, 빈 값은 「미응시」로 적는다.
  */
 function groupedBars(categories, series, { max = 100, height = 300 } = {}) {
-  const W = Math.max(560, categories.length * (series.length * 34 + 40));
+  const W = Math.max(560, categories.length * (series.length * (series.length > 2 ? 22 : 34) + 40));
   const top = 26, bottom = 54, left = 34, right = 8;
   const H = height;
   const plotH = H - top - bottom;
@@ -225,37 +227,53 @@ async function renderAssessHome(ctx, exam, query) {
     ])
   );
 
-  /* 경쟁자 비교 */
+  /* 경쟁자 비교 — 나와 다른 참여자 모두를 한 그래프에 나란히 */
   let compare;
-  if (!rival) {
+  if (!others.length) {
     compare = el('section.section', {},
       el('div.section-head', {}, el('h2', { text: '경쟁자와 비교' }), el('p', { text: '홈 화면의 「참여자별 진도율」에서 다른 참여자를 추가하면 점수를 나란히 비교할 수 있습니다.' })),
       el('a.pill.ghost', { href: '#/', text: '참여자 추가하러 가기' })
     );
   } else {
-    const theirs = data.scores.get(rival) || emptyScore();
-    const select = el('select.learner-select', { 'aria-label': '비교할 경쟁자' }, others.map((n) => el('option', { value: n, text: n })));
-    select.value = rival;
-    select.addEventListener('change', () => go({ vs: select.value }));
+    const people = [me, ...others];
+    const colorOf = (i) => (i === 0 ? COLOR.me : RIVAL_COLORS[(i - 1) % RIVAL_COLORS.length]);
+    const shown = new Set(people);
     const roundSeg = el('div.segment', { role: 'group', 'aria-label': '비교할 회차' },
       ROUNDS.map((r) => el('button', { type: 'button', text: r.short, 'aria-pressed': String(r.id === cmpRound), onclick: () => go({ r: r.id }) }))
     );
-    const mA = average(mine[cmpRound], subjects, theirs[cmpRound]);
-    const tA = average(theirs[cmpRound], subjects, mine[cmpRound]);
-    const gap = deltaText(tA, mA);
-    compare = el('section.section', {},
-      el('div.section-head', {},
-        el('h2', { text: '경쟁자와 비교' }),
-        el('p', { text: mA == null || tA == null ? `${roundById(cmpRound).title} 점수를 과목별로 나란히 봅니다. 둘 다 응시한 과목부터 막대가 생깁니다.` : `${roundById(cmpRound).title} · 둘 다 본 과목 평균 — ${me} ${mA}점 · ${rival} ${tA}점 (${gap.d > 0 ? `${gap.d}점 앞섬` : gap.d < 0 ? `${Math.abs(gap.d)}점 뒤짐` : '동점'})` })
-      ),
-      el('div.compare-controls', {}, el('label', {}, '경쟁자 ', select), roundSeg),
-      groupedBars(
+    const avgOf = (name) => average((data.scores.get(name) || emptyScore())[cmpRound], subjects);
+    const summary = el('p');
+    const chartBox = el('div');
+    const draw = () => {
+      const list = people.filter((n) => shown.has(n));
+      const ranked = list.map((n) => ({ n, a: avgOf(n) })).filter((x) => x.a != null).sort((a, b) => b.a - a.a);
+      summary.textContent = ranked.length
+        ? `${roundById(cmpRound).title} 평균(본 과목 기준) — ${ranked.map((x, i) => `${i + 1}위 ${x.n} ${x.a}점`).join(' · ')}`
+        : `${roundById(cmpRound).title} 점수를 과목별로 나란히 봅니다. 응시한 과목부터 막대가 생깁니다.`;
+      chartBox.replaceChildren(groupedBars(
         [...subjects.map((sub) => ({ label: sub.subject })), { label: '평균' }],
-        [
-          { name: me, color: COLOR.me, values: [...subjects.map((sub) => mine[cmpRound][sub.code]?.score ?? null), mA] },
-          { name: rival, color: COLOR.rival, values: [...subjects.map((sub) => theirs[cmpRound][sub.code]?.score ?? null), tA] },
-        ]
-      )
+        list.map((name) => {
+          const sc = (data.scores.get(name) || emptyScore())[cmpRound];
+          return { name: name === me ? `${name}(나)` : name, color: colorOf(people.indexOf(name)), values: [...subjects.map((sub) => sc[sub.code]?.score ?? null), avgOf(name)] };
+        })
+      ));
+    };
+    const chips = el('div.compare-people', { role: 'group', 'aria-label': '그래프에 보일 사람' },
+      people.map((name, i) => {
+        const box = el('input', { type: 'checkbox', checked: true, onchange: () => {
+          if (box.checked) shown.add(name);
+          else if (shown.size > 1) shown.delete(name);
+          else box.checked = true; // 한 명은 남겨 둔다
+          draw();
+        } });
+        return el('label.person-chip', {}, box, el('i', { style: `background:${colorOf(i)}` }), name === me ? `${name}(나)` : name);
+      })
+    );
+    draw();
+    compare = el('section.section', {},
+      el('div.section-head', {}, el('h2', { text: '경쟁자와 비교' }), summary),
+      el('div.compare-controls', {}, chips, roundSeg),
+      chartBox
     );
   }
 
