@@ -13,7 +13,7 @@ import { renderSolveRoute, renderHistory } from './solve.js';
 import { loadStudy } from './study.js';
 import { renderPrint, printLinks } from './print.js';
 import { ring, conceptLegend, renderNotes } from './notes.js';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner } from './store.js';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js';
 import { dday, CONCEPT_LABEL } from './progress.mjs';
 
 const app = document.getElementById('app');
@@ -52,6 +52,13 @@ const shortUnit = (u) => u.replace(/\s+—\s+.*$/, '').replace(/\s*·\s*필수 �
 
 let lastLearnerNames = [];
 
+const SYNC_LABEL = { connected: '실시간 공유', connecting: '연결 중', offline: '오프라인' };
+
+function syncBadge() {
+  const status = getSyncStatus();
+  return el(`span.sync-badge.${status}`, { text: SYNC_LABEL[status] || status, title: '여러 기기 간 실시간 동기화 상태' });
+}
+
 function renderNavLearner(names) {
   if (!navLearner) return;
   if (Array.isArray(names) && names.length) lastLearnerNames = names;
@@ -63,7 +70,7 @@ function renderNavLearner(names) {
     setCurrentLearner(select.value);
     void route();
   });
-  navLearner.replaceChildren(select);
+  navLearner.replaceChildren(syncBadge(), select);
 }
 
 function setNav(code) {
@@ -581,6 +588,16 @@ async function start() {
   footText.textContent = `${data.exam.title} · 자료를 가져온 때 ${new Date(data.exam.importedAt).toLocaleString('ko-KR')}`;
   const go = () => route().catch(() => renderMissing('화면을 그리지 못했습니다. 자료를 다시 가져온 뒤 새로 고쳐 주세요.'));
   window.addEventListener('hashchange', () => void go());
+  let refreshTimer = null;
+  subscribeCloud(() => {
+    renderNavLearner();
+    const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/').filter(Boolean);
+    const liveView = parts.length === 0 || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
+    const tag = document.activeElement?.tagName;
+    if (!liveView || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    clearTimeout(refreshTimer);
+    refreshTimer = setTimeout(() => void go(), 300);
+  });
   await go();
 }
 

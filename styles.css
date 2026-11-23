@@ -444,7 +444,13 @@ button.link:hover { text-decoration: underline; }
 }
 
 /* ── 참여자별 진도율 ─────────────────────────────────────────── */
-.nav-learner { flex: none; margin-left: auto; }
+.nav-learner { flex: none; margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.sync-badge {
+  font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 980px;
+  background: var(--bg-soft); color: var(--text-2); white-space: nowrap;
+}
+.sync-badge.connected { background: color-mix(in srgb, var(--good) 14%, transparent); color: var(--good); }
+.sync-badge.offline { background: color-mix(in srgb, var(--warn) 14%, transparent); color: var(--warn); }
 .learner-select {
   font: inherit; font-size: 13px; font-weight: 500;
   color: var(--text); background: var(--bg-soft);
@@ -484,8 +490,9 @@ button.link:hover { text-decoration: underline; }
 
 /* ── 좁은 화면 ─────────────────────────────────────────── */
 @media (max-width: 860px) {
-  .nav-inner { gap: 14px; padding: 0 14px; }
+  .nav-inner { gap: 10px; padding: 0 12px; }
   .nav-links { flex: 1; min-width: 0; }
+  .sync-badge { display: none; }
   .learner-select { max-width: 110px; padding: 4px 8px; font-size: 12px; }
   .learner-input { width: 170px; }
   .reader { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 24px; }
