@@ -1,0 +1,937 @@
+{
+  "schema": 1,
+  "concepts": [
+    {
+      "id": "sci-01-01",
+      "subject": "과학",
+      "unit": "5.2 힘과 우리 생활",
+      "title": "알짜힘과 힘의 평형",
+      "importance": 1,
+      "doc": "과학_시험공부/01_5.2_힘과우리생활.md",
+      "heading": "01. 알짜힘과 힘의 평형 (교과서 p.174~175)",
+      "parts": [
+        "알짜힘이란?",
+        "나란하게 작용하는 두 힘의 알짜힘 구하기",
+        "알짜힘이 0일 때의 운동 (힘의 평형)"
+      ]
+    },
+    {
+      "id": "sci-01-02",
+      "subject": "과학",
+      "unit": "5.2 힘과 우리 생활",
+      "title": "힘과 운동",
+      "importance": 2,
+      "doc": "과학_시험공부/01_5.2_힘과우리생활.md",
+      "heading": "02. 힘과 운동 (교과서 p.176~179)",
+      "parts": [
+        "알짜힘이 0이 아닐 때 운동 상태의 변화",
+        "시험 단골! 운동 분류 순서도 완벽 암기"
+      ]
+    },
+    {
+      "id": "sci-01-03",
+      "subject": "과학",
+      "unit": "5.2 힘과 우리 생활",
+      "title": "여러 가지 힘의 이용",
+      "importance": 2,
+      "doc": "과학_시험공부/01_5.2_힘과우리생활.md",
+      "heading": "03. 여러 가지 힘의 이용 (교과서 p.180~183)",
+      "parts": [
+        "일상생활 속 힘의 평형",
+        "탐구 집중! 장난감 잠수함의 원리",
+        "생활 속 기구·장치에 이용된 힘 총정리"
+      ]
+    },
+    {
+      "id": "sci-01-04",
+      "subject": "과학",
+      "unit": "5.2 힘과 우리 생활",
+      "title": "5단원 연계 필수 공식 & 고배점 기출 계산 공식",
+      "importance": 2,
+      "doc": "과학_시험공부/01_5.2_힘과우리생활.md",
+      "heading": "🔥 5단원 연계 필수 공식 & 고배점 기출 계산 공식 (2025 KIS 5.0점 문항 대비!)",
+      "parts": [
+        "① 질량 vs 무게",
+        "② 용수철 탄성력 계산",
+        "③ 부력 계산 3단계",
+        "④ 탄성력과 마찰력의 방향 구분"
+      ]
+    },
+    {
+      "id": "sci-02-01",
+      "subject": "과학",
+      "unit": "6.2 기체의 온도와 부피",
+      "title": "샤를 법칙과 온도-부피 그래프",
+      "importance": 2,
+      "doc": "과학_시험공부/02_6.2_기체의온도와부피.md",
+      "heading": "01. 샤를 법칙과 온도-부피 그래프 (교과서 p.208~211)",
+      "parts": [
+        "샤를 법칙이란?",
+        "온도-부피 그래프 완벽 해석"
+      ]
+    },
+    {
+      "id": "sci-02-02",
+      "subject": "과학",
+      "unit": "6.2 기체의 온도와 부피",
+      "title": "입자 모형으로 설명하는 샤를 법칙",
+      "importance": 3,
+      "doc": "과학_시험공부/02_6.2_기체의온도와부피.md",
+      "heading": "02. 입자 모형으로 설명하는 샤를 법칙 (교과서 p.210~211) ⭐ 최다 출제!",
+      "parts": [
+        "온도가 변할 때 일어나는 단계별 인과관계 (서술형 핵심!)",
+        "2)"
+      ]
+    },
+    {
+      "id": "sci-02-03",
+      "subject": "과학",
+      "unit": "6.2 기체의 온도와 부피",
+      "title": "생활 속의 샤를 법칙 vs 보일 법칙",
+      "importance": 2,
+      "doc": "과학_시험공부/02_6.2_기체의온도와부피.md",
+      "heading": "03. 생활 속의 샤를 법칙 vs 보일 법칙 (교과서 p.212~222) ⭐ KIS 기출 적중!",
+      "parts": [
+        "샤를 법칙으로 설명하는 현상 (키워드: **온도 변화 — 뜨거움, 차가움, 냉장고, 햇빛, 겨울, 가열**)",
+        "보일 법칙 vs 샤를 법칙 구분표"
+      ]
+    },
+    {
+      "id": "sci-03-01",
+      "subject": "과학",
+      "unit": "7.2~7.4 지구와 달의 운동",
+      "title": "지구의 공전과 별자리 변화",
+      "importance": 2,
+      "doc": "과학_시험공부/03_7.2-7.4_지구와달의운동.md",
+      "heading": "01. 지구의 공전과 별자리 변화 (교과서 p.248~251)",
+      "parts": [
+        "지구의 공전과 겉보기 운동 방향",
+        "황도 12궁과 월별 별자리 읽기"
+      ]
+    },
+    {
+      "id": "sci-03-02",
+      "subject": "과학",
+      "unit": "7.2~7.4 지구와 달의 운동",
+      "title": "달의 위상 변화",
+      "importance": 2,
+      "doc": "과학_시험공부/03_7.2-7.4_지구와달의운동.md",
+      "heading": "02. 달의 위상 변화 (교과서 p.252~255)",
+      "parts": [
+        "달의 위상이 변하는 까닭",
+        "달의 위치별 위상·모양·음력 날짜 완벽표"
+      ]
+    },
+    {
+      "id": "sci-03-03",
+      "subject": "과학",
+      "unit": "7.2~7.4 지구와 달의 운동",
+      "title": "일식과 월식",
+      "importance": 3,
+      "doc": "과학_시험공부/03_7.2-7.4_지구와달의운동.md",
+      "heading": "03. 일식과 월식 (교과서 p.256~259) ⭐ 비교 문제 최다 출제!",
+      "parts": [
+        "일식 vs 월식 한눈에 비교표"
+      ]
+    },
+    {
+      "id": "kor-01-01",
+      "subject": "국어",
+      "unit": "2-(1) 추론하며 이해하기",
+      "title": "추론하며 읽기란?",
+      "importance": 2,
+      "doc": "국어_시험공부/01_국어A_추론하기_주장하는글.md",
+      "heading": "01. 추론하며 읽기란? (p.66, p.75)",
+      "parts": [
+        "개념",
+        "글쓴이의 의도와 관점을 추론하는 3가지 방법 (p.75 개념 쏙쏙"
+      ]
+    },
+    {
+      "id": "kor-01-02",
+      "subject": "국어",
+      "unit": "2-(1) 추론하며 이해하기",
+      "title": "본문 완벽 분석 — 〈모든 치킨은 옳을까?〉 (이지선, p.68~72)",
+      "importance": 2,
+      "doc": "국어_시험공부/01_국어A_추론하기_주장하는글.md",
+      "heading": "02. 본문 완벽 분석 — 〈모든 치킨은 옳을까?〉 (이지선, p.68~72)",
+      "parts": [
+        "글의 전체 구성과 핵심 내용",
+        "시험 100% 적중! 추론하기 6대 핵심 질문 & 모범 답안",
+        "외부 자료(신문 기사) 연결 추론 & 글쓴이의 궁극적 의도"
+      ]
+    },
+    {
+      "id": "kor-01-03",
+      "subject": "국어",
+      "unit": "4-(2) 주장하는 글 쓰기",
+      "title": "설득력 있는 주장 vs 설득력 약한 주장",
+      "importance": 1,
+      "doc": "국어_시험공부/01_국어A_추론하기_주장하는글.md",
+      "heading": "01. 설득력 있는 주장 vs 설득력 약한 주장 (p.168)",
+      "parts": []
+    },
+    {
+      "id": "kor-01-04",
+      "subject": "국어",
+      "unit": "4-(2) 주장하는 글 쓰기",
+      "title": "주장하는 글 쓰기 5단계",
+      "importance": 2,
+      "doc": "국어_시험공부/01_국어A_추론하기_주장하는글.md",
+      "heading": "02. 주장하는 글 쓰기 5단계 완벽 정리 (p.170~175)",
+      "parts": [
+        "① 1단계: 계획하기",
+        "② 2단계: 내용 생성하기 — 자료 선별의 2대 기준",
+        "③ 3단계: 내용 조직하기 — 개요의 정확한 매칭",
+        "④ 4~5단계: 표현하기 & 고쳐쓰기",
+        "⑤ 소단원 핵심 용어 4개"
+      ]
+    },
+    {
+      "id": "kor-02-01",
+      "subject": "국어",
+      "unit": "국어A — 3-(2) 단어의 짜임",
+      "title": "형태소의 개념과 4가지 분류",
+      "importance": 2,
+      "doc": "국어_시험공부/02_국어A_단어의짜임.md",
+      "heading": "01. 형태소의 개념과 4가지 분류 (교과서 p.127~128)",
+      "parts": [
+        "형태소란?",
+        "교과서 p.127 단어 형태소 분석 정답표",
+        "형태소의 2가지 분류 기준",
+        "시험 100% 출제! 교과서 문장 분석"
+      ]
+    },
+    {
+      "id": "kor-02-02",
+      "subject": "국어",
+      "unit": "국어A — 3-(2) 단어의 짜임",
+      "title": "어근과 접사",
+      "importance": 2,
+      "doc": "국어_시험공부/02_국어A_단어의짜임.md",
+      "heading": "02. 어근과 접사 (교과서 p.129, p.132)",
+      "parts": [
+        "개념 구별",
+        "교과서 p.129 표 정답 (함정 단어 감나무 주의! )",
+        "시험에 단골로 나오는 필수 접사 뜻·기능 총정리"
+      ]
+    },
+    {
+      "id": "kor-02-03",
+      "subject": "국어",
+      "unit": "국어A — 3-(2) 단어의 짜임",
+      "title": "단어의 짜임: 단일어 vs 복합어(합성어 · 파생어)",
+      "importance": 1,
+      "doc": "국어_시험공부/02_국어A_단어의짜임.md",
+      "heading": "03. 단어의 짜임: 단일어 vs 복합어(합성어 · 파생어) (교과서 p.130~132)",
+      "parts": [
+        "교과서 p.130 & p.131 학습 활동 정답표",
+        "헷갈리는 단어 판별 훈련표 (시험 100% 함정 탈출!)"
+      ]
+    },
+    {
+      "id": "kor-02-04",
+      "subject": "국어",
+      "unit": "국어A — 3-(2) 단어의 짜임",
+      "title": "새말의 형성 원리와 외국어 다듬기",
+      "importance": 1,
+      "doc": "국어_시험공부/02_국어A_단어의짜임.md",
+      "heading": "04. 새말의 형성 원리와 외국어 다듬기 (교과서 p.133~139)",
+      "parts": [
+        "새말(신조어)이 만들어지는 3가지 방법",
+        "외국어에서 차용된 새말의 문제점 & 우리말 다듬기 기준"
+      ]
+    },
+    {
+      "id": "kor-03-01",
+      "subject": "국어",
+      "unit": "7강: 감각적 심상 · 필수 어휘 10개 · 사자성어 6개",
+      "title": "시의 주요 개념 — 심상(心象, 이미지)",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "01. 시의 주요 개념 — 심상(心象, 이미지)",
+      "parts": []
+    },
+    {
+      "id": "kor-03-02",
+      "subject": "국어",
+      "unit": "7강: 감각적 심상 · 필수 어휘 10개 · 사자성어 6개",
+      "title": "7강 필수 어휘 (10개)",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "02. 7강 필수 어휘 (10개)",
+      "parts": []
+    },
+    {
+      "id": "kor-03-03",
+      "subject": "국어",
+      "unit": "7강: 감각적 심상 · 필수 어휘 10개 · 사자성어 6개",
+      "title": "7강 사자성어 (6개)",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "03. 7강 사자성어 (6개)",
+      "parts": []
+    },
+    {
+      "id": "kor-03-04",
+      "subject": "국어",
+      "unit": "8강: 화자의 태도·어조 · 필수 어휘 9개 · 사자성어 6개",
+      "title": "시의 주요 개념 — 화자의 태도·어조 4종",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "01. 시의 주요 개념 — 화자의 태도·어조 4종",
+      "parts": []
+    },
+    {
+      "id": "kor-03-05",
+      "subject": "국어",
+      "unit": "8강: 화자의 태도·어조 · 필수 어휘 9개 · 사자성어 6개",
+      "title": "8강 필수 어휘 (9개)",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "02. 8강 필수 어휘 (9개)",
+      "parts": []
+    },
+    {
+      "id": "kor-03-06",
+      "subject": "국어",
+      "unit": "8강: 화자의 태도·어조 · 필수 어휘 9개 · 사자성어 6개",
+      "title": "8강 사자성어 (6개)",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "03. 8강 사자성어 (6개)",
+      "parts": []
+    },
+    {
+      "id": "kor-03-07",
+      "subject": "국어",
+      "unit": "9강: 복합·공감각 심상 & 형상화 · 필수 어휘 10개 · 사자성어 6개",
+      "title": "시의 주요 개념 — 복합 감각 vs 공감각적 심상 & 형상화",
+      "importance": 2,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "01. 시의 주요 개념 — 복합 감각 vs 공감각적 심상 & 형상화 ⭐",
+      "parts": [
+        "복합 감각 심상 vs 공감각적 심상 (시험 1순위 함정!)",
+        "9강 STEP 5 실전 문제 7개 완벽 정답 & 해설 (교재 빈칸 채우기용!)",
+        "형상화 (모양 形, 코끼리 象, 될 化)"
+      ]
+    },
+    {
+      "id": "kor-03-08",
+      "subject": "국어",
+      "unit": "9강: 복합·공감각 심상 & 형상화 · 필수 어휘 10개 · 사자성어 6개",
+      "title": "9강 필수 어휘 (10개)",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "02. 9강 필수 어휘 (10개)",
+      "parts": []
+    },
+    {
+      "id": "kor-03-09",
+      "subject": "국어",
+      "unit": "9강: 복합·공감각 심상 & 형상화 · 필수 어휘 10개 · 사자성어 6개",
+      "title": "9강 사자성어 (6개)",
+      "importance": 1,
+      "doc": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+      "heading": "03. 9강 사자성어 (6개)",
+      "parts": []
+    },
+    {
+      "id": "mor-01-01",
+      "subject": "도덕",
+      "unit": "Ⅱ.2 우정이 소중한 이유는 무엇일까?",
+      "title": "친구야, 너는 소중한 사람이야",
+      "importance": 2,
+      "doc": "도덕_시험공부/01_2단원_우정과_가상공간.md",
+      "heading": "01. 친구야, 너는 소중한 사람이야 (p.76~79)",
+      "parts": [
+        "친구와 우정의 의미",
+        "친구와 우정에 관한 명언",
+        "우정이 소중한 이유 3가지"
+      ]
+    },
+    {
+      "id": "mor-01-02",
+      "subject": "도덕",
+      "unit": "Ⅱ.2 우정이 소중한 이유는 무엇일까?",
+      "title": "우리는 좋은 친구가 될 거야",
+      "importance": 2,
+      "doc": "도덕_시험공부/01_2단원_우정과_가상공간.md",
+      "heading": "02. 우리는 좋은 친구가 될 거야 (p.80~85)",
+      "parts": [
+        "공자가 말한 이로운 벗 vs 해로운 벗 (『논어』, p.80)",
+        "좋은 친구의 모습 3가지",
+        "좋은 친구가 되는 방법 4가지",
+        "서로를 존중하는 우정 사례 3편",
+        "Ⅱ.2 교과서 확인 O/X"
+      ]
+    },
+    {
+      "id": "mor-01-03",
+      "subject": "도덕",
+      "unit": "Ⅱ.3 가상공간에서 타인을 어떻게 대해야 할까?",
+      "title": "가상공간, 삶에서 접하는 또 다른 세계",
+      "importance": 2,
+      "doc": "도덕_시험공부/01_2단원_우정과_가상공간.md",
+      "heading": "01. 가상공간, 삶에서 접하는 또 다른 세계 (p.90~93)",
+      "parts": [
+        "가상공간의 의미와 5대 특성",
+        "가상공간과 현실 세계의 관계"
+      ]
+    },
+    {
+      "id": "mor-01-04",
+      "subject": "도덕",
+      "unit": "Ⅱ.3 가상공간에서 타인을 어떻게 대해야 할까?",
+      "title": "가상공간에서 발생하는 도덕 문제",
+      "importance": 2,
+      "doc": "도덕_시험공부/01_2단원_우정과_가상공간.md",
+      "heading": "02. 가상공간에서 발생하는 도덕 문제 (p.94~97) ⭐ KIS 기출 4번 적중!",
+      "parts": []
+    },
+    {
+      "id": "mor-01-05",
+      "subject": "도덕",
+      "unit": "Ⅱ.3 가상공간에서 타인을 어떻게 대해야 할까?",
+      "title": "가상공간을 올바르게 활용하자",
+      "importance": 2,
+      "doc": "도덕_시험공부/01_2단원_우정과_가상공간.md",
+      "heading": "03. 가상공간을 올바르게 활용하자 (p.98~105)",
+      "parts": [
+        "가상공간에서 도덕 문제가 발생하는 3가지 원인",
+        "가상공간에서 타인을 대할 때 필요한 4대 도덕적 자세",
+        "가상공간을 올바르게 활용하는 5가지 실천 방법",
+        "Ⅱ.3 교과서 확인 & 대단원 마무리"
+      ]
+    },
+    {
+      "id": "mor-02-01",
+      "subject": "도덕",
+      "unit": "Ⅲ.1 인권은 보편적 가치일까?",
+      "title": "인권, 한 사람 안에 깃든 우주의 가치",
+      "importance": 2,
+      "doc": "도덕_시험공부/02_3단원_인권과_문화종교공존.md",
+      "heading": "01. 인권, 한 사람 안에 깃든 우주의 가치 (p.114~119)",
+      "parts": [
+        "인간 존엄성과 동서양의 인간 존중 사상",
+        "인권의 의미와 세계 인권 선언",
+        "인권 개념의 발전과 확장: 1·2·3세대 인권",
+        "인권의 4대 특징과 도덕적 가치"
+      ]
+    },
+    {
+      "id": "mor-02-02",
+      "subject": "도덕",
+      "unit": "Ⅲ.1 인권은 보편적 가치일까?",
+      "title": "인권 감수성으로 인권 침해를 극복하자",
+      "importance": 2,
+      "doc": "도덕_시험공부/02_3단원_인권과_문화종교공존.md",
+      "heading": "02. 인권 감수성으로 인권 침해를 극복하자 (p.120~127)",
+      "parts": [
+        "인권 침해의 모습",
+        "인권 침해의 원인 2가지 vs 해결 방안 2가지",
+        "인권 감수성",
+        "Ⅲ.1 교과서 확인 O/X"
+      ]
+    },
+    {
+      "id": "mor-02-03",
+      "subject": "도덕",
+      "unit": "Ⅲ.2 다양한 문화·종교는 어떻게 공존할 수 있을까?",
+      "title": "편견을 넘어 다양성으로",
+      "importance": 2,
+      "doc": "도덕_시험공부/02_3단원_인권과_문화종교공존.md",
+      "heading": "01. 편견을 넘어 다양성으로 (p.130~135)",
+      "parts": [
+        "차이와 다양성, 그리고 열린 마음",
+        "편견과 내집단·외집단"
+      ]
+    },
+    {
+      "id": "mor-02-04",
+      "subject": "도덕",
+      "unit": "Ⅲ.2 다양한 문화·종교는 어떻게 공존할 수 있을까?",
+      "title": "낯선 타인들과 더불어 살아가려면",
+      "importance": 2,
+      "doc": "도덕_시험공부/02_3단원_인권과_문화종교공존.md",
+      "heading": "02. 낯선 타인들과 더불어 살아가려면 (p.136~143)",
+      "parts": [
+        "다문화 사회의 모습과 문제",
+        "다른 집단의 사람들과 공존하기 위한 3대 태도 & 인정의 한계",
+        "문화 이해 태도 4종 비교 & 종교 공존",
+        "Ⅲ.2 교과서 확인 문제 정답"
+      ]
+    },
+    {
+      "id": "soc-01-01",
+      "subject": "사회",
+      "unit": "[지리] 3단원 유럽 · 4.1 아프리카",
+      "title": "유럽의 여러 국가와 자연환경",
+      "importance": 2,
+      "doc": "사회_시험공부/01_지리_유럽과아프리카.md",
+      "heading": "01. 유럽의 여러 국가와 자연환경 (교과서 p.52~57)",
+      "parts": [
+        "유럽의 위치, 국가, 대표 도시와 랜드마크",
+        "유럽의 지형",
+        "유럽의 기후와 주민 생활"
+      ]
+    },
+    {
+      "id": "soc-01-02",
+      "subject": "사회",
+      "unit": "[지리] 3단원 유럽 · 4.1 아프리카",
+      "title": "도시의 다양성과 지속가능한 도시를 위한 노력",
+      "importance": 1,
+      "doc": "사회_시험공부/01_지리_유럽과아프리카.md",
+      "heading": "02. 도시의 다양성과 지속가능한 도시를 위한 노력 (교과서 p.58~61)",
+      "parts": [
+        "유럽의 다양한 유형의 도시",
+        "지속가능한 친환경 도시를 만들기 위한 노력"
+      ]
+    },
+    {
+      "id": "soc-01-03",
+      "subject": "사회",
+      "unit": "[지리] 3단원 유럽 · 4.1 아프리카",
+      "title": "유럽의 통합과 분리 움직임",
+      "importance": 2,
+      "doc": "사회_시험공부/01_지리_유럽과아프리카.md",
+      "heading": "03. 유럽의 통합과 분리 움직임 (교과서 p.62~65)",
+      "parts": [
+        "유럽의 통합 — 유럽연합(EU)",
+        "유럽 내 분리·독립 움직임과 브렉시트"
+      ]
+    },
+    {
+      "id": "soc-01-04",
+      "subject": "사회",
+      "unit": "[지리] 3단원 유럽 · 4.1 아프리카",
+      "title": "아프리카의 여러 국가와 자연환경",
+      "importance": 2,
+      "doc": "사회_시험공부/01_지리_유럽과아프리카.md",
+      "heading": "04. 아프리카의 여러 국가와 자연환경 (교과서 p.70~75)",
+      "parts": [
+        "아프리카의 위치, 주요 국가·도시, 풍부한 자원",
+        "아프리카의 직선 국경선",
+        "아프리카의 지형",
+        "아프리카의 기후 분포"
+      ]
+    },
+    {
+      "id": "soc-02-01",
+      "subject": "사회",
+      "unit": "[사회·문화·정치] 7~9단원",
+      "title": "7단원 — 인간과 사회생활",
+      "importance": 2,
+      "doc": "사회_시험공부/02_사회문화정치_7-9단원.md",
+      "heading": "01. 7단원 — 인간과 사회생활 (교과서 p.121~135)",
+      "parts": [
+        "사회화와 자아 정체성",
+        "사회적 지위와 역할, 역할 갈등",
+        "사회적 갈등과 차별"
+      ]
+    },
+    {
+      "id": "soc-02-02",
+      "subject": "사회",
+      "unit": "[사회·문화·정치] 7~9단원",
+      "title": "8단원 — 다양한 문화의 이해",
+      "importance": 2,
+      "doc": "사회_시험공부/02_사회문화정치_7-9단원.md",
+      "heading": "02. 8단원 — 다양한 문화의 이해 (교과서 p.136~151)",
+      "parts": [
+        "문화의 의미와 특징",
+        "미디어를 통해 경험하는 문화",
+        "다양한 문화를 이해하는 태도 3종"
+      ]
+    },
+    {
+      "id": "soc-02-03",
+      "subject": "사회",
+      "unit": "[사회·문화·정치] 7~9단원",
+      "title": "9단원 — 민주주의와 시민",
+      "importance": 2,
+      "doc": "사회_시험공부/02_사회문화정치_7-9단원.md",
+      "heading": "03. 9단원 — 민주주의와 시민 (교과서 p.152~165)",
+      "parts": [
+        "정치와 민주주의",
+        "민주주의의 발전 과정",
+        "민주주의의 이념과 4대 기본 원리",
+        "현대 민주주의의 특징, 한계, 발전을 위한 노력"
+      ]
+    },
+    {
+      "id": "soc-03-01",
+      "subject": "사회",
+      "unit": "[법과 인권] 11~12단원",
+      "title": "11단원 — 일상생활과 법",
+      "importance": 2,
+      "doc": "사회_시험공부/03_법과인권_11-12단원.md",
+      "heading": "01. 11단원 — 일상생활과 법 (교과서 p.185~199)",
+      "parts": [
+        "법의 의미, 특징, 목적과 역할",
+        "우리 생활과 관련된 다양한 법 — 공법 · 사법 · 사회법",
+        "민사 재판 vs 형사 재판",
+        "공정한 재판의 요건과 제도"
+      ]
+    },
+    {
+      "id": "soc-03-02",
+      "subject": "사회",
+      "unit": "[법과 인권] 11~12단원",
+      "title": "12단원 — 인권과 기본권",
+      "importance": 2,
+      "doc": "사회_시험공부/03_법과인권_11-12단원.md",
+      "heading": "02. 12단원 — 인권과 기본권 (교과서 p.200~213)",
+      "parts": [
+        "인권의 의미와 인권 침해",
+        "헌법상 기본권 5종",
+        "기본권 제한의 요건과 한계",
+        "기본권 침해 시 구제 기관 4종",
+        "근로자의 권리와 노동권 침해 대응"
+      ]
+    },
+    {
+      "id": "mat-01-01",
+      "subject": "수학",
+      "unit": "6단원 평면도형의 성질 (6.2~6.6) — 다각형과 부채꼴",
+      "title": "삼각형의 내각과 외각",
+      "importance": 2,
+      "doc": "수학_시험공부/01_6단원_다각형과_부채꼴.md",
+      "heading": "01. 삼각형의 내각과 외각 (교과서 6.2, p.183~185)",
+      "parts": [
+        "내각과 외각의 뜻",
+        "삼각형의 내각과 외각 사이의 관계",
+        "교과서 대표 유형 풀이"
+      ]
+    },
+    {
+      "id": "mat-01-02",
+      "subject": "수학",
+      "unit": "6단원 평면도형의 성질 (6.2~6.6) — 다각형과 부채꼴",
+      "title": "다각형의 내각과 외각의 크기의 합",
+      "importance": 1,
+      "doc": "수학_시험공부/01_6단원_다각형과_부채꼴.md",
+      "heading": "02. 다각형의 내각과 외각의 크기의 합 (교과서 6.3~6.4, p.186~191)",
+      "parts": [
+        "공식 유도 원리 (절대 안 까먹는 1줄 논리)",
+        "정$n$각형의 한 내각과 한 외각 (표로 한 번에!)",
+        "교과서 대표·발전 문제 3선"
+      ]
+    },
+    {
+      "id": "mat-01-03",
+      "subject": "수학",
+      "unit": "6단원 평면도형의 성질 (6.2~6.6) — 다각형과 부채꼴",
+      "title": "원과 부채꼴의 성질",
+      "importance": 2,
+      "doc": "수학_시험공부/01_6단원_다각형과_부채꼴.md",
+      "heading": "03. 원과 부채꼴의 성질 (교과서 6.5, p.192~196)",
+      "parts": [
+        "원의 필수 용어 6가지 (기호 주의!)",
+        "중심각과 호·부채꼴·현의 관계"
+      ]
+    },
+    {
+      "id": "mat-01-04",
+      "subject": "수학",
+      "unit": "6단원 평면도형의 성질 (6.2~6.6) — 다각형과 부채꼴",
+      "title": "부채꼴의 호의 길이와 넓이",
+      "importance": 2,
+      "doc": "수학_시험공부/01_6단원_다각형과_부채꼴.md",
+      "heading": "04. 부채꼴의 호의 길이와 넓이 (교과서 6.6, p.197~200)",
+      "parts": [
+        "원주율 $\\pi$와 원의 공식",
+        "부채꼴의 호의 길이와 넓이 공식",
+        "초강력 공식 $S = \\dfrac{1}{2}rl$ 유도 및 활용",
+        "실수 단골! 색칠한 도형의 둘레와 넓이 공식 모음"
+      ]
+    },
+    {
+      "id": "mat-02-01",
+      "subject": "수학",
+      "unit": "7단원 입체도형의 성질 (7.1~7.3) — 다면체 · 회전체 · 겉넓이",
+      "title": "다면체와 정다면체 5종",
+      "importance": 2,
+      "doc": "수학_시험공부/02_7단원_다면체_회전체_겉넓이.md",
+      "heading": "01. 다면체와 정다면체 5종 (교과서 7.1, p.210~214)",
+      "parts": [
+        "다면체의 뜻",
+        "$n$각기둥 · $n$각뿔 · $n$각뿔대 완벽 비교표",
+        "정다면체 5종"
+      ]
+    },
+    {
+      "id": "mat-02-02",
+      "subject": "수학",
+      "unit": "7단원 입체도형의 성질 (7.1~7.3) — 다면체 · 회전체 · 겉넓이",
+      "title": "회전체와 단면의 성질",
+      "importance": 2,
+      "doc": "수학_시험공부/02_7단원_다면체_회전체_겉넓이.md",
+      "heading": "02. 회전체와 단면의 성질 (교과서 7.2, p.215~218)",
+      "parts": [
+        "회전체의 뜻과 종류",
+        "회전체의 2대 성질"
+      ]
+    },
+    {
+      "id": "mat-02-03",
+      "subject": "수학",
+      "unit": "7단원 입체도형의 성질 (7.1~7.3) — 다면체 · 회전체 · 겉넓이",
+      "title": "기둥과 뿔의 겉넓이",
+      "importance": 2,
+      "doc": "수학_시험공부/02_7단원_다면체_회전체_겉넓이.md",
+      "heading": "03. 기둥과 뿔의 겉넓이 (교과서 7.3, p.219~223)",
+      "parts": [
+        "기둥의 겉넓이 (각기둥 · 원기둥)",
+        "뿔의 겉넓이 (각뿔 · 원뿔)",
+        "고난도 KIS 킬러 & 교과서 응용 3종 세트"
+      ]
+    },
+    {
+      "id": "eng-01-01",
+      "subject": "영어",
+      "unit": "Part 1. Unit 8A — The Brothers Grimm",
+      "title": "지문 핵심 스토리 요약",
+      "importance": 1,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "1) 지문 핵심 스토리 요약",
+      "parts": []
+    },
+    {
+      "id": "eng-01-02",
+      "subject": "영어",
+      "unit": "Part 1. Unit 8A — The Brothers Grimm",
+      "title": "단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트",
+      "importance": 2,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)",
+      "parts": [
+        "[Paragraph A]",
+        "[Paragraph B — Darkness and Magic]",
+        "[Paragraph C — Children's Stories?]"
+      ]
+    },
+    {
+      "id": "eng-01-03",
+      "subject": "영어",
+      "unit": "Part 1. Unit 8A — The Brothers Grimm",
+      "title": "Unit 8A Target Vocabulary (영영 · 영한",
+      "importance": 1,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "3) Unit 8A Target Vocabulary (영영 · 영한 완벽 정리)",
+      "parts": []
+    },
+    {
+      "id": "eng-01-04",
+      "subject": "영어",
+      "unit": "Part 1. Unit 8A — The Brothers Grimm",
+      "title": "Unit 8A Reading Skill & 예상 출제 포인트",
+      "importance": 1,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "4) Unit 8A Reading Skill & 예상 출제 포인트",
+      "parts": []
+    },
+    {
+      "id": "eng-01-05",
+      "subject": "영어",
+      "unit": "Part 2. Unit 8B — The Seven Ravens",
+      "title": "지문 핵심 스토리 & 사건 순서 (8단계 완벽 암기",
+      "importance": 2,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "1) 지문 핵심 스토리 & 사건 순서 (8단계 완벽 암기 ⭐)",
+      "parts": []
+    },
+    {
+      "id": "eng-01-06",
+      "subject": "영어",
+      "unit": "Part 2. Unit 8B — The Seven Ravens",
+      "title": "단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트",
+      "importance": 2,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)",
+      "parts": [
+        "[Paragraph A]",
+        "[Paragraph B]",
+        "[Paragraph C]",
+        "[Paragraph D]"
+      ]
+    },
+    {
+      "id": "eng-01-07",
+      "subject": "영어",
+      "unit": "Part 2. Unit 8B — The Seven Ravens",
+      "title": "Unit 8B Target Vocabulary (영영 · 영한",
+      "importance": 1,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "3) Unit 8B Target Vocabulary (영영 · 영한 완벽 정리)",
+      "parts": []
+    },
+    {
+      "id": "eng-01-08",
+      "subject": "영어",
+      "unit": "Part 2. Unit 8B — The Seven Ravens",
+      "title": "Unit 8B Reading Skill & 2025 KIS 기출 적중 포인트",
+      "importance": 2,
+      "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+      "heading": "4) Unit 8B Reading Skill & 2025 KIS 기출 적중 포인트",
+      "parts": []
+    },
+    {
+      "id": "eng-02-01",
+      "subject": "영어",
+      "unit": "Part 1. Unit 10A — The Army's True Colors",
+      "title": "지문 핵심 내용 요약",
+      "importance": 1,
+      "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+      "heading": "1) 지문 핵심 내용 요약",
+      "parts": []
+    },
+    {
+      "id": "eng-02-02",
+      "subject": "영어",
+      "unit": "Part 1. Unit 10A — The Army's True Colors",
+      "title": "단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트",
+      "importance": 2,
+      "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+      "heading": "2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)",
+      "parts": [
+        "[Paragraph A]",
+        "[Paragraph B — Lost in Time]",
+        "[Paragraph C — New Techniques]",
+        "[Paragraph D — Back to Life]"
+      ]
+    },
+    {
+      "id": "eng-02-03",
+      "subject": "영어",
+      "unit": "Part 1. Unit 10A — The Army's True Colors",
+      "title": "Unit 10A Target Vocabulary & Reading Skill (Homonyms 동음이의어",
+      "importance": 2,
+      "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+      "heading": "3) Unit 10A Target Vocabulary & Reading Skill (Homonyms 동음이의어 ⭐)",
+      "parts": [
+        "A. Target Vocabulary 10개",
+        "B. Reading Skill — Identifying Homonyms (동음이의어 5선, p.136)"
+      ]
+    },
+    {
+      "id": "eng-02-04",
+      "subject": "영어",
+      "unit": "Part 2. Unit 10B — Wonders of Egypt",
+      "title": "지문 핵심 내용 요약 & 팩트 체크",
+      "importance": 1,
+      "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+      "heading": "1) 지문 핵심 내용 요약 & 팩트 체크",
+      "parts": []
+    },
+    {
+      "id": "eng-02-05",
+      "subject": "영어",
+      "unit": "Part 2. Unit 10B — Wonders of Egypt",
+      "title": "단락별 핵심 문장 정밀 해석 (영어 + 직독직해)",
+      "importance": 1,
+      "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+      "heading": "2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해)",
+      "parts": [
+        "[Paragraph A]",
+        "[Paragraph B]",
+        "[Paragraph C]",
+        "[Paragraph D]"
+      ]
+    },
+    {
+      "id": "eng-02-06",
+      "subject": "영어",
+      "unit": "Part 2. Unit 10B — Wonders of Egypt",
+      "title": "Unit 10B Target Vocabulary & Reading Skill (Outline Summary)",
+      "importance": 1,
+      "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+      "heading": "3) Unit 10B Target Vocabulary & Reading Skill (Outline Summary)",
+      "parts": [
+        "A. Target Vocabulary 10개",
+        "B. Reading Skill — Creating an Outline Summary",
+        "C. 내용 일치/불일치 단골 함정 TOP 5"
+      ]
+    },
+    {
+      "id": "eng-03-01",
+      "subject": "영어",
+      "unit": "Part 1. Unit 11A — The Problem with Plastic",
+      "title": "인포그래픽 필수 수치",
+      "importance": 2,
+      "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+      "heading": "1) 인포그래픽 필수 수치 (p.146~147) ⭐ 내용 일치 주의!",
+      "parts": []
+    },
+    {
+      "id": "eng-03-02",
+      "subject": "영어",
+      "unit": "Part 1. Unit 11A — The Problem with Plastic",
+      "title": "지문 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트",
+      "importance": 2,
+      "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+      "heading": "2) 지문 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)",
+      "parts": [
+        "[Paragraph A — 코스타리카 바다거북 구조]",
+        "[Paragraph B — 해양 플라스틱 유입량과 낮은 재활용률]",
+        "[Paragraph C — 해양 동물에게 미치는 피해]",
+        "[Paragraph D — 최악의 주범: 일회용 플라스틱]",
+        "[Paragraph E — 장기적 영향과 경고]"
+      ]
+    },
+    {
+      "id": "eng-03-03",
+      "subject": "영어",
+      "unit": "Part 1. Unit 11A — The Problem with Plastic",
+      "title": "Unit 11A Target Vocabulary & Reading Skill (Quotes 인용구",
+      "importance": 2,
+      "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+      "heading": "3) Unit 11A Target Vocabulary & Reading Skill (Quotes 인용구 ⭐)",
+      "parts": [
+        "A. Target Vocabulary 10개",
+        "B. Reading Skill — Understanding a Writer's Use of Quotes (인용구의 목적 3가지, p.150)"
+      ]
+    },
+    {
+      "id": "eng-03-04",
+      "subject": "영어",
+      "unit": "Part 2. Unit 11B — Five Tips for Using Less Plastic",
+      "title": "플라스틱 줄이기 5가지 팁 & 국가·도시별 핵심 수치 총정리표",
+      "importance": 2,
+      "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+      "heading": "1) 플라스틱 줄이기 5가지 팁 & 국가·도시별 핵심 수치 총정리표 ⭐ 시험 1순위!",
+      "parts": []
+    },
+    {
+      "id": "eng-03-05",
+      "subject": "영어",
+      "unit": "Part 2. Unit 11B — Five Tips for Using Less Plastic",
+      "title": "단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트",
+      "importance": 2,
+      "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+      "heading": "2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)",
+      "parts": [
+        "[Paragraph A — 도입]",
+        "[Paragraph B — Tip 1: Quit using plastic bags]",
+        "[Paragraph C — Tip 2: Skip the straw]",
+        "[Paragraph D — Tip 3: Don't use plastic bottles]",
+        "[Paragraph E — Tip 4: Avoid plastic packaging]",
+        "[Paragraph F — Tip 5: Recycle]"
+      ]
+    },
+    {
+      "id": "eng-03-06",
+      "subject": "영어",
+      "unit": "Part 2. Unit 11B — Five Tips for Using Less Plastic",
+      "title": "Unit 11B Target Vocabulary, Reading Skill & 서술형 암기 문장",
+      "importance": 2,
+      "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+      "heading": "3) Unit 11B Target Vocabulary, Reading Skill & 서술형 암기 문장",
+      "parts": [
+        "A. Target Vocabulary 10개",
+        "B. Unit 11 서술형 대비 핵심 문장 5선 (통암기 추천!)"
+      ]
+    }
+  ]
+}

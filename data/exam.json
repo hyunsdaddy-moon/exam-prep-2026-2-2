@@ -1,0 +1,385 @@
+{
+  "schema": 1,
+  "title": "2026 7학년 2학기 2회고사",
+  "importedAt": "2026-11-23T04:02:49.818Z",
+  "subjects": [
+    {
+      "subject": "과학",
+      "code": "sci",
+      "folder": "과학_시험공부",
+      "docs": [
+        {
+          "role": "summary",
+          "file": "과학_시험공부/00_과학_시험직전_핵심요약.md",
+          "title": "시험 직전 10분 최종 치트시트 — 2026 7학년 2학기 2회고사 과학",
+          "images": 8
+        },
+        {
+          "role": "unit",
+          "file": "과학_시험공부/01_5.2_힘과우리생활.md",
+          "title": "5.2 힘과 우리 생활",
+          "images": 6
+        },
+        {
+          "role": "unit",
+          "file": "과학_시험공부/02_6.2_기체의온도와부피.md",
+          "title": "6.2 기체의 온도와 부피",
+          "images": 6
+        },
+        {
+          "role": "unit",
+          "file": "과학_시험공부/03_7.2-7.4_지구와달의운동.md",
+          "title": "7.2~7.4 지구와 달의 운동",
+          "images": 6
+        },
+        {
+          "role": "exam",
+          "file": "과학_시험공부/04_과학_예상문제지.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 과학 실전 예상 문제지",
+          "images": 1
+        },
+        {
+          "role": "answers",
+          "file": "과학_시험공부/05_과학_예상문제지_정답및해설.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 과학 예상 문제지 정답 및 해설",
+          "images": 1
+        }
+      ],
+      "papers": [
+        {
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 과학 실전 예상 문제지",
+          "minutes": 45,
+          "scope": "5.2 힘과 우리 생활 · 6.2 기체의 온도와 부피 · 7.2~7.4 지구와 달의 운동",
+          "round": 2,
+          "composition": {
+            "choice": {
+              "count": 21,
+              "points": 82
+            },
+            "essay": {
+              "count": 3,
+              "points": 18
+            },
+            "total": 100
+          }
+        }
+      ],
+      "concepts": 10,
+      "images": 28,
+      "questions": "questions/sci.json"
+    },
+    {
+      "subject": "국어",
+      "code": "kor",
+      "folder": "국어_시험공부",
+      "docs": [
+        {
+          "role": "summary",
+          "file": "국어_시험공부/00_국어_시험직전_핵심요약.md",
+          "title": "시험 직전 10분 최종 치트시트 — 2026 7학년 2학기 2회고사 국어",
+          "images": 5
+        },
+        {
+          "role": "unit",
+          "file": "국어_시험공부/01_국어A_추론하기_주장하는글.md",
+          "title": "국어A — 2-(1) 추론하며 이해하기 & 4-(2) 주장하는 글 쓰기",
+          "images": 4
+        },
+        {
+          "role": "unit",
+          "file": "국어_시험공부/02_국어A_단어의짜임.md",
+          "title": "국어A — 3-(2) 단어의 짜임",
+          "images": 5
+        },
+        {
+          "role": "unit",
+          "file": "국어_시험공부/03_국어B_시개념_어휘_고사성어.md",
+          "title": "국어B — 7·8·9강 시의 주요 개념 · 필수 어휘(29개) · 사자성어(18개)",
+          "images": 5
+        },
+        {
+          "role": "exam",
+          "file": "국어_시험공부/04_국어_예상문제지.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 국어 실전 예상 문제지",
+          "images": 1
+        },
+        {
+          "role": "answers",
+          "file": "국어_시험공부/05_국어_예상문제지_정답및해설.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 국어 예상 문제지 정답 및 해설",
+          "images": 1
+        }
+      ],
+      "papers": [
+        {
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 국어 실전 예상 문제지",
+          "minutes": 45,
+          "scope": "> - **국어A**: 2-(1) 추론하며 이해하기(p.66~75) · 3-(2) 단어의 짜임(p.126~141) · 4-(2) 주장하는 글 쓰기(p.168~181)",
+          "round": 2,
+          "composition": {
+            "choice": {
+              "count": 22,
+              "points": 82
+            },
+            "essay": {
+              "count": 3,
+              "points": 18
+            },
+            "total": 100
+          }
+        }
+      ],
+      "concepts": 17,
+      "images": 21,
+      "questions": "questions/kor.json"
+    },
+    {
+      "subject": "도덕",
+      "code": "mor",
+      "folder": "도덕_시험공부",
+      "docs": [
+        {
+          "role": "summary",
+          "file": "도덕_시험공부/00_도덕_시험직전_핵심요약.md",
+          "title": "시험 직전 10분 최종 치트시트 — 2026 7학년 2학기 2회고사 도덕",
+          "images": 4
+        },
+        {
+          "role": "unit",
+          "file": "도덕_시험공부/01_2단원_우정과_가상공간.md",
+          "title": "2단원 (Ⅱ.2~Ⅱ.3) 우정이 소중한 이유 & 가상공간과 타인",
+          "images": 5
+        },
+        {
+          "role": "unit",
+          "file": "도덕_시험공부/02_3단원_인권과_문화종교공존.md",
+          "title": "3단원 (Ⅲ.1~Ⅲ.2) 인권은 보편적 가치일까? & 다양한 문화·종교의 공존",
+          "images": 5
+        },
+        {
+          "role": "exam",
+          "file": "도덕_시험공부/03_도덕_예상문제지.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 도덕 실전 예상 문제지",
+          "images": 1
+        },
+        {
+          "role": "answers",
+          "file": "도덕_시험공부/04_도덕_예상문제지_정답및해설.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 도덕 예상 문제지 정답 및 해설",
+          "images": 1
+        }
+      ],
+      "papers": [
+        {
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 도덕 실전 예상 문제지",
+          "minutes": 45,
+          "scope": "교과서 p.74~145 (Ⅱ.2 우정이 소중한 이유 · Ⅱ.3 가상공간과 타인 · Ⅲ.1 인권은 보편적 가치일까? · Ⅲ.2 다양한 문화·종교의 공존)",
+          "round": 2,
+          "composition": {
+            "choice": {
+              "count": 21,
+              "points": 82
+            },
+            "essay": {
+              "count": 3,
+              "points": 18
+            },
+            "total": 100
+          }
+        }
+      ],
+      "concepts": 9,
+      "images": 16,
+      "questions": "questions/mor.json"
+    },
+    {
+      "subject": "사회",
+      "code": "soc",
+      "folder": "사회_시험공부",
+      "docs": [
+        {
+          "role": "summary",
+          "file": "사회_시험공부/00_사회_시험직전_핵심요약.md",
+          "title": "시험 직전 10분 최종 치트시트 — 2026 7학년 2학기 2회고사 사회",
+          "images": 4
+        },
+        {
+          "role": "unit",
+          "file": "사회_시험공부/01_지리_유럽과아프리카.md",
+          "title": "[지리] 3단원 유럽 · 4.1 아프리카",
+          "images": 5
+        },
+        {
+          "role": "unit",
+          "file": "사회_시험공부/02_사회문화정치_7-9단원.md",
+          "title": "[사회·문화·정치] 7~9단원",
+          "images": 4
+        },
+        {
+          "role": "unit",
+          "file": "사회_시험공부/03_법과인권_11-12단원.md",
+          "title": "[법과 인권] 11~12단원",
+          "images": 5
+        },
+        {
+          "role": "exam",
+          "file": "사회_시험공부/04_사회_예상문제지.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 사회 실전 예상 문제지",
+          "images": 1
+        },
+        {
+          "role": "answers",
+          "file": "사회_시험공부/05_사회_예상문제지_정답및해설.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 사회 예상 문제지 정답 및 해설",
+          "images": 1
+        }
+      ],
+      "papers": [
+        {
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 사회 실전 예상 문제지",
+          "minutes": 45,
+          "scope": "3단원 유럽 · 4.1 아프리카 · 7단원 인간과 사회생활 · 8단원 다양한 문화 · 9단원 민주주의와 시민 · 11단원 일상생활과 법 · 12단원 인권과 기본권",
+          "round": 2,
+          "composition": {
+            "choice": {
+              "count": 22,
+              "points": 82
+            },
+            "essay": {
+              "count": 3,
+              "points": 18
+            },
+            "total": 100
+          }
+        }
+      ],
+      "concepts": 9,
+      "images": 20,
+      "questions": "questions/soc.json"
+    },
+    {
+      "subject": "수학",
+      "code": "mat",
+      "folder": "수학_시험공부",
+      "docs": [
+        {
+          "role": "summary",
+          "file": "수학_시험공부/00_수학_시험직전_핵심요약.md",
+          "title": "시험 직전 10분 최종 치트시트 — 2026 7학년 2학기 2회고사 수학",
+          "images": 4
+        },
+        {
+          "role": "unit",
+          "file": "수학_시험공부/01_6단원_다각형과_부채꼴.md",
+          "title": "6단원 평면도형의 성질 (6.2~6.6) — 다각형과 부채꼴",
+          "images": 5
+        },
+        {
+          "role": "unit",
+          "file": "수학_시험공부/02_7단원_다면체_회전체_겉넓이.md",
+          "title": "7단원 입체도형의 성질 (7.1~7.3) — 다면체 · 회전체 · 겉넓이",
+          "images": 5
+        },
+        {
+          "role": "exam",
+          "file": "수학_시험공부/03_수학_예상문제지.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 수학 실전 예상 문제지",
+          "images": 1
+        },
+        {
+          "role": "answers",
+          "file": "수학_시험공부/04_수학_예상문제지_정답및해설.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 수학 예상 문제지 정답 및 해설",
+          "images": 1
+        }
+      ],
+      "papers": [
+        {
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 수학 실전 예상 문제지",
+          "minutes": 45,
+          "scope": "교과서 p.183~223 (6.2 삼각형의 내각과 외각 ~ 7.3 기둥과 뿔의 겉넓이)",
+          "round": 2,
+          "composition": {
+            "choice": {
+              "count": 20,
+              "points": 82
+            },
+            "essay": {
+              "count": 3,
+              "points": 18
+            },
+            "total": 100
+          }
+        }
+      ],
+      "concepts": 7,
+      "images": 16,
+      "questions": "questions/mat.json"
+    },
+    {
+      "subject": "영어",
+      "code": "eng",
+      "folder": "영어_시험공부",
+      "docs": [
+        {
+          "role": "summary",
+          "file": "영어_시험공부/00_영어_시험직전_핵심요약.md",
+          "title": "시험 직전 10분 최종 치트시트 — 2026 7학년 2학기 2회고사 영어(영어A)",
+          "images": 4
+        },
+        {
+          "role": "unit",
+          "file": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+          "title": "Unit 8. Stories and Storytellers",
+          "images": 4
+        },
+        {
+          "role": "unit",
+          "file": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+          "title": "Unit 10. Uncovering the Past",
+          "images": 3
+        },
+        {
+          "role": "unit",
+          "file": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+          "title": "Unit 11. Plastic Planet",
+          "images": 5
+        },
+        {
+          "role": "exam",
+          "file": "영어_시험공부/04_영어_예상문제지.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 영어(영어A) 실전 예상 문제지",
+          "images": 1
+        },
+        {
+          "role": "answers",
+          "file": "영어_시험공부/05_영어_예상문제지_정답및해설.md",
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 영어(영어A) 예상 문제지 정답 및 해설",
+          "images": 1
+        }
+      ],
+      "papers": [
+        {
+          "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 영어(영어A) 실전 예상 문제지",
+          "minutes": 45,
+          "scope": "Reading Explorer **Unit 8A · 8B** (p.105~114), **Unit 10A · 10B · 11A · 11B** (p.131~156)",
+          "round": 2,
+          "composition": {
+            "choice": {
+              "count": 22,
+              "points": 82
+            },
+            "essay": {
+              "count": 3,
+              "points": 18
+            },
+            "total": 100
+          }
+        }
+      ],
+      "concepts": 20,
+      "images": 18,
+      "questions": "questions/eng.json"
+    }
+  ]
+}
