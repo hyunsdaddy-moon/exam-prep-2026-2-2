@@ -381,7 +381,8 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   const clock = el('span.clock');
   const count = el('span.step');
   const submit = el('button.pill', { type: 'button', text: '제출' });
-  const bar = el('div.reader-bar', {}, el('div.wrap', {}, el('div.title', {}, `${learner} · ${opts.title || `${subject.subject} 실전`} · `, clock), count, submit));
+  const reset = el('button.pill.ghost', { type: 'button', text: '다시 풀기', title: '고른 답을 모두 지우고 시간도 처음부터 다시 잽니다' });
+  const bar = el('div.reader-bar', {}, el('div.wrap', {}, el('div.title', {}, `${learner} · ${opts.title || `${subject.subject} 실전`} · `, clock), count, reset, submit));
   const omr = el('nav.omr', { 'aria-label': '답안 표시판' }, el('p', { text: '답안' }));
   const omrCells = new Map();
   const sheet = el('div.exam-sheet');
@@ -530,6 +531,28 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       return;
     }
     void finish(false);
+  });
+
+  // 다시 풀기 — 실수로 눌러도 답이 날아가지 않게 한 번 더 눌러야 지운다
+  let resetArmed = false;
+  let resetTimer = null;
+  reset.addEventListener('click', () => {
+    if (finished) return;
+    if (!resetArmed && questions.some(isAnswered)) {
+      resetArmed = true;
+      reset.textContent = '답을 모두 지울까요? 한 번 더 누르기';
+      resetTimer = setTimeout(() => {
+        resetArmed = false;
+        reset.textContent = '다시 풀기';
+      }, 4000);
+      return;
+    }
+    clearTimeout(resetTimer);
+    finished = true; // 이 화면의 시계·제출을 멈춘다
+    clearInterval(timer);
+    const prefix = String(state.session || 'x').split('-')[0] || 'x';
+    window.scrollTo({ top: 0 });
+    runExam(ctx, subject, questions, groups, limit, { session: newId(prefix), startedAt: Date.now(), answers: {}, learner }, opts);
   });
 
   const tick = () => {

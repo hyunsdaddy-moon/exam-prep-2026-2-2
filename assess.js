@@ -385,6 +385,7 @@ async function renderAssessResult(ctx, exam, roundId, subject, sessionId) {
     },
     actions: () => [
       el('a.pill', { href: '#/assess', text: '성장 그래프 보기' }),
+      el('a.pill.ghost', { href: `#/assess/${roundId}/${subject.code}`, text: '다시 풀기' }),
       roundId === 'd1' && paper ? el('a.pill.ghost', { href: `#/s/${subject.code}`, text: `${subject.subject} 공부하러 가기` }) : null,
       roundId === 'd1' ? el('a.pill.ghost', { href: `#/assess/d2/${subject.code}`, text: '2차 성취평가 보기' }) : null,
     ],
