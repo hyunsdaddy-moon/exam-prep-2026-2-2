@@ -380,6 +380,16 @@
       "concepts": 20,
       "images": 18,
       "questions": "questions/eng.json"
+    },
+    {
+      "subject": "베트남어",
+      "code": "vie",
+      "folder": "베트남어_시험공부",
+      "docs": [],
+      "papers": [],
+      "concepts": 0,
+      "images": 0,
+      "questions": "questions/vie.json"
     }
   ]
 }
