@@ -7,9 +7,9 @@
  * 답은 바로 채점하고 해설을 보여 준다. 고른 답은 이 브라우저에 참여자별로 남는다(서버 기록 없음).
  */
 
-import { el, CIRCLED } from './dom.js?v=20261124-0401';
-import { renderMarkdown } from './markdown.js?v=20261124-0401';
-import { getCurrentLearner } from './store.js?v=20261124-0401';
+import { el, CIRCLED } from './dom.js?v=20261124-0431';
+import { renderMarkdown } from './markdown.js?v=20261124-0431';
+import { getCurrentLearner } from './store.js?v=20261124-0431';
 
 const files = new Map();
 function loadQuiz(ctx, code) {

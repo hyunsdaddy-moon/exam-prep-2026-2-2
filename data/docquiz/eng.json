@@ -1,0 +1,1907 @@
+{
+ "schema": 1,
+ "subject": "영어",
+ "code": "eng",
+ "docs": {
+  "영어_시험공부/01_Unit8_Grimm_SevenRavens.md": {
+   "title": "단원 평가",
+   "questions": [
+    {
+     "type": "choice",
+     "section": "8A 지문 요약",
+     "level": "쉬움",
+     "stem": "그림 형제(Jacob and Wilhelm Grimm)에 대한 설명으로 옳은 것은?",
+     "choices": [
+      "They invented all of their stories by themselves.",
+      "They published their first two books in English.",
+      "They collected folktales from storytellers all over Germany.",
+      "They first wrote their tales mainly for young children.",
+      "They removed the moral from their later stories."
+     ],
+     "answer": 3,
+     "explanation": "형제는 독일 전역의 이야기꾼들에게서 민담을 **수집(collect)**했다. 직접 창작한 것이 아니며, 책은 독일어로 냈고, 처음에는 주로 어른을 위해 썼으며, 후기 이야기에도 교훈은 그대로 남아 있다.",
+     "id": "eng-d1-01"
+    },
+    {
+     "type": "choice",
+     "section": "8A 지문 요약",
+     "level": "보통",
+     "stem": "그림 형제의 이야기에서 숲(forest)이 사악한 마녀나 마법 존재들의 집으로 자주 등장하는 이유로 가장 알맞은 것은?",
+     "choices": [
+      "독일의 숲에 실제로 마녀들이 살고 있었기 때문",
+      "과거 독일의 많은 사람들이 숲을 위험한 곳이라고 믿었기 때문",
+      "아이들이 숲에서 노는 것을 가장 좋아했기 때문",
+      "프랑스와 이탈리아 이야기를 그대로 번역했기 때문",
+      "출판사가 무서운 장면을 넣으라고 요구했기 때문"
+     ],
+     "answer": 2,
+     "explanation": "문단 B: 이야기는 옛 독일의 전통적 삶과 **믿음(beliefs)**을 보여 주는데, 과거 독일인들은 숲이 위험한 곳이라고 믿었다. 실제로 마녀가 살았다거나 번역했다는 내용은 없다.",
+     "id": "eng-d1-02"
+    },
+    {
+     "type": "choice",
+     "section": "8A 지문 요약",
+     "level": "보통",
+     "stem": "그림 형제가 이야기를 어린이에게 더 적합하게(suitable) 만들기 위해 한 일만을 `<보기>`에서 있는 대로 고른 것은?\n\n> ㄱ. 일부 원작 이야기의 본문(text)을 바꾸었다.\n> ㄴ. 많은 이야기를 '부드럽게(softened)' 다듬었다.\n> ㄷ. 그림(drawings)을 추가했다.\n> ㄹ. 이야기 속 교훈(moral)을 모두 없앴다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄹ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄷ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": 4,
+     "explanation": "형제는 원문을 고쳐 내용을 부드럽게 하고 그림을 넣었다. 그러나 초기 이야기처럼 각 이야기에는 **여전히 교훈이 있으므로** ㄹ은 틀렸다.",
+     "id": "eng-d1-03"
+    },
+    {
+     "type": "choice",
+     "section": "8A 지문 요약",
+     "level": "보통",
+     "stem": "According to paragraph C, what moral do both the early and the later Grimm tales have?",
+     "choices": [
+      "Work hard, be good, and listen to your parents.",
+      "Think carefully about what you say.",
+      "Never go into the forest alone.",
+      "Collect stories from many different countries.",
+      "Always share your food with your brothers."
+     ],
+     "answer": 1,
+     "explanation": "문단 C 마지막 문장: *each story still has a moral: Work hard, be good, and listen to your parents.* '말하기 전에 신중히 생각하라'는 8B The Seven Ravens의 교훈이므로 헷갈리지 말 것.",
+     "id": "eng-d1-04"
+    },
+    {
+     "type": "choice",
+     "section": "8A 본문 문장",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 <u>Many</u> 뒤에 생략된 말로 가장 알맞은 것은?\n\n> The brothers began to collect folktales from storytellers all over Germany. <u>Many</u> were similar to stories told in France, Italy, Japan, and other countries.",
+     "choices": [
+      "storytellers",
+      "brothers",
+      "folktales",
+      "books",
+      "countries"
+     ],
+     "answer": 3,
+     "explanation": "다른 나라 이야기들과 '비슷했던' 것은 형제가 모은 **민담(folktales)**이다. 바로 앞에 나온 storytellers(이야기꾼)를 고르기 쉬운데, 사람이 '이야기와 비슷하다'는 것은 말이 되지 않는다.",
+     "id": "eng-d1-05"
+    },
+    {
+     "type": "choice",
+     "section": "8A 본문 문장",
+     "level": "보통",
+     "stem": "다음 (A), (B), (C)의 괄호 안에서 어법상 알맞은 말을 골라 바르게 짝지은 것은?\n\n> • Jacob and Wilhelm Grimm were two young men from Germany (A) [who / which] loved reading stories.\n> • Many were similar to stories (B) [told / telling] in France, Italy, Japan, and other countries.\n> • This made them more (C) [suitable / suitably] for children.",
+     "choices": [
+      "who – told – suitable",
+      "who – telling – suitable",
+      "which – told – suitably",
+      "who – told – suitably",
+      "which – telling – suitable"
+     ],
+     "answer": 1,
+     "explanation": "(A) 선행사가 사람(two young men)이므로 주격 관계대명사 **who**. (B) 이야기는 '전해지는' 것이므로 과거분사 **told**가 뒤에서 꾸민다. (C) `make + 목적어 + 형용사` 5형식이므로 형용사 **suitable**.",
+     "id": "eng-d1-06"
+    },
+    {
+     "type": "choice",
+     "section": "8A 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 문장에서 밑줄 친 부분의 뜻으로 가장 알맞은 것은?\n\n> Although most people today <u>think of these stories as fairy tales for children</u>, the Grimm brothers first wrote them primarily for adults.",
+     "choices": [
+      "이 이야기들을 어린이 동화로 바꾸어 쓴다",
+      "이 이야기들을 어린이를 위한 동화로 여긴다",
+      "이 이야기들을 어린이에게 읽어 준다",
+      "이 이야기들을 어린이 동화보다 좋아한다",
+      "이 이야기들을 어린이 동화와 비교한다"
+     ],
+     "answer": 2,
+     "explanation": "`think of A as B`는 'A를 B로 여기다'라는 뜻이다. 이야기를 실제로 바꾸어 쓴(changed the text) 것은 그림 형제이지 오늘날 사람들이 아니다.",
+     "id": "eng-d1-07"
+    },
+    {
+     "type": "choice",
+     "section": "8A 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> Between 1812 and 1814, the brothers published two books in ________. The collections became known in English as *Grimms' Fairy Tales*.",
+     "choices": [
+      "English",
+      "French",
+      "Italian",
+      "Japanese",
+      "German"
+     ],
+     "answer": 5,
+     "explanation": "형제는 책을 **독일어(German)**로 출판했다. 영어로는 *Grimms' Fairy Tales*라는 이름으로 '알려졌을' 뿐이다.",
+     "id": "eng-d1-08"
+    },
+    {
+     "type": "choice",
+     "section": "8A 본문 문장",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 부분의 의미로 가장 알맞은 것은?\n\n> The Grimm brothers' tales <u>give a picture of</u> traditional life and beliefs.",
+     "choices": [
+      "~의 모습을 보여 준다",
+      "~의 그림을 그려 준다",
+      "~을 사진으로 남긴다",
+      "~을 선물로 준다",
+      "~을 감추어 버린다"
+     ],
+     "answer": 1,
+     "explanation": "`give a picture of`는 '~의 모습을 보여 주다'라는 뜻이다. 실제 그림(drawings)을 추가한 이야기는 문단 C에 따로 나온다.",
+     "id": "eng-d1-09"
+    },
+    {
+     "type": "choice",
+     "section": "8A 어휘",
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 알맞은 것은?\n\n> for the most part; mainly",
+     "choices": [
+      "although",
+      "suitable",
+      "primarily",
+      "magical",
+      "publish"
+     ],
+     "answer": 3,
+     "explanation": "primarily(주로, 본래)의 풀이다. *the Grimm brothers first wrote them **primarily** for adults.*",
+     "id": "eng-d1-10"
+    },
+    {
+     "type": "choice",
+     "section": "8A 어휘",
+     "level": "보통",
+     "stem": "단어와 영영 풀이가 **잘못** 짝지어진 것은?",
+     "choices": [
+      "collect – to bring together things from different places",
+      "publish – to print (as a book for sale)",
+      "belief – an idea a person accepts as being true or real",
+      "text – the words in a written work",
+      "scary – having special powers"
+     ],
+     "answer": 5,
+     "explanation": "'having special powers'는 **magical**의 풀이다. scary는 'frightening; causing fear(무서운)'이다.",
+     "id": "eng-d1-11"
+    },
+    {
+     "type": "choice",
+     "section": "8A 어휘",
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> The ________ story of \"Little Red Riding Hood\" was dark and scary.",
+     "choices": [
+      "origin",
+      "original",
+      "nation",
+      "magic",
+      "music"
+     ],
+     "answer": 2,
+     "explanation": "명사 앞에서 꾸미는 **형용사** 자리이므로 `origin + -al` → **original(원래의, 최초의)**. origin·nation·magic·music은 모두 명사다.",
+     "id": "eng-d1-12"
+    },
+    {
+     "type": "choice",
+     "section": "8A 어휘",
+     "level": "보통",
+     "stem": "단어의 형태 변화와 그 뜻이 **잘못** 짝지어진 것은?",
+     "choices": [
+      "magic → magical : 마법의, 신비로운",
+      "origin → original : 기원, 근원",
+      "music → musical : 음악의",
+      "nation → national : 국가의, 전국적인",
+      "collect → collection : 모음집"
+     ],
+     "answer": 2,
+     "explanation": "original은 형용사로 '**원래의, 최초의**'라는 뜻이다. '기원, 근원'은 명사 origin의 뜻이다. collect의 명사형 collection은 '모음집'이 맞다.",
+     "id": "eng-d1-13"
+    },
+    {
+     "type": "choice",
+     "section": "8A 어휘",
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> ________ most people today think of these stories as fairy tales for children, the Grimm brothers first wrote them primarily for adults.",
+     "choices": [
+      "Although",
+      "Because",
+      "So",
+      "If",
+      "Since"
+     ],
+     "answer": 1,
+     "explanation": "앞(오늘날엔 어린이 동화로 여김)과 뒤(원래는 어른용)가 서로 반대되므로 양보 접속사 **Although(비록 ~일지라도)**가 알맞다. Because·Since는 이유를 나타내 흐름이 맞지 않는다.",
+     "id": "eng-d1-14"
+    },
+    {
+     "type": "choice",
+     "section": "8A Reading Skill·함정",
+     "level": "쉬움",
+     "stem": "Annotating Text(텍스트 주석 달기)를 할 때, 본문의 `1812`, `1814`처럼 중요한 숫자나 연도에 하는 표시로 알맞은 것은?",
+     "choices": [
+      "물음표(?)를 단다",
+      "밑줄을 긋고 여백에 뜻을 적는다",
+      "동그라미를 친다",
+      "아무 표시도 하지 않는다",
+      "줄을 그어 지운다"
+     ],
+     "answer": 3,
+     "explanation": "중요한 숫자·통계·연도에는 **동그라미**를 친다. 물음표는 이해가 안 되는 부분, 밑줄과 여백 메모는 모르는 단어에 쓰는 표시다.",
+     "id": "eng-d1-15"
+    },
+    {
+     "type": "choice",
+     "section": "8A Reading Skill·함정",
+     "level": "보통",
+     "stem": "다음은 그림 형제 글의 Concept Map 일부이다. 빈칸 (A), (B)에 들어갈 말로 가장 알맞은 것은?\n\n> • collected tales from German (A) ________\n> • stories are (B) ________ to tales in other countries",
+     "choices": [
+      "students – similar",
+      "storytellers – different",
+      "witches – similar",
+      "writers – different",
+      "storytellers – similar"
+     ],
+     "answer": 5,
+     "explanation": "형제는 독일 전역의 **이야기꾼(storytellers)**에게서 이야기를 모았고, 많은 이야기가 다른 나라 이야기와 **비슷했다(similar)**.",
+     "id": "eng-d1-16"
+    },
+    {
+     "type": "choice",
+     "section": "8A Reading Skill·함정",
+     "level": "어려움",
+     "stem": "그림 형제에 대한 설명으로 옳은 것만을 `<보기>`에서 고른 것은?\n\n> ㄱ. 그림 형제는 「신데렐라」, 「백설공주」 같은 동화를 직접 지어냈다.\n> ㄴ. 1812~1814년에 출판한 두 권의 책은 독일어로 쓰였다.\n> ㄷ. 후기에 고친 이야기에만 교훈이 담겨 있다.\n> ㄹ. 형제는 대학생 시절에 민담에 관심을 갖게 되었다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄷ, ㄹ"
+     ],
+     "answer": 4,
+     "explanation": "ㄴ, ㄹ만 옳다. 형제는 이야기를 **수집**했지 창작하지 않았고(ㄱ), 교훈은 초기·후기 이야기 **모두**에 있다(ㄷ).",
+     "id": "eng-d1-17"
+    },
+    {
+     "type": "choice",
+     "section": "8B 사건 순서",
+     "level": "보통",
+     "stem": "The Seven Ravens에서 다음 사건들을 일어난 순서대로 바르게 배열한 것은?\n\n> (a) The girl dropped a ring into a cup.\n> (b) The girl found the boys' home.\n> (c) One raven made a wish.\n> (d) The girl cut off one of her fingers.\n> (e) The ravens came home to eat.",
+     "choices": [
+      "(b) – (a) – (d) – (e) – (c)",
+      "(b) – (d) – (e) – (a) – (c)",
+      "(d) – (b) – (a) – (c) – (e)",
+      "(b) – (d) – (a) – (e) – (c)",
+      "(d) – (b) – (e) – (a) – (c)"
+     ],
+     "answer": 4,
+     "explanation": "집을 찾음 → 손가락을 잘라 문을 엶 → (먹고 마신 뒤) 반지를 떨어뜨림 → 까마귀들이 식사하러 돌아옴 → 일곱째 까마귀가 소원을 빎 순서다.",
+     "id": "eng-d1-18"
+    },
+    {
+     "type": "choice",
+     "section": "8B 사건 순서",
+     "level": "보통",
+     "stem": "여동생이 마지막 컵에 반지를 떨어뜨린 **바로 다음에** 일어난 일로 알맞은 것은?",
+     "choices": [
+      "The ravens came home to eat.",
+      "The girl ate and drank from the plates and cups.",
+      "The girl ran to her brothers.",
+      "The girl cut off one of her fingers.",
+      "The girl learned that she had brothers."
+     ],
+     "answer": 1,
+     "explanation": "반지를 떨어뜨린 뒤(5단계) 까마귀들이 식사하러 돌아온다(6단계). 먹고 마신 일과 손가락을 자른 일은 그보다 앞서고, 오빠들에게 달려간 일은 소원 뒤의 마지막 사건이다.",
+     "id": "eng-d1-19"
+    },
+    {
+     "type": "choice",
+     "section": "8B 사건 순서",
+     "level": "쉬움",
+     "stem": "일곱 아들이 까마귀로 변하게 된 직접적인 원인으로 알맞은 것은?",
+     "choices": [
+      "숲속의 사악한 마녀가 저주를 걸었기 때문",
+      "우물물을 마시고 마법에 걸렸기 때문",
+      "화난 아버지가 \"까마귀로 변해 버렸으면 좋겠다\"고 말했기 때문",
+      "여동생이 반지를 컵에 떨어뜨렸기 때문",
+      "물병을 깨뜨린 벌로 어머니가 소원을 빌었기 때문"
+     ],
+     "answer": 3,
+     "explanation": "아들들이 돌아오지 않자 화난 아버지가 *I wish they were all turned into ravens!*라고 외쳤고, 고개를 들자 일곱 마리 검은 새가 날아갔다. 마녀나 우물의 마법은 등장하지 않는다.",
+     "id": "eng-d1-20"
+    },
+    {
+     "type": "choice",
+     "section": "8B 사건 순서",
+     "level": "쉬움",
+     "stem": "Why were the seven boys afraid to go home?",
+     "choices": [
+      "Because they forgot the way home in the forest.",
+      "Because a raven took their water jug.",
+      "Because their father told them not to come back.",
+      "Because they found a witch near the well.",
+      "Because the water jug fell into the well while they were fighting."
+     ],
+     "answer": 5,
+     "explanation": "우물에서 싸우다가 **물병(water jug)이 우물 속으로 떨어져** 어찌할 바를 몰랐고, 그래서 집에 가기가 두려웠다.",
+     "id": "eng-d1-21"
+    },
+    {
+     "type": "choice",
+     "section": "8B 본문 문장",
+     "level": "보통",
+     "stem": "다음 글에서 아버지의 심정으로 가장 알맞은 것은?\n\n> When he looked up, he saw seven black birds flying away. The father was shocked. \"What have I done?\" he thought. But it was too late.",
+     "choices": [
+      "proud and satisfied",
+      "shocked and regretful",
+      "bored and tired",
+      "excited and hopeful",
+      "calm and relieved"
+     ],
+     "answer": 2,
+     "explanation": "자기 말 때문에 아들들이 정말 까마귀가 되자 아버지는 **충격을 받고(shocked)** \"내가 무슨 짓을 한 거지?\"라며 후회한다. 이미 너무 늦어 말을 되돌릴 수도 없었다.",
+     "id": "eng-d1-22"
+    },
+    {
+     "type": "choice",
+     "section": "8B 본문 문장",
+     "level": "보통",
+     "stem": "다음 (A), (B), (C)의 괄호 안에서 어법상 알맞은 말을 골라 바르게 짝지은 것은?\n\n> • The boys did not know what (A) [to do / doing].\n> • When he looked up, he saw seven black birds (B) [flying / to fly] away.\n> • \"I wish our sister (C) [were / is] here,\" he said.",
+     "choices": [
+      "to do – to fly – is",
+      "doing – flying – were",
+      "to do – flying – is",
+      "doing – to fly – were",
+      "to do – flying – were"
+     ],
+     "answer": 5,
+     "explanation": "(A) `what to do` 무엇을 해야 할지. (B) 지각동사 `see + 목적어 + ~ing`. (C) 현재 사실과 반대되는 소망은 가정법 과거 `I wish + 주어 + were`.",
+     "id": "eng-d1-23"
+    },
+    {
+     "type": "choice",
+     "section": "8B 본문 문장",
+     "level": "보통",
+     "stem": "다음 문장의 의미로 가장 알맞은 것은?\n\n> I wish they were all turned into ravens!",
+     "choices": [
+      "그 녀석들이 모두 까마귀로 변해 버렸다!",
+      "그 녀석들이 까마귀로 변할까 봐 걱정된다!",
+      "그 녀석들이 까마귀를 모두 잡아 왔으면 좋겠다!",
+      "그 녀석들이 모두 까마귀로 변해 버렸으면 좋겠다!",
+      "그 녀석들이 까마귀로 변하지 않아서 다행이다!"
+     ],
+     "answer": 4,
+     "explanation": "`I wish + 주어 + were`는 가정법 과거로 '~라면 좋을 텐데'라는 소망을 나타낸다. `turn into`는 '~로 변하다'. 이미 일어난 사실을 말하는 문장이 아니다.",
+     "id": "eng-d1-24"
+    },
+    {
+     "type": "choice",
+     "section": "8B 본문 문장",
+     "level": "어려움",
+     "stem": "다음 문장에서 밑줄 친 <u>which</u>가 가리키는 것으로 알맞은 것은?\n\n> To enter, she needed a special key made from a chicken bone, <u>which</u> she did not have.",
+     "choices": [
+      "a chicken bone",
+      "their home",
+      "a special key made from a chicken bone",
+      "a knife",
+      "the front door"
+     ],
+     "answer": 3,
+     "explanation": "계속적 용법 `, which`는 앞의 **닭 뼈로 만든 특수 열쇠**를 가리킨다. 그녀가 '가지고 있지 않았던' 것은 그 열쇠라서 손가락을 대신 잘랐다.",
+     "id": "eng-d1-25"
+    },
+    {
+     "type": "choice",
+     "section": "8B 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>accidentally</u>의 의미로 가장 알맞은 것은?\n\n> In the last cup, she <u>accidentally</u> dropped a ring that her parents had given her.",
+     "choices": [
+      "on purpose",
+      "very slowly",
+      "after a long time",
+      "with great care",
+      "without planning it"
+     ],
+     "answer": 5,
+     "explanation": "accidentally는 '실수로, 우연히' = **without planning it**. 일부러(on purpose) 떨어뜨린 것이 아니다.",
+     "id": "eng-d1-26"
+    },
+    {
+     "type": "choice",
+     "section": "8B 본문 문장",
+     "level": "보통",
+     "stem": "The Seven Ravens의 내용과 일치하지 **않는** 것은?",
+     "choices": [
+      "소녀는 오빠들의 불운에 관한 이야기를 듣고 그들을 찾기로 굳게 결심했다.",
+      "소녀는 어릴 때 오빠들이 까마귀로 변하는 모습을 직접 보았다.",
+      "소녀는 수년 동안 멈추지 않고 오빠들을 찾아다녔다.",
+      "소녀는 까마귀들이 돌아왔을 때 문 뒤에 숨어 지켜보았다.",
+      "일곱 번째 까마귀는 컵 속 반지가 부모님의 것임을 곧바로 알아보았다."
+     ],
+     "answer": 2,
+     "explanation": "소녀는 **자란 뒤에야(In time, the girl grew up and discovered)** 오빠들이 있었다는 사실을 알게 되었다. 까마귀로 변하는 장면을 직접 본 사람은 아버지다.",
+     "id": "eng-d1-27"
+    },
+    {
+     "type": "choice",
+     "section": "8B 어휘",
+     "level": "보통",
+     "stem": "밑줄 친 단어의 쓰임이 어법상 바른 문장은?",
+     "choices": [
+      "The earthquake <u>effected</u> thousands of people.",
+      "The story of their misfortune <u>effected</u> her greatly.",
+      "What <u>affect</u> does reading stories to children have on their development?",
+      "The movie did not <u>affect</u> me as much as I thought.",
+      "The story of their misfortune <u>affect</u> her greatly."
+     ],
+     "answer": 4,
+     "explanation": "**affect**는 동사(영향을 미치다), **effect**는 명사(영향, 효과)다. 동사 자리에 effected를 쓰거나 명사 자리(What ___)에 affect를 쓴 문장은 틀렸고, 지난 일을 말하는 문장에서 affect를 현재형 원형으로 쓴 것도 어법에 맞지 않는다(affected).",
+     "id": "eng-d1-28"
+    },
+    {
+     "type": "choice",
+     "section": "8B 어휘",
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> The story of their misfortune ________ her greatly, and she was determined to find them.",
+     "choices": [
+      "affected",
+      "effected",
+      "effect",
+      "effects",
+      "affecting"
+     ],
+     "answer": 1,
+     "explanation": "주어(The story of their misfortune) 뒤 **동사 자리**이고 과거 이야기이므로 동사 affect의 과거형 **affected**가 알맞다. effect는 명사다.",
+     "id": "eng-d1-29"
+    },
+    {
+     "type": "choice",
+     "section": "8B 어휘",
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 알맞은 것은?\n\n> surprised, usually in a bad way",
+     "choices": [
+      "angry",
+      "afraid",
+      "shocked",
+      "determined",
+      "suddenly"
+     ],
+     "answer": 3,
+     "explanation": "shocked(충격받은)의 풀이다. 아들들이 정말 까마귀로 변하자 아버지는 *was shocked*. angry는 '누군가 잘못 행동했을 때 화가 난'이다.",
+     "id": "eng-d1-30"
+    },
+    {
+     "type": "choice",
+     "section": "8B 어휘",
+     "level": "보통",
+     "stem": "단어와 영영 풀이가 **잘못** 짝지어진 것은?",
+     "choices": [
+      "recognize – to know a person or thing because you have seen them before",
+      "immediately – happening very quickly, right away",
+      "suddenly – happening quickly and unexpectedly",
+      "determined – wanting to do something very much and not giving up",
+      "moment – a very long period of time"
+     ],
+     "answer": 5,
+     "explanation": "moment는 '아주 **짧은(short)** 시간, 잠시'다. *The girl thought for a moment*는 '잠시 생각했다'는 뜻이다.",
+     "id": "eng-d1-31"
+    },
+    {
+     "type": "choice",
+     "section": "8B 어휘",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>misfortune</u>과 의미가 가장 가까운 것은?\n\n> The story of their <u>misfortune</u> affected her greatly.",
+     "choices": [
+      "good news",
+      "bad luck",
+      "a moral",
+      "a special key",
+      "a long journey"
+     ],
+     "answer": 2,
+     "explanation": "misfortune은 '불운' = **bad luck**이다. 오빠들이 까마귀로 변해 버린 불행한 일을 가리킨다.",
+     "id": "eng-d1-32"
+    },
+    {
+     "type": "choice",
+     "section": "8B 대명사·내용 추론",
+     "level": "어려움",
+     "stem": "The Seven Ravens에서 밑줄 친 대명사와 가리키는 대상이 바르게 짝지어진 것만을 `<보기>`에서 있는 대로 고른 것은?\n\n> ㄱ. With <u>it</u>, she opened the front door. → one of her fingers\n> ㄴ. She ate and drank a little from each of <u>them</u>. → the seven ravens\n> ㄷ. The brothers kissed their sister, and <u>they</u> all went home together happily. → the brothers and their sister\n> ㄹ. The raven recognized <u>it</u> immediately. → his parents' ring",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": 4,
+     "explanation": "ㄴ의 them은 식탁 위의 **일곱 개의 접시와 일곱 개의 컵**이다. 나머지는 모두 바르게 짝지어졌다(ㄷ의 they는 일곱 오빠와 여동생 모두).",
+     "id": "eng-d1-33"
+    },
+    {
+     "type": "choice",
+     "section": "8B 대명사·내용 추론",
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 <u>They</u>가 가리키는 대상으로 가장 알맞은 것은?\n\n> One day, the father needed water for the child, so he sent the seven brothers to a well in the forest to get it. Once there, though, the boys began to fight, and the water jug fell into the well. The boys did not know what to do. <u>They</u> were afraid to go home.",
+     "choices": [
+      "the seven sons",
+      "the man and the woman",
+      "the girl and her father",
+      "the storytellers",
+      "the couple and their daughter"
+     ],
+     "answer": 1,
+     "explanation": "집에 가기 두려워한 것은 물병을 빠뜨린 **일곱 아들(the boys)**이다. 앞 문단의 they(=부부)와 헷갈리지 않도록 바로 앞 문장의 주어를 확인한다.",
+     "id": "eng-d1-34"
+    },
+    {
+     "type": "choice",
+     "section": "8B 대명사·내용 추론",
+     "level": "쉬움",
+     "stem": "Why did the girl cut off one of her fingers?",
+     "choices": [
+      "To make a special key for her parents",
+      "To drop it into the last cup",
+      "To show the ravens who she was",
+      "To open the front door of the boys' home",
+      "To make a ring for her brothers"
+     ],
+     "answer": 4,
+     "explanation": "집에 들어가려면 닭 뼈로 만든 특수 열쇠가 필요했지만 없었기 때문에, 손가락을 잘라 **그것으로 현관문을 열었다(With it, she opened the front door)**.",
+     "id": "eng-d1-35"
+    },
+    {
+     "type": "choice",
+     "section": "8B 대명사·내용 추론",
+     "level": "보통",
+     "stem": "What is the best moral of *The Seven Ravens*?",
+     "choices": [
+      "Work hard, be good, and listen to your parents.",
+      "Forests are always dangerous places.",
+      "Never drink water from a well.",
+      "Keep your rings in a safe place.",
+      "Think carefully about what you say."
+     ],
+     "answer": 5,
+     "explanation": "아버지가 화가 나서 내뱉은 말 한마디로 아들들이 까마귀가 되었고 그 말을 되돌릴 수 없었다. 따라서 교훈은 **말하기 전에 신중히 생각하라**다. 'Work hard, be good…'은 8A에서 그림 형제 이야기들의 공통 교훈으로 소개된 것이다.",
+     "id": "eng-d1-36"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "8A 지문 요약",
+     "level": "서술형",
+     "stem": "그림 형제가 처음에 이야기를 누구를 위해 어떤 분위기로 썼는지, 그리고 나중에 어린이에게 적합하게 만들기 위해 무엇을 했는지 우리말로 쓰시오. (바뀌지 않은 점도 한 가지 포함할 것)",
+     "model": "처음에는 주로 어른들을 위해 어둡고 무서운 이야기로 썼다. 나중에 일부 원작의 본문을 고쳐 이야기를 부드럽게 다듬고(softened) 그림(drawings)을 추가해 어린이에게 적합하게 만들었다. 그러나 초기 이야기처럼 각 이야기에는 여전히 교훈(moral)이 담겨 있다.",
+     "keywords": [
+      "어른",
+      "어둡고 무서운",
+      "부드럽게(softened)",
+      "그림 추가(added drawings)",
+      "교훈(moral) 유지"
+     ],
+     "id": "eng-d1-37"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "8B 사건 순서",
+     "level": "서술형",
+     "stem": "The Seven Ravens에서 여동생이 오빠들의 집을 찾은 뒤부터 오빠들이 다시 사람이 될 때까지 일어난 일을 순서대로 우리말로 쓰시오.",
+     "model": "닭 뼈 열쇠가 없어서 손가락 하나를 잘라 그것으로 문을 열고 들어갔다. 식탁 위 일곱 접시와 일곱 컵에서 조금씩 먹고 마시다가 마지막 컵에 부모님이 주신 반지를 실수로 떨어뜨렸다. 까마귀들이 식사하러 돌아오자 문 뒤에 숨어 지켜보았고, 일곱째 까마귀가 반지를 알아보고 \"여동생이 여기 있다면 우리는 자유로워질 텐데\"라고 소원을 빌었다. 여동생이 달려가자 까마귀들은 다시 사람이 되었다.",
+     "keywords": [
+      "손가락",
+      "현관문",
+      "반지(ring)",
+      "일곱째 까마귀의 소원",
+      "다시 사람(human)"
+     ],
+     "id": "eng-d1-38"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "8B 어휘",
+     "level": "서술형",
+     "stem": "다음 두 빈칸에 affect 또는 effect를 알맞은 형태로 쓰고, 그렇게 고른 이유를 품사를 들어 설명하시오.\n\n> (A) The story of their misfortune ________ her greatly.\n> (B) What ________ does reading stories to children have on their development?",
+     "model": "(A) affected — 주어 뒤 동사 자리이므로 동사 affect(영향을 미치다)의 과거형을 쓴다. (B) effect — What 뒤 명사 자리이므로 명사 effect(영향, 효과)를 쓴다(have an effect on).",
+     "keywords": [
+      "affected",
+      "effect",
+      "동사",
+      "명사",
+      "have an effect on"
+     ],
+     "id": "eng-d1-39"
+    }
+   ]
+  },
+  "영어_시험공부/02_Unit10_Terracotta_Egypt.md": {
+   "title": "단원 평가",
+   "questions": [
+    {
+     "type": "choice",
+     "section": "10A 지문 요약",
+     "level": "쉬움",
+     "stem": "병마용(terracotta soldiers)의 발견에 대한 설명으로 일치하지 **않는** 것은?",
+     "choices": [
+      "1974년 중국 시안에서 우물을 파던 농부들이 발견했다.",
+      "병사들은 2,000년 넘게 땅속에 숨겨져 있었다.",
+      "독일 연구진이 시안에서 처음 병사들을 발견했다.",
+      "이후 고고학자들이 약 8,000구의 병사를 발굴했다.",
+      "병사들은 실제 사람 크기(life-sized)로 만들어졌다."
+     ],
+     "answer": 3,
+     "explanation": "처음 발견한 사람들은 **우물을 파던 농부들**이다. 독일 연구진은 중국 연구진과 함께 색을 보존하는 특수 액체를 개발했을 뿐이다.",
+     "id": "eng-d2-01"
+    },
+    {
+     "type": "choice",
+     "section": "10A 지문 요약",
+     "level": "보통",
+     "stem": "진시황(Qin Shihuang)이 통치 기간에 한 일로 본문에 언급되지 **않은** 것은?",
+     "choices": [
+      "만리장성 건설을 시작했다.",
+      "새로운 달력을 만들었다.",
+      "거대한 도로망을 건설했다.",
+      "새로운 문자 체계와 화폐, 도량형을 도입했다.",
+      "실제 크기의 테라코타 병사 군대 제작을 명령했다."
+     ],
+     "answer": 2,
+     "explanation": "문단 A에는 만리장성, 도로망, 문자·화폐·도량형, 테라코타 군대가 나온다. 달력에 대한 내용은 없다.",
+     "id": "eng-d2-02"
+    },
+    {
+     "type": "choice",
+     "section": "10A 지문 요약",
+     "level": "보통",
+     "stem": "According to paragraph B, why did the colors of the soldiers disappear?",
+     "choices": [
+      "Farmers painted the soldiers light brown after they found them.",
+      "Water under the ground slowly washed the paint away for 2,000 years.",
+      "Archeologists cleaned the soldiers with a special liquid.",
+      "When the soldiers were unearthed, the air caused the coating under the paint to fall off.",
+      "Strong sunlight in the museum faded the colors."
+     ],
+     "answer": 4,
+     "explanation": "땅속에 있을 때는 보호되었지만, **발굴되자(unearthed) 공기가 페인트 아래 코팅을 떨어지게 만들어** 색이 사라졌다. 특수 액체는 오히려 색을 보존하려고 개발한 것이다.",
+     "id": "eng-d2-03"
+    },
+    {
+     "type": "choice",
+     "section": "10A 지문 요약",
+     "level": "쉬움",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> The paint disappeared in less time than it takes to ________, taking with it important pieces of history.",
+     "choices": [
+      "boil an egg",
+      "dig a well",
+      "build a road",
+      "paint a soldier",
+      "cover it in plastic"
+     ],
+     "answer": 1,
+     "explanation": "페인트는 **달걀 하나 삶는 시간보다도 짧은 순간에** 사라졌다. 그만큼 색이 빨리 없어졌다는 뜻이다.",
+     "id": "eng-d2-04"
+    },
+    {
+     "type": "choice",
+     "section": "10A 지문 요약",
+     "level": "보통",
+     "stem": "병마용의 색을 보존하는 새로운 기술에 대한 설명으로 옳은 것만을 `<보기>`에서 고른 것은?\n\n> ㄱ. 특수 액체는 중국과 독일 연구진이 개발했다.\n> ㄴ. 먼저 플라스틱으로 덮은 다음 특수 액체를 뿌린다.\n> ㄷ. 최근 발견된 구역의 병사 중 다수는 색칠된 이목구비가 남아 있다.\n> ㄹ. 고고학자들은 색이 없는 흙을 모두 치운 뒤 병사를 꺼낸다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄷ, ㄹ"
+     ],
+     "answer": 2,
+     "explanation": "ㄱ, ㄷ이 옳다. 순서는 **액체를 뿌린 뒤 플라스틱으로 덮는다**(ㄴ). 흙에서도 색을 찾고 있어서 흙을 건드리지 않는 것이 중요하다(ㄹ).",
+     "id": "eng-d2-05"
+    },
+    {
+     "type": "choice",
+     "section": "10A 지문 요약",
+     "level": "보통",
+     "stem": "According to Rong Bo, what is the next challenge?",
+     "choices": [
+      "finding more soldiers in the dirt around Xi'an",
+      "building a new museum for the soldiers",
+      "teaching artists how to make terracotta soldiers",
+      "removing all the dirt around the warriors",
+      "finding a way to apply the colors to the army again"
+     ],
+     "answer": 5,
+     "explanation": "롱보는 다음 과제가 **그 색들을 군대에 다시 입히는(apply) 방법을 찾는 것**이라고 했다. 그렇게 되면 예술가들이 군대를 본래 색으로 되살릴 수 있다.",
+     "id": "eng-d2-06"
+    },
+    {
+     "type": "choice",
+     "section": "10A 지문 요약",
+     "level": "어려움",
+     "stem": "다음 글의 밑줄 친 부분이 의미하는 바로 가장 알맞은 것은?\n\n> Archeologists are also finding colors in the dirt around Xi'an's terracotta warriors. It's important not to disturb the dirt, so the colors won't be lost. \"<u>We are treating the earth as an artifact</u>,\" says archeologist Rong Bo.",
+     "choices": [
+      "흙으로 새로운 테라코타 병사를 만들고 있다.",
+      "흙이 병사보다 더 오래된 유물이라는 것을 밝혀냈다.",
+      "흙 속에도 색이 남아 있어 흙을 유물처럼 소중히 다루고 있다.",
+      "흙을 박물관으로 옮겨 따로 전시하고 있다.",
+      "흙에 특수 액체를 뿌려 단단하게 만들고 있다."
+     ],
+     "answer": 3,
+     "explanation": "`treat A as B`는 'A를 B로 취급하다'. 병마용 주변 흙에서도 색이 발견되므로 흙을 건드리지 않고 **유물처럼** 다룬다는 뜻이다.",
+     "id": "eng-d2-07"
+    },
+    {
+     "type": "choice",
+     "section": "10A 본문 문장",
+     "level": "보통",
+     "stem": "다음 (A), (B), (C)의 괄호 안에서 어법상 알맞은 말을 골라 바르게 짝지은 것은?\n\n> • The air caused the coating under the paint (A) [to fall / fall] off.\n> • Before their discovery, the clay soldiers were protected by (B) [being / be] underground.\n> • It's important not (C) [to disturb / disturbing] the dirt.",
+     "choices": [
+      "fall – being – to disturb",
+      "to fall – be – to disturb",
+      "to fall – being – disturbing",
+      "fall – be – disturbing",
+      "to fall – being – to disturb"
+     ],
+     "answer": 5,
+     "explanation": "(A) `cause + 목적어 + to부정사`. (B) 전치사 by 뒤에는 동명사 **being**. (C) 가주어 It, 진주어 to부정사(부정은 `not to V`).",
+     "id": "eng-d2-08"
+    },
+    {
+     "type": "choice",
+     "section": "10A 본문 문장",
+     "level": "보통",
+     "stem": "다음 문장의 빈칸에 생략되어 있는 말로 가장 알맞은 것은?\n\n> The first emperor of China, Qin Shihuang, is remembered for the many things ( ) he did during his rule.",
+     "choices": [
+      "that",
+      "who",
+      "where",
+      "what",
+      "whose"
+     ],
+     "answer": 1,
+     "explanation": "선행사 the many things를 꾸미는 **목적격 관계대명사 that**이 생략되어 있다. what은 선행사를 포함하므로 앞에 the many things가 있으면 쓸 수 없다.",
+     "id": "eng-d2-09"
+    },
+    {
+     "type": "choice",
+     "section": "10A 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>These</u>가 가리키는 것으로 알맞은 것은?\n\n> The emperor also ordered the construction of a huge army of life-sized terracotta soldiers. <u>These</u>, he hoped, would protect his tomb after his death.",
+     "choices": [
+      "the roads he built",
+      "the new writing system and currency",
+      "the life-sized terracotta soldiers",
+      "the farmers in Xi'an",
+      "the walls of the Great Wall"
+     ],
+     "answer": 3,
+     "explanation": "황제는 실제 크기의 **테라코타 병사들**이 사후 자기 무덤을 지켜 주기를 바랐다.",
+     "id": "eng-d2-10"
+    },
+    {
+     "type": "choice",
+     "section": "10A 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>is remembered for</u>의 의미로 가장 알맞은 것은?\n\n> Qin Shihuang <u>is remembered for</u> the many things he did during his rule.",
+     "choices": [
+      "~을 기억하려고 애쓴다",
+      "~ 때문에 잊혀졌다",
+      "~을 위해 기념비를 세웠다",
+      "~을 기억하지 못한다",
+      "~로 기억된다"
+     ],
+     "answer": 5,
+     "explanation": "`be remembered for`는 '~로(때문에) 기억되다'라는 수동 표현이다. 진시황은 통치 기간에 한 많은 일들로 기억된다.",
+     "id": "eng-d2-11"
+    },
+    {
+     "type": "choice",
+     "section": "10A 어휘",
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 알맞은 것은?\n\n> a country's money",
+     "choices": [
+      "network",
+      "currency",
+      "army",
+      "technique",
+      "construction"
+     ],
+     "answer": 2,
+     "explanation": "currency(화폐, 통화)의 풀이다. 진시황은 새로운 문자 체계, **화폐**, 도량형을 도입했다.",
+     "id": "eng-d2-12"
+    },
+    {
+     "type": "choice",
+     "section": "10A 어휘",
+     "level": "보통",
+     "stem": "단어와 영영 풀이가 **잘못** 짝지어진 것은?",
+     "choices": [
+      "liquid – a substance like water or mercury that flows freely",
+      "technique – a special way of doing something",
+      "protect – to keep someone or something safe from harm",
+      "network – the process of building something",
+      "apply – to put (paint/liquid) on a surface"
+     ],
+     "answer": 4,
+     "explanation": "'the process of building something'은 **construction**의 풀이다. network는 '연결된 도로·강·부분들의 체계(망)'이다.",
+     "id": "eng-d2-13"
+    },
+    {
+     "type": "choice",
+     "section": "10A 어휘",
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> New techniques are now starting to ________ the army's true colors.",
+     "choices": [
+      "reveal",
+      "last",
+      "introduce",
+      "construct",
+      "compete"
+     ],
+     "answer": 1,
+     "explanation": "새 기술이 군대의 본래 색을 '**드러내기**' 시작했다는 흐름이므로 reveal(to make something known or visible)이 알맞다. reveal은 reveal a secret, reveal the truth처럼도 쓴다.",
+     "id": "eng-d2-14"
+    },
+    {
+     "type": "choice",
+     "section": "10A 어휘",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 <u>last</u>의 의미로 가장 알맞은 것은?\n\n> Sadly, most of the colors did not <u>last</u> to the present day.",
+     "choices": [
+      "coming at the end, after all others",
+      "the one before this one",
+      "to continue to exist for a particular length of time",
+      "to put paint on a surface",
+      "to keep someone safe from harm"
+     ],
+     "answer": 3,
+     "explanation": "여기서 last는 동사로 '**지속되다**'라는 뜻이다. 색이 오늘날까지 남아 있지 못했다는 의미이며, '마지막의'라는 형용사 뜻이 아니다.",
+     "id": "eng-d2-15"
+    },
+    {
+     "type": "choice",
+     "section": "10A 동음이의어",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 <u>rule</u>의 문맥상 의미로 가장 알맞은 것은?\n\n> Qin Shihuang is remembered for the many things he did during his <u>rule</u>.",
+     "choices": [
+      "a law",
+      "a group of similar things",
+      "one time only",
+      "parts of someone's face",
+      "a period of control"
+     ],
+     "answer": 5,
+     "explanation": "during his rule은 '그의 **통치 기간** 동안'이다. '규칙, 법(a law)'은 동음이의어 함정 뜻이다.",
+     "id": "eng-d2-16"
+    },
+    {
+     "type": "choice",
+     "section": "10A 동음이의어",
+     "level": "어려움",
+     "stem": "본문 속 동음이의어(homonyms)와 그 문맥상 의미가 바르게 짝지어진 것만을 `<보기>`에서 고른 것은?\n\n> ㄱ. <u>light</u> brown → not heavy\n> ㄴ. <u>set</u> of measurements → a group of similar things\n> ㄷ. <u>Once</u> that happens → one time only\n> ㄹ. painted <u>features</u> → parts of someone's face",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄷ, ㄹ"
+     ],
+     "answer": 4,
+     "explanation": "ㄴ, ㄹ이 옳다. light brown의 light는 '연한, 밝은(not dark)'이고(ㄱ), Once that happens의 Once는 '일단 ~하면(when; as soon as)'이다(ㄷ).",
+     "id": "eng-d2-17"
+    },
+    {
+     "type": "choice",
+     "section": "10A 동음이의어",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 <u>Once</u>와 바꾸어 쓸 수 있는 말로 가장 알맞은 것은?\n\n> <u>Once</u> that happens, artists can bring Emperor Qin's army back to life in full color.",
+     "choices": [
+      "Only one time",
+      "A long time ago",
+      "Because of",
+      "As soon as",
+      "Instead of"
+     ],
+     "answer": 4,
+     "explanation": "여기서 Once는 접속사로 '**일단 ~하면**(when; as soon as)'이다. 부사 '한 번(one time only)'의 뜻이 아니다.",
+     "id": "eng-d2-18"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "보통",
+     "stem": "기자 피라미드에 관한 Before You Read 퀴즈 내용으로 옳지 **않은** 것은?",
+     "choices": [
+      "기자 피라미드는 멕시코 치첸이트사의 피라미드보다 더 오래되었다.",
+      "기자 피라미드는 처음 지어졌을 때 연한 갈색이었다.",
+      "기자 피라미드는 약 기원전 2550년에 짓기 시작했다.",
+      "쿠푸 대피라미드는 3,000년 넘게 세계에서 가장 높은 건축물이었다.",
+      "영국 링컨 대성당이 완공되기 전까지 쿠푸 대피라미드가 가장 높았다."
+     ],
+     "answer": 2,
+     "explanation": "기자 피라미드는 처음 지어졌을 때 **하얀색(white)**이었다. '연한 갈색(light brown)'은 오늘날 박물관의 병마용 색깔이니 섞지 말 것.",
+     "id": "eng-d2-19"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "쉬움",
+     "stem": "According to the passage, who built the pyramids of Giza?",
+     "choices": [
+      "slaves",
+      "foreigners",
+      "ordinary Egyptians",
+      "space aliens",
+      "soldiers of Qin Shihuang"
+     ],
+     "answer": 3,
+     "explanation": "고고학자들은 피라미드가 노예나 외국인(또는 외계인)이 아니라 **평범한 이집트인들(Ordinary Egyptians)**이 지었다는 것을 확인했다.",
+     "id": "eng-d2-20"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "보통",
+     "stem": "고고학자들이 피라미드를 누가 지었는지 확인(confirm)할 수 있게 된 근거로 가장 알맞은 것은?",
+     "choices": [
+      "피라미드 벽에 적힌 왕의 명령문을 해독한 것",
+      "치첸이트사 피라미드와 기자 피라미드를 비교한 것",
+      "오래된 이집트 동화책을 수집한 것",
+      "피라미드 안에서 발견된 노예들의 기록을 읽은 것",
+      "피라미드 근처에서 발견된 고대 도시와 건설자들이 묻힌 묘지를 연구한 것"
+     ],
+     "answer": 5,
+     "explanation": "*From studying these places*—피라미드 근처의 **고대 도시**와 건설자들이 묻힌 **묘지(cemetery)**를 연구해 확인했다.",
+     "id": "eng-d2-21"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "쉬움",
+     "stem": "다음 빈칸 (A), (B)에 들어갈 말로 가장 알맞은 것은?\n\n> It took about (A) ________ years to build the pyramids. Archeologists believe that about (B) ________ people were involved in the construction.",
+     "choices": [
+      "100 – 20,000–30,000",
+      "80 – 20,000–30,000",
+      "80 – 8,000",
+      "40 – 2,000–3,000",
+      "800 – 20,000–30,000"
+     ],
+     "answer": 2,
+     "explanation": "피라미드 건설에는 약 **80년**이 걸렸고, **2만~3만 명**이 참여했다. 8,000은 병마용 병사 수다.",
+     "id": "eng-d2-22"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "보통",
+     "stem": "피라미드 건설 노동자들이 일한 방식으로 본문의 내용과 일치하는 것은?",
+     "choices": [
+      "모든 노동자가 같은 역할을 맡아 함께 돌을 옮겼다.",
+      "팀에는 이름이 없었고 번호로만 구분했다.",
+      "경쟁을 막기 위해 한 팀씩 차례로 일했다.",
+      "각자 고유한 이름이 있는 팀에서 일하며 어느 팀이 더 빨리 하는지 경쟁했다.",
+      "돌을 캐는 일은 외국인 노동자만 했다."
+     ],
+     "answer": 4,
+     "explanation": "노동자들은 캐기·옮기기·다듬기 등 **서로 다른 역할**을 맡았고, **고유한 이름이 있는 팀**에서 일하며 어느 팀이 더 빨리 끝내는지 **경쟁했다(competed)**.",
+     "id": "eng-d2-23"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "보통",
+     "stem": "Why did the workers' bones show signs of arthritis?",
+     "choices": [
+      "Because they probably carried heavy things for a long time.",
+      "Because they did not have enough food.",
+      "Because they never received medical care.",
+      "Because they were buried in a cold cemetery.",
+      "Because they were slaves from other countries."
+     ],
+     "answer": 1,
+     "explanation": "관절염은 아마도 **오랜 시간 무거운 것을 나른 것**에서 생겼을 것이다. 노동자들은 보통 충분한 음식을 먹었고 의료 혜택도 받았으므로 나머지 이유는 본문과 맞지 않는다.",
+     "id": "eng-d2-24"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 <u>their</u>가 가리키는 대상으로 가장 알맞은 것은?\n\n> Archeologists have also found many female skeletons in the ancient city and cemetery. The damage to their bones is similar to that of the men. In fact, <u>their</u> lives may have been even tougher: Male workers generally lived to age 40–45, but women to only 30–35.",
+     "choices": [
+      "male workers",
+      "archeologists",
+      "female workers",
+      "Egyptian kings",
+      "space aliens"
+     ],
+     "answer": 3,
+     "explanation": "남성보다 삶이 '훨씬 더 고되었을' 수 있는 대상은 **여성 노동자들**이다. 바로 뒤에 여성의 수명(30~35세)이 남성(40~45세)보다 짧다는 근거가 나온다.",
+     "id": "eng-d2-25"
+    },
+    {
+     "type": "choice",
+     "section": "10B 지문 요약·팩트 체크",
+     "level": "보통",
+     "stem": "According to Zahi Hawass, why did a group of workers write *Friends of Khufu* on a wall of the Great Pyramid?",
+     "choices": [
+      "They wanted to become kings after Khufu.",
+      "They were forced to write it by their king.",
+      "They wanted to show which team worked faster.",
+      "They wanted foreigners to know who built the pyramid.",
+      "They saw the work as a national project and felt like participants in building Egypt."
+     ],
+     "answer": 5,
+     "explanation": "노동자들은 단지 왕의 무덤을 짓는 게 아니라 **이집트를 짓는 국가적 프로젝트(national project)**의 **참여자(participant)**라고 여겨 자랑스러워했다.",
+     "id": "eng-d2-26"
+    },
+    {
+     "type": "choice",
+     "section": "10B 본문 문장",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 <u>that</u>이 가리키는 것으로 가장 알맞은 것은?\n\n> The damage to their bones is similar to <u>that</u> of the men.",
+     "choices": [
+      "the cemetery",
+      "the damage",
+      "the ancient city",
+      "the research",
+      "the skeletons of women"
+     ],
+     "answer": 2,
+     "explanation": "같은 명사의 반복을 피하려고 쓴 that으로, '남성들의 **뼈 손상(the damage)**'을 뜻한다. 여성 뼈의 손상이 남성 뼈의 손상과 비슷하다는 의미다.",
+     "id": "eng-d2-27"
+    },
+    {
+     "type": "choice",
+     "section": "10B 본문 문장",
+     "level": "보통",
+     "stem": "다음 (A), (B), (C)의 괄호 안에서 어법상 알맞은 말을 골라 바르게 짝지은 것은?\n\n> • Close by, there is a cemetery (A) [where / which] the pyramid builders were buried.\n> • It took about 80 years (B) [to build / built] the pyramids.\n> • The task was challenging, but laborers were proud (C) [of / to] their work.",
+     "choices": [
+      "where – to build – of",
+      "which – to build – of",
+      "where – built – to",
+      "which – built – of",
+      "where – to build – to"
+     ],
+     "answer": 1,
+     "explanation": "(A) 뒤가 완전한 문장이고 장소 선행사이므로 관계부사 **where**. (B) `It takes + 시간 + to V`. (C) `be proud of` ~을 자랑스러워하다.",
+     "id": "eng-d2-28"
+    },
+    {
+     "type": "choice",
+     "section": "10B 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 부분의 의미로 가장 알맞은 것은?\n\n> Many people today <u>think of the pyramids of Giza as the defining icon</u> of ancient Egyptian culture.",
+     "choices": [
+      "기자 피라미드를 대표적인 상징으로 여긴다",
+      "기자 피라미드를 새로운 상징으로 바꾼다",
+      "기자 피라미드의 상징을 그림으로 그린다",
+      "기자 피라미드를 상징보다 낮게 평가한다",
+      "기자 피라미드의 상징을 처음 발견한다"
+     ],
+     "answer": 1,
+     "explanation": "`think of A as B`는 'A를 B로 여기다'. icon은 '문화나 생각을 대표하는 유명한 사람·사물(상징)'이다.",
+     "id": "eng-d2-29"
+    },
+    {
+     "type": "choice",
+     "section": "10B 어휘",
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 알맞은 것은?\n\n> to show to be true",
+     "choices": [
+      "compete",
+      "involve",
+      "shape",
+      "confirm",
+      "receive"
+     ],
+     "answer": 4,
+     "explanation": "confirm(확인하다, 입증하다)의 풀이다. *archeologists can now **confirm** that the pyramids were not built by slaves*.",
+     "id": "eng-d2-30"
+    },
+    {
+     "type": "choice",
+     "section": "10B 어휘",
+     "level": "보통",
+     "stem": "단어와 영영 풀이가 **잘못** 짝지어진 것은?",
+     "choices": [
+      "ordinary – common or usual",
+      "compete – to try to be more successful or faster than others",
+      "icon – a famous person or thing that represents a culture or idea",
+      "according to – as stated or reported by someone or something",
+      "role – a large solid piece of hard material with flat sides"
+     ],
+     "answer": 5,
+     "explanation": "'평평한 면을 가진 크고 단단한 덩어리'는 **block**의 풀이다. role은 '어떤 상황에서 맡는 일이나 기능(역할)'이다.",
+     "id": "eng-d2-31"
+    },
+    {
+     "type": "choice",
+     "section": "10B 어휘",
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 말로 가장 알맞은 것은?\n\n> • It was an impossible ________.\n> • She finally completed the ________.",
+     "choices": [
+      "icon",
+      "task",
+      "block",
+      "cemetery",
+      "skeleton"
+     ],
+     "answer": 2,
+     "explanation": "task(과업, 일)는 `an impossible task`, `complete the task`, `give someone a new task`처럼 쓰인다.",
+     "id": "eng-d2-32"
+    },
+    {
+     "type": "choice",
+     "section": "10B 어휘",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>laborers</u>와 의미가 가장 가까운 것은?\n\n> The task was challenging, but <u>laborers</u> were proud of their work.",
+     "choices": [
+      "archeologists",
+      "kings",
+      "slaves",
+      "workers",
+      "scientists"
+     ],
+     "answer": 4,
+     "explanation": "laborers는 '노동자들' = **workers**다. 피라미드를 지은 사람들은 노예가 아니라 평범한 이집트인 노동자들이었다.",
+     "id": "eng-d2-33"
+    },
+    {
+     "type": "choice",
+     "section": "10B 개요·T/F 함정",
+     "level": "보통",
+     "stem": "다음은 Wonders of Egypt의 개요(Outline) 일부이다. 빈칸 (A), (B)에 들어갈 말로 가장 알맞은 것은?\n\n> 2. Builders' lives and attitudes\n>  b. Food and health: had enough food / had access to (A) ________\n>  c. Attitude of laborers: felt proud / saw it as a (B) ________ project",
+     "choices": [
+      "medical care – national",
+      "medical care – secret",
+      "new houses – national",
+      "enough money – foreign",
+      "medical care – personal"
+     ],
+     "answer": 1,
+     "explanation": "노동자들은 아프거나 다치면 **의료 혜택(medical care)**을 받았고, 일을 **국가적(national)** 프로젝트로 여겼다.",
+     "id": "eng-d2-34"
+    },
+    {
+     "type": "choice",
+     "section": "10B 개요·T/F 함정",
+     "level": "어려움",
+     "stem": "다음 진술 (a)~(c)를 본문 내용에 따라 True(T) / False(F) / Not Given(NG)으로 판단한 것으로 바르게 짝지은 것은?\n\n> (a) It took more than 100 years to build the pyramids.\n> (b) Women mainly shaped the rock into blocks.\n> (c) Male workers generally lived longer than female workers.",
+     "choices": [
+      "F – F – T",
+      "T – NG – F",
+      "F – NG – T",
+      "NG – F – T",
+      "F – NG – F"
+     ],
+     "answer": 3,
+     "explanation": "(a) 약 80년이므로 F. (b) 여성 유골이 발견되었지만 어떤 역할을 했는지는 본문에 없으므로 NG. (c) 남성 40~45세, 여성 30~35세이므로 T.",
+     "id": "eng-d2-35"
+    },
+    {
+     "type": "choice",
+     "section": "10B 개요·T/F 함정",
+     "level": "보통",
+     "stem": "피라미드 노동자들의 삶에 대한 설명으로 일치하지 **않는** 것은?",
+     "choices": [
+      "노동자들의 삶은 고되었다.",
+      "여성 유골의 뼈 손상 정도는 남성과 비슷했다.",
+      "노동자들은 아프거나 다치면 치료를 받았다.",
+      "노동자들은 자신의 일을 자랑스러워했다.",
+      "노동자들은 보통 음식을 충분히 먹지 못했다."
+     ],
+     "answer": 5,
+     "explanation": "*workers usually had enough food*—노동자들은 보통 **충분한 음식**을 먹었다. 삶은 힘들었지만 음식과 의료 혜택은 있었다.",
+     "id": "eng-d2-36"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "10A 지문 요약",
+     "level": "서술형",
+     "stem": "병마용의 색깔이 발굴 직후 사라진 이유와, 이를 막기 위해 고고학자들이 사용하는 새로운 보존 방법을 우리말로 쓰시오.",
+     "model": "병사들은 땅속에 있을 때는 보호되었지만 발굴되자 공기가 페인트 아래의 코팅을 떨어지게 만들어 달걀 하나 삶는 시간보다 짧은 순간에 색이 사라졌다. 그래서 중국과 독일 연구진이 개발한 특수 액체를 병사나 유물에 뿌린 다음 플라스틱으로 덮어 색을 보존한다.",
+     "keywords": [
+      "공기(air)",
+      "코팅(coating)",
+      "특수 액체(special liquid)",
+      "플라스틱(plastic)",
+      "중국과 독일 연구진"
+     ],
+     "id": "eng-d2-37"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "10B 지문 요약",
+     "level": "서술형",
+     "stem": "피라미드 건설 노동자들의 삶에서 힘들었던 점 두 가지와 그래도 누릴 수 있었던 점 두 가지를 우리말로 쓰시오.",
+     "model": "힘들었던 점: 오랫동안 무거운 것을 날라 뼈에 관절염의 흔적이 남았고, 수명이 짧아 남성은 40~45세, 여성은 30~35세 정도까지만 살았다. 누린 점: 보통 충분한 음식을 먹었고, 아프거나 다치면 의료 혜택을 받았다.",
+     "keywords": [
+      "관절염(arthritis)",
+      "수명 남 40~45 / 여 30~35",
+      "충분한 음식(enough food)",
+      "의료 혜택(medical care)"
+     ],
+     "id": "eng-d2-38"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "10A 동음이의어",
+     "level": "서술형",
+     "stem": "다음 문장에서 밑줄 친 Once의 뜻을 쓰고, that happens가 가리키는 일이 무엇인지 우리말로 쓰시오.\n\n> The next challenge, says Rong, is to find a way to apply the colors to the army again. <u>Once</u> that happens, artists can bring Emperor Qin's army back to life in full color.",
+     "model": "Once는 '일단 ~하면'(when; as soon as)이라는 뜻의 접속사이다. that happens는 색들을 병마용 군대에 다시 입히는(apply) 방법을 찾는 일을 가리킨다. 그렇게 되면 예술가들이 진시황의 군대를 본래 색으로 되살릴 수 있다.",
+     "keywords": [
+      "일단 ~하면",
+      "when; as soon as",
+      "색을 다시 입히는 방법",
+      "apply",
+      "본래 색으로 되살림"
+     ],
+     "id": "eng-d2-39"
+    }
+   ]
+  },
+  "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md": {
+   "title": "단원 평가",
+   "questions": [
+    {
+     "type": "choice",
+     "section": "11A 인포그래픽 수치",
+     "level": "보통",
+     "stem": "Unit 11A 인포그래픽(p.146~147)의 내용으로 옳지 **않은** 것은?",
+     "choices": [
+      "2015년 전 세계 플라스틱 총생산량은 4억 4,800만 톤이었다.",
+      "가장 큰 비중을 차지하는 용도는 포장재로 1억 6,100만 톤이었다.",
+      "포장재는 전체 생산량의 거의 40%를 차지했다.",
+      "건축·건설(Building and construction)용 플라스틱은 평균 35년 동안 쓰인다.",
+      "포장재(Packaging)는 버려지기 전까지 평균 35년 동안 사용된다."
+     ],
+     "answer": 5,
+     "explanation": "평균 35년은 **건축·건설용**이고, 포장재는 평균 **6개월 미만**만 쓰이고 버려진다.",
+     "id": "eng-d3-01"
+    },
+    {
+     "type": "choice",
+     "section": "11A 인포그래픽 수치",
+     "level": "쉬움",
+     "stem": "인포그래픽에 따르면, 버려지기 전까지 평균 사용 기간이 **가장 긴** 플라스틱 용도는?",
+     "choices": [
+      "Building and construction",
+      "Packaging",
+      "Straws",
+      "Plastic bags",
+      "Water bottles"
+     ],
+     "answer": 1,
+     "explanation": "건축·건설용이 평균 **35년**으로 가장 길다. 포장재는 6개월 미만으로 가장 짧고, 대부분 한 번 쓰고 버려진다.",
+     "id": "eng-d3-02"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "보통",
+     "stem": "문단 A(바다거북 구조 장면)를 읽고 알 수 **없는** 것은?",
+     "choices": [
+      "거북이를 도운 사람들이 있던 장소",
+      "거북이가 겪고 있던 증상",
+      "물체를 빼내는 데 걸린 시간",
+      "과학자들이 빨대를 빼낼 때 사용한 도구",
+      "거북이 코에서 나온 물체의 종류와 길이"
+     ],
+     "answer": 4,
+     "explanation": "장소(코스타리카 근처 배 위), 증상(숨쉬기 힘들어함), 시간(8분), 물체(10cm 플라스틱 빨대)는 나오지만, **어떤 도구를 썼는지는 나오지 않는다**.",
+     "id": "eng-d3-03"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>It</u>이 가리키는 것으로 가장 알맞은 것은?\n\n> The video of the turtle's rescue has been viewed millions of times on YouTube. <u>It</u> has helped raise awareness of a growing problem: The world's seas are full of plastic.",
+     "choices": [
+      "the video of the turtle's rescue",
+      "the turtle's nose",
+      "the plastic straw",
+      "YouTube",
+      "the world's seas"
+     ],
+     "answer": 1,
+     "explanation": "사람들의 인식을 높이는 데 도움을 준 것은 수백만 번 조회된 **거북이 구조 영상**이다.",
+     "id": "eng-d3-04"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "보통",
+     "stem": "다음 빈칸 (A), (B)에 들어갈 말로 가장 알맞은 것은?\n\n> Since 2000, there has been a huge increase in worldwide plastic production, but we recycle less than (A) ________ of it. Today, scientists think about (B) ________ kilograms goes into the sea every year from coastal regions.",
+     "choices": [
+      "one-fifth – 8.3 billion",
+      "one-half – 8.1 billion",
+      "one-fifth – 8.1 billion",
+      "one-tenth – 25 million",
+      "one-half – 8.3 billion"
+     ],
+     "answer": 3,
+     "explanation": "재활용은 **5분의 1 미만**, 해안 지역에서 매년 바다로 들어가는 양은 **81억 kg**이다. 8.3 billion은 11B의 해변 오염 빨대 개수다.",
+     "id": "eng-d3-05"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "쉬움",
+     "stem": "Why do some fish eat plastic?",
+     "choices": [
+      "Because it is sweeter than real food.",
+      "Because they cannot find any other food in the sea.",
+      "Because plastic makes them strong.",
+      "Because people feed them plastic on purpose.",
+      "Because it is covered with sea plants, and it looks and smells like food."
+     ],
+     "answer": 5,
+     "explanation": "플라스틱이 **바다 식물로 덮여 있고 음식처럼 보이고 냄새가 나기** 때문에 먹는다.",
+     "id": "eng-d3-06"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "보통",
+     "stem": "다음 글에서 Matthew Savoca가 'very confusing'하다고 말한 상황으로 가장 알맞은 것은?\n\n> Typically, eating plastic leads to constant hunger. \"Imagine you ate lunch and then just felt weak ... and hungry all day,\" says marine biologist Matthew Savoca. \"That would be very confusing.\"",
+     "choices": [
+      "점심 메뉴를 무엇으로 할지 고르지 못하는 상황",
+      "점심을 먹었는데도 하루 종일 기운이 없고 배가 고픈 상황",
+      "플라스틱과 음식을 구별할 수 있는 상황",
+      "하루 종일 아무것도 먹지 못하는 상황",
+      "날카로운 플라스틱 조각에 다친 상황"
+     ],
+     "answer": 2,
+     "explanation": "플라스틱을 먹은 동물이 겪는 **끊임없는 배고픔(constant hunger)**을, 점심을 먹었는데도 하루 종일 약하고 배고픈 상황에 빗대었다.",
+     "id": "eng-d3-07"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "보통",
+     "stem": "The Problem with Plastic의 내용과 일치하지 **않는** 것은?",
+     "choices": [
+      "플라스틱은 튼튼하고 오래가서 사람들에게 유용하다.",
+      "날카로운 플라스틱 조각을 먹으면 해양 동물이 죽을 수도 있다.",
+      "약 700종의 해양 생물이 일회용 플라스틱에 걸리거나 그것을 먹었다.",
+      "영상 속 거북이는 구조 후 결국 죽고 말았다.",
+      "빨대, 물병, 비닐봉지는 일회용 플라스틱의 흔한 예이다."
+     ],
+     "answer": 4,
+     "explanation": "*Luckily, the turtle survived and was released back into the ocean.* 거북이는 **살아남아 바다로 돌아갔다**.",
+     "id": "eng-d3-08"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "보통",
+     "stem": "According to Savoca, which kind of plastic is the worst?",
+     "choices": [
+      "single-use plastics",
+      "plastics used in building and construction",
+      "plastics that are recycled",
+      "plastics covered with sea plants",
+      "biodegradable plastics"
+     ],
+     "answer": 1,
+     "explanation": "사보카는 \"**Single-use plastics are the worst.**\"라고 했다. 버리기 전에 딱 한 번만 쓰는 물건들(빨대, 물병, 비닐봉지 등)이다.",
+     "id": "eng-d3-09"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 내용",
+     "level": "어려움",
+     "stem": "Debra Lee Magadini의 말과 문단 E의 내용으로 알 수 있는 것은?",
+     "choices": [
+      "플라스틱의 장기적 영향은 이미 모두 밝혀졌다.",
+      "5~10년 안에 바다의 플라스틱이 모두 생분해될 것이다.",
+      "플라스틱이 해양 동물에 미치는 장기적 영향은 5~10년 뒤에야 알 수 있고, 그때쯤 2,500만 톤이 더 바다에 들어가 있을 것이다.",
+      "앞으로 바다에 들어가는 플라스틱은 2,500만 톤 줄어들 것이다.",
+      "컬럼비아 대학은 25년 동안 해양 동물을 연구해 왔다."
+     ],
+     "answer": 3,
+     "explanation": "마가디니는 답을 **5년에서 10년 뒤** 알게 될 것이라 했고, 그때쯤이면 **또 다른 2,500만 톤**의 플라스틱이 이미 바다에 있을 것이라는 경고가 이어진다.",
+     "id": "eng-d3-10"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 문장",
+     "level": "보통",
+     "stem": "다음 (A), (B), (C)의 괄호 안에서 어법상 알맞은 말을 골라 바르게 짝지은 것은?\n\n> • The animal is having trouble (A) [breathing / to breathe].\n> • Since 2000, there (B) [has / have] been a huge increase in worldwide plastic production.\n> • Typically, eating plastic (C) [leads / lead] to constant hunger.",
+     "choices": [
+      "breathing – have – leads",
+      "to breathe – has – leads",
+      "breathing – has – lead",
+      "breathing – has – leads",
+      "to breathe – have – lead"
+     ],
+     "answer": 4,
+     "explanation": "(A) `have trouble + -ing` ~하는 데 어려움을 겪다. (B) there 구문은 뒤의 주어(a huge increase, 단수)에 맞춰 has. (C) 동명사 주어(eating plastic)는 단수 취급하므로 leads.",
+     "id": "eng-d3-11"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>ends up in</u>의 의미로 가장 알맞은 것은?\n\n> A lot of this plastic waste <u>ends up in</u> the ocean.",
+     "choices": [
+      "~에서 시작되다",
+      "~을 끝내다",
+      "~에서 꺼내지다",
+      "~을 깨끗하게 하다",
+      "결국 ~로 들어가게 되다"
+     ],
+     "answer": 5,
+     "explanation": "`end up in`은 '결국 ~에 이르다(들어가게 되다)'라는 뜻이다. 많은 플라스틱 쓰레기가 결국 바다로 들어간다.",
+     "id": "eng-d3-12"
+    },
+    {
+     "type": "choice",
+     "section": "11A 본문 문장",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 <u>result in death</u>와 의미가 가장 가까운 것은?\n\n> In some cases, eating sharp pieces of plastic can seriously hurt sea animals and even <u>result in death</u>.",
+     "choices": [
+      "come from death",
+      "stop death",
+      "cause hunger",
+      "lead to death",
+      "get stuck in death"
+     ],
+     "answer": 4,
+     "explanation": "`result in`은 '~로 이어지다(결과를 낳다)'로, 본문의 `lead to`(eating plastic leads to constant hunger)와 같은 뜻이다.",
+     "id": "eng-d3-13"
+    },
+    {
+     "type": "choice",
+     "section": "11A 어휘·접두사 ex-",
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 알맞은 것은?\n\n> to take something out",
+     "choices": [
+      "extract",
+      "extend",
+      "recycle",
+      "rescue",
+      "confuse"
+     ],
+     "answer": 1,
+     "explanation": "접두사 `ex-`(out)가 붙은 **extract(빼내다)**의 풀이다. *A scientist tries to **extract** the object.*",
+     "id": "eng-d3-14"
+    },
+    {
+     "type": "choice",
+     "section": "11A 어휘·접두사 ex-",
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> The store is open every day ________ Sunday.",
+     "choices": [
+      "extract",
+      "extend",
+      "except",
+      "exit",
+      "constant"
+     ],
+     "answer": 3,
+     "explanation": "'일요일을 **제외하고** 매일 문을 연다'이므로 except(~을 제외하고)가 알맞다. extract·extend·exit도 모두 `ex-`(out)가 들어간 단어지만 뜻이 맞지 않는다.",
+     "id": "eng-d3-15"
+    },
+    {
+     "type": "choice",
+     "section": "11A 어휘·접두사 ex-",
+     "level": "보통",
+     "stem": "단어와 영영 풀이가 **잘못** 짝지어진 것은?",
+     "choices": [
+      "typically – what usually happens in a situation",
+      "constant – happening all the time",
+      "weak – not very strong",
+      "confusing – difficult for people to understand",
+      "huge – very small in size or amount"
+     ],
+     "answer": 5,
+     "explanation": "huge는 '크기나 양이 **아주 큰**(very large)'이다. *a **huge** increase in worldwide plastic production*.",
+     "id": "eng-d3-16"
+    },
+    {
+     "type": "choice",
+     "section": "11A 어휘·접두사 ex-",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>in the long term</u>의 의미로 가장 알맞은 것은?\n\n> How will plastic affect sea animals <u>in the long term</u>?",
+     "choices": [
+      "for only a short moment",
+      "continuing far into the future",
+      "in the past",
+      "right away",
+      "once in a while"
+     ],
+     "answer": 2,
+     "explanation": "long term은 '먼 미래까지 계속되는(장기간)'이다. 플라스틱이 **장기적으로** 해양 동물에게 어떤 영향을 줄지 묻는 문장이다.",
+     "id": "eng-d3-17"
+    },
+    {
+     "type": "choice",
+     "section": "11A 인용구의 목적",
+     "level": "보통",
+     "stem": "다음 인용구를 글쓴이가 사용한 목적으로 가장 알맞은 것은?\n\n> \"I think we'll know the answers in 5 to 10 years' time,\" says Debra Lee Magadini from Columbia University.",
+     "choices": [
+      "To add a supporting statement from an ordinary student",
+      "To highlight an interesting or memorable phrase",
+      "To tell a funny story about sea turtles",
+      "To provide expert evidence for an argument",
+      "To give the definition of a difficult word"
+     ],
+     "answer": 4,
+     "explanation": "대학 연구자의 말이므로 **전문가 증거 제시(expert evidence)**에 해당한다. 일반 주민·학생의 경험은 '뒷받침하는 진술', \"Ghost nets\" 같은 표현은 '기억에 남는 어구 강조'다.",
+     "id": "eng-d3-18"
+    },
+    {
+     "type": "choice",
+     "section": "11A 인용구의 목적",
+     "level": "보통",
+     "stem": "인용구 사용 목적 중 **'흥미롭거나 기억에 남는 어구 강조(To highlight an interesting or memorable phrase)'**의 예로 가장 알맞은 것은?",
+     "choices": [
+      "\"plastic soup\"",
+      "\"Single-use plastics are the worst.\" (Matthew Savoca)",
+      "12살 Molly Peterson이 빨대 사용을 중단한 경험",
+      "주민 Mayumi Fujikawa의 질문",
+      "Ocean Cleanup CEO Boyan Slat의 발언"
+     ],
+     "answer": 1,
+     "explanation": "*\"Ghost nets\"*, *\"plastic soup\"*처럼 인상적인 표현이 '기억에 남는 어구 강조'다. 사보카·Boyan Slat는 전문가 증거, Molly Peterson·Mayumi Fujikawa는 뒷받침하는 진술·질문이다.",
+     "id": "eng-d3-19"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "보통",
+     "stem": "Five Tips for Using Less Plastic에 나온 국가·도시와 내용의 연결이 **잘못된** 것은?",
+     "choices": [
+      "Denmark – the first country to place a tax on plastic bags (1993)",
+      "Seattle – the first major U.S. city to ban plastic straws (2018)",
+      "Norway – recycles 97 percent of its plastic bags",
+      "Bundanoon and San Francisco – banned bottled water completely or partially",
+      "the United Kingdom – leaders call for plastic-free areas in supermarkets"
+     ],
+     "answer": 3,
+     "explanation": "노르웨이가 97%를 재활용하는 것은 비닐봉지가 아니라 **플라스틱 병(plastic bottles)**이다.",
+     "id": "eng-d3-20"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "보통",
+     "stem": "Tip 1(비닐봉지)에 대한 내용과 일치하는 것은?",
+     "choices": [
+      "사람들은 매년 전 세계에서 약 83억 개의 비닐봉지를 쓴다.",
+      "미국인 한 명은 1년에 비닐봉지를 4개 정도 쓴다.",
+      "덴마크는 비닐봉지를 전 세계 최초로 완전히 금지했다.",
+      "평균 덴마크인은 하루에 비닐봉지 1개를 쓴다.",
+      "전 세계 비닐봉지의 약 10%가 미국에서만 사용된다."
+     ],
+     "answer": 5,
+     "explanation": "전 세계 연간 **1조 개** 중 약 **10%**가 미국에서 쓰이며, 미국인 1인당 하루 거의 1개꼴이다. 덴마크인은 **연 4개**이고, 덴마크는 금지가 아니라 **세금**을 처음 매겼다.",
+     "id": "eng-d3-21"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "보통",
+     "stem": "본문에서 비닐봉지 값을 고객에게 내게 하거나 완전히 금지한 '다른 나라들(other countries)'의 예로 언급되지 **않은** 것은?",
+     "choices": [
+      "Chile",
+      "Norway",
+      "Kenya",
+      "Indonesia",
+      "New Zealand"
+     ],
+     "answer": 2,
+     "explanation": "예로 든 나라는 칠레·케냐·인도네시아·독일·뉴질랜드다. 노르웨이는 Tip 5(병 재활용 97%)에 나오는 나라다.",
+     "id": "eng-d3-22"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "쉬움",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> Skip the straw. Today, around ________ plastic straws pollute the world's beaches.",
+     "choices": [
+      "8.1 billion",
+      "1 trillion",
+      "25 million",
+      "8.3 billion",
+      "448 million"
+     ],
+     "answer": 4,
+     "explanation": "약 **83억 개(8.3 billion)**의 빨대가 해변을 오염시킨다. 8.1 billion kg은 11A의 매년 바다 유입량이다.",
+     "id": "eng-d3-23"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "보통",
+     "stem": "According to the passage, how many plastic bottles do people around the world still buy?",
+     "choices": [
+      "nearly a million every minute",
+      "about four every year",
+      "nearly one every day",
+      "about 97 percent of all bottles",
+      "around 8.3 billion every minute"
+     ],
+     "answer": 1,
+     "explanation": "일부 도시가 생수를 금지했지만, 전 세계적으로는 여전히 **매분 거의 100만 개**의 플라스틱 병을 산다.",
+     "id": "eng-d3-24"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "보통",
+     "stem": "노르웨이가 플라스틱 병의 97%를 재활용할 수 있는 방법으로 가장 알맞은 것은?",
+     "choices": [
+      "정부가 플라스틱 병 사용을 전면 금지했다.",
+      "플라스틱 병 하나에 2.5크로네의 세금을 매긴다.",
+      "대부분의 슈퍼마켓에 있는 기계가 병을 받고 병당 최대 2.5크로네를 돌려준다.",
+      "슈퍼마켓에 플라스틱 없는 구역을 만들었다.",
+      "모든 병을 생분해되는 플라스틱으로 바꾸었다."
+     ],
+     "answer": 3,
+     "explanation": "슈퍼마켓 기계가 병을 받고 병당 최대 **2.5크로네(32센트)를 환불(refund)**해 준다. 세금이나 금지가 아니라 돌려받는 방식이다.",
+     "id": "eng-d3-25"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "보통",
+     "stem": "Tip 4(플라스틱 포장 피하기)의 실천 방법으로 알맞은 것만을 `<보기>`에서 고른 것은?\n\n> ㄱ. 플라스틱 용기에 든 액체 비누 대신 고체 비누를 산다.\n> ㄴ. 재사용 빨대를 가지고 다닌다.\n> ㄷ. 플라스틱 포장된 과일이나 채소를 사지 않는다.\n> ㄹ. 우유 팩을 슈퍼마켓 기계에 넣는다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄷ, ㄹ"
+     ],
+     "answer": 2,
+     "explanation": "Tip 4는 **고체 비누 사기**(ㄱ)와 **포장된 과일·채소 안 사기**(ㄷ)다. 재사용 빨대는 Tip 2, 재활용은 Tip 5의 내용이다.",
+     "id": "eng-d3-26"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 <u>They</u>가 가리키는 대상으로 가장 알맞은 것은?\n\n> In the United Kingdom, leaders are calling for supermarkets to have plastic-free areas. <u>They</u> also want to tax plastic take-out containers.",
+     "choices": [
+      "supermarkets",
+      "U.K. leaders",
+      "plastic-free areas",
+      "customers",
+      "take-out containers"
+     ],
+     "answer": 2,
+     "explanation": "테이크아웃 용기에 세금을 매기기를 '원하는' 주체는 **영국 지도자들**이다. 바로 앞의 supermarkets와 헷갈리지 말 것.",
+     "id": "eng-d3-27"
+    },
+    {
+     "type": "choice",
+     "section": "11B 5가지 팁·국가별 정책",
+     "level": "어려움",
+     "stem": "Five Tips for Using Less Plastic의 내용과 일치하지 **않는** 것은?",
+     "choices": [
+      "과학자들은 플라스틱을 더 생분해되게 만들어 장기적 해결책을 찾고 있다.",
+      "많은 다른 도시들이 시애틀의 본보기를 따를 예정이다.",
+      "재사용 물병에 좋아하는 어떤 음료든 채워 쓰라고 권한다.",
+      "대부분의 병과 우유·주스 팩은 재활용할 수 있다.",
+      "모든 플라스틱 제품은 재활용할 수 있다."
+     ],
+     "answer": 5,
+     "explanation": "*We can't recycle all plastic items*—**모든 플라스틱을 재활용할 수는 없지만** 대부분의 병과 우유·주스 팩은 가능하다.",
+     "id": "eng-d3-28"
+    },
+    {
+     "type": "choice",
+     "section": "11B 본문 문장",
+     "level": "보통",
+     "stem": "다음 (A), (B), (C)의 괄호 안에서 어법상 알맞은 말을 골라 바르게 짝지은 것은?\n\n> • (A) [Quit using / Quit to use] plastic bags.\n> • Other countries either make customers (B) [pay / to pay] for plastic bags, or have banned them completely.\n> • Buy a reusable bottle and fill it (C) [with / of] any type of beverage you like.",
+     "choices": [
+      "Quit to use – pay – with",
+      "Quit using – to pay – with",
+      "Quit using – pay – with",
+      "Quit to use – to pay – of",
+      "Quit using – pay – of"
+     ],
+     "answer": 3,
+     "explanation": "(A) `quit + -ing` ~하는 것을 그만두다. (B) 사역동사 `make + 목적어 + 동사원형`. (C) `fill A with B` A를 B로 채우다.",
+     "id": "eng-d3-29"
+    },
+    {
+     "type": "choice",
+     "section": "11B 본문 문장",
+     "level": "보통",
+     "stem": "다음 문장의 밑줄 친 부분의 의미로 가장 알맞은 것은?\n\n> In 2018, Seattle became the first major U.S. city to ban plastic straws, and many other cities <u>are set to follow</u> its example.",
+     "choices": [
+      "따르기를 거부했다",
+      "이미 따랐다",
+      "따를 예정이다",
+      "따르는 것을 금지했다",
+      "따르도록 강요받았다"
+     ],
+     "answer": 3,
+     "explanation": "`be set to V`는 '~할 예정이다'라는 뜻이다. 많은 다른 도시들이 시애틀의 본보기를 따를 예정이다.",
+     "id": "eng-d3-30"
+    },
+    {
+     "type": "choice",
+     "section": "11B 본문 문장",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>place a tax on</u>의 의미로 가장 알맞은 것은?\n\n> In 1993, Denmark was the first country to <u>place a tax on</u> plastic bags.",
+     "choices": [
+      "~을 완전히 금지하다",
+      "~을 무료로 나누어 주다",
+      "~을 재활용하다",
+      "~의 값을 돌려주다",
+      "~에 세금을 부과하다"
+     ],
+     "answer": 5,
+     "explanation": "`place a tax on`은 '~에 세금을 부과하다'. 덴마크는 금지가 아니라 **세금**을 처음 매긴 나라다.",
+     "id": "eng-d3-31"
+    },
+    {
+     "type": "choice",
+     "section": "11B 본문 문장",
+     "level": "보통",
+     "stem": "다음 글의 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> People use a trillion plastic bags worldwide every year. Roughly 10 percent are used in the United States alone. That's almost one bag per American per day. ________, the average Dane uses four single-use bags per year.",
+     "choices": [
+      "For example",
+      "In contrast",
+      "In the same way",
+      "As a result",
+      "In the meantime"
+     ],
+     "answer": 2,
+     "explanation": "미국인(하루 거의 1개)과 덴마크인(1년에 4개)을 **대조**하므로 In contrast(대조적으로)가 알맞다.",
+     "id": "eng-d3-32"
+    },
+    {
+     "type": "choice",
+     "section": "11B 어휘·문맥 추론",
+     "level": "쉬움",
+     "stem": "다음 문장의 밑줄 친 <u>beverage</u>와 의미가 가장 가까운 것은?\n\n> Buy a reusable bottle and fill it with any type of <u>beverage</u> you like.",
+     "choices": [
+      "container",
+      "refund",
+      "customer",
+      "drink",
+      "straw"
+     ],
+     "answer": 4,
+     "explanation": "문맥상 병에 채우는 것이므로 beverage는 **drink(음료)**다. 'Using Context' 문맥 추론 단어 중 하나다.",
+     "id": "eng-d3-33"
+    },
+    {
+     "type": "choice",
+     "section": "11B 어휘·문맥 추론",
+     "level": "보통",
+     "stem": "다음 문장에서 밑줄 친 <u>partially</u>와 반대되는 의미로 함께 쓰인 단어는?\n\n> Some cities (like Bundanoon in Australia and San Francisco in the U.S.) have completely or <u>partially</u> banned bottled water.",
+     "choices": [
+      "completely",
+      "globally",
+      "roughly",
+      "typically",
+      "constantly"
+     ],
+     "answer": 1,
+     "explanation": "partially는 '부분적으로(in part)'이고, or로 짝을 이룬 **completely(완전히)**가 그 반대 의미다.",
+     "id": "eng-d3-34"
+    },
+    {
+     "type": "choice",
+     "section": "11B 어휘·문맥 추론",
+     "level": "보통",
+     "stem": "Using Context(문맥 추론)에서 단어와 그 뜻이 바르게 짝지어진 것만을 `<보기>`에서 고른 것은?\n\n> ㄱ. roughly = approximately\n> ㄴ. skip = start using\n> ㄷ. cartons = containers\n> ㄹ. partially = completely",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄷ, ㄹ"
+     ],
+     "answer": 2,
+     "explanation": "roughly는 '대략(approximately)', cartons는 '팩, 용기(containers)'다. skip은 'stop using', partially는 'in part'이다.",
+     "id": "eng-d3-35"
+    },
+    {
+     "type": "choice",
+     "section": "11B 어휘·문맥 추론",
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 알맞은 것은?\n\n> to officially say something must not be shown or used",
+     "choices": [
+      "avoid",
+      "reduce",
+      "pollute",
+      "quit",
+      "ban"
+     ],
+     "answer": 5,
+     "explanation": "ban(금지하다)의 풀이다. avoid는 '피하다(stay away from)', quit은 '(하던 것을) 그만두다'이다.",
+     "id": "eng-d3-36"
+    },
+    {
+     "type": "choice",
+     "section": "11B 어휘·문맥 추론",
+     "level": "보통",
+     "stem": "단어와 영영 풀이가 **잘못** 짝지어진 것은?",
+     "choices": [
+      "avoid – to stay away from a person or thing",
+      "customer – money paid to the government",
+      "refund – a sum of money that is returned to you",
+      "pollute – to make water, air, or land dirty and dangerous",
+      "container – an object used to hold or store things"
+     ],
+     "answer": 2,
+     "explanation": "'정부에 내는 돈'은 **tax**의 풀이다. customer는 '물건이나 서비스를 사는 사람(고객)'이다.",
+     "id": "eng-d3-37"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "11A 본문 내용",
+     "level": "서술형",
+     "stem": "일부 물고기가 플라스틱을 먹는 이유와, 플라스틱을 먹었을 때 해양 동물에게 생기는 피해 두 가지를 우리말로 쓰시오.",
+     "model": "플라스틱이 바다 식물로 덮여 있고 음식처럼 보이고 냄새가 나기 때문에 먹는다. 플라스틱을 먹으면 보통 끊임없는 배고픔에 시달리고, 날카로운 조각을 먹으면 심하게 다치거나 죽을 수도 있다.",
+     "keywords": [
+      "바다 식물(sea plants)",
+      "음식처럼 보이고 냄새",
+      "끊임없는 배고픔(constant hunger)",
+      "죽음(death)"
+     ],
+     "id": "eng-d3-38"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "11B 5가지 팁",
+     "level": "서술형",
+     "stem": "다음 우리말과 뜻이 같도록 주어진 단어를 모두 배열하여 영어 문장을 완성하시오.\n\n> 오늘날 다른 나라들은 고객들이 비닐봉지 값을 내게 하거나, 그것들을 완전히 금지했다.\n> [ either / or / make / customers / pay / have banned ]\n> Today, other countries ________ for plastic bags, ________ them completely.",
+     "model": "Today, other countries either make customers pay for plastic bags, or have banned them completely.",
+     "keywords": [
+      "either A or B",
+      "make customers pay",
+      "have banned",
+      "completely"
+     ],
+     "id": "eng-d3-39"
+    },
+    {
+     "type": "essay",
+     "section": "서술형",
+     "topic": "11B 5가지 팁",
+     "level": "서술형",
+     "stem": "플라스틱 사용을 줄이는 5가지 팁을 영어로 쓰고, 각 팁마다 본문에 나온 국가나 도시 하나씩을 짝지어 쓰시오.",
+     "model": "1. Quit using plastic bags. – Denmark (1993년 최초 비닐봉지 과세) 2. Skip the straw. – Seattle (2018년 미국 주요 도시 최초 빨대 금지) 3. Don't use plastic bottles. – Bundanoon / San Francisco (생수 금지) 4. Avoid plastic packaging. – the United Kingdom (슈퍼마켓 플라스틱 없는 구역) 5. Recycle. – Norway (플라스틱 병 97% 재활용)",
+     "keywords": [
+      "Quit using plastic bags",
+      "Skip the straw",
+      "Don't use plastic bottles",
+      "Avoid plastic packaging",
+      "Recycle"
+     ],
+     "id": "eng-d3-40"
+    }
+   ]
+  }
+ }
+}

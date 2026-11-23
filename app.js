@@ -7,21 +7,21 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0401';
-import { el } from './dom.js?v=20261124-0401';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0401';
-import { renderUnitsRoute } from './units.js?v=20261124-0401';
-import { buildDocQuiz } from './docquiz.js?v=20261124-0401';
-import { renderAssessRoute } from './assess.js?v=20261124-0401';
-import { renderPastRoute } from './past.js?v=20261124-0401';
-import { renderWrongbook } from './wrongbook.js?v=20261124-0401';
-import { renderBoard } from './board.js?v=20261124-0401';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0401';
-import { loadStudy } from './study.js?v=20261124-0401';
-import { renderPrint, printLinks } from './print.js?v=20261124-0401';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0401';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0401';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0401';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0431';
+import { el } from './dom.js?v=20261124-0431';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0431';
+import { renderUnitsRoute } from './units.js?v=20261124-0431';
+import { buildDocQuiz } from './docquiz.js?v=20261124-0431';
+import { renderAssessRoute } from './assess.js?v=20261124-0431';
+import { renderPastRoute } from './past.js?v=20261124-0431';
+import { renderWrongbook } from './wrongbook.js?v=20261124-0431';
+import { renderBoard } from './board.js?v=20261124-0431';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0431';
+import { loadStudy } from './study.js?v=20261124-0431';
+import { renderPrint, printLinks } from './print.js?v=20261124-0431';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0431';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0431';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0431';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
