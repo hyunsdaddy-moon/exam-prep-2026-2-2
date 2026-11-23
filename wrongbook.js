@@ -6,7 +6,7 @@
  */
 
 import { el, plainStem } from './dom.js';
-import { md, contextBlock, choiceList, answerText } from './solve.js';
+import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js';
 import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs';
 import { STATUS_LABEL } from './notes.js';
 import { assessWrongs } from './assess.js';
@@ -27,7 +27,7 @@ export function askHref(subjectCode, q, label) {
 
 function problemBody(q, group, picked, extra) {
   const body = el('div.result-body');
-  body.append(contextBlock(group, false) || '', md(q.stem, 'md q-stem'));
+  body.append(contextBlock(group, false) || '', passageBlock(q) || '', md(q.stem, 'md q-stem'));
   if (q.type === 'choice') {
     const choices = choiceList(q, () => {});
     choices.set(picked || [], q.answer);

@@ -263,6 +263,9 @@ button.link:hover { text-decoration: underline; }
 .q-context summary { cursor: pointer; font-weight: 600; font-size: 15px; padding: 14px 0; }
 .q-context[open] { padding-bottom: 20px; }
 .q-context .md blockquote { background: none; padding: 0; margin: 0; }
+.q-passage { margin: 4px 0 14px; border: 1px solid var(--line-soft); }
+.q-passage summary { color: var(--accent-text); }
+.q-passage .passage-text p { line-height: 1.75; margin: 0 0 12px; }
 
 .choices { display: grid; gap: 10px; }
 .choices.compact { grid-template-columns: repeat(5, 1fr); }

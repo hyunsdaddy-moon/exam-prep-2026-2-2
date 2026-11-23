@@ -4,7 +4,7 @@
  */
 
 import { el, plainStem } from './dom.js';
-import { md, contextBlock, choiceList, answerText, renderHistory } from './solve.js';
+import { md, contextBlock, passageBlock, choiceList, answerText, renderHistory } from './solve.js';
 import { ERROR_LABEL } from './grade.mjs';
 import { errorBreakdown, CONCEPT_LABEL } from './progress.mjs';
 
@@ -52,7 +52,7 @@ export function renderNotes(ctx, subject, study) {
   const row = (n) => {
     const q = n.question;
     const body = el('div.result-body');
-    body.append(contextBlock(info.groups.get(q.group), false) || '', md(q.stem, 'md q-stem'));
+    body.append(contextBlock(info.groups.get(q.group), false) || '', passageBlock(q) || '', md(q.stem, 'md q-stem'));
     if (q.type === 'choice') {
       const choices = choiceList(q, () => {});
       choices.set([], q.answer);

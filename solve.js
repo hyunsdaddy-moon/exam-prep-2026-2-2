@@ -55,6 +55,34 @@ export function contextBlock(group, open = true) {
   return el('details.q-context', { open }, el('summary', { text: group.title }), md(group.context));
 }
 
+/* ── 교과서 본문 — 「Unit 8A …의 내용으로」처럼 단원 본문을 묻는 영어 문제에 붙인다 ── */
+let passagesPromise = null;
+function loadPassages() {
+  if (!passagesPromise) {
+    passagesPromise = fetch('data/passages.json?v=20261123-8').then((r) => (r.ok ? r.json() : { units: {} })).catch(() => {
+      passagesPromise = null;
+      return { units: {} };
+    });
+  }
+  return passagesPromise;
+}
+const unitOf = (q) => (q && q.subject === '영어' ? (String(q.stem || '').match(/Unit\s*(\d+)\s*([AB])\b/) || []).slice(1).join('') : '');
+
+/** 문제가 가리키는 Unit 본문을 접이식으로 보여 준다. 본문이 없으면 스스로 사라진다. */
+export function passageBlock(q, open = false) {
+  const unit = unitOf(q);
+  if (!unit) return null;
+  const summary = el('summary', { text: `📖 Unit ${unit} 본문 보기` });
+  const box = el('details.q-context.q-passage', { open }, summary, el('p.meta', { text: '본문을 불러오는 중…' }));
+  void loadPassages().then((d) => {
+    const u = d.units?.[unit];
+    if (!u) return box.remove();
+    summary.textContent = `📖 Unit ${unit} ${u.title} 본문 보기 (교과서 ${u.pages})`;
+    box.lastChild.replaceWith(md(u.paragraphs.map((p) => `**${p.label}** ${p.text}`).join('\n\n'), 'md passage-text'));
+  });
+  return box;
+}
+
 /** 선지 버튼들. onPick(번호) 로 알린다. 돌려준 set(…) 으로 겉모습을 바꾼다. */
 export function choiceList(q, onPick) {
   const buttons = q.choices.map((text, i) =>
@@ -189,7 +217,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
     } });
     const skip = el('button.pill.ghost', { type: 'button', text: last ? '건너뛰고 결과 보기' : '건너뛰기', onclick: () => next.click() });
 
-    card.append(contextBlock(groups.get(q.group)) || '', questionHead(q), md(q.stem, 'md q-stem'));
+    card.append(contextBlock(groups.get(q.group)) || '', questionHead(q), passageBlock(q) || '', md(q.stem, 'md q-stem'));
 
     if (q.type === 'choice') {
       let picked = [];
@@ -372,7 +400,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       sheet.append(group.context ? contextBlock(group) : el('h3.exam-group', { text: group.title }));
     }
     const a = answerOf(q);
-    const block = el('article.q-card', { id: `q-${q.id}` }, questionHead(q), md(q.stem, 'md q-stem'));
+    const block = el('article.q-card', { id: `q-${q.id}` }, questionHead(q), passageBlock(q) || '', md(q.stem, 'md q-stem'));
     if (q.type === 'choice') {
       const choices = choiceList(q, (n) => {
         a.picked = a.picked.includes(n) ? [] : [n];
@@ -484,7 +512,7 @@ export async function renderResult(ctx, subject, sessionId, opts = {}) {
       const q = r.question;
       const a = r.attempt;
       const body = el('div.result-body');
-      body.append(contextBlock(groups.get(q.group), false) || '', md(q.stem, 'md q-stem'));
+      body.append(contextBlock(groups.get(q.group), false) || '', passageBlock(q) || '', md(q.stem, 'md q-stem'));
       if (q.type === 'choice') {
         const choices = choiceList(q, () => {});
         choices.set(a ? a.picked || [] : [], q.answer);
