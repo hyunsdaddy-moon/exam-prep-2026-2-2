@@ -4,7 +4,7 @@
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
-import { getFirestore, collection, doc, setDoc, addDoc, writeBatch, onSnapshot } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+import { getFirestore, collection, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
 import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js';
 import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs';
 
@@ -470,4 +470,92 @@ export async function loadRecords() {
   const base = syncStatus === 'connected' ? cloudRecords : readArray(STORAGE_KEY);
   const settingRecords = hasCloudExamDate ? [{ type: 'setting', key: 'examDate', value: cloudExamDate }] : [];
   return { ok: true, records: [...base, ...settingRecords, ...pending], pending: pending.length };
+}
+
+
+/* ── 질문 게시판 (Firestore exams/{시험}/posts) ─────────────────────────────────────────── */
+
+let postsCache = [];
+let postsReady = false;
+let postsUnsub = null;
+const postListeners = new Set();
+
+/** 게시글을 실시간으로 받는다. fn({ posts, ready, online, uid }) — 돌려준 함수로 그만 받는다 */
+export function subscribePosts(fn) {
+  postListeners.add(fn);
+  const emit = () => fn({ posts: postsCache, ready: postsReady, online: !!db, uid });
+  void initCloud().then(() => {
+    if (!db) {
+      postsReady = true;
+      emit();
+      return;
+    }
+    if (!postsUnsub) {
+      postsUnsub = onSnapshot(
+        collection(db, 'exams', EXAM_ID, 'posts'),
+        (snap) => {
+          postsCache = snap.docs.map((d) => ({ id: d.id, ...d.data() })).sort((a, b) => String(b.at).localeCompare(String(a.at)));
+          postsReady = true;
+          for (const l of postListeners) l({ posts: postsCache, ready: true, online: true, uid });
+        },
+        () => {
+          postsReady = true;
+          for (const l of postListeners) l({ posts: postsCache, ready: true, online: false, uid });
+        }
+      );
+    } else emit();
+  });
+  if (postsReady) emit();
+  return () => postListeners.delete(fn);
+}
+
+/** 질문 또는 답글을 올린다. { kind: 'question'|'answer', parent, subject, ref, refText, text } */
+export async function addPost(post) {
+  await initCloud();
+  if (!db || !uid) return { ok: false, message: '인터넷에 연결되어 있어야 글을 올릴 수 있습니다.' };
+  const text = String(post.text || '').trim().slice(0, 2000);
+  if (!text) return { ok: false, message: '내용을 적어 주세요.' };
+  const data = {
+    kind: post.kind === 'answer' ? 'answer' : 'question',
+    parent: post.kind === 'answer' ? strBound(post.parent, 1, 64) : null,
+    learner: getCurrentLearner(),
+    subject: strBound(post.subject, 1, 24),
+    ref: strBound(post.ref, 1, 64),
+    refText: post.refText ? String(post.refText).slice(0, 300) : null,
+    text,
+    at: new Date().toISOString(),
+    uid,
+  };
+  if (data.kind === 'question') data.solved = false;
+  if (data.kind === 'answer' && !data.parent) return { ok: false, message: '답글을 달 질문을 찾지 못했습니다.' };
+  try {
+    await addDoc(collection(db, 'exams', EXAM_ID, 'posts'), data);
+    return { ok: true };
+  } catch {
+    return { ok: false, message: '글을 올리지 못했습니다. 잠시 뒤 다시 해 보세요.' };
+  }
+}
+
+/** 질문의 해결 표시를 바꾼다 (누구나) */
+export async function setPostSolved(id, solved) {
+  await initCloud();
+  if (!db) return { ok: false };
+  try {
+    await updateDoc(doc(db, 'exams', EXAM_ID, 'posts', id), { solved: !!solved });
+    return { ok: true };
+  } catch {
+    return { ok: false };
+  }
+}
+
+/** 내가(이 브라우저가) 쓴 글을 지운다 */
+export async function deletePost(id) {
+  await initCloud();
+  if (!db) return { ok: false };
+  try {
+    await deleteDoc(doc(db, 'exams', EXAM_ID, 'posts', id));
+    return { ok: true };
+  } catch {
+    return { ok: false };
+  }
 }

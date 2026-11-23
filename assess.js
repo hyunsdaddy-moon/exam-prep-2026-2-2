@@ -382,3 +382,27 @@ export function renderAssessRoute(ctx, exam, parts, query) {
   if (parts.length === 5 && parts[3] === 'result') return renderAssessResult(ctx, exam, r.id, subject, parts[4]);
   return ctx.renderMissing('주소가 올바르지 않습니다.');
 }
+
+/** 오답 노트에 넣을 수준 평가의 틀린 문제 — 같은 문제를 나중에 맞혔으면 뺀다 */
+export async function assessWrongs(ctx, subjects, attempts) {
+  const mine = attempts.filter((a) => a.mode === 'assess' && a.qtype === 'choice').sort((a, b) => String(a.at).localeCompare(String(b.at)));
+  const last = new Map();
+  for (const a of mine) last.set(a.q, a);
+  const out = [];
+  for (const sub of subjects) {
+    for (const r of ROUNDS) {
+      let paper;
+      try {
+        paper = await paperOf(ctx, sub.code, r.id);
+      } catch {
+        paper = null;
+      }
+      if (!paper) continue;
+      for (const q of paper.questions) {
+        const a = last.get(q.id);
+        if (a && a.correct === false) out.push({ subject: sub, round: r, question: q, group: paper.groups.get(q.group) || null, attempt: a });
+      }
+    }
+  }
+  return out;
+}
