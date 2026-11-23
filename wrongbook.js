@@ -5,12 +5,12 @@
  * 문제마다 「질문하기」를 누르면 질문 게시판에 그 문제를 붙여 글을 쓴다.
  */
 
-import { el, plainStem } from './dom.js?v=20261123-1850';
-import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261123-1850';
-import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261123-1850';
-import { STATUS_LABEL } from './notes.js?v=20261123-1850';
-import { unitWrongs } from './units.js?v=20261123-1850';
-import { assessWrongs } from './assess.js?v=20261123-1850';
+import { el, plainStem } from './dom.js?v=20261123-2108';
+import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261123-2108';
+import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261123-2108';
+import { STATUS_LABEL } from './notes.js?v=20261123-2108';
+import { unitWrongs } from './units.js?v=20261123-2108';
+import { assessWrongs } from './assess.js?v=20261123-2108';
 
 const FILTERS = [
   ['all', '전체'],

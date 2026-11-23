@@ -9,11 +9,11 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem } from './dom.js?v=20261123-1850';
-import { renderMarkdown } from './markdown.js?v=20261123-1850';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261123-1850';
-import { loadPaper } from './study.js?v=20261123-1850';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261123-1850';
+import { el, newId, CIRCLED, plainStem } from './dom.js?v=20261123-2108';
+import { renderMarkdown } from './markdown.js?v=20261123-2108';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261123-2108';
+import { loadPaper } from './study.js?v=20261123-2108';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261123-2108';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -28,7 +28,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261123-1850';
+} from './grade.mjs?v=20261123-2108';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -175,6 +175,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
 
   const session = newId(mode === 'review' ? 'r' : 'p');
   const startedAt = Date.now();
+  const learner = getCurrentLearner(); // 시작할 때의 응시자로 고정
   let index = 0;
   let done = 0;
 
@@ -187,7 +188,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
       location.hash = `#/s/${subject.code}`;
       return;
     }
-    await saveRecords([{ type: 'session', session, mode, subject: subject.code, round: questions[0].round, seconds: (Date.now() - startedAt) / 1000, count: done }]);
+    await saveRecords([{ type: 'session', learner, session, mode, subject: subject.code, round: questions[0].round, seconds: (Date.now() - startedAt) / 1000, count: done }]);
     location.hash = `#/s/${subject.code}/result/${session}`;
   };
 
@@ -241,7 +242,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
         );
         foot.replaceChildren(next);
         next.focus();
-        const result = await saveRecords([{ type: 'attempt', id, session, mode, subject: subject.code, q: q.id, qtype: 'choice', picked, correct: g.correct, points: q.points, earned: g.earned, seconds: (Date.now() - shownAt) / 1000, confidence }]);
+        const result = await saveRecords([{ type: 'attempt', learner, id, session, mode, subject: subject.code, q: q.id, qtype: 'choice', picked, correct: g.correct, points: q.points, earned: g.earned, seconds: (Date.now() - shownAt) / 1000, confidence }]);
         feedback.append(saveWarning(result) || '');
         if (!g.correct) feedback.append(errorPicker(id, null));
       });
@@ -255,7 +256,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
         input.readOnly = true;
         done++;
         foot.replaceChildren(next);
-        const result = await saveRecords([{ type: 'attempt', id, session, mode, subject: subject.code, q: q.id, qtype: 'essay', points: q.points, seconds: (Date.now() - shownAt) / 1000, text: input.value.trim() || '(종이에 씀)' }]);
+        const result = await saveRecords([{ type: 'attempt', learner, id, session, mode, subject: subject.code, q: q.id, qtype: 'essay', points: q.points, seconds: (Date.now() - shownAt) / 1000, text: input.value.trim() || '(종이에 씀)' }]);
         feedback.append(saveWarning(result) || '', essayGrader(q, id, null));
       });
       card.append(input, feedback);
@@ -363,6 +364,9 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   const storeKey = opts.key || examKey(subject.code);
   const resultHref = opts.resultHref || ((sid) => `#/s/${subject.code}/result/${sid}`);
   const answers = state.answers; // { [문제 id]: { picked, confidence, text } }
+  // 응시자는 시작할 때 정한다. 푸는 도중 다른 탭에서 참여자를 바꿔도 기록의 이름은 바뀌지 않는다
+  state.learner ||= getCurrentLearner();
+  const learner = state.learner;
   const persist = () => {
     try {
       sessionStorage.setItem(storeKey, JSON.stringify(state));
@@ -377,7 +381,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   const clock = el('span.clock');
   const count = el('span.step');
   const submit = el('button.pill', { type: 'button', text: '제출' });
-  const bar = el('div.reader-bar', {}, el('div.wrap', {}, el('div.title', {}, `${opts.title || `${subject.subject} 실전`} · `, clock), count, submit));
+  const bar = el('div.reader-bar', {}, el('div.wrap', {}, el('div.title', {}, `${learner} · ${opts.title || `${subject.subject} 실전`} · `, clock), count, submit));
   const omr = el('nav.omr', { 'aria-label': '답안 표시판' }, el('p', { text: '답안' }));
   const omrCells = new Map();
   const sheet = el('div.exam-sheet');
@@ -447,12 +451,12 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       const a = answerOf(q);
       if (q.type === 'choice') {
         const g = gradeChoice(q, a.picked);
-        records.push({ type: 'attempt', id: newId('a'), session: state.session, mode, subject: subject.code, q: q.id, qtype: 'choice', picked: a.picked, correct: g.correct, points: q.points, earned: g.earned, confidence: a.confidence });
+        records.push({ type: 'attempt', learner, id: newId('a'), session: state.session, mode, subject: subject.code, q: q.id, qtype: 'choice', picked: a.picked, correct: g.correct, points: q.points, earned: g.earned, confidence: a.confidence });
       } else {
-        records.push({ type: 'attempt', id: newId('a'), session: state.session, mode, subject: subject.code, q: q.id, qtype: 'essay', points: q.points, text: a.text.trim() });
+        records.push({ type: 'attempt', learner, id: newId('a'), session: state.session, mode, subject: subject.code, q: q.id, qtype: 'essay', points: q.points, text: a.text.trim() });
       }
     }
-    records.push({ type: 'session', session: state.session, mode, subject: subject.code, round: opts.round ?? questions[0].round, seconds, limit, count: records.length, timedOut });
+    records.push({ type: 'session', learner, session: state.session, mode, subject: subject.code, round: opts.round ?? questions[0].round, seconds, limit, count: records.length, timedOut });
     await saveRecords(records);
     sessionStorage.removeItem(storeKey);
     location.hash = resultHref(state.session);

@@ -5,8 +5,8 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
 import { getFirestore, collection, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
-import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261123-1850';
-import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261123-1850';
+import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261123-2108';
+import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261123-2108';
 
 export { DEFAULT_LEARNER, normalizeLearner };
 
@@ -227,6 +227,8 @@ function migrateLocalOnce() {
   const existingIds = new Set(cloudRecords.map((r) => r.id).filter(Boolean));
   const existingSessions = new Set(cloudRecords.filter((r) => r.type === 'session').map((r) => r.session));
   const existingReads = new Set(cloudRecords.filter((r) => r.type === 'read').map((r) => `${normalizeLearner(r.learner)}::${r.concept}`));
+  const otherKey = (r) => `${r.type}|${normalizeLearner(r.learner) || DEFAULT_LEARNER}|${r.at || ''}|${r.attempt || r.character || ''}`;
+  const existingOthers = new Set(cloudRecords.filter((r) => ['profile', 'tag', 'grade'].includes(r.type)).map(otherKey));
   const toPush = [];
   for (const r of readArray(STORAGE_KEY)) {
     if (!r || typeof r !== 'object') continue;
@@ -237,6 +239,8 @@ function migrateLocalOnce() {
     if (r.type === 'attempt' && r.id && existingIds.has(r.id)) continue;
     if (r.type === 'session' && r.session && existingSessions.has(r.session)) continue;
     if (r.type === 'read' && existingReads.has(`${normalizeLearner(r.learner) || DEFAULT_LEARNER}::${r.concept}`)) continue;
+    // 캐릭터 선택·오답 원인·서술형 채점: 클라우드에 이미 있는 것은 다시 올리지 않는다(기기마다 2배로 불던 문제)
+    if (existingOthers.has(otherKey(r))) continue;
     toPush.push(r);
   }
   if (toPush.length) {
