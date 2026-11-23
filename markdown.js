@@ -94,80 +94,6 @@ async function drawDiagrams(container) {
   }
 }
 
-/**
- * ```mindmap 코드(들여쓰기 2칸 = 한 단계) → 가지 그림.
- * 첫 줄이 가운데 주제, 그 아래 한 단계가 큰 가지다. 가지를 누르면 접고 편다.
- */
-function buildMindmaps(root) {
-  root.querySelectorAll('pre > code.language-mindmap').forEach((code) => {
-    const lines = code.textContent.split('\n').filter((l) => l.trim());
-    if (!lines.length) return;
-    const top = { children: [] };
-    const stack = [{ depth: -1, node: top }];
-    for (const line of lines) {
-      const depth = Math.floor(line.match(/^ */)[0].length / 2);
-      const node = { text: line.trim(), children: [] };
-      while (stack.at(-1).depth >= depth) stack.pop();
-      stack.at(-1).node.children.push(node);
-      stack.push({ depth, node });
-    }
-    const label = (text) => escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    const list = (nodes) => {
-      const ul = document.createElement('ul');
-      for (const n of nodes) {
-        const li = document.createElement('li');
-        const hasKids = n.children.length > 0;
-        const tag = document.createElement(hasKids ? 'button' : 'span');
-        tag.className = 'mm-node';
-        tag.innerHTML = label(n.text);
-        li.append(tag);
-        if (hasKids) {
-          tag.type = 'button';
-          tag.setAttribute('aria-expanded', 'true');
-          tag.addEventListener('click', () => {
-            const closed = li.classList.toggle('closed');
-            tag.setAttribute('aria-expanded', String(!closed));
-          });
-          li.append(list(n.children));
-        }
-        ul.append(li);
-      }
-      return ul;
-    };
-    const box = document.createElement('div');
-    box.className = 'mindmap';
-    const main = top.children[0];
-    const title = document.createElement('div');
-    title.className = 'mm-root';
-    title.innerHTML = label(main.text);
-    const branches = list(main.children.length ? main.children : top.children.slice(1));
-    branches.className = 'mm-branches';
-    [...branches.children].forEach((li, i) => li.classList.add('mm-branch', `c${i % 6}`));
-    const setAll = (closed) =>
-      branches.querySelectorAll('li').forEach((li) => {
-        const btn = li.querySelector(':scope > button.mm-node');
-        if (!btn) return;
-        // 모두 접기는 큰 가지 이름만 남긴다
-        li.classList.toggle('closed', closed);
-        btn.setAttribute('aria-expanded', String(!closed));
-      });
-    const tools = document.createElement('div');
-    tools.className = 'mm-tools';
-    for (const [text, closed] of [['모두 펼치기', false], ['모두 접기', true]]) {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.textContent = text;
-      b.addEventListener('click', () => setAll(closed));
-      tools.append(b);
-    }
-    const scroll = document.createElement('div');
-    scroll.className = 'mm-scroll';
-    scroll.append(branches);
-    box.append(tools, title, scroll);
-    code.parentElement.replaceWith(box);
-  });
-}
-
 function renderMath({ tex, display }) {
   try {
     return katex.renderToString(tex, { displayMode: display, throwOnError: true, strict: false, macros: MACROS });
@@ -236,9 +162,6 @@ export function renderMarkdown(source, container, { imageBase = '', onImage, bre
     if (p && p.tagName === 'P' && p.childNodes.length === 1) p.replaceWith(figure);
     else img.replaceWith(figure);
   });
-
-  // 마인드맵: ```mindmap 들여쓰기 목록 → 가지 그림
-  buildMindmaps(root);
 
   // 넓은 표는 옆으로 밀어 본다
   root.querySelectorAll('table').forEach((table) => {
