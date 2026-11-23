@@ -5,6 +5,69 @@
 
 export const CONFIDENCE_LABEL = { sure: '확신', unsure: '애매', guess: '찍음' };
 export const ERROR_LABEL = { concept: '개념을 몰랐다', misread: '문제를 잘못 읽었다', calc: '계산 실수', time: '시간이 부족했다' };
+export const DEFAULT_LEARNER = '기본';
+
+/** 참여자 이름 다듬기 — 제어문자 제거, 공백 정리, 최대 24자 */
+export function normalizeLearner(name) {
+  if (typeof name !== 'string') return '';
+  let clean = '';
+  for (const ch of name) {
+    const code = ch.charCodeAt(0);
+    if (code >= 32 && code !== 127) clean += ch;
+  }
+  return clean.replace(/\s+/g, ' ').trim().slice(0, 24);
+}
+
+/** 기록 한 줄이 속한 참여자 이름 (없으면 기본) */
+export function recordLearner(r) {
+  return normalizeLearner(r?.learner) || DEFAULT_LEARNER;
+}
+
+/** 기록과 등록 목록에 등장하는 참여자 목록을 중복 없이 만든다 */
+export function listLearners(records, extra = []) {
+  const recorded = new Set();
+  const extraSet = new Set();
+  const ordered = [];
+  const push = (name) => {
+    if (name && !ordered.includes(name)) ordered.push(name);
+  };
+  for (const r of records || []) {
+    if (!r || typeof r !== 'object') continue;
+    if (r.type === 'attempt' || r.type === 'session' || r.type === 'read') {
+      const name = recordLearner(r);
+      recorded.add(name);
+      push(name);
+    }
+  }
+  for (const raw of extra || []) {
+    const name = normalizeLearner(raw);
+    if (!name) continue;
+    extraSet.add(name);
+    push(name);
+  }
+  const hasOther = ordered.some((n) => n !== DEFAULT_LEARNER);
+  const filtered = hasOther && !recorded.has(DEFAULT_LEARNER) && !extraSet.has(DEFAULT_LEARNER)
+    ? ordered.filter((n) => n !== DEFAULT_LEARNER)
+    : ordered;
+  return filtered.length ? filtered : [DEFAULT_LEARNER];
+}
+
+/** 지정한 참여자의 기록과 공통 설정(examDate)만 추린다 */
+export function filterRecordsByLearner(records, learner) {
+  const target = normalizeLearner(learner) || DEFAULT_LEARNER;
+  return (records || []).filter((r) => {
+    if (!r || typeof r !== 'object') return false;
+    if (r.type === 'setting') return true;
+    if (r.type === 'attempt' || r.type === 'session' || r.type === 'read') return recordLearner(r) === target;
+    if (r.type === 'tag' || r.type === 'grade') return normalizeLearner(r.learner) ? recordLearner(r) === target : true;
+    return false;
+  });
+}
+
+/** 참여자 한 명의 기록만 합친다 */
+export function mergeRecordsForLearner(records, learner) {
+  return mergeRecords(filterRecordsByLearner(records, learner));
+}
 
 /** 0.1점 단위로 다듬는다 — 3.5 + 4.0 같은 덧셈에서 생기는 꼬리를 없앤다 */
 export const round1 = (n) => Math.round(n * 10) / 10;

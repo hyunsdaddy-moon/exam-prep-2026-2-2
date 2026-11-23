@@ -114,7 +114,7 @@ function omrSheet(exam, subject, paper) {
   );
 }
 
-function notesSheet(exam, subject, paper, info, all) {
+function notesSheet(exam, subject, paper, info, all, learner) {
   const notes = info.notes.filter((n) => all || n.status !== 'graduated');
   const picked = notes.map((n) => n.question).sort((a, b) => (a.type === b.type ? a.no - b.no : a.type === 'choice' ? -1 : 1));
   if (!picked.length) {
@@ -127,7 +127,7 @@ function notesSheet(exam, subject, paper, info, all) {
     return el('p.p-memo', { text: `틀린 날 ${[...new Set(days)].join(', ')}${n.errorType ? ` · ${ERROR_LABEL[n.errorType]}` : ''} · 다시 푼 답 (      )` });
   };
   return el('div.sheet', {},
-    sheetHead(exam, subject, '오답 노트', `다시 풀 문제 ${picked.length}개 — 답을 가리고 먼저 풀어 본 뒤 뒤쪽의 정답과 맞춰 보세요.`),
+    sheetHead(exam, subject, '오답 노트', `${learner} · 다시 풀 문제 ${picked.length}개 — 답을 가리고 먼저 풀어 본 뒤 뒤쪽의 정답과 맞춰 보세요.`),
     el('div.cols', {}, questionFlow(picked, paper.groups, extra)),
     el('section.page-break', {}, el('h2.sheet-sub', { text: '정답과 해설' }), answerBlocks(picked))
   );
@@ -178,7 +178,10 @@ export async function renderPrint(ctx, exam, subject, kind, query, loadStudyFor)
   if (kind === 'paper') sheet = paperSheet(exam, subject, paper);
   else if (kind === 'answers') sheet = answersSheet(exam, subject, paper);
   else if (kind === 'omr') sheet = omrSheet(exam, subject, paper);
-  else if (kind === 'notes') sheet = notesSheet(exam, subject, paper, (await loadStudyFor()).bySubject.get(subject.code), all);
+  else if (kind === 'notes') {
+    const study = await loadStudyFor();
+    sheet = notesSheet(exam, subject, paper, study.bySubject.get(subject.code), all, study.learner);
+  }
   else ({ sheet, waits } = await summarySheet(exam, subject, docIndex));
 
   const mono = query.get('mono') === '1';

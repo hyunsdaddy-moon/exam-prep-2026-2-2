@@ -13,11 +13,12 @@ import { renderSolveRoute, renderHistory } from './solve.js';
 import { loadStudy } from './study.js';
 import { renderPrint, printLinks } from './print.js';
 import { ring, conceptLegend, renderNotes } from './notes.js';
-import { saveRecords } from './store.js';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner } from './store.js';
 import { dday, CONCEPT_LABEL } from './progress.mjs';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
+const navLearner = document.getElementById('nav-learner');
 const footText = document.getElementById('foot-text');
 
 const ROLE_LABEL = { summary: '핵심 요약', unit: '단원 정리', exam: '예상 문제지', answers: '정답 및 해설' };
@@ -49,10 +50,27 @@ function unitsOf(s) {
 /** "[지리] 3단원 유럽 · 4.1 아프리카" 처럼 긴 단원 이름을 카드에 맞게 줄인다 */
 const shortUnit = (u) => u.replace(/\s+—\s+.*$/, '').replace(/\s*·\s*필수 어휘.*$/, '');
 
+let lastLearnerNames = [];
+
+function renderNavLearner(names) {
+  if (!navLearner) return;
+  if (Array.isArray(names) && names.length) lastLearnerNames = names;
+  const current = getCurrentLearner();
+  const list = [...new Set([...lastLearnerNames, current])];
+  const select = el('select.learner-select', { 'aria-label': '참여자 선택' }, list.map((name) => el('option', { value: name, text: name })));
+  select.value = current;
+  select.addEventListener('change', () => {
+    setCurrentLearner(select.value);
+    void route();
+  });
+  navLearner.replaceChildren(select);
+}
+
 function setNav(code) {
   navLinks.replaceChildren(
     ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null }))
   );
+  renderNavLearner();
 }
 
 function show(...nodes) {
@@ -88,17 +106,90 @@ function examDatePicker(study) {
   return el('label.date-pick', {}, study.examDate ? '시험일 ' : '시험일을 정하면 남은 날을 보여 줍니다 ', input);
 }
 
+/** 참여자별 진도율 섹션 — 참여자 전환 · 새 참여자 추가 · 과목별 비교 */
+function learnersSection(study) {
+  const input = el('input.learner-input', {
+    type: 'text',
+    maxlength: 24,
+    placeholder: '새 참여자 이름 (예: 학생 이름)',
+    'aria-label': '새 참여자 이름',
+  });
+  const form = el('form.learner-form', {}, input, el('button.pill.small', { type: 'submit', text: '추가' }));
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const added = addLearner(input.value);
+    if (!added) {
+      input.focus();
+      return;
+    }
+    input.value = '';
+    void renderHome();
+  });
+
+  const switchTo = (name) => {
+    if (name === study.learner) return;
+    setCurrentLearner(name);
+    void renderHome();
+  };
+
+  return el('div.wrap', {},
+    el('section.section.learners-section', { style: 'padding-top:0' },
+      el('div.section-head', {},
+        el('h2', { text: '참여자별 진도율' }),
+        el('p', { text: '참여자를 고르거나 추가하면 읽음·풀이·오답 기록과 진도율이 사람마다 따로 쌓입니다.' })
+      ),
+      el('div.learner-controls', {},
+        el('div.chips', {},
+          study.learners.map((item) =>
+            el(`button.chip.pick${item.name === study.learner ? '.on' : ''}`, {
+              type: 'button',
+              'aria-pressed': String(item.name === study.learner),
+              text: `${item.name} (${item.overall}%)`,
+              onclick: () => switchTo(item.name),
+            })
+          )
+        ),
+        form
+      ),
+      el('div.learner-grid', {},
+        study.learners.map((item) => {
+          const active = item.name === study.learner;
+          return el(`button.card.learner-card${active ? '.active' : ''}`, {
+            type: 'button',
+            'aria-pressed': String(active),
+            onclick: () => switchTo(item.name),
+          },
+            el('div.learner-head', {},
+              el('strong', { text: item.name }),
+              active ? el('span.badge.current', { text: '현재 보는 중' }) : null,
+              el('span.learner-pct', { text: `${item.overall}%` })
+            ),
+            el('div.learner-progress', {}, el('i', { style: `width:${item.overall}%` })),
+            el('p.learner-meta', {
+              text: `푼 문제 ${item.triedQuestions} / ${item.totalQuestions} · 숙련도 ${item.mastery == null ? '–' : `${item.mastery}%`} · 오늘 복습 ${item.dueTotal}`,
+            }),
+            el('div.learner-subjects', {},
+              item.subjects.map((sub) =>
+                el(`span.learner-sub${sub.progress > 0 ? '.on' : ''}`, { text: `${sub.subject} ${sub.progress}%` })
+              )
+            )
+          );
+        })
+      )
+    )
+  );
+}
+
 async function renderHome() {
   const { subjects, title } = data.exam;
   document.title = `시험 준비 — ${title}`;
-  setNav(null);
   const study = await loadStudy(ctx, subjects, data.concepts);
+  renderNavLearner(study.learners.map((l) => l.name));
+  setNav(null);
   const infos = subjects.map((s) => study.bySubject.get(s.code));
   const total = subjects.reduce((a, s) => a + questionCount(s), 0);
   const left = dday(study.examDate, study.today);
-  const allConcepts = infos.flatMap((i) => i.concepts.map((c, k) => ({ w: c.importance || 1, score: i.states[k].score })));
-  const weight = allConcepts.reduce((a, c) => a + c.w, 0);
-  const overall = weight ? Math.round((allConcepts.reduce((a, c) => a + c.score * c.w, 0) / weight) * 100) : 0;
+  const overall = study.overall;
   const steps = infos.map((i) => ({ info: i, step: nextStep(i) })).filter((x) => x.step);
   const dueTotal = infos.reduce((a, i) => a + i.due.length, 0);
 
@@ -106,10 +197,11 @@ async function renderHome() {
     el('section.hero', {},
       el('p.eyebrow', { text: left ? `시험까지 ${left.label}` : '시험 준비' }),
       el('h1', { text: title }),
-      el('p.sub', { text: `전체 진도율 ${overall}% · ${subjects.length}과목 · 문서 ${countDocs(subjects)}개 · 문제 ${total}개` }),
+      el('p.sub', { text: `${study.learner} · 전체 진도율 ${overall}% · ${subjects.length}과목 · 문서 ${countDocs(subjects)}개 · 문제 ${total}개` }),
       examDatePicker(study),
       !study.ok ? el('p.save-warn', { text: '풀이 기록을 읽지 못해 진도율이 비어 보일 수 있습니다.' }) : null
     ),
+    learnersSection(study),
     steps.length
       ? el('div.wrap', {},
           el('section.section.today', { style: 'padding-top:0' },
@@ -154,8 +246,9 @@ async function renderHome() {
 /* ── 과목 ─────────────────────────────────────────── */
 async function renderSubject(s) {
   document.title = `${s.subject} — 시험 준비`;
-  setNav(s.code);
   const study = await loadStudy(ctx, data.exam.subjects, data.concepts);
+  renderNavLearner(study.learners.map((l) => l.name));
+  setNav(s.code);
   const info = study.bySubject.get(s.code);
   const stateOf = new Map(info.states.map((st) => [st.id, st]));
   const paper = paperOf(s);
@@ -212,7 +305,7 @@ async function renderSubject(s) {
       el('section.section.progress-block', { style: 'padding-top:0' },
         ring(info.progress, info.mastery, 150),
         el('div.progress-text', {},
-          el('h2', { text: `진도율 ${info.progress}%` }),
+          el('h2', { text: `${study.learner}의 진도율 ${info.progress}%` }),
           el('p', { text: info.mastery == null ? '아직 푼 문제가 없습니다. 읽고 나서 연습 문제를 풀어 보세요.' : `숙련도 ${info.mastery}% (풀어 본 ${info.triedQuestions}문제 중 마지막에 맞힌 비율) · 안쪽 고리` }),
           el('ul.stats.plain', {},
             Object.entries(CONCEPT_LABEL).map(([key, label]) => stat(info.counts[key], label))

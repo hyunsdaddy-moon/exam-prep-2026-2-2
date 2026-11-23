@@ -443,8 +443,51 @@ button.link:hover { text-decoration: underline; }
   .card { transition: none; }
 }
 
+/* ── 참여자별 진도율 ─────────────────────────────────────────── */
+.nav-learner { flex: none; margin-left: auto; }
+.learner-select {
+  font: inherit; font-size: 13px; font-weight: 500;
+  color: var(--text); background: var(--bg-soft);
+  border: 1px solid var(--line-soft); border-radius: 980px;
+  padding: 5px 12px; max-width: 150px; cursor: pointer;
+}
+.learners-section { padding-bottom: 40px; }
+.learner-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.learner-form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.learner-input {
+  font: inherit; font-size: 14px; color: var(--text); background: var(--bg-soft);
+  border: 1px solid var(--line-soft); border-radius: 980px;
+  padding: 7px 14px; width: 210px;
+}
+.learner-input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent); border-color: var(--accent); }
+.pill.small { padding: 7px 16px; font-size: 14px; }
+.learner-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.learner-card {
+  width: 100%; text-align: left; font: inherit; color: var(--text);
+  border: 2px solid transparent; cursor: pointer;
+}
+.learner-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+.learner-card.active { border-color: var(--accent); background: var(--card); box-shadow: var(--shadow); }
+.learner-head { display: flex; align-items: center; gap: 8px; }
+.learner-head strong { font-size: 20px; letter-spacing: -0.02em; }
+.badge.current { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent-text); }
+.learner-pct { margin-left: auto; font-size: 24px; font-weight: 700; color: var(--accent-text); letter-spacing: -0.02em; }
+.learner-progress { height: 6px; background: var(--line-soft); border-radius: 980px; overflow: hidden; margin: 12px 0 10px; }
+.learner-progress i { display: block; height: 100%; background: var(--accent); border-radius: 980px; transition: width 0.3s ease; }
+.learner-meta { font-size: 13px; color: var(--text-2); margin: 0 0 12px; }
+.learner-subjects { display: flex; flex-wrap: wrap; gap: 6px; }
+.learner-sub {
+  font-size: 12px; color: var(--text-2); background: var(--bg);
+  border: 1px solid var(--line-soft); border-radius: 980px; padding: 3px 9px;
+}
+.learner-sub.on { color: var(--accent-text); border-color: color-mix(in srgb, var(--accent) 35%, transparent); background: color-mix(in srgb, var(--accent) 7%, transparent); }
+
 /* ── 좁은 화면 ─────────────────────────────────────────── */
 @media (max-width: 860px) {
+  .nav-inner { gap: 14px; padding: 0 14px; }
+  .nav-links { flex: 1; min-width: 0; }
+  .learner-select { max-width: 110px; padding: 4px 8px; font-size: 12px; }
+  .learner-input { width: 170px; }
   .reader { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 24px; }
   .toc { position: static; max-height: none; margin-bottom: 28px; padding: 16px 18px; background: var(--bg-soft); border-radius: var(--radius-s); }
   .toc a.l3 { display: none; }

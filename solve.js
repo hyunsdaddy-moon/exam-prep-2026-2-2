@@ -11,7 +11,7 @@
 
 import { el, newId, CIRCLED, plainStem } from './dom.js';
 import { renderMarkdown } from './markdown.js';
-import { saveRecords, loadRecords } from './store.js';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js';
 import { loadPaper } from './study.js';
 import { buildHistories, wrongNotes, localDay } from './progress.mjs';
 import {
@@ -21,6 +21,8 @@ import {
   gradeEssayByChecks,
   canCheckRubric,
   mergeRecords,
+  mergeRecordsForLearner,
+  recordLearner,
   summarize,
   listSessions,
   formatDuration,
@@ -128,7 +130,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
   if (mode === 'review') {
     // 복습: 오답 노트에서 오늘 다시 풀 차례인 문제만
     const loaded = await loadRecords();
-    const due = new Set(wrongNotes(questions, buildHistories(mergeRecords(loaded.records).attempts), localDay(new Date())).filter((n) => n.status === 'due').map((n) => n.question.id));
+    const due = new Set(wrongNotes(questions, buildHistories(mergeRecordsForLearner(loaded.records, getCurrentLearner()).attempts), localDay(new Date())).filter((n) => n.status === 'due').map((n) => n.question.id));
     questions = questions.filter((q) => due.has(q.id));
     if (!questions.length) {
       ctx.show(
@@ -287,7 +289,7 @@ function essayGrader(q, attemptId, attempt, onSaved) {
 }
 
 /* ── 실전 ─────────────────────────────────────────── */
-const examKey = (code) => `examprep.exam.${code}`;
+const examKey = (code) => `examprep.exam.${getCurrentLearner()}.${code}`;
 
 function readExamState(code) {
   try {
@@ -454,6 +456,7 @@ async function renderResult(ctx, subject, sessionId) {
   const session = merged.sessions.get(sessionId);
   const attempts = merged.attempts.filter((a) => a.session === sessionId);
   if (!session && !attempts.length) return ctx.renderMissing('이 풀이 기록을 찾지 못했습니다.');
+  const owner = recordLearner(session || attempts[0]);
   const mode = session?.mode || attempts[0]?.mode || 'practice';
   document.title = `${subject.subject} ${MODE_LABEL[mode]} 결과 — 시험 준비`;
   ctx.setNav(subject.code);
@@ -505,7 +508,7 @@ async function renderResult(ctx, subject, sessionId) {
     root.replaceChildren(
       el('section.hero', {},
         el('a.back', { href: `#/s/${subject.code}`, text: subject.subject }),
-        el('p.eyebrow', { text: `${MODE_LABEL[mode]} 결과${session?.timedOut ? ' · 시간 초과로 자동 제출' : ''}` }),
+        el('p.eyebrow', { text: `${owner} · ${MODE_LABEL[mode]} 결과${session?.timedOut ? ' · 시간 초과로 자동 제출' : ''}` }),
         el('h1.score', {}, String(sum.earned), el('small', { text: ` / ${sum.max}점` })),
         sum.pending ? el('p.sub', { text: `서술형 ${sum.pending}문제를 아직 채점하지 않아 잠정 점수입니다.` }) : null,
         !loaded.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
@@ -554,7 +557,7 @@ export async function renderHistory(ctx, subject, container) {
     list.append(el('p.note', { text: '풀이 기록을 불러오지 못했습니다.' }));
     return;
   }
-  const sessions = listSessions(mergeRecords(loaded.records), subject.code);
+  const sessions = listSessions(mergeRecordsForLearner(loaded.records, getCurrentLearner()), subject.code);
   if (!sessions.length) {
     list.append(el('p.note', { text: '아직 푼 기록이 없습니다.' }));
     return;

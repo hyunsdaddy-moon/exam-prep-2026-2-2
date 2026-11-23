@@ -78,7 +78,7 @@ export function renderNotes(ctx, subject, study) {
   ctx.show(
     el('section.hero', {},
       el('a.back', { href: `#/s/${subject.code}`, text: subject.subject }),
-      el('p.eyebrow', { text: '오답 노트' }),
+      el('p.eyebrow', { text: `${study.learner} · 오답 노트` }),
       el('h1', { text: info.notes.length ? `틀린 문제 ${info.notes.length}개` : '틀린 문제가 없습니다' }),
       el('p.sub', { text: info.notes.length ? `오늘 복습 ${due} · 다른 날 한 번 더 ${info.waiting} · 졸업 ${info.graduated}` : '문제를 풀다 틀리면 여기에 모입니다.' }),
       el('div.hero-actions', {},
