@@ -840,3 +840,28 @@ button.link.danger { color: var(--bad); }
 .past-page figcaption { text-align: center; font-size: 13px; color: var(--text-2); margin-top: 6px; }
 .videos:empty { display: none; }
 .videos { font-size: 12px; letter-spacing: 1px; line-height: 1; }
+
+/* 읽기 문서 끝 단원 평가 */
+.dq { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+.dq-score { color: var(--muted, #6e6e73); margin: 4px 0 10px; }
+.dq-section { margin: 32px 0 12px; font-size: 17px; color: var(--accent-text); }
+.dq-card { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 12px 0; background: var(--bg, #fff); }
+.dq-card.is-right { border-color: color-mix(in srgb, var(--good) 45%, var(--line)); }
+.dq-card.is-wrong { border-color: color-mix(in srgb, var(--bad) 45%, var(--line)); }
+.dq-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.dq-level { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--line-soft, #f2f2f4); color: var(--muted, #6e6e73); }
+.dq-stem > :first-child, .dq-exp > :first-child { margin-top: 0; }
+.dq-stem > :last-child, .dq-exp > :last-child { margin-bottom: 0; }
+.dq-choices { display: grid; gap: 6px; margin-top: 10px; }
+.dq-choice { display: flex; gap: 8px; align-items: flex-start; text-align: left; font: inherit; color: inherit; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft, #f7f7f8); cursor: pointer; }
+.dq-choice:hover:not(:disabled) { border-color: var(--accent); }
+.dq-choice:disabled { cursor: default; }
+.dq-choice.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 10%, transparent); }
+.dq-choice.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 10%, transparent); }
+.dq-text p { margin: 0; display: inline; }
+.dq-no { flex: none; }
+.dq-feedback:not(:empty) { margin-top: 12px; padding: 12px 14px; border-radius: 10px; background: var(--bg-soft, #f7f7f8); }
+.dq-verdict { font-weight: 700; margin: 0 0 6px; }
+.dq-keys { font-size: 14px; color: var(--muted, #6e6e73); }
+.dq-essay { width: 100%; box-sizing: border-box; margin-top: 10px; font: inherit; padding: 10px; border: 1px solid var(--line); border-radius: 10px; resize: vertical; }
+.toc a.toc-quiz { margin-top: 8px; font-weight: 600; }
