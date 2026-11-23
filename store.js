@@ -5,14 +5,16 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
 import { getFirestore, collection, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
-import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-0545';
-import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-0545';
+import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-0603';
+import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-0603';
 
 export { DEFAULT_LEARNER, normalizeLearner };
 
 const STORAGE_KEY = 'examprep.2026-2-2.records';
 const PENDING_KEY = 'examprep.2026-2-2.pending';
 const MIGRATED_KEY = 'examprep.2026-2-2.migrated';
+const EXAM_DATE_KEY = 'examprep.2026-2-2.examDate';
+const CLOUD_LEARNERS_KEY = 'examprep.2026-2-2.cloudLearners';
 const MAX_RECORDS = 5000;
 const CURRENT_LEARNER_KEY = 'examprep.learner.current';
 const LEARNERS_KEY = 'examprep.learners';
@@ -85,16 +87,16 @@ let initPromise = null;
 let flushingPromise = null;
 
 let cloudRecords = [];
-let cloudLearners = [];
+let cloudLearners = readArray(CLOUD_LEARNERS_KEY).filter((n) => typeof n === 'string'); // 지난번 받은 목록으로 먼저 보여 준다
 let cloudExamDate = null;
 let hasCloudExamDate = false;
 const pendingLearners = new Set();
 const listeners = new Set();
 
-function notify(source) {
+function notify(source, extra = {}) {
   for (const fn of listeners) {
     try {
-      fn({ status: syncStatus, source });
+      fn({ status: syncStatus, source, ...extra });
     } catch {
       // 구독자 오류 무시
     }
@@ -253,6 +255,16 @@ function migrateLocalOnce() {
 function initCloud() {
   if (initPromise) return initPromise;
   initPromise = (async () => {
+    // 연결 전 이 브라우저에 있던 기록 — 연결된 뒤 클라우드와 같으면 화면을 다시 그리지 않는다
+    let baseRecords = '[]';
+    let baseExamDate = null;
+    try {
+      baseRecords = localStorage.getItem(STORAGE_KEY) || '[]';
+      baseExamDate = localStorage.getItem(EXAM_DATE_KEY);
+    } catch {
+      // 저장 공간을 못 쓰는 브라우저
+    }
+    const baseLearners = [...cloudLearners, ...readLearners()];
     try {
       const app = initializeApp(FIREBASE_CONFIG);
       const auth = getAuth(app);
@@ -272,10 +284,23 @@ function initCloud() {
         if (!resolved && gotRecords && gotLearners && gotSetting) {
           resolved = true;
           syncStatus = 'connected';
+          // 클라우드는 기록 순서도, 기록 안 항목 순서도 매번 달리 준다 → 둘 다 정렬해서 비교한다
+          const canon = (v) => (Array.isArray(v) ? `[${v.map(canon).join(',')}]` : v && typeof v === 'object' ? `{${Object.keys(v).sort().map((k) => `${JSON.stringify(k)}:${canon(v[k])}`).join(',')}}` : JSON.stringify(v));
+          const sig = (list) => list.map(canon).sort().join('\n');
+          let sameRecords = false;
+          try {
+            sameRecords = sig(cloudRecords.slice(-MAX_RECORDS)) === sig(JSON.parse(baseRecords));
+          } catch {
+            sameRecords = false;
+          }
+          const changed =
+            !sameRecords ||
+            JSON.stringify({ has: hasCloudExamDate, value: cloudExamDate }) !== baseExamDate ||
+            cloudLearners.some((n) => !baseLearners.includes(n));
           migrateLocalOnce();
           void flushPending();
           void flushPendingLearners();
-          notify('ready');
+          notify('ready', { changed });
           resolveReady(true);
         }
       };
@@ -312,6 +337,7 @@ function initCloud() {
             if (name && !seen.includes(name)) seen.push(name);
           }
           cloudLearners = seen;
+          writeArray(CLOUD_LEARNERS_KEY, seen);
           if (!gotLearners) {
             gotLearners = true;
             maybeReady();
@@ -339,6 +365,11 @@ function initCloud() {
           } else {
             cloudExamDate = null;
             hasCloudExamDate = false;
+          }
+          try {
+            localStorage.setItem(EXAM_DATE_KEY, JSON.stringify({ has: hasCloudExamDate, value: cloudExamDate }));
+          } catch {
+            // 저장 공간을 못 쓰는 브라우저
           }
           if (!gotSetting) {
             gotSetting = true;
@@ -473,7 +504,21 @@ export async function saveRecords(records) {
 }
 
 /** 지금까지의 모든 기록 (클라우드 + 아직 못 보낸 것, 오프라인 시 로컬 캐시) */
-export async function loadRecords() {
+export async function loadRecords({ fast = false } = {}) {
+  // fast: 클라우드 연결을 기다리지 않고 이 브라우저에 남은 기록으로 먼저 그린다.
+  // 연결되면 subscribeCloud 의 'ready' 알림으로 화면을 다시 그린다 (홈 첫 화면 전용).
+  if (fast && syncStatus === 'connecting') {
+    void initCloud();
+    const pending = readArray(PENDING_KEY).map(({ _qid, ...rest }) => rest);
+    let saved = null;
+    try {
+      saved = JSON.parse(localStorage.getItem(EXAM_DATE_KEY) || 'null');
+    } catch {
+      saved = null;
+    }
+    const settingRecords = saved?.has ? [{ type: 'setting', key: 'examDate', value: saved.value ?? null }] : [];
+    return { ok: true, records: [...readArray(STORAGE_KEY), ...settingRecords, ...pending], pending: pending.length, cached: true };
+  }
   await initCloud();
   await flushPending();
   const pending = readArray(PENDING_KEY).map(({ _qid, ...rest }) => rest);

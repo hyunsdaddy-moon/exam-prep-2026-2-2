@@ -52,6 +52,7 @@ a { color: var(--accent-text); text-decoration: none; }
 a:hover { text-decoration: underline; }
 :focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 3px; border-radius: 6px; }
 main:focus { outline: none; }
+main { min-height: calc(100vh - var(--nav-h)); } /* 첫 화면이 그려질 때 아래 꼬리말이 밀려나며 들썩이지 않게 */
 
 /* ── 상단 바 ─────────────────────────────────────────── */
 .nav {
@@ -84,6 +85,7 @@ main:focus { outline: none; }
 /* ── 공통 틀 ─────────────────────────────────────────── */
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
 .loading, .empty { text-align: center; color: var(--text-2); padding: 120px 22px; }
+.loading { margin: 0; } /* 위 여백이 main 밖으로 번져 첫 화면이 17px 들썩이던 것 */
 .empty h1 { font-size: 32px; color: var(--text); margin: 0 0 12px; }
 .empty code { font-family: var(--mono); font-size: 14px; background: var(--bg-soft); padding: 2px 8px; border-radius: 6px; }
 

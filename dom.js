@@ -35,3 +35,9 @@ export function plainStem(text, max = 60) {
     .trim()
     .slice(0, max);
 }
+
+/* 자료 주소에 이번 배포 버전(?v=)을 붙인다. 배포할 때마다 주소가 바뀌므로 브라우저 캐시를 써도 예전 자료가 남지 않는다. */
+const VERSION = new URL(import.meta.url).searchParams.get('v') || '';
+export function versioned(url) {
+  return VERSION ? `${url}${url.includes('?') ? '&' : '?'}v=${VERSION}` : url;
+}

@@ -7,21 +7,21 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0545';
-import { el } from './dom.js?v=20261124-0545';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0545';
-import { renderUnitsRoute } from './units.js?v=20261124-0545';
-import { buildDocQuiz } from './docquiz.js?v=20261124-0545';
-import { renderAssessRoute } from './assess.js?v=20261124-0545';
-import { renderPastRoute } from './past.js?v=20261124-0545';
-import { renderWrongbook } from './wrongbook.js?v=20261124-0545';
-import { renderBoard } from './board.js?v=20261124-0545';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0545';
-import { loadStudy } from './study.js?v=20261124-0545';
-import { renderPrint, printLinks } from './print.js?v=20261124-0545';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0545';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0545';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0545';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0603';
+import { el, versioned } from './dom.js?v=20261124-0603';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0603';
+import { renderUnitsRoute } from './units.js?v=20261124-0603';
+import { buildDocQuiz } from './docquiz.js?v=20261124-0603';
+import { renderAssessRoute } from './assess.js?v=20261124-0603';
+import { renderPastRoute } from './past.js?v=20261124-0603';
+import { renderWrongbook } from './wrongbook.js?v=20261124-0603';
+import { renderBoard } from './board.js?v=20261124-0603';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0603';
+import { loadStudy } from './study.js?v=20261124-0603';
+import { renderPrint, printLinks } from './print.js?v=20261124-0603';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0603';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0603';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0603';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -33,7 +33,7 @@ const ROLE_LABEL = { summary: '핵심 요약', unit: '단원 정리', exam: '예
 const data = { exam: null, concepts: [] };
 
 async function getJson(url) {
-  const res = await fetch(url, { cache: 'no-store' });
+  const res = await fetch(versioned(url));
   if (!res.ok) throw new Error(`${url} → ${res.status}`);
   return res.json();
 }
@@ -207,7 +207,7 @@ function learnersSection(study) {
 async function renderHome() {
   const { subjects, title } = data.exam;
   document.title = `시험 준비 — ${title}`;
-  const study = await loadStudy(ctx, subjects, data.concepts);
+  const study = await loadStudy(ctx, subjects, data.concepts, undefined, { fast: true });
   renderNavLearner(study.learners.map((l) => l.name));
   setNav(null);
   const infos = subjects.map((s) => study.bySubject.get(s.code));
@@ -314,7 +314,7 @@ async function fillVideoIcons(root, concepts) {
     if (!slot || !c.doc) continue;
     if (!texts.has(c.doc)) {
       const url = `exam/${c.doc.normalize('NFC').split('/').map(encodeURIComponent).join('/')}`;
-      texts.set(c.doc, fetch(url, { cache: 'no-store' }).then((r) => (r.ok ? r.text() : '')).catch(() => ''));
+      texts.set(c.doc, fetch(versioned(url)).then((r) => (r.ok ? r.text() : '')).catch(() => ''));
     }
     const n = countVideos(await texts.get(c.doc), c.heading);
     if (!n) continue;
@@ -467,7 +467,7 @@ async function renderReader(s, index, query) {
 
   const folder = doc.file.slice(0, doc.file.lastIndexOf('/'));
   const url = `exam/${doc.file.normalize('NFC').split('/').map(encodeURIComponent).join('/')}`;
-  const res = await fetch(url, { cache: 'no-store' });
+  const res = await fetch(versioned(url));
   if (!res.ok) return renderMissing(`문서를 불러오지 못했습니다 (${res.status}).`);
   const body = el('article.doc');
   const { headings } = renderMarkdown(await res.text(), body, {
@@ -639,7 +639,8 @@ async function route() {
   const [pathPart, queryPart] = location.hash.replace(/^#\/?/, '').split('?');
   const parts = pathPart.split('/').filter(Boolean);
   const query = new URLSearchParams(queryPart || '');
-  await refreshProfiles().catch(() => null);
+  // 홈은 클라우드 연결을 기다리지 않고 이 브라우저의 기록으로 먼저 그린다
+  await (parts.length ? refreshProfiles() : loadRecords({ fast: true }).then((r) => refreshProfiles(r.records))).catch(() => null);
   renderNavLearner();
   if (!parts.length) return renderHome();
   if (parts[0] === 'me' && parts.length === 1) return renderCharacterSelect(ctx);
@@ -686,8 +687,9 @@ async function start() {
   const go = () => route().catch(() => renderMissing('화면을 그리지 못했습니다. 자료를 다시 가져온 뒤 새로 고쳐 주세요.'));
   window.addEventListener('hashchange', () => void go());
   let refreshTimer = null;
-  subscribeCloud(() => {
+  subscribeCloud((ev) => {
     renderNavLearner();
+    if (ev?.source === 'ready' && ev.changed === false) return; // 먼저 그린 화면과 클라우드 기록이 같다
     const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/').filter(Boolean);
     const liveView = parts.length === 0 || (parts[0] === 'assess' && parts.length === 1) || (parts[0] === 'units' && parts.length === 1) || (parts[0] === 'notes' && parts.length === 1) || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
     const tag = document.activeElement?.tagName;

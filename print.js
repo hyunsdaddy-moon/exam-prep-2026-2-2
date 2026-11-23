@@ -11,10 +11,10 @@
  * 인쇄할 때는 위쪽 막대와 단추가 사라지고 종이만 남는다 (styles.css 의 @media print).
  */
 
-import { el, CIRCLED } from './dom.js?v=20261124-0545';
-import { renderMarkdown } from './markdown.js?v=20261124-0545';
-import { loadPaper } from './study.js?v=20261124-0545';
-import { ERROR_LABEL } from './grade.mjs?v=20261124-0545';
+import { el, CIRCLED, versioned } from './dom.js?v=20261124-0603';
+import { renderMarkdown } from './markdown.js?v=20261124-0603';
+import { loadPaper } from './study.js?v=20261124-0603';
+import { ERROR_LABEL } from './grade.mjs?v=20261124-0603';
 
 const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 표시판', notes: '오답 노트', summary: '요약본' };
 
@@ -140,7 +140,7 @@ async function summarySheet(exam, subject, docIndex) {
   const waits = [];
   for (const [i, doc] of picked.entries()) {
     const folder = doc.file.slice(0, doc.file.lastIndexOf('/'));
-    const res = await fetch(`exam/${doc.file.normalize('NFC').split('/').map(encodeURIComponent).join('/')}`, { cache: 'no-store' });
+    const res = await fetch(versioned(`exam/${doc.file.normalize('NFC').split('/').map(encodeURIComponent).join('/')}`));
     const part = el(`article.doc${i ? '.page-break' : ''}`);
     if (res.ok) waits.push(renderMarkdown(await res.text(), part, { imageBase: `exam/${folder.normalize('NFC').split('/').map(encodeURIComponent).join('/')}/` }).ready);
     else part.append(el('p.sheet-empty', { text: `문서를 불러오지 못했습니다: ${doc.title}` }));
