@@ -14,6 +14,7 @@ import { el, newId } from './dom.js';
 import { loadRecords, getCurrentLearner, getSavedLearners, setCurrentLearner } from './store.js';
 import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs';
 import { runExam, renderResult, readExamState } from './solve.js';
+import { avatar } from './characters.js';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
@@ -274,7 +275,7 @@ async function renderAssessHome(ctx, exam, query) {
         el('tbody', {}, rows.map((r, i) =>
           el(`tr${r.name === me ? '.me' : ''}`, {},
             el('td', { text: r.a1 == null && r.a2 == null ? '–' : String(i + 1) }),
-            el('td', {}, el('button.link', { type: 'button', text: r.name, onclick: () => {
+            el('td', {}, avatar(r.name, 'xs'), ' ', el('button.link', { type: 'button', text: r.name, onclick: () => {
               setCurrentLearner(r.name);
               go({ vs: r.name === rival ? me : rival || '' });
             } })),

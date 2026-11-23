@@ -182,6 +182,12 @@ function sanitizeForFirestore(r, currentUid) {
     return { kind: 'record', payload: docData };
   }
 
+  if (r.type === 'profile') {
+    const character = typeof r.character === 'string' && /^c\d{2}$/.test(r.character) ? r.character : null;
+    if (!character) return null;
+    return { kind: 'record', payload: { ...base, character } };
+  }
+
   if (r.type === 'read') {
     const concept = strBound(r.concept, 1, 64);
     if (!concept) return null;

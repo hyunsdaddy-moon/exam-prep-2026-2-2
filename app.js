@@ -13,6 +13,7 @@ import { renderSolveRoute, renderHistory } from './solve.js';
 import { renderAssessRoute } from './assess.js';
 import { renderWrongbook } from './wrongbook.js';
 import { renderBoard } from './board.js';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js';
 import { loadStudy } from './study.js';
 import { renderPrint, printLinks } from './print.js';
 import { ring, conceptLegend, renderNotes } from './notes.js';
@@ -73,7 +74,7 @@ function renderNavLearner(names) {
     setCurrentLearner(select.value);
     void route();
   });
-  navLearner.replaceChildren(syncBadge(), select);
+  navLearner.replaceChildren(syncBadge(), el('a.nav-avatar', { href: '#/me', title: '캐릭터 고르기', 'aria-label': '캐릭터 고르기' }, avatar(current, 'xs')), select);
 }
 
 function setNav(code) {
@@ -173,6 +174,7 @@ function learnersSection(study) {
             onclick: () => switchTo(item.name),
           },
             el('div.learner-head', {},
+              avatar(item.name, 'sm'),
               el('strong', { text: item.name }),
               active ? el('span.badge.current', { text: '현재 보는 중' }) : null,
               el('span.learner-pct', { text: `${item.overall}%` })
@@ -215,7 +217,8 @@ async function renderHome() {
       el('div.hero-actions', {},
         el('a.pill', { href: '#/assess', text: '수준 평가 · 성장 그래프' }),
         el('a.pill.ghost', { href: '#/notes', text: '오답 노트' }),
-        el('a.pill.ghost', { href: '#/board', text: '질문 게시판' })
+        el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }),
+        el('a.pill.ghost', { href: '#/me', text: '캐릭터 고르기' })
       ),
       !study.ok ? el('p.save-warn', { text: '풀이 기록을 읽지 못해 진도율이 비어 보일 수 있습니다.' }) : null
     ),
@@ -564,7 +567,10 @@ async function route() {
   const [pathPart, queryPart] = location.hash.replace(/^#\/?/, '').split('?');
   const parts = pathPart.split('/').filter(Boolean);
   const query = new URLSearchParams(queryPart || '');
+  await refreshProfiles().catch(() => null);
+  renderNavLearner();
   if (!parts.length) return renderHome();
+  if (parts[0] === 'me' && parts.length === 1) return renderCharacterSelect(ctx);
   if (parts[0] === 'notes' && parts.length === 1) return renderWrongbook(ctx, data.exam, await loadStudy(ctx, data.exam.subjects, data.concepts), query);
   if (parts[0] === 'board' && parts.length === 1) return renderBoard(ctx, data.exam, query);
   const assessing = renderAssessRoute(ctx, data.exam, parts, query);

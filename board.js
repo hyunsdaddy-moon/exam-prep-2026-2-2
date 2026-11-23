@@ -9,6 +9,7 @@
 
 import { el } from './dom.js';
 import { getCurrentLearner, subscribePosts, addPost, setPostSolved, deletePost } from './store.js';
+import { avatar } from './characters.js';
 
 const VIEWS = [
   ['open', '답을 기다리는 질문'],
@@ -126,6 +127,7 @@ export function renderBoard(ctx, exam, query) {
 
   const postHead = (p) =>
     el('div.post-head', {},
+      avatar(p.learner, 'sm'),
       el('strong', { text: p.learner }),
       el('span.post-when', { text: when(p.at) }),
       p.uid && p.uid === state.uid
