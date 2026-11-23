@@ -7,20 +7,20 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0315';
-import { el } from './dom.js?v=20261124-0315';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0315';
-import { renderUnitsRoute } from './units.js?v=20261124-0315';
-import { renderAssessRoute } from './assess.js?v=20261124-0315';
-import { renderPastRoute } from './past.js?v=20261124-0315';
-import { renderWrongbook } from './wrongbook.js?v=20261124-0315';
-import { renderBoard } from './board.js?v=20261124-0315';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0315';
-import { loadStudy } from './study.js?v=20261124-0315';
-import { renderPrint, printLinks } from './print.js?v=20261124-0315';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0315';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0315';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0315';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0352';
+import { el } from './dom.js?v=20261124-0352';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0352';
+import { renderUnitsRoute } from './units.js?v=20261124-0352';
+import { renderAssessRoute } from './assess.js?v=20261124-0352';
+import { renderPastRoute } from './past.js?v=20261124-0352';
+import { renderWrongbook } from './wrongbook.js?v=20261124-0352';
+import { renderBoard } from './board.js?v=20261124-0352';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0352';
+import { loadStudy } from './study.js?v=20261124-0352';
+import { renderPrint, printLinks } from './print.js?v=20261124-0352';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0352';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0352';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0352';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -285,6 +285,44 @@ function subjectIcon(s, cls = 'subject-icon') {
 }
 
 /* ── 과목 ─────────────────────────────────────────── */
+/* 개념 칩의 동영상 아이콘: 그 절(제목 아래부터 같은 급 제목 전까지)에 든 동영상 수만큼 🎬 */
+const VIDEO_RE = /(youtube\.com\/|youtu\.be\/|vimeo\.com\/|notebook\.google\.com\/|notebooklm\.google\.com\/|\.(mp4|webm|mov|m4v)(\?|#|\)|"|'|\s|$))/i;
+function countVideos(md, heading) {
+  const lines = md.split('\n');
+  const norm = (t) => t.replace(/\*\*/g, '').trim();
+  const start = lines.findIndex((l) => /^#{1,6}\s/.test(l) && norm(l.replace(/^#+\s+/, '')) === norm(heading));
+  if (start < 0) return 0;
+  const level = lines[start].match(/^#+/)[0].length;
+  const urls = new Set();
+  let fence = false;
+  for (let i = start + 1; i < lines.length; i++) {
+    const l = lines[i];
+    if (/^\s*(```|~~~)/.test(l)) { fence = !fence; continue; }
+    if (fence) continue;
+    const m = l.match(/^(#+)\s/);
+    if (m && m[1].length <= level) break;
+    const found = l.match(/(https?:\/\/[^\s)"'<>]+|[^\s("'<>]+\.(mp4|webm|mov|m4v))/gi) || [];
+    for (const u of found) if (VIDEO_RE.test(u + ' ')) urls.add(u);
+  }
+  return urls.size;
+}
+async function fillVideoIcons(root, concepts) {
+  const texts = new Map();
+  for (const c of concepts) {
+    const slot = root.querySelector(`.videos[data-concept="${CSS.escape(c.id)}"]`);
+    if (!slot || !c.doc) continue;
+    if (!texts.has(c.doc)) {
+      const url = `exam/${c.doc.normalize('NFC').split('/').map(encodeURIComponent).join('/')}`;
+      texts.set(c.doc, fetch(url, { cache: 'no-store' }).then((r) => (r.ok ? r.text() : '')).catch(() => ''));
+    }
+    const n = countVideos(await texts.get(c.doc), c.heading);
+    if (!n) continue;
+    slot.setAttribute('aria-label', `동영상 ${n}개`);
+    slot.title = `동영상 ${n}개`;
+    slot.textContent = '🎬'.repeat(n);
+  }
+}
+
 async function renderSubject(s) {
   document.title = `${s.subject} — 시험 준비`;
   const study = await loadStudy(ctx, data.exam.subjects, data.concepts);
@@ -385,7 +423,8 @@ async function renderSubject(s) {
                       el('a.chip', { href: `#/s/${s.code}/${docIndexByFile.get(c.doc) ?? 0}?h=${encodeURIComponent(c.heading)}` },
                         el(`i.state-dot.${stateOf.get(c.id)?.state || 'unseen'}`, { title: CONCEPT_LABEL[stateOf.get(c.id)?.state || 'unseen'] }),
                         c.title,
-                        el('span.dots', { 'aria-label': `중요도 ${c.importance}` }, [1, 2, 3].map((n) => el(n <= c.importance ? 'i.on' : 'i')))
+                        el('span.dots', { 'aria-label': `중요도 ${c.importance}` }, [1, 2, 3].map((n) => el(n <= c.importance ? 'i.on' : 'i'))),
+                        el('span.videos', { 'data-concept': c.id })
                       )
                     )
                   )
@@ -408,6 +447,7 @@ async function renderSubject(s) {
     )
   );
   void renderHistory(ctx, s, problems);
+  void fillVideoIcons(app, conceptsOf(s));
 }
 
 function tile(num, unit, label) {

@@ -838,3 +838,5 @@ button.link.danger { color: var(--bad); }
 .past-page { margin: 0 0 22px; }
 .past-page img { display: block; width: 100%; height: auto; border-radius: 10px; background: #fff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.12); }
 .past-page figcaption { text-align: center; font-size: 13px; color: var(--text-2); margin-top: 6px; }
+.videos:empty { display: none; }
+.videos { font-size: 12px; letter-spacing: 1px; line-height: 1; }
