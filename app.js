@@ -7,20 +7,20 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261123-2211';
-import { el } from './dom.js?v=20261123-2211';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-2211';
-import { renderUnitsRoute } from './units.js?v=20261123-2211';
-import { renderAssessRoute } from './assess.js?v=20261123-2211';
-import { renderPastRoute } from './past.js?v=20261123-2211';
-import { renderWrongbook } from './wrongbook.js?v=20261123-2211';
-import { renderBoard } from './board.js?v=20261123-2211';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-2211';
-import { loadStudy } from './study.js?v=20261123-2211';
-import { renderPrint, printLinks } from './print.js?v=20261123-2211';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-2211';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-2211';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-2211';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261123-2215';
+import { el } from './dom.js?v=20261123-2215';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-2215';
+import { renderUnitsRoute } from './units.js?v=20261123-2215';
+import { renderAssessRoute } from './assess.js?v=20261123-2215';
+import { renderPastRoute } from './past.js?v=20261123-2215';
+import { renderWrongbook } from './wrongbook.js?v=20261123-2215';
+import { renderBoard } from './board.js?v=20261123-2215';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-2215';
+import { loadStudy } from './study.js?v=20261123-2215';
+import { renderPrint, printLinks } from './print.js?v=20261123-2215';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-2215';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-2215';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-2215';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -256,9 +256,7 @@ async function renderHome() {
             const s = info.subject;
             return el('a.card.subject-card.rise', { href: `#/s/${s.code}` },
               el('div.subject-head', {},
-                SUBJECT_ICON[s.subject]
-                  ? el('img.subject-icon', { src: `assets/subjects/${SUBJECT_ICON[s.subject]}.webp`, alt: '', loading: 'lazy', onerror: (e) => e.target.remove() })
-                  : null,
+                subjectIcon(s),
                 ring(info.progress, info.mastery, 84)
               ),
               el('div.subject-top', {},
@@ -281,6 +279,10 @@ async function renderHome() {
 
 /* 과목 카드 아이콘 — assets/subjects/<이름>.webp (없으면 그림 자리 없이 보인다) */
 const SUBJECT_ICON = { 과학: 'science', 국어: 'korean', 도덕: 'ethics', 사회: 'social', 수학: 'math', 영어: 'english', 베트남어: 'vietnamese' };
+function subjectIcon(s, cls = 'subject-icon') {
+  const name = SUBJECT_ICON[s.subject];
+  return name ? el(`img.${cls}`, { src: `assets/subjects/${name}.webp`, alt: '', onerror: (e) => e.target.remove() }) : null;
+}
 
 /* ── 과목 ─────────────────────────────────────────── */
 async function renderSubject(s) {
@@ -343,7 +345,7 @@ async function renderSubject(s) {
   show(
     el('section.hero', {},
       el('a.back', { href: '#/', text: '전체 과목' }),
-      el('h1', { text: s.subject }),
+      el('div.subject-title', {}, subjectIcon(s, 'subject-title-icon'), el('h1', { text: s.subject })),
       paper?.scope ? el('p.scope', { text: `시험 범위 — ${paper.scope.replace(/\*\*/g, '')}` }) : null
     ),
     el('div.wrap', {},

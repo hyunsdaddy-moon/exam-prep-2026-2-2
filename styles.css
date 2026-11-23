@@ -411,6 +411,8 @@ button.link:hover { text-decoration: underline; }
 
 .subject-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 10px; }
 .subject-head .ring { margin-left: auto; }
+.subject-title { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 2vw, 20px); }
+.subject-title-icon { width: clamp(72px, 11vw, 116px); height: clamp(72px, 11vw, 116px); border-radius: 22px; object-fit: cover; display: block; flex: none; }
 .subject-icon { width: 120px; height: 120px; border-radius: 22px; object-fit: cover; display: block; }
 .subject-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex: 1; }
 .subject-top .units { margin-bottom: 18px; }
