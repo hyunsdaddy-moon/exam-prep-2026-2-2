@@ -7,18 +7,18 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js';
-import { el } from './dom.js';
-import { renderSolveRoute, renderHistory } from './solve.js';
-import { renderAssessRoute } from './assess.js';
-import { renderWrongbook } from './wrongbook.js';
-import { renderBoard } from './board.js';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js';
-import { loadStudy } from './study.js';
-import { renderPrint, printLinks } from './print.js';
-import { ring, conceptLegend, renderNotes } from './notes.js';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js';
-import { dday, CONCEPT_LABEL } from './progress.mjs';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261123-1818';
+import { el } from './dom.js?v=20261123-1818';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-1818';
+import { renderAssessRoute } from './assess.js?v=20261123-1818';
+import { renderWrongbook } from './wrongbook.js?v=20261123-1818';
+import { renderBoard } from './board.js?v=20261123-1818';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-1818';
+import { loadStudy } from './study.js?v=20261123-1818';
+import { renderPrint, printLinks } from './print.js?v=20261123-1818';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-1818';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-1818';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-1818';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
