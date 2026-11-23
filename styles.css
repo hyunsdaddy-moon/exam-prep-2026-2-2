@@ -784,3 +784,8 @@ button.link.danger { color: var(--bad); }
 .person-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 980px; background: var(--bg-soft); font-size: 14px; cursor: pointer; }
 .person-chip input { margin: 0; }
 .person-chip i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* 단원 평가 */
+.unit-card h3 { font-size: 17px; line-height: 1.35; }
+.unit-sub { font-size: 13px; color: var(--text-2); margin-left: 8px; }
+.unit-rivals { font-size: 13px; color: var(--text-2); margin: 0; }

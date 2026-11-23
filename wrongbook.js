@@ -5,18 +5,19 @@
  * 문제마다 「질문하기」를 누르면 질문 게시판에 그 문제를 붙여 글을 쓴다.
  */
 
-import { el, plainStem } from './dom.js?v=20261123-1840';
-import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261123-1840';
-import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261123-1840';
-import { STATUS_LABEL } from './notes.js?v=20261123-1840';
-import { assessWrongs } from './assess.js?v=20261123-1840';
+import { el, plainStem } from './dom.js?v=20261123-1850';
+import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261123-1850';
+import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261123-1850';
+import { STATUS_LABEL } from './notes.js?v=20261123-1850';
+import { unitWrongs } from './units.js?v=20261123-1850';
+import { assessWrongs } from './assess.js?v=20261123-1850';
 
 const FILTERS = [
   ['all', '전체'],
   ['due', '오늘 복습'],
   ['waiting', '다른 날 한 번 더'],
   ['graduated', '졸업'],
-  ['assess', '수준 평가'],
+  ['assess', '평가'],
 ];
 
 /** 질문 게시판으로 가는 주소 — 문제를 붙여 간다 */
@@ -49,7 +50,7 @@ export async function renderWrongbook(ctx, exam, study, query) {
     location.hash = `#/notes?${q}`;
   };
 
-  const assess = await assessWrongs(ctx, subjects, study.merged.attempts);
+  const assess = [...(await assessWrongs(ctx, subjects, study.merged.attempts)), ...(await unitWrongs(ctx, subjects, study.merged.attempts))];
   const notesOf = (code) => study.bySubject.get(code)?.notes || [];
   const all = subjects.flatMap((s) => notesOf(s.code));
   const count = {
@@ -116,7 +117,7 @@ export async function renderWrongbook(ctx, exam, study, query) {
     el('section.hero', {},
       el('p.eyebrow', { text: `${study.learner} · 오답 노트` }),
       el('h1', { text: count.all ? `틀린 문제 ${count.all}개` : '틀린 문제가 없습니다' }),
-      el('p.sub', { text: count.all ? `오늘 복습 ${count.due} · 다른 날 한 번 더 ${count.waiting} · 졸업 ${count.graduated} · 수준 평가 ${count.assess}` : '연습·실전·수준 평가에서 틀린 문제가 과목별로 여기에 모입니다.' }),
+      el('p.sub', { text: count.all ? `오늘 복습 ${count.due} · 다른 날 한 번 더 ${count.waiting} · 졸업 ${count.graduated} · 평가 ${count.assess}` : '연습·실전·단원 평가·수준 평가에서 틀린 문제가 과목별로 여기에 모입니다.' }),
       el('div.hero-actions', {}, el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }))
     ),
     el('div.wrap', {},

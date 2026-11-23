@@ -7,18 +7,19 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261123-1840';
-import { el } from './dom.js?v=20261123-1840';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-1840';
-import { renderAssessRoute } from './assess.js?v=20261123-1840';
-import { renderWrongbook } from './wrongbook.js?v=20261123-1840';
-import { renderBoard } from './board.js?v=20261123-1840';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-1840';
-import { loadStudy } from './study.js?v=20261123-1840';
-import { renderPrint, printLinks } from './print.js?v=20261123-1840';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-1840';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-1840';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-1840';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261123-1850';
+import { el } from './dom.js?v=20261123-1850';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-1850';
+import { renderUnitsRoute } from './units.js?v=20261123-1850';
+import { renderAssessRoute } from './assess.js?v=20261123-1850';
+import { renderWrongbook } from './wrongbook.js?v=20261123-1850';
+import { renderBoard } from './board.js?v=20261123-1850';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-1850';
+import { loadStudy } from './study.js?v=20261123-1850';
+import { renderPrint, printLinks } from './print.js?v=20261123-1850';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-1850';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-1850';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-1850';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -80,6 +81,7 @@ function renderNavLearner(names) {
 function setNav(code) {
   navLinks.replaceChildren(
     ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null })),
+    el('a.nav-assess', { href: '#/units', text: '단원 평가', 'aria-current': code === 'units' ? 'page' : null }),
     el('a.nav-assess', { href: '#/assess', text: '수준 평가', 'aria-current': code === 'assess' ? 'page' : null }),
     el('a.nav-assess', { href: '#/notes', text: '오답 노트', 'aria-current': code === 'notes' ? 'page' : null }),
     el('a.nav-assess', { href: '#/board', text: '질문 게시판', 'aria-current': code === 'board' ? 'page' : null })
@@ -219,7 +221,8 @@ async function renderHome() {
       el('p.sub', { text: `${study.learner} · 전체 진도율 ${overall}% · ${subjects.length}과목 · 문서 ${countDocs(subjects)}개 · 문제 ${total}개` }),
       examDatePicker(study),
       el('div.hero-actions', {},
-        el('a.pill', { href: '#/assess', text: '수준 평가 · 성장 그래프' }),
+        el('a.pill', { href: '#/units', text: '단원 평가' }),
+        el('a.pill.ghost', { href: '#/assess', text: '수준 평가 · 성장 그래프' }),
         el('a.pill.ghost', { href: '#/notes', text: '오답 노트' }),
         el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }),
         el('a.pill.ghost', { href: '#/me', text: '캐릭터 고르기' })
@@ -305,6 +308,12 @@ async function renderSubject(s) {
               el('a.pill', { href: `#/s/${s.code}/practice`, text: '연습으로 풀기' }),
               el('a.pill.ghost', { href: `#/s/${s.code}/exam`, text: '실전으로 풀기' })
             )
+          ),
+          el('div.card.solve-card', {},
+            el('div.role', { text: '단원 평가' }),
+            el('h3', { text: '단원별로 시험 보기' }),
+            el('div.meta', { text: '단원마다 새 문제 10개 · 100점 · 15분' }),
+            el('div.hero-actions.left', {}, el('a.pill', { href: `#/units?s=${s.code}`, text: '단원 평가 보기' }))
           ),
           el('div.card.solve-card', {},
             el('div.role', { text: '오답 노트' }),
@@ -577,6 +586,8 @@ async function route() {
   if (parts[0] === 'me' && parts.length === 1) return renderCharacterSelect(ctx);
   if (parts[0] === 'notes' && parts.length === 1) return renderWrongbook(ctx, data.exam, await loadStudy(ctx, data.exam.subjects, data.concepts), query);
   if (parts[0] === 'board' && parts.length === 1) return renderBoard(ctx, data.exam, query);
+  const unitTesting = renderUnitsRoute(ctx, data.exam, parts, query);
+  if (unitTesting) return unitTesting;
   const assessing = renderAssessRoute(ctx, data.exam, parts, query);
   if (assessing) return assessing;
   if (parts[0] === 's') {
@@ -617,7 +628,7 @@ async function start() {
   subscribeCloud(() => {
     renderNavLearner();
     const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/').filter(Boolean);
-    const liveView = parts.length === 0 || (parts[0] === 'assess' && parts.length === 1) || (parts[0] === 'notes' && parts.length === 1) || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
+    const liveView = parts.length === 0 || (parts[0] === 'assess' && parts.length === 1) || (parts[0] === 'units' && parts.length === 1) || (parts[0] === 'notes' && parts.length === 1) || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
     const tag = document.activeElement?.tagName;
     if (!liveView || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
     clearTimeout(refreshTimer);

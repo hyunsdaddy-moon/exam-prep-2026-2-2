@@ -1,0 +1,1750 @@
+{
+ "schema": 1,
+ "subject": "영어",
+ "code": "eng",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Part 1. Unit 8A — The Brothers Grimm",
+   "short": "8A The Brothers Grimm",
+   "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+   "minutes": 15,
+   "groups": [],
+   "questions": [
+    {
+     "id": "eng-u1-01",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-01"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하는 것은?\n\n> Jacob and Wilhelm Grimm were two young men from Germany who loved reading stories. As university students, they became interested in folktales—traditional stories or legends that people told again and again, often for generations. The brothers began to collect folktales from storytellers all over Germany. Many were similar to stories told in France, Italy, Japan, and other countries. Between 1812 and 1814, the brothers published two books in German. These included stories like \"Cinderella,\" \"Snow White,\" and \"Little Red Riding Hood.\" The collections became known in English as *Grimms' Fairy Tales*.",
+     "choices": [
+      "그림 형제는 프랑스와 이탈리아를 여행하며 이야기를 수집했다.",
+      "그림 형제는 작가로 활동한 뒤에야 민담에 관심을 갖게 되었다.",
+      "그림 형제가 1812~1814년에 펴낸 책은 모두 다섯 권이었다.",
+      "그림 형제가 1812~1814년에 펴낸 책은 독일어로 쓰였다.",
+      "그림 형제는 《신데렐라》 같은 이야기를 직접 지어냈다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "형제는 1812~1814년에 독일어로(in German) 두 권의 책을 냈다. 이야기는 독일 전역의 이야기꾼에게서 '수집'한 것이며(①⑤ 오답), 민담에 관심을 가진 것은 대학생 시절이다(②)."
+    },
+    {
+     "id": "eng-u1-02",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 ⓐ~ⓔ 중에서 가리키는 대상이 나머지 넷과 **다른** 것은?\n\n> Although most people today think of ⓐ <u>these stories</u> as fairy tales for children, the Grimm brothers first wrote ⓑ <u>them</u> primarily for adults. Many of ⓒ <u>their</u> early tales were dark and scary. Later, the brothers changed the text of some of the original stories. They \"softened\" many of ⓓ <u>the tales</u> and added drawings. This made ⓔ <u>them</u> more suitable for children.",
+     "choices": [
+      "ⓐ",
+      "ⓑ",
+      "ⓒ",
+      "ⓓ",
+      "ⓔ"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "ⓒ their 는 그림 형제(the Grimm brothers)를 가리키고, 나머지 ⓐⓑⓓⓔ는 모두 그림 형제가 쓴 이야기들(stories/tales)을 가리킨다."
+    },
+    {
+     "id": "eng-u1-03",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 적절한 것은?\n\n> right or acceptable for a particular person or situation",
+     "choices": [
+      "suitable",
+      "scary",
+      "primarily",
+      "magical",
+      "text"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "'특정한 사람이나 상황에 알맞은'은 suitable(적합한)이다. scary 는 frightening, primarily 는 mainly, magical 은 having special powers 의 뜻이다."
+    },
+    {
+     "id": "eng-u1-04",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (A)~(C)의 괄호 안에서 어법상 알맞은 말을 골라 바르게 짝지은 것은?\n\n> (A) The (**origin / original**) story was much darker than the new one.\n> (B) She can play three (**music / musical**) instruments.\n> (C) Hangeul Day is a (**nation / national**) holiday in Korea.",
+     "choices": [
+      "origin – music – nation",
+      "origin – musical – national",
+      "original – music – national",
+      "original – musical – nation",
+      "original – musical – national"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "세 자리 모두 뒤의 명사(story, instruments, holiday)를 꾸미는 형용사 자리이므로 명사 + -al 형태인 original, musical, national 이 알맞다."
+    },
+    {
+     "id": "eng-u1-05",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 내용을 한 문장으로 요약할 때, 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?\n\n> Although most people today think of these stories as fairy tales for children, the Grimm brothers first wrote them primarily for adults. Many of their early tales were dark and scary. Later, the brothers changed the text of some of the original stories. They \"softened\" many of the tales and added drawings. This made them more suitable for children. Like the early tales, though, each story still has a moral: Work hard, be good, and listen to your parents.\n\n> **[요약]** The Grimm brothers' early tales were ___(A)___ and written mainly for adults, but later the brothers softened them and added ___(B)___ to make them suitable for children.",
+     "choices": [
+      "funny – songs",
+      "dark – drawings",
+      "dark – morals",
+      "short – drawings",
+      "happy – morals"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "초기 이야기는 dark and scary 했고, 나중에 내용을 부드럽게 하고 그림(drawings)을 추가했다. 교훈(moral)은 초기 이야기에도 이미 있었으므로 새로 '추가한' 것이 아니다(③⑤ 오답)."
+    },
+    {
+     "id": "eng-u1-06",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-02"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 글의 밑줄 친 ⓐ~ⓔ 중 어법상 **틀린** 것은?\n\n> Although most people today think of these stories ⓐ <u>as</u> fairy tales for children, the Grimm brothers first wrote them primarily for adults. Many of their early tales ⓑ <u>were</u> dark and scary. Later, the brothers ⓒ <u>changed</u> the text of some of the original stories. They \"softened\" many of the tales and added drawings. This made them more ⓓ <u>suitably</u> for children. Like the early tales, though, each story still ⓔ <u>has</u> a moral.",
+     "choices": [
+      "ⓐ",
+      "ⓑ",
+      "ⓒ",
+      "ⓓ",
+      "ⓔ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "make + 목적어 + 목적격 보어(형용사) 구조이므로 부사 suitably 가 아니라 형용사 suitable 이 와야 한다. ⓐ think of A as B, ⓔ each story(단수) + has 는 모두 옳다."
+    },
+    {
+     "id": "eng-u1-07",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-01"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하지 **않는** 것은?\n\n> The Grimm brothers' tales give a picture of traditional life and beliefs. For example, in the past, many people in Germany believed that forests were dangerous places. In the Grimms' stories, a forest is often the home of evil witches (as in \"Hansel and Gretel\"), talking animals, and other magical beings.\n>\n> Although most people today think of these stories as fairy tales for children, the Grimm brothers first wrote them primarily for adults. Many of their early tales were dark and scary. Later, the brothers changed the text of some of the original stories. They \"softened\" many of the tales and added drawings. This made them more suitable for children. Like the early tales, though, each story still has a moral: Work hard, be good, and listen to your parents.",
+     "choices": [
+      "과거 독일 사람들은 숲을 위험한 곳이라고 믿었다.",
+      "그림 형제의 이야기에서 숲은 마녀나 말하는 동물의 집으로 자주 나온다.",
+      "그림 형제는 처음에 주로 어른들을 위해 이야기를 썼다.",
+      "그림 형제는 나중에 일부 원래 이야기의 글을 고쳤다.",
+      "어린이용으로 고친 이야기에는 더 이상 교훈이 담겨 있지 않다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "마지막 문장에서 초기 이야기처럼 각 이야기에는 여전히(still) 교훈이 있다고 했다. ①~④는 문단 B, C의 내용과 일치한다."
+    },
+    {
+     "id": "eng-u1-08",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-04"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음은 글을 읽으며 주석을 다는 방법(Annotating Text)에 대한 질문이다. 이 방법으로 적절하지 **않은** 것은?\n\n> Which is NOT a good way to annotate a text?",
+     "choices": [
+      "Copy every sentence into your notebook before you read.",
+      "Highlight the key ideas in the text.",
+      "Underline new words and write their meanings in the margin.",
+      "Circle important numbers and dates, such as 1812.",
+      "Put a question mark next to parts you don't understand."
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "주석 달기는 글 위에 직접 핵심 형광펜, 모르는 단어 밑줄과 뜻 메모, 숫자·연도 동그라미, 이해 안 되는 곳 물음표 표시를 하는 것이다. 모든 문장을 공책에 베끼는 것은 해당하지 않는다."
+    },
+    {
+     "id": "eng-u1-09",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-04"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음은 그림 형제에 관한 글을 정리한 개념도(Concept Map)이다. 빈칸 (A)~(C)에 들어갈 말로 가장 적절한 것은?\n\n> Jacob and Wilhelm Grimm were two young men from Germany who loved reading stories. As university students, they became interested in folktales—traditional stories or legends that people told again and again, often for generations. The brothers began to collect folktales from storytellers all over Germany. Many were similar to stories told in France, Italy, Japan, and other countries. Between 1812 and 1814, the brothers published two books in German. These included stories like \"Cinderella,\" \"Snow White,\" and \"Little Red Riding Hood.\" The collections became known in English as *Grimms' Fairy Tales*.\n>\n> The Grimm brothers' tales give a picture of traditional life and beliefs. For example, in the past, many people in Germany believed that forests were dangerous places. In the Grimms' stories, a forest is often the home of evil witches (as in \"Hansel and Gretel\"), talking animals, and other magical beings.\n\n> **Concept Map: The Brothers Grimm**\n> - collected tales from German ___(A)___\n> - stories are ___(B)___ to tales in other countries\n> - the forest: a common image → believed to be a ___(C)___ place",
+     "choices": [
+      "writers – different – safe",
+      "storytellers – similar – dangerous",
+      "storytellers – different – dangerous",
+      "students – similar – magical",
+      "storytellers – similar – safe"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "형제는 독일 전역의 이야기꾼(storytellers)에게서 민담을 모았고, 많은 이야기가 다른 나라 이야기와 비슷했으며(similar), 사람들은 숲을 위험한(dangerous) 곳으로 믿었다."
+    },
+    {
+     "id": "eng-u1-10",
+     "subject": "영어",
+     "unit": "u1",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳은?\n\n> **They \"softened\" many of the tales and added drawings.**\n\n> Although most people today think of these stories as fairy tales for children, the Grimm brothers first wrote them primarily for adults. ( ① ) Many of their early tales were dark and scary. ( ② ) Later, the brothers changed the text of some of the original stories. ( ③ ) This made them more suitable for children. ( ④ ) Like the early tales, though, each story still has a moral: Work hard, be good, and listen to your parents. ( ⑤ )",
+     "choices": [
+      "①",
+      "②",
+      "③",
+      "④",
+      "⑤"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "'나중에 원래 이야기의 글을 바꿨다' 다음에 그 구체적 방법(부드럽게 하고 그림 추가)이 오고, 이어서 This(= 그렇게 고친 것)가 이야기를 어린이에게 더 알맞게 만들었다는 흐름이 자연스럽다. ②에 넣으면 Later 보다 먼저 고친 것이 되어 시간 순서가 어색하다."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Part 2. Unit 8B — The Seven Ravens",
+   "short": "8B The Seven Ravens",
+   "doc": "영어_시험공부/01_Unit8_Grimm_SevenRavens.md",
+   "minutes": 15,
+   "groups": [],
+   "questions": [
+    {
+     "id": "eng-u2-01",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-05"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 글 다음에 이어질 글의 순서로 가장 적절한 것은?\n\n> Hours passed. \"Where are those boys?\" shouted the angry father. \"They are probably playing a game and forgot about the water. I wish they were all turned into ravens!\" When he looked up, he saw seven black birds flying away. The father was shocked. \"What have I done?\" he thought. But it was too late. He could not take back his words.\n\n> (A) Eventually, the ravens returned for their meal. The girl hid behind a door and watched. When the seventh raven drank from his cup, something hit his mouth. The raven recognized it immediately—it was his parents' ring.\n>\n> (B) In time, the girl grew up and discovered she had brothers. The story of their misfortune affected her greatly, and she was determined to find them. For years, she searched and did not stop. Finally, she found their home.\n>\n> (C) To enter, she needed a special key made from a chicken bone, which she did not have. The girl cut off one of her fingers and opened the door with it. On a table, there were seven plates and seven cups. In the last cup, she accidentally dropped a ring that her parents had given her.",
+     "choices": [
+      "(A) – (C) – (B)",
+      "(B) – (A) – (C)",
+      "(B) – (C) – (A)",
+      "(C) – (A) – (B)",
+      "(C) – (B) – (A)"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "아들들이 까마귀가 된 뒤 → (B) 소녀가 자라 오빠들의 존재를 알고 집을 찾음 → (C) 들어가기 위해 손가락을 자르고, 컵에 반지를 떨어뜨림 → (A) 까마귀들이 돌아와 반지를 알아봄 순서이다."
+    },
+    {
+     "id": "eng-u2-02",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-05"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하는 것은?\n\n> Once upon a time, there lived a man and a woman who had seven sons. The couple wanted a daughter, and, eventually, they had a girl who they loved very much. One day, the father needed water for the child, so he sent the seven brothers to a well in the forest to get it. Once there, though, the boys began to fight, and the water jug fell into the well. The boys did not know what to do. They were afraid to go home.\n>\n> Hours passed. \"Where are those boys?\" shouted the angry father. \"They are probably playing a game and forgot about the water. I wish they were all turned into ravens!\" When he looked up, he saw seven black birds flying away. The father was shocked. \"What have I done?\" he thought. But it was too late. He could not take back his words.",
+     "choices": [
+      "형제들은 우물가에서 싸우다가 물병을 우물에 빠뜨렸다.",
+      "부부에게는 처음에 딸이 일곱 명 있었다.",
+      "아버지는 아들에게 줄 물을 구하러 딸을 우물로 보냈다.",
+      "형제들은 물을 떠서 곧바로 집으로 돌아왔다.",
+      "아버지는 까마귀로 변한 아들들을 곧바로 사람으로 되돌렸다."
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "the boys began to fight, and the water jug fell into the well 과 일치한다. 아버지는 딸(the child)을 위한 물이 필요해 일곱 아들을 보냈고(②③ 오답), 자신이 한 말을 되돌릴 수 없었다(⑤ 오답)."
+    },
+    {
+     "id": "eng-u2-03",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-08"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 대명사와 그것이 가리키는 대상을 바르게 짝지은 것은?\n\n> The girl thought for a moment, and then took a knife and cut off one of her fingers. With ⓐ <u>it</u>, she opened the front door and went inside. On a table, there were seven plates and seven cups. She ate and drank a little from each of ⓑ <u>them</u>. In the last cup, she accidentally dropped a ring that her parents had given her.\n>\n> Eventually, the ravens returned for their meal. The girl hid behind a door and watched. When the seventh raven drank from his cup, something hit his mouth. The raven recognized ⓒ <u>it</u> immediately—it was his parents' ring. \"I wish our sister were here,\" ⓓ <u>he</u> said, \"and then we could be free.\" Their sister quickly ran to them, and suddenly the ravens were human again. The brothers kissed their sister, and ⓔ <u>they</u> all went home together happily.",
+     "choices": [
+      "ⓐ it – a special key",
+      "ⓑ them – the seven brothers",
+      "ⓒ it – his parents' ring",
+      "ⓓ he – the father",
+      "ⓔ they – the seven ravens only"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "ⓒ it 은 바로 뒤에서 설명하듯 부모님의 반지이다. ⓐ는 그녀의 손가락, ⓑ는 일곱 개의 접시와 컵, ⓓ는 일곱 번째 까마귀, ⓔ는 여동생과 일곱 오빠 모두를 가리킨다."
+    },
+    {
+     "id": "eng-u2-04",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-07"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 단어의 쓰임이 어법상 바른 문장은?",
+     "choices": [
+      "The story of their misfortune <u>effected</u> her greatly.",
+      "Too much screen time can <u>affect</u> your sleep.",
+      "The new rule had a big <u>affect</u> on students.",
+      "What <u>affect</u> did the movie have on you?",
+      "The cold weather did not <u>effect</u> the soccer game."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "affect 는 '~에 영향을 미치다'라는 동사, effect 는 '영향, 효과'라는 명사이다. ②는 조동사 can 뒤 동사 자리이므로 affect 가 맞다. ①⑤는 동사 자리라 affect(ed), ③④는 명사 자리라 effect 가 와야 한다."
+    },
+    {
+     "id": "eng-u2-05",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-07"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 적절한 것은?\n\n> surprised, usually in a bad way",
+     "choices": [
+      "determined",
+      "afraid",
+      "angry",
+      "shocked",
+      "suddenly"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "'보통 나쁜 쪽으로 놀란'은 shocked(충격받은)이다. 아들들이 까마귀로 변하는 것을 본 아버지의 감정(The father was shocked.)이다."
+    },
+    {
+     "id": "eng-u2-06",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-06"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 글의 밑줄 친 ⓐ~ⓔ 중 어법상 **틀린** 것은?\n\n> Hours passed. \"Where are those boys?\" shouted the angry father. \"They are probably ⓐ <u>playing</u> a game and ⓑ <u>forgot</u> about the water. I wish they ⓒ <u>were</u> all turned into ravens!\" When he looked up, he saw seven black birds ⓓ <u>flying</u> away. The father was ⓔ <u>shocking</u>. \"What have I done?\" he thought.",
+     "choices": [
+      "ⓐ",
+      "ⓑ",
+      "ⓒ",
+      "ⓓ",
+      "ⓔ"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "아버지가 충격을 '받은' 것이므로 감정을 느끼는 사람 주어에는 과거분사 shocked 를 써야 한다. ⓒ I wish + 주어 + were(가정법 과거), ⓓ see + 목적어 + -ing 는 옳다."
+    },
+    {
+     "id": "eng-u2-07",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-08"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 아버지에게 해 줄 충고로 가장 적절한 것은?\n\n> Hours passed. \"Where are those boys?\" shouted the angry father. \"They are probably playing a game and forgot about the water. I wish they were all turned into ravens!\" When he looked up, he saw seven black birds flying away. The father was shocked. \"What have I done?\" he thought. But it was too late. He could not take back his words.",
+     "choices": [
+      "Think carefully about what you say.",
+      "Always share your food with others.",
+      "Never go into the forest alone.",
+      "Don't be afraid of black birds.",
+      "Work hard to become rich."
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "아버지는 화가 나서 '까마귀로 변해 버렸으면!'이라고 말했고 그 말을 되돌릴 수 없었다. 따라서 '말하기 전에 신중히 생각하라'가 이 이야기의 교훈이다."
+    },
+    {
+     "id": "eng-u2-08",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-06"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 문장의 의미로 가장 적절한 것은?\n\n> When he looked up, he saw seven black birds flying away. The father was shocked. \"What have I done?\" he thought. But it was too late. <u>He could not take back his words.</u>",
+     "choices": [
+      "He forgot what he had said.",
+      "He had already said the words, so it was too late.",
+      "He did not want to say anything to his sons.",
+      "He took his words back quickly.",
+      "He wrote his words down on paper."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "take back one's words 는 '한 말을 취소하다(주워 담다)'이므로, 이미 말을 해 버려서 너무 늦었다는 ②가 알맞다. ④는 정반대 의미이다."
+    },
+    {
+     "id": "eng-u2-09",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-05"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하지 **않는** 것은?\n\n> In time, the girl grew up and discovered she had brothers. The story of their misfortune affected her greatly, and she was determined to find them. For years, she searched and did not stop. Finally, she found their home. To enter, she needed a special key made from a chicken bone, which she did not have. The girl thought for a moment, and then took a knife and cut off one of her fingers. With it, she opened the front door and went inside. On a table, there were seven plates and seven cups. She ate and drank a little from each of them. In the last cup, she accidentally dropped a ring that her parents had given her.",
+     "choices": [
+      "소녀는 자라서 자신에게 오빠들이 있다는 것을 알게 되었다.",
+      "소녀는 여러 해 동안 멈추지 않고 오빠들을 찾아다녔다.",
+      "오빠들의 집에 들어가려면 닭 뼈로 만든 열쇠가 필요했다.",
+      "소녀는 부모님이 준 반지를 일부러 마지막 컵에 넣었다.",
+      "식탁 위에는 일곱 개의 접시와 일곱 개의 컵이 있었다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "소녀는 반지를 실수로(accidentally) 마지막 컵에 떨어뜨렸다. 나머지는 글의 내용과 일치한다."
+    },
+    {
+     "id": "eng-u2-10",
+     "subject": "영어",
+     "unit": "u2",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-01-08"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": true,
+     "level": "어려움",
+     "stem": "다음 글을 읽고 알 수 있는 것만을 `<보기>`에서 있는 대로 고른 것은?\n\n> In time, the girl grew up and discovered she had brothers. The story of their misfortune affected her greatly, and she was determined to find them. For years, she searched and did not stop. Finally, she found their home. To enter, she needed a special key made from a chicken bone, which she did not have. The girl thought for a moment, and then took a knife and cut off one of her fingers. With it, she opened the front door and went inside. On a table, there were seven plates and seven cups. She ate and drank a little from each of them. In the last cup, she accidentally dropped a ring that her parents had given her.\n>\n> Eventually, the ravens returned for their meal. The girl hid behind a door and watched. When the seventh raven drank from his cup, something hit his mouth. The raven recognized it immediately—it was his parents' ring. \"I wish our sister were here,\" he said, \"and then we could be free.\" Their sister quickly ran to them, and suddenly the ravens were human again. The brothers kissed their sister, and they all went home together happily.\n\n> **<보기>**\n> ㄱ. 소녀가 손가락을 자른 것은 오빠들 집의 현관문을 열기 위해서였다.\n> ㄴ. 반지는 소녀가 오빠들에게 선물하려고 가져온 것이었다.\n> ㄷ. 일곱 번째 까마귀는 컵 속의 물건이 부모님의 반지임을 곧바로 알아보았다.\n> ㄹ. 소녀는 까마귀들이 돌아오기 전에 그 집을 떠났다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄴ, ㄹ",
+      "ㄷ, ㄹ",
+      "ㄴ, ㄷ",
+      "ㄱ, ㄷ"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "ㄱ: 닭 뼈 열쇠가 없어 손가락으로 문을 열었다. ㄷ: The raven recognized it immediately. ㄴ: 반지는 부모님이 소녀에게 준 것이고 실수로 떨어뜨렸다. ㄹ: 소녀는 문 뒤에 숨어 지켜보았다."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Part 1. Unit 10A — The Army's True Colors",
+   "short": "10A The Army's True Colors",
+   "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+   "minutes": 15,
+   "groups": [],
+   "questions": [
+    {
+     "id": "eng-u3-01",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-01"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하는 것은?\n\n> The first emperor of China, Qin Shihuang, is remembered for the many things he did during his rule. Between 221 and 210 B.C., he started the construction of the Great Wall of China. He built a large network of roads. He introduced a new writing system, currency, and set of measurements. The emperor also ordered the construction of a huge army of life-sized terracotta soldiers. These, he hoped, would protect his tomb after his death.",
+     "choices": [
+      "진시황은 중국의 두 번째 황제였다.",
+      "진시황은 만리장성 건설을 시작했다.",
+      "진시황은 기존의 문자 체계를 그대로 사용했다.",
+      "테라코타 병사들은 실제 사람보다 훨씬 작게 만들어졌다.",
+      "테라코타 병사들은 황제의 궁전을 지키기 위해 만들어졌다."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "he started the construction of the Great Wall of China 와 일치한다. 진시황은 최초의 황제이고, 새 문자 체계를 도입했으며, 병사들은 실물 크기(life-sized)로 사후 무덤(tomb)을 지키기 위한 것이다."
+    },
+    {
+     "id": "eng-u3-02",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 <u>light</u>와 같은 의미로 쓰인 것은?\n\n> Today, the soldiers in Xi'an's terracotta museum are <u>light</u> brown, but they weren't always this color.",
+     "choices": [
+      "This bag is very <u>light</u>, so I can carry it easily.",
+      "Please turn on the <u>light</u> in the kitchen.",
+      "She was wearing a <u>light</u> blue shirt.",
+      "Can you <u>light</u> the candles on the cake?",
+      "The box was <u>light</u> enough for a child to lift."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "본문의 light 는 색이 '연한(not dark)'이라는 뜻으로, ③ light blue(연한 파란색)와 같다. ①⑤는 '가벼운(not heavy)', ②는 '전등', ④는 '불을 붙이다'이다."
+    },
+    {
+     "id": "eng-u3-03",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 <u>Once</u>와 같은 의미로 쓰인 것은?\n\n> The next challenge, says Rong, is to find a way to apply the colors to the army again. <u>Once</u> that happens, artists can bring Emperor Qin's army back to life in full color.",
+     "choices": [
+      "I have visited Xi'an only <u>once</u>.",
+      "<u>Once</u> upon a time, there lived a king.",
+      "We meet for lunch <u>once</u> a week.",
+      "<u>Once</u> you start this book, you won't stop reading.",
+      "He called me <u>once</u> last month."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "본문의 Once 는 '일단 ~하면(when; as soon as)'이라는 접속사로, 뒤에 주어+동사가 이어지는 ④와 같다. ①③⑤는 '한 번', ②는 '옛날에'라는 부사이다."
+    },
+    {
+     "id": "eng-u3-04",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 적절한 것은?\n\n> a country's money",
+     "choices": [
+      "currency",
+      "technique",
+      "network",
+      "liquid",
+      "army"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "'한 나라의 돈'은 currency(화폐)이다. 진시황은 새로운 문자 체계, 화폐(currency), 도량형을 도입했다."
+    },
+    {
+     "id": "eng-u3-05",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?\n\n> Today, the soldiers in Xi'an's terracotta museum are light brown, but they weren't always this color. They began as an army of red, blue, yellow, green, white, and purple. Sadly, most of the colors did not last to the present day. Before their discovery, the clay soldiers were protected by being __________. When they were unearthed, however, the air caused the coating under the paint to fall off.",
+     "choices": [
+      "underground",
+      "painted",
+      "in the museum",
+      "covered in plastic",
+      "in the sun"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "뒤 문장에서 '땅에서 파내어지자(unearthed)' 공기 때문에 색이 떨어졌다고 했으므로, 그 전에는 땅속(underground)에 있어 보호되었다. 플라스틱으로 덮는 것(④)은 오늘날의 보존 기술이다."
+    },
+    {
+     "id": "eng-u3-06",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-02"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 글의 밑줄 친 ⓐ~ⓔ 중 어법상 **틀린** 것은?\n\n> Today, the soldiers in Xi'an's terracotta museum are light brown, but they ⓐ <u>weren't</u> always this color. Before their discovery, the clay soldiers were protected by ⓑ <u>being</u> underground. When they ⓒ <u>were unearthed</u>, however, the air caused the coating under the paint ⓓ <u>fall</u> off. The paint disappeared in less time than it ⓔ <u>takes</u> to boil an egg.",
+     "choices": [
+      "ⓐ",
+      "ⓑ",
+      "ⓒ",
+      "ⓓ",
+      "ⓔ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "cause + 목적어 + to부정사 구조이므로 fall 이 아니라 to fall 이 와야 한다. ⓑ 전치사 by 뒤 동명사, ⓒ 병사들이 '발굴된' 수동태, ⓔ it takes + 시간 + to V 는 옳다."
+    },
+    {
+     "id": "eng-u3-07",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-01"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 내용과 일치하지 **않는** 것은?\n\n> New techniques are now starting to reveal the army's true colors. Archeologists have recently discovered an area with more than a hundred soldiers. Many of these still have their painted features, including black hair, pink faces, and black or brown eyes. Chinese and German researchers have developed a special liquid to help preserve the soldiers' colors. After they find a soldier or other artifact, archeologists spray it with the liquid. They then cover it in plastic.",
+     "choices": [
+      "고고학자들은 최근 100구가 넘는 병사가 있는 구역을 발견했다.",
+      "새로 발견된 병사 중 다수에는 색칠된 이목구비가 남아 있다.",
+      "색을 보존하는 특수 액체는 중국과 일본 연구진이 개발했다.",
+      "고고학자들은 유물을 발견하면 그것에 특수 액체를 뿌린다.",
+      "액체를 뿌린 뒤에는 유물을 플라스틱으로 덮는다."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "특수 액체는 중국과 독일(Chinese and German) 연구진이 개발했다. 나머지는 문단 C의 내용과 일치한다."
+    },
+    {
+     "id": "eng-u3-08",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글에서 밑줄 친 말이 의미하는 바로 가장 적절한 것은?\n\n> Archeologists are also finding colors in the dirt around Xi'an's terracotta warriors. It's important not to disturb the dirt, so the colors won't be lost. \"<u>We are treating the earth as an artifact</u>,\" says archeologist Rong Bo, the museum's leading chemist.",
+     "choices": [
+      "흙을 모두 퍼내어 박물관에 전시하고 있다.",
+      "흙 속에도 색이 남아 있어 유물처럼 조심스럽게 다루고 있다.",
+      "흙을 이용해 새로운 병사상을 만들고 있다.",
+      "흙을 특수 액체로 깨끗이 씻어 내고 있다.",
+      "흙은 가치가 없어 유물과 따로 버리고 있다."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "병사들 주변 흙에서도 색이 발견되므로 색이 사라지지 않게 흙을 건드리지 않는다고 했다. treat A as B(A를 B로 다루다)를 써서 흙을 유물처럼 소중히 다룬다는 뜻이다."
+    },
+    {
+     "id": "eng-u3-09",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-01",
+      "eng-02-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 글의 내용을 요약할 때, 빈칸 (A)~(C)에 들어갈 말로 가장 적절한 것은?\n\n> Today, the soldiers in Xi'an's terracotta museum are light brown, but they weren't always this color. They began as an army of red, blue, yellow, green, white, and purple. Sadly, most of the colors did not last to the present day. Before their discovery, the clay soldiers were protected by being underground. When they were unearthed, however, the air caused the coating under the paint to fall off. The paint disappeared in less time than it takes to boil an egg, taking with it important pieces of history.\n>\n> New techniques are now starting to reveal the army's true colors. Archeologists have recently discovered an area with more than a hundred soldiers. Many of these still have their painted features, including black hair, pink faces, and black or brown eyes. Chinese and German researchers have developed a special liquid to help preserve the soldiers' colors. After they find a soldier or other artifact, archeologists spray it with the liquid. They then cover it in plastic.\n\n> **[요약]** The terracotta soldiers were ___(A)___ at first, but most of their colors disappeared quickly because of contact with ___(B)___. Today, archeologists spray a special liquid on the soldiers and cover them in plastic to ___(C)___ their colors.",
+     "choices": [
+      "light brown – water – reveal",
+      "colorful – water – remove",
+      "light brown – air – preserve",
+      "colorful – air – remove",
+      "colorful – air – preserve"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "병사들은 원래 여러 색(colorful)이었고, 발굴 후 공기(air)가 페인트 아래 코팅을 떨어지게 했다. 특수 액체와 플라스틱은 색을 보존(preserve)하기 위한 것이다. light brown 은 현재의 색이다."
+    },
+    {
+     "id": "eng-u3-10",
+     "subject": "영어",
+     "unit": "u3",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 빈칸에 공통으로 들어갈 말로 가장 적절한 것은?\n\n> - New techniques are now starting to ______ the army's true colors.\n> - The doctor tried to ______ the cause of his illness.\n> - She promised never to ______ my secret.",
+     "choices": [
+      "protect",
+      "apply",
+      "last",
+      "preserve",
+      "reveal"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "reveal(드러내다, 밝히다)은 reveal the colors / reveal the cause / reveal a secret 처럼 쓰인다. protect·preserve 는 '보호·보존하다'라서 비밀을 '누설하다'의 뜻이 되지 않는다."
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Part 2. Unit 10B — Wonders of Egypt",
+   "short": "10B Wonders of Egypt",
+   "doc": "영어_시험공부/02_Unit10_Terracotta_Egypt.md",
+   "minutes": 15,
+   "groups": [],
+   "questions": [
+    {
+     "id": "eng-u4-01",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-04"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하는 것은?\n\n> Many people today think of the pyramids of Giza as the defining icon of ancient Egyptian culture. But who actually built them? For years, we did not know for sure. Now, however, archeologists have discovered an ancient city near the pyramids. Close by, there is a cemetery where the pyramid builders were buried. From studying these places, archeologists can now confirm that the pyramids were not built by slaves or foreigners (or space aliens!). Ordinary Egyptians built them.",
+     "choices": [
+      "피라미드는 평범한 이집트인들이 지었다.",
+      "피라미드는 노예들이 강제로 지었다.",
+      "피라미드는 외국에서 온 기술자들이 지었다.",
+      "피라미드 건설자들은 피라미드 안에 묻혔다.",
+      "고고학자들은 아직도 누가 피라미드를 지었는지 모른다."
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "Ordinary Egyptians built them. 노예나 외국인이 지은 것이 아니며, 건설자들은 피라미드 근처의 묘지(cemetery)에 묻혔다. 고고학자들은 이제 이를 확인(confirm)할 수 있다."
+    },
+    {
+     "id": "eng-u4-02",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-04"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하지 **않는** 것은?\n\n> It took about 80 years to build the pyramids. Archeologists believe that about 20,000–30,000 people were involved in the construction. The workers had different roles. Some dug up the rock, some moved it, and some shaped it into blocks. People also worked on different teams, each with its own name. Workers often competed to see whose team could do a job faster.",
+     "choices": [
+      "피라미드를 짓는 데 약 80년이 걸렸다.",
+      "약 2만~3만 명이 건설에 참여한 것으로 추정된다.",
+      "노동자들은 돌을 캐고, 옮기고, 다듬는 등 역할이 달랐다.",
+      "노동자들의 팀에는 각각 이름이 있었다.",
+      "팀들은 서로 경쟁하지 않고 일을 똑같이 나누었다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "Workers often competed to see whose team could do a job faster. 팀끼리 누가 더 빨리 일하는지 자주 경쟁했다."
+    },
+    {
+     "id": "eng-u4-03",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-06"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음은 글의 내용을 개요(Outline)로 정리한 것이다. ①~⑤ 중 글의 내용과 일치하지 **않는** 것은?\n\n> Life for these workers was hard. \"We can see that in their skeletons,\" says Azza Mohamed Sarry El-Din, a scientist studying bones found in the cemetery. According to her research, the bones show signs of arthritis. This probably developed from carrying heavy things for a long time. Archeologists have also found many female skeletons in the ancient city and cemetery. The damage to their bones is similar to that of the men. In fact, their lives may have been even tougher: Male workers generally lived to age 40–45, but women to only 30–35. However, workers usually had enough food, and they also received medical care if they got sick or hurt.\n\n> **OUTLINE: Builders' lives**\n> a. Hard life\n> - ① bones show signs of arthritis\n> - ② men lived to 40–45 years\n> - ③ women lived to 30–35 years\n>\n> b. Food and health\n> - ④ did not receive medical care\n> - ⑤ usually had enough food",
+     "choices": [
+      "①",
+      "②",
+      "③",
+      "④",
+      "⑤"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "글에서 노동자들은 아프거나 다치면 의료 혜택을 받았다(received medical care)고 했으므로 ④는 틀렸다. 개요에는 had access to medical care 가 들어가야 한다."
+    },
+    {
+     "id": "eng-u4-04",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-06"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 적절한 것은?\n\n> to show to be true",
+     "choices": [
+      "confirm",
+      "compete",
+      "ordinary",
+      "proud",
+      "role"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "'사실임을 보여 주다'는 confirm(확인하다, 입증하다)이다. 고고학자들은 피라미드를 일반 이집트인이 지었다는 것을 confirm 할 수 있게 되었다."
+    },
+    {
+     "id": "eng-u4-05",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-05"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 <u>that</u>이 가리키는 것으로 가장 적절한 것은?\n\n> Archeologists have also found many female skeletons in the ancient city and cemetery. The damage to their bones is similar to <u>that</u> of the men. In fact, their lives may have been even tougher: Male workers generally lived to age 40–45, but women to only 30–35.",
+     "choices": [
+      "the cemetery",
+      "the damage",
+      "the ancient city",
+      "the female skeletons",
+      "the lives"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "that of the men 은 '남성들의 뼈 손상(the damage)'을 뜻한다. 앞에 나온 명사 the damage 의 반복을 피하려고 that 을 썼다."
+    },
+    {
+     "id": "eng-u4-06",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-05"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 글의 밑줄 친 ⓐ~ⓔ 중 어법상 **틀린** 것은?\n\n> It took about 80 years ⓐ <u>to build</u> the pyramids. Archeologists believe that about 20,000–30,000 people ⓑ <u>were involved</u> in the construction. Some dug up the rock, some moved it, and some ⓒ <u>shaped</u> it into blocks. People also worked on different teams, each with ⓓ <u>its</u> own name. Workers often competed to see ⓔ <u>who</u> team could do a job faster.",
+     "choices": [
+      "ⓐ",
+      "ⓑ",
+      "ⓒ",
+      "ⓓ",
+      "ⓔ"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "뒤의 명사 team 을 꾸미며 '누구의 팀'이라는 뜻이므로 소유격 whose 가 와야 한다. ⓐ It takes + 시간 + to V, ⓑ be involved in 은 옳다."
+    },
+    {
+     "id": "eng-u4-07",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-05"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "Read the passage and answer the question.\n\n> The task was challenging, but laborers were proud of their work. On a wall in Khufu's Great Pyramid, for example, a group of workers wrote *Friends of Khufu*. \"It's because they were not just building the tomb of their king,\" says Egyptian archeologist Zahi Hawass. \"They were building Egypt. It was a national project, and everyone was a participant.\"\n\nAccording to Zahi Hawass, why did the workers write *Friends of Khufu* on the wall?",
+     "choices": [
+      "They wanted to become the king's slaves.",
+      "The king forced them to write it.",
+      "They felt they were building their country, not just a tomb.",
+      "They wanted to hide their real names.",
+      "They were members of Khufu's family."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "Hawass 는 노동자들이 왕의 무덤만 짓는 것이 아니라 이집트를 짓고 있었고, 모두가 참여한 국가적 프로젝트였기 때문이라고 말한다."
+    },
+    {
+     "id": "eng-u4-08",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-06"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 말로 가장 적절한 것은?\n\n> - Climbing that mountain in one day is an impossible ______.\n> - Please complete the ______ before Friday.\n> - The teacher gave us a new ______ this morning.",
+     "choices": [
+      "role",
+      "block",
+      "task",
+      "icon",
+      "cemetery"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "task(과업, 일)는 an impossible task / complete the task / give someone a new task 처럼 쓰인다. role 은 '역할'로 complete 와 어울리지 않는다."
+    },
+    {
+     "id": "eng-u4-09",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-04",
+      "eng-02-06"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 글을 통해 알 수 **없는** 것은?\n\n> It took about 80 years to build the pyramids. Archeologists believe that about 20,000–30,000 people were involved in the construction. The workers had different roles. Some dug up the rock, some moved it, and some shaped it into blocks. People also worked on different teams, each with its own name. Workers often competed to see whose team could do a job faster.\n>\n> Life for these workers was hard. \"We can see that in their skeletons,\" says Azza Mohamed Sarry El-Din, a scientist studying bones found in the cemetery. According to her research, the bones show signs of arthritis. This probably developed from carrying heavy things for a long time. Archeologists have also found many female skeletons in the ancient city and cemetery. The damage to their bones is similar to that of the men. In fact, their lives may have been even tougher: Male workers generally lived to age 40–45, but women to only 30–35. However, workers usually had enough food, and they also received medical care if they got sick or hurt.",
+     "choices": [
+      "피라미드 건설에 걸린 기간",
+      "건설에 참여한 대략적인 인원",
+      "남성과 여성 노동자의 대략적인 수명",
+      "여성 노동자들이 맡았던 구체적인 일",
+      "노동자의 뼈에 관절염이 생긴 원인으로 추정되는 것"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "여성 유골이 많이 발견되었고 뼈 손상이 남성과 비슷하다고만 했을 뿐, 여성들이 어떤 일을 맡았는지는 나오지 않는다. 관절염은 무거운 것을 오래 나른 데서 생긴 것으로 추정된다."
+    },
+    {
+     "id": "eng-u4-10",
+     "subject": "영어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-02-05"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "Read the passage and answer the question.\n\n> Life for these workers was hard. \"We can see that in their skeletons,\" says Azza Mohamed Sarry El-Din, a scientist studying bones found in the cemetery. According to her research, the bones show signs of arthritis. This probably developed from carrying heavy things for a long time. Archeologists have also found many female skeletons in the ancient city and cemetery. The damage to their bones is similar to that of the men. In fact, their lives may have been even tougher: Male workers generally lived to age 40–45, but women to only 30–35. However, workers usually had enough food, and they also received medical care if they got sick or hurt.\n\nWhat is the passage mainly about?",
+     "choices": [
+      "how the pyramids were designed",
+      "the hard lives of the pyramid workers",
+      "why women did not build the pyramids",
+      "where the ancient city was found",
+      "how teams competed with each other"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "노동자들의 뼈에 남은 관절염, 짧은 수명 등 고된 삶과 함께 음식·의료 혜택을 설명하므로 피라미드 노동자들의 힘든 삶이 중심 내용이다. 여성 유골도 발견되었으므로 ③은 틀렸다."
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Part 1. Unit 11A — The Problem with Plastic",
+   "short": "11A The Problem with Plastic",
+   "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+   "minutes": 15,
+   "groups": [],
+   "questions": [
+    {
+     "id": "eng-u5-01",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-01"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 자료의 내용과 일치하지 **않는** 것은?\n\n> **Plastic in Numbers**\n> - Total plastic produced worldwide in 2015: 448 million tons\n> - Plastic used for packaging: 161 million tons\n> - Average time in use before being thrown away\n>   - Building and construction: 35 years\n>   - Packaging: less than 6 months",
+     "choices": [
+      "2015년 전 세계 플라스틱 생산량은 4억 4,800만 톤이었다.",
+      "포장재로 쓰인 플라스틱은 1억 6,100만 톤이었다.",
+      "포장재 플라스틱은 전체 생산량의 절반이 넘는다.",
+      "건축·건설용 플라스틱은 평균 35년 동안 사용된다.",
+      "포장재 플라스틱은 평균 6개월도 쓰이지 못하고 버려진다."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "161 ÷ 448 ≈ 0.36이므로 포장재는 전체의 약 36%(40% 가까이)로 절반에 못 미친다. 나머지는 자료와 일치한다."
+    },
+    {
+     "id": "eng-u5-02",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하는 것은?\n\n> On a boat near Costa Rica, a team of marine biologists is helping a turtle. The animal is having trouble breathing, and the team discovers why—there is something inside its nose. A scientist tries to extract the object, but the turtle cries in pain. Finally, after eight long minutes, a long object is pulled out: It is a 10-centimeter plastic straw.",
+     "choices": [
+      "거북이는 입 안에 무언가가 걸려 있었다.",
+      "과학자는 단번에 쉽게 물체를 빼냈다.",
+      "거북이는 낚시 그물에 걸려 숨을 쉬지 못했다.",
+      "8분 만에 10센티미터 길이의 플라스틱 빨대가 나왔다.",
+      "거북이 몸속에서 나온 것은 플라스틱 병뚜껑이었다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "after eight long minutes, ... It is a 10-centimeter plastic straw. 물체는 코(nose) 안에 있었고, 빼내는 동안 거북이가 고통스러워했다."
+    },
+    {
+     "id": "eng-u5-03",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "Read the passage and answer the question.\n\n> The video of the turtle's rescue has been viewed millions of times on YouTube. It has helped raise awareness of a growing problem: The world's seas are full of plastic. Since 2000, there has been a huge increase in worldwide plastic production, but we recycle less than one-fifth of it. A lot of this plastic waste ends up in the ocean. Today, scientists think about 8.1 billion kilograms goes into the sea every year from coastal regions. Most of this plastic will never biodegrade.\n\nWhich is true according to the passage?",
+     "choices": [
+      "We recycle more than half of the plastic we produce.",
+      "We recycle less than 20 percent of the plastic we produce.",
+      "About 8.1 million kilograms of plastic go into the sea every year.",
+      "Most plastic in the ocean biodegrades in a few years.",
+      "Plastic production has decreased since 2000."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "we recycle less than one-fifth of it — 5분의 1(20%) 미만만 재활용한다. 바다로 가는 양은 8.1 billion(81억) kg이고, 플라스틱 대부분은 생분해되지 않으며, 2000년 이후 생산량은 크게 늘었다."
+    },
+    {
+     "id": "eng-u5-04",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?\n\n> This ocean plastic hurts millions of sea animals every year. Some fish eat plastic because it is covered with sea plants, and it looks and smells like food. Typically, eating plastic leads to constant __________. \"Imagine you ate lunch and then just felt weak ... and hungry all day,\" says marine biologist Matthew Savoca. \"That would be very confusing.\"",
+     "choices": [
+      "hunger",
+      "sleep",
+      "growth",
+      "happiness",
+      "thirst"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "뒤의 인용에서 점심을 먹고도 하루 종일 기운 없고 배고프다고 했으므로, 플라스틱을 먹으면 끊임없는 배고픔(constant hunger)이 생긴다."
+    },
+    {
+     "id": "eng-u5-05",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글에서 글쓴이가 밑줄 친 인용구를 사용한 목적으로 가장 적절한 것은?\n\n> Plastic is useful to people because it is strong and lasts a long time. But this is bad news for sea creatures who eat or get stuck in it. According to marine biologist Matthew Savoca, <u>\"Single-use plastics are the worst.\"</u> These are items that are used only once before we throw them away.",
+     "choices": [
+      "일반 시민의 경험을 덧붙이기 위해",
+      "주장에 대한 전문가의 근거를 제시하기 위해",
+      "흥미롭거나 기억에 남는 표현을 강조하기 위해",
+      "글쓴이와 반대되는 의견을 소개하기 위해",
+      "글 전체의 결론을 요약하기 위해"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "해양 생물학자(전문가)의 말을 인용해 '일회용 플라스틱이 가장 해롭다'는 주장에 근거를 더하고 있다(To provide expert evidence for an argument)."
+    },
+    {
+     "id": "eng-u5-06",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 적절한 것은?\n\n> difficult for people to understand",
+     "choices": [
+      "weak",
+      "huge",
+      "confusing",
+      "constant",
+      "common"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "'사람들이 이해하기 어려운'은 confusing(혼란스러운)이다. constant 는 happening all the time, common 은 happening often 이다."
+    },
+    {
+     "id": "eng-u5-07",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-03"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (A)~(C)의 빈칸에 들어갈 말로 바르게 짝지은 것은? (단, 모두 '밖으로(out)'를 뜻하는 접두사 ex- 가 붙은 단어이다.)\n\n> (A) The museum is open every day ______ Monday.\n> (B) Please leave the building through the nearest ______.\n> (C) The dentist had to ______ my bad tooth.",
+     "choices": [
+      "exit – except – extract",
+      "except – extract – exit",
+      "exit – extract – except",
+      "extract – exit – except",
+      "except – exit – extract"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "(A) '월요일을 제외하고' except, (B) '가장 가까운 출구' exit, (C) '이를 뽑아내다' extract 이다."
+    },
+    {
+     "id": "eng-u5-08",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-02"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 글의 밑줄 친 ⓐ~ⓔ 중 어법상 **틀린** 것은?\n\n> On a boat near Costa Rica, a team of marine biologists ⓐ <u>is helping</u> a turtle. The animal is having trouble ⓑ <u>breathing</u>, and the team discovers ⓒ <u>why</u>—there is something inside its nose. A scientist tries to extract the object, but the turtle ⓓ <u>cry</u> in pain. Finally, after eight long minutes, a long object ⓔ <u>is pulled</u> out.",
+     "choices": [
+      "ⓐ",
+      "ⓑ",
+      "ⓒ",
+      "ⓓ",
+      "ⓔ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "주어 the turtle 이 3인칭 단수이고 현재 시제이므로 cry 가 아니라 cries 여야 한다. ⓑ have trouble + -ing, ⓔ 물체가 '빼내어지는' 수동태는 옳다."
+    },
+    {
+     "id": "eng-u5-09",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": true,
+     "level": "어려움",
+     "stem": "다음 글의 내용과 일치하는 것만을 `<보기>`에서 있는 대로 고른 것은?\n\n> Plastic is useful to people because it is strong and lasts a long time. But this is bad news for sea creatures who eat or get stuck in it. According to Savoca, \"Single-use plastics are the worst.\" These are items that are used only once before we throw them away. Some common examples include straws, water bottles, and plastic bags. About 700 sea species (including the turtle from the video) have been caught in or have eaten this kind of plastic. Luckily, the turtle survived and was released back into the ocean.\n>\n> How will plastic affect sea animals in the long term? \"I think we'll know the answers in 5 to 10 years' time,\" says Debra Lee Magadini from Columbia University. But by then, another 25 million tons of plastic will already be in the ocean.\n\n> **<보기>**\n> ㄱ. 플라스틱은 튼튼하고 오래가기 때문에 사람들에게 유용하다.\n> ㄴ. 약 700종의 바다 생물이 일회용 플라스틱에 걸리거나 그것을 먹었다.\n> ㄷ. 영상 속 거북이는 결국 살아남지 못했다.\n> ㄹ. Magadini 는 플라스틱의 장기적 영향을 이미 알고 있다고 말했다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "ㄱ, ㄴ은 문단 내용과 일치한다. ㄷ: 거북이는 살아남아 바다로 돌아갔다. ㄹ: 5~10년 뒤에야 답을 알 것이라고 했다."
+    },
+    {
+     "id": "eng-u5-10",
+     "subject": "영어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-02"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 밑줄 친 <u>It</u>이 가리키는 것으로 가장 적절한 것은?\n\n> The video of the turtle's rescue has been viewed millions of times on YouTube. <u>It</u> has helped raise awareness of a growing problem: The world's seas are full of plastic.",
+     "choices": [
+      "the turtle",
+      "YouTube",
+      "the plastic straw",
+      "the world's seas",
+      "the video of the turtle's rescue"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "수백만 번 조회된 '거북이 구조 영상'이 플라스틱 문제에 대한 인식을 높이는 데 도움을 주었다는 뜻이다."
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Part 2. Unit 11B — Five Tips for Using Less Plastic",
+   "short": "11B Five Tips (Less Plastic)",
+   "doc": "영어_시험공부/03_Unit11_Plastic_Problem_Tips.md",
+   "minutes": 15,
+   "groups": [],
+   "questions": [
+    {
+     "id": "eng-u6-01",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-04"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 내용과 일치하지 **않는** 것은?\n\n> Quit using plastic bags. Instead, take your own reusable shopping bag to the store. People use a trillion plastic bags worldwide every year. Roughly 10 percent are used in the United States alone. That's almost one bag per American per day. In contrast, the average Dane uses four single-use bags per year. In 1993, Denmark was the first country to place a tax on plastic bags. Today, other countries (such as Chile, Kenya, Indonesia, Germany, and New Zealand) either make customers pay for plastic bags, or have banned them completely.",
+     "choices": [
+      "전 세계에서 매년 1조 개의 비닐봉지가 사용된다.",
+      "전 세계 비닐봉지의 약 10%가 미국에서 사용된다.",
+      "평균적인 덴마크인은 1년에 일회용 봉지를 4개 사용한다.",
+      "덴마크는 1993년에 세계 최초로 비닐봉지 사용을 금지했다.",
+      "케냐, 독일 등은 비닐봉지를 유료로 하거나 완전히 금지했다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "덴마크는 1993년에 비닐봉지에 세금을 부과한(place a tax on) 최초의 나라이지, 사용을 금지한 것이 아니다."
+    },
+    {
+     "id": "eng-u6-02",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-06"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 글의 밑줄 친 <u>beverage</u>와 의미가 가장 가까운 것은?\n\n> Don't use plastic bottles. Buy a reusable bottle and fill it with any type of <u>beverage</u> you like.",
+     "choices": [
+      "drink",
+      "food",
+      "container",
+      "bottle",
+      "snack"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "병에 채워 넣는 것이므로 beverage 는 '음료(drink)'이다."
+    },
+    {
+     "id": "eng-u6-03",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-04"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "Read the passage and answer the question.\n\n> Skip the straw. Today, around 8.3 billion plastic straws pollute the world's beaches. So when you order a drink, say no to the straw, or bring your own reusable one. In 2018, Seattle became the first major U.S. city to ban plastic straws, and many other cities are set to follow its example.\n>\n> Don't use plastic bottles. Buy a reusable bottle and fill it with any type of beverage you like. Some cities (like Bundanoon in Australia and San Francisco in the U.S.) have completely or partially banned bottled water. Globally, however, people still buy nearly a million plastic bottles every minute.\n\nWhich is true according to the passage?",
+     "choices": [
+      "About 8.3 million plastic straws pollute the world's beaches.",
+      "Seattle was the first major U.S. city to ban plastic straws.",
+      "San Francisco has banned all kinds of drinks.",
+      "People buy nearly a million plastic bottles every day.",
+      "Bundanoon is a city in the United States."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "In 2018, Seattle became the first major U.S. city to ban plastic straws. 빨대는 8.3 billion 개, 병은 매분(every minute) 약 100만 개이며, Bundanoon 은 호주에 있고 금지 대상은 생수(bottled water)이다."
+    },
+    {
+     "id": "eng-u6-04",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-05"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 밑줄 친 <u>That</u>이 가리키는 내용으로 가장 적절한 것은?\n\n> People use a trillion plastic bags worldwide every year. Roughly 10 percent are used in the United States alone. <u>That</u>'s almost one bag per American per day. In contrast, the average Dane uses four single-use bags per year.",
+     "choices": [
+      "전 세계에서 매년 1조 개의 비닐봉지를 쓰는 것",
+      "전 세계 비닐봉지의 약 10%가 미국에서만 쓰이는 것",
+      "덴마크인이 1년에 비닐봉지를 4개 쓰는 것",
+      "미국인이 재사용 쇼핑백을 들고 다니는 것",
+      "덴마크가 비닐봉지에 세금을 매긴 것"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "미국에서 쓰는 양(1조 개의 약 10%)을 미국인 수로 나누면 1인당 하루 거의 1개꼴이라는 뜻이므로, That 은 바로 앞 문장의 내용을 가리킨다."
+    },
+    {
+     "id": "eng-u6-05",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-05"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글에서 전체 흐름과 관계 **없는** 문장은?\n\n> Quit using plastic bags. ① Instead, take your own reusable shopping bag to the store. ② People use a trillion plastic bags worldwide every year. ③ Roughly 10 percent are used in the United States alone. ④ Paper bags are easy to color and decorate at home. ⑤ In contrast, the average Dane uses four single-use bags per year.",
+     "choices": [
+      "①",
+      "②",
+      "③",
+      "④",
+      "⑤"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "비닐봉지 사용을 줄이자는 내용과 나라별 사용량을 비교하는 흐름에서, 종이봉투를 꾸미기 쉽다는 ④는 관계가 없다."
+    },
+    {
+     "id": "eng-u6-06",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-06"
+     ],
+     "points": 10,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 중 어법상 **틀린** 문장은?",
+     "choices": [
+      "Quit using plastic bags.",
+      "Buy a reusable bottle and fill it with any type of beverage you like.",
+      "Other countries either make customers to pay for plastic bags, or have banned them.",
+      "Buy bar soap instead of liquid soap in plastic containers.",
+      "Norway recycles 97 percent of its plastic bottles."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "사역동사 make 는 '목적어 + 동사원형'을 쓰므로 to pay 가 아니라 pay 여야 한다. ① quit + -ing, ② fill A with B 는 옳다."
+    },
+    {
+     "id": "eng-u6-07",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-06"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 영영 풀이에 해당하는 단어로 가장 적절한 것은?\n\n> to officially say that something must not be shown or used",
+     "choices": [
+      "avoid",
+      "reduce",
+      "pollute",
+      "quit",
+      "ban"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "'공식적으로 사용하지 못하게 하다'는 ban(금지하다)이다. avoid 는 stay away from, quit 는 stop doing 이다."
+    },
+    {
+     "id": "eng-u6-08",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-04",
+      "eng-03-05"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 글의 빈칸에 들어갈 제목(팁)으로 가장 적절한 것은?\n\n> __________. Buy bar soap instead of liquid soap in plastic containers. Don't buy fruit or vegetables in plastic packaging. In the United Kingdom, leaders are calling for supermarkets to have plastic-free areas. They also want to tax plastic take-out containers.",
+     "choices": [
+      "Recycle",
+      "Skip the straw",
+      "Avoid plastic packaging",
+      "Quit using plastic bags",
+      "Don't use plastic bottles"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "플라스틱 용기에 든 액체 비누, 포장된 과일·채소, 테이크아웃 용기 등 모두 플라스틱 포장에 관한 내용이므로 Avoid plastic packaging 이 알맞다."
+    },
+    {
+     "id": "eng-u6-09",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-04"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "Read the passage and answer the question.\n\n> Recycle. We can't recycle all plastic items, but it is possible to recycle most bottles and milk or juice cartons. Today, Norway recycles 97 percent of its plastic bottles. How? Machines at most supermarkets take the bottles and give a refund of up to 2.5 kroner (32 cents) per bottle.\n\nIf a person in Norway returns 10 plastic bottles to a supermarket machine, what is the largest refund he or she can get?",
+     "choices": [
+      "2.5 kroner",
+      "3.2 kroner",
+      "9.7 kroner",
+      "32 kroner",
+      "25 kroner"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "병당 최대 2.5크로네이므로 10병이면 2.5 × 10 = 25크로네(약 3.2달러)이다. 32는 병 1개의 환불액을 센트로 나타낸 수이다."
+    },
+    {
+     "id": "eng-u6-10",
+     "subject": "영어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "eng-03-06"
+     ],
+     "points": 10,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 말로 가장 적절한 것은?\n\n> - ______ warming is making summers hotter.\n> - Plastic pollution is a ______ problem, not just a local one.\n> - We need more ______ awareness about ocean plastic.",
+     "choices": [
+      "global",
+      "local",
+      "national",
+      "plastic",
+      "single"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "global warming(지구 온난화), global problem(세계적 문제), global awareness(세계적 인식)으로 쓰인다. 둘째 문장의 not just a local one 도 단서이다."
+    }
+   ]
+  }
+ ]
+}
