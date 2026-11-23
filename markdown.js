@@ -61,8 +61,7 @@ function loadMermaid() {
     const tag = document.createElement('script');
     tag.src = 'vendor/mermaid.min.js';
     tag.onload = () => {
-      const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-      window.mermaid.initialize({ startOnLoad: false, securityLevel: 'strict', theme: dark ? 'dark' : 'neutral', fontFamily: 'inherit' });
+      window.mermaid.initialize({ startOnLoad: false, securityLevel: 'strict', theme: 'neutral', fontFamily: 'inherit' });
       resolve(window.mermaid);
     };
     tag.onerror = () => reject(new Error('mermaid'));
