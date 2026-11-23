@@ -877,3 +877,19 @@ button.link.danger { color: var(--bad); }
 .dq-essays .p-q.essay { column-span: none; }
 .toc a.toc-quiz { margin-top: 8px; font-weight: 600; }
 .doc .dq-paper .p-pick .p-text p { margin: 0; }
+.dq-history { display: flex; flex-wrap: wrap; align-items: center; gap: 5pt; margin-top: 8pt; font-size: 9pt; }
+.dq-history:empty { display: none; }
+.dq-history-label { color: var(--text-2); margin-right: 2pt; }
+.dq-try { border: 0.6pt solid #999; border-radius: 3pt; padding: 1.5pt 6pt; background: #fff; }
+.dq-try.on { border-color: #111; background: #111; color: #fff; }
+.dq-try small { color: inherit; opacity: 0.7; font-size: 8pt; }
+.dq-submit { font: inherit; font-size: 9pt; font-weight: 700; color: #fff; background: #0a4fa3; border: 0; border-radius: 4pt; padding: 3pt 14pt; cursor: pointer; margin-left: auto; }
+.dq-submit:disabled { opacity: 0.6; cursor: default; }
+.dq-tools .dq-submit + .dq-submit { margin-left: 0; }
+.dq-warn { color: #d70015; }
+.dq-hist-row:empty { display: none; }
+.dq-hist-row { margin: 2pt 0 0 13pt; }
+.dq-hist { display: inline-flex; gap: 3pt; }
+.dq-h { font-style: normal; font-size: 7.5pt; line-height: 1; padding: 1.5pt 4pt; border-radius: 6pt; border: 0.5pt solid #ccc; color: #888; }
+.dq-h.ok { color: #1a8f3c; border-color: #1a8f3c; background: #eef8f0; }
+.dq-h.ng { color: #d70015; border-color: #d70015; background: #fdeef0; }
