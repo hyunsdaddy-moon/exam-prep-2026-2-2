@@ -12,10 +12,10 @@
  *       단원 평가는 몇 번이든 다시 볼 수 있고, 카드에는 첫 점수 · 최고 점수 · 최근 점수를 보여 준다.
  */
 
-import { el, newId } from './dom.js?v=20261124-0518';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-0518';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-0518';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261124-0518';
+import { el, newId } from './dom.js?v=20261124-0545';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-0545';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-0545';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261124-0545';
 
 const ROUND_BASE = 10;
 const unitNo = (id) => Number(String(id).replace(/^u/, ''));
@@ -205,7 +205,8 @@ export function renderUnitsRoute(ctx, exam, parts, query) {
 
 /** 오답 노트에 넣을 단원 평가의 틀린 문제 — 같은 문제를 나중에 맞혔으면 뺀다 (assessWrongs 와 같은 모양) */
 export async function unitWrongs(ctx, subjects, attempts) {
-  const mine = attempts.filter((a) => a.mode === 'assess' && a.qtype === 'choice').sort((a, b) => String(a.at).localeCompare(String(b.at)));
+  // 읽기 문서 단원 평가(docquiz, session dqs-…) 기록은 뺀다
+  const mine = attempts.filter((a) => a.mode === 'assess' && a.qtype === 'choice' && !String(a.session || '').startsWith('dqs-')).sort((a, b) => String(a.at).localeCompare(String(b.at)));
   const last = new Map();
   for (const a of mine) last.set(a.q, a);
   const out = [];

@@ -5,12 +5,13 @@
  * 문제마다 「질문하기」를 누르면 질문 게시판에 그 문제를 붙여 글을 쓴다.
  */
 
-import { el, plainStem } from './dom.js?v=20261124-0518';
-import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261124-0518';
-import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261124-0518';
-import { STATUS_LABEL } from './notes.js?v=20261124-0518';
-import { unitWrongs } from './units.js?v=20261124-0518';
-import { assessWrongs } from './assess.js?v=20261124-0518';
+import { el, plainStem } from './dom.js?v=20261124-0545';
+import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261124-0545';
+import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261124-0545';
+import { STATUS_LABEL } from './notes.js?v=20261124-0545';
+import { unitWrongs } from './units.js?v=20261124-0545';
+import { assessWrongs } from './assess.js?v=20261124-0545';
+import { docWrongs, choiceNotes } from './docquiz.js?v=20261124-0545';
 
 const FILTERS = [
   ['all', '전체'],
@@ -32,7 +33,7 @@ function problemBody(q, group, picked, extra) {
   if (q.type === 'choice') {
     const choices = choiceList(q, () => {});
     choices.set(picked || [], q.answer);
-    body.append(choices.node, el('p.verdict-line', { text: extra }), q.explanation ? md(q.explanation, 'md explain') : '');
+    body.append(choices.node, el('p.verdict-line', { text: extra }), q.explanation ? md(q.explanation, 'md explain') : '', q.choiceNotes ? choiceNotes({ ...q, answer: q.answer[0] }, picked?.[0]) : '');
   } else {
     body.append(el('h4', { text: '모범 답안과 채점 기준' }), md(q.modelAnswer, 'md explain'));
   }
@@ -50,7 +51,7 @@ export async function renderWrongbook(ctx, exam, study, query) {
     location.hash = `#/notes?${q}`;
   };
 
-  const assess = [...(await assessWrongs(ctx, subjects, study.merged.attempts)), ...(await unitWrongs(ctx, subjects, study.merged.attempts))];
+  const assess = [...(await assessWrongs(ctx, subjects, study.merged.attempts)), ...(await unitWrongs(ctx, subjects, study.merged.attempts)), ...(await docWrongs(ctx, subjects, study.merged.attempts))];
   const notesOf = (code) => study.bySubject.get(code)?.notes || [];
   const all = subjects.flatMap((s) => notesOf(s.code));
   const count = {
@@ -90,12 +91,14 @@ export async function renderWrongbook(ctx, exam, study, query) {
         rows.push(el('details.result-row.note-assess', {},
           el('summary', {},
             el('span.badge.assess', { text: w.round.title }),
-            el('span.result-no', { text: `${q.no}번` }),
+            el('span.result-no', { text: q.type === 'essay' ? `서술형 ${q.no}` : `${q.no}번` }),
             el('span.result-stem', { text: plainStem(q.stem, 54) }),
             el('span.marks', {}, el('i.x', { text: '×' }))
           ),
-          problemBody(q, w.group, w.attempt.picked, `내 답 ${answerText(w.attempt.picked)} · 정답 ${answerText(q.answer)}${w.attempt.confidence ? ` · ${CONFIDENCE_LABEL[w.attempt.confidence]}` : ''}`),
-          el('div.note-actions', {}, el('a.pill.ghost.small', { href: askHref(s.code, q, label), text: '이 문제 질문하기' }))
+          problemBody(q, w.group, w.attempt.picked, q.type === 'essay' ? '스스로 채점: 빠뜨렸어요' : `내 답 ${w.attempt.picked?.length ? answerText(w.attempt.picked) : '안 풂'} · 정답 ${answerText(q.answer)}${w.attempt.confidence ? ` · ${CONFIDENCE_LABEL[w.attempt.confidence]}` : ''}`),
+          el('div.note-actions', {},
+            w.href ? el('a.pill.ghost.small', { href: w.href, text: '단원 정리로 가서 다시 풀기' }) : null,
+            el('a.pill.ghost.small', { href: askHref(s.code, q, label), text: '이 문제 질문하기' }))
         ));
       }
     }

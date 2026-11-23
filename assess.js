@@ -10,11 +10,11 @@
  * 점수는 과목·회차마다 「처음 응시한 것」으로 센다 — 진단은 한 번이 의미가 있으므로.
  */
 
-import { el, newId } from './dom.js?v=20261124-0518';
-import { loadRecords, getCurrentLearner, getSavedLearners, setCurrentLearner } from './store.js?v=20261124-0518';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-0518';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261124-0518';
-import { avatar } from './characters.js?v=20261124-0518';
+import { el, newId } from './dom.js?v=20261124-0545';
+import { loadRecords, getCurrentLearner, getSavedLearners, setCurrentLearner } from './store.js?v=20261124-0545';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-0545';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261124-0545';
+import { avatar } from './characters.js?v=20261124-0545';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
@@ -406,7 +406,8 @@ export function renderAssessRoute(ctx, exam, parts, query) {
 
 /** 오답 노트에 넣을 수준 평가의 틀린 문제 — 같은 문제를 나중에 맞혔으면 뺀다 */
 export async function assessWrongs(ctx, subjects, attempts) {
-  const mine = attempts.filter((a) => a.mode === 'assess' && a.qtype === 'choice').sort((a, b) => String(a.at).localeCompare(String(b.at)));
+  // 읽기 문서 단원 평가(docquiz, session dqs-…) 기록은 뺀다
+  const mine = attempts.filter((a) => a.mode === 'assess' && a.qtype === 'choice' && !String(a.session || '').startsWith('dqs-')).sort((a, b) => String(a.at).localeCompare(String(b.at)));
   const last = new Map();
   for (const a of mine) last.set(a.q, a);
   const out = [];

@@ -893,3 +893,16 @@ button.link.danger { color: var(--bad); }
 .dq-h { font-style: normal; font-size: 7.5pt; line-height: 1; padding: 1.5pt 4pt; border-radius: 6pt; border: 0.5pt solid #ccc; color: #888; }
 .dq-h.ok { color: #1a8f3c; border-color: #1a8f3c; background: #eef8f0; }
 .dq-h.ng { color: #d70015; border-color: #d70015; background: #fdeef0; }
+.dq-notes { margin-top: 6pt; padding-top: 5pt; border-top: 0.5pt dashed #bbb; }
+.dq-notes-title { display: block; font-size: 8.5pt; color: var(--text-2); margin-bottom: 2pt; }
+.dq-cn, .dq-bogi { list-style: none; margin: 0; padding: 0; }
+.dq-cn li, .dq-bogi li { display: flex; gap: 4pt; align-items: baseline; margin: 1.5pt 0; }
+.dq-cn li .p-text, .dq-bogi li .p-text { flex: 1; }
+.dq-cn li .p-text p, .dq-bogi li .p-text p { margin: 0; }
+.dq-cn-no { flex: none; color: var(--text-2); }
+.dq-cn li.ok .dq-cn-no { color: #1a8f3c; font-weight: 700; }
+.dq-cn li.mine { background: #fdeef0; border-radius: 3pt; padding: 0 3pt; }
+.dq-cn li.mine .dq-cn-no { color: #d70015; font-weight: 700; }
+.dq-cn-tag { flex: none; font-size: 7.5pt; color: #d70015; }
+.dq-bogi { margin-bottom: 4pt; }
+.result-body .dq-notes { font-size: 14px; border-top-color: var(--line); }

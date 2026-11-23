@@ -13,12 +13,17 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId } from './dom.js?v=20261124-0518';
-import { renderMarkdown } from './markdown.js?v=20261124-0518';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-0518';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-0518';
+import { el, CIRCLED, newId } from './dom.js?v=20261124-0545';
+import { renderMarkdown } from './markdown.js?v=20261124-0545';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-0545';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-0545';
 
 const ROUND_BASE = 40;
+const SESSION_PREFIX = 'dqs-';
+/** 처음 배포본은 문항 id 가 soc-d1-01 꼴이라 수준 평가(d1·d2)와 겹쳤다 → soc-q1-01 로 바꿨다. 옛 기록도 새 id 로 읽는다 */
+const normQ = (q) => String(q).replace(/^([a-z]+)-d(\d+)-(\d+)$/, '$1-q$2-$3');
+/** 이 단원 평가가 남긴 기록인가 */
+export const isDocQuizSession = (session) => String(session || '').startsWith(SESSION_PREFIX);
 
 const files = new Map();
 function loadQuiz(ctx, code) {
@@ -37,6 +42,57 @@ const shortDate = (iso) => {
   return Number.isNaN(d.getTime()) ? '' : `${d.getMonth() + 1}.${d.getDate()}`;
 };
 
+/** 보기마다 맞고 틀린 까닭 (data 의 choiceNotes · bogiNotes 가 있을 때만) */
+export function choiceNotes(q, pick) {
+  if (!q.choiceNotes?.length && !q.bogiNotes) return '';
+  const box = el('div.dq-notes', {}, el('b.dq-notes-title', { text: '보기별 해설' }));
+  if (q.bogiNotes) {
+    box.append(el('ul.dq-bogi', {}, Object.entries(q.bogiNotes).map(([k, v]) => el('li', {}, el('b', { text: `${k}. ` }), md(v, 'span.md.p-text')))));
+  }
+  if (q.choiceNotes?.length) {
+    box.append(el('ul.dq-cn', {}, q.choiceNotes.map((note, i) => el(`li${i + 1 === q.answer ? '.ok' : ''}${i + 1 === pick && pick !== q.answer ? '.mine' : ''}`, {},
+      el('span.dq-cn-no', { text: CIRCLED[i] }),
+      md(note, 'span.md.p-text'),
+      i + 1 === pick && pick !== q.answer ? el('small.dq-cn-tag', { text: '내가 고른 답' }) : null
+    ))));
+  }
+  return box;
+}
+
+/** 오답 노트용: 단원 평가에서 마지막으로 틀린 문제들 (units.unitWrongs 와 같은 모양) */
+export async function docWrongs(ctx, subjects, attempts) {
+  const mine = attempts.filter((a) => a.mode === 'assess' && a.correct != null && isDocQuizSession(a.session)).map((a) => ({ ...a, q: normQ(a.q) })).sort((a, b) => String(a.at).localeCompare(String(b.at)));
+  const last = new Map();
+  for (const a of mine) last.set(a.q, a);
+  const out = [];
+  for (const sub of subjects) {
+    const data = await loadQuiz(ctx, sub.code);
+    for (const [file, quiz] of Object.entries(data.docs || {})) {
+      const doc = (sub.docs || []).find((d) => d.file === file || d.file.normalize('NFC') === file);
+      const docIndex = (sub.docs || []).indexOf(doc);
+      let no = 0;
+      let essayNo = 0;
+      for (const q of quiz.questions || []) {
+        const n = q.type === 'choice' ? ++no : ++essayNo;
+        const a = last.get(q.id);
+        if (!a || a.correct !== false) continue;
+        const question = q.type === 'choice'
+          ? { ...q, no: n, answer: [q.answer], points: 1 }
+          : { ...q, no: n, modelAnswer: q.model + (q.keywords?.length ? `\n\n꼭 들어갈 말: ${q.keywords.join(' · ')}` : ''), points: 1 };
+        out.push({
+          subject: sub,
+          round: { title: `단원 평가 · ${doc?.title || file}` },
+          question,
+          group: null,
+          attempt: a,
+          href: docIndex >= 0 ? `#/s/${sub.code}/${docIndex}` : null,
+        });
+      }
+    }
+  }
+  return out;
+}
+
 /** 이 문서의 지난 제출 기록: [{ n, session, at, byQ: Map(q → attempt) }] (1차부터) */
 async function loadTries(code, round, ids) {
   const loaded = await loadRecords();
@@ -46,7 +102,9 @@ async function loadTries(code, round, ids) {
     .sort((a, b) => String(a.at).localeCompare(String(b.at)));
   const bySession = new Map(sessions.map((s) => [s.session, new Map()]));
   const attempts = merged.attempts
-    .filter((a) => bySession.has(a.session) && ids.has(a.q))
+    .filter((a) => bySession.has(a.session))
+    .map((a) => ({ ...a, q: normQ(a.q) }))
+    .filter((a) => ids.has(a.q))
     .sort((a, b) => String(a.at).localeCompare(String(b.at)));
   for (const a of attempts) bySession.get(a.session).set(a.q, a); // 같은 문제는 나중 것
   return { ok: loaded.ok, tries: sessions.map((s, i) => ({ n: i + 1, session: s.session, at: s.at, byQ: bySession.get(s.session) })) };
@@ -172,7 +230,8 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
         if (graded) {
           feedback.append(
             el('b.dq-verdict', { text: right ? '정답' : pick ? `오답 · 정답 ${CIRCLED[q.answer - 1]}` : `안 풂 · 정답 ${CIRCLED[q.answer - 1]}` }),
-            md(q.explanation)
+            md(q.explanation),
+            choiceNotes(q, pick)
           );
         }
         hist.replaceChildren(tries.length ? histIcons(q) : '');
