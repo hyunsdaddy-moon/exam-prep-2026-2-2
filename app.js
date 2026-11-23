@@ -12,6 +12,7 @@ import { el } from './dom.js?v=20261123-2153';
 import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-2153';
 import { renderUnitsRoute } from './units.js?v=20261123-2153';
 import { renderAssessRoute } from './assess.js?v=20261123-2153';
+import { renderPastRoute } from './past.js?v=20261123-2153';
 import { renderWrongbook } from './wrongbook.js?v=20261123-2153';
 import { renderBoard } from './board.js?v=20261123-2153';
 import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-2153';
@@ -83,6 +84,7 @@ function setNav(code) {
     ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null })),
     el('a.nav-assess', { href: '#/units', text: '단원 평가', 'aria-current': code === 'units' ? 'page' : null }),
     el('a.nav-assess', { href: '#/assess', text: '수준 평가', 'aria-current': code === 'assess' ? 'page' : null }),
+    el('a.nav-assess', { href: '#/past', text: '기출문제', 'aria-current': code === 'past' ? 'page' : null }),
     el('a.nav-assess', { href: '#/notes', text: '오답 노트', 'aria-current': code === 'notes' ? 'page' : null }),
     el('a.nav-assess', { href: '#/board', text: '질문 게시판', 'aria-current': code === 'board' ? 'page' : null })
   );
@@ -223,6 +225,7 @@ async function renderHome() {
       el('div.hero-actions', {},
         el('a.pill', { href: '#/units', text: '단원 평가' }),
         el('a.pill.ghost', { href: '#/assess', text: '수준 평가 · 성장 그래프' }),
+        el('a.pill.ghost', { href: '#/past', text: '기출문제' }),
         el('a.pill.ghost', { href: '#/notes', text: '오답 노트' }),
         el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }),
         el('a.pill.ghost', { href: '#/me', text: '캐릭터 고르기' })
@@ -590,6 +593,8 @@ async function route() {
   if (unitTesting) return unitTesting;
   const assessing = renderAssessRoute(ctx, data.exam, parts, query);
   if (assessing) return assessing;
+  const past = renderPastRoute(ctx, parts, query);
+  if (past) return past;
   if (parts[0] === 's') {
     const s = data.exam.subjects.find((x) => x.code === parts[1]);
     if (!s) return renderMissing('그런 과목이 없습니다.');

@@ -818,3 +818,18 @@ button.link.danger { color: var(--bad); }
 .unit-card h3 { font-size: 17px; line-height: 1.35; }
 .unit-sub { font-size: 13px; color: var(--text-2); margin-left: 8px; }
 .unit-rivals { font-size: 13px; color: var(--text-2); margin: 0; }
+
+/* ── 기출문제 (past.js) ─────────────────────────── */
+.past-card.hot { box-shadow: inset 0 0 0 2px var(--accent); }
+.past-parts { margin-top: 14px; }
+.past-part { text-decoration: none; }
+.past-part small { color: var(--text-2); font-size: 12px; }
+.past-part.seen { background: color-mix(in srgb, var(--good, #34a853) 14%, var(--bg-soft)); }
+.past-source { margin: 28px 0 8px; font-size: 13px; color: var(--text-2); }
+.past-view { padding-top: 28px; padding-bottom: 40px; max-width: 900px; }
+.past-title { font-size: clamp(24px, 4vw, 34px); margin: 6px 0 4px; }
+.past-view > .past-parts { margin: 14px 0 6px; }
+.past-tip { font-size: 14px; color: var(--text-2); margin: 10px 0 18px; }
+.past-page { margin: 0 0 22px; }
+.past-page img { display: block; width: 100%; height: auto; border-radius: 10px; background: #fff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.12); }
+.past-page figcaption { text-align: center; font-size: 13px; color: var(--text-2); margin-top: 6px; }
