@@ -88,7 +88,8 @@ main:focus { outline: none; }
 .empty code { font-family: var(--mono); font-size: 14px; background: var(--bg-soft); padding: 2px 8px; border-radius: 6px; }
 
 .hero { text-align: center; padding: 84px 22px 56px; }
-.eyebrow { font-size: clamp(40px, 12vw, 108px); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; color: var(--accent-text); margin: 0 0 20px; }
+.eyebrow { font-size: 17px; font-weight: 600; color: var(--accent-text); margin: 0 0 10px; }
+.eyebrow.dday { font-size: clamp(40px, 12vw, 108px); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 20px; }
 .hero h1 {
   font-size: clamp(40px, 7vw, 72px);
   line-height: 1.08;
@@ -631,3 +632,43 @@ button.link:hover { text-decoration: underline; }
   .doc h2, .doc h3 { break-after: avoid; }
   .doc .diagram, .doc figure, .doc blockquote, .doc pre, .doc tr { break-inside: avoid; }
 }
+
+/* ── 수준 평가 ── */
+.nav-links a.nav-assess { color: var(--accent-text); font-weight: 600; }
+.assess-card { display: flex; flex-direction: column; gap: 10px; }
+.assess-card .hero-actions.left { margin-top: auto; }
+.assess-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.assess-top h3 { margin: 0; }
+.assess-score b { font-size: 40px; letter-spacing: -0.03em; }
+.assess-score small { color: var(--text-2); }
+.assess-score .delta { margin-left: 10px; }
+.delta { font-size: 14px; font-weight: 700; }
+.delta.up { color: var(--good); }
+.delta.down { color: var(--bad); }
+.delta.same { color: var(--text-2); }
+.assess-note { background: var(--bg-soft); border-radius: 14px; padding: 14px 18px; margin: 18px 0 0; }
+.assess-note p { margin: 4px 0; font-weight: 600; }
+.chart-box { margin: 0; background: var(--bg-soft); border-radius: 18px; padding: 16px 16px 8px; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--text); margin: 0 0 6px 6px; }
+.chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chart-legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.chart-scroll { overflow-x: auto; }
+svg.chart { width: 100%; min-width: 560px; height: auto; display: block; }
+svg.chart .grid { stroke: var(--line-soft, #e8e8ed); stroke-width: 1; }
+svg.chart .axis { stroke: var(--line, #d2d2d7); stroke-width: 1; }
+svg.chart .tick { font-size: 11px; fill: var(--text-2); }
+svg.chart .val { font-size: 13px; font-weight: 700; fill: var(--text); }
+svg.chart .none { font-size: 13px; fill: var(--text-2); }
+svg.chart .cat { font-size: 14px; font-weight: 600; fill: var(--text); }
+svg.chart .delta { font-size: 13px; font-weight: 700; fill: var(--text-2); }
+svg.chart .delta.up { fill: var(--good); }
+svg.chart .delta.down { fill: var(--bad); }
+svg.chart .bar:hover { filter: brightness(1.1); }
+.compare-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 0 0 14px; }
+.compare-controls label { font-size: 15px; color: var(--text-2); }
+.table-scroll { overflow-x: auto; }
+.rank-table { width: 100%; border-collapse: collapse; font-size: 14px; white-space: nowrap; }
+.rank-table th, .rank-table td { padding: 10px 12px; border-bottom: 1px solid var(--line-soft, #e8e8ed); text-align: left; }
+.rank-table th { color: var(--text-2); font-weight: 600; font-size: 13px; }
+.rank-table tr.me td { background: color-mix(in srgb, var(--accent) 7%, transparent); font-weight: 600; }
+.rank-table button.link { font-weight: inherit; }

@@ -10,6 +10,7 @@
 import { renderMarkdown, headingKey } from './markdown.js';
 import { el } from './dom.js';
 import { renderSolveRoute, renderHistory } from './solve.js';
+import { renderAssessRoute } from './assess.js';
 import { loadStudy } from './study.js';
 import { renderPrint, printLinks } from './print.js';
 import { ring, conceptLegend, renderNotes } from './notes.js';
@@ -75,7 +76,8 @@ function renderNavLearner(names) {
 
 function setNav(code) {
   navLinks.replaceChildren(
-    ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null }))
+    ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null })),
+    el('a.nav-assess', { href: '#/assess', text: '수준 평가', 'aria-current': code === 'assess' ? 'page' : null })
   );
   renderNavLearner();
 }
@@ -202,10 +204,11 @@ async function renderHome() {
 
   show(
     el('section.hero', {},
-      el('p.eyebrow', { text: left ? `시험까지 ${left.label}` : '시험 준비' }),
+      el('p.eyebrow.dday', { text: left ? `시험까지 ${left.label}` : '시험 준비' }),
       el('h1', { text: title }),
       el('p.sub', { text: `${study.learner} · 전체 진도율 ${overall}% · ${subjects.length}과목 · 문서 ${countDocs(subjects)}개 · 문제 ${total}개` }),
       examDatePicker(study),
+      el('div.hero-actions', {}, el('a.pill', { href: '#/assess', text: '수준 평가 · 성장 그래프' })),
       !study.ok ? el('p.save-warn', { text: '풀이 기록을 읽지 못해 진도율이 비어 보일 수 있습니다.' }) : null
     ),
     learnersSection(study),
@@ -554,6 +557,8 @@ async function route() {
   const parts = pathPart.split('/').filter(Boolean);
   const query = new URLSearchParams(queryPart || '');
   if (!parts.length) return renderHome();
+  const assessing = renderAssessRoute(ctx, data.exam, parts, query);
+  if (assessing) return assessing;
   if (parts[0] === 's') {
     const s = data.exam.subjects.find((x) => x.code === parts[1]);
     if (!s) return renderMissing('그런 과목이 없습니다.');
@@ -592,7 +597,7 @@ async function start() {
   subscribeCloud(() => {
     renderNavLearner();
     const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/').filter(Boolean);
-    const liveView = parts.length === 0 || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
+    const liveView = parts.length === 0 || (parts[0] === 'assess' && parts.length === 1) || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
     const tag = document.activeElement?.tagName;
     if (!liveView || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
     clearTimeout(refreshTimer);

@@ -30,7 +30,7 @@ import {
   round1,
 } from './grade.mjs';
 
-const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습' };
+const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
 const STATE_LABEL = { correct: '맞음', wrong: '틀림', partial: '부분 점수', pending: '채점 전', blank: '안 풂' };
 
@@ -291,9 +291,9 @@ function essayGrader(q, attemptId, attempt, onSaved) {
 /* ── 실전 ─────────────────────────────────────────── */
 const examKey = (code) => `examprep.exam.${getCurrentLearner()}.${code}`;
 
-function readExamState(code) {
+export function readExamState(code, key = examKey(code)) {
   try {
-    const v = JSON.parse(sessionStorage.getItem(examKey(code)) || 'null');
+    const v = JSON.parse(sessionStorage.getItem(key) || 'null');
     return v && typeof v === 'object' && typeof v.session === 'string' && typeof v.startedAt === 'number' && v.answers && typeof v.answers === 'object' ? v : null;
   } catch {
     return null;
@@ -327,11 +327,17 @@ async function renderExam(ctx, subject) {
   );
 }
 
-function runExam(ctx, subject, questions, groups, limit, state) {
+/**
+ * opts (평가에서 다시 쓸 때): { mode, key, round, title, resultHref(session) }
+ */
+export function runExam(ctx, subject, questions, groups, limit, state, opts = {}) {
+  const mode = opts.mode || 'exam';
+  const storeKey = opts.key || examKey(subject.code);
+  const resultHref = opts.resultHref || ((sid) => `#/s/${subject.code}/result/${sid}`);
   const answers = state.answers; // { [문제 id]: { picked, confidence, text } }
   const persist = () => {
     try {
-      sessionStorage.setItem(examKey(subject.code), JSON.stringify(state));
+      sessionStorage.setItem(storeKey, JSON.stringify(state));
     } catch {
       // 저장 공간을 못 쓰면 새로 고침 때만 잃는다
     }
@@ -343,7 +349,7 @@ function runExam(ctx, subject, questions, groups, limit, state) {
   const clock = el('span.clock');
   const count = el('span.step');
   const submit = el('button.pill', { type: 'button', text: '제출' });
-  const bar = el('div.reader-bar', {}, el('div.wrap', {}, el('div.title', {}, `${subject.subject} 실전 · `, clock), count, submit));
+  const bar = el('div.reader-bar', {}, el('div.wrap', {}, el('div.title', {}, `${opts.title || `${subject.subject} 실전`} · `, clock), count, submit));
   const omr = el('nav.omr', { 'aria-label': '답안 표시판' }, el('p', { text: '답안' }));
   const omrCells = new Map();
   const sheet = el('div.exam-sheet');
@@ -413,15 +419,15 @@ function runExam(ctx, subject, questions, groups, limit, state) {
       const a = answerOf(q);
       if (q.type === 'choice') {
         const g = gradeChoice(q, a.picked);
-        records.push({ type: 'attempt', id: newId('a'), session: state.session, mode: 'exam', subject: subject.code, q: q.id, qtype: 'choice', picked: a.picked, correct: g.correct, points: q.points, earned: g.earned, confidence: a.confidence });
+        records.push({ type: 'attempt', id: newId('a'), session: state.session, mode, subject: subject.code, q: q.id, qtype: 'choice', picked: a.picked, correct: g.correct, points: q.points, earned: g.earned, confidence: a.confidence });
       } else {
-        records.push({ type: 'attempt', id: newId('a'), session: state.session, mode: 'exam', subject: subject.code, q: q.id, qtype: 'essay', points: q.points, text: a.text.trim() });
+        records.push({ type: 'attempt', id: newId('a'), session: state.session, mode, subject: subject.code, q: q.id, qtype: 'essay', points: q.points, text: a.text.trim() });
       }
     }
-    records.push({ type: 'session', session: state.session, mode: 'exam', subject: subject.code, round: questions[0].round, seconds, limit, count: records.length, timedOut });
+    records.push({ type: 'session', session: state.session, mode, subject: subject.code, round: opts.round ?? questions[0].round, seconds, limit, count: records.length, timedOut });
     await saveRecords(records);
-    sessionStorage.removeItem(examKey(subject.code));
-    location.hash = `#/s/${subject.code}/result/${state.session}`;
+    sessionStorage.removeItem(storeKey);
+    location.hash = resultHref(state.session);
   };
 
   submit.addEventListener('click', () => {
@@ -450,8 +456,11 @@ function runExam(ctx, subject, questions, groups, limit, state) {
 }
 
 /* ── 결과 ─────────────────────────────────────────── */
-async function renderResult(ctx, subject, sessionId) {
-  const [{ questions, groups }, loaded] = await Promise.all([loadPaper(ctx, subject), loadRecords()]);
+/**
+ * opts (평가에서 다시 쓸 때): { paper, title, backHref, backText, actions: () => [노드] }
+ */
+export async function renderResult(ctx, subject, sessionId, opts = {}) {
+  const [{ questions, groups }, loaded] = await Promise.all([opts.paper ? Promise.resolve(opts.paper) : loadPaper(ctx, subject), loadRecords()]);
   const merged = mergeRecords(loaded.records);
   const session = merged.sessions.get(sessionId);
   const attempts = merged.attempts.filter((a) => a.session === sessionId);
@@ -466,7 +475,7 @@ async function renderResult(ctx, subject, sessionId) {
 
   const draw = (list) => {
     // 연습은 푼 문제만 채점표에 올린다(건너뛴 문제를 0점으로 세지 않는다)
-    const scope = mode !== 'exam' ? questions.filter((q) => list.some((a) => a.q === q.id)) : questions;
+    const scope = mode !== 'exam' && mode !== 'assess' ? questions.filter((q) => list.some((a) => a.q === q.id)) : questions;
     const sum = summarize(scope, list);
     const wrong = sum.rows.filter((r) => r.state === 'wrong' || r.state === 'partial');
     const pending = sum.rows.filter((r) => r.state === 'pending');
@@ -507,8 +516,8 @@ async function renderResult(ctx, subject, sessionId) {
 
     root.replaceChildren(
       el('section.hero', {},
-        el('a.back', { href: `#/s/${subject.code}`, text: subject.subject }),
-        el('p.eyebrow', { text: `${owner} · ${MODE_LABEL[mode]} 결과${session?.timedOut ? ' · 시간 초과로 자동 제출' : ''}` }),
+        el('a.back', { href: opts.backHref || `#/s/${subject.code}`, text: opts.backText || subject.subject }),
+        el('p.eyebrow', { text: `${owner} · ${opts.title || MODE_LABEL[mode]} 결과${session?.timedOut ? ' · 시간 초과로 자동 제출' : ''}` }),
         el('h1.score', {}, String(sum.earned), el('small', { text: ` / ${sum.max}점` })),
         sum.pending ? el('p.sub', { text: `서술형 ${sum.pending}문제를 아직 채점하지 않아 잠정 점수입니다.` }) : null,
         !loaded.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
@@ -522,11 +531,12 @@ async function renderResult(ctx, subject, sessionId) {
           sum.blank ? resultTile(String(sum.blank), '안 푼 문제') : null
         ),
         sum.negativeWrong ? el('p.note', { text: `틀린 문제 중 ${sum.negativeWrong}개는 「옳지 않은 것 · 아닌 것」을 고르는 문제였습니다. 문제 끝의 묻는 말에 표시하고 푸세요.` }) : null,
+        opts.extra ? opts.extra(sum) : null,
         section('서술형 채점하기', '모범 답안과 비교해 스스로 채점하면 총점이 완성됩니다.', pending),
         section('틀린 문제', '열어서 해설을 읽고, 왜 틀렸는지 하나씩 골라 두세요.', wrong),
         section('전체 문제', null, sum.rows.filter((r) => !pending.includes(r) && !wrong.includes(r))),
         el('section.section', {},
-          el('div.hero-actions.left', {},
+          opts.actions ? el('div.hero-actions.left', {}, opts.actions()) : el('div.hero-actions.left', {},
             el('a.pill', { href: `#/s/${subject.code}/notes`, text: '오답 노트 보기' }),
             el('a.pill.ghost', { href: `#/s/${subject.code}/practice`, text: '연습으로 다시 풀기' }),
             el('a.pill.ghost', { href: `#/s/${subject.code}/exam`, text: '실전으로 풀기' }),
@@ -557,7 +567,7 @@ export async function renderHistory(ctx, subject, container) {
     list.append(el('p.note', { text: '풀이 기록을 불러오지 못했습니다.' }));
     return;
   }
-  const sessions = listSessions(mergeRecordsForLearner(loaded.records, getCurrentLearner()), subject.code);
+  const sessions = listSessions(mergeRecordsForLearner(loaded.records, getCurrentLearner()), subject.code).filter((s) => s.mode !== 'assess');
   if (!sessions.length) {
     list.append(el('p.note', { text: '아직 푼 기록이 없습니다.' }));
     return;

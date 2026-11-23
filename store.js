@@ -17,7 +17,7 @@ const MAX_RECORDS = 5000;
 const CURRENT_LEARNER_KEY = 'examprep.learner.current';
 const LEARNERS_KEY = 'examprep.learners';
 
-const VALID_MODES = new Set(['practice', 'exam', 'review']);
+const VALID_MODES = new Set(['practice', 'exam', 'review', 'assess']);
 const VALID_QTYPES = new Set(['choice', 'essay']);
 const VALID_CONFIDENCE = new Set(['sure', 'unsure', 'guess']);
 const VALID_ERRORS = new Set(['concept', 'misread', 'calc', 'time']);

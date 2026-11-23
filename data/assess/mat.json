@@ -1,0 +1,689 @@
+{
+  "schema": 1,
+  "subject": "수학",
+  "code": "mat",
+  "rounds": {
+    "d1": {
+      "groups": [],
+      "questions": [
+        {
+          "id": "mat-d1-01",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 1,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-01"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "삼각형 $ABC$에서 $\\angle A = 52^\\circ$이고, 꼭짓점 $C$에서의 외각의 크기가 $125^\\circ$일 때, $\\angle B$의 크기는?",
+          "choices": [
+            "$73^\\circ$",
+            "$77^\\circ$",
+            "$83^\\circ$",
+            "$107^\\circ$",
+            "$128^\\circ$"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "삼각형의 한 외각은 이웃하지 않는 두 내각의 합이므로 $52^\\circ + \\angle B = 125^\\circ$, $\\angle B = 73^\\circ$이다. $128^\\circ$는 $\\angle A$의 외각, $107^\\circ$는 $\\angle B$의 외각으로 혼동한 오답이다."
+        },
+        {
+          "id": "mat-d1-02",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 2,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-02"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "한 외각의 크기가 $24^\\circ$인 정다각형의 내각의 크기의 합은?",
+          "choices": [
+            "$2160^\\circ$",
+            "$2340^\\circ$",
+            "$2520^\\circ$",
+            "$2700^\\circ$",
+            "$2880^\\circ$"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "외각의 합은 항상 $360^\\circ$이므로 $n = 360 \\div 24 = 15$, 정십오각형이다. 내각의 합은 $180^\\circ \\times (15-2) = 2340^\\circ$이며, $180^\\circ \\times 15 = 2700^\\circ$처럼 $n-2$를 빠뜨리면 틀린다."
+        },
+        {
+          "id": "mat-d1-03",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 3,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-03"
+          ],
+          "points": 8,
+          "negative": true,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "원 $O$에 대한 설명으로 옳지 **않은** 것은?",
+          "choices": [
+            "원 위의 두 점을 이은 선분을 현이라 한다.",
+            "한 원에서 길이가 가장 긴 현은 지름이다.",
+            "호와 현으로 이루어진 도형을 부채꼴이라 한다.",
+            "원과 두 점에서 만나는 직선을 할선이라 한다.",
+            "중심각의 크기가 $180^\\circ$인 부채꼴은 활꼴이기도 하다."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "호와 현으로 이루어진 도형은 활꼴이고, 부채꼴은 두 반지름과 호로 이루어진 도형이다. ⑤ 반원은 부채꼴이면서 활꼴이므로 옳다."
+        },
+        {
+          "id": "mat-d1-04",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 4,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-01"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "다음 입체도형 중 면의 개수가 가장 많은 것은?",
+          "choices": [
+            "오각기둥",
+            "육각뿔",
+            "사각뿔대",
+            "칠각뿔대",
+            "칠각뿔"
+          ],
+          "answer": [
+            4
+          ],
+          "explanation": "면의 개수는 $n$각기둥·$n$각뿔대가 $n+2$, $n$각뿔이 $n+1$이다. 오각기둥 $7$, 육각뿔 $7$, 사각뿔대 $6$, 칠각뿔대 $9$, 칠각뿔 $8$이므로 칠각뿔대가 가장 많다."
+        },
+        {
+          "id": "mat-d1-05",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 5,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-02"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "보통",
+          "stem": "다음은 내각의 크기의 합이 $1440^\\circ$인 다각형의 대각선의 총 개수를 구하는 과정이다. (가), (나), (다)에 알맞은 것을 차례대로 나열한 것은?\n\n> 구하는 다각형을 $n$각형이라 하면 $n$각형의 내각의 크기의 합은 $180^\\circ \\times (\\text{(가)})$이므로\n> $180^\\circ \\times (\\text{(가)}) = 1440^\\circ$, 즉 $n = \\text{(나)}$ 이다.\n> 따라서 대각선의 총 개수는 $\\dfrac{n(n-3)}{2} = \\text{(다)}$ 이다.",
+          "choices": [
+            "(가) $n-3$, (나) $11$, (다) $44$",
+            "(가) $n-2$, (나) $8$, (다) $20$",
+            "(가) $n-1$, (나) $9$, (다) $27$",
+            "(가) $n-2$, (나) $10$, (다) $70$",
+            "(가) $n-2$, (나) $10$, (다) $35$"
+          ],
+          "answer": [
+            5
+          ],
+          "explanation": "$180^\\circ \\times (n-2) = 1440^\\circ$에서 $n-2=8$, $n=10$이다. 대각선은 $\\dfrac{10 \\times 7}{2} = 35$개이며, 2로 나누지 않으면 $70$이 된다."
+        },
+        {
+          "id": "mat-d1-06",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 6,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-04"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "보통",
+          "stem": "반지름의 길이가 $6\\text{ cm}$이고 호의 길이가 $4\\pi\\text{ cm}$인 부채꼴의 넓이와 중심각의 크기를 차례대로 옳게 짝 지은 것은?",
+          "choices": [
+            "$12\\pi\\text{ cm}^2$, $60^\\circ$",
+            "$12\\pi\\text{ cm}^2$, $120^\\circ$",
+            "$24\\pi\\text{ cm}^2$, $120^\\circ$",
+            "$24\\pi\\text{ cm}^2$, $240^\\circ$",
+            "$36\\pi\\text{ cm}^2$, $120^\\circ$"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "넓이는 $S = \\dfrac{1}{2}rl = \\dfrac{1}{2} \\times 6 \\times 4\\pi = 12\\pi\\text{ cm}^2$이다. $2\\pi \\times 6 \\times \\dfrac{x}{360} = 4\\pi$에서 $x = 120$이므로 중심각은 $120^\\circ$이다. $\\dfrac{1}{2}$을 빠뜨리면 $24\\pi$가 된다."
+        },
+        {
+          "id": "mat-d1-07",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 7,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-02"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": true,
+          "level": "보통",
+          "stem": "회전체에 대한 설명으로 옳은 것만을 `<보기>`에서 있는 대로 고른 것은?\n\n> **<보기>**\n> ㄱ. 구는 어떤 평면으로 잘라도 그 단면이 항상 원이다.\n> ㄴ. 원뿔을 회전축을 포함하는 평면으로 자른 단면은 직각삼각형이다.\n> ㄷ. 회전체를 회전축을 포함하는 평면으로 자른 단면은 모두 합동이고, 회전축을 대칭축으로 하는 선대칭도형이다.",
+          "choices": [
+            "ㄱ",
+            "ㄴ",
+            "ㄱ, ㄴ",
+            "ㄱ, ㄷ",
+            "ㄱ, ㄴ, ㄷ"
+          ],
+          "answer": [
+            4
+          ],
+          "explanation": "ㄱ, ㄷ은 회전체의 성질로 옳다. ㄴ은 회전 전 도형이 직각삼각형일 뿐, 회전축을 포함하는 단면은 직각삼각형 두 개가 합쳐진 이등변삼각형이다."
+        },
+        {
+          "id": "mat-d1-08",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 8,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-03"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "보통",
+          "stem": "이웃한 두 변의 길이가 각각 $3\\text{ cm}$, $5\\text{ cm}$인 직사각형을 길이가 $3\\text{ cm}$인 변을 회전축으로 하여 $1$회전 시킬 때 생기는 입체도형의 겉넓이는?",
+          "choices": [
+            "$30\\pi\\text{ cm}^2$",
+            "$48\\pi\\text{ cm}^2$",
+            "$55\\pi\\text{ cm}^2$",
+            "$65\\pi\\text{ cm}^2$",
+            "$80\\pi\\text{ cm}^2$"
+          ],
+          "answer": [
+            5
+          ],
+          "explanation": "회전축에 붙은 변이 높이이므로 $h=3$, 반지름 $r=5$인 원기둥이다. 겉넓이는 $2\\pi \\times 5^2 + 2\\pi \\times 5 \\times 3 = 50\\pi + 30\\pi = 80\\pi\\text{ cm}^2$이다. $r$과 $h$를 바꾸면 $48\\pi$, 밑면을 1개만 더하면 $55\\pi$가 된다."
+        },
+        {
+          "id": "mat-d1-09",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 9,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-01"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "$\\angle XOY = 20^\\circ$일 때, 반직선 $OX$ 위에 두 점 $A, C$를 $O, A, C$의 순서로, 반직선 $OY$ 위에 두 점 $B, D$를 $O, B, D$의 순서로 잡았더니 $\\overline{OA} = \\overline{AB} = \\overline{BC} = \\overline{CD}$가 되었다. 이때 $\\angle OCD$의 크기는?",
+          "choices": [
+            "$60^\\circ$",
+            "$80^\\circ$",
+            "$90^\\circ$",
+            "$100^\\circ$",
+            "$120^\\circ$"
+          ],
+          "answer": [
+            4
+          ],
+          "explanation": "$\\triangle OAB$가 이등변이므로 $\\angle OBA = 20^\\circ$, 외각 $\\angle BAC = 40^\\circ = \\angle BCA$이다. $\\triangle OBC$의 외각 $\\angle CBD = 20^\\circ + 40^\\circ = 60^\\circ = \\angle CDB$이므로 $\\triangle OCD$에서 $\\angle OCD = 180^\\circ - 20^\\circ - 60^\\circ = 100^\\circ$이다. $\\angle BCD = 60^\\circ$만 구하고 멈추면 오답이다."
+        },
+        {
+          "id": "mat-d1-10",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 10,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-03"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "지름이 $\\overline{AB}$인 반원 $O$의 호 위에 두 점 $D, C$가 점 $A$에서부터 $D, C, B$의 순서로 놓여 있고 $\\overline{AD} \\parallel \\overline{OC}$이다. 호 $\\overparen{AD}$의 길이가 호 $\\overparen{BC}$의 길이의 $3$배이고 부채꼴 $COD$의 넓이가 $6\\pi\\text{ cm}^2$일 때, 반원 $O$의 넓이는?",
+          "choices": [
+            "$18\\pi\\text{ cm}^2$",
+            "$24\\pi\\text{ cm}^2$",
+            "$30\\pi\\text{ cm}^2$",
+            "$36\\pi\\text{ cm}^2$",
+            "$54\\pi\\text{ cm}^2$"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "$\\angle BOC = x^\\circ$라 하면 $\\overline{AD} \\parallel \\overline{OC}$에서 동위각으로 $\\angle OAD = x^\\circ$, $\\overline{OA}=\\overline{OD}$이므로 $\\angle ODA = x^\\circ$, $\\angle AOD = 180^\\circ - 2x^\\circ$이다. 호의 길이는 중심각에 정비례하므로 $180 - 2x = 3x$, $x = 36$, $\\angle COD = 180^\\circ - 108^\\circ - 36^\\circ = 36^\\circ$이다. 반원의 중심각 $180^\\circ$는 $36^\\circ$의 $5$배이므로 넓이는 $5 \\times 6\\pi = 30\\pi\\text{ cm}^2$이다."
+        },
+        {
+          "id": "mat-d1-11",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 11,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-01"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "다음 조건을 모두 만족하는 입체도형과 모서리의 개수가 같은 각뿔대가 있다. 이 각뿔대의 꼭짓점의 개수는?\n\n> (가) 모든 면이 합동인 정삼각형이다.\n> (나) 각 꼭짓점에 모인 면의 개수가 모두 같다.\n> (다) 한 꼭짓점에 모인 면의 개수는 $4$이다.",
+          "choices": [
+            "$8$",
+            "$10$",
+            "$12$",
+            "$16$",
+            "$24$"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "조건을 만족하는 입체도형은 정팔면체이고 모서리는 $12$개이다. $n$각뿔대의 모서리는 $3n$개이므로 $3n = 12$, $n = 4$이고, 사각뿔대의 꼭짓점은 $2n = 8$개이다. $12$는 정팔면체의 모서리 수를 그대로 쓴 오답이다."
+        },
+        {
+          "id": "mat-d1-12",
+          "subject": "수학",
+          "round": "d1",
+          "type": "choice",
+          "no": 12,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-03"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "밑면의 반지름의 길이가 $4\\text{ cm}$, 모선의 길이가 $10\\text{ cm}$인 원뿔을 밑면에 평행한 평면으로 잘라, 밑면의 반지름의 길이가 $2\\text{ cm}$, 모선의 길이가 $5\\text{ cm}$인 작은 원뿔을 잘라 내었다. 남은 원뿔대의 겉넓이는?",
+          "choices": [
+            "$46\\pi\\text{ cm}^2$",
+            "$50\\pi\\text{ cm}^2$",
+            "$56\\pi\\text{ cm}^2$",
+            "$60\\pi\\text{ cm}^2$",
+            "$70\\pi\\text{ cm}^2$"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "두 밑면의 넓이는 $4\\pi + 16\\pi = 20\\pi$이다. 옆넓이는 (큰 원뿔 옆넓이) $-$ (작은 원뿔 옆넓이) $= \\pi \\times 4 \\times 10 - \\pi \\times 2 \\times 5 = 30\\pi$이므로 겉넓이는 $50\\pi\\text{ cm}^2$이다. 윗면을 빠뜨리면 $46\\pi$, 작은 원뿔 옆넓이를 빼지 않으면 $60\\pi$가 된다."
+        }
+      ]
+    },
+    "d2": {
+      "groups": [],
+      "questions": [
+        {
+          "id": "mat-d2-01",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 1,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-01"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "삼각형 $ABC$에서 $\\angle B = 38^\\circ$이고, 꼭짓점 $C$에서의 외각의 크기가 $101^\\circ$일 때, $\\angle A$의 크기는?",
+          "choices": [
+            "$53^\\circ$",
+            "$59^\\circ$",
+            "$63^\\circ$",
+            "$79^\\circ$",
+            "$139^\\circ$"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "삼각형의 한 외각은 이웃하지 않는 두 내각의 합이므로 $\\angle A + 38^\\circ = 101^\\circ$, $\\angle A = 63^\\circ$이다. $79^\\circ$는 $\\angle C$의 크기, $139^\\circ$는 외각과 $\\angle B$를 더한 잘못된 값이다."
+        },
+        {
+          "id": "mat-d2-02",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 2,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-02"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "한 외각의 크기가 $30^\\circ$인 정다각형의 내각의 크기의 합은?",
+          "choices": [
+            "$1620^\\circ$",
+            "$1800^\\circ$",
+            "$1980^\\circ$",
+            "$2160^\\circ$",
+            "$2340^\\circ$"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "외각의 합은 항상 $360^\\circ$이므로 $n = 360 \\div 30 = 12$, 정십이각형이다. 내각의 합은 $180^\\circ \\times (12-2) = 1800^\\circ$이며, $180^\\circ \\times 12 = 2160^\\circ$처럼 $n-2$를 빠뜨리면 틀린다."
+        },
+        {
+          "id": "mat-d2-03",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 3,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-03"
+          ],
+          "points": 8,
+          "negative": true,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "원 $O$에 대한 설명으로 옳지 **않은** 것은?",
+          "choices": [
+            "두 반지름과 호로 이루어진 도형을 부채꼴이라 한다.",
+            "현과 호로 이루어진 도형을 활꼴이라 한다.",
+            "한 원에서 중심각의 크기가 같은 두 부채꼴은 호의 길이가 같다.",
+            "한 원에서 크기가 같은 중심각에 대한 두 현의 길이는 같다.",
+            "원 위의 두 점을 지나는 직선을 현이라 한다."
+          ],
+          "answer": [
+            5
+          ],
+          "explanation": "원 위의 두 점을 지나는 직선은 할선이고, 현은 원 위의 두 점을 이은 선분이다. ④ 중심각이 같으면 현의 길이도 같으므로 옳다(정비례하지 않을 뿐이다)."
+        },
+        {
+          "id": "mat-d2-04",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 4,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-01"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "쉬움",
+          "stem": "다음 입체도형 중 모서리의 개수가 가장 많은 것은?",
+          "choices": [
+            "십각뿔",
+            "육각기둥",
+            "팔각뿔",
+            "오각뿔대",
+            "사각기둥"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "모서리의 개수는 $n$각기둥·$n$각뿔대가 $3n$, $n$각뿔이 $2n$이다. 십각뿔 $20$, 육각기둥 $18$, 팔각뿔 $16$, 오각뿔대 $15$, 사각기둥 $12$이므로 십각뿔이 가장 많다."
+        },
+        {
+          "id": "mat-d2-05",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 5,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-02"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "보통",
+          "stem": "다음은 내각의 크기의 합이 $1260^\\circ$인 다각형의 대각선의 총 개수를 구하는 과정이다. (가), (나), (다)에 알맞은 것을 차례대로 나열한 것은?\n\n> 구하는 다각형을 $n$각형이라 하면 $n$각형의 내각의 크기의 합은 $180^\\circ \\times (\\text{(가)})$이므로\n> $180^\\circ \\times (\\text{(가)}) = 1260^\\circ$, 즉 $n = \\text{(나)}$ 이다.\n> 따라서 대각선의 총 개수는 $\\dfrac{n(n-3)}{2} = \\text{(다)}$ 이다.",
+          "choices": [
+            "(가) $n-3$, (나) $10$, (다) $35$",
+            "(가) $n-1$, (나) $8$, (다) $20$",
+            "(가) $n-2$, (나) $9$, (다) $54$",
+            "(가) $n-2$, (나) $9$, (다) $27$",
+            "(가) $n-2$, (나) $7$, (다) $14$"
+          ],
+          "answer": [
+            4
+          ],
+          "explanation": "$180^\\circ \\times (n-2) = 1260^\\circ$에서 $n-2=7$, $n=9$이다. 대각선은 $\\dfrac{9 \\times 6}{2} = 27$개이며, 2로 나누지 않으면 $54$가 된다."
+        },
+        {
+          "id": "mat-d2-06",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 6,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-04"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "보통",
+          "stem": "반지름의 길이가 $8\\text{ cm}$이고 호의 길이가 $6\\pi\\text{ cm}$인 부채꼴의 넓이와 중심각의 크기를 차례대로 옳게 짝 지은 것은?",
+          "choices": [
+            "$24\\pi\\text{ cm}^2$, $135^\\circ$",
+            "$24\\pi\\text{ cm}^2$, $150^\\circ$",
+            "$48\\pi\\text{ cm}^2$, $135^\\circ$",
+            "$48\\pi\\text{ cm}^2$, $270^\\circ$",
+            "$96\\pi\\text{ cm}^2$, $270^\\circ$"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "넓이는 $S = \\dfrac{1}{2}rl = \\dfrac{1}{2} \\times 8 \\times 6\\pi = 24\\pi\\text{ cm}^2$이다. $2\\pi \\times 8 \\times \\dfrac{x}{360} = 6\\pi$에서 $x = 135$이므로 중심각은 $135^\\circ$이다. $\\dfrac{1}{2}$을 빠뜨리면 $48\\pi$가 된다."
+        },
+        {
+          "id": "mat-d2-07",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 7,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-02"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": true,
+          "level": "보통",
+          "stem": "회전체에 대한 설명으로 옳은 것만을 `<보기>`에서 있는 대로 고른 것은?\n\n> **<보기>**\n> ㄱ. 원기둥을 회전축을 포함하는 평면으로 자른 단면은 직사각형이다.\n> ㄴ. 원뿔대를 회전축을 포함하는 평면으로 자른 단면은 등변사다리꼴이다.\n> ㄷ. 원뿔을 회전축에 수직인 평면으로 자른 단면은 모두 합동인 원이다.",
+          "choices": [
+            "ㄱ",
+            "ㄷ",
+            "ㄱ, ㄴ",
+            "ㄴ, ㄷ",
+            "ㄱ, ㄴ, ㄷ"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "ㄱ, ㄴ은 옳다. ㄷ에서 원뿔을 회전축에 수직으로 자른 단면은 원이지만 꼭짓점에 가까울수록 작아지므로 합동이 아니다(합동인 것은 원기둥)."
+        },
+        {
+          "id": "mat-d2-08",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 8,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-03"
+          ],
+          "points": 8,
+          "negative": false,
+          "hasBogi": false,
+          "level": "보통",
+          "stem": "이웃한 두 변의 길이가 각각 $6\\text{ cm}$, $2\\text{ cm}$인 직사각형을 길이가 $6\\text{ cm}$인 변을 회전축으로 하여 $1$회전 시킬 때 생기는 입체도형의 겉넓이는?",
+          "choices": [
+            "$20\\pi\\text{ cm}^2$",
+            "$24\\pi\\text{ cm}^2$",
+            "$28\\pi\\text{ cm}^2$",
+            "$32\\pi\\text{ cm}^2$",
+            "$96\\pi\\text{ cm}^2$"
+          ],
+          "answer": [
+            4
+          ],
+          "explanation": "회전축에 붙은 변이 높이이므로 $h=6$, 반지름 $r=2$인 원기둥이다. 겉넓이는 $2\\pi \\times 2^2 + 2\\pi \\times 2 \\times 6 = 8\\pi + 24\\pi = 32\\pi\\text{ cm}^2$이다. $r$과 $h$를 바꾸면 $96\\pi$, 밑면을 1개만 더하면 $28\\pi$가 된다."
+        },
+        {
+          "id": "mat-d2-09",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 9,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-01"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "$\\angle XOY = 15^\\circ$일 때, 반직선 $OX$ 위에 두 점 $A, C$를 $O, A, C$의 순서로, 반직선 $OY$ 위에 두 점 $B, D$를 $O, B, D$의 순서로 잡았더니 $\\overline{OA} = \\overline{AB} = \\overline{BC} = \\overline{CD}$가 되었다. 이때 $\\angle OCD$의 크기는?",
+          "choices": [
+            "$75^\\circ$",
+            "$90^\\circ$",
+            "$105^\\circ$",
+            "$120^\\circ$",
+            "$135^\\circ$"
+          ],
+          "answer": [
+            4
+          ],
+          "explanation": "$\\triangle OAB$가 이등변이므로 $\\angle OBA = 15^\\circ$, 외각 $\\angle BAC = 30^\\circ = \\angle BCA$이다. $\\triangle OBC$의 외각 $\\angle CBD = 15^\\circ + 30^\\circ = 45^\\circ = \\angle CDB$이므로 $\\triangle OCD$에서 $\\angle OCD = 180^\\circ - 15^\\circ - 45^\\circ = 120^\\circ$이다. $\\angle BCD = 90^\\circ$만 구하고 멈추면 오답이다."
+        },
+        {
+          "id": "mat-d2-10",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 10,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-01-03"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "지름이 $\\overline{AB}$인 반원 $O$의 호 위에 두 점 $D, C$가 점 $A$에서부터 $D, C, B$의 순서로 놓여 있고 $\\overline{AD} \\parallel \\overline{OC}$이다. 호 $\\overparen{AD}$의 길이가 호 $\\overparen{BC}$의 길이의 $4$배이고 부채꼴 $COD$의 넓이가 $4\\pi\\text{ cm}^2$일 때, 반원 $O$의 넓이는?",
+          "choices": [
+            "$8\\pi\\text{ cm}^2$",
+            "$12\\pi\\text{ cm}^2$",
+            "$16\\pi\\text{ cm}^2$",
+            "$20\\pi\\text{ cm}^2$",
+            "$24\\pi\\text{ cm}^2$"
+          ],
+          "answer": [
+            5
+          ],
+          "explanation": "$\\angle BOC = x^\\circ$라 하면 동위각으로 $\\angle OAD = x^\\circ$, $\\overline{OA}=\\overline{OD}$이므로 $\\angle ODA = x^\\circ$, $\\angle AOD = 180^\\circ - 2x^\\circ$이다. 호의 길이는 중심각에 정비례하므로 $180 - 2x = 4x$, $x = 30$, $\\angle COD = 180^\\circ - 120^\\circ - 30^\\circ = 30^\\circ$이다. 반원의 중심각 $180^\\circ$는 $30^\\circ$의 $6$배이므로 넓이는 $6 \\times 4\\pi = 24\\pi\\text{ cm}^2$이다."
+        },
+        {
+          "id": "mat-d2-11",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 11,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-01"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "다음 조건을 모두 만족하는 입체도형과 모서리의 개수가 같은 각뿔대가 있다. 이 각뿔대의 꼭짓점의 개수는?\n\n> (가) 모든 면이 합동인 정삼각형이다.\n> (나) 각 꼭짓점에 모인 면의 개수가 모두 같다.\n> (다) 한 꼭짓점에 모인 면의 개수는 $5$이다.",
+          "choices": [
+            "$12$",
+            "$20$",
+            "$22$",
+            "$30$",
+            "$32$"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "조건을 만족하는 입체도형은 정이십면체이고 모서리는 $30$개이다. $n$각뿔대의 모서리는 $3n$개이므로 $3n = 30$, $n = 10$이고, 십각뿔대의 꼭짓점은 $2n = 20$개이다. $12$는 정이십면체의 꼭짓점 수로 혼동한 오답이다."
+        },
+        {
+          "id": "mat-d2-12",
+          "subject": "수학",
+          "round": "d2",
+          "type": "choice",
+          "no": 12,
+          "group": null,
+          "groupTitle": null,
+          "concepts": [
+            "mat-02-03"
+          ],
+          "points": 9,
+          "negative": false,
+          "hasBogi": false,
+          "level": "어려움",
+          "stem": "밑면의 반지름의 길이가 $6\\text{ cm}$, 모선의 길이가 $12\\text{ cm}$인 원뿔을 밑면에 평행한 평면으로 잘라, 밑면의 반지름의 길이가 $3\\text{ cm}$, 모선의 길이가 $6\\text{ cm}$인 작은 원뿔을 잘라 내었다. 남은 원뿔대의 겉넓이는?",
+          "choices": [
+            "$54\\pi\\text{ cm}^2$",
+            "$90\\pi\\text{ cm}^2$",
+            "$99\\pi\\text{ cm}^2$",
+            "$108\\pi\\text{ cm}^2$",
+            "$117\\pi\\text{ cm}^2$"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "두 밑면의 넓이는 $9\\pi + 36\\pi = 45\\pi$이다. 옆넓이는 $\\pi \\times 6 \\times 12 - \\pi \\times 3 \\times 6 = 54\\pi$이므로 겉넓이는 $99\\pi\\text{ cm}^2$이다. 윗면을 빠뜨리면 $90\\pi$, 작은 원뿔 옆넓이를 빼지 않으면 $117\\pi$가 된다."
+        }
+      ]
+    }
+  }
+}
