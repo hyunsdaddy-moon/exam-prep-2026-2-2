@@ -7,20 +7,20 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261123-2153';
-import { el } from './dom.js?v=20261123-2153';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-2153';
-import { renderUnitsRoute } from './units.js?v=20261123-2153';
-import { renderAssessRoute } from './assess.js?v=20261123-2153';
-import { renderPastRoute } from './past.js?v=20261123-2153';
-import { renderWrongbook } from './wrongbook.js?v=20261123-2153';
-import { renderBoard } from './board.js?v=20261123-2153';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-2153';
-import { loadStudy } from './study.js?v=20261123-2153';
-import { renderPrint, printLinks } from './print.js?v=20261123-2153';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-2153';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-2153';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-2153';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261123-2203';
+import { el } from './dom.js?v=20261123-2203';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-2203';
+import { renderUnitsRoute } from './units.js?v=20261123-2203';
+import { renderAssessRoute } from './assess.js?v=20261123-2203';
+import { renderPastRoute } from './past.js?v=20261123-2203';
+import { renderWrongbook } from './wrongbook.js?v=20261123-2203';
+import { renderBoard } from './board.js?v=20261123-2203';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-2203';
+import { loadStudy } from './study.js?v=20261123-2203';
+import { renderPrint, printLinks } from './print.js?v=20261123-2203';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-2203';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-2203';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-2203';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -363,11 +363,6 @@ async function renderSubject(s) {
           )
         : null,
 
-      el('section.section', {},
-        el('div.section-head', {}, el('h2', { text: '읽기' }), el('p', { text: '핵심 요약부터 읽고 단원 정리로 넘어가세요.' })),
-        el('div.grid', {}, readingDocs(s).map(docCard))
-      ),
-
       byUnit.size
         ? el('section.section', {},
             el('div.section-head', {}, el('h2', { text: '개념' }), el('p', { text: '점이 많을수록 시험에 자주 나오는 개념입니다. 누르면 그 부분으로 갑니다.' }), conceptLegend()),
@@ -389,6 +384,11 @@ async function renderSubject(s) {
             )
           )
         : null,
+
+      el('section.section', {},
+        el('div.section-head', {}, el('h2', { text: '읽기' }), el('p', { text: '핵심 요약부터 읽고 단원 정리로 넘어가세요.' })),
+        el('div.grid', {}, readingDocs(s).map(docCard))
+      ),
 
       problems,
       el('section.section', {},
