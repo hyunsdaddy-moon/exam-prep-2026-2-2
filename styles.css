@@ -841,27 +841,39 @@ button.link.danger { color: var(--bad); }
 .videos:empty { display: none; }
 .videos { font-size: 12px; letter-spacing: 1px; line-height: 1; }
 
-/* 읽기 문서 끝 단원 평가 */
-.dq { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
-.dq-score { color: var(--muted, #6e6e73); margin: 4px 0 10px; }
-.dq-section { margin: 32px 0 12px; font-size: 17px; color: var(--accent-text); }
-.dq-card { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 12px 0; background: var(--bg, #fff); }
-.dq-card.is-right { border-color: color-mix(in srgb, var(--good) 45%, var(--line)); }
-.dq-card.is-wrong { border-color: color-mix(in srgb, var(--bad) 45%, var(--line)); }
-.dq-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-.dq-level { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--line-soft, #f2f2f4); color: var(--muted, #6e6e73); }
-.dq-stem > :first-child, .dq-exp > :first-child { margin-top: 0; }
-.dq-stem > :last-child, .dq-exp > :last-child { margin-bottom: 0; }
-.dq-choices { display: grid; gap: 6px; margin-top: 10px; }
-.dq-choice { display: flex; gap: 8px; align-items: flex-start; text-align: left; font: inherit; color: inherit; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft, #f7f7f8); cursor: pointer; }
-.dq-choice:hover:not(:disabled) { border-color: var(--accent); }
-.dq-choice:disabled { cursor: default; }
-.dq-choice.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 10%, transparent); }
-.dq-choice.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 10%, transparent); }
-.dq-text p { margin: 0; display: inline; }
-.dq-no { flex: none; }
-.dq-feedback:not(:empty) { margin-top: 12px; padding: 12px 14px; border-radius: 10px; background: var(--bg-soft, #f7f7f8); }
-.dq-verdict { font-weight: 700; margin: 0 0 6px; }
-.dq-keys { font-size: 14px; color: var(--muted, #6e6e73); }
-.dq-essay { width: 100%; box-sizing: border-box; margin-top: 10px; font: inherit; padding: 10px; border: 1px solid var(--line); border-radius: 10px; resize: vertical; }
+/* 읽기 문서 끝 단원 평가 — 수준 평가와 같은 흰 시험지 */
+.dq { margin-top: 56px; }
+.doc .dq-paper { min-height: 0; margin: 8px 0 0; padding: 12mm 12mm 14mm; width: 100%; }
+.doc .dq-paper h3.p-group { font-size: 9.5pt; line-height: 1.4; letter-spacing: 0; margin: 4pt 0 6pt; color: var(--accent-text); }
+.doc .dq-paper p, .doc .dq-paper ul, .doc .dq-paper ol { margin: 0 0 4pt; }
+.doc .dq-paper li { margin: 0; }
+.doc .dq-paper blockquote { margin: 5pt 0; padding: 5pt 8pt; background: none; border: 0.6pt solid #888; border-radius: 0; }
+.doc .dq-paper .p-choices { padding-left: 13pt; margin-top: 4pt; }
+.doc .dq-paper .p-q { margin-bottom: 15pt; }
+.dq-tools { display: flex; align-items: center; justify-content: space-between; gap: 8pt; margin-top: 8pt; min-height: 18pt; }
+.dq-tools .dq-progress { margin: 0; }
+.dq-reset, .dq-btn { font: inherit; font-size: 8.5pt; color: var(--text-2); background: #fff; border: 0.6pt solid #999; border-radius: 3pt; padding: 2pt 8pt; cursor: pointer; }
+.dq-reset:hover, .dq-btn:hover { border-color: #111; color: #111; }
+.dq-btn.on { background: #111; border-color: #111; color: #fff; }
+.p-no { position: relative; }
+.dq-grade { position: absolute; left: -0.45em; top: -0.55em; font-size: 2.1em; line-height: 1; font-weight: 400; color: #d70015; pointer-events: none; }
+.p-choose li.answer .p-pick { background: #e9f6ec; }
+.p-choose li.answer .p-mark { box-shadow: 0 0 0 1.5pt #1a8f3c; }
+.p-choose li.miss .p-pick { background: #fdecee; }
+.p-choose li.miss .p-mark { background: #d70015; }
+.p-pick:disabled { cursor: default; }
+.p-pick:disabled:hover { background: none; }
+.p-choose li.answer .p-pick:disabled:hover { background: #e9f6ec; }
+.p-choose li.miss .p-pick:disabled:hover { background: #fdecee; }
+.dq-exp:not(:empty) { margin: 6pt 0 0 13pt; padding: 5pt 8pt; border-left: 2pt solid #999; background: #f7f7f7; font-size: 9pt; line-height: 1.5; }
+.p-q.is-right .dq-exp { border-left-color: #1a8f3c; }
+.p-q.is-wrong .dq-exp { border-left-color: #d70015; }
+.dq-verdict { display: block; margin-bottom: 2pt; }
+.p-q.is-right .dq-verdict { color: #1a8f3c; }
+.p-q.is-wrong .dq-verdict { color: #d70015; }
+.dq-keys { font-size: 8.5pt; color: var(--text-2); }
+.dq-marks { display: flex; gap: 6pt; margin-top: 6pt; }
+.dq-essay-title { margin-top: 10pt !important; border-top: 1pt solid #111; padding-top: 6pt; }
+.dq-essays .p-q.essay { column-span: none; }
 .toc a.toc-quiz { margin-top: 8px; font-weight: 600; }
+.doc .dq-paper .p-pick .p-text p { margin: 0; }

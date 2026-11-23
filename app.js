@@ -7,21 +7,21 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0431';
-import { el } from './dom.js?v=20261124-0431';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0431';
-import { renderUnitsRoute } from './units.js?v=20261124-0431';
-import { buildDocQuiz } from './docquiz.js?v=20261124-0431';
-import { renderAssessRoute } from './assess.js?v=20261124-0431';
-import { renderPastRoute } from './past.js?v=20261124-0431';
-import { renderWrongbook } from './wrongbook.js?v=20261124-0431';
-import { renderBoard } from './board.js?v=20261124-0431';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0431';
-import { loadStudy } from './study.js?v=20261124-0431';
-import { renderPrint, printLinks } from './print.js?v=20261124-0431';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0431';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0431';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0431';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0457';
+import { el } from './dom.js?v=20261124-0457';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0457';
+import { renderUnitsRoute } from './units.js?v=20261124-0457';
+import { buildDocQuiz } from './docquiz.js?v=20261124-0457';
+import { renderAssessRoute } from './assess.js?v=20261124-0457';
+import { renderPastRoute } from './past.js?v=20261124-0457';
+import { renderWrongbook } from './wrongbook.js?v=20261124-0457';
+import { renderBoard } from './board.js?v=20261124-0457';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0457';
+import { loadStudy } from './study.js?v=20261124-0457';
+import { renderPrint, printLinks } from './print.js?v=20261124-0457';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0457';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0457';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0457';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -476,7 +476,7 @@ async function renderReader(s, index, query) {
   });
 
   // 문서 끝 단원 평가 (있는 문서만)
-  const quiz = await buildDocQuiz(ctx, s.code, doc.file);
+  const quiz = await buildDocQuiz(ctx, s.code, doc.file, { subject: s.subject, docTitle: doc.title });
   if (quiz) body.append(quiz.section);
 
   const toc = el('nav.toc', { 'aria-label': '목차' },
