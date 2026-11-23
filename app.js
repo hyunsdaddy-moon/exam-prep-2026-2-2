@@ -173,19 +173,23 @@ function learnersSection(study) {
             'aria-pressed': String(active),
             onclick: () => switchTo(item.name),
           },
-            el('div.learner-head', {},
-              avatar(item.name, 'sm'),
-              el('strong', { text: item.name }),
-              active ? el('span.badge.current', { text: '현재 보는 중' }) : null,
-              el('span.learner-pct', { text: `${item.overall}%` })
+            el('div.learner-portrait', {},
+              avatar(item.name, 'portrait'),
+              active ? el('span.learner-now', { text: '현재 보는 중' }) : null
             ),
-            el('div.learner-progress', {}, el('i', { style: `width:${item.overall}%` })),
-            el('p.learner-meta', {
-              text: `푼 문제 ${item.triedQuestions} / ${item.totalQuestions} · 숙련도 ${item.mastery == null ? '–' : `${item.mastery}%`} · 오늘 복습 ${item.dueTotal}`,
-            }),
-            el('div.learner-subjects', {},
-              item.subjects.map((sub) =>
-                el(`span.learner-sub${sub.progress > 0 ? '.on' : ''}`, { text: `${sub.subject} ${sub.progress}%` })
+            el('div.learner-body', {},
+              el('div.learner-head', {},
+                el('strong', { text: item.name }),
+                el('span.learner-pct', { text: `${item.overall}%` })
+              ),
+              el('div.learner-progress', {}, el('i', { style: `width:${item.overall}%` })),
+              el('p.learner-meta', {
+                text: `푼 문제 ${item.triedQuestions} / ${item.totalQuestions} · 숙련도 ${item.mastery == null ? '–' : `${item.mastery}%`} · 오늘 복습 ${item.dueTotal}`,
+              }),
+              el('div.learner-subjects', {},
+                item.subjects.map((sub) =>
+                  el(`span.learner-sub${sub.progress > 0 ? '.on' : ''}`, { text: `${sub.subject} ${sub.progress}%` })
+                )
               )
             )
           );

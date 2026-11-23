@@ -468,20 +468,34 @@ button.link:hover { text-decoration: underline; }
 }
 .learner-input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent); border-color: var(--accent); }
 .pill.small { padding: 7px 16px; font-size: 14px; }
-.learner-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.learner-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
 .learner-card {
   width: 100%; text-align: left; font: inherit; color: var(--text);
   border: 2px solid transparent; cursor: pointer;
 }
+.learner-grid .learner-card { flex-direction: row; align-items: stretch; padding: 0; overflow: hidden; }
+/* 카드 왼쪽 세로 그림 — 카드 높이만큼 꽉 채움 */
+.learner-portrait { position: relative; flex: none; width: 132px; min-height: 196px; display: flex; }
+.char-pic.portrait { width: 100%; height: auto; flex: 1; border-radius: 0; box-shadow: none; }
+.char-pic.portrait img { object-position: 50% 22%; }
+.char-pic.portrait .dot-face { width: 70%; height: auto; aspect-ratio: 1; }
+.learner-portrait::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background: var(--line-soft); }
+.learner-now {
+  position: absolute; left: 8px; right: 8px; bottom: 8px; text-align: center;
+  font-size: 11px; font-weight: 700; color: #fff; background: var(--accent);
+  border-radius: 980px; padding: 3px 0; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+.learner-body { flex: 1; min-width: 0; padding: 20px 20px 18px 18px; display: flex; flex-direction: column; }
 .learner-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
 .learner-card.active { border-color: var(--accent); background: var(--card); box-shadow: var(--shadow); }
-.learner-head { display: flex; align-items: center; gap: 8px; }
+.learner-head { display: flex; align-items: baseline; gap: 8px; }
+.learner-head strong { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .learner-head strong { font-size: 20px; letter-spacing: -0.02em; }
 .badge.current { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent-text); }
 .learner-pct { margin-left: auto; font-size: 24px; font-weight: 700; color: var(--accent-text); letter-spacing: -0.02em; }
 .learner-progress { height: 6px; background: var(--line-soft); border-radius: 980px; overflow: hidden; margin: 12px 0 10px; }
 .learner-progress i { display: block; height: 100%; background: var(--accent); border-radius: 980px; transition: width 0.3s ease; }
-.learner-meta { font-size: 13px; color: var(--text-2); margin: 0 0 12px; }
+.learner-meta { font-size: 12.5px; line-height: 1.45; color: var(--text-2); margin: 0 0 10px; }
 .learner-subjects { display: flex; flex-wrap: wrap; gap: 6px; }
 .learner-sub {
   font-size: 12px; color: var(--text-2); background: var(--bg);
