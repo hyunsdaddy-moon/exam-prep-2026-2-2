@@ -7,19 +7,19 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261123-2147';
-import { el } from './dom.js?v=20261123-2147';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-2147';
-import { renderUnitsRoute } from './units.js?v=20261123-2147';
-import { renderAssessRoute } from './assess.js?v=20261123-2147';
-import { renderWrongbook } from './wrongbook.js?v=20261123-2147';
-import { renderBoard } from './board.js?v=20261123-2147';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-2147';
-import { loadStudy } from './study.js?v=20261123-2147';
-import { renderPrint, printLinks } from './print.js?v=20261123-2147';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-2147';
-import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-2147';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-2147';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261123-2153';
+import { el } from './dom.js?v=20261123-2153';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261123-2153';
+import { renderUnitsRoute } from './units.js?v=20261123-2153';
+import { renderAssessRoute } from './assess.js?v=20261123-2153';
+import { renderWrongbook } from './wrongbook.js?v=20261123-2153';
+import { renderBoard } from './board.js?v=20261123-2153';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261123-2153';
+import { loadStudy } from './study.js?v=20261123-2153';
+import { renderPrint, printLinks } from './print.js?v=20261123-2153';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261123-2153';
+import { saveRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261123-2153';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261123-2153';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');

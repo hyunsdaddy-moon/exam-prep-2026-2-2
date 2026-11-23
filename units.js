@@ -12,10 +12,10 @@
  *       단원 평가는 몇 번이든 다시 볼 수 있고, 카드에는 첫 점수 · 최고 점수 · 최근 점수를 보여 준다.
  */
 
-import { el, newId } from './dom.js?v=20261123-2147';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261123-2147';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261123-2147';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261123-2147';
+import { el, newId } from './dom.js?v=20261123-2153';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261123-2153';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261123-2153';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261123-2153';
 
 const ROUND_BASE = 10;
 const unitNo = (id) => Number(String(id).replace(/^u/, ''));
@@ -143,6 +143,7 @@ async function renderUnitStart(ctx, exam, subject, unit) {
     key,
     round: unitRound(unit.id),
     title,
+    paper: { kicker: `${exam.title} · 단원 평가`, kind: `단원 평가 — ${unit.short || unit.title}`, note: `${unit.questions.length}문항 · 총 100점 · ${Math.round(limit / 60)}분 · 답 번호를 누르면 표시되고, 한 번 더 누르면 지워집니다.` },
     resultHref: (sid) => `#/units/${subject.code}/${unit.id}/result/${sid}`,
   });
   ctx.show(

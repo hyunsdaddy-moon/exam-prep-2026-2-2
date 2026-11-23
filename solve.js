@@ -9,11 +9,11 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem } from './dom.js?v=20261123-2147';
-import { renderMarkdown } from './markdown.js?v=20261123-2147';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261123-2147';
-import { loadPaper } from './study.js?v=20261123-2147';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261123-2147';
+import { el, newId, CIRCLED, plainStem } from './dom.js?v=20261123-2153';
+import { renderMarkdown } from './markdown.js?v=20261123-2153';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261123-2153';
+import { loadPaper } from './study.js?v=20261123-2153';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261123-2153';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -28,7 +28,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261123-2147';
+} from './grade.mjs?v=20261123-2153';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -396,14 +396,78 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
     submit.textContent = '제출';
   };
 
+  const addCell = (q, block) => {
+    const cell = el('a', { href: `#q-${q.id}`, onclick: (e) => {
+      e.preventDefault(); // 주소의 # 은 화면 주소로 쓴다
+      block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } }, el('b', { text: q.type === 'essay' ? `서${q.no}` : String(q.no) }), el('span'));
+    omrCells.set(q.id, cell);
+    omr.append(cell);
+  };
+
+  // 평가는 학교 시험지처럼 흰 종이 2단에 그린다 (인쇄용 문제지와 같은 모양, 선지를 눌러 표시)
+  const onPaper = !!opts.paper;
+  const flow = onPaper ? el('div.cols') : sheet;
+  if (onPaper) {
+    const p = opts.paper;
+    const today = new Date().toLocaleDateString('ko-KR');
+    const field = (label, value) => el('div', {}, el('span', { text: label }), el('i', { text: value || '' }));
+    sheet.className = 'sheet exam-paper';
+    sheet.append(
+      el('header.sheet-head', {},
+        el('div.sheet-title', {}, el('small', { text: p.kicker || '' }), el('h1', {}, subject.subject, el('span', { text: ` ${p.kind || '평가'}` }))),
+        p.note ? el('p.sheet-note', { text: p.note }) : null,
+        el('div.sheet-fields', {}, field('과목', subject.subject), field('이름', learner), field('날짜', today), field('점수', '제출 후'))
+      ),
+      flow
+    );
+  }
+
   let shownGroup = null;
   for (const q of questions) {
     const group = groups.get(q.group);
     if (group && group.id !== shownGroup) {
       shownGroup = group.id;
-      sheet.append(group.context ? contextBlock(group) : el('h3.exam-group', { text: group.title }));
+      if (onPaper) flow.append(group.context ? el('section.p-context', {}, el('h3', { text: group.title }), md(group.context)) : el('h3.p-group', { text: group.title }));
+      else sheet.append(group.context ? contextBlock(group) : el('h3.exam-group', { text: group.title }));
     }
     const a = answerOf(q);
+    if (onPaper) {
+      const block = el(`article.p-q.p-solve${q.type === 'essay' ? '.essay' : ''}`, { id: `q-${q.id}` },
+        el('div.p-stem', {}, el('b.p-no', { text: `${q.type === 'essay' ? `서술형 ${q.no}` : q.no}.` }), md(q.stem, 'md p-text'), el('span.p-points', { text: `[${pts(q.points)}]` })),
+        passageBlock(q) || ''
+      );
+      if (q.type === 'choice') {
+        const items = q.choices.map((c, i) => el('li', {},
+          el('button.p-pick', { type: 'button', 'aria-pressed': 'false', 'aria-label': `${i + 1}번 고르기`, onclick: () => {
+            a.picked = a.picked.includes(i + 1) ? [] : [i + 1];
+            mark();
+            persist();
+            refresh(q);
+          } }, el('span.p-mark', { text: CIRCLED[i] }), md(c, 'md p-text'))
+        ));
+        const mark = () => items.forEach((li, i) => {
+          const on = a.picked.includes(i + 1);
+          li.firstChild.setAttribute('aria-pressed', String(on));
+          li.classList.toggle('on', on);
+          li.querySelector('.p-mark').textContent = on ? String(i + 1) : CIRCLED[i]; // 칠한 동그라미 안에 번호
+        });
+        block.append(el(`ol.p-choices.p-choose${q.choiceTable ? '.compact' : ''}`, {}, items));
+        mark();
+      } else {
+        const input = el('textarea.p-write', { rows: 5, placeholder: '여기에 답을 쓰세요.' });
+        input.value = a.text;
+        input.addEventListener('input', () => {
+          a.text = input.value;
+          persist();
+          refresh(q);
+        });
+        block.append(input);
+      }
+      flow.append(block);
+      addCell(q, block);
+      continue;
+    }
     const block = el('article.q-card', { id: `q-${q.id}` }, questionHead(q), passageBlock(q) || '', md(q.stem, 'md q-stem'));
     if (q.type === 'choice') {
       const choices = choiceList(q, (n) => {
@@ -428,12 +492,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       block.append(input);
     }
     sheet.append(block);
-    const cell = el('a', { href: `#q-${q.id}`, onclick: (e) => {
-      e.preventDefault(); // 주소의 # 은 화면 주소로 쓴다
-      block.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } }, el('b', { text: q.type === 'essay' ? `서${q.no}` : String(q.no) }), el('span'));
-    omrCells.set(q.id, cell);
-    omr.append(cell);
+    addCell(q, block);
   }
 
   let armed = false;
@@ -482,7 +541,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   const timer = setInterval(tick, 500);
   ctx.onLeave(() => clearInterval(timer));
 
-  ctx.show(bar, el('div.wrap.exam', {}, sheet, omr));
+  ctx.show(bar, onPaper ? el('div.paper-stage', {}, el('div.wrap.exam.on-paper', {}, sheet, omr)) : el('div.wrap.exam', {}, sheet, omr));
   for (const q of questions) refresh(q);
   tick();
 }
