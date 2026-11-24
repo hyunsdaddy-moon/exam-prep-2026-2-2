@@ -8,19 +8,25 @@
  *   (개념 진도율은 과목 페이지와 같은 값 — 개념 읽기·예상 문제 풀이로 계산)
  */
 
-import { el } from './dom.js?v=20261124-2135';
-import { loadRecords } from './store.js?v=20261124-2135';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2135';
-import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-2135';
-import { loadStudy } from './study.js?v=20261124-2135';
-import { avatar, refreshProfiles } from './characters.js?v=20261124-2135';
+import { el, CIRCLED, plainStem } from './dom.js?v=20261124-2149';
+import { loadRecords } from './store.js?v=20261124-2149';
+import { mergeRecordsForLearner, summarize } from './grade.mjs?v=20261124-2149';
+import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-2149';
+import { loadStudy } from './study.js?v=20261124-2149';
+import { avatar, refreshProfiles } from './characters.js?v=20261124-2149';
 
 const COMPARE = ['문종배', '문현'];
+const UNIT_ROUND_BASE = 10;
 const QUIZ_ROUND_BASE = 40;
 const normQ = (q) => String(q).replace(/^([a-z]+)-d(\d+)-(\d+)$/, '$1-q$2-$3');
 const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 const avg = (list) => (list.length ? Math.round(list.reduce((a, b) => a + b, 0) / list.length) : null);
 const docUrl = (file) => `exam/${file.normalize('NFC').split('/').map(encodeURIComponent).join('/')}`;
+const ansText = (list) => (list && list.length ? list.map((n) => CIRCLED[n - 1] || String(n)).join(',') : '–');
+const shortDate = (iso) => {
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? '' : `${d.getMonth() + 1}.${d.getDate()}`;
+};
 
 const textCache = new Map();
 const fetchText = (url) => {
@@ -106,9 +112,20 @@ export async function computeProgress(ctx, exam, records, learner) {
       let qTotal = 0;
       let answered = 0;
       let tries = [];
+      let questions = [];
       if (quiz) {
         const qs = quiz.questions || [];
         qTotal = qs.length;
+        let cNo = 0;
+        let eNo = 0;
+        questions = qs.map((q) => ({
+          id: q.id,
+          type: q.type,
+          label: q.type === 'choice' ? `${++cNo}번` : `서술형 ${++eNo}`,
+          shortLabel: q.type === 'choice' ? `${cNo}번` : `서${eNo}`,
+          stem: plainStem(q.stem, 64),
+          answer: q.type === 'choice' && q.answer != null ? [q.answer] : [],
+        }));
         const ids = new Set(qs.map((q) => q.id));
         const sessions = [...merged.sessions.values()]
           .filter((x) => x.mode === 'assess' && x.subject === s.code && x.round === QUIZ_ROUND_BASE + index)
@@ -123,13 +140,21 @@ export async function computeProgress(ctx, exam, records, learner) {
         answered = touched.size;
         tries = sessions.map((x) => {
           const m = byS.get(x.session);
-          const correct = [...m.values()].filter((a) => a.correct === true).length;
-          return { at: x.at, correct, score: pct(correct, qTotal) };
+          let correct = 0;
+          let wrong = 0;
+          let pending = 0;
+          for (const q of qs) {
+            const a = m.get(q.id);
+            if (a?.correct === true) correct++;
+            else if (a?.correct === false) wrong++;
+            else pending++;
+          }
+          return { at: x.at, correct, wrong, pending, total: qTotal, score: pct(correct, qTotal), max: 100, byQ: m };
         });
       }
       return {
         doc: d, index, videos: videos.length, watched, views,
-        qTotal, answered, tries,
+        qTotal, answered, tries, questions,
         correct: tries.at(-1)?.correct ?? 0,
         last: tries.at(-1)?.score ?? null,
         best: tries.length ? Math.max(...tries.map((t) => t.score)) : null,
@@ -147,15 +172,232 @@ export async function computeProgress(ctx, exam, records, learner) {
   }));
 }
 
+/** #/units (단원별 10문항 평가) 중 두 사람 중 한 명이라도 응시한 기록 수집 */
+async function loadUnitComparisons(ctx, exam, records, nameA, nameB) {
+  const mergedA = mergeRecordsForLearner(records, nameA);
+  const mergedB = mergeRecordsForLearner(records, nameB);
+  const triesOf = (merged, code, unit) => {
+    const round = UNIT_ROUND_BASE + Number(String(unit.id).replace(/^u/, ''));
+    const sessions = [...merged.sessions.values()]
+      .filter((x) => x.mode === 'assess' && x.subject === code && x.round === round)
+      .sort((a, b) => String(a.at).localeCompare(String(b.at)));
+    return sessions.map((sess) => {
+      const sum = summarize(unit.questions || [], merged.attempts.filter((a) => a.session === sess.session));
+      const byQ = new Map();
+      let correct = 0;
+      let wrong = 0;
+      let pending = 0;
+      for (const r of sum.rows) {
+        const c = r.state === 'correct' ? true : r.state === 'pending' ? null : false;
+        if (c === true) correct++;
+        else if (c === false) wrong++;
+        else pending++;
+        byQ.set(r.question.id, {
+          picked: r.attempt?.picked || [],
+          correct: c,
+          state: r.state,
+          earned: r.earned,
+          points: r.question.points,
+        });
+      }
+      return { at: sess.at, correct, wrong, pending, total: sum.rows.length, score: sum.earned, max: sum.max || 100, byQ };
+    });
+  };
+
+  const out = [];
+  await Promise.all(exam.subjects.map(async (s, sIdx) => {
+    const d = await ctx.getJson(`data/units/${s.code}.json`).catch(() => ({ units: [] }));
+    (d.units || []).forEach((u, uIdx) => {
+      const triesA = triesOf(mergedA, s.code, u);
+      const triesB = triesOf(mergedB, s.code, u);
+      if (!triesA.length && !triesB.length) return;
+      const questions = (u.questions || []).map((q) => ({
+        id: q.id,
+        type: q.type,
+        label: q.type === 'essay' ? `서술형 ${q.no}` : `${q.no}번`,
+        shortLabel: q.type === 'essay' ? `서${q.no}` : `${q.no}번`,
+        stem: plainStem(q.stem, 64),
+        answer: q.type === 'choice' ? (q.answer || []) : [],
+      }));
+      out.push({
+        order: sIdx * 100 + 50 + uIdx,
+        subjectCode: s.code,
+        subjectName: s.subject,
+        kind: '단원별 평가',
+        title: u.short || u.title,
+        href: `#/units/${s.code}/${u.id}`,
+        goText: '단원별로 가기 →',
+        questions,
+        triesA,
+        triesB,
+      });
+    });
+  }));
+  return out.sort((a, b) => a.order - b.order);
+}
+
+/** 단원 평가 1개의 점수 + 틀린 문제 비교 카드 */
+function buildQuizCompareCard(item, nameA, nameB) {
+  let idxA = item.triesA.length - 1;
+  let idxB = item.triesB.length - 1;
+  const bothDone = item.triesA.length > 0 && item.triesB.length > 0;
+  const body = el('div.db-qcmp-body');
+
+  const cellText = (q, t) => {
+    if (!t) return el('span.na', { text: '미응시' });
+    const a = t.byQ.get(q.id);
+    if (!a) return el('span.na', { text: '–' });
+    if (q.type === 'choice') {
+      const pick = ansText(a.picked);
+      if (a.correct === true) return el('span.ok', { text: `${pick} ○` });
+      if (a.correct === false) return el('span.ng', { text: `${pick} ✕` });
+      return el('span.na', { text: pick });
+    }
+    if (a.correct === true) return el('span.ok', { text: '○ 맞음' });
+    if (a.correct === false) return el('span.ng', { text: '✕ 틀림' });
+    return el('span.na', { text: '미채점' });
+  };
+
+  const scoreBox = (side, name, tries, idx, onPick) => {
+    const t = idx >= 0 ? tries[idx] : null;
+    let picker = null;
+    if (tries.length > 1) {
+      picker = el('select.db-qcmp-select', { 'aria-label': `${name} 회차 고르기` },
+        tries.map((x, i) => el('option', { value: String(i), text: `${i + 1}차 (${x.score}점 · ${shortDate(x.at)})` }))
+      );
+      picker.value = String(idx);
+      picker.addEventListener('change', () => onPick(Number(picker.value)));
+    } else if (tries.length === 1) {
+      picker = el('span.db-muted', { text: `1차 · ${shortDate(tries[0].at)}` });
+    }
+    const pctVal = t ? (t.max ? Math.round((t.score / t.max) * 100) : t.score) : 0;
+    return el(`div.db-qcmp-box.${side}`, {},
+      el('div.db-qcmp-box-top', {},
+        el('span.db-who', {}, el(`i.db-dot.${side}`), name),
+        picker
+      ),
+      t
+        ? el('div.db-qcmp-score-line', {},
+            el('b', { text: `${t.score}점` }),
+            el('span', { text: `맞힘 ${t.correct}/${t.total} · 틀림 ${t.wrong}${t.pending ? ` · 미채점 ${t.pending}` : ''}` })
+          )
+        : el('div.db-qcmp-score-line', {}, el('b.na', { text: '미응시' }), el('span', { text: `${item.questions.length}문항` })),
+      bar(pctVal, side)
+    );
+  };
+
+  const render = () => {
+    const tA = idxA >= 0 ? item.triesA[idxA] : null;
+    const tB = idxB >= 0 ? item.triesB[idxB] : null;
+    const bothWrong = [];
+    const onlyA = [];
+    const onlyB = [];
+    const pendingList = [];
+    const detailRows = [];
+
+    for (const q of item.questions) {
+      const wA = tA ? tA.byQ.get(q.id)?.correct === false : false;
+      const wB = tB ? tB.byQ.get(q.id)?.correct === false : false;
+      const pA = tA ? tA.byQ.get(q.id)?.correct == null : false;
+      const pB = tB ? tB.byQ.get(q.id)?.correct == null : false;
+      if (wA && wB) {
+        bothWrong.push(q);
+        detailRows.push({ q, tag: '함께 틀림', cls: 'both' });
+      } else if (wA) {
+        onlyA.push(q);
+        detailRows.push({ q, tag: `${nameA} 틀림`, cls: 'a' });
+      } else if (wB) {
+        onlyB.push(q);
+        detailRows.push({ q, tag: `${nameB} 틀림`, cls: 'b' });
+      } else if (pA || pB) {
+        pendingList.push(q);
+      }
+    }
+
+    const chipRow = (cls, label, list) =>
+      list.length
+        ? el('div.db-qcmp-wrow', {},
+            el(`span.db-qcmp-wlabel.${cls}`, { text: `${label} (${list.length})` }),
+            el('div.db-qcmp-chips', {}, list.map((q) => el(`span.db-qchip.${cls}`, { title: q.stem, text: q.shortLabel })))
+          )
+        : null;
+
+    const autoOpen = bothDone && detailRows.length > 0 && detailRows.length <= 12;
+    const details = detailRows.length
+      ? el('details.db-qcmp-details', { open: autoOpen },
+          el('summary', { text: `틀린 문제 ${detailRows.length}개 자세히 보기 (번호 · 문제 · 고른 답 · 정답)` }),
+          el('div.table-scroll', {},
+            el('table.db-qcmp-table', {},
+              el('thead', {}, el('tr', {},
+                el('th', { text: '번호' }),
+                el('th', { text: '구분' }),
+                el('th', { text: '문제' }),
+                el('th', { text: nameA }),
+                el('th', { text: nameB }),
+                el('th', { text: '정답' })
+              )),
+              el('tbody', {}, detailRows.map(({ q, tag, cls }) => el('tr', {},
+                el('td.no', { text: q.label }),
+                el('td', {}, el(`span.db-qchip.${cls}`, { text: tag })),
+                el('td', { text: q.stem }),
+                el('td.ans', {}, cellText(q, tA)),
+                el('td.ans', {}, cellText(q, tB)),
+                el('td.ans', { text: q.type === 'choice' ? ansText(q.answer) : '서술형' })
+              )))
+            )
+          )
+        )
+      : null;
+
+    body.replaceChildren(
+      el('div.db-qcmp-scores', {},
+        scoreBox('a', nameA, item.triesA, idxA, (n) => { idxA = n; render(); }),
+        scoreBox('b', nameB, item.triesB, idxB, (n) => { idxB = n; render(); })
+      ),
+      el('div.db-qcmp-wrongs', {},
+        detailRows.length
+          ? [
+              chipRow('both', '함께 틀린 문제', bothWrong),
+              chipRow('a', `${nameA}만 틀림`, onlyA),
+              chipRow('b', `${nameB}만 틀림`, onlyB),
+              chipRow('pending', '서술형 미채점', pendingList),
+            ]
+          : [
+              el('p.db-qcmp-ok', { text: '틀린 문제가 없습니다 ✓' }),
+              chipRow('pending', '서술형 미채점', pendingList),
+            ]
+      ),
+      details
+    );
+  };
+  render();
+
+  return el(`article.db-qcmp-card${bothDone ? '.both' : ''}`, {},
+    el('div.db-qcmp-head', {},
+      el('div.db-qcmp-title', {},
+        el('div.db-qcmp-badges', {},
+          el('span.db-qcmp-tag.sub', { text: item.subjectName }),
+          el('span.db-qcmp-tag', { text: item.kind }),
+          bothDone ? el('span.db-qcmp-tag.both', { text: '둘 다 완료' }) : null
+        ),
+        el('h3', { text: item.title })
+      ),
+      el('a.db-qcmp-go', { href: item.href, text: item.goText })
+    ),
+    body
+  );
+}
+
 export async function renderDashboard(ctx, exam, data) {
   document.title = `학습 현황 — ${exam.title}`;
   ctx.setNav('dashboard');
   const [nameA, nameB] = COMPARE;
   const [loaded, study] = await Promise.all([loadRecords(), loadStudy(ctx, exam.subjects, data.concepts)]);
   await refreshProfiles(loaded.records);
-  const [progA, progB] = await Promise.all([
+  const [progA, progB, unitCmps] = await Promise.all([
     computeProgress(ctx, exam, loaded.records, nameA),
     computeProgress(ctx, exam, loaded.records, nameB),
+    loadUnitComparisons(ctx, exam, loaded.records, nameA, nameB),
   ]);
 
   const conceptMap = (name) => {
@@ -169,15 +411,80 @@ export async function renderDashboard(ctx, exam, data) {
   const diff = sumA.overall - sumB.overall;
   const diffText = diff === 0 ? '두 사람 종합 성취도가 같습니다' : `${diff > 0 ? nameA : nameB} +${Math.abs(diff)}%p 앞섬`;
 
-  const unitPerson = (side, name, r) => el(`div.db-unit-person.${side}`, {},
-    el('div.db-unit-stats', {},
-      el(`span.db-unit-who.${side}`, {}, el(`i.db-dot.${side}`), name),
-      r.videos ? el('span', { title: '영상 시청' }, `🎬 ${r.watched}/${r.videos}`) : null,
-      r.qTotal ? el('span', { title: '단원 평가 문항' }, `📝 ${r.answered}/${r.qTotal}`) : null,
-      r.tries.length ? el('span', { title: '회차별 점수' }, r.tries.map((t, i) => `${i + 1}차 ${t.score}`).join(' · ')) : (r.qTotal ? el('span.db-muted', { text: '미응시' }) : null)
-    ),
-    bar(r.qTotal ? r.last ?? 0 : pct(r.watched, r.videos), side)
-  );
+  /* ── 단원 평가 결과 비교 (문서 단원 평가 + 단원별 10문항 평가 중 응시 기록이 있는 것만) ── */
+  const docCmps = [];
+  progA.forEach((a, sIdx) => {
+    const b = progB[sIdx];
+    a.rows.forEach((ra, rIdx) => {
+      const rb = b.rows[rIdx];
+      if (!ra.qTotal || (!ra.tries.length && !rb.tries.length)) return;
+      docCmps.push({
+        order: sIdx * 100 + rIdx,
+        subjectCode: a.s.code,
+        subjectName: a.s.subject,
+        kind: '단원 평가',
+        title: ra.doc.title,
+        href: `#/s/${a.s.code}/${ra.index}`,
+        goText: '단원 평가로 가기 →',
+        questions: ra.questions || [],
+        triesA: ra.tries,
+        triesB: rb.tries,
+      });
+    });
+  });
+  const allCmps = [...docCmps, ...unitCmps].sort((x, y) => {
+    const bx = x.triesA.length > 0 && x.triesB.length > 0 ? 0 : 1;
+    const by = y.triesA.length > 0 && y.triesB.length > 0 ? 0 : 1;
+    return bx - by || x.order - y.order;
+  });
+
+  let compareSection = null;
+  if (allCmps.length) {
+    const subCodes = [];
+    for (const c of allCmps) if (!subCodes.some((x) => x.code === c.subjectCode)) subCodes.push({ code: c.subjectCode, name: c.subjectName });
+    let sel = 'all';
+    const filterHost = el('div.chips');
+    const listHost = el('div.db-qcmp-list');
+    const drawCmps = () => {
+      if (subCodes.length > 1) {
+        filterHost.replaceChildren(
+          el('button.chip.pick', { type: 'button', 'aria-pressed': String(sel === 'all'), text: `전체 (${allCmps.length})`, onclick: () => { sel = 'all'; drawCmps(); } }),
+          ...subCodes.map((sc) => el('button.chip.pick', {
+            type: 'button',
+            'aria-pressed': String(sel === sc.code),
+            text: `${sc.name} (${allCmps.filter((c) => c.subjectCode === sc.code).length})`,
+            onclick: () => { sel = sc.code; drawCmps(); },
+          }))
+        );
+      }
+      const shown = sel === 'all' ? allCmps : allCmps.filter((c) => c.subjectCode === sel);
+      listHost.replaceChildren(...shown.map((item) => buildQuizCompareCard(item, nameA, nameB)));
+    };
+    drawCmps();
+    compareSection = el('section.section', {},
+      el('div.section-head', {},
+        el('h2', { text: '단원 평가 점수 · 틀린 문제 비교' }),
+        el('p', { text: '제출한 단원 평가마다 점수와 틀린 문제(함께 틀린 문제 · 각자 틀린 문제 · 고른 답 · 정답)를 비교합니다. 여러 번 푼 경우 회차를 바꿔 비교할 수 있습니다.' })
+      ),
+      subCodes.length > 1 ? el('div.filter-bar', {}, filterHost) : null,
+      listHost
+    );
+  }
+
+  const unitPerson = (side, name, r) => {
+    const lastTry = r.tries.at(-1);
+    return el(`div.db-unit-person.${side}`, {},
+      el('div.db-unit-stats', {},
+        el(`span.db-unit-who.${side}`, {}, el(`i.db-dot.${side}`), name),
+        r.videos ? el('span', { title: '영상 시청' }, `🎬 ${r.watched}/${r.videos}`) : null,
+        r.qTotal ? el('span', { title: '단원 평가 문항' }, `📝 ${r.answered}/${r.qTotal}`) : null,
+        r.tries.length
+          ? el('span', { title: '회차별 점수' }, `${r.tries.map((t, i) => `${i + 1}차 ${t.score}점`).join(' · ')}${lastTry ? ` (틀림 ${lastTry.wrong})` : ''}`)
+          : (r.qTotal ? el('span.db-muted', { text: '미응시' }) : null)
+      ),
+      bar(r.qTotal ? r.last ?? 0 : pct(r.watched, r.videos), side)
+    );
+  };
 
   const subjectBlock = (a, b) => {
     const vpA = pct(a.w, a.v);
@@ -258,6 +565,7 @@ export async function renderDashboard(ctx, exam, data) {
           ], 'overall', diffText)
         )
       ),
+      compareSection,
       el('section.section', {},
         el('div.section-head', {},
           el('h2', { text: '과목별 비교' }),

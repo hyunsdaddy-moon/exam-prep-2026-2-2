@@ -1054,11 +1054,58 @@ button.dq-try:hover { border-color: #111; }
 .db-unit-who.b { color: var(--db-b); }
 .db-unit .db-bar { height: 5px; }
 .db-muted { color: var(--text-3, #999); }
+
+/* 단원 평가 점수 · 오답 상세 비교 */
+.db-qcmp-list { display: grid; gap: 16px; }
+.db-qcmp-card { padding: 18px 20px; border-radius: 18px; border: 1px solid var(--line-soft, #e5e5ea); background: var(--bg); }
+.db-qcmp-card.both { border-color: color-mix(in srgb, var(--db-a) 30%, var(--line-soft, #e5e5ea)); }
+.db-qcmp-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.db-qcmp-title { display: grid; gap: 4px; }
+.db-qcmp-badges { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.db-qcmp-tag { font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--bg-soft); color: var(--text-2); }
+.db-qcmp-tag.sub { background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent-text); }
+.db-qcmp-tag.both { background: #e8f5e9; color: #1b7a38; }
+.db-qcmp-head h3 { margin: 0; font-size: 17px; }
+.db-qcmp-go { font-size: 13px; font-weight: 600; color: var(--accent-text); white-space: nowrap; }
+.db-qcmp-scores { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 14px; }
+.db-qcmp-box { padding: 12px 14px; border-radius: 12px; background: var(--bg-soft); display: grid; gap: 6px; }
+.db-qcmp-box-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.db-qcmp-select { font: inherit; font-size: 12px; padding: 2px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text); }
+.db-qcmp-score-line { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.db-qcmp-score-line b { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
+.db-qcmp-box.a .db-qcmp-score-line b { color: var(--db-a); }
+.db-qcmp-box.b .db-qcmp-score-line b { color: var(--db-b); }
+.db-qcmp-score-line span { font-size: 12px; color: var(--text-2); }
+.db-qcmp-wrongs { display: grid; gap: 7px; padding-top: 10px; border-top: 1px solid var(--line-soft, #e5e5ea); }
+.db-qcmp-wrow { display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap; font-size: 13px; }
+.db-qcmp-wlabel { font-weight: 700; min-width: 112px; padding-top: 2px; }
+.db-qcmp-wlabel.both { color: #c62828; }
+.db-qcmp-wlabel.a { color: var(--db-a); }
+.db-qcmp-wlabel.b { color: var(--db-b); }
+.db-qcmp-wlabel.pending { color: var(--text-2); }
+.db-qcmp-chips { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; }
+.db-qchip { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid transparent; }
+.db-qchip.both { background: #fdecee; color: #c62828; border-color: #f5c2c7; }
+.db-qchip.a { background: #e8f2ff; color: #0058b0; border-color: #b8d6fa; }
+.db-qchip.b { background: #fff1e4; color: #b85400; border-color: #f8cca0; }
+.db-qchip.pending { background: var(--bg-soft); color: var(--text-2); border-color: var(--line); }
+.db-qcmp-ok { font-size: 13px; font-weight: 600; color: #1b7a38; margin: 0; }
+.db-qcmp-details { margin-top: 10px; border-top: 1px solid var(--line-soft, #e5e5ea); padding-top: 8px; }
+.db-qcmp-details > summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--accent-text); padding: 2px 0; }
+.db-qcmp-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+.db-qcmp-table th, .db-qcmp-table td { padding: 7px 8px; border-bottom: 1px solid var(--line-soft, #e5e5ea); text-align: left; vertical-align: top; }
+.db-qcmp-table th { font-size: 12px; font-weight: 700; color: var(--text-2); background: var(--bg-soft); white-space: nowrap; }
+.db-qcmp-table td.no { font-weight: 700; white-space: nowrap; }
+.db-qcmp-table td.ans { white-space: nowrap; font-weight: 600; }
+.db-qcmp-table .ok { color: #1b7a38; }
+.db-qcmp-table .ng { color: #c62828; }
+.db-qcmp-table .na { color: var(--text-3); }
 @media (max-width: 860px) {
   .db-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .db-subjects { grid-template-columns: 1fr; }
   .db-card-num { font-size: 32px; }
   .db-hero-one .db-hero-num { font-size: 26px; }
+  .db-qcmp-scores { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
   .db-cards { grid-template-columns: 1fr; }
