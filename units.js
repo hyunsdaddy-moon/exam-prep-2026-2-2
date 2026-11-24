@@ -12,10 +12,10 @@
  *       단원 평가는 몇 번이든 다시 볼 수 있고, 카드에는 첫 점수 · 최고 점수 · 최근 점수를 보여 준다.
  */
 
-import { el, newId } from './dom.js?v=20261124-2118';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2118';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-2118';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261124-2118';
+import { el, newId } from './dom.js?v=20261124-2124';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2124';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-2124';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261124-2124';
 
 const ROUND_BASE = 10;
 const unitNo = (id) => Number(String(id).replace(/^u/, ''));
@@ -99,7 +99,7 @@ async function renderUnitsHome(ctx, exam, query) {
               : el('p.meta', { text: saved ? '풀던 시험이 있습니다.' : '아직 응시하지 않았습니다.' }),
             rivals.length ? el('p.unit-rivals', { text: rivals.map((x) => `${x.n} ${x.st.best}`).join(' · ') }) : null,
             el('div.hero-actions.left', {},
-              el(`a.pill.small${st && !saved ? '.ghost' : ''}`, { href: `#/units/${s.code}/${u.id}`, text: saved ? '이어서 풀기' : st ? '다시 풀기' : '응시하기' }),
+              el(`a.pill.small${st && !saved ? '.ghost' : ''}`, { href: `#/units/${s.code}/${u.id}`, text: saved ? '이어서 풀기' : st ? `${st.tries + 1}차 재시험 시도` : '응시하기' }),
               st ? el('a.pill.ghost.small', { href: `#/units/${s.code}/${u.id}/result/${st.last.session}`, text: '최근 결과' }) : null
             )
           );
@@ -157,7 +157,7 @@ async function renderUnitStart(ctx, exam, subject, unit) {
         : '시작을 누르면 시간이 흐릅니다. 다 풀고 제출하면 바로 채점하고 해설을 보여 줍니다.' }),
       el('div.hero-actions', {},
         saved ? el('button.pill', { type: 'button', text: '풀던 시험 이어서', onclick: () => begin(saved) }) : null,
-        el(`button.pill${saved ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : '시작', onclick: () => begin({ session: newId('u'), startedAt: Date.now(), answers: {} }) })
+        el(`button.pill${saved ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : st ? `${st.tries + 1}차 재시험 시도` : '시작', onclick: () => begin({ session: newId('u'), startedAt: Date.now(), answers: {} }) })
       )
     )
   );
@@ -168,13 +168,14 @@ async function renderUnitResult(ctx, exam, subject, unit, sessionId) {
   const me = getCurrentLearner();
   const units = await loadUnits(ctx, subject.code);
   const next = units[units.indexOf(unit) + 1];
+  const st = statsOf((data.scores.get(me) || new Map()).get(`${subject.code}/${unit.id}`));
+  const nextTry = (st?.tries || 1) + 1;
   return renderResult(ctx, subject, sessionId, {
     paper: { questions: unit.questions, groups: unit.groupsMap },
     title: `${subject.subject} 단원 평가 · ${unit.short || unit.title}`,
     backHref: `#/units?s=${subject.code}`,
     backText: '단원 평가',
     extra: (sum) => {
-      const st = statsOf((data.scores.get(me) || new Map()).get(`${subject.code}/${unit.id}`));
       const lines = [];
       if (st && st.tries > 1) lines.push(`이 단원 ${st.tries}번째 기록 · 처음 ${st.first}점 · 최고 ${st.best}점 · 이번 ${sum.earned}점`);
       const others = data.names.filter((n) => n !== me).map((n) => ({ n, st: statsOf(data.scores.get(n)?.get(`${subject.code}/${unit.id}`)) })).filter((x) => x.st);
@@ -182,7 +183,7 @@ async function renderUnitResult(ctx, exam, subject, unit, sessionId) {
       return lines.length ? el('div.assess-note', {}, lines.map((t) => el('p', { text: t }))) : null;
     },
     actions: () => [
-      el('a.pill', { href: `#/units/${subject.code}/${unit.id}`, text: '다시 풀기' }),
+      el('a.pill', { href: `#/units/${subject.code}/${unit.id}`, text: `${nextTry}차 재시험 시도` }),
       next ? el('a.pill.ghost', { href: `#/units/${subject.code}/${next.id}`, text: `다음 단원: ${next.short || next.title}` }) : null,
       el('a.pill.ghost', { href: `#/units?s=${subject.code}`, text: '단원 목록' }),
     ],

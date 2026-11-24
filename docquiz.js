@@ -13,13 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2118';
-import { renderMarkdown } from './markdown.js?v=20261124-2118';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2118';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2118';
-import { explainButton } from './explain.js?v=20261124-2118';
-import { inkTools } from './ink.js?v=20261124-2118';
-import { passageBlock } from './solve.js?v=20261124-2118';
+import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2124';
+import { renderMarkdown } from './markdown.js?v=20261124-2124';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2124';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2124';
+import { explainButton } from './explain.js?v=20261124-2124';
+import { inkTools } from './ink.js?v=20261124-2124';
+import { passageBlock } from './solve.js?v=20261124-2124';
 
 const ROUND_BASE = 40;
 const SESSION_PREFIX = 'dqs-';
@@ -131,33 +131,44 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   const round = ROUND_BASE + (Number(opts.docIndex) || 0);
   const learner = getCurrentLearner();
 
-  // 제출 전 답안(이 브라우저) { picks: {q: n}, texts: {q: 글}, submitted: session|null }
+  // 제출 전 답안(이 브라우저) { picks: {q: n}, texts: {q: 글}, submitted: session|null, retaking: boolean }
   const draftKey = `examprep.docquiz2.${learner}.${code}.${file}`;
-  let draft = { picks: {}, texts: {}, submitted: null };
+  let draft = { picks: {}, texts: {}, submitted: null, retaking: false };
   try { draft = { ...draft, ...JSON.parse(localStorage.getItem(draftKey) || '{}') }; } catch { /* 새로 시작 */ }
   const persist = () => { try { localStorage.setItem(draftKey, JSON.stringify(draft)); } catch { /* 저장 못 해도 푸는 데는 지장 없다 */ } };
+  const hasDraft = () =>
+    Object.values(draft.picks || {}).some(Boolean) ||
+    Object.values(draft.texts || {}).some((v) => String(v || '').trim().length > 0);
 
   let { ok, tries } = await loadTries(code, round, ids);
   // 제출했는데 그 기록이 없어졌으면(다른 참여자 등) 새로 시작
-  if (draft.submitted && !tries.some((t) => t.session === draft.submitted)) draft = { picks: {}, texts: {}, submitted: null };
-  const current = () => tries.find((t) => t.session === draft.submitted) || null;
+  if (draft.submitted && !tries.some((t) => t.session === draft.submitted)) {
+    draft = { picks: {}, texts: {}, submitted: null, retaking: false };
+  }
+  // 이미 제출한 기록이 있고 새 답안을 고르는 중이 아니면 가장 최근 제출 결과를 보여 주고 다음 차수 재시험 버튼을 띄운다
+  let viewingSession = draft.submitted
+    || (tries.length && !draft.retaking && !hasDraft() ? tries.at(-1).session : null);
+  const current = () => (viewingSession ? tries.find((t) => t.session === viewingSession) || null : null);
 
   const choiceQs = qs.filter((q) => q.type === 'choice');
   const essayCount = qs.length - choiceQs.length;
 
-  /* ── 머리글 ── */
+  /* ── 머리글 · 하단 도구줄 ── */
   const scoreField = el('i');
   const status = el('p.sheet-note.dq-progress');
+  const footStatus = el('p.sheet-note.dq-progress');
   const historyBox = el('div.dq-history');
   const submitBtn = el('button.dq-submit', { type: 'button', text: '제출' });
-  const nextBtn = el('button.dq-submit', { type: 'button' });
+  const footSubmitBtn = el('button.dq-submit', { type: 'button', text: '제출' });
+  const nextBtn = el('button.dq-submit.dq-retry', { type: 'button' });
+  const footNextBtn = el('button.dq-submit.dq-retry', { type: 'button' });
   const field = (label, value) => el('div', {}, el('span', { text: label }), typeof value === 'string' ? el('i', { text: value }) : value);
   const head = el('header.sheet-head', {},
     el('div.sheet-title', {},
       el('small', { text: `2026 2학기 2회고사 · 단원 평가${opts.docTitle ? ` · ${opts.docTitle}` : ''}` }),
       el('h1', {}, opts.subject || '', el('span', { text: ` ${quiz.title || '단원 평가'}` }))
     ),
-    el('p.sheet-note', { text: `선택형 ${choiceQs.length}문항${essayCount ? ` · 서술형 ${essayCount}문항` : ''} · 모든 문제를 푼 뒤 「제출」을 누르면 채점됩니다. 제출할 때마다 1차·2차… 기록이 남습니다.` }),
+    el('p.sheet-note', { text: `선택형 ${choiceQs.length}문항${essayCount ? ` · 서술형 ${essayCount}문항` : ''} · 모든 문제를 푼 뒤 「제출」을 누르면 채점됩니다. 제출한 뒤에는 다음 차수 재시험을 치를 수 있습니다.` }),
     el('div.sheet-fields', {},
       field('과목', opts.subject || ''),
       field('이름', learner),
@@ -168,6 +179,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     el('div.dq-tools', {}, status, submitBtn, nextBtn),
     !ok ? el('p.sheet-note.dq-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 기록만 보입니다.' }) : null
   );
+  const footTools = el('div.dq-tools.dq-foot-tools', {}, footStatus, footSubmitBtn, footNextBtn);
 
   /* ── 문제 ── */
   const ink = { pending: [], add(b, id) { this.pending.push([b, id]); } }; // 연필·지우개 — 시험지가 만들어진 뒤 붙인다
@@ -209,7 +221,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     if (q.type === 'choice') {
       const items = q.choices.map((c, i) => el('li', {},
         el('button.p-pick', { type: 'button', 'aria-label': `${i + 1}번 고르기`, onclick: () => {
-          if (draft.submitted) return;
+          if (current()) return;
           draft.picks[q.id] = draft.picks[q.id] === i + 1 ? undefined : i + 1;
           persist();
           paintAll();
@@ -257,6 +269,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
         const a = t?.byQ.get(q.id);
         input.readOnly = !!t;
         if (t && a?.text != null) input.value = a.text;
+        else if (!t) input.value = draft.texts[q.id] || '';
         const v = a?.correct === true ? 'o' : a?.correct === false ? 'x' : null;
         block.classList.toggle('is-right', v === 'o');
         block.classList.toggle('is-wrong', v === 'x');
@@ -282,7 +295,11 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     ink.add(block, q.id);
   }
 
-  /* ── 위쪽 기록 · 버튼 ── */
+  /* ── 위쪽·아래쪽 기록 · 버튼 ── */
+  const setStatusText = (msg) => {
+    status.textContent = msg;
+    footStatus.textContent = msg;
+  };
   const paintHead = () => {
     const t = current();
     historyBox.replaceChildren();
@@ -292,7 +309,11 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
         ...tries.map((x) => {
           const s = scoreOf(qs, x.byQ);
           const wrong = qs.filter((q) => x.byQ.get(q.id)?.correct === false).length;
-          return el(`span.dq-try${x === t ? '.on' : ''}`, { title: `틀린 문제 ${wrong}개` },
+          // 제출 결과 보기 상태에서는 회차 배지를 눌러 1차·2차… 결과를 번갈아 볼 수 있다
+          const attrs = t
+            ? { type: 'button', title: `${x.n}차 결과 보기 · 틀린 문제 ${wrong}개`, onclick: () => { viewingSession = x.session; paintAll(); } }
+            : { title: `틀린 문제 ${wrong}개` };
+          return el(`${t ? 'button' : 'span'}.dq-try${x === t ? '.on' : ''}`, attrs,
             el('b', { text: `${x.n}차` }), ` ${s.right}/${s.total} · ${s.pct}점`, el('small', { text: ` ${shortDate(x.at)} · 틀림 ${wrong}` }));
         })
       );
@@ -300,16 +321,22 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     if (t) {
       const s = scoreOf(qs, t.byQ);
       scoreField.textContent = `${s.pct}점`;
-      status.textContent = `${t.n}차 채점 결과 · 맞힘 ${s.right} / ${s.total}${essayCount ? ' (서술형은 스스로 채점)' : ''}`;
+      setStatusText(`${t.n}차 채점 결과 · 맞힘 ${s.right} / ${s.total}${essayCount ? ' (서술형은 스스로 채점)' : ''}`);
       submitBtn.style.display = 'none';
+      footSubmitBtn.style.display = 'none';
       nextBtn.style.display = '';
-      nextBtn.textContent = `${tries.length + 1}차 풀기`;
+      footNextBtn.style.display = '';
+      const nextLabel = hasDraft() ? `${tries.length + 1}차 재시험 이어서` : `${tries.length + 1}차 재시험 시도`;
+      nextBtn.textContent = nextLabel;
+      footNextBtn.textContent = nextLabel;
     } else {
       const done = choiceQs.filter((q) => draft.picks[q.id]).length;
       scoreField.textContent = '제출 후';
-      status.textContent = `${tries.length + 1}차 · ${done} / ${choiceQs.length}문제 고름`;
+      setStatusText(`${tries.length + 1}차 · ${done} / ${choiceQs.length}문제 고름`);
       submitBtn.style.display = '';
+      footSubmitBtn.style.display = '';
       nextBtn.style.display = 'none';
+      footNextBtn.style.display = 'none';
     }
   };
   const paintAll = () => {
@@ -322,7 +349,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     paintAll();
   };
 
-  submitBtn.addEventListener('click', async () => {
+  const onSubmit = async () => {
     // 모든 문제를 풀어야 제출된다 — 안 푼 문제 번호를 팝업으로 알려 주고 그 문제로 데려간다
     const blanks = qs.filter((q) => (q.type === 'choice' ? !draft.picks[q.id] : !(draft.texts[q.id] || '').trim()));
     if (blanks.length) {
@@ -342,7 +369,9 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       return;
     }
     submitBtn.disabled = true;
+    footSubmitBtn.disabled = true;
     submitBtn.textContent = '저장 중…';
+    footSubmitBtn.textContent = '저장 중…';
     const session = newId('dqs');
     const records = [{ type: 'session', session, mode: 'assess', subject: code, round, count: qs.length }];
     for (const q of qs) {
@@ -355,24 +384,33 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       }
     }
     const res = await saveRecords(records);
-    draft = { picks: {}, texts: {}, submitted: session };
+    draft = { picks: {}, texts: {}, submitted: session, retaking: false };
+    viewingSession = session;
     persist();
     await reload();
     submitBtn.disabled = false;
+    footSubmitBtn.disabled = false;
     submitBtn.textContent = '제출';
-    if (!res.ok) status.textContent += ` · ${res.message}`;
+    footSubmitBtn.textContent = '제출';
+    if (!res.ok) setStatusText(`${status.textContent} · ${res.message}`);
     section.querySelector('.dq-paper')?.scrollIntoView({ behavior: 'smooth' });
-  });
+  };
+  submitBtn.addEventListener('click', onSubmit);
+  footSubmitBtn.addEventListener('click', onSubmit);
 
-  nextBtn.addEventListener('click', () => {
-    draft = { picks: {}, texts: {}, submitted: null };
+  const onNext = () => {
+    const resuming = hasDraft();
+    draft = resuming ? { ...draft, submitted: null, retaking: true } : { picks: {}, texts: {}, submitted: null, retaking: true };
+    viewingSession = null;
     persist();
-    for (const t of essays.querySelectorAll('textarea')) t.value = '';
+    if (!resuming) for (const t of essays.querySelectorAll('textarea')) t.value = '';
     paintAll();
     section.querySelector('.dq-paper')?.scrollIntoView({ behavior: 'smooth' });
-  });
+  };
+  nextBtn.addEventListener('click', onNext);
+  footNextBtn.addEventListener('click', onNext);
 
-  const sheet = el('div.sheet.exam-paper.dq-paper', {}, head, cols, essayCount ? el('h3.p-group.dq-essay-title', { text: '서술형' }) : null, essays);
+  const sheet = el('div.sheet.exam-paper.dq-paper', {}, head, cols, essayCount ? el('h3.p-group.dq-essay-title', { text: '서술형' }) : null, essays, footTools);
   const pen = inkTools(sheet, `doc.${code}.${file}`);
   for (const [b, id] of ink.pending) pen.add(b, id);
   const heading = el('h2', { id: 'doc-quiz', text: `📝 ${quiz.title || '단원 평가'}` });

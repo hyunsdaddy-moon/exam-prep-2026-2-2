@@ -12,14 +12,14 @@
  * 인쇄할 때는 위쪽 막대와 단추가 사라지고 종이만 남는다 (styles.css 의 @media print).
  */
 
-import { el, CIRCLED, versioned } from './dom.js?v=20261124-2118';
-import { renderMarkdown } from './markdown.js?v=20261124-2118';
-import { loadPaper } from './study.js?v=20261124-2118';
-import { ERROR_LABEL } from './grade.mjs?v=20261124-2118';
-import { assessWrongs } from './assess.js?v=20261124-2118';
-import { unitWrongs } from './units.js?v=20261124-2118';
-import { docWrongs } from './docquiz.js?v=20261124-2118';
-import { dday } from './progress.mjs?v=20261124-2118';
+import { el, CIRCLED, versioned } from './dom.js?v=20261124-2124';
+import { renderMarkdown } from './markdown.js?v=20261124-2124';
+import { loadPaper } from './study.js?v=20261124-2124';
+import { ERROR_LABEL } from './grade.mjs?v=20261124-2124';
+import { assessWrongs } from './assess.js?v=20261124-2124';
+import { unitWrongs } from './units.js?v=20261124-2124';
+import { docWrongs } from './docquiz.js?v=20261124-2124';
+import { dday } from './progress.mjs?v=20261124-2124';
 
 const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 표시판', notes: '오답 노트', summary: '요약본', subnote: '서브노트' };
 

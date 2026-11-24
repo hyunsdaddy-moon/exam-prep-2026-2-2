@@ -9,13 +9,13 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2118';
-import { renderMarkdown } from './markdown.js?v=20261124-2118';
-import { explainButton } from './explain.js?v=20261124-2118';
-import { inkTools } from './ink.js?v=20261124-2118';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2118';
-import { loadPaper } from './study.js?v=20261124-2118';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2118';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2124';
+import { renderMarkdown } from './markdown.js?v=20261124-2124';
+import { explainButton } from './explain.js?v=20261124-2124';
+import { inkTools } from './ink.js?v=20261124-2124';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2124';
+import { loadPaper } from './study.js?v=20261124-2124';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2124';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -30,7 +30,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-2118';
+} from './grade.mjs?v=20261124-2124';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -381,7 +381,7 @@ export function readExamState(code, key = examKey(code)) {
 }
 
 async function renderExam(ctx, subject) {
-  const { questions, groups } = await loadPaper(ctx, subject);
+  const [{ questions, groups }, loaded] = await Promise.all([loadPaper(ctx, subject), loadRecords()]);
   if (!questions.length) return ctx.renderMissing('이 과목에는 가져온 문제가 없습니다.');
   document.title = `${subject.subject} 실전 — 시험 준비`;
   ctx.setNav(subject.code);
@@ -389,6 +389,8 @@ async function renderExam(ctx, subject) {
   const limit = (paper.minutes || 45) * 60;
   const total = round1(questions.reduce((a, q) => a + (q.points || 0), 0));
   const saved = readExamState(subject.code);
+  const tries = [...mergeRecordsForLearner(loaded.records, getCurrentLearner()).sessions.values()]
+    .filter((s) => s.mode === 'exam' && s.subject === subject.code).length;
 
   const begin = (state) => runExam(ctx, subject, questions, groups, limit, state);
   const fresh = () => begin({ session: newId('e'), startedAt: Date.now(), answers: {} });
@@ -397,11 +399,11 @@ async function renderExam(ctx, subject) {
     el('section.hero', {},
       el('a.back', { href: `#/s/${subject.code}`, text: subject.subject }),
       el('h1', { text: '실전 풀이' }),
-      el('p.sub', { text: `${questions.length}문항 · ${total}점 · ${Math.round(limit / 60)}분` }),
+      el('p.sub', { text: `${questions.length}문항 · ${total}점 · ${Math.round(limit / 60)}분${tries ? ` · ${tries}차 응시 완료` : ''}` }),
       el('p.scope', { text: '시작을 누르면 시간이 흐릅니다. 모든 문제를 풀어야 제출할 수 있고, 제출하면 한 번에 채점합니다. 풀기 전에 정답과 해설은 보이지 않습니다.' }),
       el('div.hero-actions', {},
         saved ? el('button.pill', { type: 'button', text: '풀던 시험 이어서', onclick: () => begin(saved) }) : null,
-        el(`button.pill${saved ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : '시작', onclick: fresh })
+        el(`button.pill${saved ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : tries ? `${tries + 1}차 재시험 시도` : '시작', onclick: fresh })
       )
     )
   );
@@ -646,6 +648,25 @@ export async function renderResult(ctx, subject, sessionId, opts = {}) {
   document.title = `${subject.subject} ${MODE_LABEL[mode]} 결과 — 시험 준비`;
   ctx.setNav(subject.code);
 
+  const examTries = [...merged.sessions.values()]
+    .filter((s) => s.mode === 'exam' && s.subject === subject.code && recordLearner(s) === owner).length;
+  const buildActions = () =>
+    opts.actions
+      ? opts.actions()
+      : mode === 'exam'
+        ? [
+            el('a.pill', { href: `#/s/${subject.code}/exam`, text: `${(examTries || 1) + 1}차 재시험 시도` }),
+            el('a.pill.ghost', { href: `#/s/${subject.code}/notes`, text: '오답 노트 보기' }),
+            el('a.pill.ghost', { href: `#/s/${subject.code}/practice`, text: '연습으로 다시 풀기' }),
+            el('a.pill.ghost', { href: `#/s/${subject.code}`, text: `${subject.subject}(으)로 돌아가기` }),
+          ]
+        : [
+            el('a.pill', { href: `#/s/${subject.code}/notes`, text: '오답 노트 보기' }),
+            el('a.pill.ghost', { href: `#/s/${subject.code}/practice`, text: '연습으로 다시 풀기' }),
+            el('a.pill.ghost', { href: `#/s/${subject.code}/exam`, text: examTries ? `${examTries + 1}차 실전 재시험 시도` : '실전으로 풀기' }),
+            el('a.pill.ghost', { href: `#/s/${subject.code}`, text: `${subject.subject}(으)로 돌아가기` }),
+          ];
+
   const root = el('div');
   ctx.show(root);
 
@@ -698,7 +719,8 @@ export async function renderResult(ctx, subject, sessionId, opts = {}) {
         el('p.eyebrow', { text: `${owner} · ${opts.title || MODE_LABEL[mode]} 결과${session?.timedOut ? ' · 시간 초과로 자동 제출' : ''}` }),
         el('h1.score', {}, String(sum.earned), el('small', { text: ` / ${sum.max}점` })),
         sum.pending ? el('p.sub', { text: `서술형 ${sum.pending}문제를 아직 채점하지 않아 잠정 점수입니다.` }) : null,
-        !loaded.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
+        !loaded.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null,
+        el('div.hero-actions', {}, buildActions())
       ),
       el('div.wrap', {},
         el('div.tiles', {},
@@ -714,12 +736,7 @@ export async function renderResult(ctx, subject, sessionId, opts = {}) {
         section('틀린 문제', '열어서 해설을 읽고, 왜 틀렸는지 하나씩 골라 두세요.', wrong),
         section('전체 문제', null, sum.rows.filter((r) => !pending.includes(r) && !wrong.includes(r))),
         el('section.section', {},
-          opts.actions ? el('div.hero-actions.left', {}, opts.actions()) : el('div.hero-actions.left', {},
-            el('a.pill', { href: `#/s/${subject.code}/notes`, text: '오답 노트 보기' }),
-            el('a.pill.ghost', { href: `#/s/${subject.code}/practice`, text: '연습으로 다시 풀기' }),
-            el('a.pill.ghost', { href: `#/s/${subject.code}/exam`, text: '실전으로 풀기' }),
-            el('a.pill.ghost', { href: `#/s/${subject.code}`, text: `${subject.subject}(으)로 돌아가기` })
-          )
+          el('div.hero-actions.left', {}, buildActions())
         )
       )
     );

@@ -10,12 +10,12 @@
  * 점수는 과목·회차마다 「처음 응시한 것」으로 센다 — 진단은 한 번이 의미가 있으므로.
  */
 
-import { el, newId } from './dom.js?v=20261124-2118';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2118';
-import { enterLearner } from './lock.js?v=20261124-2118';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-2118';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261124-2118';
-import { avatar } from './characters.js?v=20261124-2118';
+import { el, newId } from './dom.js?v=20261124-2124';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2124';
+import { enterLearner } from './lock.js?v=20261124-2124';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-2124';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261124-2124';
+import { avatar } from './characters.js?v=20261124-2124';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
@@ -76,10 +76,11 @@ async function loadScores(ctx, subjects) {
     const mine = scores.get(name)[r.id];
     if (mine[sess.subject]) {
       mine[sess.subject].tries++;
+      mine[sess.subject].lastSession = sess.session;
       continue; // 첫 응시만 센다
     }
     const sum = summarize(paper.questions, merged.attempts.filter((a) => a.session === sess.session));
-    mine[sess.subject] = { score: sum.earned, max: sum.max, correct: sum.choice.correct, count: sum.choice.count, session: sess.session, at: sess.at, tries: 1 };
+    mine[sess.subject] = { score: sum.earned, max: sum.max, correct: sum.choice.correct, count: sum.choice.count, session: sess.session, lastSession: sess.session, at: sess.at, tries: 1 };
   }
   const names = listLearners(loaded.records, [...getSavedLearners(), getCurrentLearner()]);
   for (const n of scores.keys()) if (!names.includes(n)) names.push(n);
@@ -185,17 +186,20 @@ async function renderAssessHome(ctx, exam, query) {
           const got = mine[r.id][sub.code];
           const hasPaper = !!data.papers.get(`${sub.code}/${r.id}`);
           const locked = r.id === 'd2' && !mine.d1[sub.code];
-          const inProgress = !got && readExamState(sub.code, assessKey(r.id, sub.code));
+          const inProgress = readExamState(sub.code, assessKey(r.id, sub.code));
           const prev = r.id === 'd2' ? mine.d1[sub.code]?.score : null;
           const dl = got && prev != null ? deltaText(prev, got.score) : null;
           return el(`div.card.assess-card${got ? '.done' : ''}`, {},
-            el('div.assess-top', {}, el('h3', { text: sub.subject }), got ? el('span.badge.graduated', { text: '응시 완료' }) : locked ? el('span.badge.waiting', { text: '1차 먼저' }) : null),
+            el('div.assess-top', {}, el('h3', { text: sub.subject }), got ? el('span.badge.graduated', { text: got.tries > 1 ? `${got.tries}차 완료` : '응시 완료' }) : locked ? el('span.badge.waiting', { text: '1차 먼저' }) : null),
             got
               ? el('div.assess-score', {}, el('b', { text: String(got.score) }), el('small', { text: ' / 100점' }), dl ? el(`span.delta.${dl.cls}`, { text: dl.text }) : null)
               : el('p.meta', { text: !hasPaper ? '문제 준비 중' : locked ? '1차 진단평가를 먼저 보면 열립니다.' : inProgress ? '풀던 시험이 있습니다.' : '아직 응시하지 않았습니다.' }),
             el('div.hero-actions.left', {},
               got
-                ? el('a.pill.ghost.small', { href: `#/assess/${r.id}/${sub.code}/result/${got.session}`, text: '결과 보기' })
+                ? [
+                    el(`a.pill.small${inProgress ? '' : '.ghost'}`, { href: `#/assess/${r.id}/${sub.code}`, text: inProgress ? '이어서 풀기' : `${(got.tries || 1) + 1}차 재시험 시도` }),
+                    el('a.pill.ghost.small', { href: `#/assess/${r.id}/${sub.code}/result/${got.lastSession || got.session}`, text: got.tries > 1 ? '최근 결과' : '결과 보기' }),
+                  ]
                 : hasPaper && !locked
                   ? el('a.pill.small', { href: `#/assess/${r.id}/${sub.code}`, text: inProgress ? '이어서 풀기' : '응시하기' })
                   : null
@@ -350,11 +354,11 @@ async function renderAssessStart(ctx, exam, roundId, subject) {
       el('h1', { text: r.title }),
       el('p.sub', { text: `${paper.questions.length}문항 · 100점 · ${MINUTES}분` }),
       el('p.scope', { text: done
-        ? `이미 ${done.score}점으로 응시했습니다. 다시 풀 수는 있지만 그래프와 순위에는 처음 점수가 남습니다.`
+        ? `이미 ${done.tries}차 응시했습니다(처음 ${done.score}점). 재시험을 볼 수 있지만 그래프와 순위에는 처음 점수가 남습니다.`
         : '시작을 누르면 시간이 흐릅니다. 모든 문제를 풀어야 제출할 수 있고, 제출하면 바로 채점합니다.' }),
       el('div.hero-actions', {},
         saved ? el('button.pill', { type: 'button', text: '풀던 시험 이어서', onclick: () => begin(saved) }) : null,
-        el(`button.pill${saved || done ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : done ? '다시 풀어 보기' : '시작', onclick: () => begin({ session: newId('d'), startedAt: Date.now(), answers: {} }) })
+        el(`button.pill${saved ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : done ? `${(done.tries || 1) + 1}차 재시험 시도` : '시작', onclick: () => begin({ session: newId('d'), startedAt: Date.now(), answers: {} }) })
       )
     )
   );
@@ -367,26 +371,27 @@ async function renderAssessResult(ctx, exam, roundId, subject, sessionId) {
   const data = await loadScores(ctx, exam.subjects);
   const me = getCurrentLearner();
   const mine = data.scores.get(me) || emptyScore();
+  const first = mine[roundId][subject.code];
+  const nextTry = (first?.tries || 1) + 1;
   return renderResult(ctx, subject, sessionId, {
     paper,
     title: `${subject.subject} ${r.title}`,
     backHref: '#/assess',
     backText: '수준 평가',
     extra: (sum) => {
-      const first = mine[roundId][subject.code];
       const notFirst = first && first.session !== sessionId;
       const prev = roundId === 'd2' ? mine.d1[subject.code] : null;
       const dl = prev ? deltaText(prev.score, sum.earned) : null;
       const lines = [];
-      if (notFirst) lines.push(`다시 푼 기록입니다. 그래프와 순위에는 처음 점수 ${first.score}점이 남습니다.`);
+      if (notFirst) lines.push(`재시험 기록입니다(${first.tries}차). 그래프와 순위에는 처음 점수 ${first.score}점이 남습니다.`);
       if (dl) lines.push(`1차 ${prev.score}점 → 2차 ${sum.earned}점 (${dl.text}점)`);
       const others = data.names.filter((n) => n !== me).map((n) => ({ n, v: data.scores.get(n)?.[roundId][subject.code]?.score })).filter((x) => typeof x.v === 'number');
       if (others.length) lines.push(`같은 시험을 본 다른 참여자: ${others.map((x) => `${x.n} ${x.v}점`).join(' · ')}`);
       return lines.length ? el('div.assess-note', {}, lines.map((t) => el('p', { text: t }))) : null;
     },
     actions: () => [
-      el('a.pill', { href: '#/assess', text: '성장 그래프 보기' }),
-      el('a.pill.ghost', { href: `#/assess/${roundId}/${subject.code}`, text: '다시 풀기' }),
+      el('a.pill', { href: `#/assess/${roundId}/${subject.code}`, text: `${nextTry}차 재시험 시도` }),
+      el('a.pill.ghost', { href: '#/assess', text: '성장 그래프 보기' }),
       roundId === 'd1' && paper ? el('a.pill.ghost', { href: `#/s/${subject.code}`, text: `${subject.subject} 공부하러 가기` }) : null,
       roundId === 'd1' ? el('a.pill.ghost', { href: `#/assess/d2/${subject.code}`, text: '2차 성취평가 보기' }) : null,
     ],
