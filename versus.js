@@ -10,11 +10,11 @@
  *   이번 주     월요일 0시 이전 기록만으로 다시 계산한 점수와의 차이
  */
 
-import { el } from './dom.js?v=20261124-1910';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-1910';
-import { listLearners, filterRecordsByLearner } from './grade.mjs?v=20261124-1910';
-import { computeProgress } from './dashboard.js?v=20261124-1910';
-import { avatar, characterOf } from './characters.js?v=20261124-1910';
+import { el } from './dom.js?v=20261124-1913';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-1913';
+import { listLearners, filterRecordsByLearner } from './grade.mjs?v=20261124-1913';
+import { computeProgress } from './dashboard.js?v=20261124-1913';
+import { avatar, characterOf } from './characters.js?v=20261124-1913';
 
 const MARGIN = 3;
 const OPP_KEY = 'examprep.versus.opp';
@@ -220,6 +220,7 @@ export async function renderVersus(ctx, exam) {
   select.value = opp;
   select.addEventListener('change', () => {
     try { localStorage.setItem(OPP_KEY, select.value); } catch { /* 무시 */ }
+    window.dispatchEvent(new Event('versus-opp')); // 머리말 아래 대결 띠도 같은 상대로
     void renderVersus(ctx, exam);
   });
 
@@ -286,4 +287,78 @@ export async function renderVersus(ctx, exam) {
       el('p.vs-note', { text: `점수 = 영상 30(본 편수) + 풀이 30(답을 낸 문항) + 정답 40(가장 최근 회차에서 맞힌 문항), 모두 전체 대비입니다. 과목 점수 차가 ${MARGIN}점 이하면 무승부입니다.` })
     )
   );
+}
+
+/* ── 머리말 아래 대결 띠 — 모든 화면에서 과목별 줄다리기를 한 줄로 보여 준다 ── */
+const BAR_CACHE = 'examprep.versus.bar';
+let barRun = 0;
+
+function paintBar(host, d, onPick) {
+  const wins = (side) => d.subjects.filter((s) => s.win === side).length;
+  let who = el('b.b', { text: d.opp });
+  if (d.others.length > 1) {
+    who = el('select.vsbar-select', { 'aria-label': '대결 상대 고르기', title: '대결 상대 고르기' }, d.others.map((n) => el('option', { value: n, text: n })));
+    who.value = d.opp;
+    who.addEventListener('change', () => {
+      try { localStorage.setItem(OPP_KEY, who.value); } catch { /* 무시 */ }
+      onPick?.();
+    });
+  }
+  host.replaceChildren(el('div.vsbar-inner', {},
+    el('div.vsbar-who', {},
+      el('a.vsbar-score', { href: '#/versus', title: '대결 페이지 열기' },
+        el('b.a', { text: String(wins('a')) }), el('i', { text: ':' }), el('b.b', { text: String(wins('b')) })),
+      el('span.vsbar-names', {}, el('b.a', { text: d.me }), el('i', { text: 'vs' }), who)
+    ),
+    el('div.vsbar-list', {}, d.subjects.map((s) => {
+      const state = s.win === 'draw' ? '무승부' : `${s.win === 'a' ? d.me : d.opp} 우세`;
+      return el(`a.vsbar-item.${s.win}`, { href: '#/versus', title: `${s.subject}: ${d.me} ${s.sa}점 · ${d.opp} ${s.sb}점 (${state})` },
+        el('span.vsbar-top', {}, el('b.a', { text: String(s.sa) }), el('span', { text: s.subject }), el('b.b', { text: String(s.sb) })),
+        el('span.vsbar-rope', {}, el('span.a', {}, el('i', { style: `width:${Math.min(100, s.sa)}%` })), el('span.b', {}, el('i', { style: `width:${Math.min(100, s.sb)}%` })))
+      );
+    }))
+  ));
+  host.dataset.key = `${d.me}|${d.opp}`;
+  host.hidden = false;
+}
+
+export async function renderVersusBar(ctx, exam, host, onPick) {
+  if (!host) return;
+  const run = ++barRun;
+  const me = getCurrentLearner();
+  let opp = null;
+  let cached = null;
+  try {
+    opp = localStorage.getItem(OPP_KEY);
+    cached = JSON.parse(localStorage.getItem(BAR_CACHE) || 'null');
+  } catch { /* 저장 공간을 못 쓰는 브라우저 */ }
+  // 지난번에 그린 것을 먼저 보여 주고(자리 흔들림 방지) 기록을 읽은 뒤 고쳐 그린다
+  const fresh = cached && cached.me === me && (!opp || cached.opp === opp);
+  if (fresh && host.dataset.key !== `${cached.me}|${cached.opp}`) paintBar(host, cached, onPick);
+  else if (!fresh && host.dataset.key && !host.dataset.key.startsWith(`${me}|`)) host.hidden = true;
+
+  const records = (await loadRecords()).records;
+  if (run !== barRun) return;
+  const others = listLearners(records, getSavedLearners()).filter((n) => n !== me);
+  if (!others.length) {
+    host.hidden = true;
+    host.replaceChildren();
+    delete host.dataset.key;
+    return;
+  }
+  if (!others.includes(opp)) opp = others[0];
+  const hasWork = (x) => x.v || x.qT;
+  const [A, B] = (await Promise.all([computeProgress(ctx, exam, records, me), computeProgress(ctx, exam, records, opp)])).map((list) => list.filter(hasWork));
+  if (run !== barRun) return;
+  const d = {
+    me, opp, others,
+    subjects: A.map((a, i) => {
+      const sa = scoreOf(a);
+      const sb = scoreOf(B[i]);
+      const diff = sa - sb;
+      return { subject: a.s.subject, sa: Math.round(sa), sb: Math.round(sb), win: diff > MARGIN ? 'a' : diff < -MARGIN ? 'b' : 'draw' };
+    }),
+  };
+  try { localStorage.setItem(BAR_CACHE, JSON.stringify(d)); } catch { /* 무시 */ }
+  paintBar(host, d, onPick);
 }

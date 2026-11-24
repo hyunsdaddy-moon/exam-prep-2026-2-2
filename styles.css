@@ -1106,3 +1106,39 @@ a.vs-mission:hover { text-decoration: none; filter: brightness(0.97); }
 .blank-desc { margin: 0; color: var(--text-2); font-size: 14px; }
 .p-q.blank-flash { outline: 3px solid color-mix(in srgb, var(--bad) 60%, transparent); outline-offset: 4px; border-radius: 6px; transition: outline-color 0.3s; }
 @media print { .blank-dialog { display: none !important; } }
+
+/* ── 머리말 아래 대결 띠 (과목별 줄다리기 한 줄) ── */
+.vsbar { --vs-a: #0071e3; --vs-b: #ff7a00; border-bottom: 1px solid var(--line-soft); background: var(--bg); }
+.vsbar[hidden] { display: none; }
+.vsbar-inner { max-width: 1080px; margin: 0 auto; padding: 7px 22px; display: flex; align-items: center; gap: 16px; }
+.vsbar-who { flex: none; display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.vsbar-score { display: inline-flex; align-items: baseline; gap: 3px; padding: 3px 10px; border-radius: 999px; background: var(--bg-soft); font-size: 15px; font-weight: 800; color: var(--text-2); }
+.vsbar-score:hover { text-decoration: none; background: var(--line-soft); }
+.vsbar-score i, .vsbar-names i { font-style: normal; font-weight: 400; color: var(--text-3); }
+.vsbar-names { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.vsbar .a { color: var(--vs-a); }
+.vsbar .b { color: #c25400; }
+.vsbar-select { font: inherit; font-weight: 700; color: #c25400; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); padding: 2px 4px; max-width: 96px; }
+.vsbar-list { flex: 1; min-width: 0; display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; }
+.vsbar-list::-webkit-scrollbar { display: none; }
+.vsbar-item { flex: 1 0 78px; display: grid; gap: 3px; color: var(--text); }
+.vsbar-item:hover { text-decoration: none; }
+.vsbar-item:hover .vsbar-top span { color: var(--accent-text); }
+.vsbar-top { display: flex; align-items: baseline; justify-content: space-between; gap: 4px; font-size: 12px; line-height: 1.2; white-space: nowrap; }
+.vsbar-top b { font-size: 13px; font-weight: 800; min-width: 18px; }
+.vsbar-top b.b { text-align: right; }
+.vsbar-top span { color: var(--text-2); font-weight: 600; }
+.vsbar-item.a .vsbar-top span { color: var(--vs-a); }
+.vsbar-item.b .vsbar-top span { color: #c25400; }
+.vsbar-rope { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.vsbar-rope span { display: flex; height: 8px; border-radius: 999px; background: var(--line-soft); overflow: hidden; }
+.vsbar-rope span.a { justify-content: flex-end; }
+.vsbar-rope i { display: block; height: 100%; border-radius: inherit; transition: width 0.4s; }
+.vsbar-rope .a i { background: var(--vs-a); }
+.vsbar-rope .b i { background: var(--vs-b); }
+@media (max-width: 860px) {
+  .vsbar-inner { padding: 6px 12px; gap: 10px; }
+  .vsbar-names b.a, .vsbar-names i { display: none; }
+  .vsbar-item { flex-basis: 70px; }
+}
+@media print { .vsbar { display: none !important; } }
