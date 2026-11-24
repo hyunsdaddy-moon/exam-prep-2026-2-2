@@ -13,11 +13,12 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2039';
-import { renderMarkdown } from './markdown.js?v=20261124-2039';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2039';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2039';
-import { explainButton } from './explain.js?v=20261124-2039';
+import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2041';
+import { renderMarkdown } from './markdown.js?v=20261124-2041';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2041';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2041';
+import { explainButton } from './explain.js?v=20261124-2041';
+import { inkTools } from './ink.js?v=20261124-2041';
 
 const ROUND_BASE = 40;
 const SESSION_PREFIX = 'dqs-';
@@ -168,6 +169,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   );
 
   /* ── 문제 ── */
+  const ink = { pending: [], add(b, id) { this.pending.push([b, id]); } }; // 연필·지우개 — 시험지가 만들어진 뒤 붙인다
   const cols = el('div.cols');
   const essays = el('div.dq-essays');
   const painters = [];
@@ -275,6 +277,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       });
     }
     target.append(block);
+    ink.add(block, q.id);
   }
 
   /* ── 위쪽 기록 · 버튼 ── */
@@ -368,6 +371,8 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   });
 
   const sheet = el('div.sheet.exam-paper.dq-paper', {}, head, cols, essayCount ? el('h3.p-group.dq-essay-title', { text: '서술형' }) : null, essays);
+  const pen = inkTools(sheet, `doc.${code}.${file}`);
+  for (const [b, id] of ink.pending) pen.add(b, id);
   const heading = el('h2', { id: 'doc-quiz', text: `📝 ${quiz.title || '단원 평가'}` });
   const section = el('section.dq', {}, heading, sheet);
   paintAll();

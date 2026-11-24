@@ -10,12 +10,12 @@
  * 점수는 과목·회차마다 「처음 응시한 것」으로 센다 — 진단은 한 번이 의미가 있으므로.
  */
 
-import { el, newId } from './dom.js?v=20261124-2039';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2039';
-import { enterLearner } from './lock.js?v=20261124-2039';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-2039';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261124-2039';
-import { avatar } from './characters.js?v=20261124-2039';
+import { el, newId } from './dom.js?v=20261124-2041';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2041';
+import { enterLearner } from './lock.js?v=20261124-2041';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-2041';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261124-2041';
+import { avatar } from './characters.js?v=20261124-2041';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
@@ -337,6 +337,7 @@ async function renderAssessStart(ctx, exam, roundId, subject) {
   const begin = (state) => runExam(ctx, subject, paper.questions, paper.groups, limit, state, {
     mode: 'assess',
     key,
+    inkScope: `assess.${roundId}.${subject.code}`,
     round: r.n,
     title: `${subject.subject} ${r.title}`,
     paper: { kicker: `${exam.title} · 수준 평가`, kind: r.title, note: `선택형 ${paper.questions.length}문항 · 총 100점 · ${MINUTES}분 · 답 번호를 누르면 표시되고, 한 번 더 누르면 지워집니다.` },

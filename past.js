@@ -10,8 +10,9 @@
  * 「다 봤어요」 표시는 이 기기에만 참여자별로 남긴다.
  */
 
-import { el } from './dom.js?v=20261124-2039';
-import { getCurrentLearner } from './store.js?v=20261124-2039';
+import { el } from './dom.js?v=20261124-2041';
+import { getCurrentLearner } from './store.js?v=20261124-2041';
+import { inkTools } from './ink.js?v=20261124-2041';
 
 let cache = null;
 function loadPast(ctx) {
@@ -106,8 +107,10 @@ async function renderPastPaper(ctx, examId, code) {
   const older = sameSubject[i + 1];
 
   const pages = [];
+  const pageNo = [];
   for (let n = part.from; n <= part.to; n++) {
     const src = pageSrc(examId, n);
+    pageNo.push(n);
     pages.push(el('figure.past-page', {},
       el('a', { href: src, target: '_blank', rel: 'noopener', title: '새 창에서 크게 보기' },
         el('img', { src, alt: `${subject} ${n - part.from + 1}쪽`, loading: n === part.from ? 'eager' : 'lazy', width: '1075', height: '1521' })),
@@ -124,8 +127,7 @@ async function renderPastPaper(ctx, examId, code) {
   seenBtn.addEventListener('click', () => { setSeen(id, !readSeen().has(id)); paintSeen(); });
   paintSeen();
 
-  ctx.show(
-    el('div.wrap.past-view', {},
+  const view = el('div.wrap.past-view', {},
       el('a.back', { href: `#/past?s=${code}`, text: `기출문제 · ${subject}` }),
       el('h1.past-title', { text: `${subject} — ${exam.title}` }),
       el('p.meta', { text: `${label(exam.month)} · ${data.grade} · ${pagesOf(part)}쪽${exam.note ? ` · ${exam.note}` : ''}` }),
@@ -139,6 +141,9 @@ async function renderPastPaper(ctx, examId, code) {
         newer ? el('a.pill.ghost.small', { href: `#/past/${newer.id}/${code}`, text: `← 최근 회차 (${label(newer.month)})` }) : null,
         older ? el('a.pill.ghost.small', { href: `#/past/${older.id}/${code}`, text: `이전 회차 (${label(older.month)}) →` }) : null
       )
-    )
-  );
+    );
+  // 연필·지우개 — 쪽 그림마다 그림판을 덮는다
+  const ink = inkTools(view, `past.${examId}.${code}`);
+  pages.forEach((fig, i) => ink.add(fig, `p${pageNo[i]}`));
+  ctx.show(view);
 }

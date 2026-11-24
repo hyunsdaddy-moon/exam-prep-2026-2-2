@@ -9,12 +9,13 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2039';
-import { renderMarkdown } from './markdown.js?v=20261124-2039';
-import { explainButton } from './explain.js?v=20261124-2039';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2039';
-import { loadPaper } from './study.js?v=20261124-2039';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2039';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2041';
+import { renderMarkdown } from './markdown.js?v=20261124-2041';
+import { explainButton } from './explain.js?v=20261124-2041';
+import { inkTools } from './ink.js?v=20261124-2041';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2041';
+import { loadPaper } from './study.js?v=20261124-2041';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2041';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -29,7 +30,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-2039';
+} from './grade.mjs?v=20261124-2041';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -220,6 +221,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
     const skip = el('button.pill.ghost', { type: 'button', text: last ? '건너뛰고 결과 보기' : '건너뛰기', onclick: () => next.click() });
 
     card.append(contextBlock(groups.get(q.group)) || '', questionHead(q), passageBlock(q) || '', md(q.stem, 'md q-stem'));
+    inkTools(card, `${mode}.${subject.code}`).add(card, q.id); // 연필·지우개
 
     if (q.type === 'choice') {
       let picked = [];
@@ -388,6 +390,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   const omrCells = new Map();
   const qBlocks = new Map();
   const sheet = el('div.exam-sheet');
+  const ink = inkTools(sheet, opts.inkScope || `${mode}.${subject.code}`); // 연필·지우개
 
   const refresh = (q) => {
     const cell = omrCells.get(q.id);
@@ -467,6 +470,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
         block.append(input);
       }
       flow.append(block);
+      ink.add(block, q.id);
       addCell(q, block);
       continue;
     }
@@ -494,6 +498,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       block.append(input);
     }
     sheet.append(block);
+    ink.add(block, q.id);
     addCell(q, block);
   }
 
