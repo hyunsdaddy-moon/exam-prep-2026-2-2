@@ -8,12 +8,12 @@
  *   (개념 진도율은 과목 페이지와 같은 값 — 개념 읽기·예상 문제 풀이로 계산)
  */
 
-import { el, CIRCLED, plainStem } from './dom.js?v=20261124-2212';
-import { loadRecords } from './store.js?v=20261124-2212';
-import { mergeRecordsForLearner, summarize } from './grade.mjs?v=20261124-2212';
-import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-2212';
-import { loadStudy } from './study.js?v=20261124-2212';
-import { avatar, refreshProfiles } from './characters.js?v=20261124-2212';
+import { el, CIRCLED, plainStem } from './dom.js?v=20261124-2250';
+import { loadRecords } from './store.js?v=20261124-2250';
+import { mergeRecordsForLearner, summarize } from './grade.mjs?v=20261124-2250';
+import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-2250';
+import { loadStudy } from './study.js?v=20261124-2250';
+import { avatar, refreshProfiles } from './characters.js?v=20261124-2250';
 
 const COMPARE = ['문종배', '문현'];
 const UNIT_ROUND_BASE = 10;

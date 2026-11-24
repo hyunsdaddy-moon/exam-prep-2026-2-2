@@ -7,26 +7,26 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2212';
-import { el, versioned } from './dom.js?v=20261124-2212';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2212';
-import { renderUnitsRoute } from './units.js?v=20261124-2212';
-import { buildDocQuiz } from './docquiz.js?v=20261124-2212';
-import { attachWatchBoxes } from './watch.js?v=20261124-2212';
-import { renderDashboard } from './dashboard.js?v=20261124-2212';
-import { renderGrades } from './grades.js?v=20261124-2212';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2212';
-import { renderAssessRoute } from './assess.js?v=20261124-2212';
-import { renderPastRoute } from './past.js?v=20261124-2212';
-import { renderWrongbook } from './wrongbook.js?v=20261124-2212';
-import { renderBoard } from './board.js?v=20261124-2212';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2212';
-import { loadStudy } from './study.js?v=20261124-2212';
-import { renderPrint, printLinks } from './print.js?v=20261124-2212';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2212';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2212';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2212';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2212';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2250';
+import { el, versioned } from './dom.js?v=20261124-2250';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2250';
+import { renderUnitsRoute } from './units.js?v=20261124-2250';
+import { buildDocQuiz } from './docquiz.js?v=20261124-2250';
+import { attachWatchBoxes } from './watch.js?v=20261124-2250';
+import { renderDashboard } from './dashboard.js?v=20261124-2250';
+import { renderGrades } from './grades.js?v=20261124-2250';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2250';
+import { renderAssessRoute } from './assess.js?v=20261124-2250';
+import { renderPastRoute } from './past.js?v=20261124-2250';
+import { renderWrongbook } from './wrongbook.js?v=20261124-2250';
+import { renderBoard } from './board.js?v=20261124-2250';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2250';
+import { loadStudy } from './study.js?v=20261124-2250';
+import { renderPrint, printLinks } from './print.js?v=20261124-2250';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2250';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2250';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2250';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2250';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -350,7 +350,6 @@ async function renderHome() {
         el('a.pill.ghost', { href: '#/past', text: '기출문제' }),
         el('a.pill.ghost', { href: '#/notes', text: '오답 노트' }),
         el('a.pill.ghost', { href: '#/dashboard', text: '학습 현황' }),
-        isProtected(study.learner) ? el('a.pill.ghost', { href: '#/grades', text: '성적' }) : null,
         el('a.pill.ghost', { href: '#/versus', text: '대결' }),
         el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }),
         el('a.pill.ghost', { href: '#/me', text: '캐릭터 고르기' })
