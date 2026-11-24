@@ -9,12 +9,12 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned } from './dom.js?v=20261124-1703';
-import { renderMarkdown } from './markdown.js?v=20261124-1703';
-import { explainButton } from './explain.js?v=20261124-1703';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-1703';
-import { loadPaper } from './study.js?v=20261124-1703';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-1703';
+import { el, newId, CIRCLED, plainStem, versioned } from './dom.js?v=20261124-1706';
+import { renderMarkdown } from './markdown.js?v=20261124-1706';
+import { explainButton } from './explain.js?v=20261124-1706';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-1706';
+import { loadPaper } from './study.js?v=20261124-1706';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-1706';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -29,7 +29,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-1703';
+} from './grade.mjs?v=20261124-1706';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };

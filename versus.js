@@ -10,11 +10,11 @@
  *   이번 주     월요일 0시 이전 기록만으로 다시 계산한 점수와의 차이
  */
 
-import { el } from './dom.js?v=20261124-1703';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-1703';
-import { listLearners, filterRecordsByLearner } from './grade.mjs?v=20261124-1703';
-import { computeProgress } from './dashboard.js?v=20261124-1703';
-import { avatar } from './characters.js?v=20261124-1703';
+import { el } from './dom.js?v=20261124-1706';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-1706';
+import { listLearners, filterRecordsByLearner } from './grade.mjs?v=20261124-1706';
+import { computeProgress } from './dashboard.js?v=20261124-1706';
+import { avatar, characterOf } from './characters.js?v=20261124-1706';
 
 const MARGIN = 3;
 const OPP_KEY = 'examprep.versus.opp';
@@ -79,6 +79,15 @@ function activity(records, learner, days) {
     } else if (r.type === 'read' && /^v:.+:[1-5]$/.test(String(r.concept))) slot.video += 1;
   }
   return days.map((d) => map.get(d));
+}
+
+/** 점수판의 큰 캐릭터 — 배경을 걷어낸 그림. 캐릭터를 안 골랐거나 그림이 없으면 작은 얼굴로 */
+function face(name) {
+  const c = characterOf(name);
+  if (!c) return avatar(name, 'md');
+  const img = el('img.vs-face', { src: `assets/characters/${c.id}-cut.webp?v=1`, alt: c.name, title: c.name, decoding: 'async' });
+  img.addEventListener('error', () => img.replaceWith(avatar(name, 'md')));
+  return img;
 }
 
 function tug(icon, label, a, b, total, unit) {
@@ -224,10 +233,10 @@ export async function renderVersus(ctx, exam) {
     el('section.hero.vs-hero', {},
       el('p.eyebrow', { text: '대결' }),
       el('div.vs-board', {},
-        el('div.vs-player.a', {}, avatar(me, 'md'), el('b', { text: me }), el('span', { text: `종합 ${fmt(totalA)}점` })),
+        el('div.vs-player.a', {}, face(me), el('b', { text: me }), el('span', { text: `종합 ${fmt(totalA)}점` })),
         el('div.vs-score', {}, el('span.a', { text: String(winsA) }), el('i', { text: ':' }), el('span.b', { text: String(winsB) }),
           el('small', { text: `과목 승${draws ? ` · 무승부 ${draws}` : ''}` })),
-        el('div.vs-player.b', {}, avatar(opp, 'md'), el('b', { text: opp }), el('span', { text: `종합 ${fmt(totalB)}점` }))
+        el('div.vs-player.b', {}, face(opp), el('b', { text: opp }), el('span', { text: `종합 ${fmt(totalB)}점` }))
       ),
       el('p.sub', { text: `${headline} · 종합 ${lead >= 0 ? '+' : ''}${r1(lead)}점` }),
       el('p.vs-week', { text: weekLine }),
