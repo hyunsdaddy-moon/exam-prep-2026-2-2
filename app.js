@@ -7,26 +7,26 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2210';
-import { el, versioned } from './dom.js?v=20261124-2210';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2210';
-import { renderUnitsRoute } from './units.js?v=20261124-2210';
-import { buildDocQuiz } from './docquiz.js?v=20261124-2210';
-import { attachWatchBoxes } from './watch.js?v=20261124-2210';
-import { renderDashboard } from './dashboard.js?v=20261124-2210';
-import { renderGrades } from './grades.js?v=20261124-2210';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2210';
-import { renderAssessRoute } from './assess.js?v=20261124-2210';
-import { renderPastRoute } from './past.js?v=20261124-2210';
-import { renderWrongbook } from './wrongbook.js?v=20261124-2210';
-import { renderBoard } from './board.js?v=20261124-2210';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2210';
-import { loadStudy } from './study.js?v=20261124-2210';
-import { renderPrint, printLinks } from './print.js?v=20261124-2210';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2210';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2210';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2210';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2210';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2212';
+import { el, versioned } from './dom.js?v=20261124-2212';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2212';
+import { renderUnitsRoute } from './units.js?v=20261124-2212';
+import { buildDocQuiz } from './docquiz.js?v=20261124-2212';
+import { attachWatchBoxes } from './watch.js?v=20261124-2212';
+import { renderDashboard } from './dashboard.js?v=20261124-2212';
+import { renderGrades } from './grades.js?v=20261124-2212';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2212';
+import { renderAssessRoute } from './assess.js?v=20261124-2212';
+import { renderPastRoute } from './past.js?v=20261124-2212';
+import { renderWrongbook } from './wrongbook.js?v=20261124-2212';
+import { renderBoard } from './board.js?v=20261124-2212';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2212';
+import { loadStudy } from './study.js?v=20261124-2212';
+import { renderPrint, printLinks } from './print.js?v=20261124-2212';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2212';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2212';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2212';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2212';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -39,10 +39,28 @@ const ROLE_LABEL = { summary: '핵심 요약', unit: '단원 정리', exam: '예
 
 const data = { exam: null, concepts: [] };
 
+/* 같은 자료를 여러 화면이 동시에 달라고 해도 한 번만 내려받는다 (글자로 보관 → 화면마다 새 객체로 풀어 준다).
+ * 받다가 끊기면 한 번 더 시도하고, 실패한 것은 보관하지 않아 다음에 다시 받는다. */
+const jsonText = new Map();
+async function fetchText(url) {
+  let lastErr;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(versioned(url));
+      if (res.status === 404) throw Object.assign(new Error(`${url} → 404`), { final: true });
+      if (!res.ok) throw new Error(`${url} → ${res.status}`);
+      return await res.text();
+    } catch (err) {
+      lastErr = err;
+      if (err.final) break;
+      await new Promise((r) => setTimeout(r, 800));
+    }
+  }
+  throw lastErr;
+}
 async function getJson(url) {
-  const res = await fetch(versioned(url));
-  if (!res.ok) throw new Error(`${url} → ${res.status}`);
-  return res.json();
+  if (!jsonText.has(url)) jsonText.set(url, fetchText(url).catch((err) => { jsonText.delete(url); throw err; }));
+  return JSON.parse(await jsonText.get(url));
 }
 
 const docsOf = (s) => s.docs || [];

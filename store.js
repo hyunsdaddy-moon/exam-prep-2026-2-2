@@ -2,11 +2,22 @@
  * 시험 준비 웹앱 — 풀이 기록 · 참여자 상태 관리 (Firebase Firestore 실시간 공유 + localStorage 폴백)
  */
 
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
-import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
-import { getFirestore, collection, query, where, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
-import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-2210';
-import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-2210';
+/*
+ * 파이어베이스는 처음부터 import 하지 않고 initCloud() 에서 필요할 때 불러온다.
+ * gstatic.com 이 느리거나 막힌 곳(학교 Wi-Fi 등)에서도 화면은 바로 뜨고, 기록은 이 기기에 보관된다.
+ */
+const FB = 'https://www.gstatic.com/firebasejs/11.10.0/';
+let initializeApp, getAuth, signInAnonymously, getFirestore, collection, query, where, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc;
+async function loadFirebase() {
+  if (initializeApp) return;
+  const [a, b, c] = await Promise.all([import(`${FB}firebase-app.js`), import(`${FB}firebase-auth.js`), import(`${FB}firebase-firestore.js`)]);
+  ({ initializeApp } = a);
+  ({ getAuth, signInAnonymously } = b);
+  ({ getFirestore, collection, query, where, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } = c);
+}
+const timeout = (ms, label) => new Promise((_, reject) => setTimeout(() => reject(new Error(label)), ms));
+import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-2212';
+import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-2212';
 
 export { DEFAULT_LEARNER, normalizeLearner };
 
@@ -318,9 +329,10 @@ function migrateLocalOnce() {
   }
 }
 
+let retryTimer = null;
 function initCloud() {
   if (initPromise) return initPromise;
-  initPromise = (async () => {
+  const connect = (async () => {
     // 연결 전 이 브라우저에 있던 기록 — 연결된 뒤 클라우드와 같으면 화면을 다시 그리지 않는다
     const baseRecords = readLocalRecords();
     let baseExamDate = null;
@@ -331,9 +343,11 @@ function initCloud() {
     }
     const baseLearners = [...cloudLearners, ...readLearners()];
     try {
+      // 불러오기·로그인이 멈춰 있으면 화면이 기다리지 않게 시간 제한을 둔다
+      await Promise.race([loadFirebase(), timeout(10000, 'firebase-load')]);
       const app = initializeApp(FIREBASE_CONFIG);
       const auth = getAuth(app);
-      const user = auth.currentUser || (await signInAnonymously(auth)).user;
+      const user = auth.currentUser || (await Promise.race([signInAnonymously(auth), timeout(10000, 'firebase-auth')])).user;
       uid = user.uid;
       db = FIRESTORE_DATABASE_ID && FIRESTORE_DATABASE_ID !== '(default)' ? getFirestore(app, FIRESTORE_DATABASE_ID) : getFirestore(app);
 
@@ -478,11 +492,28 @@ function initCloud() {
     } catch {
       syncStatus = 'offline';
       notify('error');
+      // 연결을 못 했으면 잠시 뒤(또는 인터넷이 다시 연결되면) 처음부터 다시 시도한다
+      if (!db) {
+        clearTimeout(retryTimer);
+        retryTimer = setTimeout(retryCloud, 30000);
+      }
       return false;
     }
   })();
+  initPromise = connect;
   return initPromise;
 }
+
+function retryCloud() {
+  if (db) return;
+  clearTimeout(retryTimer);
+  initPromise = null;
+  syncStatus = 'connecting';
+  void initCloud().then((ok) => {
+    if (ok) void flushPending();
+  });
+}
+if (typeof window !== 'undefined') window.addEventListener('online', retryCloud);
 
 /** 저장된 참여자 표시 순서대로 이름 목록을 정렬한다 (순서에 없는 이름은 뒤에 원래 순서대로 붙인다) */
 export function sortLearners(names) {

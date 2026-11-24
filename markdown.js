@@ -134,10 +134,12 @@ export function renderMarkdown(source, container, { imageBase = '', onImage, bre
     fresh.loading = 'lazy';
     fresh.decoding = 'async';
     fresh.alt = alt;
-    fresh.src = abs;
+    // 문서 폴더의 .png 는 옆에 만들어 둔 가벼운 .webp(약 1/10 크기)를 먼저 쓰고, 없으면 원래 .png 로 돌아간다
+    const light = !/^(https?:|data:)/.test(src) && /\.png$/i.test(abs) ? abs.replace(/\.png$/i, '.webp') : null;
+    fresh.src = light || abs;
     fresh.tabIndex = 0;
     fresh.setAttribute('role', 'button');
-    const open = () => onImage?.(abs, alt);
+    const open = () => onImage?.(fresh.currentSrc || fresh.src || abs, alt);
     fresh.addEventListener('click', open);
     fresh.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -146,6 +148,10 @@ export function renderMarkdown(source, container, { imageBase = '', onImage, bre
       }
     });
     fresh.addEventListener('error', () => {
+      if (light && fresh.getAttribute('src') === light) {
+        fresh.src = abs; // .webp 가 없으면 원래 그림으로
+        return;
+      }
       const missing = document.createElement('div');
       missing.className = 'img-missing';
       missing.textContent = `그림을 불러오지 못했습니다 — ${alt || src}`;
