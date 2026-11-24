@@ -467,6 +467,8 @@ button.link:hover { text-decoration: underline; }
 
 .foot { border-top: 1px solid var(--line-soft); padding: 22px; text-align: center; color: var(--text-3); font-size: 12px; }
 .foot p { margin: 0; }
+.foot .foot-links { margin-top: 8px; font-size: 14px; }
+.foot .foot-links a { display: inline-block; padding: 6px 12px; }
 
 /* ── 등장 움직임 (움직임 줄이기 설정을 따른다) ─────────────────────── */
 @media (prefers-reduced-motion: no-preference) {

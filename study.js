@@ -4,9 +4,9 @@
  * 화면을 열 때마다 새로 읽는다 — 다른 기기에서 푼 것도 바로 보이게.
  */
 
-import { loadRecords, getCurrentLearner, getSavedLearners, DEFAULT_LEARNER } from './store.js?v=20261124-2027';
-import { mergeRecordsForLearner, listLearners } from './grade.mjs?v=20261124-2027';
-import { buildHistories, subjectStudy, localDay } from './progress.mjs?v=20261124-2027';
+import { loadRecords, getCurrentLearner, getSavedLearners, DEFAULT_LEARNER } from './store.js?v=20261124-2033';
+import { mergeRecordsForLearner, listLearners } from './grade.mjs?v=20261124-2033';
+import { buildHistories, subjectStudy, localDay } from './progress.mjs?v=20261124-2033';
 
 const paperCache = new Map();
 

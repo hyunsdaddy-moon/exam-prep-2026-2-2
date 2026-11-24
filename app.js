@@ -7,31 +7,32 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2027';
-import { el, versioned } from './dom.js?v=20261124-2027';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2027';
-import { renderUnitsRoute } from './units.js?v=20261124-2027';
-import { buildDocQuiz } from './docquiz.js?v=20261124-2027';
-import { attachWatchBoxes } from './watch.js?v=20261124-2027';
-import { renderDashboard } from './dashboard.js?v=20261124-2027';
-import { renderGrades } from './grades.js?v=20261124-2027';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2027';
-import { renderAssessRoute } from './assess.js?v=20261124-2027';
-import { renderPastRoute } from './past.js?v=20261124-2027';
-import { renderWrongbook } from './wrongbook.js?v=20261124-2027';
-import { renderBoard } from './board.js?v=20261124-2027';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2027';
-import { loadStudy } from './study.js?v=20261124-2027';
-import { renderPrint, printLinks } from './print.js?v=20261124-2027';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2027';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2027';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2027';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2027';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2033';
+import { el, versioned } from './dom.js?v=20261124-2033';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2033';
+import { renderUnitsRoute } from './units.js?v=20261124-2033';
+import { buildDocQuiz } from './docquiz.js?v=20261124-2033';
+import { attachWatchBoxes } from './watch.js?v=20261124-2033';
+import { renderDashboard } from './dashboard.js?v=20261124-2033';
+import { renderGrades } from './grades.js?v=20261124-2033';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2033';
+import { renderAssessRoute } from './assess.js?v=20261124-2033';
+import { renderPastRoute } from './past.js?v=20261124-2033';
+import { renderWrongbook } from './wrongbook.js?v=20261124-2033';
+import { renderBoard } from './board.js?v=20261124-2033';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2033';
+import { loadStudy } from './study.js?v=20261124-2033';
+import { renderPrint, printLinks } from './print.js?v=20261124-2033';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2033';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2033';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2033';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2033';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
 const navLearner = document.getElementById('nav-learner');
 const footText = document.getElementById('foot-text');
+const footLinks = document.getElementById('foot-links');
 const vsbar = document.getElementById('vsbar');
 
 const ROLE_LABEL = { summary: '핵심 요약', unit: '단원 정리', exam: '예상 문제지', answers: '정답 및 해설' };
@@ -707,6 +708,8 @@ async function route() {
   // 홈은 클라우드 연결을 기다리지 않고 이 브라우저의 기록으로 먼저 그린다
   await (parts.length ? refreshProfiles() : loadRecords({ fast: true }).then((r) => refreshProfiles(r.records))).catch(() => null);
   renderNavLearner();
+  // 꼬리말의 성적 링크는 가족 참여자로 들어와 있을 때만 보인다
+  if (footLinks) footLinks.hidden = !isProtected(getCurrentLearner()) || needsUnlock();
   if (needsUnlock()) {
     if (vsbar) vsbar.hidden = true;
     return renderLock(ctx, () => void route());
