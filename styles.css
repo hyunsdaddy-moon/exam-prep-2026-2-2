@@ -511,7 +511,20 @@ button.link:hover { text-decoration: underline; }
 .learner-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
 .learner-card {
   width: 100%; text-align: left; font: inherit; color: var(--text);
-  border: 2px solid transparent; cursor: pointer;
+  border: 2px solid transparent; cursor: grab;
+  user-select: none; -webkit-user-select: none; touch-action: none;
+}
+.learner-card:active { cursor: grabbing; }
+.learner-card img { -webkit-user-drag: none; pointer-events: none; }
+.learner-card.is-dragging {
+  opacity: 0.35; border: 2px dashed var(--accent);
+  box-shadow: none !important; transform: none !important;
+}
+.learner-drag-ghost {
+  position: fixed; margin: 0; z-index: 9999; pointer-events: none;
+  display: flex; flex-direction: row; align-items: stretch; padding: 0; overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  cursor: grabbing; transition: none !important;
 }
 .learner-grid .learner-card { flex-direction: row; align-items: stretch; padding: 0; overflow: hidden; }
 /* 카드 왼쪽 세로 그림 — 카드 높이만큼 꽉 채움 */

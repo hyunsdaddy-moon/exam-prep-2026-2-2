@@ -10,9 +10,9 @@
  * 「다 봤어요」 표시는 이 기기에만 참여자별로 남긴다.
  */
 
-import { el } from './dom.js?v=20261124-2041';
-import { getCurrentLearner } from './store.js?v=20261124-2041';
-import { inkTools } from './ink.js?v=20261124-2041';
+import { el } from './dom.js?v=20261124-2055';
+import { getCurrentLearner } from './store.js?v=20261124-2055';
+import { inkTools } from './ink.js?v=20261124-2055';
 
 let cache = null;
 function loadPast(ctx) {

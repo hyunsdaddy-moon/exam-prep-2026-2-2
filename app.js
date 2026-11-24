@@ -7,26 +7,26 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2041';
-import { el, versioned } from './dom.js?v=20261124-2041';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2041';
-import { renderUnitsRoute } from './units.js?v=20261124-2041';
-import { buildDocQuiz } from './docquiz.js?v=20261124-2041';
-import { attachWatchBoxes } from './watch.js?v=20261124-2041';
-import { renderDashboard } from './dashboard.js?v=20261124-2041';
-import { renderGrades } from './grades.js?v=20261124-2041';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2041';
-import { renderAssessRoute } from './assess.js?v=20261124-2041';
-import { renderPastRoute } from './past.js?v=20261124-2041';
-import { renderWrongbook } from './wrongbook.js?v=20261124-2041';
-import { renderBoard } from './board.js?v=20261124-2041';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2041';
-import { loadStudy } from './study.js?v=20261124-2041';
-import { renderPrint, printLinks } from './print.js?v=20261124-2041';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2041';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2041';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2041';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2041';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2055';
+import { el, versioned } from './dom.js?v=20261124-2055';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2055';
+import { renderUnitsRoute } from './units.js?v=20261124-2055';
+import { buildDocQuiz } from './docquiz.js?v=20261124-2055';
+import { attachWatchBoxes } from './watch.js?v=20261124-2055';
+import { renderDashboard } from './dashboard.js?v=20261124-2055';
+import { renderGrades } from './grades.js?v=20261124-2055';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2055';
+import { renderAssessRoute } from './assess.js?v=20261124-2055';
+import { renderPastRoute } from './past.js?v=20261124-2055';
+import { renderWrongbook } from './wrongbook.js?v=20261124-2055';
+import { renderBoard } from './board.js?v=20261124-2055';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2055';
+import { loadStudy } from './study.js?v=20261124-2055';
+import { renderPrint, printLinks } from './print.js?v=20261124-2055';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2055';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2055';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2055';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2055';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -142,7 +142,9 @@ function learnersSection(study) {
     void renderHome();
   });
 
+  let suppressClickUntil = 0;
   const switchTo = async (name) => {
+    if (Date.now() < suppressClickUntil) return;
     if (name === study.learner) return;
     if (await enterLearner(name)) void renderHome();
   };
@@ -152,57 +154,159 @@ function learnersSection(study) {
       } })
     : null;
 
+  const chipsBox = el('div.chips', {},
+    study.learners.map((item) =>
+      el(`button.chip.pick${item.name === study.learner ? '.on' : ''}`, {
+        type: 'button',
+        'data-learner': item.name,
+        'aria-pressed': String(item.name === study.learner),
+        text: `${item.name} (${item.overall}%)`,
+        onclick: () => switchTo(item.name),
+      })
+    )
+  );
+
+  const grid = el('div.learner-grid', {},
+    study.learners.map((item) => {
+      const active = item.name === study.learner;
+      return el(`button.card.learner-card${active ? '.active' : ''}`, {
+        type: 'button',
+        'data-learner': item.name,
+        'aria-pressed': String(active),
+        title: '끌어서 위치 이동 · 클릭하면 참여자 전환',
+        onclick: () => switchTo(item.name),
+      },
+        el('div.learner-portrait', {},
+          avatar(item.name, 'portrait'),
+          active ? el('span.learner-now', { text: '현재 보는 중' }) : null
+        ),
+        el('div.learner-body', {},
+          el('div.learner-head', {},
+            el('strong', { text: item.name }),
+            el('span.learner-pct', { text: `${item.overall}%` })
+          ),
+          el('div.learner-progress', {}, el('i', { style: `width:${item.overall}%` })),
+          el('p.learner-meta', {
+            text: `푼 문제 ${item.triedQuestions} / ${item.totalQuestions} · 숙련도 ${item.mastery == null ? '–' : `${item.mastery}%`} · 오늘 복습 ${item.dueTotal}`,
+          }),
+          el('div.learner-subjects', {},
+            item.subjects.map((sub) =>
+              el(`span.learner-sub${sub.progress > 0 ? '.on' : ''}`, { text: `${sub.subject} ${sub.progress}%` })
+            )
+          )
+        )
+      );
+    })
+  );
+
+  enableLearnerCardDrag(grid, chipsBox, (order) => {
+    suppressClickUntil = Date.now() + 250;
+    setLearnerOrder(order);
+    renderNavLearner(order);
+  });
+
   return el('div.wrap', {},
     el('section.section.learners-section', { style: 'padding-top:0' },
       el('div.section-head', {},
         el('h2', { text: '참여자별 진도율' }),
-        el('p', { text: '참여자를 고르거나 추가하면 읽음·풀이·오답 기록과 진도율이 사람마다 따로 쌓입니다.' })
+        el('p', { text: '참여자를 고르거나 추가하면 읽음·풀이·오답 기록과 진도율이 사람마다 따로 쌓입니다. 카드를 드래그하면 위치를 바꿀 수 있습니다.' })
       ),
       el('div.learner-controls', {},
-        el('div.chips', {},
-          study.learners.map((item) =>
-            el(`button.chip.pick${item.name === study.learner ? '.on' : ''}`, {
-              type: 'button',
-              'aria-pressed': String(item.name === study.learner),
-              text: `${item.name} (${item.overall}%)`,
-              onclick: () => switchTo(item.name),
-            })
-          )
-        ),
+        chipsBox,
         el('div.learner-tools', {}, pinButton, form)
       ),
-      el('div.learner-grid', {},
-        study.learners.map((item) => {
-          const active = item.name === study.learner;
-          return el(`button.card.learner-card${active ? '.active' : ''}`, {
-            type: 'button',
-            'aria-pressed': String(active),
-            onclick: () => switchTo(item.name),
-          },
-            el('div.learner-portrait', {},
-              avatar(item.name, 'portrait'),
-              active ? el('span.learner-now', { text: '현재 보는 중' }) : null
-            ),
-            el('div.learner-body', {},
-              el('div.learner-head', {},
-                el('strong', { text: item.name }),
-                el('span.learner-pct', { text: `${item.overall}%` })
-              ),
-              el('div.learner-progress', {}, el('i', { style: `width:${item.overall}%` })),
-              el('p.learner-meta', {
-                text: `푼 문제 ${item.triedQuestions} / ${item.totalQuestions} · 숙련도 ${item.mastery == null ? '–' : `${item.mastery}%`} · 오늘 복습 ${item.dueTotal}`,
-              }),
-              el('div.learner-subjects', {},
-                item.subjects.map((sub) =>
-                  el(`span.learner-sub${sub.progress > 0 ? '.on' : ''}`, { text: `${sub.subject} ${sub.progress}%` })
-                )
-              )
-            )
-          );
-        })
-      )
+      grid
     )
   );
+}
+
+/** 참여자 카드를 드래그하여 순서를 바꾸고 상단 칩과 동기화한다 */
+function enableLearnerCardDrag(grid, chipsBox, onReordered) {
+  grid.addEventListener('dragstart', (e) => e.preventDefault());
+
+  const findOverCard = (x, y) => {
+    const hit = document.elementFromPoint(x, y)?.closest('.learner-card');
+    if (hit && hit.parentElement === grid) return hit;
+    const cards = [...grid.querySelectorAll('.learner-card')];
+    for (const c of cards) {
+      const r = c.getBoundingClientRect();
+      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return c;
+    }
+    const last = cards.at(-1);
+    if (last) {
+      const r = last.getBoundingClientRect();
+      const gr = grid.getBoundingClientRect();
+      if (y >= r.top && y <= gr.bottom && x > r.right && x <= gr.right) return last;
+    }
+    return null;
+  };
+
+  const syncChips = () => {
+    const byName = new Map([...chipsBox.querySelectorAll('[data-learner]')].map((c) => [c.dataset.learner, c]));
+    for (const card of grid.querySelectorAll('.learner-card')) {
+      const chip = byName.get(card.dataset.learner);
+      if (chip) chipsBox.append(chip);
+    }
+  };
+
+  grid.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0 && e.pointerType === 'mouse') return;
+    const card = e.target.closest('.learner-card');
+    if (!card || card.parentElement !== grid) return;
+
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const startRect = card.getBoundingClientRect();
+    let dragging = false;
+    let ghost = null;
+
+    const onMove = (ev) => {
+      const dx = ev.clientX - startX;
+      const dy = ev.clientY - startY;
+      if (!dragging) {
+        if (Math.hypot(dx, dy) < 6) return;
+        dragging = true;
+        card.classList.add('is-dragging');
+        ghost = card.cloneNode(true);
+        ghost.classList.remove('is-dragging');
+        ghost.classList.add('learner-drag-ghost');
+        ghost.style.left = `${startRect.left}px`;
+        ghost.style.top = `${startRect.top}px`;
+        ghost.style.width = `${startRect.width}px`;
+        ghost.style.height = `${startRect.height}px`;
+        document.body.append(ghost);
+      }
+      ev.preventDefault();
+      ghost.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(1.02)`;
+
+      const over = findOverCard(ev.clientX, ev.clientY);
+      if (over && over !== card) {
+        const cards = [...grid.querySelectorAll('.learner-card')];
+        const from = cards.indexOf(card);
+        const to = cards.indexOf(over);
+        if (from !== -1 && to !== -1 && from !== to) {
+          if (from < to) over.after(card);
+          else over.before(card);
+          syncChips();
+        }
+      }
+    };
+
+    const onEnd = () => {
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onEnd);
+      window.removeEventListener('pointercancel', onEnd);
+      if (!dragging) return;
+      ghost?.remove();
+      card.classList.remove('is-dragging');
+      const order = [...grid.querySelectorAll('.learner-card')].map((c) => c.dataset.learner).filter(Boolean);
+      onReordered(order);
+    };
+
+    window.addEventListener('pointermove', onMove, { passive: false });
+    window.addEventListener('pointerup', onEnd);
+    window.addEventListener('pointercancel', onEnd);
+  });
 }
 
 async function renderHome() {
@@ -771,7 +875,7 @@ async function start() {
     const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/').filter(Boolean);
     const liveView = parts.length === 0 || (parts[0] === 'assess' && parts.length === 1) || (parts[0] === 'units' && parts.length === 1) || (parts[0] === 'notes' && parts.length === 1) || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
     const tag = document.activeElement?.tagName;
-    if (!liveView || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    if (!liveView || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.querySelector('.learner-drag-ghost')) return;
     clearTimeout(refreshTimer);
     refreshTimer = setTimeout(() => void go(), 300);
   });

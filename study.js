@@ -4,9 +4,9 @@
  * 화면을 열 때마다 새로 읽는다 — 다른 기기에서 푼 것도 바로 보이게.
  */
 
-import { loadRecords, getCurrentLearner, getSavedLearners, DEFAULT_LEARNER } from './store.js?v=20261124-2041';
-import { mergeRecordsForLearner, listLearners } from './grade.mjs?v=20261124-2041';
-import { buildHistories, subjectStudy, localDay } from './progress.mjs?v=20261124-2041';
+import { loadRecords, getCurrentLearner, getSavedLearners, sortLearners, DEFAULT_LEARNER } from './store.js?v=20261124-2055';
+import { mergeRecordsForLearner, listLearners } from './grade.mjs?v=20261124-2055';
+import { buildHistories, subjectStudy, localDay } from './progress.mjs?v=20261124-2055';
 
 const paperCache = new Map();
 
@@ -97,7 +97,7 @@ export async function loadStudy(ctx, subjects, concepts, learner = getCurrentLea
 
   const saved = getSavedLearners().filter((n) => n !== DEFAULT_LEARNER);
   const extra = learner === DEFAULT_LEARNER ? [...saved, learner] : saved.includes(learner) ? saved : [...saved, learner];
-  const allLearners = listLearners(loaded.records, extra);
+  const allLearners = sortLearners(listLearners(loaded.records, extra));
 
   const learners = allLearners.map((name) => {
     const s = name === learner ? current : computeStudyFor(subjects, concepts, papers, loaded.records, name, today);

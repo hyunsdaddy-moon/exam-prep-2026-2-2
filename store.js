@@ -5,8 +5,8 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
 import { getFirestore, collection, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
-import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-2041';
-import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-2041';
+import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-2055';
+import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-2055';
 
 export { DEFAULT_LEARNER, normalizeLearner };
 
@@ -18,6 +18,7 @@ const CLOUD_LEARNERS_KEY = 'examprep.2026-2-2.cloudLearners';
 const MAX_RECORDS = 5000;
 const CURRENT_LEARNER_KEY = 'examprep.learner.current';
 const LEARNERS_KEY = 'examprep.learners';
+const LEARNER_ORDER_KEY = 'examprep.learners.order';
 
 const VALID_MODES = new Set(['practice', 'exam', 'review', 'assess']);
 const VALID_QTYPES = new Set(['choice', 'essay']);
@@ -416,13 +417,36 @@ function initCloud() {
   return initPromise;
 }
 
+/** 저장된 참여자 표시 순서대로 이름 목록을 정렬한다 (순서에 없는 이름은 뒤에 원래 순서대로 붙인다) */
+export function sortLearners(names) {
+  const order = readArray(LEARNER_ORDER_KEY).map(normalizeLearner).filter(Boolean);
+  if (!order.length) return names;
+  const rank = new Map(order.map((name, i) => [name, i]));
+  return [...names].sort((a, b) => {
+    const ra = rank.has(a) ? rank.get(a) : 1e9;
+    const rb = rank.has(b) ? rank.get(b) : 1e9;
+    return ra - rb;
+  });
+}
+
+/** 참여자 카드 표시 순서를 저장한다 */
+export function setLearnerOrder(names) {
+  const seen = [];
+  for (const raw of names || []) {
+    const name = normalizeLearner(raw);
+    if (name && !seen.includes(name)) seen.push(name);
+  }
+  writeArray(LEARNER_ORDER_KEY, seen);
+  return seen;
+}
+
 /** 이 브라우저와 클라우드에 등록된 참여자 목록 */
 export function getSavedLearners() {
   const seen = [];
   for (const name of [...cloudLearners, ...readLearners(), ...pendingLearners]) {
     if (name && !seen.includes(name)) seen.push(name);
   }
-  return seen;
+  return sortLearners(seen);
 }
 
 /** 새 참여자를 목록에 더하고 바로 선택한다. 비어 있으면 null */
