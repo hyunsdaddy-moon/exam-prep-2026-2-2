@@ -10,12 +10,12 @@
  * 점수는 과목·회차마다 「처음 응시한 것」으로 센다 — 진단은 한 번이 의미가 있으므로.
  */
 
-import { el, newId } from './dom.js?v=20261124-1901';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-1901';
-import { enterLearner } from './lock.js?v=20261124-1901';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-1901';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261124-1901';
-import { avatar } from './characters.js?v=20261124-1901';
+import { el, newId } from './dom.js?v=20261124-1910';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-1910';
+import { enterLearner } from './lock.js?v=20261124-1910';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-1910';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261124-1910';
+import { avatar } from './characters.js?v=20261124-1910';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
@@ -350,7 +350,7 @@ async function renderAssessStart(ctx, exam, roundId, subject) {
       el('p.sub', { text: `${paper.questions.length}문항 · 100점 · ${MINUTES}분` }),
       el('p.scope', { text: done
         ? `이미 ${done.score}점으로 응시했습니다. 다시 풀 수는 있지만 그래프와 순위에는 처음 점수가 남습니다.`
-        : '시작을 누르면 시간이 흐릅니다. 다 풀고 제출하면 바로 채점합니다. 모르는 문제는 찍지 말고 비워 두면 진짜 실력이 보입니다.' }),
+        : '시작을 누르면 시간이 흐릅니다. 모든 문제를 풀어야 제출할 수 있고, 제출하면 바로 채점합니다.' }),
       el('div.hero-actions', {},
         saved ? el('button.pill', { type: 'button', text: '풀던 시험 이어서', onclick: () => begin(saved) }) : null,
         el(`button.pill${saved || done ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : done ? '다시 풀어 보기' : '시작', onclick: () => begin({ session: newId('d'), startedAt: Date.now(), answers: {} }) })

@@ -1096,3 +1096,13 @@ a.vs-mission:hover { text-decoration: none; filter: brightness(0.97); }
 .pin-actions { display: flex; justify-content: flex-end; gap: 8px; }
 .lock-screen .link { font-size: 14px; }
 @media print { .pin-dialog { display: none !important; } }
+
+/* 안 푼 문제 알림 팝업 */
+.blank-dialog { width: min(380px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: var(--radius); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); color: var(--text); background: var(--card); font-family: var(--font); }
+.blank-dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
+.blank-box { padding: 24px; display: grid; gap: 10px; }
+.blank-box h2 { margin: 0; font-size: 19px; }
+.blank-list { margin: 0; font-size: 16px; font-weight: 700; color: var(--bad); line-height: 1.5; }
+.blank-desc { margin: 0; color: var(--text-2); font-size: 14px; }
+.p-q.blank-flash { outline: 3px solid color-mix(in srgb, var(--bad) 60%, transparent); outline-offset: 4px; border-radius: 6px; transition: outline-color 0.3s; }
+@media print { .blank-dialog { display: none !important; } }

@@ -41,3 +41,29 @@ const VERSION = new URL(import.meta.url).searchParams.get('v') || '';
 export function versioned(url) {
   return VERSION ? `${url}${url.includes('?') ? '&' : '?'}v=${VERSION}` : url;
 }
+
+/**
+ * 안 푼 문제 알림 팝업 — 모든 문제를 풀어야 제출할 수 있다.
+ * blanks: [{ label: '3번', go: () => 그 문제로 이동 }]  확인을 누르면 첫 번째 안 푼 문제로 간다.
+ */
+export function showBlankAlert(blanks) {
+  if (!blanks.length || document.querySelector('dialog.blank-dialog')) return;
+  const list = blanks.map((b) => b.label).join(', ');
+  const ok = el('button.pill.small', { type: 'button', text: `${blanks[0].label} 문제로 가기` });
+  const dialog = el('dialog.blank-dialog', { 'aria-label': '안 푼 문제' },
+    el('div.blank-box', {},
+      el('h2', { text: '아직 안 푼 문제가 있어요' }),
+      el('p.blank-list', { text: `${list} 문제를 풀지 않았습니다.` }),
+      el('p.blank-desc', { text: `모든 문제를 풀어야 제출할 수 있습니다. (안 푼 문제 ${blanks.length}개)` }),
+      el('div.pin-actions', {}, ok)
+    )
+  );
+  ok.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => {
+    dialog.remove();
+    blanks[0].go?.();
+  });
+  document.body.append(dialog);
+  dialog.showModal();
+  ok.focus();
+}

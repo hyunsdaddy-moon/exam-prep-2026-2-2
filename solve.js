@@ -9,12 +9,12 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned } from './dom.js?v=20261124-1901';
-import { renderMarkdown } from './markdown.js?v=20261124-1901';
-import { explainButton } from './explain.js?v=20261124-1901';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-1901';
-import { loadPaper } from './study.js?v=20261124-1901';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-1901';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-1910';
+import { renderMarkdown } from './markdown.js?v=20261124-1910';
+import { explainButton } from './explain.js?v=20261124-1910';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-1910';
+import { loadPaper } from './study.js?v=20261124-1910';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-1910';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -29,7 +29,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-1901';
+} from './grade.mjs?v=20261124-1910';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -348,7 +348,7 @@ async function renderExam(ctx, subject) {
       el('a.back', { href: `#/s/${subject.code}`, text: subject.subject }),
       el('h1', { text: '실전 풀이' }),
       el('p.sub', { text: `${questions.length}문항 · ${total}점 · ${Math.round(limit / 60)}분` }),
-      el('p.scope', { text: '시작을 누르면 시간이 흐릅니다. 다 풀고 제출하면 한 번에 채점합니다. 풀기 전에 정답과 해설은 보이지 않습니다.' }),
+      el('p.scope', { text: '시작을 누르면 시간이 흐릅니다. 모든 문제를 풀어야 제출할 수 있고, 제출하면 한 번에 채점합니다. 풀기 전에 정답과 해설은 보이지 않습니다.' }),
       el('div.hero-actions', {},
         saved ? el('button.pill', { type: 'button', text: '풀던 시험 이어서', onclick: () => begin(saved) }) : null,
         el(`button.pill${saved ? '.ghost' : ''}`, { type: 'button', text: saved ? '처음부터 새로' : '시작', onclick: fresh })
@@ -386,6 +386,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   const bar = el('div.reader-bar', {}, el('div.wrap', {}, el('div.title', {}, `${learner} · ${opts.title || `${subject.subject} 실전`} · `, clock), count, reset, submit));
   const omr = el('nav.omr', { 'aria-label': '답안 표시판' }, el('p', { text: '답안' }));
   const omrCells = new Map();
+  const qBlocks = new Map();
   const sheet = el('div.exam-sheet');
 
   const refresh = (q) => {
@@ -394,8 +395,6 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
     cell.classList.toggle('on', isAnswered(q));
     cell.lastChild.textContent = q.type === 'choice' ? (a.picked.length ? answerText(a.picked) : '') : isAnswered(q) ? '✓' : '';
     count.textContent = `${questions.filter(isAnswered).length} / ${questions.length} 풂`;
-    armed = false;
-    submit.textContent = '제출';
   };
 
   const addCell = (q, block) => {
@@ -404,6 +403,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       block.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } }, el('b', { text: q.type === 'essay' ? `서${q.no}` : String(q.no) }), el('span'));
     omrCells.set(q.id, cell);
+    qBlocks.set(q.id, block);
     omr.append(cell);
   };
 
@@ -497,7 +497,6 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
     addCell(q, block);
   }
 
-  let armed = false;
   let finished = false;
   const finish = async (timedOut) => {
     if (finished) return;
@@ -524,11 +523,20 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   };
 
   submit.addEventListener('click', () => {
-    const blank = questions.filter((q) => !isAnswered(q)).length;
-    // 안 푼 문제가 있으면 한 번 더 눌러야 제출된다
-    if (blank && !armed) {
-      armed = true;
-      submit.textContent = `안 푼 문제 ${blank}개 — 한 번 더 누르면 제출`;
+    if (finished) return;
+    // 모든 문제를 풀어야 제출된다 — 안 푼 문제 번호를 팝업으로 알려 주고 그 문제로 데려간다
+    const blanks = questions.filter((q) => !isAnswered(q));
+    if (blanks.length) {
+      showBlankAlert(blanks.map((q) => ({
+        label: q.type === 'essay' ? `서술형 ${q.no}번` : `${q.no}번`,
+        go: () => {
+          const b = qBlocks.get(q.id);
+          if (!b) return;
+          b.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          b.classList.add('blank-flash');
+          setTimeout(() => b.classList.remove('blank-flash'), 2500);
+        },
+      })));
       return;
     }
     void finish(false);

@@ -13,11 +13,11 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId } from './dom.js?v=20261124-1901';
-import { renderMarkdown } from './markdown.js?v=20261124-1901';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-1901';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1901';
-import { explainButton } from './explain.js?v=20261124-1901';
+import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-1910';
+import { renderMarkdown } from './markdown.js?v=20261124-1910';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-1910';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1910';
+import { explainButton } from './explain.js?v=20261124-1910';
 
 const ROUND_BASE = 40;
 const SESSION_PREFIX = 'dqs-';
@@ -155,7 +155,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       el('small', { text: `2026 2학기 2회고사 · 단원 평가${opts.docTitle ? ` · ${opts.docTitle}` : ''}` }),
       el('h1', {}, opts.subject || '', el('span', { text: ` ${quiz.title || '단원 평가'}` }))
     ),
-    el('p.sheet-note', { text: `선택형 ${choiceQs.length}문항${essayCount ? ` · 서술형 ${essayCount}문항` : ''} · 답을 모두 고른 뒤 「제출」을 누르면 채점됩니다. 제출할 때마다 1차·2차… 기록이 남습니다.` }),
+    el('p.sheet-note', { text: `선택형 ${choiceQs.length}문항${essayCount ? ` · 서술형 ${essayCount}문항` : ''} · 모든 문제를 푼 뒤 「제출」을 누르면 채점됩니다. 제출할 때마다 1차·2차… 기록이 남습니다.` }),
     el('div.sheet-fields', {},
       field('과목', opts.subject || ''),
       field('이름', learner),
@@ -171,6 +171,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   const cols = el('div.cols');
   const essays = el('div.dq-essays');
   const painters = [];
+  const qInfo = new Map(); // q.id → { label, block }
   let lastSection = null;
   let no = 0;
   let essayNo = 0;
@@ -198,6 +199,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       el('div.p-stem', {}, el('b.p-no', {}, grade, label), md(q.stem), q.level && q.level !== '서술형' ? el('span.p-points', { text: `[${q.level}]` }) : null),
       hist
     );
+    qInfo.set(q.id, { label: q.type === 'choice' ? `${no}번` : `서술형 ${essayNo}번`, block });
     const feedback = el('div.dq-exp');
 
     if (q.type === 'choice') {
@@ -315,16 +317,25 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     paintAll();
   };
 
-  let armed = false;
   submitBtn.addEventListener('click', async () => {
-    const blank = choiceQs.filter((q) => !draft.picks[q.id]).length;
-    if (blank && !armed) {
-      armed = true;
-      submitBtn.textContent = `안 푼 문제 ${blank}개 · 한 번 더 누르면 제출`;
-      setTimeout(() => { armed = false; submitBtn.textContent = '제출'; }, 4000);
+    // 모든 문제를 풀어야 제출된다 — 안 푼 문제 번호를 팝업으로 알려 주고 그 문제로 데려간다
+    const blanks = qs.filter((q) => (q.type === 'choice' ? !draft.picks[q.id] : !(draft.texts[q.id] || '').trim()));
+    if (blanks.length) {
+      showBlankAlert(blanks.map((q) => {
+        const info = qInfo.get(q.id);
+        return {
+          label: info?.label || '어떤',
+          go: () => {
+            const b = info?.block;
+            if (!b) return;
+            b.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            b.classList.add('blank-flash');
+            setTimeout(() => b.classList.remove('blank-flash'), 2500);
+          },
+        };
+      }));
       return;
     }
-    armed = false;
     submitBtn.disabled = true;
     submitBtn.textContent = '저장 중…';
     const session = newId('dqs');
