@@ -515,8 +515,8 @@ button.link:hover { text-decoration: underline; }
 /* 카드 왼쪽 세로 그림 — 카드 높이만큼 꽉 채움 */
 .learner-portrait { position: relative; flex: none; width: 132px; min-height: 196px; display: flex; }
 .char-pic.portrait { width: 100%; height: auto; flex: 1; border-radius: 0; box-shadow: none; }
-.char-pic.portrait img { object-position: 50% 22%; }
-.char-pic.portrait .dot-face { width: 70%; height: auto; aspect-ratio: 1; }
+.char-pic.portrait { background: #f8f0df; }
+.char-pic.portrait img { object-fit: contain; object-position: 50% 50%; }
 .learner-portrait::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background: var(--line-soft); }
 .learner-now {
   position: absolute; left: 8px; right: 8px; bottom: 8px; text-align: center;
@@ -756,14 +756,14 @@ button.link.danger { color: var(--bad); }
 /* ── 캐릭터: 얼굴 그림 ── */
 .char-pic { position: relative; display: inline-grid; place-items: center; flex: none; border-radius: 10px; overflow: hidden;
   background: color-mix(in srgb, var(--char) 22%, #fff8e8); box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--char) 55%, #2b2b2b); vertical-align: middle; }
-.char-pic .dot-face { width: 62%; height: 62%; image-rendering: pixelated; }
 .char-pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
-.char-pic.has-img .dot-face { visibility: hidden; }
 .char-pic.xs { width: 26px; height: 26px; border-radius: 7px; }
 .char-pic.sm { width: 34px; height: 34px; border-radius: 9px; }
 .char-pic.md { width: 92px; height: 92px; border-radius: 6px; }
 .char-pic.lg { width: min(260px, 70vw); height: min(260px, 70vw); border-radius: 8px; }
 .char-pic.lg img, .char-pic.md img { object-position: 50% 30%; }
+/* 작은 얼굴은 전신 그림에서 머리 쪽을 크게 보여 준다 */
+.char-pic.xs img, .char-pic.sm img { transform: scale(1.9); transform-origin: 50% 8%; }
 .nav-avatar { display: inline-flex; }
 .nav-avatar:hover { filter: brightness(1.05); }
 .rank-table td .char-pic { margin-right: 2px; }
@@ -1086,3 +1086,21 @@ a.vs-mission:hover { text-decoration: none; filter: brightness(0.97); }
   .vs-land-row { grid-template-columns: 1fr; gap: 4px; }
   .vs-land-name { padding-top: 0; }
 }
+
+/* ── 참여자 비밀번호 ─────────────────────────────────────────── */
+.learner-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pin-dialog { width: min(340px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: var(--radius); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); color: var(--text); background: var(--card); font-family: var(--font); }
+.pin-dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
+.pin-form { padding: 24px; display: grid; gap: 12px; }
+.pin-form h2 { margin: 0; font-size: 19px; }
+.pin-desc { margin: 0; color: var(--text-2); font-size: 14px; }
+.pin-row { display: grid; gap: 6px; font-size: 13px; color: var(--text-2); }
+.pin-input {
+  font: inherit; font-size: 24px; letter-spacing: 0.5em; text-align: center; color: var(--text); background: var(--bg-soft);
+  border: 1px solid var(--line-soft); border-radius: var(--radius-s); padding: 10px 0 10px 0.5em; width: 100%; box-sizing: border-box;
+}
+.pin-input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent); border-color: var(--accent); }
+.pin-msg { margin: 0; min-height: 1.3em; color: var(--bad); font-size: 13px; }
+.pin-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.lock-screen .link { font-size: 14px; }
+@media print { .pin-dialog { display: none !important; } }

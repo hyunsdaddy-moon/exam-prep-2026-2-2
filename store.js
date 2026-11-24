@@ -5,8 +5,8 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
 import { getFirestore, collection, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
-import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-1837';
-import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-1837';
+import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-1857';
+import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-1857';
 
 export { DEFAULT_LEARNER, normalizeLearner };
 
@@ -190,6 +190,12 @@ function sanitizeForFirestore(r, currentUid) {
     return { kind: 'record', payload: { ...base, character } };
   }
 
+  if (r.type === 'pin') {
+    const hash = typeof r.hash === 'string' && /^[0-9a-f]{64}$/.test(r.hash) ? r.hash : null;
+    if (!hash) return null;
+    return { kind: 'record', payload: { ...base, hash } };
+  }
+
   if (r.type === 'read') {
     const concept = strBound(r.concept, 1, 64);
     if (!concept) return null;
@@ -229,8 +235,8 @@ function migrateLocalOnce() {
   const existingIds = new Set(cloudRecords.map((r) => r.id).filter(Boolean));
   const existingSessions = new Set(cloudRecords.filter((r) => r.type === 'session').map((r) => r.session));
   const existingReads = new Set(cloudRecords.filter((r) => r.type === 'read').map((r) => `${normalizeLearner(r.learner)}::${r.concept}`));
-  const otherKey = (r) => `${r.type}|${normalizeLearner(r.learner) || DEFAULT_LEARNER}|${r.at || ''}|${r.attempt || r.character || ''}`;
-  const existingOthers = new Set(cloudRecords.filter((r) => ['profile', 'tag', 'grade'].includes(r.type)).map(otherKey));
+  const otherKey = (r) => `${r.type}|${normalizeLearner(r.learner) || DEFAULT_LEARNER}|${r.at || ''}|${r.attempt || r.character || r.hash || ''}`;
+  const existingOthers = new Set(cloudRecords.filter((r) => ['profile', 'pin', 'tag', 'grade'].includes(r.type)).map(otherKey));
   const toPush = [];
   for (const r of readArray(STORAGE_KEY)) {
     if (!r || typeof r !== 'object') continue;

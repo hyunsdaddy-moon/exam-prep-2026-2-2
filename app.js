@@ -7,24 +7,25 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1837';
-import { el, versioned } from './dom.js?v=20261124-1837';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1837';
-import { renderUnitsRoute } from './units.js?v=20261124-1837';
-import { buildDocQuiz } from './docquiz.js?v=20261124-1837';
-import { attachWatchBoxes } from './watch.js?v=20261124-1837';
-import { renderDashboard } from './dashboard.js?v=20261124-1837';
-import { renderVersus } from './versus.js?v=20261124-1837';
-import { renderAssessRoute } from './assess.js?v=20261124-1837';
-import { renderPastRoute } from './past.js?v=20261124-1837';
-import { renderWrongbook } from './wrongbook.js?v=20261124-1837';
-import { renderBoard } from './board.js?v=20261124-1837';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1837';
-import { loadStudy } from './study.js?v=20261124-1837';
-import { renderPrint, printLinks } from './print.js?v=20261124-1837';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1837';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1837';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1837';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1857';
+import { el, versioned } from './dom.js?v=20261124-1857';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1857';
+import { renderUnitsRoute } from './units.js?v=20261124-1857';
+import { buildDocQuiz } from './docquiz.js?v=20261124-1857';
+import { attachWatchBoxes } from './watch.js?v=20261124-1857';
+import { renderDashboard } from './dashboard.js?v=20261124-1857';
+import { renderVersus } from './versus.js?v=20261124-1857';
+import { renderAssessRoute } from './assess.js?v=20261124-1857';
+import { renderPastRoute } from './past.js?v=20261124-1857';
+import { renderWrongbook } from './wrongbook.js?v=20261124-1857';
+import { renderBoard } from './board.js?v=20261124-1857';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1857';
+import { loadStudy } from './study.js?v=20261124-1857';
+import { renderPrint, printLinks } from './print.js?v=20261124-1857';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1857';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1857';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-1857';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1857';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -76,8 +77,8 @@ function renderNavLearner(names) {
   const list = [...new Set([...lastLearnerNames, current])];
   const select = el('select.learner-select', { 'aria-label': '참여자 선택' }, list.map((name) => el('option', { value: name, text: name })));
   select.value = current;
-  select.addEventListener('change', () => {
-    setCurrentLearner(select.value);
+  select.addEventListener('change', async () => {
+    if (!(await enterLearner(select.value))) select.value = getCurrentLearner(); // 비밀번호를 못 맞히면 그대로
     void route();
   });
   navLearner.replaceChildren(syncBadge(), el('a.nav-avatar', { href: '#/me', title: '캐릭터 고르기', 'aria-label': '캐릭터 고르기' }, avatar(current, 'xs')), select);
@@ -122,7 +123,14 @@ function learnersSection(study) {
   const form = el('form.learner-form', {}, input, el('button.pill.small', { type: 'submit', text: '추가' }));
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const added = addLearner(input.value);
+    const typed = input.value;
+    if (isProtected(typed)) {
+      // 비밀번호가 걸린 이름을 새로 적어 넣어도 비밀번호를 묻는다
+      input.value = '';
+      void enterLearner(typed).then((ok) => ok && renderHome());
+      return;
+    }
+    const added = addLearner(typed);
     if (!added) {
       input.focus();
       return;
@@ -131,11 +139,15 @@ function learnersSection(study) {
     void renderHome();
   });
 
-  const switchTo = (name) => {
+  const switchTo = async (name) => {
     if (name === study.learner) return;
-    setCurrentLearner(name);
-    void renderHome();
+    if (await enterLearner(name)) void renderHome();
   };
+  const pinButton = isProtected(study.learner)
+    ? el('button.pill.small.ghost', { type: 'button', text: '🔒 비밀번호 변경', onclick: async () => {
+        if (await changePin()) alert('비밀번호를 바꿨습니다. 다음부터 새 비밀번호로 들어오세요.');
+      } })
+    : null;
 
   return el('div.wrap', {},
     el('section.section.learners-section', { style: 'padding-top:0' },
@@ -154,7 +166,7 @@ function learnersSection(study) {
             })
           )
         ),
-        form
+        el('div.learner-tools', {}, pinButton, form)
       ),
       el('div.learner-grid', {},
         study.learners.map((item) => {
@@ -678,6 +690,7 @@ async function route() {
   // 홈은 클라우드 연결을 기다리지 않고 이 브라우저의 기록으로 먼저 그린다
   await (parts.length ? refreshProfiles() : loadRecords({ fast: true }).then((r) => refreshProfiles(r.records))).catch(() => null);
   renderNavLearner();
+  if (needsUnlock()) return renderLock(ctx, () => void route());
   if (!parts.length) return renderHome();
   if (parts[0] === 'me' && parts.length === 1) return renderCharacterSelect(ctx);
   if (parts[0] === 'notes' && parts.length === 1) return renderWrongbook(ctx, data.exam, await loadStudy(ctx, data.exam.subjects, data.concepts), query);
