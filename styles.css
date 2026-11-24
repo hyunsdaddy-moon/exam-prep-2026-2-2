@@ -1443,3 +1443,27 @@ body.ink-on .ink-host { user-select: none; -webkit-user-select: none; }
   .ink-bar { flex-direction: row; left: 50%; right: auto; transform: translateX(-50%); }
 }
 @media print { .ink-bar { display: none !important; } }
+
+/* ── 상단 「메뉴」 — 홈의 큰 버튼들을 어디서나 ── */
+.nav-menu { position: relative; flex: none; }
+.nav-menu > summary {
+  list-style: none; cursor: pointer; user-select: none;
+  font-size: 13px; font-weight: 600; color: var(--accent-text);
+  padding: 4px 12px; border-radius: 980px; white-space: nowrap;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.nav-menu > summary::-webkit-details-marker { display: none; }
+.nav-menu > summary::after { content: ' ▾'; font-size: 10px; }
+.nav-menu[open] > summary { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.nav-menu-list {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+  min-width: 160px; padding: 6px; display: flex; flex-direction: column;
+  background: var(--card); border: 1px solid var(--line-soft);
+  border-radius: var(--radius-s); box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+.nav-menu-list a { color: var(--text); font-size: 14px; padding: 9px 12px; border-radius: 8px; white-space: nowrap; }
+.nav-menu-list a:hover { background: var(--bg-soft); text-decoration: none; }
+.nav-menu-list a[aria-current] { color: var(--accent-text); font-weight: 600; background: color-mix(in srgb, var(--accent) 7%, transparent); }
+@media (max-width: 860px) {
+  .nav-menu > summary { padding: 4px 9px; font-size: 12px; }
+}

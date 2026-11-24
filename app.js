@@ -7,26 +7,26 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2255';
-import { el, versioned } from './dom.js?v=20261124-2255';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2255';
-import { renderUnitsRoute } from './units.js?v=20261124-2255';
-import { buildDocQuiz } from './docquiz.js?v=20261124-2255';
-import { attachWatchBoxes } from './watch.js?v=20261124-2255';
-import { renderDashboard } from './dashboard.js?v=20261124-2255';
-import { renderGrades } from './grades.js?v=20261124-2255';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2255';
-import { renderAssessRoute } from './assess.js?v=20261124-2255';
-import { renderPastRoute } from './past.js?v=20261124-2255';
-import { renderWrongbook } from './wrongbook.js?v=20261124-2255';
-import { renderBoard } from './board.js?v=20261124-2255';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2255';
-import { loadStudy } from './study.js?v=20261124-2255';
-import { renderPrint, printLinks } from './print.js?v=20261124-2255';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2255';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2255';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2255';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2255';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261125-0008';
+import { el, versioned } from './dom.js?v=20261125-0008';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261125-0008';
+import { renderUnitsRoute } from './units.js?v=20261125-0008';
+import { buildDocQuiz } from './docquiz.js?v=20261125-0008';
+import { attachWatchBoxes } from './watch.js?v=20261125-0008';
+import { renderDashboard } from './dashboard.js?v=20261125-0008';
+import { renderGrades } from './grades.js?v=20261125-0008';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261125-0008';
+import { renderAssessRoute } from './assess.js?v=20261125-0008';
+import { renderPastRoute } from './past.js?v=20261125-0008';
+import { renderWrongbook } from './wrongbook.js?v=20261125-0008';
+import { renderBoard } from './board.js?v=20261125-0008';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261125-0008';
+import { loadStudy } from './study.js?v=20261125-0008';
+import { renderPrint, printLinks } from './print.js?v=20261125-0008';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261125-0008';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261125-0008';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261125-0008';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261125-0008';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -104,6 +104,44 @@ function renderNavLearner(names) {
   });
   navLearner.replaceChildren(syncBadge(), el('a.nav-avatar', { href: '#/me', title: '캐릭터 고르기', 'aria-label': '캐릭터 고르기' }, avatar(current, 'xs')), select);
 }
+
+/** 홈의 큰 버튼들 — 상단 「메뉴」에서도 같은 목록을 고른다 */
+const MENU = [
+  ['#/units', '단원 평가'],
+  ['#/assess', '수준 평가'],
+  ['#/past', '기출문제'],
+  ['#/notes', '오답 노트'],
+  ['#/dashboard', '학습 현황'],
+  ['#/versus', '대결'],
+  ['#/board', '질문 게시판'],
+  ['#/me', '캐릭터 고르기']
+];
+
+const navMenu = document.getElementById('nav-menu');
+
+function markNavMenu() {
+  if (!navMenu) return;
+  const hash = location.hash || '#/';
+  for (const a of navMenu.querySelectorAll('a')) {
+    const href = a.getAttribute('href');
+    a.toggleAttribute('aria-current', hash === href || hash.startsWith(href + '/'));
+  }
+}
+
+function initNavMenu() {
+  if (!navMenu) return;
+  navMenu.replaceChildren(
+    el('summary', { text: '메뉴', 'aria-label': '메뉴 열기' }),
+    el('div.nav-menu-list', {}, MENU.map(([href, text]) => el('a', { href, text })))
+  );
+  const close = () => navMenu.removeAttribute('open');
+  navMenu.addEventListener('click', (e) => { if (e.target.closest('a')) close(); });
+  document.addEventListener('click', (e) => { if (!navMenu.contains(e.target)) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  window.addEventListener('hashchange', () => { close(); markNavMenu(); });
+  markNavMenu();
+}
+initNavMenu();
 
 function setNav(code) {
   navLinks.replaceChildren(
@@ -345,14 +383,7 @@ async function renderHome() {
       el('p.sub', { text: `${study.learner} · 전체 진도율 ${overall}% · ${subjects.length}과목 · 문서 ${countDocs(subjects)}개 · 문제 ${total}개` }),
       examDatePicker(study),
       el('div.hero-actions', {},
-        el('a.pill', { href: '#/units', text: '단원 평가' }),
-        el('a.pill.ghost', { href: '#/assess', text: '수준 평가' }),
-        el('a.pill.ghost', { href: '#/past', text: '기출문제' }),
-        el('a.pill.ghost', { href: '#/notes', text: '오답 노트' }),
-        el('a.pill.ghost', { href: '#/dashboard', text: '학습 현황' }),
-        el('a.pill.ghost', { href: '#/versus', text: '대결' }),
-        el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }),
-        el('a.pill.ghost', { href: '#/me', text: '캐릭터 고르기' })
+        ...MENU.map(([href, text], i) => el(i === 0 ? 'a.pill' : 'a.pill.ghost', { href, text }))
       ),
       !study.ok ? el('p.save-warn', { text: '풀이 기록을 읽지 못해 진도율이 비어 보일 수 있습니다.' }) : null
     ),

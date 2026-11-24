@@ -7,13 +7,14 @@
   <title>시험 준비</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="vendor/katex.min.css">
-  <link rel="stylesheet" href="styles.css?v=20261124-2255">
+  <link rel="stylesheet" href="styles.css?v=20261125-0008">
 </head>
 <body>
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="nav-brand" href="#/">시험 준비</a>
       <nav class="nav-links" id="nav-links" aria-label="과목"></nav>
+      <details class="nav-menu" id="nav-menu"></details>
       <div class="nav-learner" id="nav-learner"></div>
     </div>
   </header>
@@ -38,7 +39,7 @@
   <script>
     /* 새 버전이 올라왔는데 브라우저가 예전 index.html 을 쓰고 있으면 한 번 새로 불러온다 */
     (function () {
-      var mine = '?v=20261124-2255';
+      var mine = '?v=20261125-0008';
       fetch('version.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
         if (!j || '?v=' + j.v === mine) return;
         var key = 'reloaded-for-' + j.v;
@@ -50,6 +51,6 @@
   </script>
   <script src="vendor/markdown-it.min.js"></script>
   <script src="vendor/katex.min.js"></script>
-  <script type="module" src="app.js?v=20261124-2255"></script>
+  <script type="module" src="app.js?v=20261125-0008"></script>
 </body>
 </html>
