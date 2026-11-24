@@ -32,7 +32,12 @@
           "answer": [
             1
           ],
-          "explanation": "삼각형의 한 외각은 이웃하지 않는 두 내각의 합이므로 $52^\\circ + \\angle B = 125^\\circ$, $\\angle B = 73^\\circ$이다. $128^\\circ$는 $\\angle A$의 외각, $107^\\circ$는 $\\angle B$의 외각으로 혼동한 오답이다."
+          "explanation": "삼각형의 한 외각은 이웃하지 않는 두 내각의 합이므로 $52^\\circ + \\angle B = 125^\\circ$, $\\angle B = 73^\\circ$이다. $128^\\circ$는 $\\angle A$의 외각, $107^\\circ$는 $\\angle B$의 외각으로 혼동한 오답이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 7.2,
+            "end": 43.15
+          }
         },
         {
           "id": "mat-d1-02",
@@ -60,7 +65,12 @@
           "answer": [
             2
           ],
-          "explanation": "외각의 합은 항상 $360^\\circ$이므로 $n = 360 \\div 24 = 15$, 정십오각형이다. 내각의 합은 $180^\\circ \\times (15-2) = 2340^\\circ$이며, $180^\\circ \\times 15 = 2700^\\circ$처럼 $n-2$를 빠뜨리면 틀린다."
+          "explanation": "외각의 합은 항상 $360^\\circ$이므로 $n = 360 \\div 24 = 15$, 정십오각형이다. 내각의 합은 $180^\\circ \\times (15-2) = 2340^\\circ$이며, $180^\\circ \\times 15 = 2700^\\circ$처럼 $n-2$를 빠뜨리면 틀린다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 43.15,
+            "end": 78.55
+          }
         },
         {
           "id": "mat-d1-03",
@@ -88,7 +98,12 @@
           "answer": [
             3
           ],
-          "explanation": "호와 현으로 이루어진 도형은 활꼴이고, 부채꼴은 두 반지름과 호로 이루어진 도형이다. ⑤ 반원은 부채꼴이면서 활꼴이므로 옳다."
+          "explanation": "호와 현으로 이루어진 도형은 활꼴이고, 부채꼴은 두 반지름과 호로 이루어진 도형이다. ⑤ 반원은 부채꼴이면서 활꼴이므로 옳다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 78.55,
+            "end": 103.5
+          }
         },
         {
           "id": "mat-d1-04",
@@ -116,7 +131,12 @@
           "answer": [
             4
           ],
-          "explanation": "면의 개수는 $n$각기둥·$n$각뿔대가 $n+2$, $n$각뿔이 $n+1$이다. 오각기둥 $7$, 육각뿔 $7$, 사각뿔대 $6$, 칠각뿔대 $9$, 칠각뿔 $8$이므로 칠각뿔대가 가장 많다."
+          "explanation": "면의 개수는 $n$각기둥·$n$각뿔대가 $n+2$, $n$각뿔이 $n+1$이다. 오각기둥 $7$, 육각뿔 $7$, 사각뿔대 $6$, 칠각뿔대 $9$, 칠각뿔 $8$이므로 칠각뿔대가 가장 많다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 103.5,
+            "end": 136.65
+          }
         },
         {
           "id": "mat-d1-05",
@@ -144,7 +164,12 @@
           "answer": [
             5
           ],
-          "explanation": "$180^\\circ \\times (n-2) = 1440^\\circ$에서 $n-2=8$, $n=10$이다. 대각선은 $\\dfrac{10 \\times 7}{2} = 35$개이며, 2로 나누지 않으면 $70$이 된다."
+          "explanation": "$180^\\circ \\times (n-2) = 1440^\\circ$에서 $n-2=8$, $n=10$이다. 대각선은 $\\dfrac{10 \\times 7}{2} = 35$개이며, 2로 나누지 않으면 $70$이 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 136.65,
+            "end": 179.55
+          }
         },
         {
           "id": "mat-d1-06",
@@ -172,7 +197,12 @@
           "answer": [
             2
           ],
-          "explanation": "넓이는 $S = \\dfrac{1}{2}rl = \\dfrac{1}{2} \\times 6 \\times 4\\pi = 12\\pi\\text{ cm}^2$이다. $2\\pi \\times 6 \\times \\dfrac{x}{360} = 4\\pi$에서 $x = 120$이므로 중심각은 $120^\\circ$이다. $\\dfrac{1}{2}$을 빠뜨리면 $24\\pi$가 된다."
+          "explanation": "넓이는 $S = \\dfrac{1}{2}rl = \\dfrac{1}{2} \\times 6 \\times 4\\pi = 12\\pi\\text{ cm}^2$이다. $2\\pi \\times 6 \\times \\dfrac{x}{360} = 4\\pi$에서 $x = 120$이므로 중심각은 $120^\\circ$이다. $\\dfrac{1}{2}$을 빠뜨리면 $24\\pi$가 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 179.55,
+            "end": 224.25
+          }
         },
         {
           "id": "mat-d1-07",
@@ -200,7 +230,12 @@
           "answer": [
             4
           ],
-          "explanation": "ㄱ, ㄷ은 회전체의 성질로 옳다. ㄴ은 회전 전 도형이 직각삼각형일 뿐, 회전축을 포함하는 단면은 직각삼각형 두 개가 합쳐진 이등변삼각형이다."
+          "explanation": "ㄱ, ㄷ은 회전체의 성질로 옳다. ㄴ은 회전 전 도형이 직각삼각형일 뿐, 회전축을 포함하는 단면은 직각삼각형 두 개가 합쳐진 이등변삼각형이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 224.25,
+            "end": 254.5
+          }
         },
         {
           "id": "mat-d1-08",
@@ -228,7 +263,12 @@
           "answer": [
             5
           ],
-          "explanation": "회전축에 붙은 변이 높이이므로 $h=3$, 반지름 $r=5$인 원기둥이다. 겉넓이는 $2\\pi \\times 5^2 + 2\\pi \\times 5 \\times 3 = 50\\pi + 30\\pi = 80\\pi\\text{ cm}^2$이다. $r$과 $h$를 바꾸면 $48\\pi$, 밑면을 1개만 더하면 $55\\pi$가 된다."
+          "explanation": "회전축에 붙은 변이 높이이므로 $h=3$, 반지름 $r=5$인 원기둥이다. 겉넓이는 $2\\pi \\times 5^2 + 2\\pi \\times 5 \\times 3 = 50\\pi + 30\\pi = 80\\pi\\text{ cm}^2$이다. $r$과 $h$를 바꾸면 $48\\pi$, 밑면을 1개만 더하면 $55\\pi$가 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 254.5,
+            "end": 302.65
+          }
         },
         {
           "id": "mat-d1-09",
@@ -256,7 +296,12 @@
           "answer": [
             4
           ],
-          "explanation": "$\\triangle OAB$가 이등변이므로 $\\angle OBA = 20^\\circ$, 외각 $\\angle BAC = 40^\\circ = \\angle BCA$이다. $\\triangle OBC$의 외각 $\\angle CBD = 20^\\circ + 40^\\circ = 60^\\circ = \\angle CDB$이므로 $\\triangle OCD$에서 $\\angle OCD = 180^\\circ - 20^\\circ - 60^\\circ = 100^\\circ$이다. $\\angle BCD = 60^\\circ$만 구하고 멈추면 오답이다."
+          "explanation": "$\\triangle OAB$가 이등변이므로 $\\angle OBA = 20^\\circ$, 외각 $\\angle BAC = 40^\\circ = \\angle BCA$이다. $\\triangle OBC$의 외각 $\\angle CBD = 20^\\circ + 40^\\circ = 60^\\circ = \\angle CDB$이므로 $\\triangle OCD$에서 $\\angle OCD = 180^\\circ - 20^\\circ - 60^\\circ = 100^\\circ$이다. $\\angle BCD = 60^\\circ$만 구하고 멈추면 오답이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 302.65,
+            "end": 342.2
+          }
         },
         {
           "id": "mat-d1-10",
@@ -284,7 +329,12 @@
           "answer": [
             3
           ],
-          "explanation": "$\\angle BOC = x^\\circ$라 하면 $\\overline{AD} \\parallel \\overline{OC}$에서 동위각으로 $\\angle OAD = x^\\circ$, $\\overline{OA}=\\overline{OD}$이므로 $\\angle ODA = x^\\circ$, $\\angle AOD = 180^\\circ - 2x^\\circ$이다. 호의 길이는 중심각에 정비례하므로 $180 - 2x = 3x$, $x = 36$, $\\angle COD = 180^\\circ - 108^\\circ - 36^\\circ = 36^\\circ$이다. 반원의 중심각 $180^\\circ$는 $36^\\circ$의 $5$배이므로 넓이는 $5 \\times 6\\pi = 30\\pi\\text{ cm}^2$이다."
+          "explanation": "$\\angle BOC = x^\\circ$라 하면 $\\overline{AD} \\parallel \\overline{OC}$에서 동위각으로 $\\angle OAD = x^\\circ$, $\\overline{OA}=\\overline{OD}$이므로 $\\angle ODA = x^\\circ$, $\\angle AOD = 180^\\circ - 2x^\\circ$이다. 호의 길이는 중심각에 정비례하므로 $180 - 2x = 3x$, $x = 36$, $\\angle COD = 180^\\circ - 108^\\circ - 36^\\circ = 36^\\circ$이다. 반원의 중심각 $180^\\circ$는 $36^\\circ$의 $5$배이므로 넓이는 $5 \\times 6\\pi = 30\\pi\\text{ cm}^2$이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 342.2,
+            "end": 396.2
+          }
         },
         {
           "id": "mat-d1-11",
@@ -312,7 +362,12 @@
           "answer": [
             1
           ],
-          "explanation": "조건을 만족하는 입체도형은 정팔면체이고 모서리는 $12$개이다. $n$각뿔대의 모서리는 $3n$개이므로 $3n = 12$, $n = 4$이고, 사각뿔대의 꼭짓점은 $2n = 8$개이다. $12$는 정팔면체의 모서리 수를 그대로 쓴 오답이다."
+          "explanation": "조건을 만족하는 입체도형은 정팔면체이고 모서리는 $12$개이다. $n$각뿔대의 모서리는 $3n$개이므로 $3n = 12$, $n = 4$이고, 사각뿔대의 꼭짓점은 $2n = 8$개이다. $12$는 정팔면체의 모서리 수를 그대로 쓴 오답이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 396.2,
+            "end": 435.55
+          }
         },
         {
           "id": "mat-d1-12",
@@ -340,7 +395,12 @@
           "answer": [
             2
           ],
-          "explanation": "두 밑면의 넓이는 $4\\pi + 16\\pi = 20\\pi$이다. 옆넓이는 (큰 원뿔 옆넓이) $-$ (작은 원뿔 옆넓이) $= \\pi \\times 4 \\times 10 - \\pi \\times 2 \\times 5 = 30\\pi$이므로 겉넓이는 $50\\pi\\text{ cm}^2$이다. 윗면을 빠뜨리면 $46\\pi$, 작은 원뿔 옆넓이를 빼지 않으면 $60\\pi$가 된다."
+          "explanation": "두 밑면의 넓이는 $4\\pi + 16\\pi = 20\\pi$이다. 옆넓이는 (큰 원뿔 옆넓이) $-$ (작은 원뿔 옆넓이) $= \\pi \\times 4 \\times 10 - \\pi \\times 2 \\times 5 = 30\\pi$이므로 겉넓이는 $50\\pi\\text{ cm}^2$이다. 윗면을 빠뜨리면 $46\\pi$, 작은 원뿔 옆넓이를 빼지 않으면 $60\\pi$가 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d1.mp4",
+            "start": 435.55,
+            "end": 495.15
+          }
         }
       ]
     },
@@ -373,7 +433,12 @@
           "answer": [
             3
           ],
-          "explanation": "삼각형의 한 외각은 이웃하지 않는 두 내각의 합이므로 $\\angle A + 38^\\circ = 101^\\circ$, $\\angle A = 63^\\circ$이다. $79^\\circ$는 $\\angle C$의 크기, $139^\\circ$는 외각과 $\\angle B$를 더한 잘못된 값이다."
+          "explanation": "삼각형의 한 외각은 이웃하지 않는 두 내각의 합이므로 $\\angle A + 38^\\circ = 101^\\circ$, $\\angle A = 63^\\circ$이다. $79^\\circ$는 $\\angle C$의 크기, $139^\\circ$는 외각과 $\\angle B$를 더한 잘못된 값이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 8.1,
+            "end": 46.8
+          }
         },
         {
           "id": "mat-d2-02",
@@ -401,7 +466,12 @@
           "answer": [
             2
           ],
-          "explanation": "외각의 합은 항상 $360^\\circ$이므로 $n = 360 \\div 30 = 12$, 정십이각형이다. 내각의 합은 $180^\\circ \\times (12-2) = 1800^\\circ$이며, $180^\\circ \\times 12 = 2160^\\circ$처럼 $n-2$를 빠뜨리면 틀린다."
+          "explanation": "외각의 합은 항상 $360^\\circ$이므로 $n = 360 \\div 30 = 12$, 정십이각형이다. 내각의 합은 $180^\\circ \\times (12-2) = 1800^\\circ$이며, $180^\\circ \\times 12 = 2160^\\circ$처럼 $n-2$를 빠뜨리면 틀린다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 46.8,
+            "end": 82.6
+          }
         },
         {
           "id": "mat-d2-03",
@@ -429,7 +499,12 @@
           "answer": [
             5
           ],
-          "explanation": "원 위의 두 점을 지나는 직선은 할선이고, 현은 원 위의 두 점을 이은 선분이다. ④ 중심각이 같으면 현의 길이도 같으므로 옳다(정비례하지 않을 뿐이다)."
+          "explanation": "원 위의 두 점을 지나는 직선은 할선이고, 현은 원 위의 두 점을 이은 선분이다. ④ 중심각이 같으면 현의 길이도 같으므로 옳다(정비례하지 않을 뿐이다).",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 82.6,
+            "end": 111.55
+          }
         },
         {
           "id": "mat-d2-04",
@@ -457,7 +532,12 @@
           "answer": [
             1
           ],
-          "explanation": "모서리의 개수는 $n$각기둥·$n$각뿔대가 $3n$, $n$각뿔이 $2n$이다. 십각뿔 $20$, 육각기둥 $18$, 팔각뿔 $16$, 오각뿔대 $15$, 사각기둥 $12$이므로 십각뿔이 가장 많다."
+          "explanation": "모서리의 개수는 $n$각기둥·$n$각뿔대가 $3n$, $n$각뿔이 $2n$이다. 십각뿔 $20$, 육각기둥 $18$, 팔각뿔 $16$, 오각뿔대 $15$, 사각기둥 $12$이므로 십각뿔이 가장 많다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 111.55,
+            "end": 144.1
+          }
         },
         {
           "id": "mat-d2-05",
@@ -485,7 +565,12 @@
           "answer": [
             4
           ],
-          "explanation": "$180^\\circ \\times (n-2) = 1260^\\circ$에서 $n-2=7$, $n=9$이다. 대각선은 $\\dfrac{9 \\times 6}{2} = 27$개이며, 2로 나누지 않으면 $54$가 된다."
+          "explanation": "$180^\\circ \\times (n-2) = 1260^\\circ$에서 $n-2=7$, $n=9$이다. 대각선은 $\\dfrac{9 \\times 6}{2} = 27$개이며, 2로 나누지 않으면 $54$가 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 144.1,
+            "end": 191.2
+          }
         },
         {
           "id": "mat-d2-06",
@@ -513,7 +598,12 @@
           "answer": [
             1
           ],
-          "explanation": "넓이는 $S = \\dfrac{1}{2}rl = \\dfrac{1}{2} \\times 8 \\times 6\\pi = 24\\pi\\text{ cm}^2$이다. $2\\pi \\times 8 \\times \\dfrac{x}{360} = 6\\pi$에서 $x = 135$이므로 중심각은 $135^\\circ$이다. $\\dfrac{1}{2}$을 빠뜨리면 $48\\pi$가 된다."
+          "explanation": "넓이는 $S = \\dfrac{1}{2}rl = \\dfrac{1}{2} \\times 8 \\times 6\\pi = 24\\pi\\text{ cm}^2$이다. $2\\pi \\times 8 \\times \\dfrac{x}{360} = 6\\pi$에서 $x = 135$이므로 중심각은 $135^\\circ$이다. $\\dfrac{1}{2}$을 빠뜨리면 $48\\pi$가 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 191.2,
+            "end": 234.75
+          }
         },
         {
           "id": "mat-d2-07",
@@ -541,7 +631,12 @@
           "answer": [
             3
           ],
-          "explanation": "ㄱ, ㄴ은 옳다. ㄷ에서 원뿔을 회전축에 수직으로 자른 단면은 원이지만 꼭짓점에 가까울수록 작아지므로 합동이 아니다(합동인 것은 원기둥)."
+          "explanation": "ㄱ, ㄴ은 옳다. ㄷ에서 원뿔을 회전축에 수직으로 자른 단면은 원이지만 꼭짓점에 가까울수록 작아지므로 합동이 아니다(합동인 것은 원기둥).",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 234.75,
+            "end": 259.85
+          }
         },
         {
           "id": "mat-d2-08",
@@ -569,7 +664,12 @@
           "answer": [
             4
           ],
-          "explanation": "회전축에 붙은 변이 높이이므로 $h=6$, 반지름 $r=2$인 원기둥이다. 겉넓이는 $2\\pi \\times 2^2 + 2\\pi \\times 2 \\times 6 = 8\\pi + 24\\pi = 32\\pi\\text{ cm}^2$이다. $r$과 $h$를 바꾸면 $96\\pi$, 밑면을 1개만 더하면 $28\\pi$가 된다."
+          "explanation": "회전축에 붙은 변이 높이이므로 $h=6$, 반지름 $r=2$인 원기둥이다. 겉넓이는 $2\\pi \\times 2^2 + 2\\pi \\times 2 \\times 6 = 8\\pi + 24\\pi = 32\\pi\\text{ cm}^2$이다. $r$과 $h$를 바꾸면 $96\\pi$, 밑면을 1개만 더하면 $28\\pi$가 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 259.85,
+            "end": 305.4
+          }
         },
         {
           "id": "mat-d2-09",
@@ -597,7 +697,12 @@
           "answer": [
             4
           ],
-          "explanation": "$\\triangle OAB$가 이등변이므로 $\\angle OBA = 15^\\circ$, 외각 $\\angle BAC = 30^\\circ = \\angle BCA$이다. $\\triangle OBC$의 외각 $\\angle CBD = 15^\\circ + 30^\\circ = 45^\\circ = \\angle CDB$이므로 $\\triangle OCD$에서 $\\angle OCD = 180^\\circ - 15^\\circ - 45^\\circ = 120^\\circ$이다. $\\angle BCD = 90^\\circ$만 구하고 멈추면 오답이다."
+          "explanation": "$\\triangle OAB$가 이등변이므로 $\\angle OBA = 15^\\circ$, 외각 $\\angle BAC = 30^\\circ = \\angle BCA$이다. $\\triangle OBC$의 외각 $\\angle CBD = 15^\\circ + 30^\\circ = 45^\\circ = \\angle CDB$이므로 $\\triangle OCD$에서 $\\angle OCD = 180^\\circ - 15^\\circ - 45^\\circ = 120^\\circ$이다. $\\angle BCD = 90^\\circ$만 구하고 멈추면 오답이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 305.4,
+            "end": 351.15
+          }
         },
         {
           "id": "mat-d2-10",
@@ -625,7 +730,12 @@
           "answer": [
             5
           ],
-          "explanation": "$\\angle BOC = x^\\circ$라 하면 동위각으로 $\\angle OAD = x^\\circ$, $\\overline{OA}=\\overline{OD}$이므로 $\\angle ODA = x^\\circ$, $\\angle AOD = 180^\\circ - 2x^\\circ$이다. 호의 길이는 중심각에 정비례하므로 $180 - 2x = 4x$, $x = 30$, $\\angle COD = 180^\\circ - 120^\\circ - 30^\\circ = 30^\\circ$이다. 반원의 중심각 $180^\\circ$는 $30^\\circ$의 $6$배이므로 넓이는 $6 \\times 4\\pi = 24\\pi\\text{ cm}^2$이다."
+          "explanation": "$\\angle BOC = x^\\circ$라 하면 동위각으로 $\\angle OAD = x^\\circ$, $\\overline{OA}=\\overline{OD}$이므로 $\\angle ODA = x^\\circ$, $\\angle AOD = 180^\\circ - 2x^\\circ$이다. 호의 길이는 중심각에 정비례하므로 $180 - 2x = 4x$, $x = 30$, $\\angle COD = 180^\\circ - 120^\\circ - 30^\\circ = 30^\\circ$이다. 반원의 중심각 $180^\\circ$는 $30^\\circ$의 $6$배이므로 넓이는 $6 \\times 4\\pi = 24\\pi\\text{ cm}^2$이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 351.15,
+            "end": 401.9
+          }
         },
         {
           "id": "mat-d2-11",
@@ -653,7 +763,12 @@
           "answer": [
             2
           ],
-          "explanation": "조건을 만족하는 입체도형은 정이십면체이고 모서리는 $30$개이다. $n$각뿔대의 모서리는 $3n$개이므로 $3n = 30$, $n = 10$이고, 십각뿔대의 꼭짓점은 $2n = 20$개이다. $12$는 정이십면체의 꼭짓점 수로 혼동한 오답이다."
+          "explanation": "조건을 만족하는 입체도형은 정이십면체이고 모서리는 $30$개이다. $n$각뿔대의 모서리는 $3n$개이므로 $3n = 30$, $n = 10$이고, 십각뿔대의 꼭짓점은 $2n = 20$개이다. $12$는 정이십면체의 꼭짓점 수로 혼동한 오답이다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 401.9,
+            "end": 442.4
+          }
         },
         {
           "id": "mat-d2-12",
@@ -681,7 +796,12 @@
           "answer": [
             3
           ],
-          "explanation": "두 밑면의 넓이는 $9\\pi + 36\\pi = 45\\pi$이다. 옆넓이는 $\\pi \\times 6 \\times 12 - \\pi \\times 3 \\times 6 = 54\\pi$이므로 겉넓이는 $99\\pi\\text{ cm}^2$이다. 윗면을 빠뜨리면 $90\\pi$, 작은 원뿔 옆넓이를 빼지 않으면 $117\\pi$가 된다."
+          "explanation": "두 밑면의 넓이는 $9\\pi + 36\\pi = 45\\pi$이다. 옆넓이는 $\\pi \\times 6 \\times 12 - \\pi \\times 3 \\times 6 = 54\\pi$이므로 겉넓이는 $99\\pi\\text{ cm}^2$이다. 윗면을 빠뜨리면 $90\\pi$, 작은 원뿔 옆넓이를 빼지 않으면 $117\\pi$가 된다.",
+          "video": {
+            "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-mat-d2.mp4",
+            "start": 442.4,
+            "end": 492.6
+          }
         }
       ]
     }

@@ -37,7 +37,12 @@
      "answer": [
       3
      ],
-     "explanation": "삼각형의 한 외각의 크기는 이웃하지 않는 두 내각의 크기의 합이므로 $47^\\circ + 68^\\circ = 115^\\circ$이다. $65^\\circ$는 내각 $\\angle C$의 크기이다."
+     "explanation": "삼각형의 한 외각의 크기는 이웃하지 않는 두 내각의 크기의 합이므로 $47^\\circ + 68^\\circ = 115^\\circ$이다. $65^\\circ$는 내각 $\\angle C$의 크기이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 9.35,
+      "end": 45.65
+     }
     },
     {
      "id": "mat-u1-02",
@@ -65,7 +70,12 @@
      "answer": [
       1
      ],
-     "explanation": "$\\angle AOB$와 $\\angle DOE$는 맞꼭지각으로 크기가 같으므로 $\\angle OAB + \\angle OBA = \\angle ODE + \\angle OED$이다. $50^\\circ + 65^\\circ = 45^\\circ + \\angle OED$에서 $\\angle OED = 70^\\circ$이다."
+     "explanation": "$\\angle AOB$와 $\\angle DOE$는 맞꼭지각으로 크기가 같으므로 $\\angle OAB + \\angle OBA = \\angle ODE + \\angle OED$이다. $50^\\circ + 65^\\circ = 45^\\circ + \\angle OED$에서 $\\angle OED = 70^\\circ$이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 45.65,
+      "end": 76.6
+     }
     },
     {
      "id": "mat-u1-03",
@@ -93,7 +103,12 @@
      "answer": [
       4
      ],
-     "explanation": "삼각형의 외각 성질로 별의 다섯 끝각을 가운데 한 삼각형의 세 내각으로 모을 수 있으므로 다섯 끝각의 합은 항상 $180^\\circ$이다. 따라서 $\\angle BEC = 180^\\circ - (32^\\circ + 28^\\circ + 40^\\circ + 36^\\circ) = 44^\\circ$이다. 합을 $360^\\circ$로 착각하면 답이 나오지 않는다."
+     "explanation": "삼각형의 외각 성질로 별의 다섯 끝각을 가운데 한 삼각형의 세 내각으로 모을 수 있으므로 다섯 끝각의 합은 항상 $180^\\circ$이다. 따라서 $\\angle BEC = 180^\\circ - (32^\\circ + 28^\\circ + 40^\\circ + 36^\\circ) = 44^\\circ$이다. 합을 $360^\\circ$로 착각하면 답이 나오지 않는다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 76.6,
+      "end": 114.1
+     }
     },
     {
      "id": "mat-u1-04",
@@ -121,7 +136,12 @@
      "answer": [
       2
      ],
-     "explanation": "$n$각형의 내각의 크기의 합은 $180^\\circ \\times (n-2)$이므로 $180^\\circ \\times 10 = 1800^\\circ$이다. $2160^\\circ$는 $180^\\circ \\times 12$로 $(n-2)$를 빠뜨린 값이다."
+     "explanation": "$n$각형의 내각의 크기의 합은 $180^\\circ \\times (n-2)$이므로 $180^\\circ \\times 10 = 1800^\\circ$이다. $2160^\\circ$는 $180^\\circ \\times 12$로 $(n-2)$를 빠뜨린 값이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 114.1,
+      "end": 141.8
+     }
     },
     {
      "id": "mat-u1-05",
@@ -149,7 +169,12 @@
      "answer": [
       5
      ],
-     "explanation": "한 외각의 크기는 $180^\\circ - 140^\\circ = 40^\\circ$이므로 $n = \\dfrac{360^\\circ}{40^\\circ} = 9$, 즉 정구각형이다. 대각선의 총 개수는 $\\dfrac{9 \\times (9-3)}{2} = 27$이다. $6$은 한 꼭짓점에서 그을 수 있는 대각선의 개수이다."
+     "explanation": "한 외각의 크기는 $180^\\circ - 140^\\circ = 40^\\circ$이므로 $n = \\dfrac{360^\\circ}{40^\\circ} = 9$, 즉 정구각형이다. 대각선의 총 개수는 $\\dfrac{9 \\times (9-3)}{2} = 27$이다. $6$은 한 꼭짓점에서 그을 수 있는 대각선의 개수이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 141.8,
+      "end": 175.35
+     }
     },
     {
      "id": "mat-u1-06",
@@ -177,7 +202,12 @@
      "answer": [
       2
      ],
-     "explanation": "정오각형의 한 내각은 $108^\\circ$이다. $\\triangle ABC$는 $\\overline{AB} = \\overline{BC}$인 이등변삼각형이므로 $\\angle BAC = \\dfrac{180^\\circ - 108^\\circ}{2} = 36^\\circ$이고, 같은 방법으로 $\\angle CBD = 36^\\circ$이므로 $\\angle ABD = 108^\\circ - 36^\\circ = 72^\\circ$이다. $\\triangle ABP$에서 $\\angle APB = 180^\\circ - (36^\\circ + 72^\\circ) = 72^\\circ$이다. $108^\\circ$는 $\\angle BPC$의 크기이다."
+     "explanation": "정오각형의 한 내각은 $108^\\circ$이다. $\\triangle ABC$는 $\\overline{AB} = \\overline{BC}$인 이등변삼각형이므로 $\\angle BAC = \\dfrac{180^\\circ - 108^\\circ}{2} = 36^\\circ$이고, 같은 방법으로 $\\angle CBD = 36^\\circ$이므로 $\\angle ABD = 108^\\circ - 36^\\circ = 72^\\circ$이다. $\\triangle ABP$에서 $\\angle APB = 180^\\circ - (36^\\circ + 72^\\circ) = 72^\\circ$이다. $108^\\circ$는 $\\angle BPC$의 크기이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 175.35,
+      "end": 228.35
+     }
     },
     {
      "id": "mat-u1-07",
@@ -205,7 +235,12 @@
      "answer": [
       4
      ],
-     "explanation": "ㄱ, ㄷ, ㄹ은 옳다. ㄴ. 중심각의 크기가 2배가 되어도 현의 길이는 2배보다 짧으므로(삼각형의 두 변의 길이의 합은 나머지 한 변보다 길다) 현의 길이는 중심각의 크기에 정비례하지 않는다."
+     "explanation": "ㄱ, ㄷ, ㄹ은 옳다. ㄴ. 중심각의 크기가 2배가 되어도 현의 길이는 2배보다 짧으므로(삼각형의 두 변의 길이의 합은 나머지 한 변보다 길다) 현의 길이는 중심각의 크기에 정비례하지 않는다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 228.35,
+      "end": 258.85
+     }
     },
     {
      "id": "mat-u1-08",
@@ -233,7 +268,12 @@
      "answer": [
       1
      ],
-     "explanation": "한 원에서 호의 길이와 부채꼴의 넓이는 모두 중심각의 크기에 정비례한다. $150 : x = 10 : 4$에서 $x = 60$이고, 넓이는 $45 \\times \\dfrac{4}{10} = 18\\text{ (cm}^2)$이다."
+     "explanation": "한 원에서 호의 길이와 부채꼴의 넓이는 모두 중심각의 크기에 정비례한다. $150 : x = 10 : 4$에서 $x = 60$이고, 넓이는 $45 \\times \\dfrac{4}{10} = 18\\text{ (cm}^2)$이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 258.85,
+      "end": 292.6
+     }
     },
     {
      "id": "mat-u1-09",
@@ -261,7 +301,12 @@
      "answer": [
       3
      ],
-     "explanation": "$S = \\pi \\times 8^2 \\times \\dfrac{45}{360} = 64\\pi \\times \\dfrac{1}{8} = 8\\pi\\text{ (cm}^2)$이다. $2\\pi$는 호의 길이($2\\pi \\times 8 \\times \\dfrac{45}{360}$)의 값이다."
+     "explanation": "$S = \\pi \\times 8^2 \\times \\dfrac{45}{360} = 64\\pi \\times \\dfrac{1}{8} = 8\\pi\\text{ (cm}^2)$이다. $2\\pi$는 호의 길이($2\\pi \\times 8 \\times \\dfrac{45}{360}$)의 값이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 292.6,
+      "end": 329.5
+     }
     },
     {
      "id": "mat-u1-10",
@@ -289,7 +334,12 @@
      "answer": [
       5
      ],
-     "explanation": "나뭇잎 모양은 활꼴 2개로, 활꼴 1개의 넓이는 (사분원) $-$ (직각삼각형) $= \\dfrac{1}{4}\\pi \\times 6^2 - \\dfrac{1}{2} \\times 6 \\times 6 = 9\\pi - 18$이다. 따라서 넓이는 $2(9\\pi - 18) = 18\\pi - 36\\text{ (cm}^2)$이다. $9\\pi - 18$은 활꼴 1개만 구한 값이다."
+     "explanation": "나뭇잎 모양은 활꼴 2개로, 활꼴 1개의 넓이는 (사분원) $-$ (직각삼각형) $= \\dfrac{1}{4}\\pi \\times 6^2 - \\dfrac{1}{2} \\times 6 \\times 6 = 9\\pi - 18$이다. 따라서 넓이는 $2(9\\pi - 18) = 18\\pi - 36\\text{ (cm}^2)$이다. $9\\pi - 18$은 활꼴 1개만 구한 값이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
+      "start": 329.5,
+      "end": 373.85
+     }
     }
    ]
   },
@@ -327,7 +377,12 @@
      "answer": [
       1
      ],
-     "explanation": "다면체는 다각형인 면으로만 둘러싸인 입체도형이다. 원뿔은 밑면이 원이고 옆면이 곡면이므로 다면체가 아니다. 나머지는 모두 다각형인 면으로만 둘러싸여 있다."
+     "explanation": "다면체는 다각형인 면으로만 둘러싸인 입체도형이다. 원뿔은 밑면이 원이고 옆면이 곡면이므로 다면체가 아니다. 나머지는 모두 다각형인 면으로만 둘러싸여 있다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 8.95,
+      "end": 33.55
+     }
     },
     {
      "id": "mat-u2-02",
@@ -355,7 +410,12 @@
      "answer": [
       3
      ],
-     "explanation": "한 꼭짓점에 면이 $4$개 모이는 정다면체는 정팔면체이므로 $a = 6$, 면이 정오각형인 정다면체는 정십이면체이므로 $b = 30$이다. 따라서 $a + b = 36$이다. $38$은 정팔면체의 면의 개수 $8$을 더한 값이다."
+     "explanation": "한 꼭짓점에 면이 $4$개 모이는 정다면체는 정팔면체이므로 $a = 6$, 면이 정오각형인 정다면체는 정십이면체이므로 $b = 30$이다. 따라서 $a + b = 36$이다. $38$은 정팔면체의 면의 개수 $8$을 더한 값이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 33.55,
+      "end": 77.65
+     }
     },
     {
      "id": "mat-u2-03",
@@ -383,7 +443,12 @@
      "answer": [
       4
      ],
-     "explanation": "ㄱ(O). ㄴ(X): 각뿔대의 두 밑면은 평행하지만 크기가 달라 합동이 아니다. ㄷ(O): 정육각형 $3$개만 모여도 $120^\\circ \\times 3 = 360^\\circ$가 되어 꼭짓점을 만들 수 없다. ㄹ(O): 오각뿔의 면은 $5 + 1 = 6$개, 사각뿔대의 면은 $4 + 2 = 6$개이다."
+     "explanation": "ㄱ(O). ㄴ(X): 각뿔대의 두 밑면은 평행하지만 크기가 달라 합동이 아니다. ㄷ(O): 정육각형 $3$개만 모여도 $120^\\circ \\times 3 = 360^\\circ$가 되어 꼭짓점을 만들 수 없다. ㄹ(O): 오각뿔의 면은 $5 + 1 = 6$개, 사각뿔대의 면은 $4 + 2 = 6$개이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 77.65,
+      "end": 116.95
+     }
     },
     {
      "id": "mat-u2-04",
@@ -411,7 +476,12 @@
      "answer": [
       5
      ],
-     "explanation": "회전축을 포함하는 평면으로 자른 단면은 원기둥이 직사각형, 원뿔이 이등변삼각형, 구가 원, 원뿔대가 등변사다리꼴이다."
+     "explanation": "회전축을 포함하는 평면으로 자른 단면은 원기둥이 직사각형, 원뿔이 이등변삼각형, 구가 원, 원뿔대가 등변사다리꼴이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 116.95,
+      "end": 143.3
+     }
     },
     {
      "id": "mat-u2-05",
@@ -439,7 +509,12 @@
      "answer": [
       3
      ],
-     "explanation": "회전축을 포함하는 단면은 회전시키기 전 직각삼각형과 그것을 회전축에 대해 대칭시킨 도형을 합친 이등변삼각형이므로, 넓이는 $\\left(\\dfrac{1}{2} \\times 6 \\times 8\\right) \\times 2 = 48\\text{ (cm}^2)$이다. $24$는 직각삼각형 하나의 넓이만 구한 값이다."
+     "explanation": "회전축을 포함하는 단면은 회전시키기 전 직각삼각형과 그것을 회전축에 대해 대칭시킨 도형을 합친 이등변삼각형이므로, 넓이는 $\\left(\\dfrac{1}{2} \\times 6 \\times 8\\right) \\times 2 = 48\\text{ (cm}^2)$이다. $24$는 직각삼각형 하나의 넓이만 구한 값이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 143.3,
+      "end": 200.4
+     }
     },
     {
      "id": "mat-u2-06",
@@ -467,7 +542,12 @@
      "answer": [
       5
      ],
-     "explanation": "원뿔을 회전축에 수직인 평면으로 자른 단면은 원이지만, 꼭짓점에 가까울수록 작아지므로 합동이 아니다. 단면이 모두 합동인 원이 되는 것은 원기둥이다."
+     "explanation": "원뿔을 회전축에 수직인 평면으로 자른 단면은 원이지만, 꼭짓점에 가까울수록 작아지므로 합동이 아니다. 단면이 모두 합동인 원이 되는 것은 원기둥이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 200.4,
+      "end": 229.15
+     }
     },
     {
      "id": "mat-u2-07",
@@ -495,7 +575,12 @@
      "answer": [
       2
      ],
-     "explanation": "안내판의 넓이는 원기둥의 옆넓이와 같다. 밑면의 반지름이 $20\\text{ cm}$이므로 $(2\\pi \\times 20) \\times 50 = 2000\\pi\\text{ (cm}^2)$이다. $2800\\pi$는 밑면 $2$개($800\\pi$)까지 더한 값으로, 안내판에는 밑면이 포함되지 않는다."
+     "explanation": "안내판의 넓이는 원기둥의 옆넓이와 같다. 밑면의 반지름이 $20\\text{ cm}$이므로 $(2\\pi \\times 20) \\times 50 = 2000\\pi\\text{ (cm}^2)$이다. $2800\\pi$는 밑면 $2$개($800\\pi$)까지 더한 값으로, 안내판에는 밑면이 포함되지 않는다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 229.15,
+      "end": 276.65
+     }
     },
     {
      "id": "mat-u2-08",
@@ -523,7 +608,12 @@
      "answer": [
       2
      ],
-     "explanation": "(밑넓이) $= 6 \\times 6 = 36$, (옆넓이) $= \\left(\\dfrac{1}{2} \\times 6 \\times 8\\right) \\times 4 = 96$이므로 겉넓이는 $36 + 96 = 132\\text{ (cm}^2)$이다. 뿔의 밑면은 $1$개이므로 밑넓이를 $2$번 더한 $168$은 틀리다."
+     "explanation": "(밑넓이) $= 6 \\times 6 = 36$, (옆넓이) $= \\left(\\dfrac{1}{2} \\times 6 \\times 8\\right) \\times 4 = 96$이므로 겉넓이는 $36 + 96 = 132\\text{ (cm}^2)$이다. 뿔의 밑면은 $1$개이므로 밑넓이를 $2$번 더한 $168$은 틀리다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 276.65,
+      "end": 324.85
+     }
     },
     {
      "id": "mat-u2-09",
@@ -551,7 +641,12 @@
      "answer": [
       1
      ],
-     "explanation": "밑면의 반지름을 $r$, 모선을 $l$이라 하면 $120^\\circ = 360^\\circ \\times \\dfrac{r}{l}$에서 $l = 3r$이다. 겉넓이 $\\pi r^2 + \\pi r l = \\pi r^2 + 3\\pi r^2 = 4\\pi r^2 = 64\\pi$이므로 $r^2 = 16$, $r = 4\\text{ cm}$이다. $12\\text{ cm}$는 모선의 길이이다."
+     "explanation": "밑면의 반지름을 $r$, 모선을 $l$이라 하면 $120^\\circ = 360^\\circ \\times \\dfrac{r}{l}$에서 $l = 3r$이다. 겉넓이 $\\pi r^2 + \\pi r l = \\pi r^2 + 3\\pi r^2 = 4\\pi r^2 = 64\\pi$이므로 $r^2 = 16$, $r = 4\\text{ cm}$이다. $12\\text{ cm}$는 모선의 길이이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 324.85,
+      "end": 381.95
+     }
     },
     {
      "id": "mat-u2-10",
@@ -579,7 +674,12 @@
      "answer": [
       4
      ],
-     "explanation": "맞닿은 원기둥의 윗면과 원뿔의 밑면은 안쪽으로 숨으므로 제외한다. (바닥 밑면) $16\\pi$ + (원기둥 옆넓이) $2\\pi \\times 4 \\times 5 = 40\\pi$ + (원뿔 옆넓이) $\\pi \\times 4 \\times 6 = 24\\pi$ $= 80\\pi\\text{ (m}^2)$이다. $96\\pi$는 숨은 면 하나를 더 더한 값이다."
+     "explanation": "맞닿은 원기둥의 윗면과 원뿔의 밑면은 안쪽으로 숨으므로 제외한다. (바닥 밑면) $16\\pi$ + (원기둥 옆넓이) $2\\pi \\times 4 \\times 5 = 40\\pi$ + (원뿔 옆넓이) $\\pi \\times 4 \\times 6 = 24\\pi$ $= 80\\pi\\text{ (m}^2)$이다. $96\\pi$는 숨은 면 하나를 더 더한 값이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u2.mp4",
+      "start": 381.95,
+      "end": 419.5
+     }
     }
    ]
   }
