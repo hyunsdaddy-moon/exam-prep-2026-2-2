@@ -13,10 +13,11 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId } from './dom.js?v=20261124-1036';
-import { renderMarkdown } from './markdown.js?v=20261124-1036';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-1036';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1036';
+import { el, CIRCLED, newId } from './dom.js?v=20261124-1055';
+import { renderMarkdown } from './markdown.js?v=20261124-1055';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-1055';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1055';
+import { explainButton } from './explain.js?v=20261124-1055';
 
 const ROUND_BASE = 40;
 const SESSION_PREFIX = 'dqs-';
@@ -208,7 +209,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
           paintAll();
         } }, el('span.p-mark', { text: CIRCLED[i] }), md(c))
       ));
-      block.append(el('ol.p-choices.p-choose', {}, items), feedback);
+      block.append(el('ol.p-choices.p-choose', {}, items), explainButton(q, { label: `${no}번` }), feedback);
       painters.push(() => {
         const t = current();
         const a = t?.byQ.get(q.id);
@@ -240,7 +241,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       const input = el('textarea.p-write', { rows: 4, placeholder: '여기에 답을 써 보세요.' });
       input.value = draft.texts[q.id] || '';
       input.addEventListener('input', () => { draft.texts[q.id] = input.value; persist(); });
-      block.append(input, feedback);
+      block.append(input, explainButton(q, { label: `서술형 ${essayNo}번` }), feedback);
       painters.push(() => {
         const t = current();
         const a = t?.byQ.get(q.id);

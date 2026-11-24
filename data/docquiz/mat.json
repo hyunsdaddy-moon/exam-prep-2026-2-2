@@ -142,7 +142,13 @@
       "정답. $\\angle CBD=48^\\circ=\\angle CDB$이고, $\\angle DCE$는 $\\triangle ACD$의 외각이라 $24^\\circ+48^\\circ=72^\\circ$이다.",
       "$84^\\circ$는 $\\angle BAC=28^\\circ$인 교과서 예제의 답이다. 이 문제는 $24^\\circ$이므로 $72^\\circ$이다.",
       "$\\angle CBD+\\angle CDB=48^\\circ+48^\\circ$로 더한 실수이다. 큰 삼각형 $ACD$의 $\\angle A+\\angle D$를 더해야 한다."
-     ]
+     ],
+     "video": {
+      "src": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard.mp4",
+      "start": 9.2,
+      "end": 54.61,
+      "poster": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard_poster.jpg"
+     }
     },
     {
      "type": "choice",
@@ -487,7 +493,13 @@
       "$\\triangle AEF$에서 $\\angle AFE=180^\\circ-(36^\\circ+36^\\circ)=108^\\circ$이다. $96^\\circ$는 근거가 없는 값이다.",
       "정답. $\\angle AEB=\\angle EAD=\\frac{180^\\circ-108^\\circ}{2}=36^\\circ$이므로 $\\angle AFE=180^\\circ-72^\\circ=108^\\circ$이다.",
       "$120^\\circ$는 정육각형의 한 내각이다. 정오각형에서는 $\\angle AFE=108^\\circ$이다."
-     ]
+     ],
+     "video": {
+      "src": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard.mp4",
+      "start": 54.61,
+      "end": 92.89,
+      "poster": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard_poster.jpg"
+     }
     },
     {
      "type": "choice",
@@ -539,7 +551,13 @@
       "$44$는 십일각형의 대각선 개수이다. 이 정다각형은 정십이각형이다.",
       "정답. 한 외각이 $30^\\circ$이므로 $n=12$이고, 대각선은 $\\frac{12\\times9}{2}=54$개이다.",
       "$65$는 십삼각형의 대각선 개수이다. 정십이각형은 $54$개이다."
-     ]
+     ],
+     "video": {
+      "src": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard.mp4",
+      "start": 92.89,
+      "end": 122.7,
+      "poster": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard_poster.jpg"
+     }
     },
     {
      "type": "choice",
@@ -706,7 +724,13 @@
       "$\\triangle ABC$에서 두 변의 합 $5+5=10$이 나머지 한 변보다 크므로 $\\overline{AC}>10$일 수 없다.",
       "정답. $\\overline{BC}=\\overline{AB}=5$이고 $\\triangle ABC$에서 $\\overline{AB}+\\overline{BC}>\\overline{AC}$이므로 $\\overline{AC}<10\\text{ cm}$이다.",
       "$2.5=5\\div2$로 나눈 실수이다. $\\overline{AC}$는 $\\overline{AB}$보다 길고 $10\\text{ cm}$보다 짧다."
-     ]
+     ],
+     "video": {
+      "src": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard.mp4",
+      "start": 122.7,
+      "end": 156.44,
+      "poster": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard_poster.jpg"
+     }
     },
     {
      "type": "choice",
@@ -729,7 +753,13 @@
       "$9\\text{ cm}$는 $\\angle AOD$를 $90^\\circ$로 잡은 값이다. 바른 중심각은 $120^\\circ$이다.",
       "$10\\text{ cm}$는 $\\angle AOD$를 $100^\\circ$로 잡은 값이다. 바른 중심각은 $120^\\circ$이다.",
       "정답. 동위각으로 $\\angle OAD=30^\\circ$, 이등변이라 $\\angle ODA=30^\\circ$, $\\angle AOD=120^\\circ$이므로 $\\overparen{AD}=3\\times4=12\\text{ cm}$이다."
-     ]
+     ],
+     "video": {
+      "src": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard.mp4",
+      "start": 156.44,
+      "end": 192.64,
+      "poster": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard_poster.jpg"
+     }
     },
     {
      "type": "choice",
@@ -867,7 +897,13 @@
       "직선 부분을 $2\\times4=8$로 잡은 실수이다. 직선 부분은 $2\\times(10-4)=12$이다.",
       "직선 부분을 $2\\times10=20$으로 잡은 실수이다. 직선 부분은 $2\\times(10-4)=12$이다.",
       "정답. 큰 호 $5\\pi$ + 작은 호 $2\\pi$ + 직선 $2\\times(10-4)=12$이므로 $(7\\pi+12)\\text{ cm}$이다."
-     ]
+     ],
+     "video": {
+      "src": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard.mp4",
+      "start": 192.64,
+      "end": 228.85,
+      "poster": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard_poster.jpg"
+     }
     },
     {
      "type": "choice",
@@ -913,7 +949,13 @@
       "$12\\pi$는 지름 6을 반지름처럼 써서 $2\\pi\\times6$으로 한 실수이다. 곡선 부분은 $2\\pi\\times3=6\\pi$이다.",
       "$12\\pi$는 지름 6을 반지름처럼 쓴 실수이다. 곡선 부분은 $6\\pi$, 직선 부분은 $36$이다.",
       "직선 부분을 위아래 각각 지름 **4개**($24$)로 센 실수이다. 양 끝 캔의 중심 사이는 지름 3개($18$)이다."
-     ]
+     ],
+     "video": {
+      "src": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard.mp4",
+      "start": 228.85,
+      "end": 259.87,
+      "poster": "exam/%EC%88%98%ED%95%99_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/mat_q1_hard_poster.jpg"
+     }
     },
     {
      "type": "essay",

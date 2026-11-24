@@ -9,11 +9,12 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned } from './dom.js?v=20261124-1036';
-import { renderMarkdown } from './markdown.js?v=20261124-1036';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-1036';
-import { loadPaper } from './study.js?v=20261124-1036';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-1036';
+import { el, newId, CIRCLED, plainStem, versioned } from './dom.js?v=20261124-1055';
+import { renderMarkdown } from './markdown.js?v=20261124-1055';
+import { explainButton } from './explain.js?v=20261124-1055';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-1055';
+import { loadPaper } from './study.js?v=20261124-1055';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-1055';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -28,7 +29,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-1036';
+} from './grade.mjs?v=20261124-1055';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -453,7 +454,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
           li.classList.toggle('on', on);
           li.querySelector('.p-mark').textContent = on ? String(i + 1) : CIRCLED[i]; // 칠한 동그라미 안에 번호
         });
-        block.append(el(`ol.p-choices.p-choose${q.choiceTable ? '.compact' : ''}`, {}, items));
+        block.append(el(`ol.p-choices.p-choose${q.choiceTable ? '.compact' : ''}`, {}, items), explainButton(q, { label: `${q.no}번` }));
         mark();
       } else {
         const input = el('textarea.p-write', { rows: 5, placeholder: '여기에 답을 쓰세요.' });
@@ -463,7 +464,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
           persist();
           refresh(q);
         });
-        block.append(input);
+        block.append(input, explainButton(q, { label: `서술형 ${q.no}번` }));
       }
       flow.append(block);
       addCell(q, block);
@@ -481,7 +482,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       block.append(choices.node, el('div.conf-row', {}, confidencePicker(a.confidence, (v) => {
         a.confidence = v;
         persist();
-      }, true)));
+      }, true)), explainButton(q, { label: `${q.no}번` }));
     } else {
       const input = el('textarea.essay-input', { rows: 6, placeholder: '답을 쓰세요.' });
       input.value = a.text;
@@ -490,7 +491,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
         persist();
         refresh(q);
       });
-      block.append(input);
+      block.append(input, explainButton(q, { label: `서술형 ${q.no}번` }));
     }
     sheet.append(block);
     addCell(q, block);

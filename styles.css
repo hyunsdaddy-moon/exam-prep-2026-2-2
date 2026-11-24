@@ -912,3 +912,37 @@ button.link.danger { color: var(--bad); }
 .dq-cn-tag { flex: none; font-size: 7.5pt; color: #d70015; }
 .dq-bogi { margin-bottom: 4pt; }
 .result-body .dq-notes { font-size: 14px; border-top-color: var(--line); }
+
+/* ── 풀이 해설 버튼 · 팝업 (explain.js) ── */
+.ex-row { margin: 5pt 0 0 13pt; }
+.q-card .ex-row { margin: 10px 0 0; }
+.ex-btn { font: inherit; font-size: 9pt; font-weight: 600; color: #0a4fa3; background: #eef4fc; border: 1px solid #b9cfee; border-radius: 999px; padding: 2pt 10pt; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.q-card .ex-btn { font-size: 14px; padding: 5px 14px; }
+.ex-btn:hover { background: #dde9f9; }
+.ex-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ex-badge { font-size: 0.85em; font-weight: 700; color: #b25000; }
+.ex-dialog { width: min(720px, calc(100vw - 24px)); max-height: calc(100vh - 48px); padding: 0; border: 0; border-radius: var(--radius); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); color: var(--text); font-family: var(--font); }
+.ex-dialog[open] { display: flex; flex-direction: column; }
+.ex-dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
+.ex-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid var(--line-soft); background: #fafafa; }
+.ex-head h3 { margin: 0; font-size: 18px; }
+.ex-close { font: inherit; font-size: 18px; width: 34px; height: 34px; border-radius: 50%; border: 0; background: var(--bg-soft); cursor: pointer; }
+.ex-close:hover { background: var(--line-soft); }
+.ex-body { overflow-y: auto; padding: 16px 20px 22px; font-size: 15px; line-height: 1.7; }
+.ex-body h4 { margin: 16px 0 4px; font-size: 15px; color: #0a4fa3; }
+.ex-q { display: flex; gap: 6px; padding: 10px 12px; background: var(--bg-soft); border-radius: var(--radius-s); color: var(--text-2); font-size: 14px; }
+.ex-q .md p { margin: 0; }
+.ex-answer { margin: 14px 0 0; font-size: 16px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.ex-answer b { color: var(--good); font-size: 18px; }
+.ex-answer-text .md p, .ex-answer-text p { display: inline; margin: 0; }
+.ex-text p { margin: 0 0 6px; }
+.ex-notes ul { list-style: none; margin: 0; padding: 0; }
+.ex-cn li { display: flex; gap: 8px; padding: 5px 8px; border-radius: 8px; }
+.ex-cn li.ok { background: #eaf6ee; }
+.ex-cn-no { flex: none; font-weight: 700; }
+.ex-cn li.ok .ex-cn-no { color: var(--good); }
+.ex-bogi li { margin: 3px 0; }
+.ex-keys { color: var(--text-2); font-size: 14px; }
+.ex-empty { color: var(--text-3); }
+.ex-video { width: 100%; border-radius: var(--radius-s); background: #000; }
+@media print { .ex-row, .ex-dialog { display: none !important; } }
