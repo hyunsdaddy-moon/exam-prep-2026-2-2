@@ -13,8 +13,8 @@
  *   opts.label: 팝업 제목에 붙일 문항 번호 (예: '3번')
  */
 
-import { el, CIRCLED } from './dom.js?v=20261124-1632';
-import { renderMarkdown } from './markdown.js?v=20261124-1632';
+import { el, CIRCLED } from './dom.js?v=20261124-1639';
+import { renderMarkdown } from './markdown.js?v=20261124-1639';
 
 const md = (text, tag = 'div.md.ex-text') => {
   const box = el(tag);

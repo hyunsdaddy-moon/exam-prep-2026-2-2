@@ -7,21 +7,23 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1632';
-import { el, versioned } from './dom.js?v=20261124-1632';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1632';
-import { renderUnitsRoute } from './units.js?v=20261124-1632';
-import { buildDocQuiz } from './docquiz.js?v=20261124-1632';
-import { renderAssessRoute } from './assess.js?v=20261124-1632';
-import { renderPastRoute } from './past.js?v=20261124-1632';
-import { renderWrongbook } from './wrongbook.js?v=20261124-1632';
-import { renderBoard } from './board.js?v=20261124-1632';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1632';
-import { loadStudy } from './study.js?v=20261124-1632';
-import { renderPrint, printLinks } from './print.js?v=20261124-1632';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1632';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1632';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1632';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1639';
+import { el, versioned } from './dom.js?v=20261124-1639';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1639';
+import { renderUnitsRoute } from './units.js?v=20261124-1639';
+import { buildDocQuiz } from './docquiz.js?v=20261124-1639';
+import { attachWatchBoxes } from './watch.js?v=20261124-1639';
+import { renderDashboard } from './dashboard.js?v=20261124-1639';
+import { renderAssessRoute } from './assess.js?v=20261124-1639';
+import { renderPastRoute } from './past.js?v=20261124-1639';
+import { renderWrongbook } from './wrongbook.js?v=20261124-1639';
+import { renderBoard } from './board.js?v=20261124-1639';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1639';
+import { loadStudy } from './study.js?v=20261124-1639';
+import { renderPrint, printLinks } from './print.js?v=20261124-1639';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1639';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1639';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1639';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -83,6 +85,7 @@ function renderNavLearner(names) {
 function setNav(code) {
   navLinks.replaceChildren(
     ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null })),
+    el('a.nav-assess', { href: '#/dashboard', text: '학습 현황', 'aria-current': code === 'dashboard' ? 'page' : null }),
     el('a.nav-assess', { href: '#/units', text: '단원 평가', 'aria-current': code === 'units' ? 'page' : null }),
     el('a.nav-assess', { href: '#/assess', text: '수준 평가', 'aria-current': code === 'assess' ? 'page' : null }),
     el('a.nav-assess', { href: '#/past', text: '기출문제', 'aria-current': code === 'past' ? 'page' : null }),
@@ -581,6 +584,7 @@ async function renderReader(s, index, query) {
     const hit = headings.find((h) => h.key === key) || headings.find((h) => h.key.includes(key));
     if (hit) document.getElementById(hit.id)?.scrollIntoView();
   }
+  void attachWatchBoxes(body, s.code);
   watchHeadings(toc, headings);
   void trackReading(s, doc, headings, toc, pager);
 }
@@ -711,6 +715,7 @@ async function route() {
   if (parts[0] === 'me' && parts.length === 1) return renderCharacterSelect(ctx);
   if (parts[0] === 'notes' && parts.length === 1) return renderWrongbook(ctx, data.exam, await loadStudy(ctx, data.exam.subjects, data.concepts), query);
   if (parts[0] === 'board' && parts.length === 1) return renderBoard(ctx, data.exam, query);
+  if (parts[0] === 'dashboard' && parts.length === 1) return renderDashboard(ctx, data.exam, data);
   const unitTesting = renderUnitsRoute(ctx, data.exam, parts, query);
   if (unitTesting) return unitTesting;
   const assessing = renderAssessRoute(ctx, data.exam, parts, query);

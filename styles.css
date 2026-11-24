@@ -947,3 +947,54 @@ button.link.danger { color: var(--bad); }
 .ex-video { width: 100%; border-radius: var(--radius-s); background: #000; }
 @media print { .ex-row, .ex-dialog { display: none !important; } }
 .toc .toc-video { font-size: 0.85em; letter-spacing: 1px; white-space: nowrap; }
+
+/* 영상 시청 체크박스 */
+.watch-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 8px 0 22px; padding: 8px 14px; border-radius: 12px; background: var(--bg-soft); font-size: 14px; }
+.watch-row.done { background: color-mix(in srgb, var(--good) 10%, var(--bg-soft)); }
+.watch-label { font-weight: 600; }
+.watch-boxes { display: inline-flex; gap: 6px; }
+.watch-box { position: relative; display: inline-flex; cursor: pointer; }
+.watch-box input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.watch-box i { width: 22px; height: 22px; border-radius: 6px; border: 2px solid var(--line); background: var(--card, #fff); display: inline-flex; align-items: center; justify-content: center; font-style: normal; font-size: 13px; font-weight: 700; color: #fff; transition: background 0.12s, border-color 0.12s; }
+.watch-box input:checked + i { background: var(--accent); border-color: var(--accent); }
+.watch-box input:checked + i::after { content: '✓'; }
+.watch-box input:focus-visible + i { outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 2px; }
+.watch-row.done .watch-box input:checked + i { background: var(--good); border-color: var(--good); }
+.watch-count { color: var(--text-2); }
+
+/* 학습 현황 대시보드 */
+.db-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.db-card { padding: 20px; border-radius: 18px; background: var(--bg-soft); }
+.db-card-title { font-size: 14px; font-weight: 600; color: var(--text-2); }
+.db-card-num { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; margin: 6px 0 10px; }
+.db-card-num small { font-size: 18px; margin-left: 2px; color: var(--text-2); }
+.db-card-sub { font-size: 13px; color: var(--text-2); margin: 10px 0 0; }
+.db-card.overall { background: color-mix(in srgb, var(--accent) 10%, var(--bg-soft)); }
+.db-bar { height: 10px; border-radius: 999px; background: var(--line-soft, #e5e5ea); overflow: hidden; }
+.db-bar i { display: block; height: 100%; border-radius: inherit; background: var(--accent); transition: width 0.4s; }
+.db-bar.video i { background: #ff9f0a; }
+.db-bar.quiz i { background: #0a84ff; }
+.db-bar.score i { background: #30a14e; }
+.db-bar.concept i { background: #8e8e93; }
+.db-bar.overall i { background: #5e5ce6; }
+.db-subjects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.db-subject { padding: 20px; border-radius: 18px; border: 1px solid var(--line-soft, #e5e5ea); }
+.db-subject-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+.db-subject-head h3 { margin: 0; font-size: 20px; }
+.db-subject-total b { font-size: 20px; }
+.db-line { display: grid; grid-template-columns: 70px 1fr 44px; align-items: center; gap: 4px 10px; margin: 8px 0; font-size: 14px; }
+.db-line-label { color: var(--text-2); }
+.db-line-num { text-align: right; font-weight: 600; }
+.db-line-detail { grid-column: 2 / -1; font-size: 12px; color: var(--text-3, #888); margin-top: -2px; }
+.db-units { display: grid; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line-soft, #e5e5ea); }
+.db-unit { display: grid; gap: 4px; padding: 8px 10px; border-radius: 10px; color: inherit; }
+.db-unit:hover { background: var(--bg-soft); text-decoration: none; }
+.db-unit-title { font-size: 14px; font-weight: 600; }
+.db-unit-stats { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--text-2); }
+.db-unit .db-bar { height: 6px; }
+.db-muted { color: var(--text-3, #999); }
+@media (max-width: 860px) {
+  .db-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .db-subjects { grid-template-columns: 1fr; }
+  .db-card-num { font-size: 32px; }
+}
