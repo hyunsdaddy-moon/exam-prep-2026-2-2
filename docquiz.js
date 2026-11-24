@@ -13,13 +13,50 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2250';
-import { renderMarkdown } from './markdown.js?v=20261124-2250';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2250';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2250';
-import { explainButton } from './explain.js?v=20261124-2250';
-import { inkTools } from './ink.js?v=20261124-2250';
-import { passageBlock } from './solve.js?v=20261124-2250';
+import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2255';
+import { renderMarkdown } from './markdown.js?v=20261124-2255';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2255';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2255';
+import { explainButton } from './explain.js?v=20261124-2255';
+import { inkTools } from './ink.js?v=20261124-2255';
+import { passageBlock } from './solve.js?v=20261124-2255';
+
+/* 채점 표시 — 선생님이 빨간 색연필로 그은 것처럼: 손으로 그린 동그라미(맞음)·빗금(틀림)에
+ * 연필 결(알갱이)과 살짝 떨리는 선을 SVG 필터로 입힌다. 필터는 문서에 한 번만 넣는다. */
+function ensurePencilDefs() {
+  if (document.getElementById('red-pencil')) return;
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('width', '0');
+  svg.setAttribute('height', '0');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.style.position = 'absolute';
+  svg.innerHTML = `<defs><filter id="red-pencil" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="3" result="wob"/>
+    <feDisplacementMap in="SourceGraphic" in2="wob" scale="3" xChannelSelector="R" yChannelSelector="G" result="line"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -1.7 0 0 0 1.75" result="mask"/>
+    <feComposite in="line" in2="mask" operator="in"/>
+  </filter></defs>`;
+  document.body.append(svg);
+}
+const PENCIL_PATHS = {
+  // 한 번에 휙 돌리고 끝이 시작점을 지나가는 동그라미 + 덧칠한 두 번째 획
+  o: ['M60 9C30 5 7 27 9 54C11 81 44 95 71 85C93 76 97 43 80 22C70 9 52 6 36 13', 'M57 13C33 11 14 30 16 54C18 76 45 88 68 80'],
+  // 위에서 아래로 힘 있게 그은 빗금 두 번
+  x: ['M88 -4C71 32 48 66 12 104', 'M81 2C66 36 45 66 18 99'],
+};
+function pencilMark(kind) {
+  if (!PENCIL_PATHS[kind]) return '';
+  ensurePencilDefs();
+  const tilt = Math.round(Math.random() * 16 - 8);
+  const [a, b] = PENCIL_PATHS[kind];
+  return `<svg viewBox="0 0 100 100" aria-hidden="true" style="transform:rotate(${tilt}deg)"><g filter="url(#red-pencil)" fill="none" stroke="#e0101e" stroke-linecap="round" stroke-linejoin="round">` +
+    `<path d="${a}" stroke-width="7.5"/><path d="${b}" stroke-width="4.5" opacity=".7"/></g></svg>`;
+}
+function setGrade(node, kind) {
+  node.innerHTML = pencilMark(kind);
+  node.setAttribute('aria-label', kind === 'o' ? '맞음' : kind === 'x' ? '틀림' : '');
+}
 
 const ROUND_BASE = 40;
 const SESSION_PREFIX = 'dqs-';
@@ -246,7 +283,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
         const right = graded && pick === q.answer;
         block.classList.toggle('is-right', right);
         block.classList.toggle('is-wrong', graded && !right);
-        grade.textContent = graded ? (right ? '○' : '／') : '';
+        setGrade(grade, graded ? (right ? 'o' : 'x') : null);
         feedback.replaceChildren();
         if (graded) {
           feedback.append(
@@ -273,7 +310,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
         const v = a?.correct === true ? 'o' : a?.correct === false ? 'x' : null;
         block.classList.toggle('is-right', v === 'o');
         block.classList.toggle('is-wrong', v === 'x');
-        grade.textContent = v === 'o' ? '○' : v === 'x' ? '／' : '';
+        setGrade(grade, v);
         feedback.replaceChildren();
         if (t) {
           const mark = (val, text) => el(`button.dq-btn${v === val ? '.on' : ''}`, { type: 'button', text, onclick: async () => {
