@@ -1004,6 +1004,7 @@ button.link.danger { color: var(--bad); }
 .wrap:has(.vs-missions) { --vs-a: #0071e3; --vs-b: #ff7a00; }
 .vs-board { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; max-width: 920px; margin: 0 auto; }
 .vs-face { width: min(276px, 30vw); height: auto; aspect-ratio: 1; object-fit: contain; display: block; }
+.vs-face.flip { transform: scaleX(-1); }
 .vs-player b { border-bottom: 5px solid var(--vs-a); padding: 0 6px 2px; }
 .vs-player.b b { border-bottom-color: var(--vs-b); }
 .vs-player { display: grid; justify-items: center; gap: 4px; font-size: 15px; color: var(--text-2); }
