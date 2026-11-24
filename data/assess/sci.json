@@ -32,7 +32,12 @@
      "answer": [
       2
      ],
-     "explanation": "같은 방향인 오른쪽 두 힘을 먼저 더하면 $9\\text{ N}$이고, 반대 방향인 왼쪽 $12\\text{ N}$와의 차는 $3\\text{ N}$이며 방향은 더 큰 힘인 왼쪽이다. 세 힘을 모두 더한 $21\\text{ N}$은 방향을 고려하지 않은 오답이다."
+     "explanation": "같은 방향인 오른쪽 두 힘을 먼저 더하면 $9\\text{ N}$이고, 반대 방향인 왼쪽 $12\\text{ N}$와의 차는 $3\\text{ N}$이며 방향은 더 큰 힘인 왼쪽이다. 세 힘을 모두 더한 $21\\text{ N}$은 방향을 고려하지 않은 오답이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 7.5,
+      "end": 46.65
+     }
     },
     {
      "id": "sci-d1-02",
@@ -60,7 +65,12 @@
      "answer": [
       5
      ],
-     "explanation": "공기 부양선은 바람으로 땅에서 떠올라 지면과의 마찰력을 **작게** 하는 예이다. 나머지는 모두 미끄러지지 않도록 마찰력을 크게 한 예이다."
+     "explanation": "공기 부양선은 바람으로 땅에서 떠올라 지면과의 마찰력을 **작게** 하는 예이다. 나머지는 모두 미끄러지지 않도록 마찰력을 크게 한 예이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 46.65,
+      "end": 78.6
+     }
     },
     {
      "id": "sci-d1-03",
@@ -88,7 +98,12 @@
      "answer": [
       4
      ],
-     "explanation": "밀폐된 용기이므로 온도가 높아져도 기체 입자의 개수(그리고 크기·질량)는 변하지 않는다. 운동 빠르기·충돌 세기가 커지면서 입자 사이 거리와 부피가 커진다."
+     "explanation": "밀폐된 용기이므로 온도가 높아져도 기체 입자의 개수(그리고 크기·질량)는 변하지 않는다. 운동 빠르기·충돌 세기가 커지면서 입자 사이 거리와 부피가 커진다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 78.6,
+      "end": 111.2
+     }
     },
     {
      "id": "sci-d1-04",
@@ -116,7 +131,12 @@
      "answer": [
       1
      ],
-     "explanation": "음력 7~8일경의 반달은 상현달이고 오른쪽이 둥글다(상현=오른쪽). 왼쪽이 둥근 하현달은 음력 22~23일경에 보인다."
+     "explanation": "음력 7~8일경의 반달은 상현달이고 오른쪽이 둥글다(상현=오른쪽). 왼쪽이 둥근 하현달은 음력 22~23일경에 보인다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 111.2,
+      "end": 140.85
+     }
     },
     {
      "id": "sci-d1-05",
@@ -144,7 +164,12 @@
      "answer": [
       3
      ],
-     "explanation": "질량은 장소에 관계없이 $60\\text{ kg}$으로 일정하다. 무게는 지구에서 $600\\text{ N}$이고 화성에서는 $600\\times0.38=228$ N이다. 질량까지 0.38배로 줄인 선지는 질량과 무게를 혼동한 오답이다."
+     "explanation": "질량은 장소에 관계없이 $60\\text{ kg}$으로 일정하다. 무게는 지구에서 $600\\text{ N}$이고 화성에서는 $600\\times0.38=228$ N이다. 질량까지 0.38배로 줄인 선지는 질량과 무게를 혼동한 오답이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 140.85,
+      "end": 173.75
+     }
     },
     {
      "id": "sci-d1-06",
@@ -172,7 +197,12 @@
      "answer": [
       1
      ],
-     "explanation": "회전목마·대관람차처럼 속력이 일정하고 방향만 변하는 운동은 알짜힘이 운동 방향에 항상 수직으로 작용한다. 그네는 속력과 방향이 모두 변하고, 낙하 놀이 기구는 속력만 변하는 운동이다."
+     "explanation": "회전목마·대관람차처럼 속력이 일정하고 방향만 변하는 운동은 알짜힘이 운동 방향에 항상 수직으로 작용한다. 그네는 속력과 방향이 모두 변하고, 낙하 놀이 기구는 속력만 변하는 운동이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 173.75,
+      "end": 210.9
+     }
     },
     {
      "id": "sci-d1-07",
@@ -200,7 +230,12 @@
      "answer": [
       2
      ],
-     "explanation": "하늘 높이 올라갈수록 대기압이 크게 낮아져 풍선 속 기체의 부피가 커지는 것으로 **보일 법칙**의 예이다. 나머지는 모두 온도 변화에 따른 부피 변화(샤를 법칙)이다."
+     "explanation": "하늘 높이 올라갈수록 대기압이 크게 낮아져 풍선 속 기체의 부피가 커지는 것으로 **보일 법칙**의 예이다. 나머지는 모두 온도 변화에 따른 부피 변화(샤를 법칙)이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 210.9,
+      "end": 238.6
+     }
     },
     {
      "id": "sci-d1-08",
@@ -228,7 +263,12 @@
      "answer": [
       5
      ],
-     "explanation": "한밤중 남쪽 하늘에는 태양 반대쪽 별자리가 보이며, 이는 6개월 뒤(또는 전) 달의 태양 쪽 별자리이다. 10월의 반대는 4월이므로 물고기자리이다. 처녀자리는 10월에 태양 쪽에 있어 볼 수 없다."
+     "explanation": "한밤중 남쪽 하늘에는 태양 반대쪽 별자리가 보이며, 이는 6개월 뒤(또는 전) 달의 태양 쪽 별자리이다. 10월의 반대는 4월이므로 물고기자리이다. 처녀자리는 10월에 태양 쪽에 있어 볼 수 없다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 238.6,
+      "end": 274.55
+     }
     },
     {
      "id": "sci-d1-09",
@@ -256,7 +296,12 @@
      "answer": [
       5
      ],
-     "explanation": "늘어난 길이는 공기 중 $6$ cm → $12\\text{ N}$, 물속 $4$ cm → $8\\text{ N}$이므로 부력은 $4\\text{ N}$이다. 부력은 잠긴 부피에 비례하므로 절반 잠기면 $2\\text{ N}$, 눈금 $10\\text{ N}$ → $5$ cm 늘어나 전체 길이 $15\\text{ cm}$이다. $5\\text{ cm}$는 전체 길이가 아닌 늘어난 길이이다."
+     "explanation": "늘어난 길이는 공기 중 $6$ cm → $12\\text{ N}$, 물속 $4$ cm → $8\\text{ N}$이므로 부력은 $4\\text{ N}$이다. 부력은 잠긴 부피에 비례하므로 절반 잠기면 $2\\text{ N}$, 눈금 $10\\text{ N}$ → $5$ cm 늘어나 전체 길이 $15\\text{ cm}$이다. $5\\text{ cm}$는 전체 길이가 아닌 늘어난 길이이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 274.55,
+      "end": 309.15
+     }
     },
     {
      "id": "sci-d1-10",
@@ -285,7 +330,12 @@
      "answer": [
       4
      ],
-     "explanation": "온도가 $20$ ℃ 높아질 때마다 부피가 $4$ mL씩 일정하게 커지므로 $60\\ ^\\circ\\text{C}$에서는 $62\\text{ mL}$이다(ㄱ O). 온도가 높을수록 입자 사이 거리가 멀어진다(ㄷ O). 밀폐된 기체의 입자 개수는 온도와 관계없이 일정하다(ㄴ X)."
+     "explanation": "온도가 $20$ ℃ 높아질 때마다 부피가 $4$ mL씩 일정하게 커지므로 $60\\ ^\\circ\\text{C}$에서는 $62\\text{ mL}$이다(ㄱ O). 온도가 높을수록 입자 사이 거리가 멀어진다(ㄷ O). 밀폐된 기체의 입자 개수는 온도와 관계없이 일정하다(ㄴ X).",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 309.15,
+      "end": 344.15
+     }
     },
     {
      "id": "sci-d1-11",
@@ -313,7 +363,12 @@
      "answer": [
       1
      ],
-     "explanation": "개기 월식으로, 태양—지구—달 순으로 놓이는 망(음력 15일경)일 때 일어난다. 달은 서→동으로 공전해 왼쪽부터 가려지며, 붉게 보이는 것은 지구 대기를 통과해 굴절된 붉은빛 때문이므로 대기가 없으면 달이 보이지 않는다. 월식은 밤인 모든 지역에서 관측된다."
+     "explanation": "개기 월식으로, 태양—지구—달 순으로 놓이는 망(음력 15일경)일 때 일어난다. 달은 서→동으로 공전해 왼쪽부터 가려지며, 붉게 보이는 것은 지구 대기를 통과해 굴절된 붉은빛 때문이므로 대기가 없으면 달이 보이지 않는다. 월식은 밤인 모든 지역에서 관측된다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 344.15,
+      "end": 393.55
+     }
     },
     {
      "id": "sci-d1-12",
@@ -342,7 +397,12 @@
      "answer": [
       3
      ],
-     "explanation": "햇빛이 오는 쪽인 A가 삭이고, 시계 반대 방향으로 B(상현) → C(망) → D(하현) 순이다. A(삭)에서 일식이 가능하고(ㄱ O), B는 오른쪽이 둥근 상현달이다(ㄴ O). D는 하현달로 음력 22~23일경이다(ㄷ X)."
+     "explanation": "햇빛이 오는 쪽인 A가 삭이고, 시계 반대 방향으로 B(상현) → C(망) → D(하현) 순이다. A(삭)에서 일식이 가능하고(ㄱ O), B는 오른쪽이 둥근 상현달이다(ㄴ O). D는 하현달로 음력 22~23일경이다(ㄷ X).",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d1.mp4",
+      "start": 393.55,
+      "end": 451.05
+     }
     }
    ]
   },
@@ -375,7 +435,12 @@
      "answer": [
       4
      ],
-     "explanation": "왼쪽 두 힘의 합은 $9\\text{ N}$이고, 오른쪽 $15\\text{ N}$와의 차는 $6\\text{ N}$이며 방향은 더 큰 힘인 오른쪽이다. $24\\text{ N}$는 방향을 무시하고 모두 더한 오답이다."
+     "explanation": "왼쪽 두 힘의 합은 $9\\text{ N}$이고, 오른쪽 $15\\text{ N}$와의 차는 $6\\text{ N}$이며 방향은 더 큰 힘인 오른쪽이다. $24\\text{ N}$는 방향을 무시하고 모두 더한 오답이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 9.05,
+      "end": 50.2
+     }
     },
     {
      "id": "sci-d2-02",
@@ -403,7 +468,12 @@
      "answer": [
       3
      ],
-     "explanation": "볼펜 고무 손잡이는 **마찰력**을 크게 하는 예이다. 수중 카메라·전신 수영복은 부력을 크게, 해녀 납 허리띠는 중력을 크게, 잠수함은 무게(중력)를 조절해 뜨고 가라앉는 예이다."
+     "explanation": "볼펜 고무 손잡이는 **마찰력**을 크게 하는 예이다. 수중 카메라·전신 수영복은 부력을 크게, 해녀 납 허리띠는 중력을 크게, 잠수함은 무게(중력)를 조절해 뜨고 가라앉는 예이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 50.2,
+      "end": 85.2
+     }
     },
     {
      "id": "sci-d2-03",
@@ -431,7 +501,12 @@
      "answer": [
       1
      ],
-     "explanation": "온도가 낮아져도 기체 입자 자체의 크기(그리고 개수·질량)는 변하지 않는다. 입자 운동이 둔해져 충돌 횟수가 줄고, 입자 사이 거리와 부피가 작아진다."
+     "explanation": "온도가 낮아져도 기체 입자 자체의 크기(그리고 개수·질량)는 변하지 않는다. 입자 운동이 둔해져 충돌 횟수가 줄고, 입자 사이 거리와 부피가 작아진다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 85.2,
+      "end": 118.6
+     }
     },
     {
      "id": "sci-d2-04",
@@ -459,7 +534,12 @@
      "answer": [
       5
      ],
-     "explanation": "음력 22~23일경의 반달은 하현달이고 왼쪽이 둥글다(하현=왼쪽). 그믐달은 반달이 아니라 왼쪽만 얇게 보이는 눈썹 모양이다."
+     "explanation": "음력 22~23일경의 반달은 하현달이고 왼쪽이 둥글다(하현=왼쪽). 그믐달은 반달이 아니라 왼쪽만 얇게 보이는 눈썹 모양이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 118.6,
+      "end": 147.9
+     }
     },
     {
      "id": "sci-d2-05",
@@ -487,7 +567,12 @@
      "answer": [
       2
      ],
-     "explanation": "질량은 장소와 관계없이 $40\\text{ kg}$으로 일정하다. 무게는 지구에서 $400\\text{ N}$이고 목성에서는 $400\\times2.5=1000$ N이다. 질량을 $100\\text{ kg}$으로 바꾼 선지는 질량과 무게를 혼동한 오답이다."
+     "explanation": "질량은 장소와 관계없이 $40\\text{ kg}$으로 일정하다. 무게는 지구에서 $400\\text{ N}$이고 목성에서는 $400\\times2.5=1000$ N이다. 질량을 $100\\text{ kg}$으로 바꾼 선지는 질량과 무게를 혼동한 오답이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 147.9,
+      "end": 175.2
+     }
     },
     {
      "id": "sci-d2-06",
@@ -515,7 +600,12 @@
      "answer": [
       4
      ],
-     "explanation": "시계추·그네처럼 속력과 방향이 모두 변하는 운동은 알짜힘이 운동 방향과 비스듬하게 작용한다. 알짜힘이 항상 수직이면 대관람차처럼 방향만 변하고, 직선 미끄럼틀은 속력만 변한다."
+     "explanation": "시계추·그네처럼 속력과 방향이 모두 변하는 운동은 알짜힘이 운동 방향과 비스듬하게 작용한다. 알짜힘이 항상 수직이면 대관람차처럼 방향만 변하고, 직선 미끄럼틀은 속력만 변한다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 175.2,
+      "end": 211.2
+     }
     },
     {
      "id": "sci-d2-07",
@@ -543,7 +633,12 @@
      "answer": [
       1
      ],
-     "explanation": "냉동실의 병이 깨지는 것은 물이 얼음으로 상태 변화하며 부피가 커지기 때문으로, 기체의 성질이 아니다. 나머지는 모두 기체의 온도 변화에 따른 부피 변화(샤를 법칙)이다."
+     "explanation": "냉동실의 병이 깨지는 것은 물이 얼음으로 상태 변화하며 부피가 커지기 때문으로, 기체의 성질이 아니다. 나머지는 모두 기체의 온도 변화에 따른 부피 변화(샤를 법칙)이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 211.2,
+      "end": 244.1
+     }
     },
     {
      "id": "sci-d2-08",
@@ -571,7 +666,12 @@
      "answer": [
       2
      ],
-     "explanation": "한밤중 남쪽 하늘에는 태양 반대쪽 별자리가 보이며, 이는 6개월 뒤(또는 전) 달의 태양 쪽 별자리이다. 2월의 반대는 8월이므로 게자리이다. 염소자리는 2월에 태양 쪽에 있어 볼 수 없다."
+     "explanation": "한밤중 남쪽 하늘에는 태양 반대쪽 별자리가 보이며, 이는 6개월 뒤(또는 전) 달의 태양 쪽 별자리이다. 2월의 반대는 8월이므로 게자리이다. 염소자리는 2월에 태양 쪽에 있어 볼 수 없다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 244.1,
+      "end": 284.1
+     }
     },
     {
      "id": "sci-d2-09",
@@ -599,7 +699,12 @@
      "answer": [
       1
      ],
-     "explanation": "늘어난 길이는 공기 중 $5$ cm → $15\\text{ N}$, 물속 $3$ cm → $9\\text{ N}$이므로 부력은 $6\\text{ N}$이다. 절반 잠기면 부력 $3\\text{ N}$, 눈금 $12\\text{ N}$ → $4$ cm 늘어나 전체 길이 $16\\text{ cm}$이다. $4\\text{ cm}$는 늘어난 길이일 뿐이고, $9\\text{ N}$는 물속 눈금이다."
+     "explanation": "늘어난 길이는 공기 중 $5$ cm → $15\\text{ N}$, 물속 $3$ cm → $9\\text{ N}$이므로 부력은 $6\\text{ N}$이다. 절반 잠기면 부력 $3\\text{ N}$, 눈금 $12\\text{ N}$ → $4$ cm 늘어나 전체 길이 $16\\text{ cm}$이다. $4\\text{ cm}$는 늘어난 길이일 뿐이고, $9\\text{ N}$는 물속 눈금이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 284.1,
+      "end": 322.1
+     }
     },
     {
      "id": "sci-d2-10",
@@ -628,7 +733,12 @@
      "answer": [
       3
      ],
-     "explanation": "온도가 $20$ ℃ 높아질 때마다 부피가 $3$ mL씩 일정하게 커지므로 $70\\ ^\\circ\\text{C}$에서는 $69\\text{ mL}$이다(ㄱ O). 온도가 높을수록 입자 운동이 활발하다(ㄴ O). 부피가 커지는 것은 입자 사이 거리가 멀어지기 때문이며 입자의 크기는 변하지 않는다(ㄷ X)."
+     "explanation": "온도가 $20$ ℃ 높아질 때마다 부피가 $3$ mL씩 일정하게 커지므로 $70\\ ^\\circ\\text{C}$에서는 $69\\text{ mL}$이다(ㄱ O). 온도가 높을수록 입자 운동이 활발하다(ㄴ O). 부피가 커지는 것은 입자 사이 거리가 멀어지기 때문이며 입자의 크기는 변하지 않는다(ㄷ X).",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 322.1,
+      "end": 358.15
+     }
     },
     {
      "id": "sci-d2-11",
@@ -656,7 +766,12 @@
      "answer": [
       5
      ],
-     "explanation": "개기 일식으로, 달이 서→동으로 공전하며 태양을 오른쪽부터 가린다. 일식은 태양—달—지구 순으로 놓이는 삭일 때 일어나므로 그날 밤 보름달은 볼 수 없고, 달의 그림자가 작아 일부 지역에서만 관측된다."
+     "explanation": "개기 일식으로, 달이 서→동으로 공전하며 태양을 오른쪽부터 가린다. 일식은 태양—달—지구 순으로 놓이는 삭일 때 일어나므로 그날 밤 보름달은 볼 수 없고, 달의 그림자가 작아 일부 지역에서만 관측된다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 358.15,
+      "end": 396.9
+     }
     },
     {
      "id": "sci-d2-12",
@@ -685,7 +800,12 @@
      "answer": [
       4
      ],
-     "explanation": "햇빛이 오는 쪽인 D가 삭이고, 시계 반대 방향으로 C(상현) → B(망) → A(하현) 순이다. D(삭)에서는 월식이 아니라 일식이 가능하다(ㄱ X). A는 왼쪽이 둥근 하현달(ㄴ O), C는 상현달로 음력 7~8일경이다(ㄷ O)."
+     "explanation": "햇빛이 오는 쪽인 D가 삭이고, 시계 반대 방향으로 C(상현) → B(망) → A(하현) 순이다. D(삭)에서는 월식이 아니라 일식이 가능하다(ㄱ X). A는 왼쪽이 둥근 하현달(ㄴ O), C는 상현달로 음력 7~8일경이다(ㄷ O).",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-as-sci-d2.mp4",
+      "start": 396.9,
+      "end": 449.35
+     }
     }
    ]
   }

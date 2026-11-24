@@ -27,7 +27,12 @@
       "중력은 지구가 당기는 **한 가지 힘**이다. 여러 힘을 합한 힘은 **알짜힘**이다.",
       "부력은 물이 위로 밀어 올리는 **한 가지 힘**이다. 여러 힘을 합한 힘은 **알짜힘**이다.",
       "정답. 한 물체에 작용하는 여러 힘을 모두 합한 힘을 **알짜힘**이라고 하기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 9.3,
+      "end": 36.8
+     }
     },
     {
      "type": "choice",
@@ -50,7 +55,12 @@
       "알짜힘이 $0$이 되려면 크기가 같고 방향이 반대여야 한다. 같은 방향이면 **더해서** $13\\text{ N}$이다.",
       "정답. 같은 방향의 두 힘은 더하므로 $5+8=13\\text{ N}$, 방향은 두 힘과 같은 **오른쪽**이기 때문이다.",
       "크기도 방향도 틀렸다. 같은 방향이면 **합**을 구해 **오른쪽으로** $13\\text{ N}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 36.8,
+      "end": 74.95
+     }
     },
     {
      "type": "choice",
@@ -73,7 +83,12 @@
       "$32\\text{ N}$은 두 힘을 **더한** 값으로, 같은 방향일 때의 계산이다. 반대 방향이면 **차**인 $8\\text{ N}$이다.",
       "두 힘을 더해서도, 방향도 틀렸다. 반대 방향이면 $20-12=8\\text{ N}$, **오른쪽**이다.",
       "$0\\text{ N}$은 두 힘의 크기가 같을 때만 된다. $12\\text{ N}$과 $20\\text{ N}$은 크기가 달라 **오른쪽으로 $8\\text{ N}$**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 74.95,
+      "end": 109.25
+     }
     },
     {
      "type": "choice",
@@ -96,7 +111,12 @@
       "$0\\text{ N}$은 맞지만, 알짜힘이 0이면 운동 상태가 **변하지 않는다**(힘의 평형).",
       "크기도 상태도 틀렸다. 알짜힘은 **$0\\text{ N}$**이고 운동 상태는 **변하지 않는 힘의 평형**이다.",
       "정답. 크기가 같고 방향이 반대라 $15-15=0\\text{ N}$이고, 이 상태를 **힘의 평형**이라 하기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 109.25,
+      "end": 147.15
+     }
     },
     {
      "type": "choice",
@@ -119,7 +139,12 @@
       "$14\\text{ N}$은 $3+11$로 두 눈금을 **더한** 잘못된 값이다. **빼야** 하므로 $8\\text{ N}$이다.",
       "$22\\text{ N}$은 근거 없는 값이다. 힘의 평형에서 $3+(\\text{힘}_2)=11$이므로 힘2는 **$8\\text{ N}$**이다.",
       "$33\\text{ N}$은 $3\\times11$로 곱한 잘못된 값이다. 나란한 힘은 더하거나 빼므로 $11-3=8\\text{ N}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 147.15,
+      "end": 180.95
+     }
     },
     {
      "type": "choice",
@@ -142,7 +167,12 @@
       "알짜힘이 0이면 정지한 물체는 **계속 정지**해 있다. 움직이기 시작하려면 알짜힘이 0이 아니어야 한다.",
       "방향만 변하는 것은 알짜힘이 운동 방향과 **수직**일 때이다. 알짜힘이 0이면 방향도 **변하지 않는다**.",
       "알짜힘이 0이라는 것은 힘이 없다는 뜻이 아니다. 여러 힘이 작용하지만 **서로 평형**을 이룬다는 뜻이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 180.95,
+      "end": 222.55
+     }
     },
     {
      "type": "choice",
@@ -165,7 +195,12 @@
       "마찰력이 $0$이라면 냉장고는 움직였어야 한다. 움직이지 않았으므로 마찰력은 **오른쪽 $180\\text{ N}$**이다.",
       "$360\\text{ N}$이면 알짜힘이 0이 되지 않는다. 힘의 평형이므로 마찰력은 미는 힘과 같은 **$180\\text{ N}$**이다.",
       "$90\\text{ N}$이면 알짜힘이 0이 아니어서 냉장고가 움직였을 것이다. 마찰력은 **$180\\text{ N}$**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 222.55,
+      "end": 263.55
+     }
     },
     {
      "type": "choice",
@@ -188,7 +223,12 @@
       "옳은 설명이다. 위쪽 공기 저항력과 아래쪽 중력의 크기가 같아 알짜힘이 0이다.",
       "이 보기가 틀린 진술이다. 중력은 **여전히 작용**하며, 공기 저항력과 크기가 같아 알짜힘이 0이 된 것이 맞다.",
       "옳은 설명이다. 알짜힘이 0이므로 힘의 평형 상태이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 263.55,
+      "end": 297.4
+     }
     },
     {
      "type": "choice",
@@ -211,7 +251,12 @@
       "점점 빨라지는 공은 중력이 운동 방향과 같은 쪽으로 작용하므로 알짜힘이 **0이 아니다**.",
       "대관람차는 속력은 일정해도 **운동 방향이 계속 변하므로** 알짜힘이 0이 아니다.",
       "그네는 **속력과 방향이 모두 변하므로** 알짜힘이 0이 아니다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 297.4,
+      "end": 332.4
+     }
     },
     {
      "type": "choice",
@@ -234,7 +279,12 @@
       "회전목마는 알짜힘이 운동 방향과 **수직**이라 속력은 일정하고 **방향만 변한다**.",
       "그네는 알짜힘이 **비스듬히** 작용해 속력과 방향이 **모두 변한다**.",
       "정답. 아래로 떨어지는 운동 방향과 알짜힘(중력)의 방향이 **같아** 속력이 점점 빨라지기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 332.4,
+      "end": 363.95
+     }
     },
     {
      "type": "choice",
@@ -257,7 +307,12 @@
       "시계추는 속력과 운동 방향이 **모두 변한다**.",
       "점프한 스케이트보드는 속력과 운동 방향이 **모두 변한다**.",
       "정답. 브레이크를 밟으면 알짜힘이 운동 방향과 **반대**로 작용해 방향은 그대로이고 속력만 줄기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 363.95,
+      "end": 397.05
+     }
     },
     {
      "type": "choice",
@@ -280,7 +335,12 @@
       "둘 다 변하는 것은 알짜힘이 **비스듬히** 작용할 때이다. 수직이면 **방향만** 변한다.",
       "정답. 알짜힘이 항상 수직이면 속력은 일정하고 운동 방향만 변하는 **등속 원운동**을 하기 때문이다.",
       "둘 다 변하지 않는 것은 알짜힘이 **0**일 때이다. 수직으로 힘이 작용하면 **방향이 변한다**."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 397.05,
+      "end": 432.3
+     }
     },
     {
      "type": "choice",
@@ -309,6 +369,11 @@
       "ㄴ": "틀리다. 인공위성은 속력은 일정하고 **운동 방향만** 변한다.",
       "ㄷ": "옳다. 비스듬히 던진 공은 속력과 운동 방향이 모두 변한다.",
       "ㄹ": "틀리다. 에스컬레이터는 알짜힘이 0이라 속력과 방향이 **모두 변하지 않는다**."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 432.3,
+      "end": 459.35
      }
     },
     {
@@ -332,7 +397,12 @@
       "공에는 중력이 작용하므로 알짜힘은 **0이 아니다**. 그래서 속력이 점점 줄어든다.",
       "수직이 아니라 **반대 방향**이다. 똑바로 던졌으므로 운동 방향은 위쪽 그대로이다.",
       "비스듬히 던진 공의 경우이다. **똑바로** 위로 던지면 알짜힘이 반대 방향이라 속력만 변한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 459.35,
+      "end": 493.6
+     }
     },
     {
      "type": "choice",
@@ -355,7 +425,12 @@
       "알짜힘이 0이면 속력이 **변하지 않아야** 한다. 느려지므로 알짜힘은 0이 아니다.",
       "탄성력이 아니라 **마찰력**이 운동 방향과 **반대**로 작용하기 때문이다.",
       "부력은 물이나 공기 속에서 받는 힘으로, 속력이 느려지는 까닭이 아니다. 까닭은 **마찰력**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 493.6,
+      "end": 525.2
+     }
     },
     {
      "type": "choice",
@@ -378,7 +453,12 @@
       "정답. 컨베이어 벨트는 속력·방향이 모두 일정(등속 직선 운동), 회전목마는 속력만 일정하고 방향이 변하기(등속 원운동) 때문이다.",
       "낙하 놀이 기구는 **속력이 변하므로 (가)**이다. (나)에는 컨베이어 벨트 같은 등속 직선 운동이 들어간다.",
       "그네는 **속력이 변하므로 (가)**이다. (나)에는 등속 직선 운동이 들어간다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 525.2,
+      "end": 562.2
+     }
     },
     {
      "type": "choice",
@@ -401,7 +481,12 @@
       "옳은 설명이다. 화살표가 길어졌으므로 속력이 빨라졌다.",
       "이 보기가 틀린 진술이다. 속력과 방향이 모두 변했으므로 알짜힘은 **0이 아니다**.",
       "옳은 설명이다. 속력과 방향이 함께 변했으므로 알짜힘이 운동 방향과 비스듬히 작용했다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 562.2,
+      "end": 600.9
+     }
     },
     {
      "type": "choice",
@@ -430,6 +515,11 @@
       "ㄴ": "틀리다. 알짜힘이 운동 방향과 수직이면 속력은 **일정**하고 **방향만** 변한다.",
       "ㄷ": "옳다. 등속 직선 운동은 속력과 방향이 일정하므로 알짜힘이 0이다.",
       "ㄹ": "옳다. 진행 방향으로 바람을 불면 알짜힘이 운동 방향과 같아 속력이 증가한다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 600.9,
+      "end": 632.75
      }
     },
     {
@@ -453,7 +543,12 @@
       "떠받치는 힘은 **책상 위 시계**의 경우이다. 물에 뜬 튜브는 물이 밀어 올리는 **부력**이다.",
       "공기 저항력은 낙하하는 스카이다이버의 경우이다. 물에 뜬 튜브는 **부력**이다.",
       "정답. 물이 위로 밀어 올리는 **부력**이 아래로 작용하는 중력과 평형을 이루기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 632.75,
+      "end": 661.6
+     }
     },
     {
      "type": "choice",
@@ -476,7 +571,12 @@
       "중력은 아래로 당기는 힘이다. 문이 닫히려는 힘과 평형을 이루는 것은 **마찰력**이다.",
       "탄성력이 아니라 **바닥과의 마찰력**이 문을 붙잡아 준다.",
       "공기 저항력이 아니라 **바닥과의 마찰력**이 평형을 이룬다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 661.6,
+      "end": 686.6
+     }
     },
     {
      "type": "choice",
@@ -499,7 +599,12 @@
       "부력은 작아지지 않고 **일정**하며, 무게는 커지지 않고 **작아진다**.",
       "부력이 일정한 것은 맞지만, 무게는 커지지 않고 물이 빠져나가 **작아진다**.",
       "부피가 변하지 않으므로 부력은 **일정**하고, 무게는 **작아진다**."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 686.6,
+      "end": 723.75
+     }
     },
     {
      "type": "choice",
@@ -528,6 +633,11 @@
       "ㄴ": "틀리다. 집기병 전체 부피는 **변하지 않으므로** 부력은 **일정**하다.",
       "ㄷ": "옳다. 풍선이 부풀면서 집기병 속 물이 빠져나간다.",
       "ㄹ": "옳다. 잠수함은 물탱크에 물을 채우거나 비워 전체 무게를 조절한다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 723.75,
+      "end": 753.45
      }
     },
     {
@@ -551,7 +661,12 @@
       "정답. 공기 부양선은 땅에서 떠서 지면과의 마찰력을 **작게** 하기 때문이다.",
       "자전거 페달은 발이 미끄러지지 않도록 마찰력을 **크게** 한 예이다.",
       "아기 양말 바닥 고무는 미끄러지지 않도록 마찰력을 **크게** 한 예이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 753.45,
+      "end": 777.0
+     }
     },
     {
      "type": "choice",
@@ -574,7 +689,12 @@
       "볼펜 속 용수철은 **탄성력**을 이용한다.",
       "킥보드의 용수철은 **탄성력**을 이용한다.",
       "정답. 납 허리띠는 탄성력이 아니라 무거운 납으로 **중력(무게)을 크게** 하는 데 이용하기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 777.0,
+      "end": 801.75
+     }
     },
     {
      "type": "choice",
@@ -597,7 +717,12 @@
       "옳은 짝이다. 홈을 깊고 거칠게 하여 마찰력을 크게 한다.",
       "이 보기가 틀린 진술이다. 상어 비늘 모양 돌기는 물과의 마찰력을 **줄여 준다**.",
       "옳은 짝이다. 윤활유를 발라 마찰력을 작게 한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 801.75,
+      "end": 826.1
+     }
     },
     {
      "type": "choice",
@@ -620,7 +745,12 @@
       "마찰력을 줄이는 것은 **전신 수영복**의 경우이다. 납 허리띠는 **중력(무게)**을 크게 한다.",
       "납 허리띠는 탄성력이 아니라 **중력(무게)**을 이용한다.",
       "떠오르려는 것이 아니라 **가라앉기** 위해 무게를 크게 한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 826.1,
+      "end": 852.7
+     }
     },
     {
      "type": "choice",
@@ -648,6 +778,11 @@
       "ㄱ": "옳다. 표면의 돌기 구조가 물과의 마찰력을 줄인다.",
       "ㄴ": "옳다. 물에 잘 뜨는 소재로 부력을 크게 한다.",
       "ㄷ": "틀리다. 중력을 크게 하는 것은 **해녀의 납 허리띠**이다. 전신 수영복은 물에 잘 뜨게 한다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 852.7,
+      "end": 879.75
      }
     },
     {
@@ -671,7 +806,12 @@
       "옳은 설명이다. 무게는 물체에 작용하는 중력의 크기이다.",
       "옳은 설명이다. 질량의 단위는 kg, g이다.",
       "옳은 설명이다. 지구에서 무게(N) = 9.8 × 질량(kg)이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 879.75,
+      "end": 904.65
+     }
     },
     {
      "type": "choice",
@@ -694,7 +834,12 @@
       "정답. 질량은 변하지 않아 $60\\text{ kg}$이고, 무게는 $600\\times0.4=240\\text{ N}$이기 때문이다.",
       "질량과 무게를 반대로 계산했다. 질량은 **$60\\text{ kg}$** 그대로, 무게는 **$240\\text{ N}$**이다.",
       "$1500\\text{ N}$은 $600\\div0.4$로 **나눈** 실수이다. 상대적 중력 크기는 **곱해서** $240\\text{ N}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 904.65,
+      "end": 948.4
+     }
     },
     {
      "type": "choice",
@@ -717,7 +862,12 @@
       "정답. $4\\text{ N}$에 $2\\text{ cm}$ 늘어나 $1\\text{ cm}$당 $2\\text{ N}$이고, A는 $15-8=7\\text{ cm}$ 늘었으므로 $7\\times2=14\\text{ N}$이기 때문이다.",
       "$15$는 용수철의 **전체 길이**이다. 힘은 **늘어난 길이**에 비례하므로 $7\\text{ cm}$로 계산해 $14\\text{ N}$이다.",
       "원래 길이를 빼지 않고 $15\\times2=30\\text{ N}$으로 계산한 실수이다. 늘어난 길이 $7\\text{ cm}$로 계산해야 한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 948.4,
+      "end": 981.45
+     }
     },
     {
      "type": "choice",
@@ -740,7 +890,12 @@
       "$9\\text{ N}$은 물속에서 잰 **눈금**이다. 부력은 $12-9=3\\text{ N}$이다.",
       "$12\\text{ N}$은 공기 중 **무게**이다. 부력은 $12-9=3\\text{ N}$, **위쪽**이다.",
       "$12+9$로 **더한** 실수이다. 부력은 **빼서** $3\\text{ N}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 981.45,
+      "end": 1014.85
+     }
     },
     {
      "type": "choice",
@@ -763,7 +918,12 @@
       "정답. 물에 떠서 정지해 있으면 힘의 평형이므로 부력과 무게가 같아 $7\\text{ N}$이기 때문이다.",
       "부력이 무게보다 크면 위로 떠오르는 중이어야 한다. 정지해 있으므로 부력은 **$7\\text{ N}$**이다.",
       "알 수 있다. 떠서 정지하면 **부력 = 무게**이므로 $7\\text{ N}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1014.85,
+      "end": 1041.05
+     }
     },
     {
      "type": "choice",
@@ -786,7 +946,12 @@
       "$10\\text{ N}$은 반 잠겼을 때의 **눈금**이다. 반쪽 부력 $3\\text{ N}$을 더해 $13\\text{ N}$이다.",
       "정답. 반쪽 부피의 부력이 $10-7=3\\text{ N}$이므로 다 잠기면 $6\\text{ N}$이고, 무게는 $7+6=13\\text{ N}$이기 때문이다.",
       "$10+7$로 두 눈금을 **더한** 실수이다. 무게는 $7+6=13\\text{ N}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1041.05,
+      "end": 1084.3
+     }
     },
     {
      "type": "choice",
@@ -809,7 +974,12 @@
       "$22\\text{ N}$은 부력을 **1개분($2\\text{ N}$)만** 뺀 실수이다. 3개 모두 잠기므로 $6\\text{ N}$을 빼야 한다.",
       "$24\\text{ N}$은 추 3개의 **공기 중 무게**이다. 부력 $6\\text{ N}$을 빼서 $18\\text{ N}$이다.",
       "$30\\text{ N}$은 근거 없는 값이다. $24-6=18\\text{ N}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1084.3,
+      "end": 1124.8
+     }
     },
     {
      "type": "choice",
@@ -837,6 +1007,11 @@
       "ㄱ": "옳다. 공기 중에서 수평을 이루었으므로 두 물체의 질량(무게)은 같다.",
       "ㄴ": "틀리다. 금덩어리 쪽으로 기울어 왕관 쪽이 올라갔으므로 왕관의 부력이 **더 크다**.",
       "ㄷ": "옳다. 부력은 잠긴 부피에 비례하므로 부력이 더 큰 왕관의 부피가 더 크다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1124.8,
+      "end": 1165.2
      }
     },
     {
@@ -860,7 +1035,12 @@
       "둘 다 반대로 썼다. 늘어난 용수철의 탄성력은 **왼쪽**, 마찰력은 **오른쪽**이다.",
       "탄성력이 틀렸다. 용수철이 늘어나 있으므로 탄성력은 **왼쪽**(줄어드는 쪽)이다.",
       "물체가 움직이고 있으므로 마찰력은 **작용한다**. 방향은 운동 반대인 **오른쪽**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1165.2,
+      "end": 1191.5
+     }
     },
     {
      "type": "essay",
@@ -875,7 +1055,12 @@
       "부력 일정",
       "부력 > 무게"
      ],
-     "id": "sci-q1-37"
+     "id": "sci-q1-37",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1191.5,
+      "end": 1239.35
+     }
     },
     {
      "type": "essay",
@@ -891,7 +1076,12 @@
       "알짜힘 0",
       "힘의 평형"
      ],
-     "id": "sci-q1-38"
+     "id": "sci-q1-38",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1239.35,
+      "end": 1287.45
+     }
     },
     {
      "type": "essay",
@@ -906,7 +1096,12 @@
       "부력은 잠긴 부피에 비례",
       "왕관의 부피가 더 큼"
      ],
-     "id": "sci-q1-39"
+     "id": "sci-q1-39",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-1.mp4",
+      "start": 1287.45,
+      "end": 1335.75
+     }
     }
    ]
   },
@@ -934,7 +1129,12 @@
       "온도가 높아지면 부피는 작아지는 것이 아니라 **커진다**.",
       "온도가 일정할 때 압력이 커지면 부피는 **작아진다**(보일 법칙). 게다가 샤를 법칙의 설명도 아니다.",
       "기체 입자의 **개수는 변하지 않는다**. 샤를 법칙은 **압력 일정**일 때 온도와 부피의 관계이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 8.3,
+      "end": 44.25
+     }
     },
     {
      "type": "choice",
@@ -957,7 +1157,12 @@
       "정답. 온도 변화에 따른 부피 변화 정도는 **기체의 종류와 관계없이 모두 같기** 때문이다.",
       "질소도 가열하면 부피가 **커진다**. 세 기체 모두 같은 정도로 커진다.",
       "가벼운 정도와 관계없다. 부피 변화 정도는 **모든 기체가 같다**."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 44.25,
+      "end": 76.5
+     }
     },
     {
      "type": "choice",
@@ -980,7 +1185,12 @@
       "유리병 부피**만** 쓴 실수이다. 피펫 부피를 더해 $5.4\\text{ mL}$이다.",
       "정답. 기체의 전체 부피 = 유리병 부피 + 피펫으로 읽은 부피 $=5+0.4=5.4\\text{ mL}$이기 때문이다.",
       "$0.4$를 $4$로 잘못 읽어 더한 값이다. $5+0.4=5.4\\text{ mL}$이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 76.5,
+      "end": 113.3
+     }
     },
     {
      "type": "choice",
@@ -1008,6 +1218,11 @@
       "ㄱ": "옳다. 기체의 전체 부피는 유리병 부피 + 피펫으로 읽은 부피이다.",
       "ㄴ": "틀리다. 물이 식으면 기체 부피가 줄어 글리세롤 방울은 피펫 관 **아래(안쪽)로 빨려 내려간다**.",
       "ㄷ": "옳다. 기체 온도는 직접 재기 어려워 열평형을 가정하고 물의 온도를 잰다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 113.3,
+      "end": 149.9
      }
     },
     {
@@ -1031,7 +1246,12 @@
       "반비례 곡선은 **보일 법칙**(압력-부피) 그래프이다. 샤를 법칙은 오른쪽 위로 향하는 **직선**이다.",
       "오른쪽 아래로 향하면 온도가 높을수록 부피가 작아진다는 뜻이다. 실제로는 **오른쪽 위**로 향한다.",
       "온도가 높아지면 부피가 **커지므로** 수평선이 아니다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 149.9,
+      "end": 185.7
+     }
     },
     {
      "type": "choice",
@@ -1054,7 +1274,12 @@
       "옳은 설명이다. 부피가 가장 큰 C에서 입자 사이 거리가 가장 멀다.",
       "옳은 설명이다. 온도가 가장 높은 C에서 입자 운동이 가장 활발하다.",
       "옳은 설명이다. 압력이 일정한 조건이므로 내부 압력은 모두 외부 압력과 같다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 185.7,
+      "end": 224.3
+     }
     },
     {
      "type": "choice",
@@ -1082,6 +1307,11 @@
       "ㄱ": "틀리다. 0 ℃에서도 기체는 **부피를 가진다**. 그래프는 부피축 0보다 위에서 시작한다.",
       "ㄴ": "옳다. 압력이 일정할 때 온도가 높아지면 부피가 일정하게 커진다.",
       "ㄷ": "옳다. 부피 변화가 끝나면 내부 압력과 외부 압력이 같아진다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 224.3,
+      "end": 267.45
      }
     },
     {
@@ -1105,7 +1335,12 @@
       "부피가 먼저 커지지 않는다. 가장 먼저 **입자 운동이 활발해진다(나)**.",
       "(나)가 맨 처음이어야 한다. 가열하면 먼저 **입자 운동이 활발해진다**.",
       "정답. 입자 운동이 활발해지고(나) → 충돌 횟수·세기 증가(가) → 내부 압력이 커져 부피 증가(다) → 압력이 같아지면 멈춤(라) 순서이기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 267.45,
+      "end": 300.05
+     }
     },
     {
      "type": "choice",
@@ -1128,7 +1363,12 @@
       "입자의 **개수는 변하지 않는다**. 입자 운동이 둔해져서 부피가 작아진다.",
       "입자의 **크기는 변하지 않는다**. 입자 운동이 둔해져 입자 사이 거리가 가까워지는 것이다.",
       "정답. 입자 운동이 둔해져 충돌 횟수·세기가 줄고, 내부 압력이 순간적으로 외부 압력보다 작아져 부피가 줄기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 300.05,
+      "end": 342.7
+     }
     },
     {
      "type": "choice",
@@ -1157,6 +1397,11 @@
       "ㄴ": "옳다(변하지 않음). 입자 자체가 커지지는 않는다.",
       "ㄷ": "틀리다. 가열하면 입자의 운동 빠르기는 **증가한다**.",
       "ㄹ": "옳다(변하지 않음). 입자 개수가 같으므로 질량도 일정하다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 342.7,
+      "end": 369.55
      }
     },
     {
@@ -1180,7 +1425,12 @@
       "입자 개수가 그대로라 **질량은 변하지 않는다**.",
       "가열해도 입자의 **종류는 바뀌지 않는다**.",
       "정답. 온도가 높아지면 입자 운동이 활발해지고 부피가 커져 **입자 사이의 거리가 멀어지기** 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 369.55,
+      "end": 397.9
+     }
     },
     {
      "type": "choice",
@@ -1203,7 +1453,12 @@
       "가열 중이므로 입자 운동은 멈추지 않고 오히려 **활발하다**.",
       "입자의 **개수는 처음부터 늘어나지 않는다**. 압력이 같아져 멈춘 것이다.",
       "가열하고 있으므로 온도는 0 ℃가 되지 않는다. 멈춘 까닭은 **압력이 같아졌기** 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 397.9,
+      "end": 436.9
+     }
     },
     {
      "type": "choice",
@@ -1226,7 +1481,12 @@
       "정답. 온도가 낮아져 입자 운동이 **둔해지고** 입자 사이 거리가 **가까워져** 부피가 작아졌기 때문이다(샤를 법칙).",
       "추운 곳에서는 온도가 낮아져 입자 운동이 **둔해진다**.",
       "풍선 속 입자 개수가 그대로이므로 **질량은 변하지 않는다**."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 436.9,
+      "end": 471.0
+     }
     },
     {
      "type": "choice",
@@ -1249,7 +1509,12 @@
       "샤를 법칙의 예이다. 온도가 낮아져 페트병 속 기체의 부피가 작아진다.",
       "샤를 법칙의 예이다. 가열하면 부피가 커져 공기가 밀려 나와 열기구가 가벼워진다.",
       "샤를 법칙의 예이다. 겨울철에 온도가 낮아져 타이어 속 기체의 부피가 작아진다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 471.0,
+      "end": 501.8
+     }
     },
     {
      "type": "choice",
@@ -1272,7 +1537,12 @@
       "국이 식으며 **온도가 낮아져** 부피가 작아지는 **샤를 법칙**이다.",
       "손의 열로 **온도가 높아져** 부피가 커지는 **샤를 법칙**이다.",
       "찬물로 **온도가 낮아져** 병 속 기체 부피가 작아지는 **샤를 법칙**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 501.8,
+      "end": 529.45
+     }
     },
     {
      "type": "choice",
@@ -1295,7 +1565,12 @@
       "오히려 공기 일부가 **밖으로 밀려 나가** 열기구 속 입자는 줄어든다.",
       "기압 변화로 설명하는 것은 **보일 법칙**이다. 열기구는 **가열(온도 변화)** 때문이다.",
       "가열하면 공기는 식지 않고 **데워져** 부피가 **커진다**. 식으면 오히려 내려온다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 529.45,
+      "end": 566.15
+     }
     },
     {
      "type": "choice",
@@ -1324,6 +1599,11 @@
       "ㄴ": "틀리다. 높이 올라갈수록 **기압이 낮아져** 커지는 **보일 법칙**이다.",
       "ㄷ": "옳다. 온도가 높아져 부피가 커지는 샤를 법칙이다.",
       "ㄹ": "틀리다. 깊은 바다의 **큰 압력** 때문에 쪼그라드는 **보일 법칙**이다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 566.15,
+      "end": 600.1
      }
     },
     {
@@ -1347,7 +1627,12 @@
       "병이 깨지는 것은 물이 얼음으로 변하는 **상태 변화**이다. 기체의 부피 변화가 아니다.",
       "뻘배는 닿는 넓이를 크게 해 **압력**을 줄이는 원리이다.",
       "정답. 그릇 밑에 갇힌 공기가 데워져 부피가 커지며 그릇을 들어 올리는 **샤를 법칙**의 예이기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 600.1,
+      "end": 637.8
+     }
     },
     {
      "type": "choice",
@@ -1370,7 +1655,12 @@
       "정답. 샤를 법칙은 **기체**의 온도와 부피 관계인데, 이것은 **액체인 물이 고체 얼음으로 변하며** 부피가 커진 것이기 때문이다.",
       "냉동실에서 물이 증발해 병이 깨지지 않는다. 물이 **얼면서** 부피가 커진 것이다.",
       "기체는 온도가 낮아지면 부피가 **작아진다**. 틀린 설명이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 637.8,
+      "end": 671.7
+     }
     },
     {
      "type": "choice",
@@ -1393,7 +1683,12 @@
       "옳은 설명이다. 보일 법칙에서 압력과 부피는 반비례한다.",
       "이 보기가 틀린 진술이다. 보일 법칙은 **온도가 일정**하므로 입자의 운동 빠르기는 **변하지 않는다**.",
       "옳은 설명이다. 온도가 낮아지면 입자 운동이 느려진다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 671.7,
+      "end": 699.1
+     }
     },
     {
      "type": "choice",
@@ -1416,7 +1711,12 @@
       "(나)는 온도가 아니라 **기압이 낮아져** 부푸는 **보일 법칙**이다.",
       "(가)는 압력이 아니라 **온도가 높아져** 부푸는 **샤를 법칙**이다.",
       "(나)는 확산이 아니라 기압이 낮아져 부피가 커지는 **보일 법칙**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 699.1,
+      "end": 741.0
+     }
     },
     {
      "type": "choice",
@@ -1445,6 +1745,11 @@
       "ㄴ": "옳다. 눌렀다 놓으면 압력이 줄어 부피가 다시 커지는 보일 법칙이다.",
       "ㄷ": "틀리다. 찬물로 **온도가 낮아져** 부피가 작아지는 **샤를 법칙**이다.",
       "ㄹ": "옳다. 올라올수록 물의 압력이 작아져 기포가 커지는 보일 법칙이다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 741.0,
+      "end": 771.15
      }
     },
     {
@@ -1468,7 +1773,12 @@
       "(가)는 온도가 아니라 **압력**을 높이는 **보일 법칙**이다.",
       "(나)는 압력이 아니라 **온도**를 높이는 **샤를 법칙**이다.",
       "(나)는 확산이 아니라 온도가 높아져 부피가 커지는 **샤를 법칙**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 771.15,
+      "end": 815.75
+     }
     },
     {
      "type": "choice",
@@ -1491,7 +1801,12 @@
       "정답. 따뜻한 물에 담그면 통 안 기체의 **온도가 높아져 부피가 커지므로** 뚜껑이 쉽게 열리기 때문이다.",
       "무거운 물체를 올리면 오히려 뚜껑을 누르게 된다. 통을 **따뜻하게** 해 기체 부피를 키워야 한다.",
       "차가운 바람은 기체 부피를 **더 작게** 만든다. **따뜻하게** 해야 한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 815.75,
+      "end": 847.55
+     }
     },
     {
      "type": "choice",
@@ -1514,7 +1829,12 @@
       "기구 속 입자 **개수는 늘지 않는다**. 대기압이 낮아져 부피가 커진다.",
       "높이 올라갈수록 기온은 **낮아진다**. 터지는 까닭은 **대기압 감소**이다.",
       "정답. 높이 올라갈수록 **대기압이 크게 낮아져** 보일 법칙에 따라 기체 부피가 커지다 터지기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 847.55,
+      "end": 881.45
+     }
     },
     {
      "type": "choice",
@@ -1537,7 +1857,12 @@
       "입자의 **개수는 변하지 않는다**. 온도가 높아져 부피가 커진 것이다.",
       "확산이 아니다. 병 속 기체의 부피가 커져 동전을 밀어 올린 것이다.",
       "입자의 **크기는 변하지 않는다**. 입자 운동이 활발해져 부피가 커진 것이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 881.45,
+      "end": 916.35
+     }
     },
     {
      "type": "choice",
@@ -1560,7 +1885,12 @@
       "입자의 **개수는 변하지 않는다**. 온도가 낮아져 부피가 작아진 것이다.",
       "기압 변화가 아니라 **온도가 낮아진**(샤를 법칙) 것이다.",
       "입자 하나하나의 **크기는 변하지 않는다**. 입자 사이 거리가 가까워진 것이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 916.35,
+      "end": 950.1
+     }
     },
     {
      "type": "essay",
@@ -1576,7 +1906,12 @@
       "부피 증가",
       "압력이 같아질 때까지"
      ],
-     "id": "sci-q2-28"
+     "id": "sci-q2-28",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 950.1,
+      "end": 998.7
+     }
     },
     {
      "type": "essay",
@@ -1592,7 +1927,12 @@
       "가벼워짐",
       "샤를 법칙"
      ],
-     "id": "sci-q2-29"
+     "id": "sci-q2-29",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 998.7,
+      "end": 1042.6
+     }
     },
     {
      "type": "essay",
@@ -1608,7 +1948,12 @@
       "기압(압력) 감소",
       "부피 증가"
      ],
-     "id": "sci-q2-30"
+     "id": "sci-q2-30",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-2.mp4",
+      "start": 1042.6,
+      "end": 1093.4
+     }
     }
    ]
   },
@@ -1636,7 +1981,12 @@
       "$15^\\circ$는 틀렸다. 공전은 하루에 약 **$1^\\circ$**씩이다.",
       "약 한 달에 한 바퀴 도는 것은 **달**이다. 지구는 **1년**에 한 바퀴 공전한다.",
       "북극 쪽에서 보면 지구는 **시계 반대 방향**으로 공전한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 10.25,
+      "end": 38.6
+     }
     },
     {
      "type": "choice",
@@ -1659,7 +2009,12 @@
       "둘 다 반대로 썼다. (가)는 **서 → 동**, (나)는 **동 → 서**이다.",
       "(가)가 틀렸다. 별자리를 기준으로 태양은 **서 → 동**으로 이동한다.",
       "(나)가 틀렸다. 별자리는 태양을 기준으로 하루 약 $1^\\circ$씩 **동 → 서**로 이동한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 38.6,
+      "end": 84.65
+     }
     },
     {
      "type": "choice",
@@ -1682,7 +2037,12 @@
       "공전 궤도는 지구가 태양 주위를 도는 길이다. 태양이 별자리 사이로 지나는 길은 **황도**이다.",
       "지평선은 땅과 하늘이 만나는 선이다. 정답은 **황도**이다.",
       "정답. 태양이 1년 동안 별자리 사이를 지나가는 길을 **황도**라 하기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 84.65,
+      "end": 105.2
+     }
     },
     {
      "type": "choice",
@@ -1711,6 +2071,11 @@
       "ㄴ": "틀리다. 사자자리를 기준으로 하면 태양은 **서쪽에서 동쪽**으로 이동한다.",
       "ㄷ": "옳다. 지구가 서쪽에서 동쪽으로 공전하기 때문에 나타나는 겉보기 운동이다.",
       "ㄹ": "틀리다. 하루에 약 **$1^\\circ$**씩 이동한다. $15^\\circ$가 아니다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 105.2,
+      "end": 140.45
      }
     },
     {
@@ -1734,7 +2099,12 @@
       "한밤중에 잘 보이는 것은 **태양 반대쪽** 별자리이며 **남쪽** 하늘에 보인다. 태양 쪽 별자리는 낮에 뜬다.",
       "별은 스스로 빛을 낸다. 못 보는 까닭은 **태양과 함께 낮에 떠 있기** 때문이다.",
       "달이 별자리를 가리는 것이 아니다. 별자리가 **낮에 태양과 함께** 떠 있기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 140.45,
+      "end": 175.35
+     }
     },
     {
      "type": "choice",
@@ -1757,7 +2127,12 @@
       "쌍둥이자리는 **1월** 한밤중 남쪽 하늘 별자리이다. 6월은 **전갈자리**이다.",
       "궁수자리는 **7월** 한밤중 남쪽 하늘 별자리이다. 6월은 **전갈자리**이다.",
       "천칭자리는 **5월** 한밤중 남쪽 하늘 별자리이다. 6월은 **전갈자리**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 175.35,
+      "end": 201.75
+     }
     },
     {
      "type": "choice",
@@ -1780,7 +2155,12 @@
       "정답. 9월에 태양은 **사자자리** 쪽에 있고, 그 반대쪽 **물병자리**가 한밤중 남쪽 하늘에 보이기 때문이다.",
       "**8월**의 짝이다. 9월은 (가) **사자자리**, (나) **물병자리**이다.",
       "(가)는 맞지만 (나)가 틀렸다. 염소자리는 **8월** 별자리이고, 9월 한밤중 남쪽은 **물병자리**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 201.75,
+      "end": 238.9
+     }
     },
     {
      "type": "choice",
@@ -1803,7 +2183,12 @@
       "천칭자리는 **5월** 한밤중 남쪽 하늘 별자리이다. 4월은 **처녀자리**이다.",
       "정답. 4월에 태양은 물고기자리 쪽에 있고, 그 반대쪽인 **처녀자리**가 한밤중 남쪽 하늘에 보이기 때문이다.",
       "사자자리는 **3월** 한밤중 남쪽 하늘 별자리이다. 4월은 **처녀자리**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 238.9,
+      "end": 264.25
+     }
     },
     {
      "type": "choice",
@@ -1826,7 +2211,12 @@
       "3월·9월은 사자자리·물병자리의 짝이다. 게자리는 (가) **2월**, (나) **8월**이다.",
       "7월·1월은 쌍둥이자리 관련 달이다. 게자리는 (가) **2월**, (나) **8월**이다.",
       "정답. 2월에는 게자리가 태양 반대쪽이라 한밤중 남쪽에 보이고, 8월에는 태양이 게자리 쪽에 있어 볼 수 없기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 264.25,
+      "end": 299.35
+     }
     },
     {
      "type": "choice",
@@ -1854,6 +2244,11 @@
       "ㄱ": "옳다. 지구 → 태양 연장선 끝은 태양 쪽 별자리로 그달에 볼 수 없다.",
       "ㄴ": "옳다. 태양 → 지구 연장선 끝은 태양 반대쪽 별자리로 한밤중 남쪽 하늘에 보인다.",
       "ㄷ": "틀리다. 태양 반대쪽 별자리는 해 진 뒤 **동쪽**에서 떠오른다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 299.35,
+      "end": 328.9
      }
     },
     {
@@ -1877,7 +2272,12 @@
       "달의 공전은 **달의 위상 변화**와 관련 있다. 계절별 별자리는 **지구의 공전** 때문이다.",
       "달의 위상 변화는 별자리와 관계없다. 까닭은 **지구의 공전**이다.",
       "태양의 크기는 변하지 않는다. 까닭은 **지구의 공전**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 328.9,
+      "end": 356.0
+     }
     },
     {
      "type": "choice",
@@ -1900,7 +2300,12 @@
       "정답. 달이 지구 주위를 **공전**하면서 지구에서 보이는 햇빛 받는 부분의 모양이 달라지기 때문이다.",
       "달의 **크기는 변하지 않는다**. 보이는 밝은 부분의 모양이 변하는 것이다.",
       "태양이 달 주위를 도는 것이 아니라 **달이 지구 주위를 공전**한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 356.0,
+      "end": 382.7
+     }
     },
     {
      "type": "choice",
@@ -1923,7 +2328,12 @@
       "방향은 맞지만 약 1년 주기로 공전하는 것은 **지구**이다. 달은 약 **29.5일**이다.",
       "방향도 주기도 틀렸다. 달은 **서 → 동**, 약 **29.5일**이다.",
       "약 하루는 **지구의 자전** 주기이다. 달의 공전 주기는 약 **29.5일**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 382.7,
+      "end": 411.15
+     }
     },
     {
      "type": "choice",
@@ -1946,7 +2356,12 @@
       "이름은 맞지만 모양이 틀렸다. 상현달은 **오른쪽**이 둥근 반달이다('상현 = 오른쪽').",
       "정답. 음력 7~8일경에는 **오른쪽이 둥근 반달**인 **상현달**이 보이기 때문이다.",
       "망(보름달)은 **음력 15일경**의 달이다. 음력 7~8일경은 **상현달**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 411.15,
+      "end": 442.15
+     }
     },
     {
      "type": "choice",
@@ -1969,7 +2384,12 @@
       "음력 22~23일경은 맞지만 이름이 틀렸다. 이 달은 왼쪽이 둥근 **하현달**이다.",
       "그믐달은 왼쪽이 **얇은 눈썹 모양**이다. 왼쪽이 둥근 **반달**은 **하현달**이다.",
       "정답. 왼쪽이 둥근 반달은 **하현달**이며 **음력 22~23일경**에 볼 수 있기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 442.15,
+      "end": 474.15
+     }
     },
     {
      "type": "choice",
@@ -1992,7 +2412,12 @@
       "옳은 설명이다. 달의 어두운 면이 지구를 향해 보이지 않는다.",
       "옳은 설명이다. 삭일 때 달이 태양을 가리면 일식이 일어난다.",
       "이 보기가 틀린 진술이다. 월식은 태양 – 지구 – 달 순서인 **망**일 때 일어날 수 있다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 474.15,
+      "end": 495.25
+     }
     },
     {
      "type": "choice",
@@ -2015,7 +2440,12 @@
       "음력 1일경은 **삭**으로 시작한다. 망은 음력 15일경이다.",
       "순서가 거꾸로이다. 삭 다음에는 **초승달**이 온다.",
       "정답. 달은 **삭 → 초승달 → 상현달 → 망 → 하현달 → 그믐달** 순서로 변하기 때문이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 495.25,
+      "end": 528.35
+     }
     },
     {
      "type": "choice",
@@ -2044,6 +2474,11 @@
       "ㄴ": "틀리다. 오른쪽이 얇은 눈썹 모양은 **초승달**이고, 그믐달은 **왼쪽**이 얇은 눈썹 모양이다.",
       "ㄷ": "옳다. 그믐달은 새벽 동쪽 하늘에서 잠깐 보인다.",
       "ㄹ": "옳다. 초승달은 음력 2~4일경에 보인다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 528.35,
+      "end": 555.5
      }
     },
     {
@@ -2067,7 +2502,12 @@
       "상현달은 삭에서 90° 돈 위치이다. 태양 정반대쪽은 **망**이다.",
       "정답. 햇빛이 왼쪽에서 오면 지구 오른쪽 달은 **태양 반대쪽**이므로 망(보름달)이기 때문이다.",
       "하현달은 망에서 90° 더 돈 위치이다. 태양 정반대쪽은 **망**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 555.5,
+      "end": 584.25
+     }
     },
     {
      "type": "choice",
@@ -2090,7 +2530,12 @@
       "초승달은 삭과 상현 **사이**(90°보다 덜 돈 위치)이다.",
       "망은 삭에서 $180^\\circ$ 돈 정반대 위치이다. $90^\\circ$는 **상현달**이다.",
       "그믐달은 하현과 삭 사이로, 삭 **직전**의 위치이다. $90^\\circ$는 **상현달**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 584.25,
+      "end": 615.4
+     }
     },
     {
      "type": "choice",
@@ -2113,7 +2558,12 @@
       "정답. $365\\div29.5\\approx12.37$이고, 1월 1~2일에 보름달이 뜨면 12월 30~31일에 한 번 더 떠서 최대 **13번**이기 때문이다.",
       "$12.37$회이므로 14번은 될 수 없다. 최대 **13번**이다.",
       "24번은 한 달에 두 번씩 센 값이다. 보름달은 약 29.5일에 한 번이므로 최대 **13번**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 615.4,
+      "end": 648.8
+     }
     },
     {
      "type": "choice",
@@ -2136,7 +2586,12 @@
       "배열은 맞지만 위상이 틀렸다. 이 배열일 때 달은 **삭**이다.",
       "배열이 틀렸다. 일식은 달이 가운데 있는 **태양 – 달 – 지구**이다.",
       "배열도 위상도 틀렸다. 일식은 **태양 – 달 – 지구, 삭**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 648.8,
+      "end": 677.75
+     }
     },
     {
      "type": "choice",
@@ -2159,7 +2614,12 @@
       "정답. 월식은 태양 – 지구 – 달 순서로 놓일 때 달이 **지구의 그림자 속으로 들어가** 어두워지는 현상이기 때문이다.",
       "이것은 **달의 위상 변화**의 원인이다.",
       "지구 대기는 햇빛을 모두 막지 않고 오히려 붉은빛을 달에 비춰 준다. 원인은 **지구의 그림자**이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 677.75,
+      "end": 707.0
+     }
     },
     {
      "type": "choice",
@@ -2182,7 +2642,12 @@
       "(나)가 틀렸다. 월식은 달의 **왼쪽**부터 어두워진다.",
       "(가)가 틀렸다. 일식은 태양의 **오른쪽**부터 가려진다.",
       "위·아래가 아니다. 일식은 **오른쪽**, 월식은 **왼쪽**부터이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 707.0,
+      "end": 746.8
+     }
     },
     {
      "type": "choice",
@@ -2205,7 +2670,12 @@
       "태양의 연주 운동이 아니라 **달의 공전** 방향 때문이다.",
       "지구는 **서쪽에서 동쪽**으로 공전하며, 이 현상의 까닭은 **달의 공전**이다.",
       "달은 **서쪽에서 동쪽**으로 공전한다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 746.8,
+      "end": 786.3
+     }
     },
     {
      "type": "choice",
@@ -2228,7 +2698,12 @@
       "정답. 지구 대기를 통과해 **굴절된 햇빛 중 붉은색 빛**이 달에 비쳐 어둡고 붉게 보이기 때문이다.",
       "코로나는 **개기 일식** 때 관측하는 태양의 바깥 대기이다. 개기 월식 때 달은 **붉게** 보인다.",
       "개기 월식은 달이 지구 그림자에 **완전히** 들어간 상태로, 전체가 **어둡고 붉게** 보인다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 786.3,
+      "end": 818.5
+     }
     },
     {
      "type": "choice",
@@ -2251,7 +2726,12 @@
       "파란색으로 보일 근거가 없다. 빛을 비춰 줄 대기가 없어 **완전히 어두워진다**.",
       "정답. 햇빛을 굴절시켜 붉은빛을 달에 비춰 줄 **대기가 없으므로** 달이 완전히 어두워지기 때문이다.",
       "개기 월식은 달 전체가 그림자 속에 있으며, 대기가 없으면 **전체가 어두워진다**."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 818.5,
+      "end": 853.65
+     }
     },
     {
      "type": "choice",
@@ -2274,7 +2754,12 @@
       "옳은 설명이다. 개기 일식 때 태양의 코로나를 관측할 수 있다.",
       "옳은 설명이다. 부분 일식은 달의 반그림자 지역에서 관측된다.",
       "이 보기가 틀린 진술이다. 달의 일부만 들어가는 것은 **부분 월식**이고, 개기 월식은 **완전히** 들어갈 때이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 853.65,
+      "end": 880.65
+     }
     },
     {
      "type": "choice",
@@ -2303,6 +2788,11 @@
       "ㄴ": "틀리다. 일식은 개기든 부분이든 달의 위상이 **삭**일 때 일어난다.",
       "ㄷ": "옳다. 개기 일식은 달이 태양을 완전히 가리는 현상이다.",
       "ㄹ": "옳다. 부분 일식은 반그림자 지역에서 태양 일부가 가려지는 현상이다."
+     },
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 880.65,
+      "end": 907.65
      }
     },
     {
@@ -2326,7 +2816,12 @@
       "지호의 말은 **옳다**('일오 · 월왼'). 틀린 말은 **서연**이다.",
       "민준의 말은 옳으므로 오답이다. 틀린 사람은 **서연**뿐이다.",
       "지호의 말은 옳으므로 오답이다. 틀린 사람은 **서연**뿐이다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 907.65,
+      "end": 935.0
+     }
     },
     {
      "type": "choice",
@@ -2349,7 +2844,12 @@
       "옳은 설명이다. 위상 변화는 약 한 달 주기로 천천히 변한다.",
       "옳은 설명이다. 부분 월식은 몇 시간 동안 어두워졌다가 다시 밝아진다.",
       "이 보기가 틀린 진술이다. 월식은 태양 – 지구 – 달 순서인 **망(보름달)**일 때 일어난다."
-     ]
+     ],
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 935.0,
+      "end": 963.75
+     }
     },
     {
      "type": "essay",
@@ -2364,7 +2864,12 @@
       "굴절",
       "붉은색 빛"
      ],
-     "id": "sci-q3-32"
+     "id": "sci-q3-32",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 963.75,
+      "end": 996.85
+     }
     },
     {
      "type": "essay",
@@ -2380,7 +2885,12 @@
       "달의 왼쪽부터",
       "지구 그림자"
      ],
-     "id": "sci-q3-33"
+     "id": "sci-q3-33",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 996.85,
+      "end": 1049.3
+     }
     },
     {
      "type": "essay",
@@ -2395,7 +2905,12 @@
       "밤인 모든 지역",
       "오랜 시간"
      ],
-     "id": "sci-q3-34"
+     "id": "sci-q3-34",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-sci-3.mp4",
+      "start": 1049.3,
+      "end": 1093.5
+     }
     }
    ]
   }
