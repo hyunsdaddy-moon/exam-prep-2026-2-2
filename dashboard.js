@@ -8,12 +8,14 @@
  *   (개념 진도율은 과목 페이지와 같은 값 — 개념 읽기·예상 문제 풀이로 계산)
  */
 
-import { el } from './dom.js?v=20261124-2124';
-import { loadRecords, getCurrentLearner } from './store.js?v=20261124-2124';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2124';
-import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-2124';
-import { loadStudy } from './study.js?v=20261124-2124';
+import { el } from './dom.js?v=20261124-2135';
+import { loadRecords } from './store.js?v=20261124-2135';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2135';
+import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-2135';
+import { loadStudy } from './study.js?v=20261124-2135';
+import { avatar, refreshProfiles } from './characters.js?v=20261124-2135';
 
+const COMPARE = ['문종배', '문현'];
 const QUIZ_ROUND_BASE = 40;
 const normQ = (q) => String(q).replace(/^([a-z]+)-d(\d+)-(\d+)$/, '$1-q$2-$3');
 const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
@@ -40,21 +42,51 @@ function bar(value, kind = '') {
     el('i', { style: `width:${v}%` }));
 }
 
-function card(title, value, sub, kind) {
-  return el(`div.db-card.${kind}`, {},
+function summarizeAll(subjects) {
+  const V = subjects.reduce((a, x) => a + x.v, 0);
+  const W = subjects.reduce((a, x) => a + x.w, 0);
+  const VIEWS = subjects.reduce((a, x) => a + x.views, 0);
+  const QT = subjects.reduce((a, x) => a + x.qT, 0);
+  const QA = subjects.reduce((a, x) => a + x.qA, 0);
+  const lastScores = subjects.flatMap((x) => x.rows.filter((r) => r.last != null).map((r) => r.last));
+  const triedDocs = lastScores.length;
+  const allDocs = subjects.reduce((a, x) => a + x.rows.filter((r) => r.qTotal).length, 0);
+  const videoPct = pct(W, V);
+  const quizPct = pct(QA, QT);
+  const scorePct = avg(lastScores);
+  const overall = Math.round(videoPct * 0.3 + quizPct * 0.3 + (scorePct || 0) * 0.4);
+  return { V, W, VIEWS, QT, QA, triedDocs, allDocs, videoPct, quizPct, scorePct, overall };
+}
+
+function compareCard(title, rows, kind, foot = null) {
+  return el(`div.db-card.db-cmp-card.${kind}`, {},
     el('div.db-card-title', { text: title }),
-    el('div.db-card-num', {}, value == null ? '–' : String(value), value == null ? '' : el('small', { text: '%' })),
-    bar(value, kind),
-    el('p.db-card-sub', { text: sub })
+    el('div.db-cmp-list', {},
+      rows.map((r) => el(`div.db-cmp-row.${r.side}`, {},
+        el('div.db-cmp-top', {},
+          el('span.db-who', {}, el(`i.db-dot.${r.side}`), r.name),
+          el(`b.db-cmp-num.${r.side}`, {}, r.value == null ? '–' : String(r.value), r.value == null ? '' : el('small', { text: '%' }))
+        ),
+        bar(r.value, r.side),
+        r.sub ? el('p.db-card-sub', { text: r.sub }) : null
+      ))
+    ),
+    foot ? el('p.db-card-foot', { text: foot }) : null
   );
 }
 
-const line = (label, value, detail, kind) => el('div.db-line', {},
-  el('span.db-line-label', { text: label }),
-  bar(value, kind),
-  el('span.db-line-num', { text: value == null ? '–' : `${value}%` }),
-  el('span.db-line-detail', { text: detail })
-);
+function compareLine(label, a, b) {
+  const row = (side, item) => el(`div.db-cline-row.${side}`, {},
+    el(`i.db-dot.${side}`, { title: item.name }),
+    bar(item.value, side),
+    el(`span.db-line-num.${side}`, { text: item.value == null ? '–' : `${item.value}%` }),
+    el('span.db-cline-detail', { text: item.detail })
+  );
+  return el('div.db-cline', {},
+    el('span.db-line-label', { text: label }),
+    el('div.db-cline-bars', {}, row('a', a), row('b', b))
+  );
+}
 
 /**
  * 참여자 한 명의 과목·단원별 진도 (대결 화면도 함께 쓴다)
@@ -118,70 +150,124 @@ export async function computeProgress(ctx, exam, records, learner) {
 export async function renderDashboard(ctx, exam, data) {
   document.title = `학습 현황 — ${exam.title}`;
   ctx.setNav('dashboard');
-  const learner = getCurrentLearner();
+  const [nameA, nameB] = COMPARE;
   const [loaded, study] = await Promise.all([loadRecords(), loadStudy(ctx, exam.subjects, data.concepts)]);
-  const subjects = (await computeProgress(ctx, exam, loaded.records, learner)).map((x) => ({ ...x, info: study.bySubject.get(x.s.code) }));
+  await refreshProfiles(loaded.records);
+  const [progA, progB] = await Promise.all([
+    computeProgress(ctx, exam, loaded.records, nameA),
+    computeProgress(ctx, exam, loaded.records, nameB),
+  ]);
 
-  const V = subjects.reduce((a, x) => a + x.v, 0);
-  const W = subjects.reduce((a, x) => a + x.w, 0);
-  const VIEWS = subjects.reduce((a, x) => a + x.views, 0);
-  const QT = subjects.reduce((a, x) => a + x.qT, 0);
-  const QA = subjects.reduce((a, x) => a + x.qA, 0);
-  const lastScores = subjects.flatMap((x) => x.rows.filter((r) => r.last != null).map((r) => r.last));
-  const triedDocs = lastScores.length;
-  const allDocs = subjects.reduce((a, x) => a + x.rows.filter((r) => r.qTotal).length, 0);
-  const videoPct = pct(W, V);
-  const quizPct = pct(QA, QT);
-  const scorePct = avg(lastScores);
-  const overall = Math.round(videoPct * 0.3 + quizPct * 0.3 + (scorePct || 0) * 0.4);
+  const conceptMap = (name) => {
+    const found = (study.learners || []).find((l) => l.name === name);
+    return new Map((found?.subjects || []).map((s) => [s.code, s.progress ?? 0]));
+  };
+  const conA = conceptMap(nameA);
+  const conB = conceptMap(nameB);
+  const sumA = summarizeAll(progA);
+  const sumB = summarizeAll(progB);
+  const diff = sumA.overall - sumB.overall;
+  const diffText = diff === 0 ? '두 사람 종합 성취도가 같습니다' : `${diff > 0 ? nameA : nameB} +${Math.abs(diff)}%p 앞섬`;
 
-  const subjectBlock = (x) => {
-    const vp = pct(x.w, x.v);
-    const qp = pct(x.qA, x.qT);
-    const total = Math.round(vp * 0.3 + qp * 0.3 + (x.score || 0) * 0.4);
+  const unitPerson = (side, name, r) => el(`div.db-unit-person.${side}`, {},
+    el('div.db-unit-stats', {},
+      el(`span.db-unit-who.${side}`, {}, el(`i.db-dot.${side}`), name),
+      r.videos ? el('span', { title: '영상 시청' }, `🎬 ${r.watched}/${r.videos}`) : null,
+      r.qTotal ? el('span', { title: '단원 평가 문항' }, `📝 ${r.answered}/${r.qTotal}`) : null,
+      r.tries.length ? el('span', { title: '회차별 점수' }, r.tries.map((t, i) => `${i + 1}차 ${t.score}`).join(' · ')) : (r.qTotal ? el('span.db-muted', { text: '미응시' }) : null)
+    ),
+    bar(r.qTotal ? r.last ?? 0 : pct(r.watched, r.videos), side)
+  );
+
+  const subjectBlock = (a, b) => {
+    const vpA = pct(a.w, a.v);
+    const vpB = pct(b.w, b.v);
+    const qpA = pct(a.qA, a.qT);
+    const qpB = pct(b.qA, b.qT);
+    const totalA = Math.round(vpA * 0.3 + qpA * 0.3 + (a.score || 0) * 0.4);
+    const totalB = Math.round(vpB * 0.3 + qpB * 0.3 + (b.score || 0) * 0.4);
+    const triedA = a.rows.filter((r) => r.last != null).length;
+    const triedB = b.rows.filter((r) => r.last != null).length;
     return el('section.db-subject', {},
       el('div.db-subject-head', {},
-        el('h3', {}, el('a', { href: `#/s/${x.s.code}`, text: x.s.subject })),
-        el('span.db-subject-total', {}, '종합 ', el('b', { text: `${total}%` }))
+        el('h3', {}, el('a', { href: `#/s/${a.s.code}`, text: a.s.subject })),
+        el('span.db-subject-total', {},
+          el('span', {}, `${nameA} `, el('b.a', { text: `${totalA}%` })),
+          el('span.db-sep', { text: '·' }),
+          el('span', {}, `${nameB} `, el('b.b', { text: `${totalB}%` }))
+        )
       ),
-      line('영상 시청', vp, `${x.w}/${x.v}편 · 반복 ${x.views}/${x.v * MAX_WATCH}회`, 'video'),
-      line('문제 풀이', qp, `${x.qA}/${x.qT}문항`, 'quiz'),
-      line('최근 점수', x.score, x.score == null ? '단원 평가를 아직 내지 않음' : `${x.rows.filter((r) => r.last != null).length}개 단원 평균`, 'score'),
-      line('개념 진도', x.info?.progress ?? 0, '개념 읽기 · 예상 문제', 'concept'),
+      compareLine('영상 시청',
+        { name: nameA, value: vpA, detail: `${nameA} ${a.w}/${a.v}편 · 반복 ${a.views}/${a.v * MAX_WATCH}회` },
+        { name: nameB, value: vpB, detail: `${nameB} ${b.w}/${b.v}편 · 반복 ${b.views}/${b.v * MAX_WATCH}회` }
+      ),
+      compareLine('문제 풀이',
+        { name: nameA, value: qpA, detail: `${nameA} ${a.qA}/${a.qT}문항` },
+        { name: nameB, value: qpB, detail: `${nameB} ${b.qA}/${b.qT}문항` }
+      ),
+      compareLine('최근 점수',
+        { name: nameA, value: a.score, detail: a.score == null ? `${nameA} 미응시` : `${nameA} ${triedA}개 단원 평균` },
+        { name: nameB, value: b.score, detail: b.score == null ? `${nameB} 미응시` : `${nameB} ${triedB}개 단원 평균` }
+      ),
+      compareLine('개념 진도',
+        { name: nameA, value: conA.get(a.s.code) ?? 0, detail: `${nameA} 개념 읽기 · 예상 문제` },
+        { name: nameB, value: conB.get(b.s.code) ?? 0, detail: `${nameB} 개념 읽기 · 예상 문제` }
+      ),
       el('div.db-units', {},
-        x.rows.map((r) => el('a.db-unit', { href: `#/s/${x.s.code}/${r.index}` },
-          el('span.db-unit-title', { text: r.doc.title }),
-          el('span.db-unit-stats', {},
-            r.videos ? el('span', { title: '영상 시청' }, `🎬 ${r.watched}/${r.videos}`) : null,
-            r.qTotal ? el('span', { title: '단원 평가 문항' }, `📝 ${r.answered}/${r.qTotal}`) : null,
-            r.tries.length ? el('span', { title: '회차별 점수' }, r.tries.map((t, i) => `${i + 1}차 ${t.score}`).join(' · ')) : (r.qTotal ? el('span.db-muted', { text: '미응시' }) : null)
-          ),
-          bar(r.qTotal ? r.last ?? 0 : pct(r.watched, r.videos), r.qTotal ? 'score' : 'video')
-        ))
+        a.rows.map((ra, i) => {
+          const rb = b.rows[i];
+          return el('a.db-unit', { href: `#/s/${a.s.code}/${ra.index}` },
+            el('span.db-unit-title', { text: ra.doc.title }),
+            el('div.db-unit-cmp', {}, unitPerson('a', nameA, ra), unitPerson('b', nameB, rb))
+          );
+        })
       )
     );
   };
 
   ctx.show(
-    el('section.hero', {},
-      el('p.eyebrow', { text: `${learner} · 학습 현황` }),
-      el('h1', { text: `종합 성취도 ${overall}%` }),
-      el('p.sub', { text: '영상 30% · 문제 풀이 진도 30% · 단원 평가 최근 점수 40%로 계산합니다.' }),
+    el('section.hero.db-hero', {},
+      el('p.eyebrow', { text: `학습 현황 · ${nameA} · ${nameB} 함께 비교` }),
+      el('div.db-hero-pair', {},
+        el('div.db-hero-one.a', {}, avatar(nameA, 'sm'), el('span.db-hero-name', { text: nameA }), el('b.db-hero-num', { text: `${sumA.overall}%` })),
+        el('span.db-hero-vs', { text: 'vs' }),
+        el('div.db-hero-one.b', {}, avatar(nameB, 'sm'), el('span.db-hero-name', { text: nameB }), el('b.db-hero-num', { text: `${sumB.overall}%` }))
+      ),
+      el('p.sub', { text: `${diffText} · 영상 30% · 문제 풀이 진도 30% · 단원 평가 최근 점수 40%로 계산합니다.` }),
       el('div.hero-actions', {}, el('a.pill', { href: '#/versus', text: '⚔️ 대결 보기' })),
       !loaded.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
     ),
     el('div.wrap', {},
       el('section.section', {},
         el('div.db-cards', {},
-          card('영상 시청 진도율', videoPct, `${W}/${V}편 봄 · 반복 시청 ${VIEWS}/${V * MAX_WATCH}회`, 'video'),
-          card('문제 풀이 진도율', quizPct, `단원 평가 ${QA}/${QT}문항 풀어 봄`, 'quiz'),
-          card('문제 풀이 점수', scorePct, triedDocs ? `${triedDocs}/${allDocs}개 단원 · 최근 회차 평균` : '아직 낸 단원 평가가 없습니다', 'score'),
-          card('종합 성취도', overall, '영상 30 · 풀이 30 · 점수 40', 'overall')
+          compareCard('영상 시청 진도율', [
+            { side: 'a', name: nameA, value: sumA.videoPct, sub: `${sumA.W}/${sumA.V}편 봄 · 반복 ${sumA.VIEWS}/${sumA.V * MAX_WATCH}회` },
+            { side: 'b', name: nameB, value: sumB.videoPct, sub: `${sumB.W}/${sumB.V}편 봄 · 반복 ${sumB.VIEWS}/${sumB.V * MAX_WATCH}회` },
+          ], 'video'),
+          compareCard('문제 풀이 진도율', [
+            { side: 'a', name: nameA, value: sumA.quizPct, sub: `단원 평가 ${sumA.QA}/${sumA.QT}문항` },
+            { side: 'b', name: nameB, value: sumB.quizPct, sub: `단원 평가 ${sumB.QA}/${sumB.QT}문항` },
+          ], 'quiz'),
+          compareCard('문제 풀이 점수', [
+            { side: 'a', name: nameA, value: sumA.scorePct, sub: sumA.triedDocs ? `${sumA.triedDocs}/${sumA.allDocs}개 단원 최근 평균` : '아직 낸 단원 평가 없음' },
+            { side: 'b', name: nameB, value: sumB.scorePct, sub: sumB.triedDocs ? `${sumB.triedDocs}/${sumB.allDocs}개 단원 최근 평균` : '아직 낸 단원 평가 없음' },
+          ], 'score'),
+          compareCard('종합 성취도', [
+            { side: 'a', name: nameA, value: sumA.overall, sub: '영상 30 · 풀이 30 · 점수 40' },
+            { side: 'b', name: nameB, value: sumB.overall, sub: '영상 30 · 풀이 30 · 점수 40' },
+          ], 'overall', diffText)
         )
       ),
       el('section.section', {},
-        el('div.section-head', {}, el('h2', { text: '과목별' }), el('p', { text: '단원 이름을 누르면 그 단원 정리로 갑니다. 영상 아래 체크박스로 시청 횟수를 남기세요.' })),
-        el('div.db-subjects', {}, subjects.map(subjectBlock))
+        el('div.section-head', {},
+          el('h2', { text: '과목별 비교' }),
+          el('p', { text: '단원 이름을 누르면 그 단원 정리로 갑니다. 영상 아래 체크박스로 시청 횟수를 남기세요.' }),
+          el('div.db-legend', {},
+            el('span', {}, el('i.db-dot.a'), nameA),
+            el('span', {}, el('i.db-dot.b'), nameB)
+          )
+        ),
+        el('div.db-subjects', {}, progA.map((a, i) => subjectBlock(a, progB[i])))
       )
     )
   );
