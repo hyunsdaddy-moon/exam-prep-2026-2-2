@@ -7,21 +7,21 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1555';
-import { el, versioned } from './dom.js?v=20261124-1555';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1555';
-import { renderUnitsRoute } from './units.js?v=20261124-1555';
-import { buildDocQuiz } from './docquiz.js?v=20261124-1555';
-import { renderAssessRoute } from './assess.js?v=20261124-1555';
-import { renderPastRoute } from './past.js?v=20261124-1555';
-import { renderWrongbook } from './wrongbook.js?v=20261124-1555';
-import { renderBoard } from './board.js?v=20261124-1555';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1555';
-import { loadStudy } from './study.js?v=20261124-1555';
-import { renderPrint, printLinks } from './print.js?v=20261124-1555';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1555';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1555';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1555';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1632';
+import { el, versioned } from './dom.js?v=20261124-1632';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1632';
+import { renderUnitsRoute } from './units.js?v=20261124-1632';
+import { buildDocQuiz } from './docquiz.js?v=20261124-1632';
+import { renderAssessRoute } from './assess.js?v=20261124-1632';
+import { renderPastRoute } from './past.js?v=20261124-1632';
+import { renderWrongbook } from './wrongbook.js?v=20261124-1632';
+import { renderBoard } from './board.js?v=20261124-1632';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1632';
+import { loadStudy } from './study.js?v=20261124-1632';
+import { renderPrint, printLinks } from './print.js?v=20261124-1632';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1632';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1632';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1632';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -526,12 +526,30 @@ async function renderReader(s, index, query) {
   const quiz = await buildDocQuiz(ctx, s.code, doc.file, { subject: s.subject, docTitle: doc.title, docIndex: index });
   if (quiz) body.append(quiz.section);
 
+  // 목차 제목마다 그 절(다음 목차 제목 전까지)에 든 영상 수 — 첫 제목 앞의 영상은 첫 제목에 붙인다
+  const tocHeads = headings.filter((h) => h.level === 2 || h.level === 3);
+  const videoCount = new Map();
+  for (const v of body.querySelectorAll('video')) {
+    if (v.closest('.dq')) continue;
+    const after = (h) => h.node.compareDocumentPosition(v) & Node.DOCUMENT_POSITION_FOLLOWING;
+    // 바로 앞 제목이 목차에 없는 큰 제목(# Part 2 …)이면 그 아래 첫 목차 제목에 붙인다
+    const prevAny = headings.filter(after).at(-1);
+    let owner = tocHeads[0];
+    if (prevAny && prevAny.level < 2) owner = tocHeads.find((h) => !after(h)) || tocHeads.at(-1);
+    else for (const h of tocHeads) {
+      if (after(h)) owner = h;
+      else break;
+    }
+    if (owner) videoCount.set(owner.id, (videoCount.get(owner.id) || 0) + 1);
+  }
   const toc = el('nav.toc', { 'aria-label': '목차' },
     el('p', { text: '목차' }),
-    headings.filter((h) => h.level === 2 || h.level === 3).map((h) => {
+    tocHeads.map((h) => {
       // 제목의 모양(수식 포함)을 그대로 옮긴다
       const link = el(`a.l${h.level}`, { href: `#${h.id}`, onclick: (e) => jump(e, h.id) });
       link.append(...[...h.node.childNodes].map((n) => n.cloneNode(true)));
+      const n = videoCount.get(h.id);
+      if (n) link.append(el('span.toc-video', { title: `영상 ${n}편`, 'aria-label': `영상 ${n}편`, text: ` ${'🎬'.repeat(n)}` }));
       return link;
     }),
     quiz ? el('a.l2.toc-quiz', { href: '#doc-quiz', text: '📝 단원 평가', onclick: (e) => jump(e, 'doc-quiz') }) : null

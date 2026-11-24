@@ -946,3 +946,4 @@ button.link.danger { color: var(--bad); }
 .ex-empty { color: var(--text-3); }
 .ex-video { width: 100%; border-radius: var(--radius-s); background: #000; }
 @media print { .ex-row, .ex-dialog { display: none !important; } }
+.toc .toc-video { font-size: 0.85em; letter-spacing: 1px; white-space: nowrap; }
