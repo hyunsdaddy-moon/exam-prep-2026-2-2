@@ -6,17 +6,25 @@
  *   #/s/<과목>/print/omr       답안 표시판
  *   #/s/<과목>/print/notes     오답 노트 (문제 → 새 쪽에 정답과 해설)
  *   #/s/<과목>/print/summary   요약본 (?doc=<문서 번호> 하나만, 없으면 읽을 문서 전부)
+ *   #/s/<과목>/print/subnote   서브노트 (요점 정리 + 지금 참여자가 틀린 문제를 저절로 모은 오답 노트)
  *
  * 화면에는 종이 모양으로 미리 보여 주고, 「인쇄」를 누르면 브라우저의 인쇄 창을 연다(PDF 로 저장도 거기서).
  * 인쇄할 때는 위쪽 막대와 단추가 사라지고 종이만 남는다 (styles.css 의 @media print).
  */
 
-import { el, CIRCLED, versioned } from './dom.js?v=20261124-2055';
-import { renderMarkdown } from './markdown.js?v=20261124-2055';
-import { loadPaper } from './study.js?v=20261124-2055';
-import { ERROR_LABEL } from './grade.mjs?v=20261124-2055';
+import { el, CIRCLED, versioned } from './dom.js?v=20261124-2057';
+import { renderMarkdown } from './markdown.js?v=20261124-2057';
+import { loadPaper } from './study.js?v=20261124-2057';
+import { ERROR_LABEL } from './grade.mjs?v=20261124-2057';
+import { assessWrongs } from './assess.js?v=20261124-2057';
+import { unitWrongs } from './units.js?v=20261124-2057';
+import { docWrongs } from './docquiz.js?v=20261124-2057';
+import { dday } from './progress.mjs?v=20261124-2057';
 
-const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 표시판', notes: '오답 노트', summary: '요약본' };
+const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 표시판', notes: '오답 노트', summary: '요약본', subnote: '서브노트' };
+
+/** 서브노트의 과목 색 */
+const SUBJECT_COLOR = { sci: '#0f8a5f', kor: '#c2410c', mor: '#7c3aed', soc: '#b45309', mat: '#0a5fd0', eng: '#be185d', vie: '#0f766e' };
 
 /** 인쇄용 마크다운 조각. 답 쓰는 밑줄은 따로 그리므로 지운다. */
 function md(text, cls = 'md') {
@@ -155,6 +163,148 @@ async function summarySheet(exam, subject, docIndex) {
   return { sheet, waits };
 }
 
+/* ── 서브노트 ─────────────────────────────────────────── */
+
+const encPath = (p) => p.normalize('NFC').split('/').map(encodeURIComponent).join('/');
+const shortDay = (at) => String(at || '').slice(5, 10).replace('-', '/');
+
+/** 요점 정리: 과목의 「핵심 요약」 문서를 큰 제목(##)마다 한 덩어리로 묶어 꾸민다 */
+async function subnoteSummary(subject) {
+  const doc = (subject.docs || []).find((d) => d.role === 'summary');
+  if (!doc) return { node: el('p.sheet-empty', { text: '이 과목에는 핵심 요약 문서가 없습니다.' }), waits: [], count: 0 };
+  const res = await fetch(versioned(`exam/${encPath(doc.file)}`));
+  if (!res.ok) return { node: el('p.sheet-empty', { text: `문서를 불러오지 못했습니다: ${doc.title}` }), waits: [], count: 0 };
+  const folder = doc.file.slice(0, doc.file.lastIndexOf('/'));
+  const raw = el('div');
+  const { ready } = renderMarkdown(await res.text(), raw, { imageBase: `exam/${encPath(folder)}/` });
+  raw.querySelector('h1')?.remove();
+  raw.querySelectorAll('hr').forEach((hr) => hr.remove());
+  raw.querySelectorAll('input[type="checkbox"]').forEach((box) => { box.checked = false; });
+  const box = el('div.doc.sn-doc');
+  let section = null;
+  let count = 0;
+  for (const node of [...raw.childNodes]) {
+    if (node.nodeType === 1 && node.tagName === 'H2') {
+      count += 1;
+      // "1️⃣ 핵심 공식" 처럼 제목 앞에 붙은 그림 글자는 떼고 번호 딱지를 단다
+      const title = node.textContent.replace(/^[^0-9A-Za-z가-힣\[(「〈]+/u, '').replace(/^\d️?⃣\s*/u, '').trim();
+      // 마인드맵은 종이에서는 글자가 너무 작아 뺀다 (웹앱의 마인드맵 화면에서 본다)
+      if (/마인드맵/.test(title)) {
+        count -= 1;
+        section = el('section', { hidden: true });
+        continue;
+      }
+      section = el('section.sn-sec', {}, el('h2', {}, el('span.sn-num', { text: String(count).padStart(2, '0') }), el('span', { text: title })));
+      box.append(section);
+    } else if (section) section.append(node);
+    else if (node.nodeType === 1) box.append(el('div.sn-lead', {}, node));
+  }
+  return { node: box, waits: [ready], count };
+}
+
+/** 지금 참여자가 이 과목에서 틀린 문제를 모두 모은다 (예상 문제 · 수준 평가 · 단원 평가) */
+async function collectWrongs(ctx, subject, study, all) {
+  const info = study.bySubject.get(subject.code);
+  const attempts = study.merged.attempts;
+  const items = [];
+  for (const n of info?.notes || []) {
+    if (!all && n.status === 'graduated') continue;
+    const wrong = n.history.filter((h) => !h.correct);
+    const qAttempts = attempts.filter((a) => a.q === n.question.id);
+    const lastWrong = qAttempts.filter((a) => !a.correct).at(-1) || qAttempts.at(-1);
+    items.push({
+      source: '예상 문제', question: n.question, group: info.groups.get(n.question.group) || null,
+      picked: lastWrong?.picked || [], text: lastWrong?.text || '',
+      at: wrong.at(-1)?.day || '', times: wrong.length, why: n.errorType ? ERROR_LABEL[n.errorType] : '', graduated: n.status === 'graduated',
+    });
+  }
+  const more = await Promise.all([assessWrongs, unitWrongs, docWrongs].map((fn) => fn(ctx, [subject], attempts).catch(() => [])));
+  for (const w of more.flat()) {
+    items.push({ source: w.round.title, question: w.question, group: w.group, picked: w.attempt.picked || [], text: w.attempt.text || '', at: String(w.attempt.at || '').slice(0, 10), times: 1, why: '' });
+  }
+  return items.sort((a, b) => String(b.at).localeCompare(String(a.at)));
+}
+
+function wrongCard(w, index) {
+  const q = w.question;
+  const card = el('article.sn-wrong', {},
+    el('div.sn-wrong-head', {},
+      el('b.sn-wrong-no', { text: String(index + 1).padStart(2, '0') }),
+      el('span.sn-wrong-src', { text: `${w.source} · ${q.type === 'essay' ? `서술형 ${q.no}` : `${q.no}번`}` }),
+      el('span.sn-wrong-day', { text: `${shortDay(w.at)}${w.times > 1 ? ` · ${w.times}번 틀림` : ''}${w.graduated ? ' · 졸업' : ''}` })
+    )
+  );
+  if (w.group?.context && w.group.context.length <= 500) card.append(el('div.p-context', {}, md(w.group.context)));
+  else if (w.group?.context) card.append(el('p.sn-wrong-ctx', { text: `지문: ${w.group.title}` }));
+  if (q.passage && String(q.passage).length <= 500) card.append(el('div.p-context', {}, md(q.passage)));
+  card.append(md(q.stem, 'md p-text sn-stem'));
+  if (q.type === 'choice') {
+    const answer = q.answer || [];
+    if (!q.choiceTable) {
+      card.append(el('ol.sn-choices', {}, (q.choices || []).map((c, i) => {
+        const isAns = answer.includes(i + 1);
+        const isPick = w.picked.includes(i + 1);
+        return el(`li${isAns ? '.ans' : isPick ? '.pick' : ''}`, {}, el('span', { text: CIRCLED[i] }), md(c, 'md p-text'), isAns ? el('em', { text: '정답' }) : isPick ? el('em', { text: '내 답' }) : null);
+      })));
+    } else {
+      card.append(el('p.sn-wrong-ctx', { text: `내 답 ${w.picked.length ? circled(w.picked) : '안 풂'} · 정답 ${circled(answer)}` }));
+    }
+    const note = w.picked.length === 1 && q.choiceNotes?.[w.picked[0] - 1];
+    if (note) card.append(el('div.sn-why', {}, el('b', { text: '내 답이 틀린 까닭' }), md(note, 'md p-text')));
+    if (q.explanation) card.append(el('div.sn-explain', {}, el('b', { text: '해설' }), md(q.explanation, 'md p-text')));
+  } else {
+    if (w.text) card.append(el('div.sn-why', {}, el('b', { text: '내가 쓴 답' }), el('p', { text: w.text })));
+    if (q.modelAnswer) card.append(el('div.sn-explain', {}, el('b', { text: '모범 답안' }), md(q.modelAnswer, 'md p-text')));
+  }
+  card.append(el('p.sn-memo', {}, el('span', { text: w.why ? `틀린 까닭: ${w.why} · 다음엔 이렇게` : '다음엔 이렇게' }), el('i')));
+  return card;
+}
+
+async function subnoteSheet(ctx, exam, subject, study, all) {
+  const info = study.bySubject.get(subject.code);
+  const [summary, wrongs] = await Promise.all([subnoteSummary(subject), collectWrongs(ctx, subject, study, all)]);
+  const left = dday(study.examDate, study.today);
+  const stat = (num, label) => el('div.sn-stat', {}, el('b', { text: String(num) }), el('span', { text: label }));
+  const weakest = info?.weakest || [];
+  const sheet = el('div.sheet.summary.subnote', { style: `--sn: ${SUBJECT_COLOR[subject.code] || '#0a5fd0'}` },
+    el('header.sn-cover', {},
+      el('div.sn-cover-main', {},
+        el('p.sn-kicker', { text: 'SUB NOTE' }),
+        el('h1', { text: subject.subject }),
+        el('p.sn-cover-sub', { text: `${exam.title} · ${study.learner}${left ? ` · 시험까지 ${left.label}` : ''}` })
+      ),
+      el('div.sn-stats', {},
+        stat(`${info?.progress ?? 0}%`, '진도율'),
+        stat(info?.mastery == null ? '–' : `${info.mastery}%`, '숙련도'),
+        stat(wrongs.length, '오답')
+      )
+    ),
+    el('div.sn-part', {}, el('span', { text: 'PART 1' }), el('h2', { text: '요점 정리' }), el('i')),
+    summary.node,
+    el('section.page-break.sn-wrongs', {},
+      el('div.sn-part', {}, el('span', { text: 'PART 2' }), el('h2', { text: `${study.learner}의 오답 노트` }), el('i')),
+      weakest.length
+        ? el('p.sn-weak', {}, el('b', { text: '약한 개념' }), weakest.map((x) => el('span', { text: `${x.concept.title} ${Math.round(x.accuracy * 100)}%` })))
+        : null,
+      wrongs.length
+        ? [
+            el('p.sheet-note', { text: `틀린 문제 ${wrongs.length}개를 최근 것부터 모았습니다. 정답을 가리고 다시 풀어 본 뒤, 맨 아래 줄에 다음에 기억할 것을 직접 써 보세요.` }),
+            el('div.cols.sn-cols', {}, wrongs.map(wrongCard)),
+          ]
+        : el('div.sn-empty', {},
+            el('b', { text: '아직 틀린 문제가 없습니다' }),
+            el('p', { text: '예상 문제·수준 평가·단원 평가를 풀면 틀린 문제가 여기에 저절로 모입니다.' })
+          )
+    )
+  );
+  sheet.querySelectorAll('img').forEach((img) => {
+    img.loading = 'eager';
+    img.removeAttribute('role');
+    img.removeAttribute('tabindex');
+  });
+  return { sheet, waits: summary.waits };
+}
+
 /** 그림이 모두 불러와질 때까지 (실패한 그림도 끝난 것으로 친다) */
 function imagesSettled(root) {
   return Promise.all(
@@ -182,6 +332,7 @@ export async function renderPrint(ctx, exam, subject, kind, query, loadStudyFor)
     const study = await loadStudyFor();
     sheet = notesSheet(exam, subject, paper, study.bySubject.get(subject.code), all, study.learner);
   }
+  else if (kind === 'subnote') ({ sheet, waits } = await subnoteSheet(ctx, exam, subject, await loadStudyFor(), all));
   else ({ sheet, waits } = await summarySheet(exam, subject, docIndex));
 
   const mono = query.get('mono') === '1';
@@ -211,8 +362,8 @@ export async function renderPrint(ctx, exam, subject, kind, query, loadStudyFor)
     ),
     el('div.wrap.print-options', {},
       toggle('흑백으로', mono, { mono: mono ? null : '1' }),
-      kind === 'summary' ? toggle('그림 빼고', noImages, { img: noImages ? null : '0' }) : null,
-      kind === 'notes' ? toggle('졸업한 문제도', all, { all: all ? null : '1' }) : null,
+      kind === 'summary' || kind === 'subnote' ? toggle('그림 빼고', noImages, { img: noImages ? null : '0' }) : null,
+      kind === 'notes' || kind === 'subnote' ? toggle('졸업한 문제도', all, { all: all ? null : '1' }) : null,
       el('span.hint', { text: '인쇄 창에서 「PDF 로 저장」을 고르면 파일로 남습니다. 에디터 안에서 인쇄 창이 안 뜨면 브라우저에서 열어 주세요.' })
     )
   );

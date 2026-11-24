@@ -9,13 +9,13 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2055';
-import { renderMarkdown } from './markdown.js?v=20261124-2055';
-import { explainButton } from './explain.js?v=20261124-2055';
-import { inkTools } from './ink.js?v=20261124-2055';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2055';
-import { loadPaper } from './study.js?v=20261124-2055';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2055';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2057';
+import { renderMarkdown } from './markdown.js?v=20261124-2057';
+import { explainButton } from './explain.js?v=20261124-2057';
+import { inkTools } from './ink.js?v=20261124-2057';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2057';
+import { loadPaper } from './study.js?v=20261124-2057';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2057';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -30,7 +30,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-2055';
+} from './grade.mjs?v=20261124-2057';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };

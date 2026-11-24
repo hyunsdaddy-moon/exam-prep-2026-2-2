@@ -7,26 +7,26 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2055';
-import { el, versioned } from './dom.js?v=20261124-2055';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2055';
-import { renderUnitsRoute } from './units.js?v=20261124-2055';
-import { buildDocQuiz } from './docquiz.js?v=20261124-2055';
-import { attachWatchBoxes } from './watch.js?v=20261124-2055';
-import { renderDashboard } from './dashboard.js?v=20261124-2055';
-import { renderGrades } from './grades.js?v=20261124-2055';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2055';
-import { renderAssessRoute } from './assess.js?v=20261124-2055';
-import { renderPastRoute } from './past.js?v=20261124-2055';
-import { renderWrongbook } from './wrongbook.js?v=20261124-2055';
-import { renderBoard } from './board.js?v=20261124-2055';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2055';
-import { loadStudy } from './study.js?v=20261124-2055';
-import { renderPrint, printLinks } from './print.js?v=20261124-2055';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2055';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2055';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2055';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2055';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-2057';
+import { el, versioned } from './dom.js?v=20261124-2057';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-2057';
+import { renderUnitsRoute } from './units.js?v=20261124-2057';
+import { buildDocQuiz } from './docquiz.js?v=20261124-2057';
+import { attachWatchBoxes } from './watch.js?v=20261124-2057';
+import { renderDashboard } from './dashboard.js?v=20261124-2057';
+import { renderGrades } from './grades.js?v=20261124-2057';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261124-2057';
+import { renderAssessRoute } from './assess.js?v=20261124-2057';
+import { renderPastRoute } from './past.js?v=20261124-2057';
+import { renderWrongbook } from './wrongbook.js?v=20261124-2057';
+import { renderBoard } from './board.js?v=20261124-2057';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-2057';
+import { loadStudy } from './study.js?v=20261124-2057';
+import { renderPrint, printLinks } from './print.js?v=20261124-2057';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-2057';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261124-2057';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-2057';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-2057';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -581,7 +581,21 @@ async function renderSubject(s) {
       el('section.section', {},
         el('div.section-head', {}, el('h2', { text: '인쇄' }), el('p', { text: '종이로 풀거나 PDF 로 남길 수 있습니다. 문제지와 정답지는 따로 뽑힙니다.' })),
         printLinks(s)
-      )
+      ),
+      readingDocs(s).some((d) => d.role === 'summary')
+        ? el('section.section', {},
+            el('div.section-head', {}, el('h2', { text: '서브노트' }), el('p', { text: '요점 정리와 내가 틀린 문제를 A4 한 묶음으로 모았습니다. 오답은 문제를 풀 때마다 저절로 채워집니다.' })),
+            el('a.card.subnote-card.rise', { href: `#/s/${s.code}/print/subnote` },
+              el('div.subnote-thumb', { 'aria-hidden': 'true' }, el('b', { text: 'SUB NOTE' }), el('strong', { text: s.subject }), el('i'), el('i'), el('i'), el('i')),
+              el('div.subnote-text', {},
+                el('div.role', { text: 'A4 인쇄물' }),
+                el('h3', { text: `${s.subject} 서브노트` }),
+                el('p.meta', { text: `PART 1 요점 정리 · PART 2 ${study.learner}의 오답 노트${info.notes.length ? ` (예상 문제 오답 ${info.notes.length}개 + 평가 오답)` : ''}` }),
+                el('span.more', { text: '열어서 보기 · 인쇄' })
+              )
+            )
+          )
+        : null
     )
   );
   void renderHistory(ctx, s, problems);

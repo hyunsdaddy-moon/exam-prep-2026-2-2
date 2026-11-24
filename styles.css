@@ -1158,6 +1158,99 @@ a.vs-mission:hover { text-decoration: none; filter: brightness(0.97); }
 }
 @media print { .vsbar { display: none !important; } }
 
+/* ── 서브노트 (#/s/<과목>/print/subnote) — 요점 정리 + 저절로 모이는 오답 노트 ── */
+.sheet.subnote { --accent: var(--sn); --accent-text: var(--sn); --sn-tint: color-mix(in srgb, var(--sn) 9%, #fff); --sn-line: color-mix(in srgb, var(--sn) 35%, #fff); }
+.sheet.subnote.mono { --sn: #111; --sn-tint: #f2f2f2; --sn-line: #999; }
+.sn-cover { display: flex; align-items: flex-end; justify-content: space-between; gap: 14pt; padding: 16pt 18pt; border-radius: 10pt; background: var(--sn); color: #fff; break-inside: avoid; }
+.sn-kicker { margin: 0; font-size: 8.5pt; font-weight: 700; letter-spacing: 0.32em; opacity: 0.85; }
+.sn-cover h1 { margin: 2pt 0 4pt; font-size: 30pt; line-height: 1.1; letter-spacing: -0.03em; color: #fff; }
+.sn-cover-sub { margin: 0; font-size: 9.5pt; opacity: 0.92; }
+.sn-stats { display: flex; gap: 6pt; flex: none; }
+.sn-stat { min-width: 46pt; padding: 6pt 8pt; border-radius: 7pt; background: rgba(255, 255, 255, 0.16); text-align: center; }
+.sn-stat b { display: block; font-size: 15pt; line-height: 1.2; letter-spacing: -0.02em; }
+.sn-stat span { font-size: 7.5pt; opacity: 0.9; }
+.sn-part { display: flex; align-items: baseline; gap: 8pt; margin: 18pt 0 10pt; break-after: avoid; }
+.sn-part span { font-size: 8pt; font-weight: 700; letter-spacing: 0.2em; color: var(--sn); }
+.sn-part h2 { margin: 0; font-size: 17pt; letter-spacing: -0.02em; }
+.sn-part i { flex: 1; align-self: center; height: 1.5pt; background: var(--sn); border-radius: 1pt; }
+.sheet.subnote .sn-doc { font-size: 9.5pt; line-height: 1.5; }
+.sn-lead blockquote { margin: 0 0 8pt !important; padding: 7pt 10pt !important; background: var(--sn-tint); border: 0; border-left: 3pt solid var(--sn); border-radius: 0 6pt 6pt 0; font-size: 9pt; }
+.sn-lead blockquote p { margin: 0; }
+.sn-sec { margin: 0 0 12pt; }
+.sheet.subnote .sn-sec > h2 { display: flex; align-items: center; gap: 7pt; margin: 14pt 0 7pt; padding: 0 0 5pt; border-top: 0; border-bottom: 1pt solid var(--sn-line); font-size: 12.5pt; line-height: 1.3; break-after: avoid; }
+.sn-num { flex: none; display: inline-flex; align-items: center; justify-content: center; min-width: 20pt; height: 16pt; padding: 0 4pt; border-radius: 4pt; background: var(--sn); color: #fff; font-size: 9pt; font-weight: 700; letter-spacing: 0.02em; }
+.sheet.subnote .sn-sec h3 { margin: 9pt 0 4pt; padding-left: 6pt; border-left: 2.5pt solid var(--sn); font-size: 10.5pt; line-height: 1.35; color: var(--text); }
+.sheet.subnote .sn-doc table { font-size: 8.5pt; line-height: 1.4; border-collapse: collapse; width: 100%; }
+.sheet.subnote .sn-doc th { background: var(--sn-tint); color: var(--sn); border: 0; border-bottom: 1pt solid var(--sn); padding: 3.5pt 5pt; font-weight: 700; }
+.sheet.subnote .sn-doc td { border: 0; border-bottom: 0.5pt solid #d6d6d6; padding: 3.5pt 5pt; vertical-align: top; }
+.sheet.subnote .sn-doc .table-wrap { margin: 0 0 8pt; }
+.sheet.subnote .sn-doc strong { color: var(--sn); }
+.sheet.subnote .sn-doc blockquote { margin: 0 0 7pt; padding: 6pt 9pt; background: var(--sn-tint); border: 0; border-left: 2.5pt solid var(--sn); border-radius: 0 5pt 5pt 0; }
+.sheet.subnote .sn-doc ul, .sheet.subnote .sn-doc ol { padding-left: 15pt; margin: 0 0 6pt; }
+.sheet.subnote .sn-doc li { margin: 1.5pt 0; break-inside: avoid; }
+.sheet.subnote .sn-doc li.task { list-style: none; margin-left: -13pt; }
+.sheet.subnote .sn-doc li.task input { width: 9pt; height: 9pt; margin: 0 5pt 0 0; vertical-align: -1pt; accent-color: var(--sn); }
+.sheet.subnote .sn-doc .diagram { margin: 0 auto 6pt; max-height: 105mm; overflow: hidden; text-align: center; }
+.sheet.subnote .sn-doc .diagram svg { max-width: 100%; max-height: 105mm; height: auto; }
+.sheet.subnote .sn-doc figure { max-width: 110mm; }
+.sn-weak { display: flex; flex-wrap: wrap; align-items: center; gap: 4pt 6pt; margin: 0 0 8pt; font-size: 9pt; }
+.sn-weak b { color: var(--sn); margin-right: 2pt; }
+.sn-weak span { padding: 1.5pt 7pt; border-radius: 999px; background: var(--sn-tint); }
+.sn-wrongs .sheet-note { margin: 0 0 10pt; }
+.sn-cols { column-rule: 0; column-gap: 7mm; }
+.sn-wrong { break-inside: avoid; margin: 0 0 9pt; padding: 8pt 9pt; border: 0.6pt solid var(--sn-line); border-radius: 7pt; font-size: 9pt; line-height: 1.45; }
+.sn-wrong-head { display: flex; align-items: center; gap: 6pt; margin-bottom: 5pt; padding-bottom: 4pt; border-bottom: 0.5pt dashed var(--sn-line); }
+.sn-wrong-no { flex: none; padding: 0 5pt; border-radius: 4pt; background: var(--sn); color: #fff; font-size: 8.5pt; }
+.sn-wrong-src { flex: 1; min-width: 0; font-size: 8pt; font-weight: 600; color: var(--sn); }
+.sn-wrong-day { flex: none; font-size: 7.5pt; color: var(--text-3); }
+.sn-wrong-ctx { margin: 0 0 4pt; font-size: 8pt; color: var(--text-2); }
+.sn-wrong .p-context { margin: 0 0 5pt; padding: 5pt 7pt; font-size: 8.5pt; border: 0; background: #f6f6f6; border-radius: 5pt; }
+.sn-stem { font-weight: 600; }
+.sn-stem p { margin: 0 0 4pt; }
+.sn-choices { list-style: none; margin: 3pt 0 5pt; padding: 0; }
+.sn-choices li { display: flex; align-items: baseline; gap: 4pt; padding: 1pt 4pt; border-radius: 4pt; }
+.sn-choices li > span { flex: none; }
+.sn-choices li .p-text { flex: 1; }
+.sn-choices li .p-text p { margin: 0; }
+.sn-choices li em { flex: none; font-style: normal; font-size: 7.5pt; font-weight: 700; }
+.sn-choices li.ans { background: var(--sn-tint); font-weight: 700; color: var(--sn); }
+.sn-choices li.pick { color: #b00020; text-decoration: line-through; text-decoration-thickness: 0.6pt; }
+.sn-choices li.pick em { text-decoration: none; display: inline-block; }
+.sn-why, .sn-explain { margin-top: 4pt; padding: 4pt 7pt; border-radius: 5pt; font-size: 8.5pt; }
+.sn-why { background: #fdf1f1; }
+.sn-explain { background: #f6f6f6; }
+.sn-why > b, .sn-explain > b { display: block; font-size: 7.5pt; letter-spacing: 0.02em; }
+.sn-why > b { color: #b00020; }
+.sn-explain > b { color: var(--text-2); }
+.sn-why p, .sn-explain p { margin: 0; }
+.sn-memo { display: flex; align-items: flex-end; gap: 5pt; margin: 6pt 0 0; font-size: 7.5pt; color: var(--text-3); }
+.sn-memo i { flex: 1; height: 11pt; border-bottom: 0.5pt solid #999; }
+.sn-empty { padding: 26pt 16pt; border: 1pt dashed var(--sn-line); border-radius: 9pt; text-align: center; color: var(--text-2); }
+.sn-empty b { display: block; font-size: 12pt; color: var(--sn); margin-bottom: 3pt; }
+.sn-empty p { margin: 0; font-size: 9.5pt; }
+.sheet.mono .sn-why { background: #fff; border: 0.5pt solid #999; }
+.sheet.mono .sn-choices li.pick, .sheet.mono .sn-why > b { color: #111; }
+/* 과목 화면 맨 아래의 서브노트 카드 */
+.subnote-card { flex-direction: row; align-items: center; gap: 26px; }
+.subnote-thumb { flex: none; width: 104px; aspect-ratio: 210 / 297; padding: 10px 9px; border-radius: 6px; background: #fff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.14); display: flex; flex-direction: column; gap: 5px; }
+.subnote-thumb b { font-size: 6px; letter-spacing: 0.24em; color: var(--accent-text); }
+.subnote-thumb strong { font-size: 14px; line-height: 1.15; padding-bottom: 5px; border-bottom: 2px solid var(--accent); }
+.subnote-thumb i { height: 5px; border-radius: 3px; background: var(--line-soft); }
+.subnote-thumb i:nth-of-type(2) { width: 80%; }
+.subnote-thumb i:nth-of-type(4) { width: 60%; }
+.subnote-text { min-width: 0; }
+.subnote-text .role { font-size: 12px; font-weight: 600; color: var(--accent-text); margin-bottom: 6px; }
+.subnote-text h3 { font-size: 24px; letter-spacing: -0.02em; margin: 0; }
+.subnote-text .meta { color: var(--text-2); font-size: 14px; margin: 8px 0 0; }
+@media (max-width: 860px) {
+  .sn-cover { flex-direction: column; align-items: flex-start; }
+  .subnote-card { gap: 16px; }
+  .subnote-thumb { width: 76px; }
+}
+@media print {
+  .sn-cover { flex-direction: row; align-items: flex-end; }
+}
+
 /* ── 성적 (#/grades) ── */
 .gr-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .gr-card { padding: 20px; border-radius: 18px; background: var(--bg-soft); }
