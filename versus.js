@@ -10,11 +10,11 @@
  *   이번 주     월요일 0시 이전 기록만으로 다시 계산한 점수와의 차이
  */
 
-import { el } from './dom.js?v=20261124-2033';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2033';
-import { listLearners, filterRecordsByLearner } from './grade.mjs?v=20261124-2033';
-import { computeProgress } from './dashboard.js?v=20261124-2033';
-import { avatar, characterOf } from './characters.js?v=20261124-2033';
+import { el } from './dom.js?v=20261124-2039';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-2039';
+import { listLearners, filterRecordsByLearner } from './grade.mjs?v=20261124-2039';
+import { computeProgress } from './dashboard.js?v=20261124-2039';
+import { avatar, characterOf } from './characters.js?v=20261124-2039';
 
 const MARGIN = 3;
 const OPP_KEY = 'examprep.versus.opp';
