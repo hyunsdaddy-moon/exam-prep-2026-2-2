@@ -1,15 +1,15 @@
 /*
- * 시험 준비 웹앱 — 캐릭터 고르기 (옛날 비트맵 게임의 「PLAYER SELECT」 화면)
+ * 시험 준비 웹앱 — 캐릭터 고르기
  *   #/me   참여자마다 캐릭터 10종 가운데 하나를 고른다
  *
  * 고른 것은 기록(records)에 type 'profile' 로 덧붙인다 — 마지막에 고른 것이 이긴다. 모든 기기에 바로 보인다.
  * 그림 파일: assets/characters/c01.webp … c10.webp. 고르지 않은 참여자는 기본 그림 c00.webp.
  */
 
-import { el } from './dom.js?v=20261124-1900';
-import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261124-1900';
-import { recordLearner } from './grade.mjs?v=20261124-1900';
-import { changePin, isProtected } from './lock.js?v=20261124-1900';
+import { el } from './dom.js?v=20261124-1901';
+import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261124-1901';
+import { recordLearner } from './grade.mjs?v=20261124-1901';
+import { changePin, isProtected } from './lock.js?v=20261124-1901';
 
 export const CHARACTERS = [
   { id: 'c01', name: '탐험가 하루', role: '모험 · 지리', color: '#e0a030', line: '지도만 있으면 어디든 간다!' },
@@ -84,11 +84,11 @@ export async function renderCharacterSelect(ctx) {
     preview.replaceChildren(
       charPicture(c, 'lg'),
       el('div.px-info', {},
-        el('p.px-label', { text: `PLAYER ${String(cursor + 1).padStart(2, '0')}` }),
+        el('p.px-label', { text: `캐릭터 ${cursor + 1} / ${CHARACTERS.length}` }),
         el('h2', { text: c.name }),
         el('p.px-role', { text: `특기 · ${c.role}` }),
         el('p.px-line', { text: `“${c.line}”` }),
-        el('button.px-start', { type: 'button', text: mine && mine.id === c.id ? '▶ 지금 캐릭터' : '▶ 이 캐릭터로 시작', onclick: () => void choose() })
+        el('button.px-start', { type: 'button', text: mine && mine.id === c.id ? '지금 내 캐릭터' : '이 캐릭터로 정하기', onclick: () => void choose() })
       )
     );
   }
@@ -122,15 +122,15 @@ export async function renderCharacterSelect(ctx) {
   ctx.show(
     el('div.px-screen', {},
       el('div.px-wrap', {},
-        el('p.px-title', { text: '★ PLAYER SELECT ★' }),
+        el('p.px-title', { text: '캐릭터 고르기' }),
         el('p.px-sub', {}, el('b', { text: me }), ' 님, 함께 공부할 캐릭터를 고르세요'),
         el('div.px-stage', {}, preview, el('div.px-grid', {}, cells)),
         status,
-        el('p.px-help', { text: '← → ↑ ↓ 로 움직이고 Enter, 또는 두 번 눌러 고르기' }),
+        el('p.px-help.px-keys', { text: '← → ↑ ↓ 로 움직이고 Enter, 또는 두 번 눌러 고르기' }),
         isProtected(me) ? el('p.px-help', {}, el('button.link', { type: 'button', text: '🔒 비밀번호 변경', onclick: async () => {
           if (await changePin()) status.textContent = '비밀번호를 바꿨습니다. 다음부터 새 비밀번호로 들어오세요.';
         } })) : null,
-        el('p.px-help', {}, el('a', { href: '#/', text: '◀ 처음 화면으로' }))
+        el('p.px-help', {}, el('a', { href: '#/', text: '‹ 처음 화면으로' }))
       )
     )
   );

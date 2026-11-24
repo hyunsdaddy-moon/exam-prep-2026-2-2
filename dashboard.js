@@ -8,11 +8,11 @@
  *   (개념 진도율은 과목 페이지와 같은 값 — 개념 읽기·예상 문제 풀이로 계산)
  */
 
-import { el } from './dom.js?v=20261124-1900';
-import { loadRecords, getCurrentLearner } from './store.js?v=20261124-1900';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1900';
-import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-1900';
-import { loadStudy } from './study.js?v=20261124-1900';
+import { el } from './dom.js?v=20261124-1901';
+import { loadRecords, getCurrentLearner } from './store.js?v=20261124-1901';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1901';
+import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-1901';
+import { loadStudy } from './study.js?v=20261124-1901';
 
 const QUIZ_ROUND_BASE = 40;
 const normQ = (q) => String(q).replace(/^([a-z]+)-d(\d+)-(\d+)$/, '$1-q$2-$3');
