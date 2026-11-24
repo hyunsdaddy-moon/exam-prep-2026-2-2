@@ -140,7 +140,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
       "start": 120.45,
-      "end": 148.0
+      "end": 148
      }
     },
     {
@@ -172,8 +172,12 @@
      "explanation": "의문형 제목은 독자의 흥미를 끄는 동시에 '모든 치킨이 정말 옳은가'라는 물음으로 기존의 현실과 인식에 문제를 제기한다. 글쓴이는 치킨을 아예 먹지 말자고 하지 않았으므로 ④는 틀리다.",
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
-      "start": 148.0,
+      "start": 148,
       "end": 181.4
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "open": true
      }
     },
     {
@@ -207,6 +211,14 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
       "start": 181.4,
       "end": 218.55
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(가)",
+       "(나)"
+      ],
+      "open": true
      }
     },
     {
@@ -273,6 +285,10 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
       "start": 257.95,
       "end": 295.6
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "open": true
      }
     },
     {
@@ -339,6 +355,10 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
       "start": 348.35,
       "end": 398.1
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "open": true
      }
     }
    ]
@@ -447,7 +467,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
       "start": 75.6,
-      "end": 103.0
+      "end": 103
      }
     },
     {
@@ -479,7 +499,7 @@
      "explanation": "글쓰기는 한 방향으로만 가지 않는 회귀적 과정이므로, 표현하기 단계에서 근거가 부족하면 내용 생성하기·내용 조직하기 단계로 되돌아가 타당한 근거를 보완할 수 있다. ②는 설득력을 떨어뜨리고, ⑤는 신뢰성이 없는 자료이다.",
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
-      "start": 103.0,
+      "start": 103,
       "end": 141.45
      }
     },
@@ -514,6 +534,10 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
       "start": 141.45,
       "end": 182.35
+     },
+     "passageRef": {
+      "unit": "kor-himchan-sources",
+      "open": true
      }
     },
     {
@@ -612,7 +636,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
       "start": 245.6,
-      "end": 291.0
+      "end": 291
      }
     },
     {
@@ -644,7 +668,7 @@
      "explanation": "근거는 주장을 뒷받침하는 객관적 자료, 개요는 글의 계획을 한눈에 보이게 정리한 것, 출처는 인용한 자료가 수록된 곳이다. '주장'은 상대를 설득하기 위한 글쓴이의 생각이다.",
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
-      "start": 291.0,
+      "start": 291,
       "end": 321.2
      }
     },

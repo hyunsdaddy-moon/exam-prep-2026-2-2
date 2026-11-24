@@ -9,13 +9,13 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2109';
-import { renderMarkdown } from './markdown.js?v=20261124-2109';
-import { explainButton } from './explain.js?v=20261124-2109';
-import { inkTools } from './ink.js?v=20261124-2109';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2109';
-import { loadPaper } from './study.js?v=20261124-2109';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2109';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2118';
+import { renderMarkdown } from './markdown.js?v=20261124-2118';
+import { explainButton } from './explain.js?v=20261124-2118';
+import { inkTools } from './ink.js?v=20261124-2118';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2118';
+import { loadPaper } from './study.js?v=20261124-2118';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2118';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -30,7 +30,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-2109';
+} from './grade.mjs?v=20261124-2118';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -99,27 +99,32 @@ const passageSpecsOf = (q) => {
   return unitRefsFromStem(q);
 };
 
-/** 문제가 가리키는 Unit 본문·자료를 접이식으로 보여 준다. defaultOpen 이 null 이면 문항의 open 설정을 따른다. */
+/** 문제가 가리키는 본문·자료를 접이식으로 보여 준다. defaultOpen 이 null 이면 문항의 open 설정을 따른다. */
 export function passageBlock(q, defaultOpen = false) {
   const specs = passageSpecsOf(q);
   if (!specs.length) return null;
   const boxes = specs.map((spec) => {
     const isOpen = defaultOpen === null ? !!spec.open : (spec.open ?? defaultOpen);
-    const paraTag = spec.paras?.length ? ` · Paragraph ${spec.paras.join('·')}` : '';
-    const summary = el('summary', { text: `📖 Unit ${spec.unit}${paraTag} 지문 보기` });
+    const summary = el('summary', { text: '📖 관련 지문 보기' });
     const box = el('details.q-context.q-passage', { open: isOpen }, summary, el('p.meta', { text: '지문을 불러오는 중…' }));
     void loadPassages().then((d) => {
       const u = d.units?.[spec.unit];
       if (!u) return box.remove();
+      const paraPrefix = u.paraPrefix !== undefined ? u.paraPrefix : 'Paragraph ';
+      const paraTag = spec.paras?.length ? ` · ${paraPrefix}${spec.paras.join('·')}` : '';
       const pages = u.pages ? ` (${u.pages})` : '';
-      summary.textContent = `📖 Unit ${u.unit || spec.unit} ${u.title}${paraTag}${pages}`;
+      const head = u.label || (u.unit ? `Unit ${u.unit} ${u.title}` : u.title);
+      summary.textContent = `📖 ${head}${paraTag}${pages}`;
       let text = '';
       if (u.markdown) {
         text = u.markdown;
       } else {
         const list = spec.paras?.length ? (u.paragraphs || []).filter((p) => spec.paras.includes(p.label)) : (u.paragraphs || []);
         const paras = list.length ? list : (u.paragraphs || []);
-        text = paras.map((p) => (p.label && p.label !== 'Caption' ? `**${p.label}** ${p.text}` : p.text)).join('\n\n');
+        text = paras.map((p) => {
+          if (p.heading) return `**${p.label} ${p.heading}**\n\n${p.text}`;
+          return p.label && p.label !== 'Caption' ? `**${p.label}** ${p.text}` : p.text;
+        }).join('\n\n');
       }
       box.lastChild.replaceWith(md(text, 'md passage-text'));
     });

@@ -87,7 +87,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 74.25,
-      "end": 104.0
+      "end": 104
      }
     },
     {
@@ -114,7 +114,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
-      "start": 104.0,
+      "start": 104,
       "end": 134.85
      }
     },
@@ -177,7 +177,13 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 165.45,
-      "end": 195.0
+      "end": 195
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(가)"
+      ]
      }
     },
     {
@@ -210,8 +216,14 @@
      },
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
-      "start": 195.0,
+      "start": 195,
       "end": 227.45
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(가)"
+      ]
      }
     },
     {
@@ -239,7 +251,13 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 227.45,
-      "end": 262.0
+      "end": 262
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(가)"
+      ]
      }
     },
     {
@@ -266,8 +284,14 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
-      "start": 262.0,
+      "start": 262,
       "end": 290.85
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(나)"
+      ]
      }
     },
     {
@@ -296,6 +320,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 290.85,
       "end": 324.25
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(나)"
+      ]
      }
     },
     {
@@ -324,6 +354,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 324.25,
       "end": 352.9
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(나)"
+      ]
      }
     },
     {
@@ -352,6 +388,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 352.9,
       "end": 378.4
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(나)"
+      ]
      }
     },
     {
@@ -380,6 +422,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 378.4,
       "end": 409.9
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(다)"
+      ]
      }
     },
     {
@@ -408,6 +456,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 409.9,
       "end": 442.1
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(다)"
+      ]
      }
     },
     {
@@ -436,6 +490,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 442.1,
       "end": 482.25
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(가)",
+       "(나)"
+      ]
      }
     },
     {
@@ -464,6 +525,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 482.25,
       "end": 512.45
+     },
+     "passageRef": {
+      "unit": "kor-chicken"
      }
     },
     {
@@ -492,6 +556,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 512.45,
       "end": 543.75
+     },
+     "passageRef": {
+      "unit": "kor-chicken"
      }
     },
     {
@@ -520,6 +587,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 543.75,
       "end": 573.65
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(라)"
+      ]
      }
     },
     {
@@ -548,6 +621,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 573.65,
       "end": 604.95
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(라)"
+      ]
      }
     },
     {
@@ -576,6 +655,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 604.95,
       "end": 642.75
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(다)"
+      ]
      }
     },
     {
@@ -604,6 +689,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 642.75,
       "end": 670.55
+     },
+     "passageRef": {
+      "unit": "kor-chicken-news"
      }
     },
     {
@@ -632,7 +720,18 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 670.55,
       "end": 699.45
-     }
+     },
+     "passageRef": [
+      {
+       "unit": "kor-chicken",
+       "paras": [
+        "(라)"
+       ]
+      },
+      {
+       "unit": "kor-chicken-news"
+      }
+     ]
     },
     {
      "type": "choice",
@@ -660,6 +759,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 699.45,
       "end": 737.3
+     },
+     "passageRef": {
+      "unit": "kor-chicken"
      }
     },
     {
@@ -688,6 +790,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 737.3,
       "end": 765.8
+     },
+     "passageRef": {
+      "unit": "kor-chicken"
      }
     },
     {
@@ -800,6 +905,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 867.95,
       "end": 888.7
+     },
+     "passageRef": {
+      "unit": "kor-himchan-plan"
      }
     },
     {
@@ -828,6 +936,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 888.7,
       "end": 926.15
+     },
+     "passageRef": {
+      "unit": "kor-himchan-sources"
      }
     },
     {
@@ -856,6 +967,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 926.15,
       "end": 955.7
+     },
+     "passageRef": {
+      "unit": "kor-himchan-sources"
      }
     },
     {
@@ -884,6 +998,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 955.7,
       "end": 991.1
+     },
+     "passageRef": {
+      "unit": "kor-himchan-sources"
      }
     },
     {
@@ -968,7 +1085,15 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1045.6,
       "end": 1075.55
-     }
+     },
+     "passageRef": [
+      {
+       "unit": "kor-himchan-sources"
+      },
+      {
+       "unit": "kor-himchan-draft"
+      }
+     ]
     },
     {
      "type": "choice",
@@ -996,6 +1121,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1075.55,
       "end": 1110.05
+     },
+     "passageRef": {
+      "unit": "kor-himchan-draft"
      }
     },
     {
@@ -1024,6 +1152,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1110.05,
       "end": 1140.25
+     },
+     "passageRef": {
+      "unit": "kor-himchan-draft"
      }
     },
     {
@@ -1052,7 +1183,15 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1140.25,
       "end": 1167.8
-     }
+     },
+     "passageRef": [
+      {
+       "unit": "kor-himchan-sources"
+      },
+      {
+       "unit": "kor-himchan-draft"
+      }
+     ]
     },
     {
      "type": "choice",
@@ -1080,6 +1219,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1167.8,
       "end": 1195.25
+     },
+     "passageRef": {
+      "unit": "kor-himchan-draft"
      }
     },
     {
@@ -1107,7 +1249,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1195.25,
-      "end": 1220.0
+      "end": 1220
      }
     },
     {
@@ -1126,8 +1268,15 @@
      "id": "kor-q1-40",
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
-      "start": 1220.0,
+      "start": 1220,
       "end": 1261.15
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(가)",
+       "(나)"
+      ]
      }
     },
     {
@@ -1148,6 +1297,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1261.15,
       "end": 1297.8
+     },
+     "passageRef": {
+      "unit": "kor-chicken",
+      "paras": [
+       "(다)",
+       "(라)"
+      ]
      }
     },
     {
@@ -1169,6 +1325,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-1.mp4",
       "start": 1297.8,
       "end": 1344.25
+     },
+     "passageRef": {
+      "unit": "kor-himchan-sources"
      }
     }
    ]
@@ -1375,7 +1534,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
       "start": 178.6,
-      "end": 203.0
+      "end": 203
      }
     },
     {
@@ -1402,7 +1561,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
-      "start": 203.0,
+      "start": 203,
       "end": 226.9
      }
     },
@@ -1459,7 +1618,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
       "start": 262.4,
-      "end": 285.0
+      "end": 285
      }
     },
     {
@@ -1486,7 +1645,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
-      "start": 285.0,
+      "start": 285,
       "end": 318.95
      }
     },
@@ -1571,7 +1730,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
       "start": 361.35,
-      "end": 381.0
+      "end": 381
      }
     },
     {
@@ -1598,7 +1757,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
-      "start": 381.0,
+      "start": 381,
       "end": 414.8
      }
     },
@@ -1795,7 +1954,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
       "start": 584.85,
-      "end": 604.0
+      "end": 604
      }
     },
     {
@@ -1822,7 +1981,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
-      "start": 604.0,
+      "start": 604,
       "end": 629.4
      }
     },
@@ -1851,7 +2010,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
       "start": 629.4,
-      "end": 660.0
+      "end": 660
      }
     },
     {
@@ -1878,7 +2037,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-2.mp4",
-      "start": 660.0,
+      "start": 660,
       "end": 681.4
      }
     },
@@ -2568,7 +2727,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 259.9,
-      "end": 277.0
+      "end": 277
      }
     },
     {
@@ -2595,7 +2754,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
-      "start": 277.0,
+      "start": 277,
       "end": 301.1
      }
     },
@@ -2961,6 +3120,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 611.05,
       "end": 637.5
+     },
+     "passageRef": {
+      "unit": "kor-poem-ouga"
      }
     },
     {
@@ -2989,6 +3151,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 637.5,
       "end": 679.4
+     },
+     "passageRef": {
+      "unit": "kor-poem-seosi"
      }
     },
     {
@@ -3016,7 +3181,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 679.4,
-      "end": 712.0
+      "end": 712
      }
     },
     {
@@ -3043,7 +3208,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
-      "start": 712.0,
+      "start": 712,
       "end": 740.4
      }
     },
@@ -3073,6 +3238,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 740.4,
       "end": 773.8
+     },
+     "passageRef": {
+      "unit": "kor-poem-attitude"
      }
     },
     {
@@ -3632,7 +3800,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 1285.8,
-      "end": 1314.0
+      "end": 1314
      }
     },
     {
@@ -3659,7 +3827,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
-      "start": 1314.0,
+      "start": 1314,
       "end": 1338.1
      }
     },
@@ -3750,7 +3918,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 1398.9,
-      "end": 1436.0
+      "end": 1436
      }
     },
     {
@@ -3777,7 +3945,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
-      "start": 1436.0,
+      "start": 1436,
       "end": 1460.15
      }
     },
@@ -4302,6 +4470,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-kor-3.mp4",
       "start": 1954.25,
       "end": 2001.9
+     },
+     "passageRef": {
+      "unit": "kor-poem-cheongsan"
      }
     },
     {
