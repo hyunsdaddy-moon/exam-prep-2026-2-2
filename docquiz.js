@@ -13,12 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2057';
-import { renderMarkdown } from './markdown.js?v=20261124-2057';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2057';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2057';
-import { explainButton } from './explain.js?v=20261124-2057';
-import { inkTools } from './ink.js?v=20261124-2057';
+import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261124-2109';
+import { renderMarkdown } from './markdown.js?v=20261124-2109';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-2109';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-2109';
+import { explainButton } from './explain.js?v=20261124-2109';
+import { inkTools } from './ink.js?v=20261124-2109';
+import { passageBlock } from './solve.js?v=20261124-2109';
 
 const ROUND_BASE = 40;
 const SESSION_PREFIX = 'dqs-';
@@ -79,8 +80,8 @@ export async function docWrongs(ctx, subjects, attempts) {
         const a = last.get(q.id);
         if (!a || a.correct !== false) continue;
         const question = q.type === 'choice'
-          ? { ...q, no: n, answer: [q.answer], points: 1 }
-          : { ...q, no: n, modelAnswer: q.model + (q.keywords?.length ? `\n\n꼭 들어갈 말: ${q.keywords.join(' · ')}` : ''), points: 1 };
+          ? { ...q, subject: sub.subject, no: n, answer: [q.answer], points: 1 }
+          : { ...q, subject: sub.subject, no: n, modelAnswer: q.model + (q.keywords?.length ? `\n\n꼭 들어갈 말: ${q.keywords.join(' · ')}` : ''), points: 1 };
         out.push({
           subject: sub,
           round: { title: `단원 평가 · ${doc?.title || file}` },
@@ -199,7 +200,8 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     const hist = el('div.dq-hist-row');
     const block = el(`article.p-q${q.type === 'essay' ? '.essay' : ''}`, {},
       el('div.p-stem', {}, el('b.p-no', {}, grade, label), md(q.stem), q.level && q.level !== '서술형' ? el('span.p-points', { text: `[${q.level}]` }) : null),
-      hist
+      hist,
+      passageBlock(q, true) || ''
     );
     qInfo.set(q.id, { label: q.type === 'choice' ? `${no}번` : `서술형 ${essayNo}번`, block });
     const feedback = el('div.dq-exp');

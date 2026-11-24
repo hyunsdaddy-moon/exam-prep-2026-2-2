@@ -148,6 +148,29 @@
      "text": "Recycle. We can't recycle all plastic items, but it is possible to recycle most bottles and milk or juice cartons. Today, Norway recycles 97 percent of its plastic bottles. How? Machines at most supermarkets take the bottles and give a refund of up to 2.5 kroner (32 cents) per bottle."
     }
    ]
+  },
+  "10A-intro": {
+   "unit": "10A",
+   "title": "The Army's True Colors · 도입 캡션",
+   "pages": "p.132",
+   "paragraphs": [
+    {
+     "label": "Caption",
+     "text": "In 1974, farmers digging a well in Xi'an, China, uncovered clay soldiers that had been hidden for more than 2,000 years. Since then, **archeologists** have found about 8,000 more of these soldiers, along with other **artifacts**. The life-sized **warriors** were meant to guard the **tomb** of China's first ruler. This image shows what they originally looked like."
+    }
+   ]
+  },
+  "10B-intro": {
+   "unit": "10B",
+   "title": "Wonders of Egypt · Before You Read",
+   "pages": "p.138 & p.144",
+   "markdown": "**Before You Read Quiz (모두 사실 · True)**\n\n1. The pyramids of Giza (started ca. 2550 B.C.) are older than the Mayan pyramids in Chichén Itzá (A.D. 750–1200).\n2. When they were first built, the pyramids of Giza were **white**.\n3. The Great Pyramid of Khufu at Giza was the world's tallest structure for over 3,000 years (for 3,800 years, until England's Lincoln Cathedral was completed around A.D. 1300)."
+  },
+  "11A-info": {
+   "unit": "11A",
+   "title": "The Problem with Plastic · 교과서 인포그래픽",
+   "pages": "p.146~147",
+   "markdown": "**2015년 전 세계 플라스틱 생산량: 총 4억 4,800만 톤 (448 million tons)**\n\n| 용도 (Industry) | 생산량 (2015) | 버려지기 전 평균 사용 기간 |\n| :--- | :---: | :---: |\n| **포장재 (Packaging)** | **161 million tons (거의 40%)** | **6개월 미만 (Less than 6 months)** |\n| **건축·건설 (Building & construction)** | 72 million tons | **35년** |\n| **섬유 (Textiles)** | 65 million tons | 5년 |\n| **소비재 (Consumer products)** | 46 million tons | 3년 |"
   }
  }
 }

@@ -32,6 +32,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 9.3,
       "end": 44.65
+     },
+     "passageRef": {
+      "unit": "8A"
      }
     },
     {
@@ -60,6 +63,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 44.65,
       "end": 80.2
+     },
+     "passageRef": {
+      "unit": "8A",
+      "paras": [
+       "B"
+      ]
      }
     },
     {
@@ -94,6 +103,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 80.2,
       "end": 107.45
+     },
+     "passageRef": {
+      "unit": "8A",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -122,6 +137,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 107.45,
       "end": 143.7
+     },
+     "passageRef": {
+      "unit": "8A",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -233,7 +254,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 238.4,
-      "end": 261.0
+      "end": 261
      }
     },
     {
@@ -260,7 +281,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
-      "start": 261.0,
+      "start": 261,
       "end": 287.05
      }
     },
@@ -458,6 +479,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 453.45,
       "end": 482.85
+     },
+     "passageRef": {
+      "unit": "8A",
+      "paras": [
+       "A"
+      ]
      }
     },
     {
@@ -492,6 +519,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 482.85,
       "end": 503.6
+     },
+     "passageRef": {
+      "unit": "8A"
      }
     },
     {
@@ -520,6 +550,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 503.6,
       "end": 536.1
+     },
+     "passageRef": {
+      "unit": "8B",
+      "paras": [
+       "C",
+       "D"
+      ]
      }
     },
     {
@@ -548,6 +585,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 536.1,
       "end": 570.05
+     },
+     "passageRef": {
+      "unit": "8B",
+      "paras": [
+       "C",
+       "D"
+      ]
      }
     },
     {
@@ -576,6 +620,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 570.05,
       "end": 600.4
+     },
+     "passageRef": {
+      "unit": "8B",
+      "paras": [
+       "B"
+      ]
      }
     },
     {
@@ -604,6 +654,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 600.4,
       "end": 623.55
+     },
+     "passageRef": {
+      "unit": "8B",
+      "paras": [
+       "A"
+      ]
      }
     },
     {
@@ -772,6 +828,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 770.5,
       "end": 802.15
+     },
+     "passageRef": {
+      "unit": "8B"
      }
     },
     {
@@ -946,6 +1005,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 942.7,
       "end": 968.35
+     },
+     "passageRef": {
+      "unit": "8B",
+      "paras": [
+       "C",
+       "D"
+      ]
      }
     },
     {
@@ -1002,6 +1068,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 995.1,
       "end": 1022.1
+     },
+     "passageRef": {
+      "unit": "8B",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -1030,6 +1102,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 1022.1,
       "end": 1053.85
+     },
+     "passageRef": {
+      "unit": "8B"
      }
     },
     {
@@ -1051,6 +1126,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 1053.85,
       "end": 1110.05
+     },
+     "passageRef": {
+      "unit": "8A",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -1072,6 +1153,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-1.mp4",
       "start": 1110.05,
       "end": 1172.25
+     },
+     "passageRef": {
+      "unit": "8B",
+      "paras": [
+       "C",
+       "D"
+      ]
      }
     },
     {
@@ -1125,7 +1213,10 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 9.75,
-      "end": 39.0
+      "end": 39
+     },
+     "passageRef": {
+      "unit": "10A-intro"
      }
     },
     {
@@ -1152,8 +1243,14 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
-      "start": 39.0,
+      "start": 39,
       "end": 66.25
+     },
+     "passageRef": {
+      "unit": "10A",
+      "paras": [
+       "A"
+      ]
      }
     },
     {
@@ -1182,6 +1279,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 66.25,
       "end": 93.8
+     },
+     "passageRef": {
+      "unit": "10A",
+      "paras": [
+       "B"
+      ]
      }
     },
     {
@@ -1244,6 +1347,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 115.6,
       "end": 141.95
+     },
+     "passageRef": {
+      "unit": "10A",
+      "paras": [
+       "C",
+       "D"
+      ]
      }
     },
     {
@@ -1272,6 +1382,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 141.95,
       "end": 165.2
+     },
+     "passageRef": {
+      "unit": "10A",
+      "paras": [
+       "D"
+      ]
      }
     },
     {
@@ -1642,6 +1758,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 477.55,
       "end": 507.75
+     },
+     "passageRef": {
+      "unit": "10B-intro"
      }
     },
     {
@@ -1670,6 +1789,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 507.75,
       "end": 529.85
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "A"
+      ]
      }
     },
     {
@@ -1698,6 +1823,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 529.85,
       "end": 561.9
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "A"
+      ]
      }
     },
     {
@@ -1754,6 +1885,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 585.8,
       "end": 615.35
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "B"
+      ]
      }
     },
     {
@@ -1782,6 +1919,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 615.35,
       "end": 652.1
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -1838,6 +1981,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 682.15,
       "end": 709.15
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "D"
+      ]
      }
     },
     {
@@ -1865,7 +2014,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 709.15,
-      "end": 736.0
+      "end": 736
      }
     },
     {
@@ -1892,7 +2041,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
-      "start": 736.0,
+      "start": 736,
       "end": 767.25
      }
     },
@@ -2005,7 +2154,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 848.3,
-      "end": 871.0
+      "end": 871
      }
     },
     {
@@ -2032,7 +2181,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
-      "start": 871.0,
+      "start": 871,
       "end": 892.35
      }
     },
@@ -2062,6 +2211,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 892.35,
       "end": 926.05
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "C",
+       "D"
+      ]
      }
     },
     {
@@ -2090,6 +2246,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 926.05,
       "end": 964.35
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "B",
+       "C"
+      ]
      }
     },
     {
@@ -2118,6 +2281,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 964.35,
       "end": 989.35
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "C",
+       "D"
+      ]
      }
     },
     {
@@ -2139,6 +2309,13 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 989.35,
       "end": 1040.45
+     },
+     "passageRef": {
+      "unit": "10A",
+      "paras": [
+       "B",
+       "C"
+      ]
      }
     },
     {
@@ -2159,6 +2336,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-2.mp4",
       "start": 1040.45,
       "end": 1089.3
+     },
+     "passageRef": {
+      "unit": "10B",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -2213,6 +2396,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 11.1,
       "end": 38.1
+     },
+     "passageRef": {
+      "unit": "11A-info"
      }
     },
     {
@@ -2241,6 +2427,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 38.1,
       "end": 62.7
+     },
+     "passageRef": {
+      "unit": "11A-info"
      }
     },
     {
@@ -2269,6 +2458,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 62.7,
       "end": 93.55
+     },
+     "passageRef": {
+      "unit": "11A",
+      "paras": [
+       "A"
+      ]
      }
     },
     {
@@ -2353,6 +2548,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 141.7,
       "end": 161.65
+     },
+     "passageRef": {
+      "unit": "11A",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -2409,6 +2610,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 194.8,
       "end": 220.25
+     },
+     "passageRef": {
+      "unit": "11A"
      }
     },
     {
@@ -2437,6 +2641,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 220.25,
       "end": 246.3
+     },
+     "passageRef": {
+      "unit": "11A",
+      "paras": [
+       "D"
+      ]
      }
     },
     {
@@ -2465,6 +2675,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 246.3,
       "end": 279.05
+     },
+     "passageRef": {
+      "unit": "11A",
+      "paras": [
+       "E"
+      ]
      }
     },
     {
@@ -2716,7 +2932,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 502.35,
-      "end": 542.0
+      "end": 542
      }
     },
     {
@@ -2743,8 +2959,11 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
-      "start": 542.0,
+      "start": 542,
       "end": 563.25
+     },
+     "passageRef": {
+      "unit": "11B"
      }
     },
     {
@@ -2773,6 +2992,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 563.25,
       "end": 593.55
+     },
+     "passageRef": {
+      "unit": "11B",
+      "paras": [
+       "B"
+      ]
      }
     },
     {
@@ -2801,6 +3026,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 593.55,
       "end": 621.05
+     },
+     "passageRef": {
+      "unit": "11B",
+      "paras": [
+       "B"
+      ]
      }
     },
     {
@@ -2857,6 +3088,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 646.55,
       "end": 674.05
+     },
+     "passageRef": {
+      "unit": "11B",
+      "paras": [
+       "D"
+      ]
      }
     },
     {
@@ -2885,6 +3122,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 674.05,
       "end": 712.95
+     },
+     "passageRef": {
+      "unit": "11B",
+      "paras": [
+       "F"
+      ]
      }
     },
     {
@@ -2919,6 +3162,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 712.95,
       "end": 738.2
+     },
+     "passageRef": {
+      "unit": "11B",
+      "paras": [
+       "E"
+      ]
      }
     },
     {
@@ -2975,6 +3224,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 759.45,
       "end": 786.75
+     },
+     "passageRef": {
+      "unit": "11B"
      }
     },
     {
@@ -3114,7 +3366,7 @@
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 888.65,
-      "end": 909.0
+      "end": 909
      }
     },
     {
@@ -3141,7 +3393,7 @@
      ],
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
-      "start": 909.0,
+      "start": 909,
       "end": 932.3
      }
     },
@@ -3253,6 +3505,12 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 1007.7,
       "end": 1055.6
+     },
+     "passageRef": {
+      "unit": "11A",
+      "paras": [
+       "C"
+      ]
      }
     },
     {
@@ -3294,6 +3552,9 @@
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-dq-eng-3.mp4",
       "start": 1084.2,
       "end": 1161.35
+     },
+     "passageRef": {
+      "unit": "11B"
      }
     }
    ]

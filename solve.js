@@ -9,13 +9,13 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2057';
-import { renderMarkdown } from './markdown.js?v=20261124-2057';
-import { explainButton } from './explain.js?v=20261124-2057';
-import { inkTools } from './ink.js?v=20261124-2057';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2057';
-import { loadPaper } from './study.js?v=20261124-2057';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2057';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261124-2109';
+import { renderMarkdown } from './markdown.js?v=20261124-2109';
+import { explainButton } from './explain.js?v=20261124-2109';
+import { inkTools } from './ink.js?v=20261124-2109';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261124-2109';
+import { loadPaper } from './study.js?v=20261124-2109';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261124-2109';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -30,7 +30,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261124-2057';
+} from './grade.mjs?v=20261124-2109';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -68,21 +68,64 @@ function loadPassages() {
   }
   return passagesPromise;
 }
-const unitOf = (q) => (q && q.subject === '영어' ? (String(q.stem || '').match(/Unit\s*(\d+)\s*([AB])\b/) || []).slice(1).join('') : '');
+const unitRefsFromStem = (q) => {
+  if (!q || q.subject !== '영어') return [];
+  const text = String(q.stem || '');
+  const seen = new Set();
+  const out = [];
+  for (const m of text.matchAll(/Unit\s*(\d+)\s*([AB])(?:\s*(?:&|and|,|·)\s*(?:Unit\s*)?(\d+)?\s*([AB]))?/g)) {
+    const first = `${m[1]}${m[2]}`;
+    if (!seen.has(first)) {
+      seen.add(first);
+      out.push({ unit: first });
+    }
+    if (m[4]) {
+      const second = `${m[3] || m[1]}${m[4]}`;
+      if (!seen.has(second)) {
+        seen.add(second);
+        out.push({ unit: second });
+      }
+    }
+  }
+  return out;
+};
 
-/** 문제가 가리키는 Unit 본문을 접이식으로 보여 준다. 본문이 없으면 스스로 사라진다. */
-export function passageBlock(q, open = false) {
-  const unit = unitOf(q);
-  if (!unit) return null;
-  const summary = el('summary', { text: `📖 Unit ${unit} 본문 보기` });
-  const box = el('details.q-context.q-passage', { open }, summary, el('p.meta', { text: '본문을 불러오는 중…' }));
-  void loadPassages().then((d) => {
-    const u = d.units?.[unit];
-    if (!u) return box.remove();
-    summary.textContent = `📖 Unit ${unit} ${u.title} 본문 보기 (교과서 ${u.pages})`;
-    box.lastChild.replaceWith(md(u.paragraphs.map((p) => `**${p.label}** ${p.text}`).join('\n\n'), 'md passage-text'));
+const passageSpecsOf = (q) => {
+  if (!q) return [];
+  if (q.passageRef) {
+    const list = Array.isArray(q.passageRef) ? q.passageRef : [q.passageRef];
+    return list.map((x) => (typeof x === 'string' ? { unit: x } : x)).filter((x) => x && x.unit);
+  }
+  return unitRefsFromStem(q);
+};
+
+/** 문제가 가리키는 Unit 본문·자료를 접이식으로 보여 준다. defaultOpen 이 null 이면 문항의 open 설정을 따른다. */
+export function passageBlock(q, defaultOpen = false) {
+  const specs = passageSpecsOf(q);
+  if (!specs.length) return null;
+  const boxes = specs.map((spec) => {
+    const isOpen = defaultOpen === null ? !!spec.open : (spec.open ?? defaultOpen);
+    const paraTag = spec.paras?.length ? ` · Paragraph ${spec.paras.join('·')}` : '';
+    const summary = el('summary', { text: `📖 Unit ${spec.unit}${paraTag} 지문 보기` });
+    const box = el('details.q-context.q-passage', { open: isOpen }, summary, el('p.meta', { text: '지문을 불러오는 중…' }));
+    void loadPassages().then((d) => {
+      const u = d.units?.[spec.unit];
+      if (!u) return box.remove();
+      const pages = u.pages ? ` (${u.pages})` : '';
+      summary.textContent = `📖 Unit ${u.unit || spec.unit} ${u.title}${paraTag}${pages}`;
+      let text = '';
+      if (u.markdown) {
+        text = u.markdown;
+      } else {
+        const list = spec.paras?.length ? (u.paragraphs || []).filter((p) => spec.paras.includes(p.label)) : (u.paragraphs || []);
+        const paras = list.length ? list : (u.paragraphs || []);
+        text = paras.map((p) => (p.label && p.label !== 'Caption' ? `**${p.label}** ${p.text}` : p.text)).join('\n\n');
+      }
+      box.lastChild.replaceWith(md(text, 'md passage-text'));
+    });
+    return box;
   });
-  return box;
+  return boxes.length === 1 ? boxes[0] : el('div.q-passages', {}, boxes);
 }
 
 /** 선지 버튼들. onPick(번호) 로 알린다. 돌려준 set(…) 으로 겉모습을 바꾼다. */
@@ -220,7 +263,7 @@ async function renderPractice(ctx, subject, mode = 'practice') {
     } });
     const skip = el('button.pill.ghost', { type: 'button', text: last ? '건너뛰고 결과 보기' : '건너뛰기', onclick: () => next.click() });
 
-    card.append(contextBlock(groups.get(q.group)) || '', questionHead(q), passageBlock(q) || '', md(q.stem, 'md q-stem'));
+    card.append(contextBlock(groups.get(q.group)) || '', questionHead(q), passageBlock(q, null) || '', md(q.stem, 'md q-stem'));
     inkTools(card, `${mode}.${subject.code}`).add(card, q.id); // 연필·지우개
 
     if (q.type === 'choice') {
@@ -440,7 +483,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
     if (onPaper) {
       const block = el(`article.p-q.p-solve${q.type === 'essay' ? '.essay' : ''}`, { id: `q-${q.id}` },
         el('div.p-stem', {}, el('b.p-no', { text: `${q.type === 'essay' ? `서술형 ${q.no}` : q.no}.` }), md(q.stem, 'md p-text'), el('span.p-points', { text: `[${pts(q.points)}]` })),
-        passageBlock(q) || ''
+        passageBlock(q, null) || ''
       );
       if (q.type === 'choice') {
         const items = q.choices.map((c, i) => el('li', {},
@@ -474,7 +517,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
       addCell(q, block);
       continue;
     }
-    const block = el('article.q-card', { id: `q-${q.id}` }, questionHead(q), passageBlock(q) || '', md(q.stem, 'md q-stem'));
+    const block = el('article.q-card', { id: `q-${q.id}` }, questionHead(q), passageBlock(q, null) || '', md(q.stem, 'md q-stem'));
     if (q.type === 'choice') {
       const choices = choiceList(q, (n) => {
         a.picked = a.picked.includes(n) ? [] : [n];
