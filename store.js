@@ -4,9 +4,9 @@
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
-import { getFirestore, collection, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
-import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-2149';
-import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-2149';
+import { getFirestore, collection, query, where, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261124-2203';
+import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261124-2203';
 
 export { DEFAULT_LEARNER, normalizeLearner };
 
@@ -15,7 +15,11 @@ const PENDING_KEY = 'examprep.2026-2-2.pending';
 const MIGRATED_KEY = 'examprep.2026-2-2.migrated';
 const EXAM_DATE_KEY = 'examprep.2026-2-2.examDate';
 const CLOUD_LEARNERS_KEY = 'examprep.2026-2-2.cloudLearners';
+const SYNC_KEY = 'examprep.2026-2-2.sync';
 const MAX_RECORDS = 5000;
+/** 지난번에 받은 기록은 이 브라우저에 두고, 그 뒤에 생긴 기록만 클라우드에서 읽는다 (하루 무료 읽기 한도 절약) */
+const SYNC_OVERLAP_MS = 2 * 24 * 60 * 60 * 1000; // 늦게 올라온 기록을 놓치지 않게 겹쳐 읽는 구간
+const SYNC_FULL_EVERY_MS = 3 * 24 * 60 * 60 * 1000; // 이만큼 지나면 전체를 한 번 다시 읽는다
 const CURRENT_LEARNER_KEY = 'examprep.learner.current';
 const LEARNERS_KEY = 'examprep.learners';
 const LEARNER_ORDER_KEY = 'examprep.learners.order';
@@ -39,6 +43,61 @@ function writeArray(key, list) {
     localStorage.setItem(key, JSON.stringify(list));
   } catch {
     // 저장 공간을 못 쓰는 브라우저
+  }
+}
+
+/** 이 브라우저에 둔 기록 (클라우드 문서 id 표시는 뗀다) */
+function readLocalRecords() {
+  return readArray(STORAGE_KEY).map((r) => {
+    if (!r || typeof r !== 'object' || !('_id' in r)) return r;
+    const { _id, ...rest } = r;
+    return rest;
+  });
+}
+
+/** 지난번 받아 둔 클라우드 기록. 믿을 수 있으면 { byId, since, full }, 아니면 null (전체를 다시 읽는다) */
+function readSyncCache() {
+  try {
+    const meta = JSON.parse(localStorage.getItem(SYNC_KEY) || 'null');
+    if (!meta || meta.v !== 1 || typeof meta.cursor !== 'string' || typeof meta.full !== 'string') return null;
+    const fullAt = Date.parse(meta.full);
+    const cursorAt = Date.parse(meta.cursor);
+    if (!Number.isFinite(fullAt) || !Number.isFinite(cursorAt)) return null;
+    if (Date.now() - fullAt > SYNC_FULL_EVERY_MS || fullAt > Date.now() + 60000) return null;
+    const byId = new Map();
+    for (const r of readArray(STORAGE_KEY)) {
+      if (!r || typeof r !== 'object' || typeof r._id !== 'string') continue;
+      const { _id, ...rest } = r;
+      byId.set(_id, rest);
+    }
+    if (!byId.size || byId.size !== meta.count) return null; // 잘렸거나 저장에 실패한 적이 있다
+    const since = new Date(Math.min(cursorAt, Date.now()) - SYNC_OVERLAP_MS).toISOString();
+    return { byId, since, full: meta.full };
+  } catch {
+    return null;
+  }
+}
+
+/** 받은 클라우드 기록을 이 브라우저에 둔다. 다 담지 못하면 다음에 전체를 다시 읽게 한다 */
+function writeSyncCache(byId, full) {
+  try {
+    if (byId.size > MAX_RECORDS) throw new Error('too many');
+    let cursor = '';
+    const rows = [];
+    for (const [id, d] of byId) {
+      rows.push({ ...d, _id: id });
+      if (typeof d.at === 'string' && Number.isFinite(Date.parse(d.at)) && d.at > cursor) cursor = d.at;
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(rows));
+    if (!cursor) throw new Error('no cursor');
+    localStorage.setItem(SYNC_KEY, JSON.stringify({ v: 1, full, cursor, count: rows.length }));
+  } catch {
+    try {
+      localStorage.removeItem(SYNC_KEY);
+    } catch {
+      // 저장 공간을 못 쓰는 브라우저
+    }
+    writeArray(STORAGE_KEY, [...byId.values()].slice(-MAX_RECORDS));
   }
 }
 
@@ -239,7 +298,7 @@ function migrateLocalOnce() {
   const otherKey = (r) => `${r.type}|${normalizeLearner(r.learner) || DEFAULT_LEARNER}|${r.at || ''}|${r.attempt || r.character || r.hash || ''}`;
   const existingOthers = new Set(cloudRecords.filter((r) => ['profile', 'pin', 'tag', 'grade'].includes(r.type)).map(otherKey));
   const toPush = [];
-  for (const r of readArray(STORAGE_KEY)) {
+  for (const r of readLocalRecords()) {
     if (!r || typeof r !== 'object') continue;
     if (r.type === 'setting') {
       if (!hasCloudExamDate && r.key === 'examDate' && r.value) toPush.push(r);
@@ -263,10 +322,9 @@ function initCloud() {
   if (initPromise) return initPromise;
   initPromise = (async () => {
     // 연결 전 이 브라우저에 있던 기록 — 연결된 뒤 클라우드와 같으면 화면을 다시 그리지 않는다
-    let baseRecords = '[]';
+    const baseRecords = readLocalRecords();
     let baseExamDate = null;
     try {
-      baseRecords = localStorage.getItem(STORAGE_KEY) || '[]';
       baseExamDate = localStorage.getItem(EXAM_DATE_KEY);
     } catch {
       // 저장 공간을 못 쓰는 브라우저
@@ -296,7 +354,7 @@ function initCloud() {
           const sig = (list) => list.map(canon).sort().join('\n');
           let sameRecords = false;
           try {
-            sameRecords = sig(cloudRecords.slice(-MAX_RECORDS)) === sig(JSON.parse(baseRecords));
+            sameRecords = sig(cloudRecords.slice(-MAX_RECORDS)) === sig(baseRecords);
           } catch {
             sameRecords = false;
           }
@@ -312,11 +370,20 @@ function initCloud() {
         }
       };
 
+      // 받아 둔 기록이 있으면 그 뒤에 생긴 것만 읽는다 (기록은 고치거나 지울 수 없어 더하기만 하면 된다)
+      const cache = readSyncCache();
+      const byId = cache ? cache.byId : new Map();
+      let fullAt = cache ? cache.full : null;
+      const recordsCol = collection(db, 'exams', EXAM_ID, 'records');
       onSnapshot(
-        collection(db, 'exams', EXAM_ID, 'records'),
+        cache ? query(recordsCol, where('at', '>', cache.since)) : recordsCol,
         (snap) => {
-          cloudRecords = snap.docs.map((d) => d.data());
-          writeArray(STORAGE_KEY, cloudRecords.slice(-MAX_RECORDS));
+          for (const d of snap.docs) byId.set(d.id, d.data());
+          cloudRecords = [...byId.values()];
+          if (!snap.metadata?.fromCache) {
+            if (!fullAt) fullAt = new Date().toISOString();
+            writeSyncCache(byId, fullAt);
+          }
           if (!gotRecords) {
             gotRecords = true;
             maybeReady();
@@ -471,11 +538,14 @@ export function addLearner(name) {
 export async function flushPending() {
   if (flushingPromise) return flushingPromise;
   flushingPromise = (async () => {
-    const pending = readArray(PENDING_KEY);
-    if (!pending.length) return true;
-    await initCloud();
-    if (!db || !uid) return false;
+    // 아래 일찍 끝나는 경우에도 finally 가 flushingPromise 를 비워야 한다. 예전에는 try 밖에서 끝나
+    // '끝난 약속'이 남았고, 그 뒤 제출한 기록이 페이지를 새로 열 때까지 클라우드에 올라가지 않았다
     try {
+      await Promise.resolve(); // 대입(flushingPromise = …)이 끝난 뒤에 finally 가 돌게 한다
+      const pending = readArray(PENDING_KEY);
+      if (!pending.length) return true;
+      await initCloud();
+      if (!db || !uid) return false;
       const recordsCol = collection(db, 'exams', EXAM_ID, 'records');
       const sentIds = new Set();
       const recItems = [];
@@ -547,12 +617,12 @@ export async function loadRecords({ fast = false } = {}) {
       saved = null;
     }
     const settingRecords = saved?.has ? [{ type: 'setting', key: 'examDate', value: saved.value ?? null }] : [];
-    return { ok: true, records: [...readArray(STORAGE_KEY), ...settingRecords, ...pending], pending: pending.length, cached: true };
+    return { ok: true, records: [...readLocalRecords(), ...settingRecords, ...pending], pending: pending.length, cached: true };
   }
   await initCloud();
   await flushPending();
   const pending = readArray(PENDING_KEY).map(({ _qid, ...rest }) => rest);
-  const base = syncStatus === 'connected' ? cloudRecords : readArray(STORAGE_KEY);
+  const base = syncStatus === 'connected' ? cloudRecords : readLocalRecords();
   const settingRecords = hasCloudExamDate ? [{ type: 'setting', key: 'examDate', value: cloudExamDate }] : [];
   return { ok: true, records: [...base, ...settingRecords, ...pending], pending: pending.length };
 }
