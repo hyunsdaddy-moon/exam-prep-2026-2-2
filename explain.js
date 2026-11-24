@@ -13,8 +13,8 @@
  *   opts.label: 팝업 제목에 붙일 문항 번호 (예: '3번')
  */
 
-import { el, CIRCLED } from './dom.js?v=20261124-1640';
-import { renderMarkdown } from './markdown.js?v=20261124-1640';
+import { el, CIRCLED } from './dom.js?v=20261124-1649';
+import { renderMarkdown } from './markdown.js?v=20261124-1649';
 
 const md = (text, tag = 'div.md.ex-text') => {
   const box = el(tag);
@@ -50,7 +50,7 @@ function videoBlock(q) {
   const src = start || end ? `${v.src}#t=${start}${end ? `,${end}` : ''}` : v.src;
   const video = el('video.ex-video', { controls: true, preload: 'metadata', playsinline: true, poster: v.poster || null, src });
   // #t= 의 끝 시각을 지나면 멈춘다 (브라우저마다 다르게 처리해서 직접 잡는다)
-  if (end) video.addEventListener('timeupdate', () => { if (video.currentTime >= end && !video.paused) video.pause(); });
+  if (end) video.addEventListener('timeupdate', () => { if (video.currentTime >= end - 0.35 && !video.paused) { video.pause(); video.currentTime = Math.max(start, end - 0.4); } });
   return el('section.ex-video-box', {}, el('h4', { text: '🎬 풀이 몽타주 영상' }), video);
 }
 
