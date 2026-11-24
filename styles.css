@@ -1142,3 +1142,55 @@ a.vs-mission:hover { text-decoration: none; filter: brightness(0.97); }
   .vsbar-item { flex-basis: 70px; }
 }
 @media print { .vsbar { display: none !important; } }
+
+/* ── 성적 (#/grades) ── */
+.gr-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.gr-card { padding: 20px; border-radius: 18px; background: var(--bg-soft); }
+.gr-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.gr-card-head h3 { margin: 0; font-size: 18px; }
+.gr-diff { font-size: 13px; font-weight: 600; white-space: nowrap; }
+.gr-diff.up { color: var(--good); }
+.gr-diff.down { color: var(--bad); }
+.gr-num { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; margin: 6px 0 12px; }
+.gr-num small { font-size: 18px; margin-left: 2px; color: var(--text-2); }
+.gr-bar { position: relative; height: 10px; border-radius: 999px; background: var(--line-soft); margin-bottom: 14px; }
+.gr-fill { display: block; height: 100%; border-radius: inherit; }
+.gr-fill.up { background: #30a14e; }
+.gr-fill.down { background: #ff9f0a; }
+.gr-avg { position: absolute; top: -4px; width: 2px; height: 18px; margin-left: -1px; background: var(--text); border-radius: 1px; }
+.gr-target { position: absolute; top: 12px; margin-left: -5px; border: 5px solid transparent; border-bottom: 7px solid var(--accent); border-top: 0; }
+.gr-legend { font-size: 12px; color: var(--text-2); margin: 0; }
+.gr-comment { font-size: 14px; margin: 8px 0 0; }
+.gr-types { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.gr-type { padding: 18px 20px; border-radius: 18px; border: 1px solid var(--line-soft); }
+.gr-type-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.gr-type-items { font-size: 14px; margin: 10px 0 0; }
+.gr-type-tip { font-size: 14px; color: var(--text-2); margin: 4px 0 0; }
+.gr-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: normal; background: var(--bg-soft); color: var(--text); }
+.gr-tag.form { background: #e8f1fd; color: #0058b0; }
+.gr-tag.check { background: #fdf0dc; color: #8a4a00; }
+.gr-tag.rule { background: #efeafc; color: #4b3bb5; }
+.gr-tag.compare { background: #e3f4e8; color: #17692e; }
+.gr-habits { margin: 0; padding: 0 0 0 26px; display: grid; gap: 10px; font-size: 17px; }
+.gr-details { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.gr-detail { padding: 22px; border-radius: 18px; border: 1px solid var(--line-soft); }
+.gr-detail-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; margin-bottom: 8px; }
+.gr-detail-head h3 { margin: 0; font-size: 22px; }
+.gr-detail-score { font-size: 14px; color: var(--text-2); }
+.gr-note { font-size: 14px; color: var(--warn); margin: 0 0 8px; }
+.gr-table { white-space: normal; min-width: 720px; }
+.gr-table td { vertical-align: top; }
+.gr-table td:first-child, .gr-table th { white-space: nowrap; }
+.gr-table .gr-picked { color: var(--bad); }
+.gr-table .gr-answer { color: var(--good); font-weight: 600; }
+.gr-table .gr-why { min-width: 220px; }
+.gr-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 28px; margin-top: 14px; }
+.gr-cols h4 { margin: 0 0 6px; font-size: 15px; color: var(--text-2); }
+.gr-list { margin: 0; padding-left: 20px; font-size: 15px; display: grid; gap: 4px; }
+@media (max-width: 860px) {
+  .gr-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gr-types, .gr-cols { grid-template-columns: 1fr; }
+  .gr-num { font-size: 32px; }
+  .gr-detail { padding: 16px; }
+  .gr-card-head { flex-wrap: wrap; }
+}

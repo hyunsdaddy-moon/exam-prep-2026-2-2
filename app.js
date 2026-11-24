@@ -14,6 +14,7 @@ import { renderUnitsRoute } from './units.js?v=20261124-1948';
 import { buildDocQuiz } from './docquiz.js?v=20261124-1948';
 import { attachWatchBoxes } from './watch.js?v=20261124-1948';
 import { renderDashboard } from './dashboard.js?v=20261124-1948';
+import { renderGrades } from './grades.js?v=20261124-1948';
 import { renderVersus, renderVersusBar } from './versus.js?v=20261124-1948';
 import { renderAssessRoute } from './assess.js?v=20261124-1948';
 import { renderPastRoute } from './past.js?v=20261124-1948';
@@ -226,6 +227,7 @@ async function renderHome() {
         el('a.pill.ghost', { href: '#/past', text: '기출문제' }),
         el('a.pill.ghost', { href: '#/notes', text: '오답 노트' }),
         el('a.pill.ghost', { href: '#/dashboard', text: '학습 현황' }),
+        isProtected(study.learner) ? el('a.pill.ghost', { href: '#/grades', text: '성적' }) : null,
         el('a.pill.ghost', { href: '#/versus', text: '대결' }),
         el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }),
         el('a.pill.ghost', { href: '#/me', text: '캐릭터 고르기' })
@@ -715,6 +717,7 @@ async function route() {
   if (parts[0] === 'notes' && parts.length === 1) return renderWrongbook(ctx, data.exam, await loadStudy(ctx, data.exam.subjects, data.concepts), query);
   if (parts[0] === 'board' && parts.length === 1) return renderBoard(ctx, data.exam, query);
   if (parts[0] === 'dashboard' && parts.length === 1) return renderDashboard(ctx, data.exam, data);
+  if (parts[0] === 'grades' && parts.length === 1) return renderGrades(ctx, data.exam, query);
   if (parts[0] === 'versus' && parts.length === 1) return renderVersus(ctx, data.exam);
   const unitTesting = renderUnitsRoute(ctx, data.exam, parts, query);
   if (unitTesting) return unitTesting;
