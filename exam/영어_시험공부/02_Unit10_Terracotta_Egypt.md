@@ -42,6 +42,11 @@ flowchart LR
 ## 2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)
 
 ### [Paragraph A]
+
+> 🎧 **문장 해석 영상 (3분 7초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_a_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_a.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 1. **The first emperor of China, Qin Shihuang, is remembered for the many things he did during his rule.**  
    → 중국 최초의 황제인 진시황은 / 그의 **통치 기간(`rule`)** 동안 그가 한 많은 일들로 **기억된다(`be remembered for` ⭐)**. *(목적격 관계대명사 `that` 생략: `the many things (that) he did`)*
 2. **Between 221 and 210 B.C., he started the construction of the Great Wall of China. He built a large network of roads. He introduced a new writing system, currency, and set of measurements.**  
@@ -50,6 +55,11 @@ flowchart LR
    → 황제는 또한 실제 크기의 테라코타 병사들로 이루어진 거대한 군대의 제작을 명령했다. / 그는 이것들이 자신이 죽은 후 자신의 무덤을 보호해 주기를 바랐다.
 
 ### [Paragraph B — Lost in Time]
+
+> 🎧 **문장 해석 영상 (3분 32초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_b_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_b.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 4. **Today, the soldiers in Xi'an's terracotta museum are light brown, but they weren't always this color. They began as an army of red, blue, yellow, green, white, and purple.**  
    → 오늘날 시안의 병마용 박물관에 있는 병사들은 **연한(`light`)** 갈색이지만, 항상 이 색이었던 것은 아니다. / 그들은 빨강, 파랑, 노랑, 초록, 하양, 보라색의 군대로 시작되었다.
 5. **Sadly, most of the colors did not last to the present day. Before their discovery, the clay soldiers were protected by being underground.**  
@@ -58,12 +68,22 @@ flowchart LR
    → 그러나 그들이 **발굴되었을 때(`unearthed` = dug up)**, / **공기가 페인트 아래의 코팅이 떨어져 나가게 만들었다(`cause + 목적어 + to부정사` ⭐)**. / 페인트는 **달걀 하나를 삶는 데 걸리는 시간보다도 더 짧은 시간 안에** 사라졌고, 역사의 중요한 조각들을 함께 가져가 버렸다.
 
 ### [Paragraph C — New Techniques]
+
+> 🎧 **문장 해석 영상 (3분 20초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_c_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_c.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 7. **New techniques are now starting to reveal the army's true colors. Archeologists have recently discovered an area with more than a hundred soldiers. Many of these still have their painted features, including black hair, pink faces, and black or brown eyes.**  
    → 새로운 기술들이 이제 군대의 본래 색깔을 **드러내기(`reveal`)** 시작하고 있다. / 고고학자들은 최근 100구 이상의 병사가 있는 구역을 발견했다. / 이들 중 다수는 검은 머리카락, 분홍 얼굴, 검은색 또는 갈색 눈을 포함해 색칠된 **이목구비(`features`)**를 여전히 간직하고 있다.
 8. **Chinese and German researchers have developed a special liquid to help preserve the soldiers' colors. After they find a soldier or other artifact, archeologists spray it with the liquid. They then cover it in plastic.**  
    → 중국과 독일의 연구진들이 병사들의 색을 **보존하는(`preserve`)** 것을 돕기 위해 특수 **액체(`liquid`)**를 개발했다. / 병사나 다른 유물을 발견한 뒤, 고고학자들은 그것에 그 액체를 뿌린다. / 그런 다음 그것을 플라스틱으로 덮는다.
 
 ### [Paragraph D — Back to Life]
+
+> 🎧 **문장 해석 영상 (2분 57초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_d_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10a_d.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 9. **Archeologists are also finding colors in the dirt around Xi'an's terracotta warriors. It's important not to disturb the dirt, so the colors won't be lost. "We are treating the earth as an artifact," says archeologist Rong Bo, the museum's leading chemist.**  
    → 고고학자들은 시안의 테라코타 전사들 주변의 **흙(`dirt` = soil)**에서도 색깔을 찾고 있다. / 색이 사라지지 않도록 흙을 건드리지 않는 것이 중요하다. / "우리는 **흙을 유물로 취급하고 있습니다(`treat A as B` ⭐)**"라고 박물관의 수석 화학자인 고고학자 롱보가 말한다.
 10. **The next challenge, says Rong, is to find a way to apply the colors to the army again. Once that happens, artists can bring Emperor Qin's army back to life in full color.**  
@@ -129,6 +149,11 @@ flowchart LR
 ## 2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해)
 
 ### [Paragraph A]
+
+> 🎧 **문장 해석 영상 (2분 59초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_a_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_a.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 1. **Many people today think of the pyramids of Giza as the defining icon of ancient Egyptian culture. But who actually built them?**  
    → 오늘날 많은 사람들은 기자의 피라미드를 고대 이집트 문화의 대표적인 **상징(`icon`)**으로 여긴다(`think of A as B`). / 하지만 실제로 누가 그것들을 지었을까?
 2. **Now, however, archeologists have discovered an ancient city near the pyramids. Close by, there is a cemetery where the pyramid builders were buried.**  
@@ -137,12 +162,22 @@ flowchart LR
    → 이 장소들을 연구함으로써 고고학자들은 이제 피라미드가 노예나 외국인(또는 외계인!)에 의해 지어지지 않았다는 것을 **확인할(`confirm`)** 수 있다. / **평범한 일반 이집트인들**이 그것들을 지었다.
 
 ### [Paragraph B]
+
+> 🎧 **문장 해석 영상 (2분 38초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_b_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_b.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 4. **It took about 80 years to build the pyramids. Archeologists believe that about 20,000–30,000 people were involved in the construction.**  
    → 피라미드를 짓는 데 약 **80년**이 걸렸다(`It takes + 시간 + to V`). / 고고학자들은 약 **2만~3만 명**이 그 건설에 **참여했다(`be involved in`)**고 믿는다.
 5. **The workers had different roles. Some dug up the rock, some moved it, and some shaped it into blocks. People also worked on different teams, each with its own name. Workers often competed to see whose team could do a job faster.**  
    → 노동자들은 서로 다른 역할을 맡았다. / 어떤 이들은 바위를 캐냈고, 어떤 이들은 옮겼고, 어떤 이들은 그것을 블록 모양으로 다듬었다. / 사람들은 또한 각자 고유한 이름이 있는 서로 다른 팀에서 일했다. / 노동자들은 종종 어느 팀이 일을 더 빨리 할 수 있는지 보려고 **경쟁했다(`competed`)**.
 
 ### [Paragraph C]
+
+> 🎧 **문장 해석 영상 (4분 18초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_c_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_c.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 6. **Life for these workers was hard. "We can see that in their skeletons," says Azza Mohamed Sarry El-Din, a scientist studying bones found in the cemetery. According to her research, the bones show signs of arthritis. This probably developed from carrying heavy things for a long time.**  
    → 이 노동자들의 삶은 고되었다. / "우리는 그들의 해골에서 그것을 볼 수 있습니다"라고 묘지에서 발견된 뼈를 연구하는 과학자 아자 모하메드 사리 엘딘이 말한다. / 그녀의 연구에 **따르면(`According to`)**, 뼈들은 **관절염(`arthritis`)**의 징후를 보인다. / 이것은 아마 오랜 시간 무거운 물건을 나른 것에서 비롯되었을 것이다.
 7. **Archeologists have also found many female skeletons in the ancient city and cemetery. The damage to their bones is similar to that of the men. In fact, *their* lives may have been even tougher: Male workers generally lived to age 40–45, but women to only 30–35.**  
@@ -151,6 +186,11 @@ flowchart LR
    → 그러나 노동자들은 보통 충분한 음식을 먹었고, / 아프거나 다치면 **의료 혜택(`medical care`)**도 받았다.
 
 ### [Paragraph D]
+
+> 🎧 **문장 해석 영상 (2분 36초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_d_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_10b_d.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 9. **The task was challenging, but laborers were proud of their work. On a wall in Khufu's Great Pyramid, for example, a group of workers wrote *Friends of Khufu*.**  
    → 그 **과업(`task`)**은 힘들었지만, **노동자들(`laborers` = workers)**은 자신의 일을 **자랑스러워했다(`be proud of`)**. / 예를 들어 쿠푸 대피라미드의 한 벽에 한 무리의 노동자들이 *쿠푸의 친구들*이라고 적어 놓았다.
 10. **"It's because they were not just building the tomb of their king," says Egyptian archeologist Zahi Hawass. "They were building Egypt. It was a national project, and everyone was a participant."**  

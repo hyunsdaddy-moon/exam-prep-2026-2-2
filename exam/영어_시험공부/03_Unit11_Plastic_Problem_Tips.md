@@ -44,6 +44,11 @@ flowchart LR
 ## 2) 지문 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)
 
 ### [Paragraph A — 코스타리카 바다거북 구조]
+
+> 🎧 **문장 해석 영상 (2분 47초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_a_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_a.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 1. **On a boat near Costa Rica, a team of marine biologists is helping a turtle. The animal is having trouble breathing, and the team discovers why—there is something inside its nose.**  
    → 코스타리카 근처의 배 위에서, 한 팀의 **해양 생물학자(`marine biologists`)**들이 거북이 한 마리를 돕고 있다. / 그 동물은 **숨 쉬는 데 어려움을 겪고 있으며(`have trouble + -ing` ⭐)**, 연구팀은 그 이유를 발견한다—코 안에 무언가가 들어 있는 것이다.
 2. **A scientist tries to extract the object, but the turtle cries in pain. Finally, after eight long minutes, a long object is pulled out: It is a 10-centimeter plastic straw.**  
@@ -51,6 +56,11 @@ flowchart LR
    - *⚠️ 주의(교과서 p.149 2번):* 과학자들이 빨대를 빼낼 때 **무슨 도구(tools)를 사용했는지는 문단 A에 나와 있지 않다!**
 
 ### [Paragraph B — 해양 플라스틱 유입량과 낮은 재활용률]
+
+> 🎧 **문장 해석 영상 (3분 28초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_b_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_b.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 3. **The video of the turtle's rescue has been viewed millions of times on YouTube. *It* has helped raise awareness of a growing problem: The world's seas are full of plastic.**  
    → 그 거북이의 **구조(`rescue`)** 영상은 유튜브에서 수백만 번 조회되었다. / **그것(`It` = the video of the turtle's rescue ⭐)**은 커져 가는 문제에 대한 인식을 높이는 데 도움을 주었다: 전 세계의 바다가 플라스틱으로 가득 차 있다는 것이다.
 4. **Since 2000, there has been a huge increase in worldwide plastic production, but we recycle less than one-fifth of it.**  
@@ -59,6 +69,11 @@ flowchart LR
    → 이 플라스틱 쓰레기 중 많은 양이 결국 바다로 들어간다(`end up in`). / 오늘날 과학자들은 매년 해안 지역에서 약 **81억 킬로그램(8.1 billion kg)**이 바다로 유입된다고 생각한다. / 이 플라스틱 대부분은 **결코 생분해되지 않을 것이다(`never biodegrade`)**.
 
 ### [Paragraph C — 해양 동물에게 미치는 피해]
+
+> 🎧 **문장 해석 영상 (3분 28초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_c_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_c.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 6. **This ocean plastic hurts millions of sea animals every year. Some fish eat plastic because it is covered with sea plants, and it looks and smells like food.**  
    → 이 해양 플라스틱은 매년 **수백만 마리(`millions of`)**의 해양 동물을 다치게 한다. / 어떤 물고기들은 플라스틱이 바다 식물(해조류)로 덮여 있고 음식처럼 보이고 냄새가 나기 때문에 그것을 먹는다.
 7. **Typically, eating plastic leads to constant hunger. "Imagine you ate lunch and then just felt weak ... and hungry all day," says marine biologist Matthew Savoca. "That would be very confusing."**  
@@ -67,12 +82,22 @@ flowchart LR
    → 어떤 경우에는 날카로운 플라스틱 조각을 먹는 것이 해양 동물을 심각하게 다치게 하고 심지어 **죽음으로 이어질(`result in death`)** 수도 있다.
 
 ### [Paragraph D — 최악의 주범: 일회용 플라스틱]
+
+> 🎧 **문장 해석 영상 (3분 33초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_d_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_d.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 9. **Plastic is useful to people because it is strong and lasts a long time. But this is bad news for sea creatures who eat or get stuck in it.**  
    → 플라스틱은 튼튼하고 오래 지속되기 때문에 사람들에게는 유용하다. / 하지만 그것은 플라스틱을 먹거나 거기에 끼이게 되는(`get stuck in`) 해양 생물들에게는 나쁜 소식이다.
 10. **According to Savoca, "Single-use plastics are the worst." These are items that are used only once before we throw them away. Some common examples include straws, water bottles, and plastic bags. About 700 sea species (including the turtle from the video) have been caught in or have eaten this kind of plastic. Luckily, the turtle survived and was released back into the ocean.**  
     → 사보카에 따르면, "**일회용 플라스틱(`Single-use plastics`)**이 최악이다." / 이것들은 우리가 버리기 전에 딱 한 번만 사용하는 물건들이다. / 흔한 예로는 빨대, 물병, 비닐봉지가 있다. / (영상 속 거북이를 포함해) 약 **700종의 해양 생물**이 이런 종류의 플라스틱에 걸리거나 그것을 먹었다. / **다행히 그 거북이는 살아남아 바다로 다시 풀어졌다(방생되었다).** *(⚠️ 함정: 죽지 않았다!)*
 
 ### [Paragraph E — 장기적 영향과 경고]
+
+> 🎧 **문장 해석 영상 (1분 59초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_e_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11a_e.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 11. **How will plastic affect sea animals in the long term? "I think we'll know the answers in 5 to 10 years' time," says Debra Lee Magadini from Columbia University. But by then, another 25 million tons of plastic will already be in the ocean.**  
     → 플라스틱이 **장기적으로(`in the long term`)** 해양 동물에게 어떤 영향을 미칠까? / "5년에서 10년 뒤면 답을 알게 될 거라고 생각합니다"라고 컬럼비아 대학의 데브라 리 마가디니가 말한다. / 하지만 그때쯤이면 **또 다른 2,500만 톤(25 million tons)**의 플라스틱이 이미 바다에 들어가 있을 것이다.
 
@@ -136,16 +161,31 @@ flowchart LR
 ## 2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)
 
 ### [Paragraph A — 도입]
+
+> 🎧 **문장 해석 영상 (1분 54초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_a_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_a.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 1. **The world has a plastic problem—and it is increasing. Scientists are working to find a long-term solution by making plastic more biodegradable. But in the meantime, here are five things you can do to reduce plastic waste now.**  
    → 세계는 플라스틱 문제를 겪고 있으며 그것은 커지고 있다. / 과학자들은 플라스틱을 더 생분해 가능하게 만듦으로써 장기적 해결책을 찾으려 노력 중이다. / 하지만 **그동안에(`in the meantime`)**, 지금 당장 플라스틱 쓰레기를 **줄이기(`reduce`)** 위해 당신이 할 수 있는 다섯 가지가 여기 있다.
 
 ### [Paragraph B — Tip 1: Quit using plastic bags]
+
+> 🎧 **문장 해석 영상 (3분 55초)** (Tip 1) — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_b_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_b.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 2. **Quit using plastic bags. Instead, take your own reusable shopping bag to the store. People use a trillion plastic bags worldwide every year. Roughly 10 percent are used in the United States alone. That's almost one bag per American per day.**  
    → 비닐봉지 사용을 **그만두라(`Quit + -ing`)**. / 대신에 가게에 자신의 재사용 쇼핑백을 가져가라. / 사람들은 매년 전 세계에서 1조 개의 비닐봉지를 사용한다. / **대략(`Roughly` = approximately)** 10%가 미국에서만 사용된다. / 그것은 미국인 1명당 하루 거의 1개꼴이다.
 3. **In contrast, the average Dane uses four single-use bags per year. In 1993, Denmark was the first country to place a tax on plastic bags. Today, other countries (such as Chile, Kenya, Indonesia, Germany, and New Zealand) either make customers pay for plastic bags, or have banned them completely.**  
    → **대조적으로(`In contrast`)**, 평균적인 덴마크인은 1년에 일회용 봉지 4개를 사용한다. / 1993년에 덴마크는 비닐봉지에 **세금을 부과한(`place a tax on`)** 최초의 나라였다. / 오늘날 다른 나라들은 **고객들이 비닐봉지 값을 내게 하거나, 혹은 그것들을 완전히 금지했다(`either A or B` ⭐ / 사역동사 `make + 목적어 + 동사원형` ⭐)**.
 
 ### [Paragraph C — Tip 2: Skip the straw]
+
+> 🎧 **문장 해석 영상 (3분 59초)** (Tip 2 · 3) — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_c_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_c.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 4. **Skip the straw. Today, around 8.3 billion plastic straws pollute the world's beaches. So when you order a drink, say no to the straw, or bring your own reusable one. In 2018, Seattle became the first major U.S. city to ban plastic straws, and many other cities are set to follow its example.**  
    → 빨대를 **쓰지 말라(`Skip` = stop using)**. / 오늘날 약 83억 개의 플라스틱 빨대가 세계의 해변을 **오염시킨다(`pollute`)**. / 그러니 음료를 주문할 때 빨대를 거절하거나 자신의 재사용 빨대를 가져가라. / 2018년 시애틀은 플라스틱 빨대를 금지한 미국 최초의 주요 도시가 되었고, 많은 다른 도시들이 그 본보기를 따를 **예정이다(`be set to V`)**.
 
@@ -154,6 +194,11 @@ flowchart LR
    → 플라스틱 병을 쓰지 말라. / 재사용 물병을 사서 당신이 좋아하는 어떤 종류의 **음료(`beverage` = drink)**로든 **그것을 채워라(`fill A with B` ⭐)**. / 몇몇 도시들은 생수를 완전히 혹은 **부분적으로(`partially` = in part)** 금지했다. / 하지만 **전 세계적으로(`Globally`)** 사람들은 여전히 매분 거의 100만 개의 플라스틱 병을 산다.
 
 ### [Paragraph E — Tip 4: Avoid plastic packaging]
+
+> 🎧 **문장 해석 영상 (3분 42초)** (Tip 4 · 5) — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_d_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_11b_d.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 6. **Avoid plastic packaging. Buy bar soap instead of liquid soap in plastic containers. Don't buy fruit or vegetables in plastic packaging. In the United Kingdom, leaders are calling for supermarkets to have plastic-free areas. *They* also want to tax plastic take-out containers.**  
    → 플라스틱 포장을 **피하라(`Avoid`)**. / 플라스틱 **용기(`containers`)**에 든 액체 비누 대신 **고체 비누(`bar soap`)**를 사라. / 플라스틱 포장된 과일이나 채소를 사지 말라. / 영국에서는 지도자들이 슈퍼마켓에 플라스틱 없는 구역을 두도록 **촉구하고 있다(`call for`)**. / **그들(`They` = U.K. leaders ⭐)**은 또한 플라스틱 테이크아웃 용기에 세금을 부과하기를 원한다.
 

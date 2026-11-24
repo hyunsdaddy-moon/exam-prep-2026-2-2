@@ -43,6 +43,11 @@ flowchart LR
 ## 2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)
 
 ### [Paragraph A]
+
+> 🎧 **문장 해석 영상 (4분 8초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8a_a_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8a_a.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 1. **Jacob and Wilhelm Grimm were two young men from Germany who loved reading stories.**  
    → 야코프와 빌헬름 그림은 독일 출신의 두 젊은이였는데 / 이야기 읽기를 매우 좋아했다. *(주격 관계대명사 `who`)*
 2. **As university students, they became interested in folktales—traditional stories or legends that people told again and again, often for generations.**  
@@ -53,12 +58,22 @@ flowchart LR
    → 1812년에서 1814년 사이에 / 형제는 독일어로 두 권의 책을 출판했다. / 이 책들은 <신데렐라>, <백설공주>, <빨간 모자> 같은 이야기를 포함했다. / 그 모음집은 영어로 *Grimms' Fairy Tales*로 알려지게 되었다.
 
 ### [Paragraph B — Darkness and Magic]
+
+> 🎧 **문장 해석 영상 (2분 10초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8a_b_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8a_b.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 5. **The Grimm brothers' tales give a picture of traditional life and beliefs.**  
    → 그림 형제의 이야기는 전통적인 삶과 믿음의 모습을 **보여 준다(`give a picture of`)**.
 6. **For example, in the past, many people in Germany believed that forests were dangerous places. In the Grimms' stories, a forest is often the home of evil witches (as in "Hansel and Gretel"), talking animals, and other magical beings.**  
    → 예를 들어, 과거에 독일의 많은 사람들은 숲이 위험한 곳이라고 믿었다. / 그림 형제의 이야기에서 숲은 종종 사악한 마녀(<헨젤과 그레텔>에서처럼), 말하는 동물, 그리고 다른 마법 존재들의 거처이다.
 
 ### [Paragraph C — Children's Stories?]
+
+> 🎧 **문장 해석 영상 (3분 24초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8a_c_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8a_c.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 7. **Although most people today think of these stories as fairy tales for children, the Grimm brothers first wrote them primarily for adults.**  
    → 비록 오늘날 대부분의 사람들이 이 이야기들을 어린이를 위한 동화로 **여기지만(`think of A as B` ⭐)**, / 그림 형제는 처음에 그것들을 **주로 어른들을 위해** 썼다.
 8. **Many of their early tales were dark and scary. Later, the brothers changed the text of some of the original stories. They "softened" many of the tales and added drawings. This made them more suitable for children.**  
@@ -138,6 +153,11 @@ flowchart LR
 ## 2) 단락별 핵심 문장 정밀 해석 (영어 + 직독직해 & 수업 필기 포인트 ⭐)
 
 ### [Paragraph A]
+
+> 🎧 **문장 해석 영상 (3분 18초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_a_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_a.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 1. **Once upon a time, there lived a man and a woman who had seven sons. The couple wanted a daughter, and, eventually, they had a girl who they loved very much.**  
    → 옛날 옛적에, 일곱 아들을 둔 한 남자와 여자가 살았다. / 그 부부는 딸을 원했고, 마침내 그들이 매우 사랑하는 여자아이를 낳았다.
 2. **One day, the father needed water for the child, so he sent the seven brothers to a well in the forest to get it. Once there, though, the boys began to fight, and the water jug fell into the well.**  
@@ -146,12 +166,22 @@ flowchart LR
    → 소년들은 무엇을 해야 할지 몰랐다(`what to do`). / 그들은 집에 가기가 두려웠다.
 
 ### [Paragraph B]
+
+> 🎧 **문장 해석 영상 (2분 39초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_b_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_b.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 4. **Hours passed. "Where are those boys?" shouted the angry father. "They are probably playing a game and forgot about the water. I wish they were all turned into ravens!"**  
    → 몇 시간이 흘렀다. "저 녀석들은 어디 있는 거야?" 화난 아버지가 소리쳤다. / "아마 놀이를 하느라 물을 잊어버렸겠지. **저 녀석들이 다 까마귀로 변해 버렸으면 좋겠어!**" *(가정법 과거 `I wish + 주어 + were` ⭐ / `turn into` = change to ~로 변하다)*
 5. **When he looked up, he saw seven black birds flying away. The father was shocked. "What have I done?" he thought. But it was too late. He could not take back his words.**  
    → 그가 고개를 들었을 때 / 그는 일곱 마리의 검은 새가 날아가는 것을 보았다(`see + 목적어 + ~ing` ⭐). / 아버지는 충격을 받았다. "내가 무슨 짓을 한 거지?"라고 생각했다. / 하지만 너무 늦었다. **그는 자신이 한 말을 주워 담을 수 없었다.** *(Paraphrase: He had already said the words, so it was too late.)*
 
 ### [Paragraph C]
+
+> 🎧 **문장 해석 영상 (4분 0초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_c_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_c.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 6. **In time, the girl grew up and discovered she had brothers. The story of their misfortune affected her greatly, and she was determined to find them. For years, she searched and did not stop.**  
    → 시간이 흘러, 소녀는 자라서 오빠들이 있다는 것을 알게 되었다. / 그들의 **불운(`misfortune` = bad luck)**에 관한 이야기가 그녀에게 큰 영향을 미쳤고, / 그녀는 오빠들을 찾겠다고 굳게 결심했다(`be determined to V`). / 수년 동안 그녀는 멈추지 않고 찾아다녔다.
 7. **Finally, she found their home. To enter, she needed a special key made from a chicken bone, which she did not have.**  
@@ -162,6 +192,11 @@ flowchart LR
    → 식탁 위에는 일곱 개의 접시와 일곱 개의 컵이 있었다. / 그녀는 **그것들(`them` = seven plates and seven cups ⭐)** 각각에서 조금씩 먹고 마셨다. / 마지막 컵에 그녀는 부모님이 주신 반지를 **실수로(`accidentally` = without planning it)** 떨어뜨렸다.
 
 ### [Paragraph D]
+
+> 🎧 **문장 해석 영상 (3분 8초)** — 원어민 발음 듣기 → 의미 덩어리로 끊어 읽기 → 자연스럽게 합치기 순서로 한 문장씩 풀어 줘요.
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_d_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/rd_8b_d.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 10. **Eventually, the ravens returned for their meal. The girl hid behind a door and watched. When the seventh raven drank from his cup, something hit his mouth. The raven recognized it immediately—it was his parents' ring.**  
     → 마침내 까마귀들이 식사를 하러 돌아왔다. / 소녀는 문 뒤에 숨어 지켜보았다. / 일곱 번째 까마귀가 자기 컵에서 마셨을 때 무언가가 입에 부딪혔다. / 그 까마귀는 그것을 즉시 알아보았다—그것은 부모님의 반지였다.
 11. **"I wish our sister were here," he said, "and then we could be free." Their sister quickly ran to them, and suddenly the ravens were human again. The brothers kissed their sister, and *they* all went home together happily.**  
