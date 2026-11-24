@@ -10,11 +10,12 @@
  * 점수는 과목·회차마다 「처음 응시한 것」으로 센다 — 진단은 한 번이 의미가 있으므로.
  */
 
-import { el, newId } from './dom.js?v=20261124-1857';
-import { loadRecords, getCurrentLearner, getSavedLearners, setCurrentLearner } from './store.js?v=20261124-1857';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-1857';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261124-1857';
-import { avatar } from './characters.js?v=20261124-1857';
+import { el, newId } from './dom.js?v=20261124-1859';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261124-1859';
+import { enterLearner } from './lock.js?v=20261124-1859';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261124-1859';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261124-1859';
+import { avatar } from './characters.js?v=20261124-1859';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
@@ -293,9 +294,8 @@ async function renderAssessHome(ctx, exam, query) {
         el('tbody', {}, rows.map((r, i) =>
           el(`tr${r.name === me ? '.me' : ''}`, {},
             el('td', { text: r.a1 == null && r.a2 == null ? '–' : String(i + 1) }),
-            el('td', {}, avatar(r.name, 'xs'), ' ', el('button.link', { type: 'button', text: r.name, onclick: () => {
-              setCurrentLearner(r.name);
-              go({ vs: r.name === rival ? me : rival || '' });
+            el('td', {}, avatar(r.name, 'xs'), ' ', el('button.link', { type: 'button', text: r.name, onclick: async () => {
+              if (await enterLearner(r.name)) go({ vs: r.name === rival ? me : rival || '' });
             } })),
             el('td', { text: r.a1 == null ? '–' : `${r.a1} (${r.n1}과목)` }),
             el('td', { text: r.a2 == null ? '–' : `${r.a2} (${r.n2}과목)` }),
