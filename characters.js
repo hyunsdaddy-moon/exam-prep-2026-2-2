@@ -6,9 +6,9 @@
  * 그림 파일: assets/characters/c01.webp … c10.webp. 아직 없으면 도트 얼굴(빈칸 그림)을 대신 보여 준다.
  */
 
-import { el } from './dom.js?v=20261124-1055';
-import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261124-1055';
-import { recordLearner } from './grade.mjs?v=20261124-1055';
+import { el } from './dom.js?v=20261124-1225';
+import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261124-1225';
+import { recordLearner } from './grade.mjs?v=20261124-1225';
 
 export const CHARACTERS = [
   { id: 'c01', name: '탐험가 하루', role: '모험 · 지리', color: '#e0a030', line: '지도만 있으면 어디든 간다!' },
