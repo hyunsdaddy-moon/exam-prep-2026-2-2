@@ -24,7 +24,6 @@ import { loadStudy } from './study.js?v=20261124-1857';
 import { renderPrint, printLinks } from './print.js?v=20261124-1857';
 import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1857';
 import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1857';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261124-1857';
 import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1857';
 
 const app = document.getElementById('app');
@@ -77,8 +76,8 @@ function renderNavLearner(names) {
   const list = [...new Set([...lastLearnerNames, current])];
   const select = el('select.learner-select', { 'aria-label': '참여자 선택' }, list.map((name) => el('option', { value: name, text: name })));
   select.value = current;
-  select.addEventListener('change', async () => {
-    if (!(await enterLearner(select.value))) select.value = getCurrentLearner(); // 비밀번호를 못 맞히면 그대로
+  select.addEventListener('change', () => {
+    setCurrentLearner(select.value);
     void route();
   });
   navLearner.replaceChildren(syncBadge(), el('a.nav-avatar', { href: '#/me', title: '캐릭터 고르기', 'aria-label': '캐릭터 고르기' }, avatar(current, 'xs')), select);
@@ -123,14 +122,7 @@ function learnersSection(study) {
   const form = el('form.learner-form', {}, input, el('button.pill.small', { type: 'submit', text: '추가' }));
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const typed = input.value;
-    if (isProtected(typed)) {
-      // 비밀번호가 걸린 이름을 새로 적어 넣어도 비밀번호를 묻는다
-      input.value = '';
-      void enterLearner(typed).then((ok) => ok && renderHome());
-      return;
-    }
-    const added = addLearner(typed);
+    const added = addLearner(input.value);
     if (!added) {
       input.focus();
       return;
@@ -139,15 +131,11 @@ function learnersSection(study) {
     void renderHome();
   });
 
-  const switchTo = async (name) => {
+  const switchTo = (name) => {
     if (name === study.learner) return;
-    if (await enterLearner(name)) void renderHome();
+    setCurrentLearner(name);
+    void renderHome();
   };
-  const pinButton = isProtected(study.learner)
-    ? el('button.pill.small.ghost', { type: 'button', text: '🔒 비밀번호 변경', onclick: async () => {
-        if (await changePin()) alert('비밀번호를 바꿨습니다. 다음부터 새 비밀번호로 들어오세요.');
-      } })
-    : null;
 
   return el('div.wrap', {},
     el('section.section.learners-section', { style: 'padding-top:0' },
@@ -166,7 +154,7 @@ function learnersSection(study) {
             })
           )
         ),
-        el('div.learner-tools', {}, pinButton, form)
+        form
       ),
       el('div.learner-grid', {},
         study.learners.map((item) => {
@@ -690,7 +678,6 @@ async function route() {
   // 홈은 클라우드 연결을 기다리지 않고 이 브라우저의 기록으로 먼저 그린다
   await (parts.length ? refreshProfiles() : loadRecords({ fast: true }).then((r) => refreshProfiles(r.records))).catch(() => null);
   renderNavLearner();
-  if (needsUnlock()) return renderLock(ctx, () => void route());
   if (!parts.length) return renderHome();
   if (parts[0] === 'me' && parts.length === 1) return renderCharacterSelect(ctx);
   if (parts[0] === 'notes' && parts.length === 1) return renderWrongbook(ctx, data.exam, await loadStudy(ctx, data.exam.subjects, data.concepts), query);

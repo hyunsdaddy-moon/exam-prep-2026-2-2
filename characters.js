@@ -9,7 +9,6 @@
 import { el } from './dom.js?v=20261124-1857';
 import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261124-1857';
 import { recordLearner } from './grade.mjs?v=20261124-1857';
-import { changePin, isProtected } from './lock.js?v=20261124-1857';
 
 export const CHARACTERS = [
   { id: 'c01', name: '탐험가 하루', role: '모험 · 지리', color: '#e0a030', line: '지도만 있으면 어디든 간다!' },
@@ -127,9 +126,6 @@ export async function renderCharacterSelect(ctx) {
         el('div.px-stage', {}, preview, el('div.px-grid', {}, cells)),
         status,
         el('p.px-help', { text: '← → ↑ ↓ 로 움직이고 Enter, 또는 두 번 눌러 고르기' }),
-        isProtected(me) ? el('p.px-help', {}, el('button.link', { type: 'button', text: '🔒 비밀번호 변경', onclick: async () => {
-          if (await changePin()) status.textContent = '비밀번호를 바꿨습니다. 다음부터 새 비밀번호로 들어오세요.';
-        } })) : null,
         el('p.px-help', {}, el('a', { href: '#/', text: '◀ 처음 화면으로' }))
       )
     )
