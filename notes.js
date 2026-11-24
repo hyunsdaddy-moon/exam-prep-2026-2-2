@@ -3,10 +3,10 @@
  *   #/s/<과목>/notes   틀린 문제 모음, 복습 차례, 틀린 까닭 분포
  */
 
-import { el, plainStem } from './dom.js?v=20261124-1913';
-import { md, contextBlock, passageBlock, choiceList, answerText, renderHistory } from './solve.js?v=20261124-1913';
-import { ERROR_LABEL } from './grade.mjs?v=20261124-1913';
-import { errorBreakdown, CONCEPT_LABEL } from './progress.mjs?v=20261124-1913';
+import { el, plainStem } from './dom.js?v=20261124-1948';
+import { md, contextBlock, passageBlock, choiceList, answerText, renderHistory } from './solve.js?v=20261124-1948';
+import { ERROR_LABEL } from './grade.mjs?v=20261124-1948';
+import { errorBreakdown, CONCEPT_LABEL } from './progress.mjs?v=20261124-1948';
 
 const SVG = 'http://www.w3.org/2000/svg';
 function svg(tag, attrs) {
