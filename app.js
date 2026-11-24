@@ -7,24 +7,24 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1653';
-import { el, versioned } from './dom.js?v=20261124-1653';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1653';
-import { renderUnitsRoute } from './units.js?v=20261124-1653';
-import { buildDocQuiz } from './docquiz.js?v=20261124-1653';
-import { attachWatchBoxes } from './watch.js?v=20261124-1653';
-import { renderDashboard } from './dashboard.js?v=20261124-1653';
-import { renderVersus } from './versus.js?v=20261124-1653';
-import { renderAssessRoute } from './assess.js?v=20261124-1653';
-import { renderPastRoute } from './past.js?v=20261124-1653';
-import { renderWrongbook } from './wrongbook.js?v=20261124-1653';
-import { renderBoard } from './board.js?v=20261124-1653';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1653';
-import { loadStudy } from './study.js?v=20261124-1653';
-import { renderPrint, printLinks } from './print.js?v=20261124-1653';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1653';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1653';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1653';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1703';
+import { el, versioned } from './dom.js?v=20261124-1703';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1703';
+import { renderUnitsRoute } from './units.js?v=20261124-1703';
+import { buildDocQuiz } from './docquiz.js?v=20261124-1703';
+import { attachWatchBoxes } from './watch.js?v=20261124-1703';
+import { renderDashboard } from './dashboard.js?v=20261124-1703';
+import { renderVersus } from './versus.js?v=20261124-1703';
+import { renderAssessRoute } from './assess.js?v=20261124-1703';
+import { renderPastRoute } from './past.js?v=20261124-1703';
+import { renderWrongbook } from './wrongbook.js?v=20261124-1703';
+import { renderBoard } from './board.js?v=20261124-1703';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1703';
+import { loadStudy } from './study.js?v=20261124-1703';
+import { renderPrint, printLinks } from './print.js?v=20261124-1703';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1703';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1703';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1703';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -85,14 +85,7 @@ function renderNavLearner(names) {
 
 function setNav(code) {
   navLinks.replaceChildren(
-    ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null })),
-    el('a.nav-assess', { href: '#/dashboard', text: '학습 현황', 'aria-current': code === 'dashboard' ? 'page' : null }),
-    el('a.nav-assess', { href: '#/versus', text: '대결', 'aria-current': code === 'versus' ? 'page' : null }),
-    el('a.nav-assess', { href: '#/units', text: '단원 평가', 'aria-current': code === 'units' ? 'page' : null }),
-    el('a.nav-assess', { href: '#/assess', text: '수준 평가', 'aria-current': code === 'assess' ? 'page' : null }),
-    el('a.nav-assess', { href: '#/past', text: '기출문제', 'aria-current': code === 'past' ? 'page' : null }),
-    el('a.nav-assess', { href: '#/notes', text: '오답 노트', 'aria-current': code === 'notes' ? 'page' : null }),
-    el('a.nav-assess', { href: '#/board', text: '질문 게시판', 'aria-current': code === 'board' ? 'page' : null })
+    ...data.exam.subjects.map((s) => el('a', { href: `#/s/${s.code}`, text: s.subject, 'aria-current': s.code === code ? 'page' : null }))
   );
   renderNavLearner();
 }
@@ -107,18 +100,6 @@ function stat(value, label) {
 }
 
 /* ── 홈 ─────────────────────────────────────────── */
-
-/** 과목마다 지금 가장 먼저 할 일 하나 */
-function nextStep(info) {
-  const s = info.subject;
-  if (info.due.length) return { href: `#/s/${s.code}/review`, kind: '복습', text: `틀린 문제 ${info.due.length}개 다시 풀기` };
-  const docs = docsOf(s);
-  const unread = info.concepts.find((c, i) => !info.states[i].read);
-  if (unread) return { href: `#/s/${s.code}/${Math.max(docs.findIndex((d) => d.file === unread.doc), 0)}?h=${encodeURIComponent(unread.heading)}`, kind: '읽기', text: unread.title };
-  if (info.triedQuestions < info.questions.length) return { href: `#/s/${s.code}/practice`, kind: '풀기', text: `연습 문제 풀기 (${info.triedQuestions} / ${info.questions.length} 풂)` };
-  if (info.waiting) return { href: `#/s/${s.code}/notes`, kind: '기다림', text: `다른 날 다시 풀 문제 ${info.waiting}개` };
-  return null;
-}
 
 /** 시험일 고르기 — 고르면 기록에 덧붙이고 화면을 다시 그린다 */
 function examDatePicker(study) {
@@ -219,8 +200,6 @@ async function renderHome() {
   const total = subjects.reduce((a, s) => a + questionCount(s), 0);
   const left = dday(study.examDate, study.today);
   const overall = study.overall;
-  const steps = infos.map((i) => ({ info: i, step: nextStep(i) })).filter((x) => x.step);
-  const dueTotal = infos.reduce((a, i) => a + i.due.length, 0);
 
   show(
     el('section.hero', {},
@@ -230,31 +209,17 @@ async function renderHome() {
       examDatePicker(study),
       el('div.hero-actions', {},
         el('a.pill', { href: '#/units', text: '단원 평가' }),
-        el('a.pill.ghost', { href: '#/assess', text: '수준 평가 · 성장 그래프' }),
+        el('a.pill.ghost', { href: '#/assess', text: '수준 평가' }),
         el('a.pill.ghost', { href: '#/past', text: '기출문제' }),
         el('a.pill.ghost', { href: '#/notes', text: '오답 노트' }),
+        el('a.pill.ghost', { href: '#/dashboard', text: '학습 현황' }),
+        el('a.pill.ghost', { href: '#/versus', text: '대결' }),
         el('a.pill.ghost', { href: '#/board', text: '질문 게시판' }),
         el('a.pill.ghost', { href: '#/me', text: '캐릭터 고르기' })
       ),
       !study.ok ? el('p.save-warn', { text: '풀이 기록을 읽지 못해 진도율이 비어 보일 수 있습니다.' }) : null
     ),
     learnersSection(study),
-    steps.length
-      ? el('div.wrap', {},
-          el('section.section.today', { style: 'padding-top:0' },
-            el('div.section-head', {}, el('h2', { text: '오늘 할 일' }), el('p', { text: dueTotal ? `복습할 문제가 ${dueTotal}개 있습니다. 복습부터 하세요.` : '과목마다 지금 할 일을 하나씩 골랐습니다.' })),
-            el('div.result-list', {},
-              steps.sort((a, b) => b.info.due.length - a.info.due.length).map(({ info, step }) =>
-                el('a.history-row', { href: step.href },
-                  el(`span.badge${step.kind === '복습' ? '.due' : ''}`, { text: step.kind }),
-                  el('span.todo-subject', { text: info.subject.subject }),
-                  el('span.todo-text', { text: step.text })
-                )
-              )
-            )
-          )
-        )
-      : null,
     el('section.band', {},
       el('div.wrap', {},
         el('div.grid', {},
