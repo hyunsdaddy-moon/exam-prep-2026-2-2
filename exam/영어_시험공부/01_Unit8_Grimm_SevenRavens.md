@@ -28,6 +28,11 @@ flowchart LR
 
 # 📖 Part 1. Unit 8A — The Brothers Grimm (p.106~109)
 
+> 🎬 **개념 몽타주 영상 (2분 0초)** — 그림 형제 이야기 · 민담 수집 · -al 형용사를 한 번에 정리해요. (한국어 설명 + 영어 핵심 문장 자막)
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_01_8a_grimm_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_01_8a_grimm.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ## 1) 지문 핵심 스토리 요약
 - **문단 A (민담 수집과 출판)**: 독일의 대학생 야코프·빌헬름 그림 형제는 여러 세대에 걸쳐 구전되던 **민담(folktales)**에 관심을 갖고 독일 전역의 이야기꾼들에게서 이야기를 **수집**했다. 많은 민담이 프랑스·이탈리아·일본 등 다른 나라 이야기와 비슷했고, 1812~1814년 독일어로 2권을 출판하여 영어권에 *Grimms' Fairy Tales*로 알려졌다.
 - **문단 B (어둠과 마법)**: 그림 형제의 이야기는 옛 독일의 전통적 삶과 믿음을 보여 준다. 과거 독일인들은 숲을 위험한 곳으로 믿었기에 이야기 속 숲은 사악한 마녀(*헨젤과 그레텔*), 말하는 동물, 마법 존재들의 집으로 자주 등장한다.
@@ -105,6 +110,11 @@ flowchart LR
 ---
 
 # 🐦‍⬛ Part 2. Unit 8B — The Seven Ravens (p.110~114)
+
+> 🎬 **개념 몽타주 영상 (1분 54초)** — 일곱 까마귀 사건 순서 · 대명사 · affect/effect를 한 번에 정리해요. (한국어 설명 + 영어 핵심 문장 자막)
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_02_8b_ravens_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_02_8b_ravens.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 
 ## 1) 지문 핵심 스토리 & 사건 순서 (8단계 완벽 암기 ⭐)
 > ⚠️ **2025 KIS 기출 25번(순서 배열) & 교과서 p.112 Sequencing 직접 출제!**

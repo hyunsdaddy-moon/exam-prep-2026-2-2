@@ -23,6 +23,11 @@ flowchart LR
 
 # 🏺 Part 1. Unit 10A — The Army's True Colors (p.132~137)
 
+> 🎬 **개념 몽타주 영상 (2분 3초)** — 병마용의 색 · 보존 기술 · 동음이의어 5선을 한 번에 정리해요. (한국어 설명 + 영어 핵심 문장 자막)
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_03_10a_terracotta_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_03_10a_terracotta.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ## 1) 지문 핵심 내용 요약
 - **도입 캡션 (p.132)**: 1974년 중국 시안(Xi'an)에서 우물을 파던 농부들이 2,000년 넘게 숨겨져 있던 점토 병사들을 발견했고, 이후 고고학자들이 약 **8,000구**의 실제 크기(life-sized) 병마용과 유물을 추가로 발굴했다.
 - **문단 A (진시황의 업적과 병마용 제작)**: 중국 최초의 황제 **진시황(Qin Shihuang)**은 기원전 221~210년 통치 기간에 만리장성 건설, 대규모 도로망, 새로운 문자·화폐·도량형 도입을 이루었으며, 사후 무덤을 지키기 위해 거대한 테라코타 병사 군대를 만들게 했다.
@@ -102,6 +107,11 @@ flowchart LR
 ---
 
 # 🏜️ Part 2. Unit 10B — Wonders of Egypt (p.138~142)
+
+> 🎬 **개념 몽타주 영상 (1분 44초)** — 피라미드 건설자의 진실 · T/F/NG 함정을 한 번에 정리해요. (한국어 설명 + 영어 핵심 문장 자막)
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_04_10b_egypt_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_04_10b_egypt.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 
 ## 1) 지문 핵심 내용 요약 & 팩트 체크
 > 📌 **Before You Read 퀴즈 3가지 (p.138 & p.144 정답 — 모두 True!)**

@@ -27,6 +27,11 @@ flowchart LR
 
 # 🐢 Part 1. Unit 11A — The Problem with Plastic (p.146~151)
 
+> 🎬 **개념 몽타주 영상 (1분 41초)** — 바다거북 · 핵심 수치 · 인용구 · 접두사 ex-를 한 번에 정리해요. (한국어 설명 + 영어 핵심 문장 자막)
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_05_11a_plastic_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_05_11a_plastic.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ## 1) 인포그래픽 필수 수치 (p.146~147) ⭐ 내용 일치 주의!
 - 2015년 전 세계 플라스틱 총생산량: **4억 4,800만 톤(448 million tons)** *(1950년 이후 폭발적 증가!)*
 - 가장 큰 비중을 차지하는 용도: **포장재(Packaging) — 1억 6,100만 톤(거의 40%!)**
@@ -108,6 +113,11 @@ flowchart LR
 ---
 
 # ♻️ Part 2. Unit 11B — Five Tips for Using Less Plastic (p.152~156)
+
+> 🎬 **개념 몽타주 영상 (1분 46초)** — 플라스틱 줄이기 5가지 팁 · 문맥 어휘 · 서술형 문장을 한 번에 정리해요. (한국어 설명 + 영어 핵심 문장 자막)
+
+<video controls preload="metadata" playsinline poster="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_06_11b_tips_poster.jpg" src="exam/%EC%98%81%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/eng_06_11b_tips.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
 
 ## 1) 플라스틱 줄이기 5가지 팁 & 국가·도시별 핵심 수치 총정리표 ⭐ 시험 1순위!
 
