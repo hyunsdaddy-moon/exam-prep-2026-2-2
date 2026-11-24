@@ -13,11 +13,11 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId } from './dom.js?v=20261124-1511';
-import { renderMarkdown } from './markdown.js?v=20261124-1511';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-1511';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1511';
-import { explainButton } from './explain.js?v=20261124-1511';
+import { el, CIRCLED, newId } from './dom.js?v=20261124-1555';
+import { renderMarkdown } from './markdown.js?v=20261124-1555';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261124-1555';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1555';
+import { explainButton } from './explain.js?v=20261124-1555';
 
 const ROUND_BASE = 40;
 const SESSION_PREFIX = 'dqs-';
