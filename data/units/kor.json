@@ -37,7 +37,12 @@
      "answer": [
       3
      ],
-     "explanation": "추론은 글에 드러난 단서를 바탕으로 생략된 내용·숨은 뜻·글쓴이의 의도와 관점을 미루어 짐작하는 것이다. ②처럼 사실 그대로 적힌 정보를 확인하는 것은 '사실적 읽기'이지 추론이 아니다."
+     "explanation": "추론은 글에 드러난 단서를 바탕으로 생략된 내용·숨은 뜻·글쓴이의 의도와 관점을 미루어 짐작하는 것이다. ②처럼 사실 그대로 적힌 정보를 확인하는 것은 '사실적 읽기'이지 추론이 아니다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 9.2,
+      "end": 38.05
+     }
     },
     {
      "id": "kor-u1-02",
@@ -65,7 +70,12 @@
      "answer": [
       1
      ],
-     "explanation": "제목·표지·차례·작가 정보는 외적 단서, 글 속 정보와 문맥(특정 표현)은 내적 단서, 자신의 배경지식·경험은 독자 요인이다. 따라서 (가) 외적 단서, (나) 내적 단서, (다) 독자 요인이다."
+     "explanation": "제목·표지·차례·작가 정보는 외적 단서, 글 속 정보와 문맥(특정 표현)은 내적 단서, 자신의 배경지식·경험은 독자 요인이다. 따라서 (가) 외적 단서, (나) 내적 단서, (다) 독자 요인이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 38.05,
+      "end": 85.05
+     }
     },
     {
      "id": "kor-u1-03",
@@ -93,7 +103,12 @@
      "answer": [
       4
      ],
-     "explanation": "ㄱ·ㄷ은 글의 단서(제목, 표현)로, ㄹ은 배경지식으로 드러나지 않은 내용을 짐작한 추론이다. ㄴ은 글에 사실 그대로 적힌 정보를 확인한 것이므로 추론이 아니라 사실적 읽기이다."
+     "explanation": "ㄱ·ㄷ은 글의 단서(제목, 표현)로, ㄹ은 배경지식으로 드러나지 않은 내용을 짐작한 추론이다. ㄴ은 글에 사실 그대로 적힌 정보를 확인한 것이므로 추론이 아니라 사실적 읽기이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 85.05,
+      "end": 120.45
+     }
     },
     {
      "id": "kor-u1-04",
@@ -121,7 +136,12 @@
      "answer": [
       2
      ],
-     "explanation": "추론은 글에 드러난 정보에 독자 자신의 배경지식과 경험을 더해 글쓴이의 의도와 관점을 짐작하는 활동이다."
+     "explanation": "추론은 글에 드러난 정보에 독자 자신의 배경지식과 경험을 더해 글쓴이의 의도와 관점을 짐작하는 활동이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 120.45,
+      "end": 148.0
+     }
     },
     {
      "id": "kor-u1-05",
@@ -149,7 +169,12 @@
      "answer": [
       5
      ],
-     "explanation": "의문형 제목은 독자의 흥미를 끄는 동시에 '모든 치킨이 정말 옳은가'라는 물음으로 기존의 현실과 인식에 문제를 제기한다. 글쓴이는 치킨을 아예 먹지 말자고 하지 않았으므로 ④는 틀리다."
+     "explanation": "의문형 제목은 독자의 흥미를 끄는 동시에 '모든 치킨이 정말 옳은가'라는 물음으로 기존의 현실과 인식에 문제를 제기한다. 글쓴이는 치킨을 아예 먹지 말자고 하지 않았으므로 ④는 틀리다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 148.0,
+      "end": 181.4
+     }
     },
     {
      "id": "kor-u1-06",
@@ -177,7 +202,12 @@
      "answer": [
       2
      ],
-     "explanation": "어른을 '부모님 세대'라고 부르고, 십 대가 좋아하는 순살치킨·치킨너깃에 대해 묻는 것이 예상 독자가 십 대라는 단서이다. 나머지는 흥미 유발·신뢰성·비판적 관점 등을 위한 전략이지 독자를 드러내는 단서가 아니다."
+     "explanation": "어른을 '부모님 세대'라고 부르고, 십 대가 좋아하는 순살치킨·치킨너깃에 대해 묻는 것이 예상 독자가 십 대라는 단서이다. 나머지는 흥미 유발·신뢰성·비판적 관점 등을 위한 전략이지 독자를 드러내는 단서가 아니다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 181.4,
+      "end": 218.55
+     }
     },
     {
      "id": "kor-u1-07",
@@ -205,7 +235,12 @@
      "answer": [
       5
      ],
-     "explanation": "품종 개량은 오히려 닭의 면역력을 떨어뜨려, 밀집 사육과 함께 조류 독감 같은 감염병에 매우 취약하게 만들었다. ①~④는 모두 '치킨 경제학의 시작'에 나오는 내용이다."
+     "explanation": "품종 개량은 오히려 닭의 면역력을 떨어뜨려, 밀집 사육과 함께 조류 독감 같은 감염병에 매우 취약하게 만들었다. ①~④는 모두 '치킨 경제학의 시작'에 나오는 내용이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 218.55,
+      "end": 257.95
+     }
     },
     {
      "id": "kor-u1-08",
@@ -233,7 +268,12 @@
      "answer": [
       4
      ],
-     "explanation": "글의 끝부분은 닭과 인간의 관계가 어떻게 변해야 할지 **질문을 던지며** 마무리하여 독자가 스스로 생각하고 실천하도록 이끈다. 법으로 금지하자고 단정적으로 요구하는 내용은 없다."
+     "explanation": "글의 끝부분은 닭과 인간의 관계가 어떻게 변해야 할지 **질문을 던지며** 마무리하여 독자가 스스로 생각하고 실천하도록 이끈다. 법으로 금지하자고 단정적으로 요구하는 내용은 없다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 257.95,
+      "end": 295.6
+     }
     },
     {
      "id": "kor-u1-09",
@@ -261,7 +301,12 @@
      "answer": [
       1
      ],
-     "explanation": "기사 속 농장은 넓은 공간·소등·횃대·깔짚·차양막 등으로 닭의 습성을 존중하고 스트레스를 줄인다. 글쓴이는 이런 농장이 공장식 축산의 대안이 될 수 있음을 보여 주려 한 것이다. ②는 공장식 닭장의 방식이고, 차양막은 맹금류를 없애는 것이 아니라 공포심을 줄이는 장치이다."
+     "explanation": "기사 속 농장은 넓은 공간·소등·횃대·깔짚·차양막 등으로 닭의 습성을 존중하고 스트레스를 줄인다. 글쓴이는 이런 농장이 공장식 축산의 대안이 될 수 있음을 보여 주려 한 것이다. ②는 공장식 닭장의 방식이고, 차양막은 맹금류를 없애는 것이 아니라 공포심을 줄이는 장치이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 295.6,
+      "end": 348.35
+     }
     },
     {
      "id": "kor-u1-10",
@@ -289,7 +334,12 @@
      "answer": [
       3
      ],
-     "explanation": "글쓴이는 공장식 축산의 문제를 비판하고, 사육 환경 개선·유기농 운동처럼 더 건강하고 올바르게 먹는 방법을 제시한다. 치킨을 '아예 안 먹을 수는 없다'고 했으므로 ②는 틀리고, ①·④·⑤는 글쓴이의 비판 대상이거나 글의 일부 정보일 뿐이다."
+     "explanation": "글쓴이는 공장식 축산의 문제를 비판하고, 사육 환경 개선·유기농 운동처럼 더 건강하고 올바르게 먹는 방법을 제시한다. 치킨을 '아예 안 먹을 수는 없다'고 했으므로 ②는 틀리고, ①·④·⑤는 글쓴이의 비판 대상이거나 글의 일부 정보일 뿐이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u1.mp4",
+      "start": 348.35,
+      "end": 398.1
+     }
     }
    ]
   },
@@ -327,7 +377,12 @@
      "answer": [
       2
      ],
-     "explanation": "두 사람 모두 '리더십'이라는 이유를 들었지만, 하늘이만 체육 대회 응원이라는 구체적인 사례(근거)를 제시하여 설득력이 높다. 말의 길이 자체가 설득력을 결정하는 것은 아니다."
+     "explanation": "두 사람 모두 '리더십'이라는 이유를 들었지만, 하늘이만 체육 대회 응원이라는 구체적인 사례(근거)를 제시하여 설득력이 높다. 말의 길이 자체가 설득력을 결정하는 것은 아니다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 8.25,
+      "end": 45.3
+     }
     },
     {
      "id": "kor-u2-02",
@@ -355,7 +410,12 @@
      "answer": [
       4
      ],
-     "explanation": "설득력을 높이려면 '리더십이 있다'는 이유를 뒷받침하는 구체적인 사례를 들어야 한다. ①은 같은 말의 반복, ②·⑤는 지나치게 단정적인 표현, ③은 개인적 친분으로 타당한 근거가 아니다."
+     "explanation": "설득력을 높이려면 '리더십이 있다'는 이유를 뒷받침하는 구체적인 사례를 들어야 한다. ①은 같은 말의 반복, ②·⑤는 지나치게 단정적인 표현, ③은 개인적 친분으로 타당한 근거가 아니다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 45.3,
+      "end": 75.6
+     }
     },
     {
      "id": "kor-u2-03",
@@ -383,7 +443,12 @@
      "answer": [
       1
      ],
-     "explanation": "주장하는 글은 계획하기 → 내용 생성하기 → 내용 조직하기 → 표현하기 → 고쳐쓰기 순서로 쓴다."
+     "explanation": "주장하는 글은 계획하기 → 내용 생성하기 → 내용 조직하기 → 표현하기 → 고쳐쓰기 순서로 쓴다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 75.6,
+      "end": 103.0
+     }
     },
     {
      "id": "kor-u2-04",
@@ -411,7 +476,12 @@
      "answer": [
       3
      ],
-     "explanation": "글쓰기는 한 방향으로만 가지 않는 회귀적 과정이므로, 표현하기 단계에서 근거가 부족하면 내용 생성하기·내용 조직하기 단계로 되돌아가 타당한 근거를 보완할 수 있다. ②는 설득력을 떨어뜨리고, ⑤는 신뢰성이 없는 자료이다."
+     "explanation": "글쓰기는 한 방향으로만 가지 않는 회귀적 과정이므로, 표현하기 단계에서 근거가 부족하면 내용 생성하기·내용 조직하기 단계로 되돌아가 타당한 근거를 보완할 수 있다. ②는 설득력을 떨어뜨리고, ⑤는 신뢰성이 없는 자료이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 103.0,
+      "end": 141.45
+     }
     },
     {
      "id": "kor-u2-05",
@@ -439,7 +509,12 @@
      "answer": [
       3
      ],
-     "explanation": "개인 블로그 글은 출처가 명확하지 않아 **신뢰성**이 부족하고, 청소년 지도사 처우를 다룬 텔레비전 뉴스는 믿을 만하지만 주장과 **관련성**이 없어 제외되었다. ⑤는 뉴스를 신뢰성 문제로 잘못 짝 지었고, ①·④는 실제로 사용한 자료이다."
+     "explanation": "개인 블로그 글은 출처가 명확하지 않아 **신뢰성**이 부족하고, 청소년 지도사 처우를 다룬 텔레비전 뉴스는 믿을 만하지만 주장과 **관련성**이 없어 제외되었다. ⑤는 뉴스를 신뢰성 문제로 잘못 짝 지었고, ①·④는 실제로 사용한 자료이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 141.45,
+      "end": 182.35
+     }
     },
     {
      "id": "kor-u2-06",
@@ -467,7 +542,12 @@
      "answer": [
       5
      ],
-     "explanation": "'편안하고 자유롭게 놀 수 있다'는 이유는 눈치 없이 쉴 수 있다는 연구 [라]와 이용 학생 면담 [다]가 뒷받침하고, '자기 개발'이라는 이유는 다양한 프로그램과 전문가 의견을 담은 신문 기사 [나]가 뒷받침한다."
+     "explanation": "'편안하고 자유롭게 놀 수 있다'는 이유는 눈치 없이 쉴 수 있다는 연구 [라]와 이용 학생 면담 [다]가 뒷받침하고, '자기 개발'이라는 이유는 다양한 프로그램과 전문가 의견을 담은 신문 기사 [나]가 뒷받침한다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 182.35,
+      "end": 218.95
+     }
     },
     {
      "id": "kor-u2-07",
@@ -495,7 +575,12 @@
      "answer": [
       5
      ],
-     "explanation": "결론은 본론 요약, 주장 강조, 제안·바람을 담는 부분이다. 이유와 근거 자료를 제시하는 것은 본론의 역할이다."
+     "explanation": "결론은 본론 요약, 주장 강조, 제안·바람을 담는 부분이다. 이유와 근거 자료를 제시하는 것은 본론의 역할이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 218.95,
+      "end": 245.6
+     }
     },
     {
      "id": "kor-u2-08",
@@ -523,7 +608,12 @@
      "answer": [
       1
      ],
-     "explanation": "'무조건', '절대로' 같은 지나치게 강한 어조는 독자에게 거부감을 주어 오히려 설득력을 떨어뜨린다. ②는 '연구에 따르면'을 '장여옥·임양지의 연구에 따르면'으로 고친 까닭이다."
+     "explanation": "'무조건', '절대로' 같은 지나치게 강한 어조는 독자에게 거부감을 주어 오히려 설득력을 떨어뜨린다. ②는 '연구에 따르면'을 '장여옥·임양지의 연구에 따르면'으로 고친 까닭이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 245.6,
+      "end": 291.0
+     }
     },
     {
      "id": "kor-u2-09",
@@ -551,7 +641,12 @@
      "answer": [
       4
      ],
-     "explanation": "근거는 주장을 뒷받침하는 객관적 자료, 개요는 글의 계획을 한눈에 보이게 정리한 것, 출처는 인용한 자료가 수록된 곳이다. '주장'은 상대를 설득하기 위한 글쓴이의 생각이다."
+     "explanation": "근거는 주장을 뒷받침하는 객관적 자료, 개요는 글의 계획을 한눈에 보이게 정리한 것, 출처는 인용한 자료가 수록된 곳이다. '주장'은 상대를 설득하기 위한 글쓴이의 생각이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 291.0,
+      "end": 321.2
+     }
     },
     {
      "id": "kor-u2-10",
@@ -579,7 +674,12 @@
      "answer": [
       2
      ],
-     "explanation": "신문 기사는 기사 제목, 신문사명, 날짜를 밝힌다(⑤). 신문을 산 가게 이름은 출처 정보가 아니다."
+     "explanation": "신문 기사는 기사 제목, 신문사명, 날짜를 밝힌다(⑤). 신문을 산 가게 이름은 출처 정보가 아니다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u2.mp4",
+      "start": 321.2,
+      "end": 351.75
+     }
     }
    ]
   },
@@ -617,7 +717,12 @@
      "answer": [
       2
      ],
-     "explanation": "'하늘'은 '하'와 '늘'로 나누면 본래 뜻이 사라지므로 형태소 1개이다. 논밭(논+밭), 돌다리(돌+다리), 헛수고(헛-+수고)는 2개, 보았다(보-+-았-+-다)는 3개이다."
+     "explanation": "'하늘'은 '하'와 '늘'로 나누면 본래 뜻이 사라지므로 형태소 1개이다. 논밭(논+밭), 돌다리(돌+다리), 헛수고(헛-+수고)는 2개, 보았다(보-+-았-+-다)는 3개이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 7.35,
+      "end": 49.45
+     }
     },
     {
      "id": "kor-u3-02",
@@ -645,7 +750,12 @@
      "answer": [
       5
      ],
-     "explanation": "'보았다'는 어간 '보-', 과거 어미 '-았-', 종결 어미 '-다'의 3개 형태소이다. 용언의 어간 '보-'는 혼자 쓰일 수 없지만(의존) '보다'라는 구체적 뜻이 있어(실질) 의존·실질 형태소이다. '-았-'은 형식 형태소이다."
+     "explanation": "'보았다'는 어간 '보-', 과거 어미 '-았-', 종결 어미 '-다'의 3개 형태소이다. 용언의 어간 '보-'는 혼자 쓰일 수 없지만(의존) '보다'라는 구체적 뜻이 있어(실질) 의존·실질 형태소이다. '-았-'은 형식 형태소이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 49.45,
+      "end": 85.95
+     }
     },
     {
      "id": "kor-u3-03",
@@ -673,7 +783,12 @@
      "answer": [
       4
      ],
-     "explanation": "형태소는 동생/이/밥/을/먹-/-었-/-다의 7개이다. 자립 형태소는 '동생', '밥' 2개이고, 실질 형태소는 '동생', '밥', '먹-' 3개이다. 용언의 어간 '먹-'만 의존이면서 실질 형태소이고, '-었-'은 의존·형식 형태소이다."
+     "explanation": "형태소는 동생/이/밥/을/먹-/-었-/-다의 7개이다. 자립 형태소는 '동생', '밥' 2개이고, 실질 형태소는 '동생', '밥', '먹-' 3개이다. 용언의 어간 '먹-'만 의존이면서 실질 형태소이고, '-었-'은 의존·형식 형태소이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 85.95,
+      "end": 127.65
+     }
     },
     {
      "id": "kor-u3-04",
@@ -701,7 +816,12 @@
      "answer": [
       3
      ],
-     "explanation": "'감나무'는 과일 이름 '감'과 '나무'가 모두 실질적 의미를 지닌 어근이므로 접사가 없는 합성어이다. 햇밤(햇-), 한겨울(한-), 나무꾼(-꾼), 헛수고(헛-)에는 접사가 있다."
+     "explanation": "'감나무'는 과일 이름 '감'과 '나무'가 모두 실질적 의미를 지닌 어근이므로 접사가 없는 합성어이다. 햇밤(햇-), 한겨울(한-), 나무꾼(-꾼), 헛수고(헛-)에는 접사가 있다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 127.65,
+      "end": 161.55
+     }
     },
     {
      "id": "kor-u3-05",
@@ -729,7 +849,12 @@
      "answer": [
       1
      ],
-     "explanation": "'-꾼'은 '어떤 일을 전문적·습관적으로 잘하는 사람'을 뜻하며 나무꾼·사랑꾼·노래꾼처럼 나쁜 일에만 쓰이지 않는다. ②~⑤는 모두 옳은 설명이다."
+     "explanation": "'-꾼'은 '어떤 일을 전문적·습관적으로 잘하는 사람'을 뜻하며 나무꾼·사랑꾼·노래꾼처럼 나쁜 일에만 쓰이지 않는다. ②~⑤는 모두 옳은 설명이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 161.55,
+      "end": 192.15
+     }
     },
     {
      "id": "kor-u3-06",
@@ -757,7 +882,12 @@
      "answer": [
       1
      ],
-     "explanation": "바다·얼굴·마음은 어근 하나로 된 단일어이다. 맨발·웃음·날고기는 파생어, 집안은 합성어이다. '고맙다'는 단일어이지만 '날고기'가 파생어이다."
+     "explanation": "바다·얼굴·마음은 어근 하나로 된 단일어이다. 맨발·웃음·날고기는 파생어, 집안은 합성어이다. '고맙다'는 단일어이지만 '날고기'가 파생어이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 192.15,
+      "end": 222.05
+     }
     },
     {
      "id": "kor-u3-07",
@@ -785,7 +915,12 @@
      "answer": [
       3
      ],
-     "explanation": "선생님(선생+-님), 새파랗다(새-+파랗다), 달리기(달리-+-기)는 모두 파생어이다. 찬밥·감나무·오가다는 합성어, 바구니는 단일어이다."
+     "explanation": "선생님(선생+-님), 새파랗다(새-+파랗다), 달리기(달리-+-기)는 모두 파생어이다. 찬밥·감나무·오가다는 합성어, 바구니는 단일어이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 222.05,
+      "end": 246.65
+     }
     },
     {
      "id": "kor-u3-08",
@@ -813,7 +948,12 @@
      "answer": [
       2
      ],
-     "explanation": "ㄱ. '-었-', '-다'는 접사가 아니라 어미이므로 '먹었다'는 단일어이다. ㄹ. '바구니'는 더 나눌 수 없는 어근 1개의 단일어이다. ㄴ·ㄷ만 옳다."
+     "explanation": "ㄱ. '-었-', '-다'는 접사가 아니라 어미이므로 '먹었다'는 단일어이다. ㄹ. '바구니'는 더 나눌 수 없는 어근 1개의 단일어이다. ㄴ·ㄷ만 옳다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 246.65,
+      "end": 273.9
+     }
     },
     {
      "id": "kor-u3-09",
@@ -841,7 +981,12 @@
      "answer": [
       4
      ],
-     "explanation": "'풋노인'은 접사 '풋-'과 어근 '노인'이 결합한 파생의 방법으로 만들어졌다. '사랑꾼'도 어근 '사랑'에 접사 '-꾼'이 붙은 파생어이다. 돌직구는 합성, 웃프다는 두 말에서 한 글자씩 따서 합침, 남사친·먹방은 줄임으로 만들어졌다."
+     "explanation": "'풋노인'은 접사 '풋-'과 어근 '노인'이 결합한 파생의 방법으로 만들어졌다. '사랑꾼'도 어근 '사랑'에 접사 '-꾼'이 붙은 파생어이다. 돌직구는 합성, 웃프다는 두 말에서 한 글자씩 따서 합침, 남사친·먹방은 줄임으로 만들어졌다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 273.9,
+      "end": 308.45
+     }
     },
     {
      "id": "kor-u3-10",
@@ -869,7 +1014,12 @@
      "answer": [
       5
      ],
-     "explanation": "외국어가 무분별하게 섞인 새말(신스틸러, 꽃캉스 등)은 세대·배경에 따라 뜻을 알기 어려워 의사소통을 방해한다. '에어 캡'을 다듬은 '뽁뽁이'처럼 쉬운 말로 의미가 잘 전달되고 발음이 편해야 잘 정착된다."
+     "explanation": "외국어가 무분별하게 섞인 새말(신스틸러, 꽃캉스 등)은 세대·배경에 따라 뜻을 알기 어려워 의사소통을 방해한다. '에어 캡'을 다듬은 '뽁뽁이'처럼 쉬운 말로 의미가 잘 전달되고 발음이 편해야 잘 정착된다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u3.mp4",
+      "start": 308.45,
+      "end": 342.9
+     }
     }
    ]
   },
@@ -907,7 +1057,12 @@
      "answer": [
       3
      ],
-     "explanation": "'가와가와' 우는 까마귀 소리를 귀로 느끼게 하므로 청각적 심상이다."
+     "explanation": "'가와가와' 우는 까마귀 소리를 귀로 느끼게 하므로 청각적 심상이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 8.9,
+      "end": 26.6
+     }
     },
     {
      "id": "kor-u4-02",
@@ -935,7 +1090,12 @@
      "answer": [
       1
      ],
-     "explanation": "㉠ '부드러운' 털은 피부로 느끼는 촉각, ㉡ '향기'는 코로 느끼는 후각, ㉢ 금방울처럼 '호동그란' 눈은 모양을 눈으로 보는 시각적 심상이다."
+     "explanation": "㉠ '부드러운' 털은 피부로 느끼는 촉각, ㉡ '향기'는 코로 느끼는 후각, ㉢ 금방울처럼 '호동그란' 눈은 모양을 눈으로 보는 시각적 심상이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 26.6,
+      "end": 53.85
+     }
     },
     {
      "id": "kor-u4-03",
@@ -963,7 +1123,12 @@
      "answer": [
       4
      ],
-     "explanation": "'풀피리 소리'는 귀로 느끼는 청각적 심상, '쓰디쓰다'는 맛으로 느끼는 미각적 심상이다."
+     "explanation": "'풀피리 소리'는 귀로 느끼는 청각적 심상, '쓰디쓰다'는 맛으로 느끼는 미각적 심상이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 53.85,
+      "end": 73.1
+     }
     },
     {
      "id": "kor-u4-04",
@@ -991,7 +1156,12 @@
      "answer": [
       5
      ],
-     "explanation": "'고기 입이 오물거리는'은 물고기 입의 움직임을 눈으로 보는 듯한 **시각적** 심상이다. 소리를 나타내는 표현이 아니다."
+     "explanation": "'고기 입이 오물거리는'은 물고기 입의 움직임을 눈으로 보는 듯한 **시각적** 심상이다. 소리를 나타내는 표현이 아니다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 73.1,
+      "end": 98.5
+     }
     },
     {
      "id": "kor-u4-05",
@@ -1019,7 +1189,12 @@
      "answer": [
       2
      ],
-     "explanation": "'남루(襤褸)'는 낡아 해진 옷을 뜻하며 '행색이 남루하다'처럼 쓰인다. 거처는 머물러 사는 장소, 군락은 식물의 집단, 담수는 민물, 견문은 보고 들어 얻은 지식이다."
+     "explanation": "'남루(襤褸)'는 낡아 해진 옷을 뜻하며 '행색이 남루하다'처럼 쓰인다. 거처는 머물러 사는 장소, 군락은 식물의 집단, 담수는 민물, 견문은 보고 들어 얻은 지식이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 98.5,
+      "end": 123.15
+     }
     },
     {
      "id": "kor-u4-06",
@@ -1047,7 +1222,12 @@
      "answer": [
       2
      ],
-     "explanation": "'대목'은 ① 명절을 앞두고 물건이 많이 팔리는 시기, ② 이야기나 글의 특정한 부분이라는 두 뜻이 있다. (가)는 ①, (나)는 ②이다. '큰길에서 갈라진 길', '원래 방향에서 벗어난 방향'은 '곁길', '걸어 다니는 수고'는 '발품'의 뜻이다."
+     "explanation": "'대목'은 ① 명절을 앞두고 물건이 많이 팔리는 시기, ② 이야기나 글의 특정한 부분이라는 두 뜻이 있다. (가)는 ①, (나)는 ②이다. '큰길에서 갈라진 길', '원래 방향에서 벗어난 방향'은 '곁길', '걸어 다니는 수고'는 '발품'의 뜻이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 123.15,
+      "end": 161.8
+     }
     },
     {
      "id": "kor-u4-07",
@@ -1075,7 +1255,12 @@
      "answer": [
       5
      ],
-     "explanation": "(가) 머물러 사는 장소인 '거처', (나) 함께 생활하는 식물의 집단인 '군락', (다) 이야기가 원래 방향에서 벗어난 방향인 '곁길'이 알맞다. '구천'은 죽은 후 영혼이 가는 곳이다."
+     "explanation": "(가) 머물러 사는 장소인 '거처', (나) 함께 생활하는 식물의 집단인 '군락', (다) 이야기가 원래 방향에서 벗어난 방향인 '곁길'이 알맞다. '구천'은 죽은 후 영혼이 가는 곳이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 161.8,
+      "end": 196.45
+     }
     },
     {
      "id": "kor-u4-08",
@@ -1103,7 +1288,12 @@
      "answer": [
       3
      ],
-     "explanation": "'두문불출(杜門不出)'은 문을 닫고 나가지 않는다는 뜻으로, 외출하지 않고 집 안에만 틀어박혀 있음을 이른다. '동분서주'는 오히려 여기저기 바쁘게 돌아다니는 모습이다."
+     "explanation": "'두문불출(杜門不出)'은 문을 닫고 나가지 않는다는 뜻으로, 외출하지 않고 집 안에만 틀어박혀 있음을 이른다. '동분서주'는 오히려 여기저기 바쁘게 돌아다니는 모습이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 196.45,
+      "end": 226.15
+     }
     },
     {
      "id": "kor-u4-09",
@@ -1131,7 +1321,12 @@
      "answer": [
       1
      ],
-     "explanation": "(가)는 '양을 잃고 우리를 고친다'는 망양보뢰(亡羊補牢), (나)는 '말의 귀에 동풍'이라는 마이동풍(馬耳東風)과 뜻이 통한다."
+     "explanation": "(가)는 '양을 잃고 우리를 고친다'는 망양보뢰(亡羊補牢), (나)는 '말의 귀에 동풍'이라는 마이동풍(馬耳東風)과 뜻이 통한다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 226.15,
+      "end": 261.65
+     }
     },
     {
      "id": "kor-u4-10",
@@ -1159,7 +1354,12 @@
      "answer": [
       4
      ],
-     "explanation": "'망양보뢰'는 양을 잃고 나서야 우리를 고친다는 뜻으로, 이미 실패한 뒤에 뉘우쳐도 소용없음을 이른다. 미리 대비해 사고를 막은 상황에는 맞지 않는다."
+     "explanation": "'망양보뢰'는 양을 잃고 나서야 우리를 고친다는 뜻으로, 이미 실패한 뒤에 뉘우쳐도 소용없음을 이른다. 미리 대비해 사고를 막은 상황에는 맞지 않는다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
+      "start": 261.65,
+      "end": 297.55
+     }
     }
    ]
   },
@@ -1197,7 +1397,12 @@
      "answer": [
       2
      ],
-     "explanation": "'도무지 ~ 무섭지 않다'처럼 어떤 사실을 딱 잘라 판단·결정하여 말하므로 단정적 어조이다."
+     "explanation": "'도무지 ~ 무섭지 않다'처럼 어떤 사실을 딱 잘라 판단·결정하여 말하므로 단정적 어조이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 9.75,
+      "end": 35.05
+     }
     },
     {
      "id": "kor-u5-02",
@@ -1225,7 +1430,12 @@
      "answer": [
       5
      ],
-     "explanation": "'왜 사냐건 / 웃지요'는 삶의 이유를 묻는 질문에 말없이 웃음으로 답하며, 근심·걱정에서 벗어나 초월한 **달관적** 태도를 집약해 보여 주는 구절이다."
+     "explanation": "'왜 사냐건 / 웃지요'는 삶의 이유를 묻는 질문에 말없이 웃음으로 답하며, 근심·걱정에서 벗어나 초월한 **달관적** 태도를 집약해 보여 주는 구절이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 35.05,
+      "end": 60.15
+     }
     },
     {
      "id": "kor-u5-03",
@@ -1253,7 +1463,12 @@
      "answer": [
       1
      ],
-     "explanation": "화자는 머루·다래 같은 야생 과일을 먹으며 청산에 살고 싶다고 노래하여, 괴로운 현실에서 벗어나 이상향인 청산으로 가고 싶은 **도피적** 태도를 보인다. '얄리얄리~'는 후렴구이다."
+     "explanation": "화자는 머루·다래 같은 야생 과일을 먹으며 청산에 살고 싶다고 노래하여, 괴로운 현실에서 벗어나 이상향인 청산으로 가고 싶은 **도피적** 태도를 보인다. '얄리얄리~'는 후렴구이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 60.15,
+      "end": 95.4
+     }
     },
     {
      "id": "kor-u5-04",
@@ -1281,7 +1496,12 @@
      "answer": [
       3
      ],
-     "explanation": "〈서시〉는 이상적 삶의 세계인 '별'과 어두운 현실인 '바람'을 **대조**한다. 두 시어는 같은 의미가 아니라 서로 반대되므로 ㄹ은 틀리다."
+     "explanation": "〈서시〉는 이상적 삶의 세계인 '별'과 어두운 현실인 '바람'을 **대조**한다. 두 시어는 같은 의미가 아니라 서로 반대되므로 ㄹ은 틀리다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 95.4,
+      "end": 121.05
+     }
     },
     {
      "id": "kor-u5-05",
@@ -1309,7 +1529,12 @@
      "answer": [
       4
      ],
-     "explanation": "'딴전'은 하는 일과 전혀 관계없는 일이나 행동을 뜻하며 '딴전을 피우다'로 흔히 쓰인다."
+     "explanation": "'딴전'은 하는 일과 전혀 관계없는 일이나 행동을 뜻하며 '딴전을 피우다'로 흔히 쓰인다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 121.05,
+      "end": 139.95
+     }
     },
     {
      "id": "kor-u5-06",
@@ -1337,7 +1562,12 @@
      "answer": [
       2
      ],
-     "explanation": "'면목'에는 ① 겉모습, ② 남을 대하기에 떳떳한 마음이나 처지의 뜻이 있는데, '볼 면목이 없다'는 ②의 뜻이다. ③은 명성, ④는 명분, ⑤는 도량의 뜻이다."
+     "explanation": "'면목'에는 ① 겉모습, ② 남을 대하기에 떳떳한 마음이나 처지의 뜻이 있는데, '볼 면목이 없다'는 ②의 뜻이다. ③은 명성, ④는 명분, ⑤는 도량의 뜻이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 139.95,
+      "end": 176.3
+     }
     },
     {
      "id": "kor-u5-07",
@@ -1365,7 +1595,12 @@
      "answer": [
       5
      ],
-     "explanation": "'어떤 일을 하기 위해 내세우는 이유나 핑계'는 '명분'의 뜻이다. '명성'은 세상 사람들의 평이 높아 널리 알려진 이름이다."
+     "explanation": "'어떤 일을 하기 위해 내세우는 이유나 핑계'는 '명분'의 뜻이다. '명성'은 세상 사람들의 평이 높아 널리 알려진 이름이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 176.3,
+      "end": 203.65
+     }
     },
     {
      "id": "kor-u5-08",
@@ -1393,7 +1628,12 @@
      "answer": [
       1
      ],
-     "explanation": "'묵묵부답(默默不答)'은 질문에 아무 대답 없이 침묵을 지킨다는 뜻이다."
+     "explanation": "'묵묵부답(默默不答)'은 질문에 아무 대답 없이 침묵을 지킨다는 뜻이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 203.65,
+      "end": 221.05
+     }
     },
     {
      "id": "kor-u5-09",
@@ -1421,7 +1661,12 @@
      "answer": [
       3
      ],
-     "explanation": "(가) 매점매석(買占賣惜), (나) 미사여구(美辭麗句), (다) 명실상부(名實相符)이다. 미풍양속은 아름답고 좋은 풍속, 물아일체는 자연과 내가 하나가 됨을 뜻한다."
+     "explanation": "(가) 매점매석(買占賣惜), (나) 미사여구(美辭麗句), (다) 명실상부(名實相符)이다. 미풍양속은 아름답고 좋은 풍속, 물아일체는 자연과 내가 하나가 됨을 뜻한다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 221.05,
+      "end": 255.8
+     }
     },
     {
      "id": "kor-u5-10",
@@ -1449,7 +1694,12 @@
      "answer": [
       4
      ],
-     "explanation": "'미사여구'는 **내용은 별로 없이** 아름다운 말로만 꾸민 글귀를 뜻하므로, 진심이 담겨 감동을 준 연설을 칭찬하는 데 쓰면 어울리지 않는다."
+     "explanation": "'미사여구'는 **내용은 별로 없이** 아름다운 말로만 꾸민 글귀를 뜻하므로, 진심이 담겨 감동을 준 연설을 칭찬하는 데 쓰면 어울리지 않는다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u5.mp4",
+      "start": 255.8,
+      "end": 283.6
+     }
     }
    ]
   },
@@ -1487,7 +1737,12 @@
      "answer": [
       1
      ],
-     "explanation": "'불빛이 흐릿하다'(시각)와 '도란도란거린다'(청각)는 각각 현실에서 가능한 표현으로, 두 감각이 단순히 나열된 **복합 감각** 심상이다. 한 감각을 다른 감각으로 바꾼 공감각이 아니다."
+     "explanation": "'불빛이 흐릿하다'(시각)와 '도란도란거린다'(청각)는 각각 현실에서 가능한 표현으로, 두 감각이 단순히 나열된 **복합 감각** 심상이다. 한 감각을 다른 감각으로 바꾼 공감각이 아니다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 8.95,
+      "end": 43.4
+     }
     },
     {
      "id": "kor-u6-02",
@@ -1515,7 +1770,12 @@
      "answer": [
       4
      ],
-     "explanation": "표현의 주인공인 '물소리'(청각)를 '이가 시리다'(촉각)로 옮겨 표현했으므로 **청각의 촉각화**이다. 소리가 이를 시리게 하는 것은 현실에서 불가능하므로 단순 나열인 복합 감각이 아니며, 주인공 감각을 먼저 써야 하므로 '촉각의 청각화'도 틀리다."
+     "explanation": "표현의 주인공인 '물소리'(청각)를 '이가 시리다'(촉각)로 옮겨 표현했으므로 **청각의 촉각화**이다. 소리가 이를 시리게 하는 것은 현실에서 불가능하므로 단순 나열인 복합 감각이 아니며, 주인공 감각을 먼저 써야 하므로 '촉각의 청각화'도 틀리다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 43.4,
+      "end": 75.8
+     }
     },
     {
      "id": "kor-u6-03",
@@ -1543,7 +1803,12 @@
      "answer": [
       5
      ],
-     "explanation": "제시된 시구는 '울음'(청각)을 '금빛'(시각)으로 표현한 **청각의 시각화**이다. ⑤도 '부르는 소리'(청각)가 눈앞에서 '비껴가는' 움직임(시각)처럼 표현된 청각의 시각화이다. ①은 시각의 촉각화, ②는 청각의 촉각화, ③은 복합 감각, ④는 청각의 후각화이다."
+     "explanation": "제시된 시구는 '울음'(청각)을 '금빛'(시각)으로 표현한 **청각의 시각화**이다. ⑤도 '부르는 소리'(청각)가 눈앞에서 '비껴가는' 움직임(시각)처럼 표현된 청각의 시각화이다. ①은 시각의 촉각화, ②는 청각의 촉각화, ③은 복합 감각, ④는 청각의 후각화이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 75.8,
+      "end": 120.3
+     }
     },
     {
      "id": "kor-u6-04",
@@ -1571,7 +1836,12 @@
      "answer": [
       2
      ],
-     "explanation": "형상화는 추상적인 개념·정서를 구체적인 사물로 그려 내는 것이다. 〈새로운 길〉에서 인생은 '길', 시련은 넘어야 할 '고개', 평화는 '마을'로 형상화되었다."
+     "explanation": "형상화는 추상적인 개념·정서를 구체적인 사물로 그려 내는 것이다. 〈새로운 길〉에서 인생은 '길', 시련은 넘어야 할 '고개', 평화는 '마을'로 형상화되었다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 120.3,
+      "end": 154.75
+     }
     },
     {
      "id": "kor-u6-05",
@@ -1599,7 +1869,12 @@
      "answer": [
       3
      ],
-     "explanation": "'슬하(膝下)'는 무릎 아래라는 뜻으로, 부모가 자식을 키우고 보살피는 상태를 이른다."
+     "explanation": "'슬하(膝下)'는 무릎 아래라는 뜻으로, 부모가 자식을 키우고 보살피는 상태를 이른다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 154.75,
+      "end": 173.3
+     }
     },
     {
      "id": "kor-u6-06",
@@ -1627,7 +1902,12 @@
      "answer": [
       4
      ],
-     "explanation": "소설·희곡에서 '복선'은 앞으로 일어날 사건을 독자에게 넌지시 알려 주는 것이다. ①은 병폐, ②는 술책, ③은 승화, ⑤는 비수의 뜻이다."
+     "explanation": "소설·희곡에서 '복선'은 앞으로 일어날 사건을 독자에게 넌지시 알려 주는 것이다. ①은 병폐, ②는 술책, ③은 승화, ⑤는 비수의 뜻이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 173.3,
+      "end": 202.65
+     }
     },
     {
      "id": "kor-u6-07",
@@ -1655,7 +1935,12 @@
      "answer": [
       5
      ],
-     "explanation": "'사생'은 풍경이나 실물을 **있는 그대로** 그리는 일이므로, 눈앞의 풍경을 보지 않고 상상으로 꾸며 그리는 것과 맞지 않는다."
+     "explanation": "'사생'은 풍경이나 실물을 **있는 그대로** 그리는 일이므로, 눈앞의 풍경을 보지 않고 상상으로 꾸며 그리는 것과 맞지 않는다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 202.65,
+      "end": 230.15
+     }
     },
     {
      "id": "kor-u6-08",
@@ -1683,7 +1968,12 @@
      "answer": [
       1
      ],
-     "explanation": "'백년해로(百年偕老)'는 부부가 되어 한평생 사이좋게 함께 늙어 감을 뜻한다. '백년대계'는 먼 앞날을 내다본 큰 계획이다."
+     "explanation": "'백년해로(百年偕老)'는 부부가 되어 한평생 사이좋게 함께 늙어 감을 뜻한다. '백년대계'는 먼 앞날을 내다본 큰 계획이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 230.15,
+      "end": 253.25
+     }
     },
     {
      "id": "kor-u6-09",
@@ -1711,7 +2001,12 @@
      "answer": [
       3
      ],
-     "explanation": "'백골난망'은 남이 베푼 은혜를 죽어도 잊지 못함이고, '배은망덕'은 은혜를 원수로 갚음이므로 서로 반대된다. 반포지효와 반포보은은 유의어이다."
+     "explanation": "'백골난망'은 남이 베푼 은혜를 죽어도 잊지 못함이고, '배은망덕'은 은혜를 원수로 갚음이므로 서로 반대된다. 반포지효와 반포보은은 유의어이다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 253.25,
+      "end": 279.7
+     }
     },
     {
      "id": "kor-u6-10",
@@ -1739,7 +2034,12 @@
      "answer": [
       2
      ],
-     "explanation": "'배은망덕'은 은혜를 배신하고 베풀어 준 덕을 잊는다는 부정적인 뜻이므로, 은혜를 갚는 훌륭한 태도를 칭찬하는 데 쓸 수 없다."
+     "explanation": "'배은망덕'은 은혜를 배신하고 베풀어 준 덕을 잊는다는 부정적인 뜻이므로, 은혜를 갚는 훌륭한 태도를 칭찬하는 데 쓸 수 없다.",
+     "video": {
+      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u6.mp4",
+      "start": 279.7,
+      "end": 305.15
+     }
     }
    ]
   }

@@ -7,21 +7,21 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1314';
-import { el, versioned } from './dom.js?v=20261124-1314';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1314';
-import { renderUnitsRoute } from './units.js?v=20261124-1314';
-import { buildDocQuiz } from './docquiz.js?v=20261124-1314';
-import { renderAssessRoute } from './assess.js?v=20261124-1314';
-import { renderPastRoute } from './past.js?v=20261124-1314';
-import { renderWrongbook } from './wrongbook.js?v=20261124-1314';
-import { renderBoard } from './board.js?v=20261124-1314';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1314';
-import { loadStudy } from './study.js?v=20261124-1314';
-import { renderPrint, printLinks } from './print.js?v=20261124-1314';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1314';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1314';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1314';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1417';
+import { el, versioned } from './dom.js?v=20261124-1417';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1417';
+import { renderUnitsRoute } from './units.js?v=20261124-1417';
+import { buildDocQuiz } from './docquiz.js?v=20261124-1417';
+import { renderAssessRoute } from './assess.js?v=20261124-1417';
+import { renderPastRoute } from './past.js?v=20261124-1417';
+import { renderWrongbook } from './wrongbook.js?v=20261124-1417';
+import { renderBoard } from './board.js?v=20261124-1417';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1417';
+import { loadStudy } from './study.js?v=20261124-1417';
+import { renderPrint, printLinks } from './print.js?v=20261124-1417';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1417';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1417';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1417';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
