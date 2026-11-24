@@ -7,21 +7,21 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261124-0603';
-import { el, versioned } from './dom.js?v=20261124-0603';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-0603';
-import { renderUnitsRoute } from './units.js?v=20261124-0603';
-import { buildDocQuiz } from './docquiz.js?v=20261124-0603';
-import { renderAssessRoute } from './assess.js?v=20261124-0603';
-import { renderPastRoute } from './past.js?v=20261124-0603';
-import { renderWrongbook } from './wrongbook.js?v=20261124-0603';
-import { renderBoard } from './board.js?v=20261124-0603';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-0603';
-import { loadStudy } from './study.js?v=20261124-0603';
-import { renderPrint, printLinks } from './print.js?v=20261124-0603';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-0603';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-0603';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-0603';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261124-1036';
+import { el, versioned } from './dom.js?v=20261124-1036';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261124-1036';
+import { renderUnitsRoute } from './units.js?v=20261124-1036';
+import { buildDocQuiz } from './docquiz.js?v=20261124-1036';
+import { renderAssessRoute } from './assess.js?v=20261124-1036';
+import { renderPastRoute } from './past.js?v=20261124-1036';
+import { renderWrongbook } from './wrongbook.js?v=20261124-1036';
+import { renderBoard } from './board.js?v=20261124-1036';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261124-1036';
+import { loadStudy } from './study.js?v=20261124-1036';
+import { renderPrint, printLinks } from './print.js?v=20261124-1036';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261124-1036';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, subscribeCloud, getSyncStatus } from './store.js?v=20261124-1036';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261124-1036';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -288,26 +288,59 @@ function subjectIcon(s, cls = 'subject-icon') {
 /* ── 과목 ─────────────────────────────────────────── */
 /* 개념 칩의 동영상 아이콘: 그 절(제목 아래부터 같은 급 제목 전까지)에 든 동영상 수만큼 🎬 */
 const VIDEO_RE = /(youtube\.com\/|youtu\.be\/|vimeo\.com\/|notebook\.google\.com\/|notebooklm\.google\.com\/|\.(mp4|webm|mov|m4v)(\?|#|\)|"|'|\s|$))/i;
-function countVideos(md, heading) {
+/* 문서를 제목·영상 단위로 나눈다 — 개념 칩과 단원 제목의 🎬 개수를 같은 기준으로 센다 */
+const normHead = (t) => String(t || '').replace(/\*\*/g, '').trim();
+function parseVideoDoc(md) {
   const lines = md.split('\n');
-  const norm = (t) => t.replace(/\*\*/g, '').trim();
-  const start = lines.findIndex((l) => /^#{1,6}\s/.test(l) && norm(l.replace(/^#+\s+/, '')) === norm(heading));
-  if (start < 0) return 0;
-  const level = lines[start].match(/^#+/)[0].length;
-  const urls = new Set();
+  const heads = [];
+  const videos = []; // { line, urls }
   let fence = false;
-  for (let i = start + 1; i < lines.length; i++) {
-    const l = lines[i];
-    if (/^\s*(```|~~~)/.test(l)) { fence = !fence; continue; }
-    if (fence) continue;
-    const m = l.match(/^(#+)\s/);
-    if (m && m[1].length <= level) break;
-    const found = l.match(/(https?:\/\/[^\s)"'<>]+|[^\s("'<>]+\.(mp4|webm|mov|m4v))/gi) || [];
-    for (const u of found) if (VIDEO_RE.test(u + ' ')) urls.add(u);
+  lines.forEach((l, i) => {
+    if (/^\s*(```|~~~)/.test(l)) { fence = !fence; return; }
+    if (fence) return;
+    const m = l.match(/^(#{1,6})\s+(.*)/);
+    if (m) { heads.push({ line: i, level: m[1].length, text: normHead(m[2]) }); return; }
+    const urls = (l.match(/(https?:\/\/[^\s)"'<>]+|[^\s("'<>]+\.(mp4|webm|mov|m4v))/gi) || []).filter((u) => VIDEO_RE.test(u + ' '));
+    if (urls.length) videos.push({ line: i, urls });
+  });
+  for (const [k, h] of heads.entries()) {
+    const next = heads.slice(k + 1).find((x) => x.level <= h.level);
+    h.end = next ? next.line : lines.length;
   }
-  return urls.size;
+  return { heads, videos };
 }
-async function fillVideoIcons(root, concepts) {
+/* 개념 제목 찾기 — 같은 제목이 여러 단원에 있으면(예: 8A·8B 의 「2) 단락별…」) 그 개념의 단원 안에 있는 것 */
+function conceptHead(doc, c) {
+  const same = doc.heads.filter((h) => h.text === normHead(c.heading));
+  if (same.length < 2) return same[0] || null;
+  const core = (t) => normHead(t).replace(/^[^\p{L}\p{N}]+/u, '').replace(/\s*\(.*$/, '');
+  const unitKey = core(c.unit);
+  return same.find((h) => doc.heads.some((u) => u.line < h.line && h.line < u.end && unitKey && core(u.text).includes(unitKey))) || same[0];
+}
+const countIn = (doc, h) => new Set(doc.videos.filter((v) => v.line > h.line && v.line < h.end).flatMap((v) => v.urls)).size;
+
+/* 개념 제목 밖(단원 제목 바로 아래 등)에 있는 영상 → { unit, heading, count } 목록 */
+function unitVideos(doc, concepts) {
+  const conceptHeads = concepts.map((c) => ({ c, h: conceptHead(doc, c) })).filter((x) => x.h);
+  const out = new Map();
+  for (const v of doc.videos) {
+    if (conceptHeads.some(({ h }) => v.line > h.line && v.line < h.end)) continue; // 개념 칩에서 이미 센다
+    // 영상을 품은 제목부터 바깥으로 올라가며, 그 안에 개념이 있는 첫 제목의 단원에 붙인다
+    const around = doc.heads.filter((h) => h.line < v.line && v.line < h.end).sort((a, b) => b.level - a.level);
+    for (const h of around) {
+      const inside = conceptHeads.find((x) => x.h.line > h.line && x.h.line < h.end);
+      if (!inside) continue;
+      const key = `${inside.c.unit}\n${h.text}`;
+      const rec = out.get(key) || { unit: inside.c.unit, heading: h.text, urls: new Set() };
+      v.urls.forEach((u) => rec.urls.add(u));
+      out.set(key, rec);
+      break;
+    }
+  }
+  return [...out.values()].map((r) => ({ ...r, count: r.urls.size }));
+}
+
+async function fillVideoIcons(root, concepts, docHref) {
   const texts = new Map();
   for (const c of concepts) {
     const slot = root.querySelector(`.videos[data-concept="${CSS.escape(c.id)}"]`);
@@ -316,11 +349,25 @@ async function fillVideoIcons(root, concepts) {
       const url = `exam/${c.doc.normalize('NFC').split('/').map(encodeURIComponent).join('/')}`;
       texts.set(c.doc, fetch(versioned(url)).then((r) => (r.ok ? r.text() : '')).catch(() => ''));
     }
-    const n = countVideos(await texts.get(c.doc), c.heading);
+    const md = await texts.get(c.doc);
+    const parsed = md ? parseVideoDoc(md) : null;
+    const h = parsed && conceptHead(parsed, c);
+    const n = h ? countIn(parsed, h) : 0;
     if (!n) continue;
     slot.setAttribute('aria-label', `동영상 ${n}개`);
     slot.title = `동영상 ${n}개`;
     slot.textContent = '🎬'.repeat(n);
+  }
+  // 단원 제목 옆: 개념 칩 밖에 있는 영상
+  if (!docHref) return;
+  for (const file of new Set(concepts.map((c) => c.doc).filter(Boolean))) {
+    const md = await texts.get(file);
+    if (!md) continue;
+    for (const v of unitVideos(parseVideoDoc(md), concepts.filter((c) => c.doc === file))) {
+      const slot = root.querySelector(`.unit-videos[data-unit="${CSS.escape(v.unit)}"]`);
+      if (!slot) continue;
+      slot.append(el('a.unit-video', { href: `${docHref(file)}?h=${encodeURIComponent(v.heading)}`, title: `동영상 ${v.count}개`, 'aria-label': `동영상 ${v.count}개 보러 가기` }, `${'🎬'.repeat(v.count)} 영상`));
+    }
   }
 }
 
@@ -417,7 +464,7 @@ async function renderSubject(s) {
             el('div.section-head', {}, el('h2', { text: '개념' }), el('p', { text: '점이 많을수록 시험에 자주 나오는 개념입니다. 누르면 그 부분으로 갑니다.' }), conceptLegend()),
             [...byUnit].map(([unit, list]) =>
               el('div.unit', {},
-                el('h3', { text: unit }),
+                el('h3', {}, unit, el('span.unit-videos', { 'data-unit': unit })),
                 el('ul.chips', {},
                   list.map((c) =>
                     el('li', {},
@@ -448,7 +495,7 @@ async function renderSubject(s) {
     )
   );
   void renderHistory(ctx, s, problems);
-  void fillVideoIcons(app, conceptsOf(s));
+  void fillVideoIcons(app, conceptsOf(s), (file) => `#/s/${s.code}/${docIndexByFile.get(file) ?? 0}`);
 }
 
 function tile(num, unit, label) {

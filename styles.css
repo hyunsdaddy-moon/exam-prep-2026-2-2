@@ -842,6 +842,10 @@ button.link.danger { color: var(--bad); }
 .past-page figcaption { text-align: center; font-size: 13px; color: var(--text-2); margin-top: 6px; }
 .videos:empty { display: none; }
 .videos { font-size: 12px; letter-spacing: 1px; line-height: 1; }
+.unit-videos:empty { display: none; }
+.unit-videos { display: inline-flex; gap: 6px; margin-left: 10px; vertical-align: middle; }
+.unit-video { font-size: 12px; font-weight: 500; color: var(--text-2); background: var(--bg-soft); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+.unit-video:hover { color: var(--text); text-decoration: none; filter: brightness(0.97); }
 
 /* 읽기 문서 끝 단원 평가 — 수준 평가와 같은 흰 시험지 */
 .dq { margin-top: 56px; }
