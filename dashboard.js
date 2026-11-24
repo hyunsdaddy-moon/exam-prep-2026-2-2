@@ -8,11 +8,11 @@
  *   (개념 진도율은 과목 페이지와 같은 값 — 개념 읽기·예상 문제 풀이로 계산)
  */
 
-import { el } from './dom.js?v=20261124-1649';
-import { loadRecords, getCurrentLearner } from './store.js?v=20261124-1649';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1649';
-import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-1649';
-import { loadStudy } from './study.js?v=20261124-1649';
+import { el } from './dom.js?v=20261124-1653';
+import { loadRecords, getCurrentLearner } from './store.js?v=20261124-1653';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261124-1653';
+import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261124-1653';
+import { loadStudy } from './study.js?v=20261124-1653';
 
 const QUIZ_ROUND_BASE = 40;
 const normQ = (q) => String(q).replace(/^([a-z]+)-d(\d+)-(\d+)$/, '$1-q$2-$3');
@@ -56,15 +56,14 @@ const line = (label, value, detail, kind) => el('div.db-line', {},
   el('span.db-line-detail', { text: detail })
 );
 
-export async function renderDashboard(ctx, exam, data) {
-  document.title = `학습 현황 — ${exam.title}`;
-  ctx.setNav('dashboard');
-  const learner = getCurrentLearner();
-  const [loaded, study] = await Promise.all([loadRecords(), loadStudy(ctx, exam.subjects, data.concepts)]);
-  const counts = watchCounts(loaded.records, learner);
-  const merged = mergeRecordsForLearner(loaded.records, learner);
-
-  const subjects = await Promise.all(exam.subjects.map(async (s) => {
+/**
+ * 참여자 한 명의 과목·단원별 진도 (대결 화면도 함께 쓴다)
+ * rows[].correct = 가장 최근 회차에서 맞힌 문항 수
+ */
+export async function computeProgress(ctx, exam, records, learner) {
+  const counts = watchCounts(records, learner);
+  const merged = mergeRecordsForLearner(records, learner);
+  return Promise.all(exam.subjects.map(async (s) => {
     const quizData = await ctx.getJson(`data/docquiz/${s.code}.json`).catch(() => ({ docs: {} }));
     const docs = await Promise.all((s.docs || []).map(async (d, index) => {
       const quiz = quizData.docs?.[d.file];
@@ -92,12 +91,14 @@ export async function renderDashboard(ctx, exam, data) {
         answered = touched.size;
         tries = sessions.map((x) => {
           const m = byS.get(x.session);
-          return { at: x.at, score: pct([...m.values()].filter((a) => a.correct === true).length, qTotal) };
+          const correct = [...m.values()].filter((a) => a.correct === true).length;
+          return { at: x.at, correct, score: pct(correct, qTotal) };
         });
       }
       return {
         doc: d, index, videos: videos.length, watched, views,
         qTotal, answered, tries,
+        correct: tries.at(-1)?.correct ?? 0,
         last: tries.at(-1)?.score ?? null,
         best: tries.length ? Math.max(...tries.map((t) => t.score)) : null,
       };
@@ -108,9 +109,18 @@ export async function renderDashboard(ctx, exam, data) {
     const views = rows.reduce((a, r) => a + r.views, 0);
     const qT = rows.reduce((a, r) => a + r.qTotal, 0);
     const qA = rows.reduce((a, r) => a + r.answered, 0);
+    const qC = rows.reduce((a, r) => a + r.correct, 0);
     const score = avg(rows.filter((r) => r.last != null).map((r) => r.last));
-    return { s, rows, v, w, views, qT, qA, score, info: study.bySubject.get(s.code) };
+    return { s, rows, v, w, views, qT, qA, qC, score };
   }));
+}
+
+export async function renderDashboard(ctx, exam, data) {
+  document.title = `학습 현황 — ${exam.title}`;
+  ctx.setNav('dashboard');
+  const learner = getCurrentLearner();
+  const [loaded, study] = await Promise.all([loadRecords(), loadStudy(ctx, exam.subjects, data.concepts)]);
+  const subjects = (await computeProgress(ctx, exam, loaded.records, learner)).map((x) => ({ ...x, info: study.bySubject.get(x.s.code) }));
 
   const V = subjects.reduce((a, x) => a + x.v, 0);
   const W = subjects.reduce((a, x) => a + x.w, 0);
@@ -157,6 +167,7 @@ export async function renderDashboard(ctx, exam, data) {
       el('p.eyebrow', { text: `${learner} · 학습 현황` }),
       el('h1', { text: `종합 성취도 ${overall}%` }),
       el('p.sub', { text: '영상 30% · 문제 풀이 진도 30% · 단원 평가 최근 점수 40%로 계산합니다.' }),
+      el('div.hero-actions', {}, el('a.pill', { href: '#/versus', text: '⚔️ 대결 보기' })),
       !loaded.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
     ),
     el('div.wrap', {},

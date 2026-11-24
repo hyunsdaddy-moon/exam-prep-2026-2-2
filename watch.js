@@ -1,14 +1,14 @@
 /*
- * 시험 준비 웹앱 — 영상 시청 횟수 (영상마다 체크박스 5칸)
+ * 시험 준비 웹앱 — 영상 시청 횟수 (영상마다 체크박스 5칸, 끝까지 보면 자동으로 한 칸)
  *
  * 저장: Firestore 규칙을 바꾸지 않으려고 'read' 기록에 concept = "v:<영상 이름>:<횟수>" 로 남긴다.
  *       기록은 고칠 수 없으므로 바꿀 때마다 새 기록을 하나 더 남기고, 영상마다 가장 나중 기록이 이긴다.
  *       ('v:' 로 시작하는 값은 개념 id 와 겹치지 않으므로 개념 읽음 계산에는 섞이지 않는다.)
  */
 
-import { el } from './dom.js?v=20261124-1649';
-import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261124-1649';
-import { filterRecordsByLearner } from './grade.mjs?v=20261124-1649';
+import { el } from './dom.js?v=20261124-1653';
+import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261124-1653';
+import { filterRecordsByLearner } from './grade.mjs?v=20261124-1653';
 
 export const MAX_WATCH = 5;
 const PREFIX = 'v:';
@@ -69,5 +69,25 @@ export async function attachWatchBoxes(container, subjectCode) {
     );
     paint();
     v.after(row);
+
+    // 자동 체크: 영상을 실제로 재생한 시간이 길이의 80% 를 넘은 채 끝나면 한 칸을 채운다 (끝으로 건너뛰면 세지 않는다)
+    let played = 0;
+    let lastTime = null;
+    v.addEventListener('timeupdate', () => {
+      const t = v.currentTime;
+      if (lastTime != null && !v.seeking && t > lastTime && t - lastTime < 1.5) played += t - lastTime;
+      lastTime = t;
+    });
+    v.addEventListener('seeking', () => { lastTime = null; });
+    v.addEventListener('ended', () => {
+      const enough = v.duration > 0 && played >= v.duration * 0.8;
+      played = 0;
+      lastTime = null;
+      if (!enough || n >= MAX_WATCH) return;
+      n += 1;
+      paint();
+      label.textContent += ' · 자동 체크';
+      void saveRecords([{ type: 'read', concept: `${PREFIX}${key}:${n}`, subject: subjectCode }]);
+    });
   }
 }
