@@ -690,6 +690,22 @@
       "id": "vie-3-1-12",
       "k": "blank",
       "q": "요리하다 = [[nấu]]"
+     },
+     {
+      "id": "vie-3-1-13",
+      "k": "blank",
+      "q": "팔다 = [[bán]], 아내 = [[vợ]]"
+     },
+     {
+      "id": "vie-3-1-14",
+      "k": "blank",
+      "q": "작다 = [[nhỏ]], 크다 = [[to]] / [[lớn]]"
+     },
+     {
+      "id": "vie-3-1-15",
+      "k": "qa",
+      "q": "nhưng 의 뜻은?",
+      "a": "그러나, 하지만"
      }
     ]
    },
@@ -716,9 +732,9 @@
      {
       "id": "vie-3-2-04",
       "k": "ox",
-      "q": "'Em muốn thử ăn món này.'가 이 단원의 바른 어순이다.",
-      "a": "X",
-      "why": "thử는 동사 뒤: Em muốn ăn thử món này."
+      "q": "교재 2.4 'muốn/ em/ ăn/ thử/ món này'의 정답은 'Em muốn ăn thử món này.'이다.",
+      "a": "O",
+      "why": "기본은 동사 바로 뒤에 thử: ăn thử."
      },
      {
       "id": "vie-3-2-05",
@@ -757,6 +773,28 @@
       "id": "vie-3-2-11",
       "k": "blank",
       "q": "이 책 읽어 보고 싶어? = Em [[có]] muốn đọc [[thử]] quyển sách này không?"
+     },
+     {
+      "id": "vie-3-2-12",
+      "k": "blank",
+      "q": "동물 이름 묻기: [[Con]] này tiếng Việt gọi là gì? – Con heo."
+     },
+     {
+      "id": "vie-3-2-13",
+      "k": "blank",
+      "q": "Bạn nấu ăn [[thế nào]]? – Không ngon lắm!"
+     },
+     {
+      "id": "vie-3-2-14",
+      "k": "ox",
+      "q": "thử가 동사 앞에 오면(Anh thử ăn đi) 해 보라고 권하고 설득하는 뜻이 된다.",
+      "a": "O",
+      "why": "교재 문법 정리: Anh thử ăn đi, ngon lắm!"
+     },
+     {
+      "id": "vie-3-2-15",
+      "k": "blank",
+      "q": "Mình đi ăn phở [[đi]]. (우리 쌀국수 먹으러 가자.)"
      }
     ]
    },
@@ -824,6 +862,27 @@
       "k": "qa",
       "q": "Ye Ji muốn uống nước gì?",
       "a": "Ye Ji muốn uống nước dừa."
+     },
+     {
+      "id": "vie-3-3-12",
+      "k": "blank",
+      "q": "Vợ anh Nam rất thích ăn [[ngọt]]. Hôm nay là [[sinh nhật]] cô ấy."
+     },
+     {
+      "id": "vie-3-3-13",
+      "k": "blank",
+      "q": "Tiệm này đẹp, giá hơi [[mắc]] [[nhưng]] bánh rất ngon."
+     },
+     {
+      "id": "vie-3-3-14",
+      "k": "blank",
+      "q": "Anh Nam ăn một ổ [[bánh mì thịt]] và uống một ly [[cà phê đen nóng]]."
+     },
+     {
+      "id": "vie-3-3-15",
+      "k": "qa",
+      "q": "Vợ anh Nam ăn gì và uống gì?",
+      "a": "Một cái bánh kem nhỏ và một ly trà sữa."
      }
     ]
    },
@@ -893,6 +952,25 @@
       "id": "vie-3-4-12",
       "k": "blank",
       "q": "Cà phê sữa thế nào? – Ngọt lắm. Em [[uống]] thử đi."
+     },
+     {
+      "id": "vie-3-4-13",
+      "k": "ox",
+      "q": "Bài đọc 4.1: 'Hôm nay là sinh nhật anh Nam.'은 Đ(맞음)이다.",
+      "a": "X",
+      "why": "S. 오늘은 아내(vợ anh Nam)의 생일."
+     },
+     {
+      "id": "vie-3-4-14",
+      "k": "ox",
+      "q": "Bài đọc 4.1: 'Tiệm Phúc Long không nhỏ.'는 Đ(맞음)이다.",
+      "a": "O",
+      "why": "một tiệm trà sữa lớn = 큰 가게."
+     },
+     {
+      "id": "vie-3-4-15",
+      "k": "blank",
+      "q": "Giá bán và bánh ở đó thế nào? → Giá [[hơi mắc]] nhưng bánh [[rất ngon]]."
      }
     ]
    }

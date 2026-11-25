@@ -1063,12 +1063,14 @@
       "title": "핵심 단어",
       "importance": 2,
       "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
-      "heading": "01. 핵심 단어 (교재 p.114~121)",
+      "heading": "01. 핵심 단어 (교재 p.114~124)",
       "parts": [
         "장소·기본 표현",
         "음식·음료 이름",
         "맛·상태 형용사",
-        "동작 동사 (Bài tập 1.2, 2.2)"
+        "동작 동사 (Bài tập 1.2, 2.2)",
+        "교재 단어장 D. Từ vựng (p.124) — 위 표에 없는 단어",
+        "읽기·듣기(p.122~123)에 나온 단어"
       ]
     },
     {
@@ -1078,14 +1080,14 @@
       "title": "핵심 문법·문형",
       "importance": 2,
       "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
-      "heading": "02. 핵심 문법·문형 (교재 p.114~117, 120)",
+      "heading": "02. 핵심 문법·문형 (교재 p.114~117, 120, 125~126)",
       "parts": [
         "⭐ ~ (tiếng Việt) gọi là gì? — \"~은 (베트남어로) 뭐라고 해요?\"",
         "⭐ ~ thế nào? — \"~은 어때요?\"",
         "⭐ 동사 + thử — \"~해 보다\"",
         "⭐ 동사 (+ thử) + đi — \"~해!, ~하자!\" (권유·명령)",
         "mình — \"나\" (친구끼리)",
-        "⭐⭐ chúng tôi vs chúng ta — 둘 다 \"우리\""
+        "교재 문법 정리 E. Ghi chú ngữ pháp (p.125~126) 요약"
       ]
     },
     {
@@ -1095,11 +1097,12 @@
       "title": "대화·읽기 본문",
       "importance": 2,
       "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
-      "heading": "03. 대화·읽기 본문 (교재 p.114~116)",
+      "heading": "03. 대화·읽기 본문 (교재 p.114~116, 123)",
       "parts": [
         "Hội thoại 1 — Trong một tiệm ăn gần trường đại học (대학교 근처 한 음식점에서)",
         "Hội thoại 2 — Ye Ji và Long đang ở một tiệm giải khát (예지와 롱이 음료 가게에 있다)",
         "B. Mở rộng (p.115~116) — 듣고 따라 하기 문장",
+        "읽기 4 – Bài đọc (p.123) — Phúc Long 찻집에서",
         "본문 질문과 모범 답 (Trả lời câu hỏi)"
       ]
     },
@@ -1110,7 +1113,7 @@
       "title": "연습 문제 정답 정리",
       "importance": 2,
       "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
-      "heading": "04. 연습 문제 정답 정리 (교재 p.116~121)",
+      "heading": "04. 연습 문제 정답 정리 (교재 p.116~123)",
       "parts": [
         "Bài tập 1.1 (p.116~117) 그림 보고 \"Món này tiếng Việt gọi là …\"",
         "Bài tập 1.2 (p.117) 친구에게 권유하기 — Bạn + 동사 + đi.",

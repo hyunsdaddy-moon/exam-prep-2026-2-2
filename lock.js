@@ -7,9 +7,9 @@
  * 한 번 들어온 기기는 다른 참여자로 바꾸기 전까지 다시 묻지 않는다.
  */
 
-import { el } from './dom.js?v=20261125-1754';
-import { loadRecords, saveRecords, getCurrentLearner, setCurrentLearner, normalizeLearner, DEFAULT_LEARNER } from './store.js?v=20261125-1754';
-import { recordLearner } from './grade.mjs?v=20261125-1754';
+import { el } from './dom.js?v=20261125-1802';
+import { loadRecords, saveRecords, getCurrentLearner, setCurrentLearner, normalizeLearner, DEFAULT_LEARNER } from './store.js?v=20261125-1802';
+import { recordLearner } from './grade.mjs?v=20261125-1802';
 
 export const PROTECTED = ['문종배', '문현', '오은미'];
 const DEFAULT_PIN = '0000';

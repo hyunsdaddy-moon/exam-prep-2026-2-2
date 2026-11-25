@@ -1365,16 +1365,16 @@
      "level": "보통",
      "stem": "어순이 바른 문장은?",
      "choices": [
-      "Em muốn thử ăn món này.",
+      "Em muốn ăn món thử này.",
       "Em muốn ăn thử món này.",
       "Em thử muốn ăn món này.",
       "Em ăn muốn thử món này.",
       "Thử em muốn ăn món này."
      ],
      "answer": 2,
-     "explanation": "thử는 동사 바로 뒤: ăn thử.",
+     "explanation": "기본 문형은 동사 바로 뒤에 thử: ăn thử.",
      "choiceNotes": [
-      "thử가 동사 앞",
+      "thử가 명사 사이에 끼어 틀림",
       "정답. ăn thử",
       "어순 틀림",
       "어순 틀림",
@@ -1655,6 +1655,167 @@
       "음료",
       "정답",
       "음식"
+     ]
+    },
+    {
+     "id": "vie-q3-26",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'Tiệm này có bán trà sữa.'에서 bán의 뜻은?",
+     "choices": [
+      "마시다",
+      "주문하다",
+      "만들다",
+      "사다",
+      "팔다"
+     ],
+     "answer": 5,
+     "explanation": "bán = 팔다. (mua = 사다)",
+     "choiceNotes": [
+      "uống",
+      "gọi",
+      "làm",
+      "mua",
+      "정답. 팔다"
+     ]
+    },
+    {
+     "id": "vie-q3-27",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "보통",
+     "stem": "'Anh Nam gọi món gì?'에서 gọi의 뜻으로 알맞은 것은?",
+     "choices": [
+      "부르다(이름)",
+      "(음식을) 주문하다",
+      "전화하다",
+      "대답하다",
+      "팔다"
+     ],
+     "answer": 2,
+     "explanation": "단어장: gọi = to call, to be called, to order (food). 여기서는 주문하다.",
+     "choiceNotes": [
+      "이 문장에서는 아님",
+      "정답. gọi món = 음식을 주문하다",
+      "이 문장에서는 아님",
+      "trả lời",
+      "bán"
+     ]
+    },
+    {
+     "id": "vie-q3-28",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "동물의 이름을 물을 때 빈칸에 알맞은 말은? '______ này tiếng Việt gọi là gì?' – 'Con heo.'",
+     "choices": [
+      "Ly",
+      "Cái",
+      "Món",
+      "Con",
+      "Quyển"
+     ],
+     "answer": 4,
+     "explanation": "동물은 con. (cái = 물건, món = 음식)",
+     "choiceNotes": [
+      "잔",
+      "물건",
+      "음식",
+      "정답. 동물",
+      "책"
+     ]
+    },
+    {
+     "id": "vie-q3-29",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "어려움",
+     "stem": "교재 문법 정리에 따라 'Anh thử ăn đi, ngon lắm!'에 대한 설명으로 알맞은 것은?",
+     "choices": [
+      "thử가 동사 앞이라 틀린 문장이다.",
+      "먹어 보라고 권하고 설득하는 말이다.",
+      "'먹지 마'라는 뜻이다.",
+      "'먹으러 가자'라는 뜻이다.",
+      "과거에 먹어 봤다는 뜻이다."
+     ],
+     "answer": 2,
+     "explanation": "thử가 동사 앞에 오면 해 보라고 권하고 설득하는 뜻(Go ahead, try it).",
+     "choiceNotes": [
+      "교재에 나온 바른 문장",
+      "정답",
+      "금지 아님",
+      "đi는 권유 표지",
+      "과거 아님"
+     ]
+    },
+    {
+     "id": "vie-q3-30",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "쉬움",
+     "stem": "읽기(Bài đọc)에서 오늘은 누구의 생일인가요?",
+     "choices": [
+      "anh Nam",
+      "vợ anh Nam",
+      "con anh Nam",
+      "Phúc Long",
+      "Masa"
+     ],
+     "answer": 1,
+     "explanation": "Vợ anh Nam rất thích ăn ngọt. Hôm nay là sinh nhật cô ấy.",
+     "choiceNotes": [
+      "정답. 남 씨의 아내",
+      "남 씨가 아님",
+      "나오지 않음",
+      "가게 이름",
+      "듣기 인물"
+     ]
+    },
+    {
+     "id": "vie-q3-31",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "읽기(Bài đọc)의 내용과 일치하는 것은?",
+     "choices": [
+      "Vợ anh Nam uống cà phê đen nóng.",
+      "Tiệm Phúc Long nhỏ.",
+      "Bánh ở tiệm không ngon.",
+      "Giá hơi mắc nhưng bánh rất ngon.",
+      "Anh Nam uống trà sữa."
+     ],
+     "answer": 4,
+     "explanation": "Tiệm này đẹp, giá hơi mắc nhưng bánh rất ngon.",
+     "choiceNotes": [
+      "아내는 trà sữa",
+      "một tiệm trà sữa lớn",
+      "bánh rất ngon",
+      "정답",
+      "남 씨는 cà phê đen nóng"
+     ]
+    },
+    {
+     "id": "vie-q3-32",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "읽기(Bài đọc)에서 anh Nam이 먹고 마신 것은?",
+     "choices": [
+      "bánh kem nhỏ, trà sữa",
+      "bánh mì thịt, cà phê đen nóng",
+      "bánh mì thịt, trà sữa",
+      "bánh ngọt, cà phê sữa đá",
+      "phở, trà đá"
+     ],
+     "answer": 2,
+     "explanation": "Anh Nam ăn một ổ bánh mì thịt và uống một ly cà phê đen nóng.",
+     "choiceNotes": [
+      "아내가 먹은 것",
+      "정답",
+      "음료가 틀림",
+      "틀림",
+      "틀림"
      ]
     },
     {
