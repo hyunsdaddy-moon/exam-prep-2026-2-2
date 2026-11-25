@@ -80,6 +80,11 @@ flowchart TD
 
 ## 02. 핵심 문법·문형 (교재 p.103, p.112~113 E. Ghi chú ngữ pháp)
 
+> 🎬 **몽타주 영상 (7분 59초)** — 핵심 문법·문형을 🔊 베트남어 예문 → 🇰🇷 해석 → 💡 시험 포인트로 정리해요.
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_06_02_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_06_02.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### 1) đâu / ở đâu — "어디"
 - **đâu** : 이동 동사 **đi(가다), đến(도착하다·오다), về(돌아가다), ra(나가다)** 바로 뒤에 붙여서 **목적지**를 묻는다.
   - Bạn **đi đâu** đấy? (너 어디 가니?)
