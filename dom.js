@@ -78,7 +78,7 @@ export function showBlankAlert(blanks) {
 export function a4Pages(head, blocks, pageClass = 'sheet') {
   const node = el('div.a4-pages');
   const narrow = window.matchMedia('(max-width: 640px)');
-  const isLead = (b) => b && (b.classList.contains('p-group') || b.classList.contains('p-context'));
+  const isLead = (b) => b && ['p-group', 'p-context', 'p-passage-lead'].some((c) => b.classList.contains(c));
   const bottomOf = (c) => {
     const last = c.lastElementChild;
     return last ? last.offsetTop + last.offsetHeight : 0;
@@ -127,12 +127,24 @@ export function a4Pages(head, blocks, pageClass = 'sheet') {
     cancelAnimationFrame(queued);
     queued = requestAnimationFrame(layout);
   };
-  let lastW = window.innerWidth;
-  window.addEventListener('resize', () => {
-    if (!node.isConnected) return;
-    if (window.innerWidth !== lastW) { lastW = window.innerWidth; queue(); }
+  // 화면에 붙거나 폭이 바뀌면, 또 문제 높이가 바뀌면(그림이 늦게 뜸, 채점 뒤 해설이 펼쳐짐) 다시 나눈다
+  let lastW = -1;
+  new ResizeObserver(() => {
+    const w = node.clientWidth;
+    if (w && w !== lastW) { lastW = w; queue(); }
+  }).observe(node);
+  const heights = new WeakMap();
+  const grew = new ResizeObserver((entries) => {
+    let changed = false;
+    for (const e of entries) {
+      const h = Math.round(e.target.offsetHeight);
+      if (heights.has(e.target) && heights.get(e.target) !== h && e.target.isConnected) changed = true;
+      heights.set(e.target, h);
+    }
+    if (changed && node.isConnected) queue();
   });
-  node.addEventListener('load', queue, true); // 그림이 늦게 뜨면 높이가 바뀐다
+  blocks.forEach((b) => grew.observe(b));
+  node.addEventListener('load', queue, true);
   document.fonts?.ready.then(() => node.isConnected && queue());
   return { node, layout };
 }

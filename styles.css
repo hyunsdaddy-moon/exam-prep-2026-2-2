@@ -890,6 +890,10 @@ button.link.danger { color: var(--bad); }
 /* 읽기 문서 끝 단원 평가 — 수준 평가와 같은 흰 시험지 */
 .dq { margin-top: 56px; }
 .doc .dq-paper { min-height: 0; margin: 8px 0 0; padding: 12mm 12mm 14mm; width: 100%; }
+.doc .dq-paper.a4 { min-height: 0; margin: 0; padding: 12mm 12mm 22mm; width: min(210mm, 100%); }
+.doc .dq-paper.a4.a4-tall { min-height: 297mm; }
+.dq-pages { margin-top: 8px; }
+.dq-pages > .dq-foot-tools { border-top: 0; margin-top: 10pt; }
 .doc .dq-paper h3.p-group { font-size: 9.5pt; line-height: 1.4; letter-spacing: 0; margin: 4pt 0 6pt; color: var(--accent-text); }
 .doc .dq-paper p, .doc .dq-paper ul, .doc .dq-paper ol { margin: 0 0 4pt; }
 .doc .dq-paper li { margin: 0; }

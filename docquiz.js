@@ -13,13 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261125-2210';
-import { renderMarkdown } from './markdown.js?v=20261125-2210';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261125-2210';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261125-2210';
-import { explainButton } from './explain.js?v=20261125-2210';
-import { inkTools } from './ink.js?v=20261125-2210';
-import { passageBlock } from './solve.js?v=20261125-2210';
+import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261125-2218';
+import { renderMarkdown } from './markdown.js?v=20261125-2218';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261125-2218';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261125-2218';
+import { explainButton } from './explain.js?v=20261125-2218';
+import { inkTools } from './ink.js?v=20261125-2218';
+import { passageBlock } from './solve.js?v=20261125-2218';
 
 /* 채점 표시 — 선생님이 빨간 색연필로 그은 것처럼: 손으로 그린 동그라미(맞음)·빗금(틀림)에
  * 연필 결(알갱이)과 살짝 떨리는 선을 SVG 필터로 입힌다. 필터는 문서에 한 번만 넣는다. */
@@ -471,14 +471,16 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     draft = resuming ? { ...draft, submitted: null, retaking: true } : { picks: {}, texts: {}, submitted: null, retaking: true };
     viewingSession = null;
     persist();
-    if (!resuming) for (const t of essays.querySelectorAll('textarea')) t.value = '';
+    if (!resuming) for (const t of section.querySelectorAll('.p-q.essay textarea')) t.value = '';
     paintAll();
     section.querySelector('.dq-paper')?.scrollIntoView({ behavior: 'smooth' });
   };
   nextBtn.addEventListener('click', onNext);
   footNextBtn.addEventListener('click', onNext);
 
-  const sheet = el('div.sheet.exam-paper.dq-paper', {}, head, cols, essayCount ? el('h3.p-group.dq-essay-title', { text: '서술형' }) : null, essays, footTools);
+  // 실제 시험지처럼 A4 쪽마다 2단으로 나눈다 — 선택형 다음에 서술형이 이어지고, 하단 도구줄은 마지막 쪽 아래에
+  const pages = a4Pages(head, [...cols.children, ...(essayCount ? [el('h3.p-group.dq-essay-title', { text: '서술형' })] : []), ...essays.children], 'sheet.exam-paper.dq-paper');
+  const sheet = el('div.dq-pages.exam-paper', {}, pages.node, footTools);
   const pen = inkTools(sheet, `doc.${code}.${file}`);
   for (const [b, id] of ink.pending) pen.add(b, id);
   const heading = el('h2', { id: 'doc-quiz', text: `📝 ${quiz.title || '단원 평가'}` });

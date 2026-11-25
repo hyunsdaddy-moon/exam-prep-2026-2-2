@@ -9,13 +9,13 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert, a4Pages } from './dom.js?v=20261125-2210';
-import { renderMarkdown } from './markdown.js?v=20261125-2210';
-import { explainButton } from './explain.js?v=20261125-2210';
-import { inkTools } from './ink.js?v=20261125-2210';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261125-2210';
-import { loadPaper } from './study.js?v=20261125-2210';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261125-2210';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert, a4Pages } from './dom.js?v=20261125-2218';
+import { renderMarkdown } from './markdown.js?v=20261125-2218';
+import { explainButton } from './explain.js?v=20261125-2218';
+import { inkTools } from './ink.js?v=20261125-2218';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261125-2218';
+import { loadPaper } from './study.js?v=20261125-2218';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261125-2218';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -30,7 +30,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261125-2210';
+} from './grade.mjs?v=20261125-2218';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -392,7 +392,14 @@ async function renderExam(ctx, subject) {
   const tries = [...mergeRecordsForLearner(loaded.records, getCurrentLearner()).sessions.values()]
     .filter((s) => s.mode === 'exam' && s.subject === subject.code).length;
 
-  const begin = (state) => runExam(ctx, subject, questions, groups, limit, state);
+  // 실전도 학교 시험지처럼 A4 쪽마다 2단으로 푼다
+  const comp = paper.composition;
+  const note = comp
+    ? `선택형 ${comp.choice.count}문항(${comp.choice.points}점) · 서술형 ${comp.essay.count}문항(${comp.essay.points}점) · 총 ${comp.total}점 · ${Math.round(limit / 60)}분`
+    : `${questions.length}문항 · 총 ${total}점 · ${Math.round(limit / 60)}분`;
+  const begin = (state) => runExam(ctx, subject, questions, groups, limit, state, {
+    paper: { kicker: '실전 — 예상 문제', kind: '예상 문제지', note: `${note} · 답 번호를 누르면 표시되고, 한 번 더 누르면 지워집니다.` },
+  });
   const fresh = () => begin({ session: newId('e'), startedAt: Date.now(), answers: {} });
 
   ctx.show(
