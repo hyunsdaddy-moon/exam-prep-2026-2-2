@@ -7,26 +7,27 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261125-0008';
-import { el, versioned } from './dom.js?v=20261125-0008';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261125-0008';
-import { renderUnitsRoute } from './units.js?v=20261125-0008';
-import { buildDocQuiz } from './docquiz.js?v=20261125-0008';
-import { attachWatchBoxes } from './watch.js?v=20261125-0008';
-import { renderDashboard } from './dashboard.js?v=20261125-0008';
-import { renderGrades } from './grades.js?v=20261125-0008';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261125-0008';
-import { renderAssessRoute } from './assess.js?v=20261125-0008';
-import { renderPastRoute } from './past.js?v=20261125-0008';
-import { renderWrongbook } from './wrongbook.js?v=20261125-0008';
-import { renderBoard } from './board.js?v=20261125-0008';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261125-0008';
-import { loadStudy } from './study.js?v=20261125-0008';
-import { renderPrint, printLinks } from './print.js?v=20261125-0008';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261125-0008';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261125-0008';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261125-0008';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261125-0008';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261125-0946';
+import { el, versioned } from './dom.js?v=20261125-0946';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261125-0946';
+import { renderUnitsRoute } from './units.js?v=20261125-0946';
+import { buildDocQuiz } from './docquiz.js?v=20261125-0946';
+import { attachDrills } from './drill.js?v=20261125-0946';
+import { attachWatchBoxes } from './watch.js?v=20261125-0946';
+import { renderDashboard } from './dashboard.js?v=20261125-0946';
+import { renderGrades } from './grades.js?v=20261125-0946';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261125-0946';
+import { renderAssessRoute } from './assess.js?v=20261125-0946';
+import { renderPastRoute } from './past.js?v=20261125-0946';
+import { renderWrongbook } from './wrongbook.js?v=20261125-0946';
+import { renderBoard } from './board.js?v=20261125-0946';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261125-0946';
+import { loadStudy } from './study.js?v=20261125-0946';
+import { renderPrint, printLinks } from './print.js?v=20261125-0946';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261125-0946';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261125-0946';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261125-0946';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261125-0946';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -678,6 +679,11 @@ async function renderReader(s, index, query) {
   const quiz = await buildDocQuiz(ctx, s.code, doc.file, { subject: s.subject, docTitle: doc.title, docIndex: index });
   if (quiz) body.append(quiz.section);
 
+  // PART 마다 확인 문제 (있는 문서만) — 단원 평가 앞에 넣는다
+  if (quiz) quiz.section.remove();
+  const drills = await attachDrills(ctx, s.code, doc.file, body, headings);
+  if (quiz) body.append(quiz.section);
+
   // 목차 제목마다 그 절(다음 목차 제목 전까지)에 든 영상 수 — 첫 제목 앞의 영상은 첫 제목에 붙인다
   const tocHeads = headings.filter((h) => h.level === 2 || h.level === 3);
   const videoCount = new Map();
@@ -704,8 +710,16 @@ async function renderReader(s, index, query) {
       if (n) link.append(el('span.toc-video', { title: `영상 ${n}편`, 'aria-label': `영상 ${n}편`, text: ` ${'🎬'.repeat(n)}` }));
       return link;
     }),
+    null,
     quiz ? el('a.l2.toc-quiz', { href: '#doc-quiz', text: '📝 단원 평가', onclick: (e) => jump(e, 'doc-quiz') }) : null
   );
+
+  for (const d of drills) {
+    d.link = el(`a.l3.toc-drill${d.done ? '.done' : ''}`, { href: `#${d.id}`, text: `✏️ PART ${d.part} 확인 문제`, onclick: (e) => jump(e, d.id) });
+    const before = (d.beforeId && toc.querySelector(`a[href="#${d.beforeId}"]`)) || toc.querySelector('a.toc-quiz');
+    if (before) toc.insertBefore(d.link, before);
+    else toc.append(d.link);
+  }
 
   const prev = docs[index - 1];
   const next = docs[index + 1];

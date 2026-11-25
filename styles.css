@@ -1467,3 +1467,42 @@ body.ink-on .ink-host { user-select: none; -webkit-user-select: none; }
 @media (max-width: 860px) {
   .nav-menu > summary { padding: 4px 9px; font-size: 12px; }
 }
+
+/* ── PART 별 확인 문제 (drill.js) ── */
+.toc a.toc-drill { color: var(--accent-text); font-weight: 600; }
+@media (max-width: 860px) { .toc a.l3.toc-drill { display: block; } }
+.drill { margin: 40px 0 48px; padding: 22px 22px 18px; background: var(--bg-soft); border-radius: var(--radius); border: 1px solid var(--line-soft); }
+.drill .dr-head h3 { margin: 0 0 4px; font-size: 19px; }
+.drill .dr-help { margin: 0 0 14px; font-size: 13px; color: var(--text-2); }
+.dr-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dr-card { background: var(--card); border-radius: var(--radius-s); padding: 14px 16px; border: 1px solid var(--line-soft); border-left: 4px solid var(--line); line-height: 1.9; }
+.dr-card[data-mark="o"] { border-left-color: var(--good); }
+.dr-card[data-mark="x"] { border-left-color: var(--bad); }
+.dr-no { display: inline-block; min-width: 1.6em; margin-right: 6px; font-weight: 700; color: var(--text-3); }
+.dr-a { margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.dr-label { font-size: 12px; font-weight: 600; color: var(--text-3); }
+.dr-why { flex-basis: 100%; font-size: 14px; color: var(--text-2); }
+.dr-a .dr-cover:not(.open) ~ .dr-why { display: none; }
+.dr-cover { font: inherit; display: inline-block; vertical-align: baseline; margin: 0 2px; padding: 0 10px; min-width: 4.5em; line-height: 1.6; border: 0; border-radius: 6px; cursor: pointer;
+  background: #ffe9a8; border-bottom: 2px solid #e6b800; color: transparent; }
+.dr-cover .dr-ans { visibility: hidden; }
+.dr-cover:not(.open):hover { background: #ffdf80; }
+.dr-cover.open { background: transparent; border-bottom: 2px solid #e6b800; color: #c2410c; font-weight: 700; cursor: default; }
+.dr-cover.open .dr-ans { visibility: visible; }
+.dr-cover.open strong { color: inherit; }
+.dr-cover.ox.open { font-size: 1.15em; }
+.dr-mark { margin-top: 8px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-3); }
+.dr-mark button, .dr-btn { font: inherit; font-size: 13px; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--text-2); cursor: pointer; }
+.dr-mark .dr-o[aria-pressed="true"] { background: var(--good); border-color: var(--good); color: #fff; }
+.dr-mark .dr-x[aria-pressed="true"] { background: var(--bad); border-color: var(--bad); color: #fff; }
+.dr-btn:disabled { opacity: 0.4; cursor: default; }
+.dr-foot { margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.dr-score { margin: 0; font-size: 14px; color: var(--text-2); }
+.dr-score .o { color: var(--good); font-weight: 700; }
+.dr-score .x { color: var(--bad); font-weight: 700; }
+.dr-done { color: var(--good); }
+@media print { .drill { display: none; } }
+.dr-mark[hidden], .dr-card[hidden] { display: none; }
+.drill ol.dr-list { padding-left: 0; margin: 0; }
+.drill .dr-card { margin: 0; }
+@media (max-width: 860px) { .drill { padding: 16px 12px 14px; margin-left: -6px; margin-right: -6px; } .dr-card { padding: 12px 12px; } }
