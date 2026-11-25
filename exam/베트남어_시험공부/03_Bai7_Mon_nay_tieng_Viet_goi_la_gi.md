@@ -127,6 +127,11 @@ flowchart TD
 
 ## 02. 핵심 문법·문형 (교재 p.114~117, 120, 125~126)
 
+> 🎬 **몽타주 영상 (7분 24초)** — 핵심 문법·문형을 🔊 베트남어 예문 → 🇰🇷 해석 → 💡 시험 포인트로 정리해요.
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_07_02_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_07_02.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### 1) ⭐ ~ (tiếng Việt) gọi là gì? — "~은 (베트남어로) 뭐라고 해요?"
 - 이름을 모르는 음식·물건의 **이름**을 물을 때.
 - 문형: **[명사 + này/đó] + tiếng Việt + gọi là gì?**

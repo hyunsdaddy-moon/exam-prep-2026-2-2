@@ -10,12 +10,12 @@
  * 점수는 과목·회차마다 「처음 응시한 것」으로 센다 — 진단은 한 번이 의미가 있으므로.
  */
 
-import { el, newId } from './dom.js?v=20261125-2134';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261125-2134';
-import { enterLearner } from './lock.js?v=20261125-2134';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261125-2134';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261125-2134';
-import { avatar } from './characters.js?v=20261125-2134';
+import { el, newId } from './dom.js?v=20261125-2140';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261125-2140';
+import { enterLearner } from './lock.js?v=20261125-2140';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261125-2140';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261125-2140';
+import { avatar } from './characters.js?v=20261125-2140';
 
 export const ROUNDS = [
   { id: 'd1', n: 1, title: '1차 진단평가', short: '1차', note: '지금 실력을 재는 첫 시험' },
