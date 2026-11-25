@@ -872,6 +872,3886 @@
      "explanation": "Giá **hơi mắc**(조금 비쌈), 단것을 좋아하는 사람은 **아내(vợ)**. 남 씨는 **bánh mì thịt + cà phê đen nóng**."
     }
    ]
+  },
+  {
+   "id": "u4",
+   "title": "단원평가 1 · 기출형 실전",
+   "short": "단원평가 1",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [
+    {
+     "id": "g1",
+     "title": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "range": [
+      14,
+      16
+     ],
+     "context": "> Hôm nay bạn tôi đến Việt Nam. Tôi đi sân bay (a) <u>đón</u> bạn. Tôi chờ bạn tôi ở sân bay. Chúng tôi gặp nhau và đến căn tin uống nước. Bạn tôi uống cà phê sữa đá, (b) <u>còn</u> tôi uống trà nóng. Tôi không thích cà phê sữa đá lắm. Bây giờ, chúng tôi đang đi taxi về nhà. Bạn tôi nói, ở Thành phố Hồ Chí Minh, anh ấy rất thích (c) <u>chạy xe máy</u>. Anh ấy không thích đi xe buýt."
+    }
+   ],
+   "questions": [
+    {
+     "id": "vie-m1-01",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> gặp nhau",
+     "choices": [
+      "서로 만나다",
+      "이야기하다",
+      "기다리다",
+      "마중하다",
+      "약속하다"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "gặp nhau = 서로 만나다 (Họ gặp nhau ở quán cà phê Sách). 이야기하다 = nói chuyện, 기다리다 = chờ, 마중하다 = đón, 약속하다 = hẹn."
+    },
+    {
+     "id": "vie-m1-02",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> tiệm ăn",
+     "choices": [
+      "카페",
+      "(작은) 식당",
+      "시장",
+      "마트",
+      "서점"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "tiệm ăn = (작은) 식당. 카페 = tiệm cà phê, 시장 = chợ, 마트 = siêu thị, 서점 = nhà sách."
+    },
+    {
+     "id": "vie-m1-03",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> thực đơn",
+     "choices": [
+      "음료",
+      "가격",
+      "주문하다",
+      "메뉴(차림표)",
+      "음식점"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "thực đơn = 메뉴(Bạn xem thực đơn đi.). 음료 = thức uống, 가격 = giá, 주문하다 = gọi (món), 음식점 = tiệm ăn."
+    },
+    {
+     "id": "vie-m1-04",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> sau đó",
+     "choices": [
+      "지금",
+      "오늘",
+      "그 다음에",
+      "조금",
+      "다시"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "sau đó = 그 다음에, 그 후 (Tôi mua cà phê, sau đó đi bộ đến công ty.). 지금 = bây giờ, 오늘 = hôm nay, 조금 = một chút, 다시 = lại."
+    },
+    {
+     "id": "vie-m1-05",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 피곤하다",
+     "choices": [
+      "mết",
+      "mệt",
+      "mêt",
+      "mẹt",
+      "mềt"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "피곤하다 = **mệt** (ê + 아래 점 dấu nặng). Tôi hơi mệt."
+    },
+    {
+     "id": "vie-m1-06",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 기다리다",
+     "choices": [
+      "chơ",
+      "chớ",
+      "chờ",
+      "chở",
+      "chợ"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "기다리다 = **chờ** (dấu huyền). chợ = 시장, chở = 태우다(실어 나르다)로 뜻이 다르다."
+    },
+    {
+     "id": "vie-m1-07",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 맵다",
+     "choices": [
+      "cây",
+      "cày",
+      "cáy",
+      "cay",
+      "cạy"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "맵다 = **cay** (성조 없음, không dấu). Bún bò Huế cay lắm. cây = 나무."
+    },
+    {
+     "id": "vie-m1-08",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 오렌지 주스",
+     "choices": [
+      "nước cảm",
+      "nược cam",
+      "nưóc cam",
+      "nuóc cam",
+      "nước cam"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "오렌지 주스 = **nước cam**. nước는 ư + ơ 위에 dấu sắc, cam은 성조 없음."
+    },
+    {
+     "id": "vie-m1-09",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 도서관",
+     "choices": [
+      "thu viện",
+      "thư viên",
+      "thư viện",
+      "thứ viện",
+      "thư viẹn"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "도서관 = **thư viện** (thư: ư 성조 없음 / viện: ê + dấu nặng)."
+    },
+    {
+     "id": "vie-m1-10",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 달다",
+     "choices": [
+      "ngot",
+      "ngọt",
+      "ngót",
+      "ngột",
+      "ngợt"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "달다 = **ngọt** (o + dấu nặng). Trà sữa hơi ngọt."
+    },
+    {
+     "id": "vie-m1-11",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'đang'이 들어갈 자리로 가장 알맞은 곳은?\n\n> Bây giờ (1) Nam (2) uống (3) cà phê (4) ở tiệm cà phê (5).",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "đang(~하고 있다)은 **동사 바로 앞**: Bây giờ Nam **đang uống** cà phê ở tiệm cà phê. 동사 uống 앞은 (2)."
+    },
+    {
+     "id": "vie-m1-12",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 단어로 가장 알맞은 것은?\n\n> Lan đọc sách, ___ em trai Lan chơi game.",
+     "choices": [
+      "cũng",
+      "còn",
+      "đang",
+      "lắm",
+      "được"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "'A는 ~하고, (한편) B는 ~한다'는 **còn** (교재 2.2: Lan đọc sách, còn em trai Lan chơi game). cũng(~도)은 주어 뒤에 와야 하고 뜻도 맞지 않는다."
+    },
+    {
+     "id": "vie-m1-13",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'đang'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "동사 앞에 위치한다.",
+      "지금 어떤 동작이 진행 중임을 나타낸다.",
+      "'Bạn đang làm gì đấy?'는 '너 지금 뭐 하고 있어?'라는 뜻이다.",
+      "'Tôi ăn đang cơm.'은 어순이 바른 문장이다.",
+      "'Họ đang ở đâu?'에서 ở는 '~에 있다'라는 뜻으로 쓰였다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "đang은 동사 **앞** → Tôi **đang ăn** cơm. 'Tôi ăn đang cơm'은 틀린 어순."
+    },
+    {
+     "id": "vie-m1-14",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 14,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑줄 친 (a) đón의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "기다리다",
+      "마중하다",
+      "타다",
+      "도착하다",
+      "만나다"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "Tôi đi sân bay **đón** bạn = 친구를 **마중하러** 공항에 간다. 기다리다는 chờ(바로 다음 문장)."
+    },
+    {
+     "id": "vie-m1-15",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 15,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (b) còn의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "아직",
+      "~도 또한",
+      "한편, ~는",
+      "다시",
+      "그 다음에"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "'친구는 아이스 연유 커피를 마시고, **한편 나는** 뜨거운 차를 마신다' — 두 사람을 대조하는 **còn**. ~도 또한 = cũng, 다시 = lại, 그 다음에 = sau đó."
+    },
+    {
+     "id": "vie-m1-16",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 16,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (c) chạy xe máy의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "버스를 타다",
+      "달리기하다",
+      "걸어가다",
+      "오토바이를 타다",
+      "택시를 타다"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "chạy xe máy = 오토바이를 타다(몰다). 버스를 타다 = đi xe buýt, 달리기하다 = chạy bộ, 걸어가다 = đi bộ, 택시를 타다 = đi taxi."
+    },
+    {
+     "id": "vie-m1-17",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> ___ món phở, ___ taxi",
+     "choices": [
+      "gọi",
+      "ăn",
+      "đi",
+      "nấu",
+      "bán"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "**gọi** món phở = 쌀국수를 주문하다, **gọi** taxi = 택시를 부르다. gọi는 '부르다, 주문하다'. đi taxi는 되지만 'đi món phở'는 안 되고, nấu món phở는 되지만 'nấu taxi'는 안 된다."
+    },
+    {
+     "id": "vie-m1-18",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> ___ cơm, ___ ăn",
+     "choices": [
+      "ăn",
+      "nấu",
+      "xem",
+      "đi",
+      "uống"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "**nấu** cơm = 밥을 짓다, **nấu** ăn = 요리하다. đi ăn(먹으러 가다)은 되지만 'đi cơm'은 안 되고, ăn cơm은 되지만 'ăn ăn'은 안 된다."
+    },
+    {
+     "id": "vie-m1-19",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 수 없는 단어는?\n\n> Tôi muốn ___ thử.",
+     "choices": [
+      "ăn",
+      "uống",
+      "ngon",
+      "mặc",
+      "đọc"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "**동사 + thử** = ~해 보다. ăn·uống·mặc·đọc은 동사라 가능. **ngon**(맛있다)은 형용사라 'ngon thử'는 안 된다."
+    },
+    {
+     "id": "vie-m1-20",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'thế nào'의 사용이 가장 옳은 문장은?",
+     "choices": [
+      "Thế nào món phở này?",
+      "Món phở này thế nào?",
+      "Món thế nào phở này?",
+      "Món phở thế nào này?",
+      "Thế nào này món phở?"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "thế nào(어때요?)는 **문장 맨 끝**: Món phở này thế nào? – Rất ngon."
+    },
+    {
+     "id": "vie-m1-21",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다음 중 'có … không?'에 대한 설명으로 〈보기〉에서 옳은 것만을 있는 대로 고른 것은?\n\n> 〈보기〉\n> ㄱ. 예/아니오로 대답하는 질문을 만든다.\n> ㄴ. 대답은 'Có.' 또는 'Không.'으로 시작할 수 있다.\n> ㄷ. 'Anh ấy không làm việc không?'은 바른 질문이다.\n> ㄹ. 질문을 만들 때 có는 반드시 빼야 한다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄷ",
+      "ㄱ, ㄴ, ㄹ"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "ㄷ: 질문은 không을 앞에 붙이는 게 아니라 **Anh ấy có làm việc không?** ㄹ: 교재 문형은 **có**를 꼭 넣는다(có 빠뜨리지 않기!)."
+    },
+    {
+     "id": "vie-m1-22",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.2,
+     "negative": true,
+     "hasBogi": true,
+     "level": "어려움",
+     "stem": "문법상 빈칸에 들어갈 수 없는 어휘만을 〈보기〉에서 있는 대로 고른 것은? (교재 Bài 6 기준)\n\n> Tôi đi ___.\n>\n> 〈보기〉\n> ㄱ. thư viện\n> ㄴ. làm\n> ㄷ. trường\n> ㄹ. sân bay\n> ㅁ. công ty",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄴ, ㄷ",
+      "ㄷ, ㅁ",
+      "ㄱ, ㄹ, ㅁ",
+      "ㄴ, ㄷ, ㅁ"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "đi + 자주 가는 곳(thư viện, sân bay), đi + 동사(làm)는 가능. **trường, công ty, nhà bạn**은 교재 예외로 **(đi) đến**을 써야 한다 → Tôi (đi) đến trường / công ty."
+    },
+    {
+     "id": "vie-m1-23",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'hơi'가 들어갈 자리로 가장 알맞은 곳은? (뜻: 이 식당은 맛있지만 좀 비싸다.)\n\n> (1) Nhà hàng (2) này ngon (3) nhưng (4) mắc (5).",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "hơi(좀, 약간)는 형용사 **앞**: Nhà hàng này ngon nhưng **hơi mắc**. (교재 2.2)"
+    },
+    {
+     "id": "vie-m1-24",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 24,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.0,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'gọi là gì'와 'thế nào'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "'gọi là gì?'는 음식·물건의 이름을 물을 때 쓴다.",
+      "'thế nào'는 질문 문장의 끝에 온다.",
+      "'Món này thế nào?'의 대답으로 'Ngon lắm.'이 알맞다.",
+      "동물의 이름은 'Con này tiếng Việt gọi là gì?'로 묻는다.",
+      "'Kim chi không cay lắm.'에 알맞은 질문은 'Kim chi không cay thế nào?'이다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "대답 속 형용사(không cay)는 질문에 넣지 않는다 → **Kim chi thế nào?** 또는 Kim chi có cay không?"
+    },
+    {
+     "id": "vie-m1-25",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 25,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> có / Lan / không / sinh nhật Kenji / đi / hôm nay / ?",
+     "choices": [
+      "Hôm nay Lan đi sinh nhật Kenji không có?",
+      "Hôm nay Lan có đi sinh nhật Kenji không?",
+      "Lan hôm nay đi có sinh nhật Kenji không?",
+      "Có Lan hôm nay đi sinh nhật Kenji không?",
+      "Hôm nay Lan không đi có sinh nhật Kenji?"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "시간말 + 주어 + **có** + 동사 + 목적어 + **không?** → Hôm nay Lan **có đi** sinh nhật Kenji **không**? (Hội thoại 1)"
+    },
+    {
+     "id": "vie-m1-26",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 26,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> muốn / thử / Ye Ji / nước dừa / uống / .",
+     "choices": [
+      "Ye Ji thử muốn uống nước dừa.",
+      "Ye Ji muốn nước dừa uống thử.",
+      "Ye Ji uống muốn thử nước dừa.",
+      "Ye Ji muốn uống thử nước dừa.",
+      "Thử Ye Ji muốn uống nước dừa."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "주어 + muốn + **동사 + thử** + 목적어: Ye Ji muốn **uống thử** nước dừa. (예지는 코코넛 주스를 마셔 보고 싶다.)"
+    },
+    {
+     "id": "vie-m1-27",
+     "subject": "베트남어",
+     "unit": "u4",
+     "type": "choice",
+     "no": 27,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> ở / đang / em ấy / đọc sách / thư viện / .",
+     "choices": [
+      "Em ấy đọc sách đang ở thư viện.",
+      "Đang em ấy đọc sách ở thư viện.",
+      "Em ấy ở đang thư viện đọc sách.",
+      "Em ấy đọc đang sách ở thư viện.",
+      "Em ấy đang đọc sách ở thư viện."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "주어 + **đang + 동사** + 목적어 + ở + 장소: Em ấy **đang đọc** sách ở thư viện."
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "단원평가 2 · 기출형 실전",
+   "short": "단원평가 2",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [
+    {
+     "id": "g1",
+     "title": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "range": [
+      14,
+      16
+     ],
+     "context": "> (a) <u>Vợ</u> anh Nam rất thích ăn ngọt. Hôm nay là sinh nhật cô ấy. Họ đến tiệm Phúc Long, một tiệm trà sữa lớn ở Thành phố Hồ Chí Minh. Tiệm này có (b) <u>bán</u> trà sữa, cà phê, bánh mì, bánh ngọt,... Tiệm này đẹp, giá hơi mắc nhưng bánh rất ngon. Anh Nam ăn một ổ bánh mì thịt và uống một (c) <u>ly</u> cà phê đen nóng. Còn vợ anh Nam ăn một cái bánh kem nhỏ và uống một ly trà sữa!"
+    }
+   ],
+   "questions": [
+    {
+     "id": "vie-m2-01",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> nói chuyện",
+     "choices": [
+      "노래하다",
+      "이야기하다",
+      "대답하다",
+      "질문하다",
+      "전화하다"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "nói chuyện = 이야기하다 (Họ đang uống cà phê và nói chuyện rất vui.). 노래하다 = hát, 대답하다 = trả lời, 질문하다 = hỏi."
+    },
+    {
+     "id": "vie-m2-02",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> đi bộ",
+     "choices": [
+      "달리기하다",
+      "오토바이를 타다",
+      "걸어가다",
+      "여행 가다",
+      "출근하다"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "đi bộ = 걸어가다 (sau đó đi bộ đến công ty). 달리기하다 = chạy bộ, 오토바이를 타다 = chạy xe máy, 여행 가다 = đi du lịch, 출근하다 = đi làm."
+    },
+    {
+     "id": "vie-m2-03",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> giá",
+     "choices": [
+      "가격",
+      "잔(컵)",
+      "아내",
+      "메뉴",
+      "생일"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "giá = 가격 (Giá hơi mắc). 잔 = ly, 아내 = vợ, 메뉴 = thực đơn, 생일 = sinh nhật."
+    },
+    {
+     "id": "vie-m2-04",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> xuống",
+     "choices": [
+      "앉다",
+      "들어가다",
+      "올라가다",
+      "돌아가다",
+      "내리다"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "xuống = 내리다, 내려가다 (Anh ơi, tôi xuống ở đây, được không?). 앉다 = ngồi, 들어가다 = vào, 올라가다 = lên, 돌아가다 = về."
+    },
+    {
+     "id": "vie-m2-05",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 시장",
+     "choices": [
+      "chợ",
+      "chọ",
+      "chớ",
+      "chơ",
+      "chố"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "시장 = **chợ** (ơ + dấu nặng). Chúng tôi đang đi chợ."
+    },
+    {
+     "id": "vie-m2-06",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 배고프다",
+     "choices": [
+      "đôi",
+      "đối",
+      "đói",
+      "đòi",
+      "đọi"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "배고프다 = **đói** (o + dấu sắc). Bây giờ em đói lắm. đôi(쌍), đòi(요구하다)는 다른 말."
+    },
+    {
+     "id": "vie-m2-07",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 코코넛 주스",
+     "choices": [
+      "nước dưa",
+      "nước dứa",
+      "nước dùa",
+      "nước dừa",
+      "nước đừa"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "코코넛 주스 = **nước dừa** (ư + dấu huyền). nước dứa는 '파인애플 주스'로 다른 말."
+    },
+    {
+     "id": "vie-m2-08",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 버스",
+     "choices": [
+      "xe buyt",
+      "xe buỵt",
+      "xe buýt",
+      "xe bủyt",
+      "xê buýt"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "버스 = **xe buýt** (y 위에 dấu sắc). Anh ấy không thích đi xe buýt."
+    },
+    {
+     "id": "vie-m2-09",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 생일",
+     "choices": [
+      "sinh nhạt",
+      "sinh nhât",
+      "sính nhật",
+      "sinh nhất",
+      "sinh nhật"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "생일 = **sinh nhật** (sinh: 성조 없음 / nhật: â + dấu nặng)."
+    },
+    {
+     "id": "vie-m2-10",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 목마르다",
+     "choices": [
+      "khat",
+      "khạt",
+      "khắt",
+      "khát",
+      "khàt"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "목마르다 = **khát** (a + dấu sắc). Tôi không khát lắm."
+    },
+    {
+     "id": "vie-m2-11",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'đang'이 들어갈 자리로 가장 알맞은 곳은? (뜻: 엄마는 집에서 밥을 짓고 있다.)\n\n> Mẹ (1) nấu (2) cơm (3) ở (4) nhà (5).",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "đang은 동사 **바로 앞**: Mẹ **đang nấu** cơm ở nhà. 동사 nấu 앞은 (1)."
+    },
+    {
+     "id": "vie-m2-12",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 단어로 가장 알맞은 것은?\n\n> Giá hơi mắc ___ bánh rất ngon.",
+     "choices": [
+      "cũng",
+      "với",
+      "nhưng",
+      "rất",
+      "đang"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "'가격은 좀 비싸지만 케이크는 아주 맛있다' — 반대되는 두 내용을 잇는 **nhưng**(그러나, 하지만)."
+    },
+    {
+     "id": "vie-m2-13",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'được'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "'동사 + được'은 '~할 수 있다'는 뜻이다.",
+      "'못 한다'는 'không + 동사 + được'으로 쓴다.",
+      "같은 뜻의 'có thể'는 동사 앞에 온다.",
+      "'…, được không?'으로 허락을 구할 수 있다.",
+      "'Tôi được không chạy.'는 '나는 (오토바이를) 못 탄다'는 뜻의 바른 문장이다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "'못 탄다'는 **Tôi không chạy được.** — không은 동사 앞, được은 동사 뒤."
+    },
+    {
+     "id": "vie-m2-14",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 14,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-03"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑줄 친 (a) Vợ의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "남편",
+      "아내",
+      "딸",
+      "언니",
+      "친구"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "vợ = 아내. 남편은 chồng. '오늘은 그녀(아내)의 생일이다'로 이어진다."
+    },
+    {
+     "id": "vie-m2-15",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 15,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-03"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (b) bán의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "사다",
+      "주문하다",
+      "팔다",
+      "만들다",
+      "먹다"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "Tiệm này có **bán** trà sữa… = 이 가게는 밀크티…를 **판다**. 사다 = mua, 주문하다 = gọi (món)."
+    },
+    {
+     "id": "vie-m2-16",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 16,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 글을 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-03"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (c) ly의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "병",
+      "접시",
+      "그릇",
+      "잔(컵)",
+      "개"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "một **ly** cà phê đen nóng = 뜨거운 블랙커피 한 **잔**. 빵 하나는 một **ổ** bánh mì."
+    },
+    {
+     "id": "vie-m2-17",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> ___ máy, ___ buýt",
+     "choices": [
+      "xe",
+      "chạy",
+      "đi",
+      "nhà",
+      "trà"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "**xe** máy = 오토바이, **xe** buýt = 버스. chạy xe máy(오토바이를 타다)처럼 xe 앞에 오는 말과 헷갈리지 않기."
+    },
+    {
+     "id": "vie-m2-18",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> ___ hàng (식당), ___ sách (서점)",
+     "choices": [
+      "tiệm",
+      "nhà",
+      "trường",
+      "đọc",
+      "chợ"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "**nhà** hàng = 식당, **nhà** sách = 서점. (nhà만 쓰면 '집') tiệm sách·đọc sách은 있지만 'tiệm hàng, đọc hàng'은 없다."
+    },
+    {
+     "id": "vie-m2-19",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-04"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 수 없는 것은?\n\n> Bạn ___ đi!",
+     "choices": [
+      "ăn thử",
+      "nghe nhạc",
+      "trả lời",
+      "hỏi cô giáo",
+      "ngọt lắm"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "문장 끝 **đi** = '~해!'(권유). 앞에는 **동사**가 와야 한다(Bạn trả lời đi, Bạn hỏi cô giáo đi). 'ngọt lắm'(아주 달다)은 형용사라 권유할 수 없다."
+    },
+    {
+     "id": "vie-m2-20",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'ở đâu'의 사용이 가장 옳은 문장은?",
+     "choices": [
+      "Bạn đi ở đâu đấy?",
+      "Chị về ở đâu?",
+      "Cô làm việc ở đâu?",
+      "Các ông đi ở đâu?",
+      "Ở đâu bạn đến?"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "일하는 장소를 물을 때 → làm việc **ở đâu**. đi·về·đến(이동) 뒤에는 **đâu**만: Bạn đi đâu đấy? / Chị về đâu?"
+    },
+    {
+     "id": "vie-m2-21",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다음 중 'chúng ta'와 'chúng tôi'에 대한 설명으로 〈보기〉에서 옳은 것만을 있는 대로 고른 것은?\n\n> 〈보기〉\n> ㄱ. chúng ta는 듣는 사람을 포함한 '우리'이다.\n> ㄴ. chúng tôi는 듣는 사람을 포함하지 않는 '우리(저희)'이다.\n> ㄷ. 'Các bạn mệt rồi, phải không? Chúng tôi nghỉ một chút!'가 자연스럽다.\n> ㄹ. 'Cà phê Starbuck mắc lắm. Chúng ta đi Highlands đi!'가 자연스럽다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄷ: 듣는 사람(các bạn)과 함께 쉬자는 말이므로 **chúng ta**. ㄹ: '같이 가자'(…đi!) → chúng ta가 맞다."
+    },
+    {
+     "id": "vie-m2-22",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 4.2,
+     "negative": true,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "문법상 빈칸에 들어갈 수 없는 어휘만을 〈보기〉에서 있는 대로 고른 것은?\n\n> Bạn ___ ăn cơm ở căn tin không?\n>\n> 〈보기〉\n> ㄱ. có\n> ㄴ. có thích\n> ㄷ. có muốn\n> ㄹ. rất\n> ㅁ. lắm",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄹ, ㅁ",
+      "ㄴ, ㄷ",
+      "ㄷ, ㄹ, ㅁ",
+      "ㄱ, ㄹ, ㅁ"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "예/아니오 질문은 **có (+ thích/muốn) + 동사 … không?**. rất·lắm은 정도를 나타내는 말로 동사 ăn 앞에 올 수 없다."
+    },
+    {
+     "id": "vie-m2-23",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'lắm'이 들어갈 자리로 가장 알맞은 곳은? (뜻: 나는 아이스 연유 커피를 별로 좋아하지 않는다.)\n\n> (1) Tôi (2) không (3) thích (4) cà phê sữa đá (5).",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "'별로 ~않다' = **không … lắm**. lắm은 맨 뒤: Tôi không thích cà phê sữa đá **lắm**. (p.110 읽기)"
+    },
+    {
+     "id": "vie-m2-24",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 24,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.0,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'đi'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "문장 끝의 đi는 부드러운 권유·명령을 나타낸다.",
+      "'Chúng ta đi xem phim đi!'에서 앞의 đi는 '가다', 뒤의 đi는 '~하자'이다.",
+      "'đi + 동사'는 '~하러 가다'라는 뜻이다.",
+      "'Tôi đi Hà Nội.'처럼 도시 이름 앞에 쓸 수 있다.",
+      "'Bạn ăn thử đi.'의 đi는 '가다'라는 뜻이다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "'Bạn ăn thử đi.'의 đi는 문장 끝 **권유 표지**(먹어 봐) — '가다'가 아니다."
+    },
+    {
+     "id": "vie-m2-25",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 25,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-04"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> cà phê này / có / đắng / lắm / không / ?",
+     "choices": [
+      "Cà phê này đắng có lắm không?",
+      "Cà phê này có đắng lắm không?",
+      "Có cà phê này đắng lắm không?",
+      "Cà phê này có lắm đắng không?",
+      "Cà phê này đắng lắm có không?"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "주어 + **có** + 형용사 + lắm + **không?** → Cà phê này **có** đắng lắm **không**? (có를 빠뜨리거나 뒤로 보내지 않기)"
+    },
+    {
+     "id": "vie-m2-26",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 26,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> chả giò / ăn / Kenji / thử / đi / !",
+     "choices": [
+      "Kenji thử chả giò ăn đi!",
+      "Đi Kenji ăn thử chả giò!",
+      "Kenji ăn chả giò đi thử!",
+      "Kenji ăn thử chả giò đi!",
+      "Kenji đi chả giò ăn thử!"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "주어 + **동사 + thử** + 목적어 + **đi(권유)**: Kenji **ăn thử** chả giò **đi**! (켄지, 짜조 먹어 봐!)"
+    },
+    {
+     "id": "vie-m2-27",
+     "subject": "베트남어",
+     "unit": "u5",
+     "type": "choice",
+     "no": 27,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> Lan / đang / đến / thư viện / đi / .",
+     "choices": [
+      "Lan đi đang đến thư viện.",
+      "Lan đang đi đến thư viện.",
+      "Đang Lan đi đến thư viện.",
+      "Lan đi đến đang thư viện.",
+      "Lan đến thư viện đang đi."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "주어 + **đang + 동사(đi đến)** + 장소: Lan **đang đi** đến thư viện. (Hội thoại 1)"
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "단원평가 3 · 기출형 실전",
+   "short": "단원평가 3",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [
+    {
+     "id": "g1",
+     "title": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "range": [
+      14,
+      16
+     ],
+     "context": "> Nam: Lan ơi, bạn đi đâu đấy?\n> Lan: Lan đang đi đến thư viện. Còn Nam?\n> Nam: Mình đi đến (a) <u>căn tin</u> mua nước. Hôm nay Lan có đi sinh nhật Kenji không?\n> Lan: Không, mình phải đi (b) <u>làm thêm</u>.\n> Nam: Lan làm thêm ở đâu?\n> Lan: Ở một tiệm ăn (c) <u>gần</u> siêu thị Aeon. Chào bạn. Hẹn gặp lại."
+    }
+   ],
+   "questions": [
+    {
+     "id": "vie-m3-01",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> hẹn",
+     "choices": [
+      "기다리다",
+      "약속하다",
+      "만나다",
+      "부르다",
+      "끝내다"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "hẹn = 약속하다 (Hẹn gặp lại. 또 만나자). 기다리다 = chờ, 만나다 = gặp, 부르다 = gọi, 끝내다 = xong."
+    },
+    {
+     "id": "vie-m3-02",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> bệnh viện",
+     "choices": [
+      "학교",
+      "회사",
+      "공항",
+      "은행",
+      "병원"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "bệnh viện = 병원 (Ông ấy đang đi bệnh viện.). 학교 = trường, 회사 = công ty, 공항 = sân bay."
+    },
+    {
+     "id": "vie-m3-03",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> đắng",
+     "choices": [
+      "달다",
+      "시다",
+      "맵다",
+      "쓰다",
+      "짜다"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "đắng = (맛이) 쓰다 (Cà phê này có đắng lắm không?). 달다 = ngọt, 시다 = chua, 맵다 = cay."
+    },
+    {
+     "id": "vie-m3-04",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> một chút",
+     "choices": [
+      "많이",
+      "다시",
+      "조금, 약간",
+      "아주",
+      "별로"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "một chút = 조금, 약간 (Em nói được một chút.). 다시 = lại, 아주 = rất."
+    },
+    {
+     "id": "vie-m3-05",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 맛있다",
+     "choices": [
+      "ngòn",
+      "ngôn",
+      "ngon",
+      "ngón",
+      "ngọn"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "맛있다 = **ngon** (성조 없음). Bánh mì này rất ngon."
+    },
+    {
+     "id": "vie-m3-06",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 영화를 보다",
+     "choices": [
+      "xêm phim",
+      "xem phím",
+      "xem phìm",
+      "xem phim",
+      "xém phim"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "영화를 보다 = **xem phim** (둘 다 성조 없음). Chúng ta đi xem phim đi!"
+    },
+    {
+     "id": "vie-m3-07",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 밀크티",
+     "choices": [
+      "tra sữa",
+      "trà sửa",
+      "trà sũa",
+      "trá sữa",
+      "trà sữa"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "밀크티 = **trà sữa** (trà: dấu huyền / sữa: ư + dấu ngã)."
+    },
+    {
+     "id": "vie-m3-08",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 집에 돌아가다",
+     "choices": [
+      "về nhà",
+      "vê nhà",
+      "về nha",
+      "vể nhà",
+      "vé nhà"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "집에 돌아가다 = **về nhà** (về: ê + dấu huyền / nhà: dấu huyền)."
+    },
+    {
+     "id": "vie-m3-09",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 대답하다",
+     "choices": [
+      "tra lời",
+      "trả lơi",
+      "trả lời",
+      "trã lời",
+      "trả lới"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "대답하다 = **trả lời** (trả: dấu hỏi / lời: ơ + dấu huyền). Bạn trả lời đi."
+    },
+    {
+     "id": "vie-m3-10",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 즐겁다",
+     "choices": [
+      "vùi",
+      "vui",
+      "vúi",
+      "vụi",
+      "vủi"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "즐겁다 = **vui** (성조 없음). Họ nói chuyện rất vui."
+    },
+    {
+     "id": "vie-m3-11",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'đang'이 들어갈 자리로 가장 알맞은 곳은? (뜻: 지금 우리는 택시를 타고 집에 가는 중이다.)\n\n> (1) Bây giờ (2) chúng tôi (3) đi taxi (4) về nhà (5).",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "đang은 동사 **앞**: Bây giờ chúng tôi **đang đi** taxi về nhà. (p.110 읽기) 동사 đi 앞은 (3)."
+    },
+    {
+     "id": "vie-m3-12",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 말로 가장 알맞은 것은?\n\n> Tôi mua cà phê, ___ đi bộ đến công ty.",
+     "choices": [
+      "sau đó",
+      "bây giờ",
+      "hôm nay",
+      "một chút",
+      "lại"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "'커피를 사고, **그 다음에** 회사까지 걸어간다' → **sau đó**. (Hội thoại 2)"
+    },
+    {
+     "id": "vie-m3-13",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'thử'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "'동사 + thử'는 '~해 보다'라는 뜻이다.",
+      "ăn thử, uống thử처럼 동사 바로 뒤에 오는 것이 기본이다.",
+      "'thử + 동사 + đi'는 한번 해 보라고 권하는 느낌을 준다.",
+      "'Mình muốn ăn thử bún bò.'는 바른 문장이다.",
+      "형용사 뒤에도 써서 'ngon thử'처럼 말할 수 있다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "thử는 **동사**와 함께 쓴다(ăn thử, mặc thử). 형용사 ngon 뒤에는 쓰지 않는다."
+    },
+    {
+     "id": "vie-m3-14",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 14,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑줄 친 (a) căn tin의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "매점(구내식당)",
+      "도서관",
+      "레스토랑",
+      "마트",
+      "교실"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "căn tin = 매점, 구내식당. Nam은 물을 사러 매점에 간다. 도서관 = thư viện, 레스토랑 = nhà hàng, 마트 = siêu thị."
+    },
+    {
+     "id": "vie-m3-15",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 15,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (b) làm thêm의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "일을 끝내다",
+      "아르바이트하다",
+      "더 먹다",
+      "출근하다",
+      "숙제하다"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "làm thêm = 아르바이트하다. Lan은 Kenji 생일에 못 가고 **아르바이트하러** 가야 한다."
+    },
+    {
+     "id": "vie-m3-16",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 16,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (c) gần의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "멀리",
+      "앞에",
+      "근처에, 가까이",
+      "안에",
+      "옆집"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "một tiệm ăn **gần** siêu thị Aeon = 이온 마트 **근처의** 작은 식당."
+    },
+    {
+     "id": "vie-m3-17",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> ___ phim, ___ ti vi",
+     "choices": [
+      "nghe",
+      "đọc",
+      "xem",
+      "gọi",
+      "mua"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "**xem** phim = 영화를 보다, **xem** ti vi = TV를 보다. mua ti vi는 되지만 'mua phim'은 어색하고, nghe·đọc은 둘 다 맞지 않는다."
+    },
+    {
+     "id": "vie-m3-18",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> bún ___ (분짜), ___ giò (짜조)",
+     "choices": [
+      "bò",
+      "chả",
+      "đậu",
+      "bánh",
+      "phở"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "bún **chả** = 분짜, **chả** giò = 짜조. bún bò·bún đậu는 있지만 'bò giò, đậu giò'는 없다."
+    },
+    {
+     "id": "vie-m3-19",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 수 없는 것은?\n\n> ___ này tiếng Việt gọi là gì?",
+     "choices": [
+      "Món",
+      "Cái",
+      "Con",
+      "Nước",
+      "Thế nào"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "이름을 물을 때: 음식 **món**, 물건 **cái**, 동물 **con**, 음료 **nước** + này. thế nào(어때?)는 명사 자리에 올 수 없다."
+    },
+    {
+     "id": "vie-m3-20",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 '좀 물어봐도 돼요?'라는 뜻으로 '…, được không?'의 사용이 가장 옳은 문장은?",
+     "choices": [
+      "Tôi được hỏi không một chút?",
+      "Được không tôi hỏi một chút?",
+      "Tôi hỏi một chút, được không?",
+      "Tôi không hỏi được một chút?",
+      "Tôi hỏi được không một chút?"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "허락을 구할 때는 문장 **끝**에 **được không?**: Tôi hỏi một chút, được không?"
+    },
+    {
+     "id": "vie-m3-21",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다음 중 'đến'에 대한 설명으로 〈보기〉에서 옳은 것만을 있는 대로 고른 것은?\n\n> 〈보기〉\n> ㄱ. '도착하다, 오다'라는 뜻이 있다.\n> ㄴ. 'từ A đến B'는 'A부터 B까지'라는 뜻이다.\n> ㄷ. đến과 tới는 뜻이 같다.\n> ㄹ. trường, công ty 앞에는 đến을 쓰지 않는다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄴ, ㄷ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄱ, ㄴ, ㄷ",
+      "ㄱ, ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄹ: 교재에서 trường, công ty, nhà bạn은 오히려 **(đi) đến**을 쓰는 예외 장소이다."
+    },
+    {
+     "id": "vie-m3-22",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 4.2,
+     "negative": true,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "'Món này thế nào?'에 대한 대답으로, 문법상 빈칸에 들어갈 수 없는 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> Món này ___.\n>\n> 〈보기〉\n> ㄱ. ngon lắm\n> ㄴ. rất ngọt\n> ㄷ. hơi cay\n> ㄹ. rất ngon lắm\n> ㅁ. không cay rất",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄷ, ㄹ",
+      "ㄹ, ㅁ",
+      "ㄱ, ㄷ, ㅁ",
+      "ㄴ, ㄹ, ㅁ"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "ㄹ: rất과 lắm은 한 문장에 같이 쓰지 않는다. ㅁ: '별로 맵지 않다'는 **không cay lắm** — rất은 형용사 뒤에 오지 않는다."
+    },
+    {
+     "id": "vie-m3-23",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'có'가 들어갈 자리로 가장 알맞은 곳은? (뜻: 지금 너 집에 있니?)\n\n> (1) Bây giờ (2) em (3) ở (4) nhà (5) không?",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "예/아니오 질문은 **có + 동사 … không?** → Bây giờ em **có ở** nhà không? (교재 2.1) có를 빠뜨리지 않기!"
+    },
+    {
+     "id": "vie-m3-24",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 24,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.0,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'đâu'와 'ở đâu'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "đi, về, đến 뒤에서 목적지를 물을 때는 đâu를 쓴다.",
+      "일하는 장소를 물을 때는 'làm việc ở đâu?'라고 한다.",
+      "'Nhà thầy ở đâu?'처럼 어디에 있는지 물을 때 ở đâu를 쓴다.",
+      "'Bạn đi đâu đấy?'의 đấy는 묻는 말을 부드럽게 해 준다.",
+      "'Đồng hồ này chị mua đâu?'가 바른 문장이다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "산 장소를 묻는 것이므로 **ở đâu** → Đồng hồ này chị mua **ở đâu**? (교재 2.4)"
+    },
+    {
+     "id": "vie-m3-25",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 25,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> em / có / thích / không / bún đậu / ăn / ?",
+     "choices": [
+      "Em có thích ăn bún đậu không?",
+      "Em thích ăn bún đậu có không?",
+      "Em có ăn thích bún đậu không?",
+      "Có em thích ăn bún đậu không?",
+      "Em không thích có ăn bún đậu?"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "주어 + **có** + thích + 동사 + 목적어 + **không?** → Em **có thích** ăn bún đậu **không**?"
+    },
+    {
+     "id": "vie-m3-26",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 26,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-04"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> anh / có / muốn / xem / thử / phim đó / không / ?",
+     "choices": [
+      "Anh muốn có xem thử phim đó không?",
+      "Anh có muốn thử phim đó xem không?",
+      "Anh có muốn xem thử phim đó không?",
+      "Anh muốn xem thử phim đó có không?",
+      "Có anh muốn xem phim đó thử không?"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "**có + muốn + 동사 + thử + 목적어 + không?** → Anh **có muốn xem thử** phim đó **không**? (교재 2.3)"
+    },
+    {
+     "id": "vie-m3-27",
+     "subject": "베트남어",
+     "unit": "u6",
+     "type": "choice",
+     "no": 27,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> bây giờ / anh ấy / lên mạng / đang / mua sắm / .",
+     "choices": [
+      "Bây giờ anh ấy lên mạng đang mua sắm.",
+      "Bây giờ đang anh ấy lên mạng mua sắm.",
+      "Anh ấy lên mạng mua sắm bây giờ đang.",
+      "Đang bây giờ anh ấy lên mạng mua sắm.",
+      "Bây giờ anh ấy đang lên mạng mua sắm."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "시간말 + 주어 + **đang + 동사**: Bây giờ anh ấy **đang lên mạng** mua sắm. (지금 그는 인터넷 쇼핑을 하고 있다.)"
+    }
+   ]
+  },
+  {
+   "id": "u7",
+   "title": "단원평가 4 · 기출형 실전",
+   "short": "단원평가 4",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [
+    {
+     "id": "g1",
+     "title": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "range": [
+      14,
+      16
+     ],
+     "context": "> *Ye Ji và Long đang ở một (a) <u>tiệm giải khát</u>.*\n>\n> Ye Ji: Long ơi, nước này gọi là nước gì?\n> Long: Đây là nước cam cà rốt.\n> Ye Ji: Nước cam cà rốt thế nào?\n> Long: Ngon lắm. (b) <u>Mình</u> rất thích.\n> Ye Ji: Còn nước đó tiếng Việt gọi là gì?\n> Long: Nước đó gọi là nước dừa.\n> Ye Ji: Mình muốn (c) <u>uống thử</u>."
+    }
+   ],
+   "questions": [
+    {
+     "id": "vie-m4-01",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> nghỉ",
+     "choices": [
+      "자다",
+      "앉다",
+      "일하다",
+      "쉬다",
+      "놀다"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "nghỉ = 쉬다 (Chúng ta nghỉ một chút!). 자다 = ngủ, 앉다 = ngồi, 일하다 = làm việc."
+    },
+    {
+     "id": "vie-m4-02",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> chua",
+     "choices": [
+      "달다",
+      "시다",
+      "쓰다",
+      "맵다",
+      "뜨겁다"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "chua = (맛이) 시다 (Nước cam hơi chua.). 달다 = ngọt, 쓰다 = đắng, 맵다 = cay, 뜨겁다 = nóng."
+    },
+    {
+     "id": "vie-m4-03",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> sống",
+     "choices": [
+      "살다",
+      "오다",
+      "일하다",
+      "사다",
+      "팔다"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "sống = 살다. 오다·도착하다 = đến, 사다 = mua, 팔다 = bán."
+    },
+    {
+     "id": "vie-m4-04",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> tối nay",
+     "choices": [
+      "어제",
+      "오늘 아침",
+      "오늘 저녁",
+      "내일",
+      "지금"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "tối nay = 오늘 저녁 (Tối nay chúng ta đi xem phim, phải không?). 지금 = bây giờ."
+    },
+    {
+     "id": "vie-m4-05",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 회사",
+     "choices": [
+      "công tỳ",
+      "cộng ty",
+      "cong ty",
+      "công ty",
+      "côn ty"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "회사 = **công ty** (công: ô 성조 없음 / ty: 성조 없음)."
+    },
+    {
+     "id": "vie-m4-06",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 요리하다(밥을 짓다)",
+     "choices": [
+      "nâu",
+      "nầu",
+      "nấu",
+      "nẫu",
+      "nau"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "요리하다 = **nấu** (â + dấu sắc). nâu는 '갈색'으로 다른 말."
+    },
+    {
+     "id": "vie-m4-07",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 쌀국수(퍼)",
+     "choices": [
+      "phở",
+      "phơ",
+      "phớ",
+      "phờ",
+      "phợ"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "쌀국수 = **phở** (ơ + dấu hỏi)."
+    },
+    {
+     "id": "vie-m4-08",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 아르바이트하다",
+     "choices": [
+      "lam thêm",
+      "làm thểm",
+      "làm thếm",
+      "lâm thêm",
+      "làm thêm"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "아르바이트하다 = **làm thêm** (làm: dấu huyền / thêm: ê 성조 없음)."
+    },
+    {
+     "id": "vie-m4-09",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 음악을 듣다",
+     "choices": [
+      "nghe nhac",
+      "nghe nhạc",
+      "nghé nhạc",
+      "nghe nhác",
+      "nghẹ nhạc"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "음악을 듣다 = **nghe nhạc** (nghe: 성조 없음 / nhạc: a + dấu nặng)."
+    },
+    {
+     "id": "vie-m4-10",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> (값이) 비싸다",
+     "choices": [
+      "mặc",
+      "mác",
+      "mắc",
+      "mấc",
+      "mằc"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "비싸다 = **mắc** (ă + dấu sắc). mặc은 '입다'로 다른 말(mặc thử cái áo này)."
+    },
+    {
+     "id": "vie-m4-11",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'đang'이 들어갈 자리로 가장 알맞은 곳은?\n\n> Chúng tôi gặp nhau ở sân bay. (1) Bây giờ (2) chúng tôi (3) uống nước (4) ở căn tin (5).",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "đang은 동사 **앞**: Bây giờ chúng tôi **đang uống** nước ở căn tin. 동사 uống 앞은 (3)."
+    },
+    {
+     "id": "vie-m4-12",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 단어로 가장 알맞은 것은?\n\n> Anh Michael đến Việt Nam ___ học tiếng Việt.",
+     "choices": [
+      "để",
+      "với",
+      "của",
+      "ở",
+      "nhưng"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "'베트남어를 공부하**기 위해** 베트남에 온다' → **để**(~하기 위해). (교재 2.3)"
+    },
+    {
+     "id": "vie-m4-13",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'lắm'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "형용사 뒤에 위치한다.",
+      "'매우, 아주'라는 뜻을 나타낸다.",
+      "'không + 형용사 + lắm'은 '별로 ~하지 않다'는 뜻이다.",
+      "rất과 함께 'rất đói lắm'처럼 쓰면 더 강한 뜻의 바른 문장이 된다.",
+      "'Em đói lắm.'은 '저 너무 배고파요.'라는 뜻이다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "rất과 lắm은 한 문장에 **같이 쓰지 않는다** → Em rất đói. / Em đói lắm."
+    },
+    {
+     "id": "vie-m4-14",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 14,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-03"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑줄 친 (a) tiệm giải khát의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "서점",
+      "빵집",
+      "음료 가게(카페)",
+      "식당",
+      "마트"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "tiệm giải khát = 음료 가게, 카페. 두 사람이 음료(nước cam cà rốt, nước dừa) 이야기를 한다. 서점 = nhà sách, 식당 = tiệm ăn/nhà hàng."
+    },
+    {
+     "id": "vie-m4-15",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 15,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (b) Mình의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "우리(듣는 사람 포함)",
+      "나",
+      "너",
+      "그",
+      "그녀"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "친구 사이에서 **mình** = 나. Long이 '**나는** 아주 좋아해'라고 말한다."
+    },
+    {
+     "id": "vie-m4-16",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 16,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (c) uống thử의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "마시러 가다",
+      "다 마시다",
+      "다시 마시다",
+      "마셔 보다",
+      "마시고 싶다"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "동사 + **thử** = ~해 보다 → uống thử = 마셔 보다. '마시고 싶다'는 앞의 muốn이 나타낸다."
+    },
+    {
+     "id": "vie-m4-17",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> đi ___, ___ tiếng Việt",
+     "choices": [
+      "học",
+      "làm",
+      "nói",
+      "ăn",
+      "xem"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "đi **học** = 공부하러 가다, **học** tiếng Việt = 베트남어를 공부하다. nói tiếng Việt는 되지만 'đi nói'는 어색하고, đi làm·đi ăn은 되지만 'làm/ăn tiếng Việt'는 안 된다."
+    },
+    {
+     "id": "vie-m4-18",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> tiệm ___ (작은 식당), ___ cơm (밥을 먹다)",
+     "choices": [
+      "nấu",
+      "cà phê",
+      "ăn",
+      "sách",
+      "giải khát"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "tiệm **ăn** = (작은) 식당, **ăn** cơm = 밥을 먹다. tiệm cà phê·nấu cơm도 있지만 둘 다에 맞는 말은 ăn뿐."
+    },
+    {
+     "id": "vie-m4-19",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 수 없는 것은?\n\n> Chị ___ được không?",
+     "choices": [
+      "chạy xe máy",
+      "mắc",
+      "nói tiếng Anh",
+      "nấu ăn",
+      "hát"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "**동사 + được không?** = ~할 수 있어요? mắc(비싸다)은 형용사라 '할 수 있다'와 어울리지 않는다."
+    },
+    {
+     "id": "vie-m4-20",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-03"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "'Nam과 Lan은 영어를 공부하고, (한편) Kenji는 베트남어를 공부한다.'는 뜻으로 'còn'의 사용이 가장 옳은 문장은?",
+     "choices": [
+      "Nam và Lan học tiếng Anh, còn Kenji học tiếng Việt.",
+      "Nam và Lan học tiếng Anh, Kenji học còn tiếng Việt.",
+      "Nam và Lan học tiếng Anh còn, Kenji học tiếng Việt.",
+      "Còn Nam và Lan học tiếng Anh Kenji học tiếng Việt.",
+      "Nam và Lan học tiếng Anh, Kenji học tiếng Việt còn."
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "대조하는 **còn**은 두 번째 주어 **앞**: …, **còn Kenji** học tiếng Việt. (p.97 읽기)"
+    },
+    {
+     "id": "vie-m4-21",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다음 중 'hơi, rất, lắm'에 대한 설명으로 〈보기〉에서 옳은 것만을 있는 대로 고른 것은?\n\n> 〈보기〉\n> ㄱ. hơi는 '조금, 약간'이라는 뜻이다.\n> ㄴ. rất은 형용사 앞에 온다.\n> ㄷ. lắm은 형용사 앞에 온다.\n> ㄹ. 'Tôi hơi mệt.'은 바른 문장이다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄴ, ㄷ",
+      "ㄱ, ㄴ, ㄹ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "ㄷ: lắm은 형용사 **뒤**(đói lắm). hơi·rất은 형용사 앞."
+    },
+    {
+     "id": "vie-m4-22",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.2,
+     "negative": true,
+     "hasBogi": true,
+     "level": "어려움",
+     "stem": "문법상 빈칸에 들어갈 수 없는 어휘만을 〈보기〉에서 있는 대로 고른 것은?\n\n> Anh ___ ở đâu?\n>\n> 〈보기〉\n> ㄱ. làm việc\n> ㄴ. học\n> ㄷ. đi\n> ㄹ. về\n> ㅁ. mua điện thoại này",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄷ, ㄹ",
+      "ㄴ, ㅁ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄷ, ㄹ, ㅁ"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "이동 동사 **đi, về(, đến)** 뒤에는 **đâu**만 쓴다(Anh đi đâu? / Anh về đâu?). 일하는·공부하는·산 장소는 **ở đâu**."
+    },
+    {
+     "id": "vie-m4-23",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'không'이 들어갈 자리로 가장 알맞은 곳은? (뜻: 오늘 할아버지는 일하러 가세요?)\n\n> (1) Hôm nay (2) ông (3) có (4) đi làm (5)?",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "예/아니오 질문 **có + 동사 … không?** — không은 문장 **맨 끝**: Hôm nay ông có đi làm **không**? (교재 2.1)"
+    },
+    {
+     "id": "vie-m4-24",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 24,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.0,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'mình'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "친구 사이에서 '나'라는 뜻으로 쓴다.",
+      "'Mình đi ăn phở đi.'에서 mình은 '우리'라는 뜻이다.",
+      "'Bạn nói một chút về mình đi.'에서 mình은 '자기 자신'이라는 뜻이다.",
+      "tôi보다 친근한 느낌을 준다.",
+      "선생님께 말할 때 자신을 가리키는 예의 바른 말이다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "mình은 **친구 사이·같은 나이끼리** 쓰는 말. 선생님께는 쓰지 않는다(학생은 보통 em)."
+    },
+    {
+     "id": "vie-m4-25",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 25,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> hôm nay / mẹ / có / nấu / cơm / không / ?",
+     "choices": [
+      "Hôm nay mẹ nấu có cơm không?",
+      "Hôm nay có mẹ nấu cơm không?",
+      "Hôm nay mẹ có nấu cơm không?",
+      "Mẹ hôm nay nấu cơm có không?",
+      "Hôm nay mẹ không nấu cơm có?"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "시간말 + 주어 + **có + 동사** + 목적어 + **không?** → Hôm nay mẹ **có nấu** cơm **không**? (교재 2.2)"
+    },
+    {
+     "id": "vie-m4-26",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 26,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-04"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> các chị / uống / thử / đi / !",
+     "choices": [
+      "Các chị thử đi uống!",
+      "Các chị uống thử đi!",
+      "Uống các chị thử đi!",
+      "Các chị uống đi thử!",
+      "Thử đi các chị uống!"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "주어 + **동사 + thử + đi(권유)**: Các chị **uống thử đi**! (언니들, 마셔 보세요!) (교재 2.4)"
+    },
+    {
+     "id": "vie-m4-27",
+     "subject": "베트남어",
+     "unit": "u7",
+     "type": "choice",
+     "no": 27,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-04"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> con chó / đang / rất ngon / ngủ / .",
+     "choices": [
+      "Con chó ngủ đang rất ngon.",
+      "Đang con chó ngủ rất ngon.",
+      "Con chó rất ngon đang ngủ.",
+      "Con chó đang ngủ rất ngon.",
+      "Con chó ngủ rất ngon đang."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "주어 + **đang + 동사** + 정도: Con chó **đang ngủ** rất ngon. (개가 아주 푹 자고 있다.)"
+    }
+   ]
+  },
+  {
+   "id": "u8",
+   "title": "단원평가 5 · 기출형 실전",
+   "short": "단원평가 5",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [
+    {
+     "id": "g1",
+     "title": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "range": [
+      14,
+      16
+     ],
+     "context": "> *Trong một tiệm ăn gần trường đại học*\n>\n> Kenji: Mai ơi, cho mình (a) <u>hỏi</u> một chút.\n> Mai: Kenji muốn hỏi gì?\n> Kenji: Món này tiếng Việt gọi là gì?\n> Mai: À, đây là món chả giò.\n> Kenji: Món này thế nào? Có ngon không, Mai?\n> Mai: Ngon lắm. Kenji ăn thử đi.\n> Kenji: Còn món (b) <u>đó</u> gọi là gì?\n> Mai: Bánh xèo.\n> Kenji: Mình muốn ăn thử hai (c) <u>món</u> này."
+    }
+   ],
+   "questions": [
+    {
+     "id": "vie-m5-01",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> chồng",
+     "choices": [
+      "아내",
+      "아들",
+      "형",
+      "할아버지",
+      "남편"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "chồng = 남편 (người chồng). 아내 = vợ."
+    },
+    {
+     "id": "vie-m5-02",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> siêu thị",
+     "choices": [
+      "시장",
+      "마트(슈퍼마켓)",
+      "서점",
+      "공항",
+      "카페"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "siêu thị = 마트, 슈퍼마켓 (gần siêu thị Aeon). 시장 = chợ, 서점 = nhà sách, 공항 = sân bay."
+    },
+    {
+     "id": "vie-m5-03",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> nhỏ",
+     "choices": [
+      "크다",
+      "많다",
+      "작다",
+      "예쁘다",
+      "좋다"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "nhỏ = 작다 (một cái bánh kem nhỏ). 크다 = to / lớn, 예쁘다 = đẹp, 좋다 = tốt."
+    },
+    {
+     "id": "vie-m5-04",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 어휘의 한국어 뜻으로 옳은 것은?\n\n> xong",
+     "choices": [
+      "시작하다",
+      "기다리다",
+      "쉬다",
+      "끝내다(다 하다)",
+      "고르다"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "xong = 끝내다, 다 하다. 기다리다 = chờ, 쉬다 = nghỉ."
+    },
+    {
+     "id": "vie-m5-05",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 케이크",
+     "choices": [
+      "bánh kem",
+      "banh kem",
+      "bánh kém",
+      "bành kem",
+      "bãnh kem"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "케이크 = **bánh kem** (bánh: a + dấu sắc / kem: 성조 없음)."
+    },
+    {
+     "id": "vie-m5-06",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 앉다",
+     "choices": [
+      "ngôi",
+      "ngồi",
+      "ngối",
+      "ngỗi",
+      "ngời"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "앉다 = **ngồi** (ô + dấu huyền). Tôi ngồi đây được không?"
+    },
+    {
+     "id": "vie-m5-07",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 뜨겁다, 덥다",
+     "choices": [
+      "nong",
+      "nòng",
+      "nõng",
+      "nóng",
+      "nọng"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "뜨겁다 = **nóng** (o + dấu sắc). trà nóng, cà phê đen nóng."
+    },
+    {
+     "id": "vie-m5-08",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 오토바이",
+     "choices": [
+      "xe may",
+      "xe mày",
+      "xe máy",
+      "xe mấy",
+      "xe mảy"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "오토바이 = **xe máy** (a + dấu sắc). mấy(몇), mày(너, 낮춤말)는 다른 말."
+    },
+    {
+     "id": "vie-m5-09",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 책을 읽다",
+     "choices": [
+      "doc sách",
+      "đọc sach",
+      "đọc sạch",
+      "đóc sách",
+      "đọc sách"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "책을 읽다 = **đọc sách** (đ / đọc: o + dấu nặng / sách: a + dấu sắc). sạch은 '깨끗하다'."
+    },
+    {
+     "id": "vie-m5-10",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.3,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어의 베트남어 철자 표기가 옳은 것은?\n\n> 예쁘다",
+     "choices": [
+      "đẹp",
+      "đep",
+      "đếp",
+      "đệp",
+      "dẹp"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "예쁘다 = **đẹp** (đ + e + dấu nặng). Quán đó đẹp lắm."
+    },
+    {
+     "id": "vie-m5-11",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-04"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'đang'이 들어갈 자리로 가장 알맞은 곳은? (뜻: 그들은 뭘 먹고 있어?)\n\n> (1) Họ (2) ăn (3) gì (4) vậy (5)?",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "đang은 동사 **앞**: Họ **đang ăn** gì vậy? (교재 2.4) 'Họ ăn đang gì vậy'처럼 동사 뒤에 두지 않기!"
+    },
+    {
+     "id": "vie-m5-12",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 들어갈 단어로 가장 알맞은 것은? (뜻: 나는 보통 저녁 6시까지 일한다.)\n\n> Tôi thường làm việc ___ 6 giờ tối.",
+     "choices": [
+      "đến",
+      "ở",
+      "với",
+      "đi",
+      "rất"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "**đến** = ~까지(to, until). Tôi thường làm việc **đến** 6 giờ tối. (đến = tới)"
+    },
+    {
+     "id": "vie-m5-13",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 Bài 6에서 배운 'đi'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "'Tôi đi Hà Nội.'처럼 도시·나라 이름 앞에 쓸 수 있다.",
+      "đi thư viện, đi sân bay처럼 자주 가는 곳 앞에 쓸 수 있다.",
+      "trường, công ty, nhà bạn에는 (đi) đến을 쓴다.",
+      "'đi làm'은 '일하러 가다'라는 뜻이다.",
+      "'Tôi lên tầng 2.'는 đi가 빠졌으므로 틀린 문장이다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "방향어(lên, xuống, vào) 앞의 đi는 **생략할 수 있다** → Tôi (đi) lên tầng 2. 둘 다 바른 문장."
+    },
+    {
+     "id": "vie-m5-14",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 14,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-03"
+     ],
+     "points": 3.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑줄 친 (a) hỏi의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "대답하다",
+      "묻다",
+      "부르다",
+      "말하다",
+      "알다"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "cho mình **hỏi** một chút = 좀 **물어볼게**. 대답하다 = trả lời, 부르다 = gọi."
+    },
+    {
+     "id": "vie-m5-15",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 15,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑줄 친 (b) đó의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "이(가까운 것)",
+      "어느",
+      "몇",
+      "그·저(떨어진 것)",
+      "무엇"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "này = 이(가까운 것), **đó = 그·저(떨어진 것)**. Còn món **đó** gọi là gì? = 그럼 **저** 음식은 뭐라고 해?"
+    },
+    {
+     "id": "vie-m5-16",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 16,
+     "group": "g1",
+     "groupTitle": "[14~16] 다음 대화를 읽고, 문맥을 고려했을 때 밑줄 친 단어의 한국어 뜻으로 가장 옳은 것을 고르시오.",
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑줄 친 (c) món의 뜻으로 가장 옳은 것은?",
+     "choices": [
+      "음료",
+      "가게",
+      "음식(요리)",
+      "메뉴",
+      "맛"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "món = 음식, 요리. hai món này = 이 두 음식(chả giò, bánh xèo). 음료 = thức uống, 메뉴 = thực đơn."
+    },
+    {
+     "id": "vie-m5-17",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> ___ ngọt (단 빵·케이크), ___ mì (반미)",
+     "choices": [
+      "trà",
+      "nước",
+      "bánh",
+      "bún",
+      "cơm"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "**bánh** ngọt = 단 빵·케이크, **bánh** mì = 반미. nước ngọt은 있지만 'nước mì'는 없다."
+    },
+    {
+     "id": "vie-m5-18",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 빈칸에 공통으로 들어갈 단어로 가장 적절한 것은?\n\n> ___ thêm (아르바이트하다), ___ việc (일하다)",
+     "choices": [
+      "ăn",
+      "đi",
+      "uống",
+      "làm",
+      "xem"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "**làm** thêm = 아르바이트하다, **làm** việc = 일하다."
+    },
+    {
+     "id": "vie-m5-19",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 빈칸에 들어갈 수 없는 것은? (상대에게 '먹어 봐 / 먹어 보자'고 권하는 말)\n\n> ___ ăn thử đi!",
+     "choices": [
+      "Bạn",
+      "Anh",
+      "Các chị",
+      "Chúng tôi",
+      "Chúng ta"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "문장 끝 đi는 듣는 사람에게 권하는 말. **chúng tôi**는 듣는 사람을 **빼고** 말하는 '우리'라 함께 하자는 권유에 쓸 수 없다. '우리 ~하자'는 **chúng ta**."
+    },
+    {
+     "id": "vie-m5-20",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-03"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "'떤선녓 공항에 가시죠?'라는 뜻으로 'phải không'의 사용이 가장 옳은 문장은?",
+     "choices": [
+      "Chị đi sân bay Tân Sơn Nhất, phải không?",
+      "Chị phải không đi sân bay Tân Sơn Nhất?",
+      "Phải chị đi không sân bay Tân Sơn Nhất?",
+      "Chị đi phải không sân bay Tân Sơn Nhất?",
+      "Chị không phải đi sân bay Tân Sơn Nhất?"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "'~지요?'라고 확인할 때는 문장 **끝**에 **, phải không?** (Hội thoại 2) ⑤는 '공항에 갈 필요 없어요?'라는 다른 뜻."
+    },
+    {
+     "id": "vie-m5-21",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다음 중 'gọi'에 대한 설명으로 〈보기〉에서 옳은 것만을 있는 대로 고른 것은?\n\n> 〈보기〉\n> ㄱ. 'Món này tiếng Việt gọi là gì?'에서 gọi는 '부르다'라는 뜻이다.\n> ㄴ. 'Anh Nam gọi món gì?'에서 gọi는 '주문하다'라는 뜻이다.\n> ㄷ. gọi는 '전화하다'라는 뜻으로도 쓰인다.\n> ㄹ. 'gọi món'은 '음식을 팔다'라는 뜻이다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄹ",
+      "ㄴ, ㄷ",
+      "ㄴ, ㄷ, ㄹ",
+      "ㄱ, ㄴ, ㄷ"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "gọi = 부르다, 전화하다, (음식을) 주문하다. ㄹ: gọi món = 음식을 **주문하다**. 팔다는 bán."
+    },
+    {
+     "id": "vie-m5-22",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 4.2,
+     "negative": true,
+     "hasBogi": true,
+     "level": "어려움",
+     "stem": "다음 대답에 알맞은 질문이 될 수 없는 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> B: Không. Hôm nay tôi ở nhà.\n>\n> 〈보기〉\n> ㄱ. Hôm nay ông có đi làm không?\n> ㄴ. Hôm nay ông có ở nhà không?\n> ㄷ. Hôm nay ông đi làm không có?\n> ㄹ. Hôm nay ông không đi làm không?",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄷ, ㄹ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄴ, ㄷ, ㄹ",
+      "ㄱ, ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄱ(일하러 가세요? – 아니요, 집에 있어요)만 알맞다(교재 2.1). ㄴ은 '집에 있어요?'에 '아니요, 집에 있어요'라 앞뒤가 안 맞고, ㄷ·ㄹ은 **có + 동사 … không?** 어순이 틀렸다."
+    },
+    {
+     "id": "vie-m5-23",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-03"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 (1)~(5) 중 'rất'이 들어갈 자리로 가장 알맞은 곳은? (뜻: 그 두 친구는 게임하기를 아주 좋아한다.)\n\n> (1) Hai bạn ấy (2) thích (3) chơi (4) game (5).",
+     "choices": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)",
+      "(5)"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "rất(매우)은 꾸미는 말 **앞**: Hai bạn ấy **rất thích** chơi game. (p.97 읽기)"
+    },
+    {
+     "id": "vie-m5-24",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 24,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-03"
+     ],
+     "points": 4.0,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "다음 중 'nhưng, cũng, còn'에 대한 설명으로 틀린 것은?",
+     "choices": [
+      "nhưng은 서로 반대되는 두 내용을 이어 준다.",
+      "cũng은 '~도 또한'이라는 뜻이다.",
+      "cũng은 주어 뒤, 동사 앞에 온다.",
+      "còn은 'A는 ~하고, (한편) B는 ~한다'처럼 대조할 때 쓴다.",
+      "'Giá hơi mắc nhưng bánh rất ngon.'에서 nhưng 대신 cũng을 써도 뜻이 같다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "'가격은 좀 비싸지만 케이크는 맛있다'는 반대 내용 → **nhưng**만 알맞다. cũng(~도)을 쓰면 뜻이 달라진다."
+    },
+    {
+     "id": "vie-m5-25",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 25,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> anh / có / uống / không / bia / ?",
+     "choices": [
+      "Anh uống có bia không?",
+      "Có anh uống bia không?",
+      "Anh uống bia có không?",
+      "Anh không uống bia có?",
+      "Anh có uống bia không?"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "주어 + **có + 동사** + 목적어 + **không?** → Anh **có uống** bia **không**?"
+    },
+    {
+     "id": "vie-m5-26",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 26,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> tôi / muốn / mặc / thử / cái áo này / .",
+     "choices": [
+      "Tôi thử muốn mặc cái áo này.",
+      "Tôi muốn cái áo này mặc thử.",
+      "Tôi muốn mặc thử cái áo này.",
+      "Tôi mặc muốn thử cái áo này.",
+      "Thử tôi muốn mặc cái áo này."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "주어 + muốn + **동사 + thử** + 목적어: Tôi muốn **mặc thử** cái áo này. (이 셔츠를 입어 보고 싶어요. 교재 p.126)"
+    },
+    {
+     "id": "vie-m5-27",
+     "subject": "베트남어",
+     "unit": "u8",
+     "type": "choice",
+     "no": 27,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 3.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "주어진 단어를 올바른 순서대로 배열한 문장은?\n\n> anh ấy / ở / công ty / đang / .",
+     "choices": [
+      "Anh ấy ở đang công ty.",
+      "Đang anh ấy ở công ty.",
+      "Anh ấy ở công ty đang.",
+      "Anh ấy đang ở công ty.",
+      "Anh ấy công ty đang ở."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "주어 + **đang + ở** + 장소: Anh ấy **đang ở** công ty. (그는 지금 회사에 있다.)"
+    }
+   ]
   }
  ]
 }

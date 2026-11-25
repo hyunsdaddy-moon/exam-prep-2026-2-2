@@ -863,6 +863,7 @@ button.link.danger { color: var(--bad); }
 
 /* 단원 평가 */
 .unit-card h3 { font-size: 17px; line-height: 1.35; }
+.unit-series { font-size: 16px; margin: 18px 0 10px; color: var(--text-2); font-weight: 700; }
 .unit-sub { font-size: 13px; color: var(--text-2); margin-left: 8px; }
 .unit-rivals { font-size: 13px; color: var(--text-2); margin: 0; }
 

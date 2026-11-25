@@ -682,6 +682,3286 @@
      }
     }
    ]
+  },
+  {
+   "id": "u3",
+   "title": "단원평가 1 · 기출형 실전",
+   "short": "단원평가 1",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [],
+   "questions": [
+    {
+     "id": "mat-m1-01",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "오각뿔대의 면의 개수를 $a$, 꼭짓점의 개수를 $b$, 모서리의 개수를 $c$라 할 때, $a+b+c$의 값은?",
+     "choices": [
+      "$32$",
+      "$34$",
+      "$36$",
+      "$38$",
+      "$40$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "$n$각뿔대는 면 $n+2$, 꼭짓점 $2n$, 모서리 $3n$개이다. 오각뿔대: $a=7$, $b=10$, $c=15$ → $a+b+c=32$. (각뿔대의 꼭짓점을 $n+1$로 착각하면 오답)"
+    },
+    {
+     "id": "mat-m1-02",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "삼각형 $ABC$에서 $\\angle A=64^\\circ$이고, 꼭짓점 $C$에서의 외각의 크기가 $118^\\circ$일 때, $\\angle B$의 크기는?",
+     "choices": [
+      "$44^\\circ$",
+      "$48^\\circ$",
+      "$54^\\circ$",
+      "$58^\\circ$",
+      "$62^\\circ$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "삼각형의 한 외각의 크기는 이웃하지 않는 두 내각의 크기의 합이므로 $\\angle A+\\angle B=118^\\circ$ → $\\angle B=118^\\circ-64^\\circ=54^\\circ$."
+    },
+    {
+     "id": "mat-m1-03",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "반지름의 길이가 $10\\text{ cm}$이고 중심각의 크기가 $72^\\circ$인 부채꼴의 호의 길이는?",
+     "choices": [
+      "$2\\pi\\text{ cm}$",
+      "$4\\pi\\text{ cm}$",
+      "$5\\pi\\text{ cm}$",
+      "$8\\pi\\text{ cm}$",
+      "$20\\pi\\text{ cm}$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$l=2\\pi r\\times\\dfrac{x}{360}=2\\pi\\times10\\times\\dfrac{72}{360}=4\\pi\\text{ cm}$. ($20\\pi$는 원 전체의 둘레, $8\\pi$는 지름을 반지름으로 착각한 값)"
+    },
+    {
+     "id": "mat-m1-04",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 회전체 중 회전축에 수직인 평면으로 자른 단면이 **모두 합동**인 것은?",
+     "choices": [
+      "원뿔",
+      "원뿔대",
+      "원기둥",
+      "구",
+      "반구"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "회전축에 수직인 단면은 모두 원이다. 원기둥은 위아래 어디를 잘라도 밑면과 같은 크기의 원이므로 모두 합동이다. 원뿔·원뿔대·구·반구는 자르는 위치에 따라 원의 크기가 달라진다."
+    },
+    {
+     "id": "mat-m1-05",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "내각의 크기의 합이 $1800^\\circ$인 다각형은?",
+     "choices": [
+      "구각형",
+      "십각형",
+      "십일각형",
+      "십이각형",
+      "십삼각형"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$180^\\circ\\times(n-2)=1800^\\circ$ → $n-2=10$ → $n=12$, 즉 십이각형이다."
+    },
+    {
+     "id": "mat-m1-06",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "원 $O$에 대한 설명으로 옳은 것은?",
+     "choices": [
+      "원 위의 두 점을 이은 선분을 할선이라 한다.",
+      "한 원에서 길이가 가장 긴 현은 지름이다.",
+      "반원은 활꼴이 아니다.",
+      "한 원에서 현의 길이는 중심각의 크기에 정비례한다.",
+      "호와 두 반지름으로 이루어진 도형을 활꼴이라 한다."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "가장 긴 현은 원의 중심을 지나는 현, 즉 지름이다. ① 두 점을 이은 선분은 **현**(할선은 직선) ③ 반원은 부채꼴이면서 활꼴이다 ④ 현의 길이는 중심각에 정비례하지 **않는다** ⑤ 호와 두 반지름 → **부채꼴**(활꼴은 호와 현)."
+    },
+    {
+     "id": "mat-m1-07",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑면의 반지름의 길이가 $3\\text{ cm}$이고 높이가 $5\\text{ cm}$인 원기둥의 겉넓이는?",
+     "choices": [
+      "$39\\pi\\text{ cm}^2$",
+      "$42\\pi\\text{ cm}^2$",
+      "$45\\pi\\text{ cm}^2$",
+      "$48\\pi\\text{ cm}^2$",
+      "$51\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "밑넓이 $\\pi\\times3^2=9\\pi$가 2개, 옆넓이 $(2\\pi\\times3)\\times5=30\\pi$ → $18\\pi+30\\pi=48\\pi\\text{ cm}^2$. (밑면을 1개만 더하면 $39\\pi$)"
+    },
+    {
+     "id": "mat-m1-08",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "정십오각형의 한 내각의 크기와 한 외각의 크기의 차는?",
+     "choices": [
+      "$120^\\circ$",
+      "$132^\\circ$",
+      "$144^\\circ$",
+      "$150^\\circ$",
+      "$156^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "정십오각형의 한 외각은 $\\dfrac{360^\\circ}{15}=24^\\circ$, 한 내각은 $180^\\circ-24^\\circ=156^\\circ$ → 차는 $156^\\circ-24^\\circ=132^\\circ$."
+    },
+    {
+     "id": "mat-m1-09",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "정다면체에 대한 설명으로 옳지 **않은** 것은?",
+     "choices": [
+      "정다면체는 모두 5가지뿐이다.",
+      "정팔면체의 한 꼭짓점에 모인 면의 개수는 $4$이다.",
+      "정십이면체의 면의 모양은 정오각형이다.",
+      "정이십면체의 꼭짓점의 개수는 $20$이다.",
+      "정육면체의 모서리의 개수는 $12$이다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "정이십면체의 꼭짓점은 $12$개이다(면이 20개). 꼭짓점이 20개인 것은 정십이면체이다. 나머지는 모두 옳다."
+    },
+    {
+     "id": "mat-m1-10",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "반지름의 길이가 $6\\text{ cm}$이고 호의 길이가 $5\\pi\\text{ cm}$인 부채꼴의 넓이는?",
+     "choices": [
+      "$12\\pi\\text{ cm}^2$",
+      "$15\\pi\\text{ cm}^2$",
+      "$18\\pi\\text{ cm}^2$",
+      "$24\\pi\\text{ cm}^2$",
+      "$30\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$S=\\dfrac12 rl=\\dfrac12\\times6\\times5\\pi=15\\pi\\text{ cm}^2$. (중심각은 $150^\\circ$)"
+    },
+    {
+     "id": "mat-m1-11",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "삼각형 $ABC$에서 $\\angle A=50^\\circ$이고, 꼭짓점 $B$에서의 외각의 크기가 $\\angle C$의 크기의 $2$배일 때, $\\angle B$의 크기는?",
+     "choices": [
+      "$60^\\circ$",
+      "$65^\\circ$",
+      "$70^\\circ$",
+      "$75^\\circ$",
+      "$80^\\circ$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "$\\angle B$의 외각 $=\\angle A+\\angle C=50^\\circ+\\angle C$이고 이것이 $2\\angle C$와 같으므로 $\\angle C=50^\\circ$. 따라서 $\\angle B=180^\\circ-(50^\\circ+50^\\circ)=80^\\circ$."
+    },
+    {
+     "id": "mat-m1-12",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "세 변의 길이가 각각 $9\\text{ cm}$, $12\\text{ cm}$, $15\\text{ cm}$인 직각삼각형을 길이가 $12\\text{ cm}$인 변을 회전축으로 하여 $1$회전 시켰다. 이 회전체를 회전축에 수직인 평면으로 자를 때 생기는 단면 중 가장 넓은 단면의 넓이는?",
+     "choices": [
+      "$36\\pi\\text{ cm}^2$",
+      "$54\\pi\\text{ cm}^2$",
+      "$72\\pi\\text{ cm}^2$",
+      "$81\\pi\\text{ cm}^2$",
+      "$144\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "회전체는 밑면의 반지름이 $9\\text{ cm}$, 높이가 $12\\text{ cm}$, 모선이 $15\\text{ cm}$인 원뿔이다. 수직 단면은 원이고, 밑면에서 자를 때 가장 크므로 $\\pi\\times9^2=81\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m1-13",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑면이 한 변의 길이가 $8\\text{ cm}$인 정사각형이고, 옆면이 모두 밑변의 길이가 $8\\text{ cm}$, 높이가 $10\\text{ cm}$인 합동인 이등변삼각형인 정사각뿔의 겉넓이는?",
+     "choices": [
+      "$192\\text{ cm}^2$",
+      "$208\\text{ cm}^2$",
+      "$224\\text{ cm}^2$",
+      "$240\\text{ cm}^2$",
+      "$256\\text{ cm}^2$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "밑넓이 $8\\times8=64$, 옆넓이 $\\left(\\dfrac12\\times8\\times10\\right)\\times4=160$ → $64+160=224\\text{ cm}^2$. (뿔은 밑면이 1개!)"
+    },
+    {
+     "id": "mat-m1-14",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 14,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "반지름의 길이가 $6\\text{ cm}$인 원 $O$를 세 반지름 $\\overline{OA}$, $\\overline{OB}$, $\\overline{OC}$로 나누어 세 개의 부채꼴을 만들었더니 $\\angle AOB:\\angle BOC:\\angle COA=2:3:4$였다. 부채꼴 $BOC$의 넓이는?",
+     "choices": [
+      "$12\\pi\\text{ cm}^2$",
+      "$15\\pi\\text{ cm}^2$",
+      "$16\\pi\\text{ cm}^2$",
+      "$18\\pi\\text{ cm}^2$",
+      "$24\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "세 중심각의 합은 $360^\\circ$이므로 $\\angle BOC=360^\\circ\\times\\dfrac39=120^\\circ$. 부채꼴의 넓이는 중심각에 정비례하므로 $36\\pi\\times\\dfrac{120}{360}=12\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m1-15",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 15,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다각형에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> **〈보기〉**\n> ㄱ. 팔각형의 한 꼭짓점에서 대각선을 모두 그으면 $6$개의 삼각형으로 나누어진다.  \n> ㄴ. 다각형의 외각의 크기의 합은 변의 개수가 많을수록 커진다.  \n> ㄷ. 정육각형의 한 내각의 크기는 $120^\\circ$이다.  \n> ㄹ. 내각의 크기의 합이 $900^\\circ$인 다각형은 칠각형이다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄱ. $n-2=6$개 (O) ㄴ. 외각의 합은 항상 $360^\\circ$ (X) ㄷ. $\\dfrac{180^\\circ\\times4}{6}=120^\\circ$ (O) ㄹ. $180^\\circ(n-2)=900^\\circ$ → $n=7$ (O)."
+    },
+    {
+     "id": "mat-m1-16",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 16,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "중심이 같고 중심각의 크기가 모두 $60^\\circ$인 두 부채꼴이 있다. 큰 부채꼴의 반지름의 길이는 $12\\text{ cm}$, 작은 부채꼴의 반지름의 길이는 $6\\text{ cm}$이다. 큰 부채꼴에서 작은 부채꼴을 잘라 내고 남은 도형(부채꼴 고리)의 둘레의 길이는?",
+     "choices": [
+      "$(6\\pi+6)\\text{ cm}$",
+      "$(6\\pi+12)\\text{ cm}$",
+      "$(9\\pi+12)\\text{ cm}$",
+      "$(12\\pi+6)\\text{ cm}$",
+      "$(12\\pi+12)\\text{ cm}$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "큰 호 $2\\pi\\times12\\times\\dfrac{60}{360}=4\\pi$, 작은 호 $2\\pi\\times6\\times\\dfrac{60}{360}=2\\pi$, 직선 부분 $2\\times(12-6)=12$ → $(6\\pi+12)\\text{ cm}$."
+    },
+    {
+     "id": "mat-m1-17",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면의 반지름의 길이가 $5\\text{ cm}$인 원뿔의 전개도에서 옆면인 부채꼴의 중심각의 크기가 $150^\\circ$일 때, 이 원뿔의 겉넓이는?",
+     "choices": [
+      "$60\\pi\\text{ cm}^2$",
+      "$65\\pi\\text{ cm}^2$",
+      "$70\\pi\\text{ cm}^2$",
+      "$75\\pi\\text{ cm}^2$",
+      "$85\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "부채꼴의 호의 길이 = 밑면의 둘레: $2\\pi l\\times\\dfrac{150}{360}=2\\pi\\times5$ → $l=12\\text{ cm}$. 겉넓이 $=\\pi\\times5^2+\\pi\\times5\\times12=25\\pi+60\\pi=85\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m1-18",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "삼각형 $ABC$에서 $\\angle B=40^\\circ$, $\\angle C=70^\\circ$이다. $\\angle A$의 이등분선이 변 $BC$와 만나는 점을 $D$라 할 때, $\\angle ADC$의 크기는?",
+     "choices": [
+      "$70^\\circ$",
+      "$75^\\circ$",
+      "$80^\\circ$",
+      "$85^\\circ$",
+      "$90^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$\\angle A=180^\\circ-(40^\\circ+70^\\circ)=70^\\circ$이므로 $\\angle BAD=35^\\circ$. $\\angle ADC$는 $\\triangle ABD$의 외각이므로 $\\angle B+\\angle BAD=40^\\circ+35^\\circ=75^\\circ$."
+    },
+    {
+     "id": "mat-m1-19",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "내각의 크기의 합이 외각의 크기의 합의 $4$배인 다각형의 대각선의 총 개수는?",
+     "choices": [
+      "$14$",
+      "$20$",
+      "$27$",
+      "$35$",
+      "$44$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "외각의 합은 $360^\\circ$이므로 내각의 합은 $1440^\\circ$. $180^\\circ(n-2)=1440^\\circ$ → $n=10$. 대각선의 총 개수 $=\\dfrac{10\\times7}{2}=35$."
+    },
+    {
+     "id": "mat-m1-20",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "모서리의 개수와 면의 개수의 합이 $50$인 각기둥의 꼭짓점의 개수는?",
+     "choices": [
+      "$18$",
+      "$20$",
+      "$22$",
+      "$24$",
+      "$26$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$n$각기둥: 모서리 $3n$, 면 $n+2$ → $4n+2=50$ → $n=12$. 십이각기둥의 꼭짓점은 $2n=24$개."
+    },
+    {
+     "id": "mat-m1-21",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03",
+      "mat-01-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "원 $O$에서 $\\overline{AB}$는 지름이고 점 $C$는 원 위의 점이다. $\\angle BAC=25^\\circ$이고 $\\overparen{BC}$의 길이가 $5\\pi\\text{ cm}$일 때, 원 $O$의 반지름의 길이는? (단, $\\overparen{BC}$는 점 $A$를 포함하지 않는 호이다.)",
+     "choices": [
+      "$9\\text{ cm}$",
+      "$12\\text{ cm}$",
+      "$15\\text{ cm}$",
+      "$18\\text{ cm}$",
+      "$20\\text{ cm}$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$\\overline{OA}=\\overline{OC}$이므로 $\\triangle OAC$는 이등변삼각형 → $\\angle OCA=25^\\circ$. $\\angle BOC$는 $\\triangle OAC$의 외각이므로 $25^\\circ+25^\\circ=50^\\circ$. $2\\pi r\\times\\dfrac{50}{360}=5\\pi$ → $r=18\\text{ cm}$."
+    },
+    {
+     "id": "mat-m1-22",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면이 한 변의 길이가 $6\\text{ cm}$인 정사각형이고 높이가 $10\\text{ cm}$인 사각기둥이 있다. 이 사각기둥의 두 밑면의 한가운데를 지나도록, 밑면의 반지름의 길이가 $2\\text{ cm}$인 원기둥 모양의 구멍을 위에서 아래까지 뚫었다. 구멍을 뚫은 입체도형의 겉넓이는?",
+     "choices": [
+      "$(312+24\\pi)\\text{ cm}^2$",
+      "$(312+32\\pi)\\text{ cm}^2$",
+      "$(312+40\\pi)\\text{ cm}^2$",
+      "$(320+32\\pi)\\text{ cm}^2$",
+      "$(332+24\\pi)\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "밑넓이: $(36-4\\pi)\\times2=72-8\\pi$, 바깥 옆넓이: $(6\\times4)\\times10=240$, 구멍 안쪽 옆넓이: $(2\\pi\\times2)\\times10=40\\pi$ → $72-8\\pi+240+40\\pi=312+32\\pi\\ (\\text{cm}^2)$. (구멍 안쪽 면을 빠뜨리면 $312-8\\pi$)"
+    },
+    {
+     "id": "mat-m1-23",
+     "subject": "수학",
+     "unit": "u3",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02",
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "윗변의 길이가 $3\\text{ cm}$, 아랫변의 길이가 $6\\text{ cm}$, 높이가 $4\\text{ cm}$, 비스듬한 변(빗변)의 길이가 $5\\text{ cm}$인 직각사다리꼴을, 높이에 해당하는 변을 회전축으로 하여 $1$회전 시켰다. 이때 생기는 입체도형의 겉넓이는?\n\n(단, 이 원뿔대는 밑면의 반지름이 $6\\text{ cm}$, 모선이 $10\\text{ cm}$인 원뿔에서 밑면의 반지름이 $3\\text{ cm}$, 모선이 $5\\text{ cm}$인 원뿔을 잘라 낸 것과 같다.)",
+     "choices": [
+      "$81\\pi\\text{ cm}^2$",
+      "$90\\pi\\text{ cm}^2$",
+      "$96\\pi\\text{ cm}^2$",
+      "$99\\pi\\text{ cm}^2$",
+      "$108\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "원뿔대이다. 두 밑면 $9\\pi+36\\pi=45\\pi$, 옆넓이 $=\\pi\\times6\\times10-\\pi\\times3\\times5=60\\pi-15\\pi=45\\pi$ → 겉넓이 $90\\pi\\text{ cm}^2$."
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "단원평가 2 · 기출형 실전",
+   "short": "단원평가 2",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [],
+   "questions": [
+    {
+     "id": "mat-m2-01",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "칠각뿔의 꼭짓점의 개수를 $a$, 육각기둥의 면의 개수를 $b$라 할 때, $a+b$의 값은?",
+     "choices": [
+      "$13$",
+      "$14$",
+      "$15$",
+      "$16$",
+      "$17$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "칠각뿔의 꼭짓점은 $7+1=8$개, 육각기둥의 면은 $6+2=8$개 → $a+b=16$."
+    },
+    {
+     "id": "mat-m2-02",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "삼각형 $ABC$에서 $\\angle A=(x+15)^\\circ$, $\\angle B=2x^\\circ$이고, 꼭짓점 $C$에서의 외각의 크기가 $(4x-15)^\\circ$일 때, $\\angle C$의 크기는?",
+     "choices": [
+      "$75^\\circ$",
+      "$85^\\circ$",
+      "$95^\\circ$",
+      "$105^\\circ$",
+      "$115^\\circ$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "외각 = 이웃하지 않는 두 내각의 합: $(x+15)+2x=4x-15$ → $x=30$. 외각은 $105^\\circ$이므로 $\\angle C=180^\\circ-105^\\circ=75^\\circ$. ($105^\\circ$는 외각의 크기)"
+    },
+    {
+     "id": "mat-m2-03",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "반지름의 길이가 $4\\text{ cm}$이고 중심각의 크기가 $135^\\circ$인 부채꼴의 넓이는?",
+     "choices": [
+      "$3\\pi\\text{ cm}^2$",
+      "$4\\pi\\text{ cm}^2$",
+      "$5\\pi\\text{ cm}^2$",
+      "$6\\pi\\text{ cm}^2$",
+      "$8\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$S=\\pi r^2\\times\\dfrac{x}{360}=16\\pi\\times\\dfrac{135}{360}=6\\pi\\text{ cm}^2$. ($3\\pi$는 호의 길이)"
+    },
+    {
+     "id": "mat-m2-04",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "회전축을 포함하는 평면으로 자른 단면과 회전축에 수직인 평면으로 자른 단면의 모양이 **같은** 회전체는?",
+     "choices": [
+      "원기둥",
+      "원뿔",
+      "원뿔대",
+      "구",
+      "반구"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "구는 어느 방향으로 잘라도 단면이 원이다. 원기둥(직사각형), 원뿔(이등변삼각형), 원뿔대(등변사다리꼴), 반구(반원)는 회전축을 포함하는 단면이 원이 아니다."
+    },
+    {
+     "id": "mat-m2-05",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "한 외각의 크기가 $20^\\circ$인 정다각형은?",
+     "choices": [
+      "정십오각형",
+      "정십육각형",
+      "정십팔각형",
+      "정이십각형",
+      "정이십사각형"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "정$n$각형의 한 외각은 $\\dfrac{360^\\circ}{n}=20^\\circ$ → $n=18$, 정십팔각형."
+    },
+    {
+     "id": "mat-m2-06",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": true,
+     "level": "쉬움",
+     "stem": "한 원 또는 합동인 두 원에서 부채꼴에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> **〈보기〉**\n> ㄱ. 중심각의 크기가 같은 두 현의 길이는 같다.  \n> ㄴ. 중심각의 크기가 $2$배가 되면 현의 길이도 $2$배가 된다.  \n> ㄷ. 부채꼴의 넓이는 중심각의 크기에 정비례한다.  \n> ㄹ. 호의 길이가 같은 두 부채꼴은 넓이도 같다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄷ, ㄹ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄱ (O) ㄴ 현의 길이는 중심각에 정비례하지 않는다 (X) ㄷ (O) ㄹ 호의 길이가 같으면 중심각이 같으므로 넓이도 같다 (O)."
+    },
+    {
+     "id": "mat-m2-07",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "겉넓이가 $150\\text{ cm}^2$인 정육면체의 한 모서리의 길이는?",
+     "choices": [
+      "$4\\text{ cm}$",
+      "$5\\text{ cm}$",
+      "$6\\text{ cm}$",
+      "$7\\text{ cm}$",
+      "$8\\text{ cm}$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "정육면체는 합동인 정사각형 $6$개로 이루어지므로 한 면의 넓이는 $150\\div6=25$ → 한 모서리는 $5\\text{ cm}$."
+    },
+    {
+     "id": "mat-m2-08",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "오각형 $ABCDE$에서 $\\angle A=100^\\circ$, $\\angle B=120^\\circ$, $\\angle C=95^\\circ$, $\\angle D=115^\\circ$일 때, $\\angle E$의 크기는?",
+     "choices": [
+      "$100^\\circ$",
+      "$105^\\circ$",
+      "$110^\\circ$",
+      "$115^\\circ$",
+      "$120^\\circ$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "오각형의 내각의 합은 $180^\\circ\\times3=540^\\circ$ → $\\angle E=540^\\circ-430^\\circ=110^\\circ$."
+    },
+    {
+     "id": "mat-m2-09",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "각뿔대에 대한 설명으로 옳지 **않은** 것은?",
+     "choices": [
+      "두 밑면은 서로 평행하다.",
+      "옆면의 모양은 모두 사다리꼴이다.",
+      "$n$각뿔대의 면의 개수는 $n+2$이다.",
+      "$n$각뿔대의 꼭짓점의 개수는 $n+1$이다.",
+      "사각뿔대는 육면체이다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$n$각뿔대의 꼭짓점은 위·아래 밑면에 $n$개씩, 모두 $2n$개이다($n+1$은 $n$각뿔). ① 두 밑면은 평행하다(합동은 아님) ② 옆면은 사다리꼴 ③ 면 $n+2$ ⑤ 면 $4+2=6$개 → 육면체."
+    },
+    {
+     "id": "mat-m2-10",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "반지름의 길이가 $8\\text{ cm}$이고 넓이가 $20\\pi\\text{ cm}^2$인 부채꼴의 호의 길이는?",
+     "choices": [
+      "$4\\pi\\text{ cm}$",
+      "$5\\pi\\text{ cm}$",
+      "$6\\pi\\text{ cm}$",
+      "$8\\pi\\text{ cm}$",
+      "$10\\pi\\text{ cm}$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$S=\\dfrac12rl$ → $20\\pi=\\dfrac12\\times8\\times l$ → $l=5\\pi\\text{ cm}$."
+    },
+    {
+     "id": "mat-m2-11",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "$\\overline{AB}=\\overline{AC}$인 이등변삼각형 $ABC$에서 변 $BC$의 연장선 위에 점 $D$를 점 $C$ 쪽에 잡았다. $\\angle ACD=116^\\circ$일 때, $\\angle A$의 크기는?",
+     "choices": [
+      "$48^\\circ$",
+      "$52^\\circ$",
+      "$56^\\circ$",
+      "$60^\\circ$",
+      "$64^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$\\angle ACB=180^\\circ-116^\\circ=64^\\circ=\\angle B$. 외각 성질: $\\angle A+\\angle B=116^\\circ$ → $\\angle A=52^\\circ$."
+    },
+    {
+     "id": "mat-m2-12",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "가로의 길이가 $4\\text{ cm}$, 세로의 길이가 $6\\text{ cm}$인 직사각형을 세로를 회전축으로 하여 $1$회전 시켰다. 이 회전체를 회전축을 포함하는 평면으로 자른 단면의 넓이는?",
+     "choices": [
+      "$12\\text{ cm}^2$",
+      "$16\\text{ cm}^2$",
+      "$24\\text{ cm}^2$",
+      "$36\\text{ cm}^2$",
+      "$48\\text{ cm}^2$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "회전체는 반지름 $4$, 높이 $6$인 원기둥이고, 회전축을 포함하는 단면은 가로 $8$, 세로 $6$인 직사각형 → $48\\text{ cm}^2$. (원래 직사각형 넓이의 $2$배)"
+    },
+    {
+     "id": "mat-m2-13",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑면의 반지름의 길이가 $3\\text{ cm}$, 모선의 길이가 $8\\text{ cm}$인 원뿔의 겉넓이는?",
+     "choices": [
+      "$24\\pi\\text{ cm}^2$",
+      "$27\\pi\\text{ cm}^2$",
+      "$33\\pi\\text{ cm}^2$",
+      "$36\\pi\\text{ cm}^2$",
+      "$42\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$\\pi r^2+\\pi rl=9\\pi+24\\pi=33\\pi\\text{ cm}^2$. (옆넓이만 구하면 $24\\pi$)"
+    },
+    {
+     "id": "mat-m2-14",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 14,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "원 $O$에서 중심각의 크기가 $45^\\circ$인 부채꼴 $AOB$의 넓이가 $10\\text{ cm}^2$일 때, 원 $O$의 넓이는?",
+     "choices": [
+      "$80\\text{ cm}^2$",
+      "$90\\text{ cm}^2$",
+      "$100\\text{ cm}^2$",
+      "$120\\text{ cm}^2$",
+      "$160\\text{ cm}^2$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "부채꼴의 넓이는 중심각에 정비례하므로 원의 넓이 $=10\\times\\dfrac{360}{45}=80\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m2-15",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 15,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "정다각형에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> **〈보기〉**\n> ㄱ. 정팔각형의 한 외각의 크기는 $45^\\circ$이다.  \n> ㄴ. 한 내각의 크기가 $150^\\circ$인 정다각형은 정십이각형이다.  \n> ㄷ. 정오각형의 대각선의 총 개수는 $5$이다.  \n> ㄹ. 정다각형의 한 외각의 크기는 변의 개수가 많을수록 커진다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄷ",
+      "ㄱ, ㄷ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "ㄱ $360^\\circ\\div8=45^\\circ$ (O) ㄴ 한 외각 $30^\\circ$ → $n=12$ (O) ㄷ $\\dfrac{5\\times2}{2}=5$ (O) ㄹ $\\dfrac{360^\\circ}{n}$은 $n$이 커질수록 작아진다 (X)."
+    },
+    {
+     "id": "mat-m2-16",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 16,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "반지름의 길이가 $12\\text{ cm}$이고 중심각의 크기가 $90^\\circ$인 부채꼴 $OAB$가 있다. 이 부채꼴 안에 반지름 $\\overline{OA}$를 지름으로 하는 반원을 그렸을 때, 부채꼴에서 반원을 제외한 부분의 넓이는? (단, 반원은 부채꼴 안쪽에 있다.)",
+     "choices": [
+      "$12\\pi\\text{ cm}^2$",
+      "$18\\pi\\text{ cm}^2$",
+      "$24\\pi\\text{ cm}^2$",
+      "$30\\pi\\text{ cm}^2$",
+      "$36\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "부채꼴 넓이 $144\\pi\\times\\dfrac14=36\\pi$, 반원(반지름 $6$) 넓이 $\\dfrac12\\times36\\pi=18\\pi$ → $36\\pi-18\\pi=18\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m2-17",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면의 반지름의 길이가 $5\\text{ cm}$이고 겉넓이가 $130\\pi\\text{ cm}^2$인 원기둥의 높이는?",
+     "choices": [
+      "$4\\text{ cm}$",
+      "$5\\text{ cm}$",
+      "$6\\text{ cm}$",
+      "$7\\text{ cm}$",
+      "$8\\text{ cm}$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "$2\\times25\\pi+(2\\pi\\times5)\\times h=130\\pi$ → $50\\pi+10\\pi h=130\\pi$ → $h=8\\text{ cm}$."
+    },
+    {
+     "id": "mat-m2-18",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02",
+      "mat-01-01"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "사각형 $ABCD$에서 $\\angle A=110^\\circ$, $\\angle D=90^\\circ$이다. $\\angle B$와 $\\angle C$의 이등분선이 만나는 점을 $P$라 할 때, $\\angle BPC$의 크기는?",
+     "choices": [
+      "$90^\\circ$",
+      "$95^\\circ$",
+      "$100^\\circ$",
+      "$105^\\circ$",
+      "$110^\\circ$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$\\angle B+\\angle C=360^\\circ-(110^\\circ+90^\\circ)=160^\\circ$. $\\triangle PBC$에서 $\\angle PBC+\\angle PCB=80^\\circ$ → $\\angle BPC=180^\\circ-80^\\circ=100^\\circ$."
+    },
+    {
+     "id": "mat-m2-19",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "어떤 다각형의 내각의 크기의 합과 외각의 크기의 합을 더하였더니 $1980^\\circ$였다. 이 다각형의 대각선의 총 개수는?",
+     "choices": [
+      "$20$",
+      "$27$",
+      "$35$",
+      "$40$",
+      "$44$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "$180^\\circ(n-2)+360^\\circ=180^\\circ n=1980^\\circ$ → $n=11$. 대각선의 총 개수 $=\\dfrac{11\\times8}{2}=44$."
+    },
+    {
+     "id": "mat-m2-20",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "다음 조건을 모두 만족하는 입체도형의 면의 개수와 모서리의 개수의 합은?\n\n> (가) 두 밑면은 서로 평행하다.  \n> (나) 옆면의 모양은 사다리꼴이다.  \n> (다) 꼭짓점의 개수는 $16$이다.",
+     "choices": [
+      "$34$",
+      "$36$",
+      "$38$",
+      "$40$",
+      "$42$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "(가)(나) → 각뿔대, (다) $2n=16$ → 팔각뿔대. 면 $10$개, 모서리 $24$개 → 합 $34$."
+    },
+    {
+     "id": "mat-m2-21",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03",
+      "mat-01-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "원 $O$ 위의 두 점 $A$, $B$에 대하여 $\\angle OAB=30^\\circ$이다. 부채꼴 $AOB$의 호 $\\overparen{AB}$의 길이가 $8\\pi\\text{ cm}$일 때, 부채꼴 $AOB$의 넓이는? (단, $\\angle AOB<180^\\circ$)",
+     "choices": [
+      "$36\\pi\\text{ cm}^2$",
+      "$42\\pi\\text{ cm}^2$",
+      "$48\\pi\\text{ cm}^2$",
+      "$54\\pi\\text{ cm}^2$",
+      "$72\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$\\overline{OA}=\\overline{OB}$ → $\\angle OBA=30^\\circ$, $\\angle AOB=120^\\circ$. $2\\pi r\\times\\dfrac{120}{360}=8\\pi$ → $r=12$. $S=\\dfrac12\\times12\\times8\\pi=48\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m2-22",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면의 반지름의 길이가 $4\\text{ cm}$, 높이가 $6\\text{ cm}$인 원기둥이 있다. 이 원기둥의 윗면 전체를 밑면으로 하여, 밑면의 반지름의 길이가 $4\\text{ cm}$, 모선의 길이가 $5\\text{ cm}$인 원뿔 모양만큼 안쪽으로 파냈다. 파내고 남은 입체도형의 겉넓이는? (단, 원뿔의 높이는 $3\\text{ cm}$이다.)",
+     "choices": [
+      "$84\\pi\\text{ cm}^2$",
+      "$92\\pi\\text{ cm}^2$",
+      "$100\\pi\\text{ cm}^2$",
+      "$108\\pi\\text{ cm}^2$",
+      "$116\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "아랫면 $16\\pi$ + 원기둥 옆넓이 $(2\\pi\\times4)\\times6=48\\pi$ + 파낸 원뿔의 옆넓이 $\\pi\\times4\\times5=20\\pi$ → $84\\pi\\text{ cm}^2$. (윗면은 파내어 없어지고 대신 원뿔 옆면이 생긴다)"
+    },
+    {
+     "id": "mat-m2-23",
+     "subject": "수학",
+     "unit": "u4",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "원뿔을 평평한 바닥에 눕혀 꼭짓점을 중심으로 미끄러지지 않게 굴렸더니 정확히 $3$바퀴 돌고 처음 위치로 돌아왔다. 이 원뿔의 겉넓이가 $144\\pi\\text{ cm}^2$일 때, 모선의 길이는?",
+     "choices": [
+      "$6\\text{ cm}$",
+      "$9\\text{ cm}$",
+      "$12\\text{ cm}$",
+      "$15\\text{ cm}$",
+      "$18\\text{ cm}$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "모선을 $l$, 밑면의 반지름을 $r$이라 하면 $2\\pi l=3\\times2\\pi r$ → $l=3r$. 겉넓이 $\\pi r^2+\\pi r\\times3r=4\\pi r^2=144\\pi$ → $r=6$, $l=18\\text{ cm}$."
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "단원평가 3 · 기출형 실전",
+   "short": "단원평가 3",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [],
+   "questions": [
+    {
+     "id": "mat-m3-01",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 입체도형 중 모서리의 개수가 나머지 넷과 **다른** 하나는?",
+     "choices": [
+      "십각기둥",
+      "십오각뿔",
+      "정십이면체",
+      "정이십면체",
+      "십오각뿔대"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "십각기둥 $3\\times10=30$, 십오각뿔 $2\\times15=30$, 정십이면체 $30$, 정이십면체 $30$, 십오각뿔대 $3\\times15=45$."
+    },
+    {
+     "id": "mat-m3-02",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "삼각형 $ABC$에서 $\\angle A=x^\\circ$, $\\angle B=(x+20)^\\circ$이고, 꼭짓점 $C$에서의 외각의 크기가 $130^\\circ$일 때, $\\angle C$의 크기는?",
+     "choices": [
+      "$50^\\circ$",
+      "$55^\\circ$",
+      "$60^\\circ$",
+      "$65^\\circ$",
+      "$75^\\circ$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "외각 성질: $x+(x+20)=130$ → $x=55$. $\\angle C=180^\\circ-130^\\circ=50^\\circ$ (또는 $180-55-75=50$). ($55^\\circ$는 $x$의 값, $75^\\circ$는 $\\angle B$)"
+    },
+    {
+     "id": "mat-m3-03",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "반지름의 길이가 $9\\text{ cm}$이고 중심각의 크기가 $40^\\circ$인 부채꼴의 호의 길이는?",
+     "choices": [
+      "$\\pi\\text{ cm}$",
+      "$2\\pi\\text{ cm}$",
+      "$3\\pi\\text{ cm}$",
+      "$4\\pi\\text{ cm}$",
+      "$9\\pi\\text{ cm}$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$2\\pi\\times9\\times\\dfrac{40}{360}=2\\pi\\text{ cm}$. ($9\\pi$는 넓이)"
+    },
+    {
+     "id": "mat-m3-04",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 3.9,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "구에 대한 설명으로 옳지 **않은** 것은?",
+     "choices": [
+      "반원의 지름을 회전축으로 하여 $1$회전 시키면 구가 된다.",
+      "구는 어떤 평면으로 잘라도 그 단면이 항상 원이다.",
+      "구를 자른 단면 중 구의 중심을 지나는 단면이 가장 크다.",
+      "구를 회전축을 포함하는 평면으로 자른 단면은 선대칭도형이다.",
+      "구의 전개도는 원 $2$개와 직사각형 $1$개로 그릴 수 있다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "구는 곡면으로만 이루어져 있어 평면 위에 펼친 전개도를 그릴 수 없다. 원 $2$개와 직사각형 $1$개는 원기둥의 전개도이다."
+    },
+    {
+     "id": "mat-m3-05",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "칠각형의 내각의 크기의 합은?",
+     "choices": [
+      "$720^\\circ$",
+      "$900^\\circ$",
+      "$1080^\\circ$",
+      "$1260^\\circ$",
+      "$1440^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$180^\\circ\\times(7-2)=900^\\circ$."
+    },
+    {
+     "id": "mat-m3-06",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "반지름의 길이가 $5\\text{ cm}$인 원에서 그을 수 있는 가장 긴 현의 길이는?",
+     "choices": [
+      "$5\\text{ cm}$",
+      "$8\\text{ cm}$",
+      "$10\\text{ cm}$",
+      "$15\\text{ cm}$",
+      "$25\\text{ cm}$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "가장 긴 현은 지름이므로 $2\\times5=10\\text{ cm}$."
+    },
+    {
+     "id": "mat-m3-07",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑면이 한 변의 길이가 $5\\text{ cm}$인 정사각형이고 높이가 $8\\text{ cm}$인 사각기둥의 겉넓이는?",
+     "choices": [
+      "$160\\text{ cm}^2$",
+      "$185\\text{ cm}^2$",
+      "$200\\text{ cm}^2$",
+      "$210\\text{ cm}^2$",
+      "$240\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "밑넓이 $25\\times2=50$, 옆넓이 $(5\\times4)\\times8=160$ → $210\\text{ cm}^2$. (밑면을 1개만 더하면 $185$)"
+    },
+    {
+     "id": "mat-m3-08",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "정이십각형의 한 내각의 크기는?",
+     "choices": [
+      "$144^\\circ$",
+      "$150^\\circ$",
+      "$156^\\circ$",
+      "$162^\\circ$",
+      "$168^\\circ$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "한 외각 $\\dfrac{360^\\circ}{20}=18^\\circ$ → 한 내각 $180^\\circ-18^\\circ=162^\\circ$."
+    },
+    {
+     "id": "mat-m3-09",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.1,
+     "negative": true,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "정다면체에 대한 내용으로 옳지 **않은** 것은?",
+     "choices": [
+      "정사면체의 꼭짓점의 개수는 $4$이다.",
+      "정육면체의 모서리의 개수는 $12$이다.",
+      "정팔면체의 면의 모양은 정삼각형이다.",
+      "정십이면체의 한 꼭짓점에 모인 면의 개수는 $4$이다.",
+      "정이십면체의 모서리의 개수는 $30$이다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "정십이면체는 정오각형 면이 한 꼭짓점에 $3$개씩 모인다($108^\\circ\\times4=432^\\circ>360^\\circ$이므로 4개는 불가능). 나머지는 옳다."
+    },
+    {
+     "id": "mat-m3-10",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "반지름의 길이가 $6\\text{ cm}$이고 호의 길이가 $2\\pi\\text{ cm}$인 부채꼴의 중심각의 크기는?",
+     "choices": [
+      "$30^\\circ$",
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$72^\\circ$",
+      "$90^\\circ$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$2\\pi\\times6\\times\\dfrac{x}{360}=2\\pi$ → $x=60$."
+    },
+    {
+     "id": "mat-m3-11",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "삼각형 $ABC$의 내부에 점 $D$가 있다. $\\angle BAC=50^\\circ$, $\\angle ABD=20^\\circ$, $\\angle ACD=30^\\circ$일 때, $\\angle BDC$의 크기는?",
+     "choices": [
+      "$80^\\circ$",
+      "$90^\\circ$",
+      "$95^\\circ$",
+      "$100^\\circ$",
+      "$110^\\circ$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "선분 $BD$를 연장하여 $\\overline{AC}$와 만나는 점을 $E$라 하면 $\\angle BEC=50^\\circ+20^\\circ=70^\\circ$(외각), $\\angle BDC=\\angle BEC+\\angle ECD=70^\\circ+30^\\circ=100^\\circ$. 즉 부메랑 모양에서 $\\angle BDC=\\angle A+\\angle ABD+\\angle ACD$."
+    },
+    {
+     "id": "mat-m3-12",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "세 변의 길이가 각각 $3\\text{ cm}$, $4\\text{ cm}$, $5\\text{ cm}$인 직각삼각형을 길이가 $4\\text{ cm}$인 변을 회전축으로 하여 $1$회전 시켰다. 이 회전체를 회전축을 포함하는 평면으로 자른 단면의 넓이는?",
+     "choices": [
+      "$6\\text{ cm}^2$",
+      "$10\\text{ cm}^2$",
+      "$12\\text{ cm}^2$",
+      "$15\\text{ cm}^2$",
+      "$24\\text{ cm}^2$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "회전체는 반지름 $3$, 높이 $4$인 원뿔이고, 회전축을 포함하는 단면은 밑변 $6$, 높이 $4$인 이등변삼각형 → $\\dfrac12\\times6\\times4=12\\text{ cm}^2$ (원래 삼각형 넓이의 $2$배)."
+    },
+    {
+     "id": "mat-m3-13",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑면의 반지름의 길이가 $2\\text{ cm}$, 모선의 길이가 $7\\text{ cm}$인 원뿔의 겉넓이는?",
+     "choices": [
+      "$18\\pi\\text{ cm}^2$",
+      "$20\\pi\\text{ cm}^2$",
+      "$22\\pi\\text{ cm}^2$",
+      "$24\\pi\\text{ cm}^2$",
+      "$28\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "$\\pi\\times2^2+\\pi\\times2\\times7=4\\pi+14\\pi=18\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m3-14",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 14,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "한 원 $O$에서 $\\angle AOB=30^\\circ$, $\\angle COD=90^\\circ$이고 $\\overline{AB}=2\\text{ cm}$이다. 현 $\\overline{CD}$의 길이에 대한 설명으로 옳은 것은?",
+     "choices": [
+      "$\\overline{CD}=6\\text{ cm}$",
+      "$\\overline{CD}>6\\text{ cm}$",
+      "$\\overline{CD}<6\\text{ cm}$",
+      "$\\overline{CD}=2\\text{ cm}$",
+      "$\\overline{CD}=3\\text{ cm}$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "중심각 $90^\\circ$를 $30^\\circ$씩 셋으로 나누면 길이 $2\\text{ cm}$인 현 $3$개가 꺾인 선을 이룬다. 두 점을 잇는 가장 짧은 길은 선분이므로 $\\overline{CD}<2+2+2=6\\text{ cm}$. 현의 길이는 중심각에 정비례하지 않는다. (실제로 약 $5.5\\text{ cm}$)"
+    },
+    {
+     "id": "mat-m3-15",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 15,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다각형에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> **〈보기〉**\n> ㄱ. 십각형의 내각의 크기의 합은 $1440^\\circ$이다.  \n> ㄴ. $n$각형의 내부의 한 점에서 각 꼭짓점에 선분을 그으면 $n$개의 삼각형이 생긴다.  \n> ㄷ. 내각의 크기의 합이 $1080^\\circ$인 다각형의 외각의 크기의 합은 $1080^\\circ$이다.  \n> ㄹ. 구각형의 한 꼭짓점에서 그을 수 있는 대각선의 개수는 $6$이다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄷ, ㄹ",
+      "ㄱ, ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄱ $180^\\circ\\times8=1440^\\circ$ (O) ㄴ (O) ㄷ 외각의 합은 항상 $360^\\circ$ (X) ㄹ $9-3=6$ (O)."
+    },
+    {
+     "id": "mat-m3-16",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 16,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "반지름의 길이가 $6\\text{ cm}$인 부채꼴의 둘레의 길이가 $(4\\pi+12)\\text{ cm}$일 때, 이 부채꼴의 넓이는?",
+     "choices": [
+      "$12\\pi\\text{ cm}^2$",
+      "$18\\pi\\text{ cm}^2$",
+      "$24\\pi\\text{ cm}^2$",
+      "$36\\pi\\text{ cm}^2$",
+      "$48\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "둘레 = 호 + 반지름 $2$개이므로 호의 길이는 $4\\pi$. $S=\\dfrac12\\times6\\times4\\pi=12\\pi\\text{ cm}^2$. (중심각은 $120^\\circ$)"
+    },
+    {
+     "id": "mat-m3-17",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "원뿔의 전개도에서 옆면인 부채꼴의 반지름의 길이가 $15\\text{ cm}$, 중심각의 크기가 $96^\\circ$일 때, 이 원뿔의 겉넓이는?",
+     "choices": [
+      "$60\\pi\\text{ cm}^2$",
+      "$68\\pi\\text{ cm}^2$",
+      "$76\\pi\\text{ cm}^2$",
+      "$84\\pi\\text{ cm}^2$",
+      "$92\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "밑면의 둘레 = 부채꼴의 호: $2\\pi r=2\\pi\\times15\\times\\dfrac{96}{360}=8\\pi$ → $r=4$. 겉넓이 $16\\pi+\\pi\\times4\\times15=16\\pi+60\\pi=76\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m3-18",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "삼각형 $ABC$에서 $\\angle A=70^\\circ$이다. $\\angle B$의 이등분선과 꼭짓점 $C$에서의 외각의 이등분선이 만나는 점을 $D$라 할 때, $\\angle BDC$의 크기는?",
+     "choices": [
+      "$30^\\circ$",
+      "$35^\\circ$",
+      "$40^\\circ$",
+      "$45^\\circ$",
+      "$55^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$\\angle B=2a$, $\\angle C$의 외각 $=2b$라 하면 외각 성질로 $2b=70^\\circ+2a$ → $b=35^\\circ+a$. $\\triangle DBC$에서 $\\angle C$의 외각의 절반 $b=a+\\angle D$ → $\\angle D=35^\\circ$."
+    },
+    {
+     "id": "mat-m3-19",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "한 내각의 크기가 한 외각의 크기보다 $90^\\circ$ 더 큰 정다각형의 대각선의 총 개수는?",
+     "choices": [
+      "$9$",
+      "$14$",
+      "$20$",
+      "$27$",
+      "$35$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "한 외각을 $x$라 하면 $x+(x+90)=180$ → $x=45^\\circ$ → $n=8$. 대각선 $\\dfrac{8\\times5}{2}=20$."
+    },
+    {
+     "id": "mat-m3-20",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "면의 개수, 꼭짓점의 개수, 모서리의 개수의 합이 $38$인 각뿔의 모서리의 개수는?",
+     "choices": [
+      "$18$",
+      "$20$",
+      "$24$",
+      "$27$",
+      "$36$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "$n$각뿔: $(n+1)+(n+1)+2n=4n+2=38$ → $n=9$. 구각뿔의 모서리는 $2\\times9=18$개."
+    },
+    {
+     "id": "mat-m3-21",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03",
+      "mat-01-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "지름이 $\\overline{AB}$인 반원 $O$의 호 위에 두 점 $D$, $C$가 점 $A$에서부터 $D$, $C$, $B$의 순서로 놓여 있고 $\\overline{DC}\\parallel\\overline{AB}$이다. $\\angle BOC=50^\\circ$이고 $\\overparen{DC}$의 길이가 $8\\text{ cm}$일 때, $\\overparen{AD}$의 길이는?",
+     "choices": [
+      "$4\\text{ cm}$",
+      "$5\\text{ cm}$",
+      "$6\\text{ cm}$",
+      "$7\\text{ cm}$",
+      "$8\\text{ cm}$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$\\overline{DC}\\parallel\\overline{AB}$이므로 엇각으로 $\\angle OCD=\\angle BOC=50^\\circ$. $\\overline{OC}=\\overline{OD}$ → $\\angle ODC=50^\\circ$, $\\angle COD=80^\\circ$. $\\angle AOD=180^\\circ-50^\\circ-80^\\circ=50^\\circ$. 호의 길이는 중심각에 정비례: $\\overparen{AD}=8\\times\\dfrac{50}{80}=5\\text{ cm}$."
+    },
+    {
+     "id": "mat-m3-22",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면의 반지름의 길이가 $3\\text{ cm}$, 높이가 $10\\text{ cm}$인 원기둥을 회전축을 포함하는 평면으로 잘라 똑같이 둘로 나누었다. 나누어진 입체도형 한 개의 겉넓이는?",
+     "choices": [
+      "$(39\\pi+30)\\text{ cm}^2$",
+      "$(39\\pi+60)\\text{ cm}^2$",
+      "$(48\\pi+60)\\text{ cm}^2$",
+      "$(33\\pi+60)\\text{ cm}^2$",
+      "$(39\\pi+90)\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "반원 밑면 $2$개: $2\\times\\dfrac{9\\pi}{2}=9\\pi$, 곡면(옆넓이의 절반): $\\dfrac12\\times(2\\pi\\times3)\\times10=30\\pi$, 자른 면(직사각형 $6\\times10$): $60$ → $(39\\pi+60)\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m3-23",
+     "subject": "수학",
+     "unit": "u5",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02",
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "가로의 길이가 $3\\text{ cm}$, 세로의 길이가 $5\\text{ cm}$인 직사각형이 있다. 직사각형의 바깥에서 세로와 평행하고 가까운 쪽 세로로부터 $2\\text{ cm}$ 떨어진 직선 $l$을 회전축으로 하여 이 직사각형을 $1$회전 시켰다. 이때 생기는 입체도형의 겉넓이는?",
+     "choices": [
+      "$98\\pi\\text{ cm}^2$",
+      "$105\\pi\\text{ cm}^2$",
+      "$112\\pi\\text{ cm}^2$",
+      "$119\\pi\\text{ cm}^2$",
+      "$126\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "가운데가 빈 원기둥(바깥 반지름 $5$, 안쪽 반지름 $2$, 높이 $5$)이 된다. 두 밑면 $2\\times(25\\pi-4\\pi)=42\\pi$, 바깥 옆넓이 $2\\pi\\times5\\times5=50\\pi$, 안쪽 옆넓이 $2\\pi\\times2\\times5=20\\pi$ → $112\\pi\\text{ cm}^2$."
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "단원평가 4 · 기출형 실전",
+   "short": "단원평가 4",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [],
+   "questions": [
+    {
+     "id": "mat-m4-01",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "면의 개수가 $8$인 각뿔대의 꼭짓점의 개수는?",
+     "choices": [
+      "$8$",
+      "$10$",
+      "$12$",
+      "$14$",
+      "$18$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$n$각뿔대의 면은 $n+2=8$ → $n=6$, 육각뿔대의 꼭짓점은 $2\\times6=12$개."
+    },
+    {
+     "id": "mat-m4-02",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "삼각형의 세 외각의 크기의 비가 $3:4:5$일 때, 이 삼각형의 가장 작은 내각의 크기는?",
+     "choices": [
+      "$30^\\circ$",
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$75^\\circ$",
+      "$90^\\circ$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "삼각형의 외각의 합은 $360^\\circ$이므로 세 외각은 $90^\\circ$, $120^\\circ$, $150^\\circ$. 가장 큰 외각 $150^\\circ$에 대한 내각이 가장 작으므로 $180^\\circ-150^\\circ=30^\\circ$."
+    },
+    {
+     "id": "mat-m4-03",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "반지름의 길이가 $12\\text{ cm}$이고 중심각의 크기가 $30^\\circ$인 부채꼴의 넓이는?",
+     "choices": [
+      "$2\\pi\\text{ cm}^2$",
+      "$6\\pi\\text{ cm}^2$",
+      "$10\\pi\\text{ cm}^2$",
+      "$12\\pi\\text{ cm}^2$",
+      "$24\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$144\\pi\\times\\dfrac{30}{360}=12\\pi\\text{ cm}^2$. ($2\\pi$는 호의 길이)"
+    },
+    {
+     "id": "mat-m4-04",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 3.9,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 회전체와 그 회전체를 회전축을 포함하는 평면으로 자른 단면의 모양을 짝 지은 것으로 옳지 **않은** 것은?",
+     "choices": [
+      "원기둥 – 직사각형",
+      "원뿔 – 이등변삼각형",
+      "원뿔대 – 등변사다리꼴",
+      "구 – 원",
+      "반구 – 정사각형"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "반구를 회전축을 포함하는 평면으로 자르면 단면은 **반원**이다."
+    },
+    {
+     "id": "mat-m4-05",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "정구각형의 한 외각의 크기는?",
+     "choices": [
+      "$36^\\circ$",
+      "$40^\\circ$",
+      "$45^\\circ$",
+      "$50^\\circ$",
+      "$60^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$\\dfrac{360^\\circ}{9}=40^\\circ$."
+    },
+    {
+     "id": "mat-m4-06",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.0,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "원에 대한 설명으로 옳지 **않은** 것은?",
+     "choices": [
+      "원과 두 점에서 만나는 직선을 할선이라 한다.",
+      "원 위의 두 점을 이은 선분을 현이라 한다.",
+      "반원은 부채꼴이면서 활꼴이다.",
+      "원의 중심을 지나는 현은 지름이다.",
+      "중심각의 크기가 $180^\\circ$보다 작은 부채꼴은 활꼴과 같은 도형이다."
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "부채꼴은 두 반지름과 호, 활꼴은 현과 호로 이루어진다. 부채꼴과 활꼴이 같아지는 것은 중심각이 $180^\\circ$인 반원뿐이다."
+    },
+    {
+     "id": "mat-m4-07",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑면의 반지름의 길이가 $4\\text{ cm}$, 높이가 $3\\text{ cm}$인 원기둥의 겉넓이는?",
+     "choices": [
+      "$24\\pi\\text{ cm}^2$",
+      "$32\\pi\\text{ cm}^2$",
+      "$40\\pi\\text{ cm}^2$",
+      "$48\\pi\\text{ cm}^2$",
+      "$56\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "$2\\times16\\pi+(2\\pi\\times4)\\times3=32\\pi+24\\pi=56\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m4-08",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "내각의 크기의 합이 $2340^\\circ$인 다각형의 한 꼭짓점에서 그을 수 있는 대각선의 개수는?",
+     "choices": [
+      "$12$",
+      "$13$",
+      "$14$",
+      "$15$",
+      "$16$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "$180^\\circ(n-2)=2340^\\circ$ → $n=15$. 한 꼭짓점에서 그을 수 있는 대각선은 $15-3=12$개."
+    },
+    {
+     "id": "mat-m4-09",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다면체에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> **〈보기〉**\n> ㄱ. 각기둥의 옆면은 모두 직사각형이다.  \n> ㄴ. 각뿔의 옆면은 모두 삼각형이다.  \n> ㄷ. 원뿔은 면이 $2$개인 다면체이다.  \n> ㄹ. 오각기둥은 칠면체이다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄱ (O) ㄴ (O) ㄷ 원뿔은 곡면과 원으로 둘러싸여 있으므로 다면체가 아니다 (X) ㄹ 면 $5+2=7$개 (O)."
+    },
+    {
+     "id": "mat-m4-10",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "중심각의 크기가 $120^\\circ$이고 넓이가 $27\\pi\\text{ cm}^2$인 부채꼴의 호의 길이는?",
+     "choices": [
+      "$3\\pi\\text{ cm}$",
+      "$4\\pi\\text{ cm}$",
+      "$6\\pi\\text{ cm}$",
+      "$9\\pi\\text{ cm}$",
+      "$12\\pi\\text{ cm}$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$\\pi r^2\\times\\dfrac{120}{360}=27\\pi$ → $r^2=81$, $r=9$. 호의 길이 $2\\pi\\times9\\times\\dfrac13=6\\pi\\text{ cm}$."
+    },
+    {
+     "id": "mat-m4-11",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "$\\overline{AB}=\\overline{AC}$인 이등변삼각형 $ABC$에서 $\\angle B=50^\\circ$이다. 변 $BC$의 점 $C$ 쪽 연장선 위에 $\\overline{CA}=\\overline{CD}$가 되도록 점 $D$를 잡을 때, $\\angle BAD$의 크기는?",
+     "choices": [
+      "$95^\\circ$",
+      "$100^\\circ$",
+      "$105^\\circ$",
+      "$110^\\circ$",
+      "$115^\\circ$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$\\angle ACB=50^\\circ$, $\\angle BAC=80^\\circ$. $\\triangle CAD$는 이등변삼각형이고 외각 $\\angle ACB=\\angle CAD+\\angle CDA=50^\\circ$ → $\\angle CAD=25^\\circ$. $\\angle BAD=80^\\circ+25^\\circ=105^\\circ$."
+    },
+    {
+     "id": "mat-m4-12",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02",
+      "mat-02-03"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "어떤 원뿔을 회전축을 포함하는 평면으로 자른 단면이 한 변의 길이가 $8\\text{ cm}$인 정삼각형이다. 이 원뿔의 겉넓이는?",
+     "choices": [
+      "$24\\pi\\text{ cm}^2$",
+      "$32\\pi\\text{ cm}^2$",
+      "$40\\pi\\text{ cm}^2$",
+      "$48\\pi\\text{ cm}^2$",
+      "$64\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "단면인 이등변삼각형의 밑변이 밑면의 지름, 두 빗변이 모선이므로 $r=4$, $l=8$. 겉넓이 $16\\pi+\\pi\\times4\\times8=48\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m4-13",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑면이 한 변의 길이가 $10\\text{ cm}$인 정사각형이고, 옆면이 모두 밑변의 길이가 $10\\text{ cm}$, 높이가 $13\\text{ cm}$인 합동인 이등변삼각형인 정사각뿔의 겉넓이는?",
+     "choices": [
+      "$260\\text{ cm}^2$",
+      "$330\\text{ cm}^2$",
+      "$360\\text{ cm}^2$",
+      "$400\\text{ cm}^2$",
+      "$460\\text{ cm}^2$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "밑넓이 $100$ + 옆넓이 $\\left(\\dfrac12\\times10\\times13\\right)\\times4=260$ → $360\\text{ cm}^2$. ($460$은 밑면을 2개 더한 값)"
+    },
+    {
+     "id": "mat-m4-14",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 14,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "한 원에서 부채꼴 $AOB$의 중심각의 크기는 $x^\\circ$, 부채꼴 $COD$의 중심각의 크기는 $(x+40)^\\circ$이다. 두 부채꼴의 넓이의 비가 $3:5$일 때, $\\angle COD$의 크기는?",
+     "choices": [
+      "$60^\\circ$",
+      "$80^\\circ$",
+      "$90^\\circ$",
+      "$100^\\circ$",
+      "$120^\\circ$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "넓이는 중심각에 정비례하므로 $x:(x+40)=3:5$ → $5x=3x+120$ → $x=60$. $\\angle COD=100^\\circ$. ($60^\\circ$는 $\\angle AOB$)"
+    },
+    {
+     "id": "mat-m4-15",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 15,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "다각형의 외각에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> **〈보기〉**\n> ㄱ. 육각형의 외각의 크기의 합은 $720^\\circ$이다.  \n> ㄴ. 정$n$각형의 한 외각의 크기는 $\\dfrac{360^\\circ}{n}$이다.  \n> ㄷ. 다각형의 한 꼭짓점에서 내각과 외각의 크기의 합은 $180^\\circ$이다.  \n> ㄹ. 정삼각형의 한 외각의 크기는 $60^\\circ$이다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄴ, ㄷ",
+      "ㄷ, ㄹ",
+      "ㄱ, ㄴ, ㄷ",
+      "ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "ㄱ 외각의 합은 항상 $360^\\circ$ (X) ㄴ (O) ㄷ (O) ㄹ 정삼각형의 한 외각은 $180^\\circ-60^\\circ=120^\\circ$ (X)."
+    },
+    {
+     "id": "mat-m4-16",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 16,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "한 변의 길이가 $6\\text{ cm}$인 정삼각형 $ABC$의 세 꼭짓점을 각각 중심으로 하고 반지름의 길이가 $3\\text{ cm}$인 부채꼴을 삼각형 안쪽에 그렸다. 세 부채꼴의 넓이의 합은?",
+     "choices": [
+      "$3\\pi\\text{ cm}^2$",
+      "$\\frac{9}{2}\\pi\\text{ cm}^2$",
+      "$6\\pi\\text{ cm}^2$",
+      "$9\\pi\\text{ cm}^2$",
+      "$\\frac{27}{2}\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "세 부채꼴의 중심각은 정삼각형의 내각 $60^\\circ$씩이고 합은 $180^\\circ$(삼각형의 내각의 합). 따라서 넓이의 합 $=9\\pi\\times\\dfrac{180}{360}=\\dfrac92\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m4-17",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면의 반지름의 길이가 $3\\text{ cm}$인 원뿔의 옆넓이가 밑넓이의 $4$배일 때, 이 원뿔의 전개도에서 옆면인 부채꼴의 중심각의 크기는?",
+     "choices": [
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$72^\\circ$",
+      "$80^\\circ$",
+      "$90^\\circ$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "$\\pi\\times3\\times l=4\\times9\\pi$ → $l=12$. 중심각 $=360^\\circ\\times\\dfrac{r}{l}=360^\\circ\\times\\dfrac{3}{12}=90^\\circ$."
+    },
+    {
+     "id": "mat-m4-18",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "삼각형 $ABC$의 내부에 점 $P$가 있다. $\\angle ABP=25^\\circ$, $\\angle PBC=20^\\circ$, $\\angle ACP=15^\\circ$, $\\angle PCB=30^\\circ$일 때, $\\angle BPC-\\angle A$의 값은?",
+     "choices": [
+      "$30^\\circ$",
+      "$35^\\circ$",
+      "$40^\\circ$",
+      "$45^\\circ$",
+      "$50^\\circ$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$\\angle B=45^\\circ$, $\\angle C=45^\\circ$ → $\\angle A=90^\\circ$. $\\triangle PBC$에서 $\\angle BPC=180^\\circ-50^\\circ=130^\\circ$. 차 $=40^\\circ$."
+    },
+    {
+     "id": "mat-m4-19",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "내각의 크기의 합이 $1800^\\circ$인 정다각형의 한 내각의 크기와 한 외각의 크기의 차는?",
+     "choices": [
+      "$120^\\circ$",
+      "$135^\\circ$",
+      "$144^\\circ$",
+      "$150^\\circ$",
+      "$160^\\circ$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "$n=12$, 정십이각형의 한 외각 $30^\\circ$, 한 내각 $150^\\circ$ → 차 $120^\\circ$."
+    },
+    {
+     "id": "mat-m4-20",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "$n$각기둥의 모서리의 개수와 $n$각뿔의 모서리의 개수의 합이 $40$이다. 이 $n$각뿔의 면의 개수와 $n$각기둥의 꼭짓점의 개수의 합은?",
+     "choices": [
+      "$21$",
+      "$23$",
+      "$25$",
+      "$27$",
+      "$29$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$3n+2n=40$ → $n=8$. 팔각뿔의 면 $9$개, 팔각기둥의 꼭짓점 $16$개 → $25$."
+    },
+    {
+     "id": "mat-m4-21",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "원 $O$에서 $\\overline{AB}$는 지름이고 점 $C$는 원 위의 점이다. $\\angle AOC=3\\angle BOC$이고 원 $O$의 둘레의 길이가 $24\\pi\\text{ cm}$일 때, $\\overparen{AC}$의 길이는? (단, $\\overparen{AC}$는 점 $B$를 포함하지 않는 호이다.)",
+     "choices": [
+      "$9\\pi\\text{ cm}$",
+      "$12\\pi\\text{ cm}$",
+      "$15\\pi\\text{ cm}$",
+      "$18\\pi\\text{ cm}$",
+      "$27\\pi\\text{ cm}$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "$\\angle AOC+\\angle BOC=180^\\circ$ → $\\angle BOC=45^\\circ$, $\\angle AOC=135^\\circ$. $\\overparen{AC}=24\\pi\\times\\dfrac{135}{360}=9\\pi\\text{ cm}$."
+    },
+    {
+     "id": "mat-m4-22",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02",
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "직각을 낀 두 변의 길이가 $6\\text{ cm}$, $8\\text{ cm}$이고 빗변의 길이가 $10\\text{ cm}$인 직각삼각형이 있다. 길이가 $8\\text{ cm}$인 변을 회전축으로 하여 $1$회전 시킨 입체도형의 겉넓이를 $S_1$, 길이가 $6\\text{ cm}$인 변을 회전축으로 하여 $1$회전 시킨 입체도형의 겉넓이를 $S_2$라 할 때, $S_2-S_1$의 값은?",
+     "choices": [
+      "$12\\pi\\text{ cm}^2$",
+      "$24\\pi\\text{ cm}^2$",
+      "$36\\pi\\text{ cm}^2$",
+      "$48\\pi\\text{ cm}^2$",
+      "$96\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$S_1$: 반지름 $6$, 모선 $10$인 원뿔 → $36\\pi+60\\pi=96\\pi$. $S_2$: 반지름 $8$, 모선 $10$인 원뿔 → $64\\pi+80\\pi=144\\pi$. 차 $48\\pi\\text{ cm}^2$. (회전축에 수직인 변이 반지름)"
+    },
+    {
+     "id": "mat-m4-23",
+     "subject": "수학",
+     "unit": "u6",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면의 반지름의 길이가 $5\\text{ cm}$, 모선의 길이가 $15\\text{ cm}$인 원뿔을 밑면에 평행한 평면으로 잘라, 밑면의 반지름의 길이가 $2\\text{ cm}$, 모선의 길이가 $6\\text{ cm}$인 원뿔을 떼어 냈다. 남은 원뿔대의 겉넓이는?",
+     "choices": [
+      "$63\\pi\\text{ cm}^2$",
+      "$75\\pi\\text{ cm}^2$",
+      "$86\\pi\\text{ cm}^2$",
+      "$92\\pi\\text{ cm}^2$",
+      "$104\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "두 밑면 $4\\pi+25\\pi=29\\pi$, 옆넓이 $=\\pi\\times5\\times15-\\pi\\times2\\times6=75\\pi-12\\pi=63\\pi$ → $92\\pi\\text{ cm}^2$."
+    }
+   ]
+  },
+  {
+   "id": "u7",
+   "title": "단원평가 5 · 기출형 실전",
+   "short": "단원평가 5",
+   "series": "mock",
+   "minutes": 45,
+   "groups": [],
+   "questions": [
+    {
+     "id": "mat-m5-01",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "팔각뿔의 꼭짓점의 개수를 $a$, 팔각기둥의 모서리의 개수를 $b$라 할 때, $b-a$의 값은?",
+     "choices": [
+      "$15$",
+      "$17$",
+      "$18$",
+      "$24$",
+      "$33$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "팔각뿔의 꼭짓점 $8+1=9$, 팔각기둥의 모서리 $3\\times8=24$ → $24-9=15$."
+    },
+    {
+     "id": "mat-m5-02",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 3.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "삼각형 $ABC$에서 $\\angle A:\\angle B=2:3$이고, 꼭짓점 $C$에서의 외각의 크기가 $100^\\circ$일 때, $\\angle B$의 크기는?",
+     "choices": [
+      "$20^\\circ$",
+      "$40^\\circ$",
+      "$50^\\circ$",
+      "$60^\\circ$",
+      "$80^\\circ$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "외각 성질로 $\\angle A+\\angle B=100^\\circ$ → $\\angle B=100^\\circ\\times\\dfrac35=60^\\circ$. ($40^\\circ$는 $\\angle A$, $80^\\circ$는 $\\angle C$)"
+    },
+    {
+     "id": "mat-m5-03",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "반지름의 길이가 $6\\text{ cm}$이고 중심각의 크기가 $150^\\circ$인 부채꼴의 둘레의 길이는?",
+     "choices": [
+      "$5\\pi\\text{ cm}$",
+      "$(5\\pi+6)\\text{ cm}$",
+      "$(5\\pi+12)\\text{ cm}$",
+      "$(10\\pi+12)\\text{ cm}$",
+      "$15\\pi\\text{ cm}$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "호의 길이 $2\\pi\\times6\\times\\dfrac{150}{360}=5\\pi$, 둘레 = 호 + 반지름 $2$개 $=(5\\pi+12)\\text{ cm}$. ($15\\pi$는 넓이)"
+    },
+    {
+     "id": "mat-m5-04",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 3.9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "다음 평면도형 중 한 직선을 회전축으로 하여 $1$회전 시켰을 때 원뿔대가 만들어지는 것은?",
+     "choices": [
+      "직사각형 (한 변을 회전축으로)",
+      "직각삼각형 (직각을 낀 한 변을 회전축으로)",
+      "반원 (지름을 회전축으로)",
+      "직각사다리꼴 (두 밑변에 수직인 변을 회전축으로)",
+      "정사각형 (한 변을 회전축으로)"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "직각사다리꼴을 두 밑변에 수직인 변을 축으로 회전하면 원뿔대가 된다. ①⑤ 원기둥 ② 원뿔 ③ 구."
+    },
+    {
+     "id": "mat-m5-05",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "어떤 다각형의 내각의 크기의 합과 외각의 크기의 합을 더하면 $1440^\\circ$이다. 이 다각형은?",
+     "choices": [
+      "육각형",
+      "칠각형",
+      "팔각형",
+      "구각형",
+      "십각형"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$180^\\circ(n-2)+360^\\circ=180^\\circ n=1440^\\circ$ → $n=8$, 팔각형."
+    },
+    {
+     "id": "mat-m5-06",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.0,
+     "negative": true,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "한 원에서 중심각의 크기가 $60^\\circ$인 부채꼴 $A$와 중심각의 크기가 $120^\\circ$인 부채꼴 $B$에 대한 설명으로 옳지 **않은** 것은?",
+     "choices": [
+      "$B$의 호의 길이는 $A$의 호의 길이의 $2$배이다.",
+      "$B$의 넓이는 $A$의 넓이의 $2$배이다.",
+      "$B$의 현의 길이는 $A$의 현의 길이의 $2$배이다.",
+      "$B$의 둘레의 길이는 $A$의 둘레의 길이의 $2$배보다 작다.",
+      "$B$의 호의 길이는 원의 둘레의 길이의 $\\dfrac13$이다."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "현의 길이는 중심각에 정비례하지 않는다($B$의 현 $<2\\times A$의 현). ④ $B$의 둘레 $=2l+2r$, $A$의 둘레의 2배 $=2l+4r$이므로 옳다. ⑤ $\\dfrac{120}{360}=\\dfrac13$ 옳다."
+    },
+    {
+     "id": "mat-m5-07",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "밑면이 세 변의 길이가 각각 $5\\text{ cm}$, $12\\text{ cm}$, $13\\text{ cm}$인 직각삼각형이고 높이가 $10\\text{ cm}$인 삼각기둥의 겉넓이는?",
+     "choices": [
+      "$300\\text{ cm}^2$",
+      "$330\\text{ cm}^2$",
+      "$345\\text{ cm}^2$",
+      "$360\\text{ cm}^2$",
+      "$390\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "밑넓이 $\\dfrac12\\times5\\times12=30$이 $2$개 → $60$, 옆넓이 $(5+12+13)\\times10=300$ → $360\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m5-08",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "사각형 $ABCD$에서 $\\angle A=85^\\circ$, $\\angle B=95^\\circ$이고, 꼭짓점 $C$에서의 외각의 크기가 $70^\\circ$일 때, $\\angle D$의 크기는?",
+     "choices": [
+      "$55^\\circ$",
+      "$60^\\circ$",
+      "$65^\\circ$",
+      "$70^\\circ$",
+      "$110^\\circ$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$\\angle C=180^\\circ-70^\\circ=110^\\circ$. $\\angle D=360^\\circ-(85^\\circ+95^\\circ+110^\\circ)=70^\\circ$."
+    },
+    {
+     "id": "mat-m5-09",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.1,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "면의 모양이 정삼각형인 정다면체 중에서 꼭짓점의 개수가 가장 많은 정다면체의 모서리의 개수는?",
+     "choices": [
+      "$6$",
+      "$12$",
+      "$20$",
+      "$30$",
+      "$60$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "면이 정삼각형인 정다면체는 정사면체(꼭짓점 4), 정팔면체(6), 정이십면체(12). 정이십면체의 모서리는 $\\dfrac{3\\times20}{2}=30$개."
+    },
+    {
+     "id": "mat-m5-10",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "반지름의 길이가 $10\\text{ cm}$인 부채꼴의 둘레의 길이가 $(10\\pi+20)\\text{ cm}$일 때, 이 부채꼴의 넓이는?",
+     "choices": [
+      "$25\\pi\\text{ cm}^2$",
+      "$50\\pi\\text{ cm}^2$",
+      "$75\\pi\\text{ cm}^2$",
+      "$100\\pi\\text{ cm}^2$",
+      "$200\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "호의 길이 $=10\\pi$, $S=\\dfrac12\\times10\\times10\\pi=50\\pi\\text{ cm}^2$ (중심각 $180^\\circ$, 반원). ($100\\pi$는 원 전체)"
+    },
+    {
+     "id": "mat-m5-11",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.2,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "$\\overline{AB}=\\overline{AC}$이고 $\\angle A=36^\\circ$인 이등변삼각형 $ABC$가 있다. 변 $AC$ 위에 $\\overline{BD}=\\overline{BC}$가 되도록 점 $D$를 잡을 때, $\\angle ABD$의 크기는?",
+     "choices": [
+      "$18^\\circ$",
+      "$24^\\circ$",
+      "$30^\\circ$",
+      "$36^\\circ$",
+      "$72^\\circ$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "$\\angle ABC=\\angle C=72^\\circ$. $\\triangle BCD$에서 $\\overline{BD}=\\overline{BC}$ → $\\angle BDC=72^\\circ$, $\\angle DBC=36^\\circ$. $\\angle ABD=72^\\circ-36^\\circ=36^\\circ$. (또는 $\\angle BDC$가 $\\triangle ABD$의 외각이므로 $36^\\circ+\\angle ABD=72^\\circ$)"
+    },
+    {
+     "id": "mat-m5-12",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-02"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "두 밑면의 반지름의 길이가 각각 $2\\text{ cm}$, $5\\text{ cm}$이고 높이가 $4\\text{ cm}$인 원뿔대를 회전축을 포함하는 평면으로 자른 단면의 넓이는?",
+     "choices": [
+      "$7\\text{ cm}^2$",
+      "$14\\text{ cm}^2$",
+      "$20\\text{ cm}^2$",
+      "$28\\text{ cm}^2$",
+      "$56\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "단면은 윗변 $4$, 아랫변 $10$, 높이 $4$인 등변사다리꼴 → $\\dfrac12\\times(4+10)\\times4=28\\text{ cm}^2$. (반지름을 그대로 쓰면 $14$)"
+    },
+    {
+     "id": "mat-m5-13",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 13,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.4,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "밑면의 반지름의 길이가 $5\\text{ cm}$, 모선의 길이가 $13\\text{ cm}$인 원뿔의 겉넓이는?",
+     "choices": [
+      "$65\\pi\\text{ cm}^2$",
+      "$90\\pi\\text{ cm}^2$",
+      "$100\\pi\\text{ cm}^2$",
+      "$115\\pi\\text{ cm}^2$",
+      "$130\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$25\\pi+\\pi\\times5\\times13=25\\pi+65\\pi=90\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m5-14",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 14,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "원 $O$ 위에 네 점 $A$, $B$, $C$, $D$가 이 순서로 있고 $\\overparen{AB}=\\overparen{BC}=\\overparen{CD}$이다. $\\angle AOD=135^\\circ$이고 부채꼴 $AOB$의 넓이가 $6\\text{ cm}^2$일 때, 원 $O$의 넓이는? (단, $\\angle AOD$는 점 $B$, $C$를 포함하는 쪽의 중심각이다.)",
+     "choices": [
+      "$36\\text{ cm}^2$",
+      "$48\\text{ cm}^2$",
+      "$54\\text{ cm}^2$",
+      "$72\\text{ cm}^2$",
+      "$96\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "호의 길이가 같으면 중심각도 같으므로 $\\angle AOB=135^\\circ\\div3=45^\\circ$. 원의 넓이 $=6\\times\\dfrac{360}{45}=48\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m5-15",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 15,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-04"
+     ],
+     "points": 4.5,
+     "negative": false,
+     "hasBogi": true,
+     "level": "보통",
+     "stem": "반지름의 길이가 $6\\text{ cm}$이고 중심각의 크기가 $60^\\circ$인 부채꼴에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?\n\n> **〈보기〉**\n> ㄱ. 호의 길이는 $2\\pi\\text{ cm}$이다.  \n> ㄴ. 넓이는 $6\\pi\\text{ cm}^2$이다.  \n> ㄷ. 둘레의 길이는 $(2\\pi+6)\\text{ cm}$이다.  \n> ㄹ. 반지름의 길이가 같고 중심각의 크기가 $120^\\circ$인 부채꼴의 넓이는 $12\\pi\\text{ cm}^2$이다.",
+     "choices": [
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄹ",
+      "ㄱ, ㄴ, ㄷ, ㄹ"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "ㄱ $12\\pi\\times\\dfrac16=2\\pi$ (O) ㄴ $36\\pi\\times\\dfrac16=6\\pi$ (O) ㄷ 반지름은 $2$개이므로 $(2\\pi+12)\\text{ cm}$ (X) ㄹ 중심각 2배 → 넓이 2배 $12\\pi$ (O)."
+    },
+    {
+     "id": "mat-m5-16",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 16,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02",
+      "mat-01-01"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "정육각형 $ABCDEF$에서 두 대각선 $\\overline{AC}$와 $\\overline{BD}$가 만나는 점을 $P$라 할 때, $\\angle APB$의 크기는?",
+     "choices": [
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$72^\\circ$",
+      "$90^\\circ$",
+      "$120^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "정육각형의 한 내각은 $120^\\circ$. $\\triangle ABC$는 $\\overline{AB}=\\overline{BC}$인 이등변삼각형 → $\\angle BAC=30^\\circ$. 같은 방법으로 $\\angle CBD=30^\\circ$ → $\\angle ABP=120^\\circ-30^\\circ=90^\\circ$. $\\triangle ABP$에서 $\\angle APB=180^\\circ-30^\\circ-90^\\circ=60^\\circ$."
+    },
+    {
+     "id": "mat-m5-17",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 17,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 4.6,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "어떤 원기둥의 전개도에서 옆면인 직사각형의 가로의 길이가 $12\\pi\\text{ cm}$, 세로의 길이가 $5\\text{ cm}$이다. 이 원기둥의 겉넓이는?",
+     "choices": [
+      "$96\\pi\\text{ cm}^2$",
+      "$108\\pi\\text{ cm}^2$",
+      "$120\\pi\\text{ cm}^2$",
+      "$132\\pi\\text{ cm}^2$",
+      "$144\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "옆면의 가로 = 밑면의 둘레: $2\\pi r=12\\pi$ → $r=6$. 겉넓이 $2\\times36\\pi+12\\pi\\times5=72\\pi+60\\pi=132\\pi\\text{ cm}^2$."
+    },
+    {
+     "id": "mat-m5-18",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 18,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-01"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "삼각형 $ABC$에서 $\\angle A=50^\\circ$이다. $\\angle B$와 $\\angle C$의 이등분선이 만나는 점을 $I$라 할 때, $\\angle BIC$의 크기는?",
+     "choices": [
+      "$95^\\circ$",
+      "$100^\\circ$",
+      "$105^\\circ$",
+      "$110^\\circ$",
+      "$115^\\circ$"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "$\\angle B+\\angle C=130^\\circ$ → $\\angle IBC+\\angle ICB=65^\\circ$ → $\\angle BIC=180^\\circ-65^\\circ=115^\\circ$."
+    },
+    {
+     "id": "mat-m5-19",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 19,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-02"
+     ],
+     "points": 4.7,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "정$n$각형의 한 외각의 크기가 정$2n$각형의 한 외각의 크기보다 $30^\\circ$ 더 클 때, 정$n$각형의 한 내각의 크기는?",
+     "choices": [
+      "$108^\\circ$",
+      "$120^\\circ$",
+      "$135^\\circ$",
+      "$144^\\circ$",
+      "$150^\\circ$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "$\\dfrac{360}{n}-\\dfrac{360}{2n}=\\dfrac{180}{n}=30$ → $n=6$. 정육각형의 한 내각 $=120^\\circ$. ($150^\\circ$는 정십이각형)"
+    },
+    {
+     "id": "mat-m5-20",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 20,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "꼭짓점의 개수, 모서리의 개수, 면의 개수의 합이 $62$인 각기둥의 면의 개수는?",
+     "choices": [
+      "$12$",
+      "$13$",
+      "$20$",
+      "$22$",
+      "$30$"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "$n$각기둥: $2n+3n+(n+2)=6n+2=62$ → $n=10$. 십각기둥의 면은 $12$개."
+    },
+    {
+     "id": "mat-m5-21",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 21,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-01-03",
+      "mat-01-01"
+     ],
+     "points": 4.8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "원 $O$에서 지름 $\\overline{AB}$의 연장선 위에 점 $B$ 쪽으로 점 $P$가 있다. 점 $P$를 지나는 직선이 원과 두 점 $C$, $D$에서 만나고($P$, $C$, $D$의 순서), $\\overline{PC}=\\overline{OC}$이다. $\\angle APD=20^\\circ$이고 $\\overparen{BC}$의 길이가 $4\\text{ cm}$일 때, $\\overparen{AD}$의 길이는? (단, $\\overparen{BC}$, $\\overparen{AD}$는 각각 짧은 쪽 호이다.)",
+     "choices": [
+      "$8\\text{ cm}$",
+      "$10\\text{ cm}$",
+      "$12\\text{ cm}$",
+      "$14\\text{ cm}$",
+      "$16\\text{ cm}$"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "$\\overline{PC}=\\overline{OC}$ → $\\angle COP=\\angle P=20^\\circ$, 즉 $\\angle BOC=20^\\circ$. 외각: $\\angle OCD=20^\\circ+20^\\circ=40^\\circ$, $\\overline{OC}=\\overline{OD}$ → $\\angle ODC=40^\\circ$. $\\triangle OPD$의 외각 $\\angle AOD=20^\\circ+40^\\circ=60^\\circ$. 호의 길이는 중심각에 정비례 → $\\overparen{AD}=4\\times3=12\\text{ cm}$."
+    },
+    {
+     "id": "mat-m5-22",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 22,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "가로 $6\\text{ cm}$, 세로 $5\\text{ cm}$, 높이 $4\\text{ cm}$인 직육면체의 한 꼭짓점 부분에서 한 모서리의 길이가 $2\\text{ cm}$인 정육면체를 잘라 냈다. 남은 입체도형의 겉넓이는?",
+     "choices": [
+      "$136\\text{ cm}^2$",
+      "$140\\text{ cm}^2$",
+      "$144\\text{ cm}^2$",
+      "$148\\text{ cm}^2$",
+      "$156\\text{ cm}^2$"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "잘라 낸 자리에서 없어진 면 $3$개($2\\times2$씩)만큼 안쪽에 새 면 $3$개가 생기므로 겉넓이는 그대로 $2\\times(30+24+20)=148\\text{ cm}^2$. ($136$은 없어진 면만 뺀 값)"
+    },
+    {
+     "id": "mat-m5-23",
+     "subject": "수학",
+     "unit": "u7",
+     "type": "choice",
+     "no": 23,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "mat-02-03"
+     ],
+     "points": 5.0,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "밑면의 반지름의 길이가 $3\\text{ cm}$인 원뿔을 바닥에 눕혀 꼭짓점을 중심으로 미끄러지지 않게 굴렸더니, 원뿔이 지나간 자리가 넓이 $144\\pi\\text{ cm}^2$인 원이 되면서 처음 위치로 돌아왔다. 이 원뿔의 겉넓이는?",
+     "choices": [
+      "$36\\pi\\text{ cm}^2$",
+      "$45\\pi\\text{ cm}^2$",
+      "$48\\pi\\text{ cm}^2$",
+      "$54\\pi\\text{ cm}^2$",
+      "$63\\pi\\text{ cm}^2$"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "지나간 원의 반지름은 모선 $l$: $\\pi l^2=144\\pi$ → $l=12$. 겉넓이 $9\\pi+\\pi\\times3\\times12=9\\pi+36\\pi=45\\pi\\text{ cm}^2$. (이때 원뿔은 $12\\div3=4$바퀴 돈다)"
+    }
+   ]
   }
  ]
 }

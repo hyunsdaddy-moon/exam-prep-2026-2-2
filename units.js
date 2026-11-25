@@ -12,10 +12,10 @@
  *       단원 평가는 몇 번이든 다시 볼 수 있고, 카드에는 첫 점수 · 최고 점수 · 최근 점수를 보여 준다.
  */
 
-import { el, newId } from './dom.js?v=20261125-2220';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261125-2220';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261125-2220';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261125-2220';
+import { el, newId } from './dom.js?v=20261125-2224';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261125-2224';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261125-2224';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261125-2224';
 
 const ROUND_BASE = 10;
 const unitNo = (id) => Number(String(id).replace(/^u/, ''));
@@ -83,10 +83,9 @@ async function renderUnitsHome(ctx, exam, query) {
     const units = await loadUnits(ctx, s.code);
     if (!units.length) return el('section.section', {}, el('div.section-head', {}, el('h2', { text: s.subject }), el('p', { text: '단원 평가 문제를 준비 중입니다.' })));
     const done = units.filter((u) => mine.get(`${s.code}/${u.id}`)).length;
-    return el('section.section', {},
-      el('div.section-head', {}, el('h2', { text: s.subject }), el('p', { text: `${units.length}개 단원 · 응시 ${done} / ${units.length}` })),
-      el('div.grid.tight', {},
-        units.map((u) => {
+    const mocks = units.filter((u) => u.series === 'mock');
+    const plain = units.filter((u) => u.series !== 'mock');
+    const card = (u) => {
           const st = statsOf(mine.get(`${s.code}/${u.id}`));
           const saved = readExamState(s.code, unitKey(s.code, u.id));
           const rivals = others.map((n) => ({ n, st: statsOf(data.scores.get(n)?.get(`${s.code}/${u.id}`)) })).filter((x) => x.st);
@@ -103,8 +102,13 @@ async function renderUnitsHome(ctx, exam, query) {
               st ? el('a.pill.ghost.small', { href: `#/units/${s.code}/${u.id}/result/${st.last.session}`, text: '최근 결과' }) : null
             )
           );
-        })
-      )
+    };
+    return el('section.section', {},
+      el('div.section-head', {}, el('h2', { text: s.subject }), el('p', { text: `${plain.length}개 단원${mocks.length ? ` · 기출형 단원평가 ${mocks.length}회` : ''} · 응시 ${done} / ${units.length}` })),
+      mocks.length ? el('h3.unit-series', { text: `📝 단원평가 1~${mocks.length} — 기출과 같은 문항 수·출제 유형` }) : null,
+      mocks.length ? el('div.grid.tight', {}, mocks.map(card)) : null,
+      mocks.length && plain.length ? el('h3.unit-series', { text: '📚 단원별 평가 (단원마다 10문항)' }) : null,
+      plain.length ? el('div.grid.tight', {}, plain.map(card)) : null
     );
   }));
 
@@ -113,7 +117,7 @@ async function renderUnitsHome(ctx, exam, query) {
     el('section.hero', {},
       el('p.eyebrow', { text: `${me} · 단원 평가` }),
       el('h1', { text: '단원별로 시험 보기' }),
-      el('p.sub', { text: '단원마다 새 문제 10개 · 100점 · 15분. 몇 번이든 다시 볼 수 있고, 카드에는 최고 점수가 남습니다.' }),
+      el('p.sub', { text: '기출과 같은 모양의 단원평가 1~5와 단원별 10문항 평가. 모두 100점이고, 몇 번이든 다시 볼 수 있으며 카드에는 최고 점수가 남습니다.' }),
       !data.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
     ),
     el('div.wrap', {},
