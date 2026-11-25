@@ -180,6 +180,11 @@ flowchart TD
 
 ## 04. 연습 문제 정답 정리 (교재 p.90·91·94)
 
+> 🎬 **몽타주 영상 (5분 19초)** — 연습 문제를 Q(문제) → A(정답) 순서로 🔊 듣고 확인해요.
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_05_04_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_05_04.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### Bài tập 1.1 — Hỏi và trả lời (p.90) : …… đang làm gì?
 | 번호 | 그림 | 모범 답 |
 |---|---|---|
