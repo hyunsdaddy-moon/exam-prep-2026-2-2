@@ -2,5 +2,688 @@
  "schema": 1,
  "subject": "베트남어",
  "code": "vie",
- "rounds": {}
+ "rounds": {
+  "d1": {
+   "groups": [],
+   "questions": [
+    {
+     "id": "vie-d1-01",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-01"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "'도서관'을 뜻하는 말은?",
+     "choices": [
+      "công ty",
+      "thư viện",
+      "tiệm cà phê",
+      "nhà hàng",
+      "căn tin"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "thư viện = 도서관."
+    },
+    {
+     "id": "vie-d1-02",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "'너 지금 뭐 하고 있어?'를 바르게 옮긴 것은?",
+     "choices": [
+      "Bạn làm gì ở đâu?",
+      "Bạn có làm không?",
+      "Bạn đi đâu đấy?",
+      "Bạn làm gì thế nào?",
+      "Bạn đang làm gì đấy?"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "**Bạn đang làm gì đấy?**"
+    },
+    {
+     "id": "vie-d1-03",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "빈칸에 알맞은 말은?\n\n> Tôi ___ mệt. (나는 조금 피곤해.)",
+     "choices": [
+      "đang lắm",
+      "lắm",
+      "không",
+      "rất lắm",
+      "hơi"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "조금 = **hơi** + 형용사."
+    },
+    {
+     "id": "vie-d1-04",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "예/아니오 질문을 바르게 만든 것은?",
+     "choices": [
+      "Bạn có thích cà phê không?",
+      "Bạn thích cà phê không?",
+      "Bạn không thích cà phê không?",
+      "Có bạn thích cà phê?",
+      "Bạn thích có cà phê?"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "**có + V + không?** — có를 빠뜨리지 않기!"
+    },
+    {
+     "id": "vie-d1-05",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-01"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "'공항'을 뜻하는 말은?",
+     "choices": [
+      "trường",
+      "chợ",
+      "siêu thị",
+      "sân bay",
+      "bệnh viện"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "sân bay = 공항."
+    },
+    {
+     "id": "vie-d1-06",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "'어디 가니?'를 바르게 옮긴 것은?",
+     "choices": [
+      "Bạn đi ở đâu đấy?",
+      "Bạn ở đâu đi?",
+      "Bạn đi thế nào?",
+      "Bạn đi đâu đấy?",
+      "Bạn làm gì đấy?"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "đi 뒤에는 **đâu** → Bạn đi đâu đấy?"
+    },
+    {
+     "id": "vie-d1-07",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "'나는 영어를 할 수 있어요.'를 바르게 옮긴 것은?",
+     "choices": [
+      "Tôi không nói được tiếng Anh.",
+      "Tôi nói được tiếng Anh.",
+      "Tôi được nói tiếng Anh.",
+      "Tôi nói tiếng Anh có thể.",
+      "Tôi nói tiếng Anh đâu."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "**V + được** → nói được."
+    },
+    {
+     "id": "vie-d1-08",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "'Hẹn gặp lại.'의 뜻은?",
+     "choices": [
+      "고마워요.",
+      "또 만나요.",
+      "처음 뵙겠습니다.",
+      "어디 가요?",
+      "잘 먹겠습니다."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "Hẹn gặp lại = 다시 만나자."
+    },
+    {
+     "id": "vie-d1-09",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "'코코넛 주스'를 뜻하는 말은?",
+     "choices": [
+      "cà phê sữa",
+      "trà sữa",
+      "sinh tố",
+      "nước dừa",
+      "nước cam"
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "nước dừa = 코코넛 주스."
+    },
+    {
+     "id": "vie-d1-10",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "음식 이름을 묻는 말은?",
+     "choices": [
+      "Bạn ăn thử đi.",
+      "Món này thế nào?",
+      "Món này gọi là gì?",
+      "Món này ngon lắm.",
+      "Món này ở đâu?"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "이름 = **gọi là gì?**"
+    },
+    {
+     "id": "vie-d1-11",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-01"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "쉬움",
+     "stem": "'맵다'를 뜻하는 말은?",
+     "choices": [
+      "cay",
+      "ngon",
+      "ngọt",
+      "chua",
+      "đắng"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "cay = 맵다."
+    },
+    {
+     "id": "vie-d1-12",
+     "subject": "베트남어",
+     "round": "d1",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-04"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "친구에게 '음악 들어 봐.'라고 권하는 말은?",
+     "choices": [
+      "Bạn nghe nhạc không?",
+      "Bạn nghe nhạc lắm.",
+      "Bạn nghe nhạc đi.",
+      "Bạn đi nghe nhạc.",
+      "Đi bạn nghe nhạc."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "권유 = 문장 끝 **đi**."
+    }
+   ]
+  },
+  "d2": {
+   "groups": [],
+   "questions": [
+    {
+     "id": "vie-d2-01",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 1,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "빈칸에 들어갈 말을 차례로 고른 것은?\n\n> A: Bạn đang ăn ___?\n> B: Tôi ___ ăn cơm ở căn tin.",
+     "choices": [
+      "đâu — ở",
+      "gì — ở",
+      "ở đâu — lắm",
+      "đâu — đang",
+      "ở đâu — đang"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "먹는 **장소** = ở đâu, 진행 = đang."
+    },
+    {
+     "id": "vie-d2-02",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 2,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "'오늘 형은 Lan 누나를 만나요?'를 바르게 옮긴 것은?",
+     "choices": [
+      "Hôm nay anh có gặp chị Lan không?",
+      "Hôm nay anh không gặp chị Lan không?",
+      "Có hôm nay anh gặp chị Lan không?",
+      "Hôm nay anh có gặp chị Lan?",
+      "Hôm nay anh gặp chị Lan không?"
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "**có + V + không?** 둘 다 있어야 한다."
+    },
+    {
+     "id": "vie-d2-03",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 3,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-03"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "p.97 글에서 Lan이 아주 좋아하는 것은?\n\n> Lan rất thích nghe nhạc và đọc sách. Nam và Kenji cũng thích nghe nhạc nhưng không thích đọc sách. Hai bạn ấy rất thích chơi game.",
+     "choices": [
+      "게임하기",
+      "책 읽기만",
+      "영어 공부",
+      "커피 마시기",
+      "음악 듣기와 책 읽기"
+     ],
+     "answer": [
+      5
+     ],
+     "explanation": "Lan rất thích **nghe nhạc và đọc sách**. 게임은 Nam과 Kenji."
+    },
+    {
+     "id": "vie-d2-04",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 4,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-01-02"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "'커피는 별로 쓰지 않아요.'를 바르게 옮긴 것은?",
+     "choices": [
+      "Cà phê hơi không đắng.",
+      "Cà phê không đắng lắm.",
+      "Cà phê không rất đắng.",
+      "Cà phê lắm không đắng.",
+      "Cà phê rất đắng lắm."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "**không + 형용사 + lắm**."
+    },
+    {
+     "id": "vie-d2-05",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 5,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "빈칸에 **đến**이 들어가야 하는 것은?",
+     "choices": [
+      "Bạn đi ___ đấy?",
+      "Tôi đi ___ sân bay.",
+      "Tôi đi ___ làm.",
+      "Tôi đi ___ công ty.",
+      "Tôi đi ___ chợ."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "công ty·trường·nhà bạn → **đi đến**."
+    },
+    {
+     "id": "vie-d2-06",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 6,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 8,
+     "negative": true,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "**được**의 쓰임이 나머지와 **다른** 것은?",
+     "choices": [
+      "Tôi không uống được.",
+      "Em nói được một chút.",
+      "Chị chạy xe máy được không?",
+      "Tôi ngồi đây được không?",
+      "Tôi nói được tiếng Anh."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "'Tôi ngồi đây được không?'은 **허락**(앉아도 돼요?), 나머지는 **능력**(~할 수 있다)."
+    },
+    {
+     "id": "vie-d2-07",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 7,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "'우리 집에서 학교까지 2km예요.'를 바르게 옮긴 것은?",
+     "choices": [
+      "Từ nhà tôi đến trường 2km.",
+      "Đến nhà tôi từ trường 2km.",
+      "Nhà tôi đến từ trường 2km.",
+      "Từ nhà tôi ở trường 2km.",
+      "Nhà tôi đi đâu trường 2km."
+     ],
+     "answer": [
+      1
+     ],
+     "explanation": "**từ A đến B** = A부터 B까지."
+    },
+    {
+     "id": "vie-d2-08",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 8,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-02-04"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "대답을 보고 질문을 고른 것은?\n\n> B: Ở một tiệm ăn gần siêu thị Aeon.",
+     "choices": [
+      "Lan đi đâu?",
+      "Lan làm thêm ở đâu?",
+      "Siêu thị Aeon thế nào?",
+      "Lan có làm thêm không?",
+      "Lan làm gì?"
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "일하는 **장소**를 답했으므로 Lan làm thêm **ở đâu**?"
+    },
+    {
+     "id": "vie-d2-09",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 9,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "대답에 알맞은 질문은?\n\n> B: Trà sữa hơi ngọt.",
+     "choices": [
+      "Trà sữa ở đâu?",
+      "Trà sữa có bán không?",
+      "Trà sữa có ngọt không?",
+      "Bạn uống trà sữa đi.",
+      "Trà sữa gọi là gì?"
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "**có + 형용사 + không?** → 조금 달아(hơi ngọt)."
+    },
+    {
+     "id": "vie-d2-10",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 10,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-02"
+     ],
+     "points": 9,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "어순이 바른 문장은?",
+     "choices": [
+      "Mình uống muốn thử nước dừa.",
+      "Mình muốn uống thử nước dừa.",
+      "Mình muốn uống nước dừa thử đi lắm.",
+      "Mình muốn thử uống nước dừa.",
+      "Mình thử muốn uống nước dừa."
+     ],
+     "answer": [
+      2
+     ],
+     "explanation": "thử는 동사 **뒤** → uống **thử**."
+    },
+    {
+     "id": "vie-d2-11",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 11,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-04"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "보통",
+     "stem": "p.117 (7) 물음표·갸웃하는 아이, (8) 손 든 학생에게 알맞은 말을 차례로 고른 것은?",
+     "choices": [
+      "Bạn xem phim đi. / Bạn trả lời đi.",
+      "Bạn hỏi cô giáo đi. / Bạn nghe nhạc đi.",
+      "Bạn hỏi cô giáo đi. / Bạn trả lời đi.",
+      "Bạn nói tiếng Việt đi. / Bạn xem thực đơn đi.",
+      "Bạn trả lời đi. / Bạn hỏi cô giáo đi."
+     ],
+     "answer": [
+      3
+     ],
+     "explanation": "(7) **hỏi cô giáo**, (8) **trả lời**."
+    },
+    {
+     "id": "vie-d2-12",
+     "subject": "베트남어",
+     "round": "d2",
+     "type": "choice",
+     "no": 12,
+     "group": null,
+     "groupTitle": null,
+     "concepts": [
+      "vie-03-03"
+     ],
+     "points": 8,
+     "negative": false,
+     "hasBogi": false,
+     "level": "어려움",
+     "stem": "p.122 글의 내용과 맞는 것은?\n\n> Giá hơi mắc nhưng bánh rất ngon. Anh Nam ăn một ổ bánh mì thịt và uống một ly cà phê đen nóng. Vợ anh Nam rất thích ăn ngọt.",
+     "choices": [
+      "빵 맛이 별로다.",
+      "남 씨의 아내는 고기 반미를 먹었다.",
+      "가격이 싸다.",
+      "남 씨는 뜨거운 블랙커피를 마셨다.",
+      "남 씨는 단것을 좋아한다."
+     ],
+     "answer": [
+      4
+     ],
+     "explanation": "남 씨 = **bánh mì thịt + cà phê đen nóng**. 단것을 좋아하는 사람은 아내."
+    }
+   ]
+  }
+ }
 }

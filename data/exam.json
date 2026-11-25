@@ -244,11 +244,11 @@
     {
      "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 사회 실전 예상 문제지",
      "minutes": 45,
-     "scope": "3단원 유럽 · 4.1 아프리카 · 7단원 인간과 사회생활 · 8단원 다양한 문화 · 9단원 민주주의와 시민 · 11단원 일상생활과 법 · 12단원 인권과 기본권",
+     "scope": "3단원 유럽 · 4.1 아프리카 · 7단원 인간과 사회생활 · 8단원 다양한 문화 · 9단원 민주주의와 시민 · 11단원 일상생활과 법 · 12단원 인권과 기본권 · 선생님 수업 PPT 보충",
      "round": 2,
      "composition": {
       "choice": {
-       "count": 22,
+       "count": 30,
        "points": 82
       },
       "essay": {
@@ -417,7 +417,25 @@
      "images": 0
     }
    ],
-   "papers": [],
+   "papers": [
+    {
+     "title": "2026학년도 7학년 2학기 2차 지필평가 대비 — 베트남어 실전 예상 문제지",
+     "minutes": 45,
+     "scope": "Bài 5 Bạn đang làm gì đấy? · Bài 6 Bạn đi đâu đấy? · Bài 7 Món này tiếng Việt gọi là gì? (베어A 교재 p.90~126)",
+     "round": 2,
+     "composition": {
+      "choice": {
+       "count": 22,
+       "points": 82
+      },
+      "essay": {
+       "count": 3,
+       "points": 18
+      },
+      "total": 100
+     }
+    }
+   ],
    "concepts": 12,
    "images": 0,
    "questions": "questions/vie.json"
