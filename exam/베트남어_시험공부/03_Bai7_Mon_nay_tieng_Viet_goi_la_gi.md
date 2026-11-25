@@ -212,6 +212,11 @@ flowchart TD
 
 ## 03. 대화·읽기 본문 (교재 p.114~116, 123)
 
+> 🎬 **몽타주 영상 (7분 41초)** — 대화·읽기 본문을 한 문장씩 🔊 듣고 🇰🇷 해석해요. (본문 질문과 모범 답 포함)
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_07_03_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_07_03.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### 1) Hội thoại 1 — Trong một tiệm ăn gần trường đại học (대학교 근처 한 음식점에서)
 | 인물 | 베트남어 | 해석 |
 |---|---|---|
