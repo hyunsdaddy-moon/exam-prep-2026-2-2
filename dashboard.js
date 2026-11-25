@@ -8,12 +8,12 @@
  *   (개념 진도율은 과목 페이지와 같은 값 — 개념 읽기·예상 문제 풀이로 계산)
  */
 
-import { el, CIRCLED, plainStem } from './dom.js?v=20261125-2224';
-import { loadRecords } from './store.js?v=20261125-2224';
-import { mergeRecordsForLearner, summarize } from './grade.mjs?v=20261125-2224';
-import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261125-2224';
-import { loadStudy } from './study.js?v=20261125-2224';
-import { avatar, refreshProfiles } from './characters.js?v=20261125-2224';
+import { el, CIRCLED, plainStem } from './dom.js?v=20261126-0512';
+import { loadRecords } from './store.js?v=20261126-0512';
+import { mergeRecordsForLearner, summarize } from './grade.mjs?v=20261126-0512';
+import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261126-0512';
+import { loadStudy } from './study.js?v=20261126-0512';
+import { avatar, refreshProfiles } from './characters.js?v=20261126-0512';
 
 const COMPARE = ['문종배', '문현'];
 const UNIT_ROUND_BASE = 10;
@@ -389,7 +389,7 @@ function buildQuizCompareCard(item, nameA, nameB) {
 }
 
 export async function renderDashboard(ctx, exam, data) {
-  document.title = `학습 현황 — ${exam.title}`;
+  document.title = `내 진도 — ${exam.title}`;
   ctx.setNav('dashboard');
   const [nameA, nameB] = COMPARE;
   const [loaded, study] = await Promise.all([loadRecords(), loadStudy(ctx, exam.subjects, data.concepts)]);
@@ -422,10 +422,10 @@ export async function renderDashboard(ctx, exam, data) {
         order: sIdx * 100 + rIdx,
         subjectCode: a.s.code,
         subjectName: a.s.subject,
-        kind: '단원 평가',
+        kind: '마무리 평가',
         title: ra.doc.title,
         href: `#/s/${a.s.code}/${ra.index}`,
-        goText: '단원 평가로 가기 →',
+        goText: '마무리 평가로 가기 →',
         questions: ra.questions || [],
         triesA: ra.tries,
         triesB: rb.tries,
@@ -463,8 +463,8 @@ export async function renderDashboard(ctx, exam, data) {
     drawCmps();
     compareSection = el('section.section', {},
       el('div.section-head', {},
-        el('h2', { text: '단원 평가 점수 · 틀린 문제 비교' }),
-        el('p', { text: '제출한 단원 평가마다 점수와 틀린 문제(함께 틀린 문제 · 각자 틀린 문제 · 고른 답 · 정답)를 비교합니다. 여러 번 푼 경우 회차를 바꿔 비교할 수 있습니다.' })
+        el('h2', { text: '평가 점수 · 틀린 문제 비교' }),
+        el('p', { text: '제출한 평가(마무리 평가 · 단원평가)마다 점수와 틀린 문제(함께 틀린 문제 · 각자 틀린 문제 · 고른 답 · 정답)를 비교합니다. 여러 번 푼 경우 회차를 바꿔 비교할 수 있습니다.' })
       ),
       subCodes.length > 1 ? el('div.filter-bar', {}, filterHost) : null,
       listHost
@@ -477,7 +477,7 @@ export async function renderDashboard(ctx, exam, data) {
       el('div.db-unit-stats', {},
         el(`span.db-unit-who.${side}`, {}, el(`i.db-dot.${side}`), name),
         r.videos ? el('span', { title: '영상 시청' }, `🎬 ${r.watched}/${r.videos}`) : null,
-        r.qTotal ? el('span', { title: '단원 평가 문항' }, `📝 ${r.answered}/${r.qTotal}`) : null,
+        r.qTotal ? el('span', { title: '마무리 평가 문항' }, `📝 ${r.answered}/${r.qTotal}`) : null,
         r.tries.length
           ? el('span', { title: '회차별 점수' }, `${r.tries.map((t, i) => `${i + 1}차 ${t.score}점`).join(' · ')}${lastTry ? ` (틀림 ${lastTry.wrong})` : ''}`)
           : (r.qTotal ? el('span.db-muted', { text: '미응시' }) : null)
@@ -534,13 +534,13 @@ export async function renderDashboard(ctx, exam, data) {
 
   ctx.show(
     el('section.hero.db-hero', {},
-      el('p.eyebrow', { text: `학습 현황 · ${nameA} · ${nameB} 함께 비교` }),
+      el('p.eyebrow', { text: `내 진도 · ${nameA} · ${nameB} 함께 비교` }),
       el('div.db-hero-pair', {},
         el('div.db-hero-one.a', {}, avatar(nameA, 'sm'), el('span.db-hero-name', { text: nameA }), el('b.db-hero-num', { text: `${sumA.overall}%` })),
         el('span.db-hero-vs', { text: 'vs' }),
         el('div.db-hero-one.b', {}, avatar(nameB, 'sm'), el('span.db-hero-name', { text: nameB }), el('b.db-hero-num', { text: `${sumB.overall}%` }))
       ),
-      el('p.sub', { text: `${diffText} · 영상 30% · 문제 풀이 진도 30% · 단원 평가 최근 점수 40%로 계산합니다.` }),
+      el('p.sub', { text: `${diffText} · 영상 30% · 문제 풀이 진도 30% · 마무리 평가 최근 점수 40%로 계산합니다.` }),
       el('div.hero-actions', {}, el('a.pill', { href: '#/versus', text: '⚔️ 대결 보기' })),
       !loaded.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
     ),
@@ -552,12 +552,12 @@ export async function renderDashboard(ctx, exam, data) {
             { side: 'b', name: nameB, value: sumB.videoPct, sub: `${sumB.W}/${sumB.V}편 봄 · 반복 ${sumB.VIEWS}/${sumB.V * MAX_WATCH}회` },
           ], 'video'),
           compareCard('문제 풀이 진도율', [
-            { side: 'a', name: nameA, value: sumA.quizPct, sub: `단원 평가 ${sumA.QA}/${sumA.QT}문항` },
-            { side: 'b', name: nameB, value: sumB.quizPct, sub: `단원 평가 ${sumB.QA}/${sumB.QT}문항` },
+            { side: 'a', name: nameA, value: sumA.quizPct, sub: `마무리 평가 ${sumA.QA}/${sumA.QT}문항` },
+            { side: 'b', name: nameB, value: sumB.quizPct, sub: `마무리 평가 ${sumB.QA}/${sumB.QT}문항` },
           ], 'quiz'),
           compareCard('문제 풀이 점수', [
-            { side: 'a', name: nameA, value: sumA.scorePct, sub: sumA.triedDocs ? `${sumA.triedDocs}/${sumA.allDocs}개 단원 최근 평균` : '아직 낸 단원 평가 없음' },
-            { side: 'b', name: nameB, value: sumB.scorePct, sub: sumB.triedDocs ? `${sumB.triedDocs}/${sumB.allDocs}개 단원 최근 평균` : '아직 낸 단원 평가 없음' },
+            { side: 'a', name: nameA, value: sumA.scorePct, sub: sumA.triedDocs ? `${sumA.triedDocs}/${sumA.allDocs}개 단원 최근 평균` : '아직 낸 마무리 평가 없음' },
+            { side: 'b', name: nameB, value: sumB.scorePct, sub: sumB.triedDocs ? `${sumB.triedDocs}/${sumB.allDocs}개 단원 최근 평균` : '아직 낸 마무리 평가 없음' },
           ], 'score'),
           compareCard('종합 성취도', [
             { side: 'a', name: nameA, value: sumA.overall, sub: '영상 30 · 풀이 30 · 점수 40' },

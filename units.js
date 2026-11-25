@@ -12,14 +12,15 @@
  *       단원 평가는 몇 번이든 다시 볼 수 있고, 카드에는 첫 점수 · 최고 점수 · 최근 점수를 보여 준다.
  */
 
-import { el, newId } from './dom.js?v=20261125-2224';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261125-2224';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261125-2224';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261125-2224';
+import { el, newId } from './dom.js?v=20261126-0512';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261126-0512';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261126-0512';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261126-0512';
 
 const ROUND_BASE = 10;
 const unitNo = (id) => Number(String(id).replace(/^u/, ''));
 const unitRound = (id) => ROUND_BASE + unitNo(id);
+const unitLabel = (subject, u) => (u.series === 'mock' ? `${subject.subject} ${u.short || u.title}` : `${subject.subject} 단원별 평가 · ${u.short || u.title}`);
 const unitKey = (code, uid) => `examprep.unit.${getCurrentLearner()}.${code}.${uid}`;
 
 const files = new Map();
@@ -70,7 +71,7 @@ const statsOf = (list) => (list && list.length
 
 /* ── 홈 ─────────────────────────────────────────── */
 async function renderUnitsHome(ctx, exam, query) {
-  document.title = `단원 평가 — ${exam.title}`;
+  document.title = `실전 연습 — ${exam.title}`;
   ctx.setNav('units');
   const sel = exam.subjects.some((s) => s.code === query.get('s')) ? query.get('s') : 'all';
   const data = await loadUnitScores(ctx, exam.subjects);
@@ -107,7 +108,7 @@ async function renderUnitsHome(ctx, exam, query) {
       el('div.section-head', {}, el('h2', { text: s.subject }), el('p', { text: `${plain.length}개 단원${mocks.length ? ` · 기출형 단원평가 ${mocks.length}회` : ''} · 응시 ${done} / ${units.length}` })),
       mocks.length ? el('h3.unit-series', { text: `📝 단원평가 1~${mocks.length} — 기출과 같은 문항 수·출제 유형` }) : null,
       mocks.length ? el('div.grid.tight', {}, mocks.map(card)) : null,
-      mocks.length && plain.length ? el('h3.unit-series', { text: '📚 단원별 평가 (단원마다 10문항)' }) : null,
+      mocks.length && plain.length ? el('h3.unit-series', { text: '📚 더 풀기 (보충) — 단원별 10문항' }) : null,
       plain.length ? el('div.grid.tight', {}, plain.map(card)) : null
     );
   }));
@@ -115,9 +116,9 @@ async function renderUnitsHome(ctx, exam, query) {
   const go = (s) => (location.hash = s === 'all' ? '#/units' : `#/units?s=${s}`);
   ctx.show(
     el('section.hero', {},
-      el('p.eyebrow', { text: `${me} · 단원 평가` }),
-      el('h1', { text: '단원별로 시험 보기' }),
-      el('p.sub', { text: '기출과 같은 모양의 단원평가 1~5와 단원별 10문항 평가. 모두 100점이고, 몇 번이든 다시 볼 수 있으며 카드에는 최고 점수가 남습니다.' }),
+      el('p.eyebrow', { text: `${me} · 실전 연습` }),
+      el('h1', { text: '실전 연습' }),
+      el('p.sub', { text: '단원평가 1~5는 기출과 같은 문항 수·출제 유형의 전 범위 시험입니다. 아래 「더 풀기」는 단원별 10문항 보충 문제입니다. 모두 100점, 몇 번이든 다시 볼 수 있고 카드에는 최고 점수가 남습니다.' }),
       !data.ok ? el('p.save-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 것만 보입니다.' }) : null
     ),
     el('div.wrap', {},
@@ -134,20 +135,20 @@ async function renderUnitsHome(ctx, exam, query) {
 
 /* ── 응시 ─────────────────────────────────────────── */
 async function renderUnitStart(ctx, exam, subject, unit) {
-  document.title = `${subject.subject} ${unit.short || unit.title} 단원 평가 — 시험 준비`;
+  document.title = `${unitLabel(subject, unit)} — 시험 준비`;
   ctx.setNav('units');
   const data = await loadUnitScores(ctx, exam.subjects);
   const st = statsOf((data.scores.get(getCurrentLearner()) || new Map()).get(`${subject.code}/${unit.id}`));
   const key = unitKey(subject.code, unit.id);
   const saved = readExamState(subject.code, key);
   const limit = (unit.minutes || 15) * 60;
-  const title = `${subject.subject} 단원 평가 · ${unit.short || unit.title}`;
+  const title = unitLabel(subject, unit);
   const begin = (state) => runExam(ctx, subject, unit.questions, unit.groupsMap, limit, state, {
     mode: 'assess',
     key,
     round: unitRound(unit.id),
     title,
-    paper: { kicker: `${exam.title} · 단원 평가`, kind: `단원 평가 — ${unit.short || unit.title}`, note: `${unit.questions.length}문항 · 총 100점 · ${Math.round(limit / 60)}분 · 답 번호를 누르면 표시되고, 한 번 더 누르면 지워집니다.` },
+    paper: { kicker: `${exam.title} · 실전 연습`, kind: unit.series === 'mock' ? `${unit.short} — 기출형` : `단원별 평가 — ${unit.short || unit.title}`, note: `${unit.questions.length}문항 · 총 100점 · ${Math.round(limit / 60)}분 · 답 번호를 누르면 표시되고, 한 번 더 누르면 지워집니다.` },
     resultHref: (sid) => `#/units/${subject.code}/${unit.id}/result/${sid}`,
   });
   ctx.show(
@@ -176,7 +177,7 @@ async function renderUnitResult(ctx, exam, subject, unit, sessionId) {
   const nextTry = (st?.tries || 1) + 1;
   return renderResult(ctx, subject, sessionId, {
     paper: { questions: unit.questions, groups: unit.groupsMap },
-    title: `${subject.subject} 단원 평가 · ${unit.short || unit.title}`,
+    title: unitLabel(subject, unit),
     backHref: `#/units?s=${subject.code}`,
     backText: '단원 평가',
     extra: (sum) => {
@@ -219,7 +220,7 @@ export async function unitWrongs(ctx, subjects, attempts) {
     for (const u of await loadUnits(ctx, sub.code)) {
       for (const q of u.questions) {
         const a = last.get(q.id);
-        if (a && a.correct === false) out.push({ subject: sub, round: { title: `단원 평가 · ${u.short || u.title}` }, question: q, group: u.groupsMap.get(q.group) || null, attempt: a });
+        if (a && a.correct === false) out.push({ subject: sub, round: { title: u.series === 'mock' ? (u.short || u.title) : `단원별 평가 · ${u.short || u.title}` }, question: q, group: u.groupsMap.get(q.group) || null, attempt: a });
       }
     }
   }

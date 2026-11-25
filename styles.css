@@ -1535,3 +1535,35 @@ body.ink-on .ink-host { user-select: none; -webkit-user-select: none; }
 .doc .dq-paper .p-passage-lead { margin: 2pt 0 8pt; break-inside: avoid; }
 .doc .dq-paper .p-passage-lead .p-lead { font-weight: 600; margin: 0 0 3pt; }
 .doc .dq-paper .p-passage-lead .q-passage { margin-top: 0; }
+
+/* 과목 화면 — 공부 순서 3단계 (① 공부하기 · ② 실전 연습 · ③ 마무리) */
+.next-step { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 0 0 22px; padding: 16px 20px; border-radius: var(--radius); background: color-mix(in srgb, var(--accent) 9%, var(--bg)); border: 1.5px solid color-mix(in srgb, var(--accent) 35%, var(--line-soft)); color: var(--text); }
+.next-step:hover { text-decoration: none; background: color-mix(in srgb, var(--accent) 14%, var(--bg)); }
+.next-step .next-label { font-size: 12px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 999px; padding: 3px 10px; }
+.next-step b { font-size: 17px; flex: 1; min-width: 200px; }
+.next-step .more { color: var(--accent-text); font-size: 14px; font-weight: 600; }
+.study-list { display: flex; flex-direction: column; gap: 14px; }
+.study-card { gap: 10px; }
+.study-card.done { background: color-mix(in srgb, var(--good) 5%, var(--card)); }
+.study-top { display: flex; align-items: center; gap: 12px; }
+.study-top > div { flex: 1; min-width: 0; }
+.study-top .role { font-size: 12px; font-weight: 600; color: var(--accent-text); }
+.study-top h3 { font-size: 19px; margin: 2px 0 0; line-height: 1.3; }
+.study-top h3 a { color: inherit; }
+.study-mark { font-size: 22px; width: 28px; text-align: center; }
+.step-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.step-badge { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--bg-soft); color: var(--text-2); border: 1px solid var(--line-soft); }
+.step-badge.doing { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 35%, var(--line-soft)); background: color-mix(in srgb, var(--warn) 7%, var(--bg)); }
+.step-badge.done { color: var(--good); border-color: color-mix(in srgb, var(--good) 35%, var(--line-soft)); background: color-mix(in srgb, var(--good) 8%, var(--bg)); font-weight: 600; }
+.study-unit h4 { font-size: 14px; color: var(--text-2); margin: 6px 0 6px; font-weight: 600; }
+.study-unit .chips { margin: 0; }
+.mock-card { margin-bottom: 16px; }
+.mock-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; margin: 10px 0 4px; }
+.mock-tile { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: var(--radius-s); background: var(--card); border: 1.5px solid var(--line-soft); color: var(--text); }
+.mock-tile:hover { text-decoration: none; border-color: var(--accent); }
+.mock-tile b { font-size: 15px; }
+.mock-tile span { font-size: 20px; font-weight: 700; color: var(--text-3); }
+.mock-tile small { font-size: 12px; color: var(--text-2); }
+.mock-tile.doing span { color: var(--warn); }
+.mock-tile.done { border-color: color-mix(in srgb, var(--good) 45%, var(--line-soft)); }
+.mock-tile.done span { color: var(--good); }

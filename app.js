@@ -7,27 +7,28 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261125-2224';
-import { el, versioned } from './dom.js?v=20261125-2224';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261125-2224';
-import { renderUnitsRoute } from './units.js?v=20261125-2224';
-import { buildDocQuiz } from './docquiz.js?v=20261125-2224';
-import { attachDrills } from './drill.js?v=20261125-2224';
-import { attachWatchBoxes } from './watch.js?v=20261125-2224';
-import { renderDashboard } from './dashboard.js?v=20261125-2224';
-import { renderGrades } from './grades.js?v=20261125-2224';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261125-2224';
-import { renderAssessRoute } from './assess.js?v=20261125-2224';
-import { renderPastRoute } from './past.js?v=20261125-2224';
-import { renderWrongbook } from './wrongbook.js?v=20261125-2224';
-import { renderBoard } from './board.js?v=20261125-2224';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261125-2224';
-import { loadStudy } from './study.js?v=20261125-2224';
-import { renderPrint, printLinks } from './print.js?v=20261125-2224';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261125-2224';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261125-2224';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261125-2224';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261125-2224';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261126-0512';
+import { el, versioned } from './dom.js?v=20261126-0512';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261126-0512';
+import { renderUnitsRoute } from './units.js?v=20261126-0512';
+import { buildDocQuiz } from './docquiz.js?v=20261126-0512';
+import { attachDrills } from './drill.js?v=20261126-0512';
+import { attachWatchBoxes } from './watch.js?v=20261126-0512';
+import { renderDashboard } from './dashboard.js?v=20261126-0512';
+import { renderGrades } from './grades.js?v=20261126-0512';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261126-0512';
+import { renderAssessRoute } from './assess.js?v=20261126-0512';
+import { renderPastRoute } from './past.js?v=20261126-0512';
+import { renderWrongbook } from './wrongbook.js?v=20261126-0512';
+import { renderBoard } from './board.js?v=20261126-0512';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261126-0512';
+import { loadStudy } from './study.js?v=20261126-0512';
+import { renderPrint, printLinks } from './print.js?v=20261126-0512';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261126-0512';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261126-0512';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261126-0512';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261126-0512';
+import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261126-0512';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -108,11 +109,11 @@ function renderNavLearner(names) {
 
 /** 홈의 큰 버튼들 — 상단 「메뉴」에서도 같은 목록을 고른다 */
 const MENU = [
-  ['#/units', '단원 평가'],
+  ['#/units', '실전 연습'],
   ['#/assess', '수준 평가'],
   ['#/past', '기출문제'],
   ['#/notes', '오답 노트'],
-  ['#/dashboard', '학습 현황'],
+  ['#/dashboard', '내 진도'],
   ['#/versus', '대결'],
   ['#/board', '질문 게시판'],
   ['#/me', '캐릭터 고르기']
@@ -527,45 +528,154 @@ async function renderSubject(s) {
       el('div.meta', { text: d.images ? `그림 ${d.images}장` : '글' })
     );
 
-  const byUnit = new Map();
-  for (const c of conceptsOf(s)) {
-    if (!byUnit.has(c.unit)) byUnit.set(c.unit, []);
-    byUnit.get(c.unit).push(c);
-  }
   const docIndexByFile = new Map(docs.map((d, i) => [d.file, i]));
 
-  const problems = el('section.section', {},
-    el('div.section-head', {}, el('h2', { text: '문제' }), el('p', { text: '연습은 한 문제씩 바로 채점하고, 실전은 시간을 재며 한 번에 채점합니다.' })),
-    comp
-      ? el('div.grid', {},
-          el('div.card.solve-card', {},
-            el('div.role', { text: `예상 문제 ${paper.round || 2}차` }),
-            el('h3', { text: `${comp.choice.count + comp.essay.count}문항 · ${comp.total}점` }),
-            el('div.meta', { text: `선택형 ${comp.choice.count} · 서술형 ${comp.essay.count}${paper.minutes ? ` · ${paper.minutes}분` : ''}` }),
-            el('div.hero-actions.left', {},
-              el('a.pill', { href: `#/s/${s.code}/practice`, text: '연습으로 풀기' }),
-              el('a.pill.ghost', { href: `#/s/${s.code}/exam`, text: '실전으로 풀기' })
+  const steps = await loadSubjectSteps(ctx, s, docs, study.merged, info);
+  const conceptsByDoc = new Map();
+  for (const c of conceptsOf(s)) {
+    if (!conceptsByDoc.has(c.doc)) conceptsByDoc.set(c.doc, []);
+    conceptsByDoc.get(c.doc).push(c);
+  }
+  const isRead = (c) => (stateOf.get(c.id)?.state || 'unseen') !== 'unseen';
+  const docRows = readingDocs(s).map((d) => {
+    const list = conceptsByDoc.get(d.file) || [];
+    const st = steps.byDoc.get(d.file) || { drill: { done: 0, total: 0 }, quiz: null };
+    return { doc: d, index: docs.indexOf(d), list, concepts: { read: list.filter(isRead).length, total: list.length }, drill: st.drill, quiz: st.quiz };
+  });
+  const next = pickNextStep(s.code, docRows, steps, info.due.length);
+  const scoreText = (sc) => (sc ? `${sc.best}점${sc.tries > 1 ? ` (${sc.tries}번 · 최근 ${sc.last.score})` : ''}` : '아직');
+  const badge = (done, total, label) => el(`span.step-badge${total && done >= total ? '.done' : done ? '.doing' : ''}`, { text: `${label} ${done}/${total}` });
+
+  /* ① 공부하기 — 문서 한 편 = 카드 한 장, 그 안에 개념 목록과 진행 상황 */
+  const studyCard = (r) => {
+    const units = new Map();
+    for (const c of r.list) {
+      if (!units.has(c.unit)) units.set(c.unit, []);
+      units.get(c.unit).push(c);
+    }
+    const tracked = r.concepts.total || r.drill.total || r.quiz; // 셀 것이 없는 문서(핵심 요약 등)는 상태를 매기지 않는다
+    const allDone = tracked && (!r.concepts.total || r.concepts.read >= r.concepts.total)
+      && (!r.drill.total || r.drill.done >= r.drill.total) && (!r.quiz || r.quiz.score);
+    const started = r.concepts.read || r.drill.done || r.quiz?.score;
+    return el(`div.card.study-card${allDone ? '.done' : ''}`, {},
+      el('div.study-top', {},
+        el('span.study-mark', { text: !tracked ? '📄' : allDone ? '✅' : started ? '◐' : '○', title: !tracked ? '읽을거리 (시험 직전에 다시 보기)' : allDone ? '다 함' : started ? '하는 중' : '시작 전' }),
+        el('div', {},
+          el('div.role', { text: ROLE_LABEL[r.doc.role] || r.doc.role }),
+          el('h3', {}, el('a', { href: `#/s/${s.code}/${r.index}`, text: r.doc.title }))
+        ),
+        el('a.pill.small', { href: `#/s/${s.code}/${r.index}`, text: !tracked ? '읽기' : allDone ? '다시 보기' : started ? '이어 하기' : '읽기 시작' })
+      ),
+      el('div.step-badges', {},
+        r.concepts.total ? badge(r.concepts.read, r.concepts.total, '📖 개념 읽음') : null,
+        r.drill.total ? badge(r.drill.done, r.drill.total, '✏️ 확인 문제') : null,
+        r.quiz ? el(`span.step-badge${r.quiz.score ? (r.quiz.score.best >= 80 ? '.done' : '.doing') : ''}`, { text: `📝 마무리 평가 ${scoreText(r.quiz.score)}` }) : null
+      ),
+      units.size
+        ? [...units].map(([unit, list]) =>
+            el('div.study-unit', {},
+              units.size > 1 || unit !== r.doc.title ? el('h4', {}, unit, el('span.unit-videos', { 'data-unit': unit })) : el('span.unit-videos', { 'data-unit': unit }),
+              el('ul.chips', {},
+                list.map((c) =>
+                  el('li', {},
+                    el('a.chip', { href: `#/s/${s.code}/${r.index}?h=${encodeURIComponent(c.heading)}` },
+                      el(`i.state-dot.${stateOf.get(c.id)?.state || 'unseen'}`, { title: CONCEPT_LABEL[stateOf.get(c.id)?.state || 'unseen'] }),
+                      c.title,
+                      el('span.dots', { 'aria-label': `중요도 ${c.importance}` }, [1, 2, 3].map((n) => el(n <= c.importance ? 'i.on' : 'i'))),
+                      el('span.videos', { 'data-concept': c.id })
+                    )
+                  )
+                )
+              )
             )
-          ),
-          el('div.card.solve-card', {},
-            el('div.role', { text: '단원 평가' }),
-            el('h3', { text: '단원별로 시험 보기' }),
-            el('div.meta', { text: '단원마다 새 문제 10개 · 100점 · 15분' }),
-            el('div.hero-actions.left', {}, el('a.pill', { href: `#/units?s=${s.code}`, text: '단원 평가 보기' }))
-          ),
-          el('div.card.solve-card', {},
-            el('div.role', { text: '오답 노트' }),
-            el('h3', { text: info.notes.length ? `오늘 복습 ${info.due.length}문제` : '틀린 문제 없음' }),
-            el('div.meta', { text: info.notes.length ? `틀린 문제 ${info.notes.length}개 · 다른 날 한 번 더 ${info.waiting} · 졸업 ${info.graduated}` : '문제를 풀다 틀리면 여기에 모입니다.' }),
-            el('div.hero-actions.left', {},
-              info.due.length ? el('a.pill', { href: `#/s/${s.code}/review`, text: '복습 시작' }) : null,
-              el(`a.pill${info.due.length ? '.ghost' : ''}`, { href: `#/s/${s.code}/notes`, text: '오답 노트 · 통계' })
-            )
-          ),
-          docs.filter((d) => d.role === 'exam' || d.role === 'answers').map(docCard)
-        )
-      : el('p.note', { text: '가져온 문제가 없습니다.' })
+          )
+        : null
+    );
+  };
+
+  const studySection = el('section.section', {},
+    el('div.section-head', {},
+      el('h2', { text: '① 공부하기' }),
+      el('p', { text: '문서를 읽고(개념) → 중간중간 확인 문제 → 문서 끝 마무리 평가. 개념 칩을 누르면 그 부분으로 바로 갑니다.' }),
+      conceptLegend()
+    ),
+    el('div.study-list', {}, docRows.map(studyCard))
   );
+
+  /* ② 실전 연습 — 전 범위, 시험과 같은 모양 */
+  const mockTile = (m) => el(`a.mock-tile${m.score ? (m.score.best >= 80 ? '.done' : '.doing') : ''}`, { href: `#/units/${s.code}/${m.id}` },
+    el('b', { text: m.short }),
+    el('span', { text: m.score ? `${m.score.best}점` : '아직' }),
+    el('small', { text: `${m.count}문항${m.minutes ? ` · ${m.minutes}분` : ''}` })
+  );
+  const problems = el('section.section', {},
+    el('div.section-head', {}, el('h2', { text: '② 실전 연습' }), el('p', { text: '시험 범위 전체를 실제 시험처럼 풉니다. 공부하기를 마친 뒤에 하세요.' })),
+    steps.mocks.length
+      ? el('div.card.solve-card.mock-card', {},
+          el('div.role', { text: '단원평가 1~5 · 기출과 같은 문항 수·출제 유형' }),
+          el('div.mock-tiles', {}, steps.mocks.map(mockTile)),
+          el('div.meta', { text: `푼 세트 ${steps.mocks.filter((m) => m.score).length} / ${steps.mocks.length} · 80점이 넘으면 초록색` })
+        )
+      : null,
+    el('div.grid', {},
+      comp
+        ? el('div.card.solve-card', {},
+            el('div.role', { text: '예상 문제' }),
+            el('h3', { text: `${comp.choice.count + comp.essay.count}문항 · ${comp.total}점` }),
+            el('div.meta', { text: `실전 최고 ${scoreText(steps.exam)} · 연습은 한 문제씩 바로 채점, 실전은 시간을 재며 한 번에` }),
+            el('div.hero-actions.left', {},
+              el('a.pill', { href: `#/s/${s.code}/exam`, text: '실전으로 풀기' }),
+              el('a.pill.ghost', { href: `#/s/${s.code}/practice`, text: '연습으로 풀기' })
+            )
+          )
+        : null,
+      el('div.card.solve-card', {},
+        el('div.role', { text: '기출문제' }),
+        el('h3', { text: '학교 시험지 보기' }),
+        el('div.meta', { text: '지난 정기고사 원본입니다. 풀이 기록은 남지 않습니다.' }),
+        el('div.hero-actions.left', {}, el('a.pill.ghost', { href: `#/past?s=${s.code}`, text: '기출 보기' }))
+      ),
+      docs.filter((d) => d.role === 'exam' || d.role === 'answers').map(docCard)
+    )
+  );
+
+  /* ③ 마무리 */
+  const finish = el('section.section', {},
+    el('div.section-head', {}, el('h2', { text: '③ 마무리' }), el('p', { text: '틀린 문제를 다시 풀고, 시험 직전에 수준 평가로 점검합니다.' })),
+    el('div.grid', {},
+      el('div.card.solve-card', {},
+        el('div.role', { text: '오답 노트' }),
+        el('h3', { text: info.notes.length ? `오늘 복습 ${info.due.length}문제` : '틀린 문제 없음' }),
+        el('div.meta', { text: info.notes.length ? `틀린 문제 ${info.notes.length}개 · 다른 날 한 번 더 ${info.waiting} · 졸업 ${info.graduated}` : '문제를 풀다 틀리면 여기에 모입니다.' }),
+        el('div.hero-actions.left', {},
+          info.due.length ? el('a.pill', { href: `#/s/${s.code}/review`, text: '복습 시작' }) : null,
+          el(`a.pill${info.due.length ? '.ghost' : ''}`, { href: `#/s/${s.code}/notes`, text: '오답 노트 · 통계' })
+        )
+      ),
+      el('div.card.solve-card', {},
+        el('div.role', { text: '수준 평가' }),
+        el('h3', { text: '1차 진단 → 2차 성취' }),
+        el('div.meta', { text: '1차는 공부 시작할 때 한 번(지금 실력), 2차는 시험 직전에 한 번(얼마나 늘었나). 처음 본 점수만 기록됩니다.' }),
+        el('div.hero-actions.left', {}, el('a.pill.ghost', { href: '#/assess', text: '수준 평가로' }))
+      ),
+      steps.plain.length
+        ? el('div.card.solve-card', {},
+            el('div.role', { text: '더 풀기 (보충)' }),
+            el('h3', { text: `단원별 10문항 ${steps.plain.length}개` }),
+            el('div.meta', { text: `푼 것 ${steps.plain.filter((u) => u.score).length} / ${steps.plain.length} · 약한 단원만 골라 더 풀 때` }),
+            el('div.hero-actions.left', {}, el('a.pill.ghost', { href: `#/units?s=${s.code}`, text: '단원별로 더 풀기' }))
+          )
+        : null
+    )
+  );
+
+  const nextBox = next
+    ? el('a.next-step', { href: next.href },
+        el('span.next-label', { text: '다음 할 일' }),
+        el('b', { text: `${next.step} ${next.text}` }),
+        el('span.more', { text: '바로 가기 →' })
+      )
+    : null;
 
   show(
     el('section.hero', {},
@@ -574,6 +684,7 @@ async function renderSubject(s) {
       paper?.scope ? el('p.scope', { text: `시험 범위 — ${paper.scope.replace(/\*\*/g, '')}` }) : null
     ),
     el('div.wrap', {},
+      nextBox,
       el('section.section.progress-block', { style: 'padding-top:0' },
         ring(info.progress, info.mastery, 150),
         el('div.progress-text', {},
@@ -586,47 +697,9 @@ async function renderSubject(s) {
         )
       ),
 
-      comp
-        ? el('section.section',  {},
-            el('div.tiles', {},
-              tile(comp.choice.count, '문항', `선택형 · ${comp.choice.points}점`),
-              tile(comp.essay.count, '문항', `서술형 · ${comp.essay.points}점`),
-              tile(comp.total, '점', '총점'),
-              paper.minutes ? tile(paper.minutes, '분', '제한 시간') : null
-            ),
-            el('p.note', { text: '문항 구성은 예상 문제지(2차)를 기준으로 센 것입니다.' })
-          )
-        : null,
-
-      byUnit.size
-        ? el('section.section', {},
-            el('div.section-head', {}, el('h2', { text: '개념' }), el('p', { text: '점이 많을수록 시험에 자주 나오는 개념입니다. 누르면 그 부분으로 갑니다.' }), conceptLegend()),
-            [...byUnit].map(([unit, list]) =>
-              el('div.unit', {},
-                el('h3', {}, unit, el('span.unit-videos', { 'data-unit': unit })),
-                el('ul.chips', {},
-                  list.map((c) =>
-                    el('li', {},
-                      el('a.chip', { href: `#/s/${s.code}/${docIndexByFile.get(c.doc) ?? 0}?h=${encodeURIComponent(c.heading)}` },
-                        el(`i.state-dot.${stateOf.get(c.id)?.state || 'unseen'}`, { title: CONCEPT_LABEL[stateOf.get(c.id)?.state || 'unseen'] }),
-                        c.title,
-                        el('span.dots', { 'aria-label': `중요도 ${c.importance}` }, [1, 2, 3].map((n) => el(n <= c.importance ? 'i.on' : 'i'))),
-                        el('span.videos', { 'data-concept': c.id })
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          )
-        : null,
-
-      el('section.section', {},
-        el('div.section-head', {}, el('h2', { text: '읽기' }), el('p', { text: '핵심 요약부터 읽고 단원 정리로 넘어가세요.' })),
-        el('div.grid', {}, readingDocs(s).map(docCard))
-      ),
-
+      studySection,
       problems,
+      finish,
       el('section.section', {},
         el('div.section-head', {}, el('h2', { text: '인쇄' }), el('p', { text: '종이로 풀거나 PDF 로 남길 수 있습니다. 문제지와 정답지는 따로 뽑힙니다.' })),
         printLinks(s)
@@ -711,7 +784,7 @@ async function renderReader(s, index, query) {
       return link;
     }),
     null,
-    quiz ? el('a.l2.toc-quiz', { href: '#doc-quiz', text: '📝 단원 평가', onclick: (e) => jump(e, 'doc-quiz') }) : null
+    quiz ? el('a.l2.toc-quiz', { href: '#doc-quiz', text: '📝 마무리 평가', onclick: (e) => jump(e, 'doc-quiz') }) : null
   );
 
   for (const d of drills) {

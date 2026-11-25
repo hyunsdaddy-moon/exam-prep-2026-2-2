@@ -13,13 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261125-2224';
-import { renderMarkdown } from './markdown.js?v=20261125-2224';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261125-2224';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261125-2224';
-import { explainButton } from './explain.js?v=20261125-2224';
-import { inkTools } from './ink.js?v=20261125-2224';
-import { passageBlock } from './solve.js?v=20261125-2224';
+import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261126-0512';
+import { renderMarkdown } from './markdown.js?v=20261126-0512';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-0512';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261126-0512';
+import { explainButton } from './explain.js?v=20261126-0512';
+import { inkTools } from './ink.js?v=20261126-0512';
+import { passageBlock } from './solve.js?v=20261126-0512';
 
 /* 채점 표시 — 선생님이 빨간 색연필로 그은 것처럼: 손으로 그린 동그라미(맞음)·빗금(틀림)에
  * 연필 결(알갱이)과 살짝 떨리는 선을 SVG 필터로 입힌다. 필터는 문서에 한 번만 넣는다. */
@@ -121,7 +121,7 @@ export async function docWrongs(ctx, subjects, attempts) {
           : { ...q, subject: sub.subject, no: n, modelAnswer: q.model + (q.keywords?.length ? `\n\n꼭 들어갈 말: ${q.keywords.join(' · ')}` : ''), points: 1 };
         out.push({
           subject: sub,
-          round: { title: `단원 평가 · ${doc?.title || file}` },
+          round: { title: `마무리 평가 · ${doc?.title || file}` },
           question,
           group: null,
           attempt: a,
@@ -202,8 +202,8 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   const field = (label, value) => el('div', {}, el('span', { text: label }), typeof value === 'string' ? el('i', { text: value }) : value);
   const head = el('header.sheet-head', {},
     el('div.sheet-title', {},
-      el('small', { text: `2026 2학기 2회고사 · 단원 평가${opts.docTitle ? ` · ${opts.docTitle}` : ''}` }),
-      el('h1', {}, opts.subject || '', el('span', { text: ` ${quiz.title || '단원 평가'}` }))
+      el('small', { text: `2026 2학기 2회고사 · 마무리 평가${opts.docTitle ? ` · ${opts.docTitle}` : ''}` }),
+      el('h1', {}, opts.subject || '', el('span', { text: ` ${quiz.title || '마무리 평가'}` }))
     ),
     el('p.sheet-note', { text: `선택형 ${choiceQs.length}문항${essayCount ? ` · 서술형 ${essayCount}문항` : ''} · 모든 문제를 푼 뒤 「제출」을 누르면 채점됩니다. 제출한 뒤에는 다음 차수 재시험을 치를 수 있습니다.` }),
     el('div.sheet-fields', {},
@@ -483,7 +483,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   const sheet = el('div.dq-pages.exam-paper', {}, pages.node, footTools);
   const pen = inkTools(sheet, `doc.${code}.${file}`);
   for (const [b, id] of ink.pending) pen.add(b, id);
-  const heading = el('h2', { id: 'doc-quiz', text: `📝 ${quiz.title || '단원 평가'}` });
+  const heading = el('h2', { id: 'doc-quiz', text: `📝 ${quiz.title || '마무리 평가'}` });
   const section = el('section.dq', {}, heading, sheet);
   paintAll();
   return { section, heading };
