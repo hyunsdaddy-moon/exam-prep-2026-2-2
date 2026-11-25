@@ -6,9 +6,9 @@
  *       ('v:' 로 시작하는 값은 개념 id 와 겹치지 않으므로 개념 읽음 계산에는 섞이지 않는다.)
  */
 
-import { el } from './dom.js?v=20261125-0959';
-import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261125-0959';
-import { filterRecordsByLearner } from './grade.mjs?v=20261125-0959';
+import { el } from './dom.js?v=20261125-1006';
+import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261125-1006';
+import { filterRecordsByLearner } from './grade.mjs?v=20261125-1006';
 
 export const MAX_WATCH = 5;
 const PREFIX = 'v:';

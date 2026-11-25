@@ -7,27 +7,27 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261125-0959';
-import { el, versioned } from './dom.js?v=20261125-0959';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261125-0959';
-import { renderUnitsRoute } from './units.js?v=20261125-0959';
-import { buildDocQuiz } from './docquiz.js?v=20261125-0959';
-import { attachDrills } from './drill.js?v=20261125-0959';
-import { attachWatchBoxes } from './watch.js?v=20261125-0959';
-import { renderDashboard } from './dashboard.js?v=20261125-0959';
-import { renderGrades } from './grades.js?v=20261125-0959';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261125-0959';
-import { renderAssessRoute } from './assess.js?v=20261125-0959';
-import { renderPastRoute } from './past.js?v=20261125-0959';
-import { renderWrongbook } from './wrongbook.js?v=20261125-0959';
-import { renderBoard } from './board.js?v=20261125-0959';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261125-0959';
-import { loadStudy } from './study.js?v=20261125-0959';
-import { renderPrint, printLinks } from './print.js?v=20261125-0959';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261125-0959';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261125-0959';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261125-0959';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261125-0959';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261125-1006';
+import { el, versioned } from './dom.js?v=20261125-1006';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261125-1006';
+import { renderUnitsRoute } from './units.js?v=20261125-1006';
+import { buildDocQuiz } from './docquiz.js?v=20261125-1006';
+import { attachDrills } from './drill.js?v=20261125-1006';
+import { attachWatchBoxes } from './watch.js?v=20261125-1006';
+import { renderDashboard } from './dashboard.js?v=20261125-1006';
+import { renderGrades } from './grades.js?v=20261125-1006';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261125-1006';
+import { renderAssessRoute } from './assess.js?v=20261125-1006';
+import { renderPastRoute } from './past.js?v=20261125-1006';
+import { renderWrongbook } from './wrongbook.js?v=20261125-1006';
+import { renderBoard } from './board.js?v=20261125-1006';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261125-1006';
+import { loadStudy } from './study.js?v=20261125-1006';
+import { renderPrint, printLinks } from './print.js?v=20261125-1006';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261125-1006';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261125-1006';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261125-1006';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261125-1006';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -801,8 +801,26 @@ async function trackReading(s, doc, headings, toc, endNode) {
 
 function jump(e, id) {
   e.preventDefault(); // 주소의 # 은 화면 주소로 쓰므로 직접 옮긴다
-  document.getElementById(id)?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  const target = document.getElementById(id);
+  if (!target) return;
+  stopJumpFix?.();
+  target.scrollIntoView({ behavior: 'auto' });
+  // 지나쳐 온 그림(지연 불러오기)이 뒤늦게 펼쳐지면 목적지가 아래로 밀린다 → 2.5초 동안 높이가 바뀔 때마다 다시 맞춘다.
+  // 사용자가 직접 스크롤하면 바로 그만둔다.
+  const fix = () => target.scrollIntoView({ behavior: 'auto' });
+  const ro = new ResizeObserver(fix);
+  ro.observe(target.closest('article') || document.body);
+  const stop = () => {
+    ro.disconnect();
+    clearTimeout(timer);
+    for (const ev of ['wheel', 'touchstart', 'keydown', 'mousedown']) window.removeEventListener(ev, stop);
+    stopJumpFix = null;
+  };
+  const timer = setTimeout(stop, 2500);
+  for (const ev of ['wheel', 'touchstart', 'keydown', 'mousedown']) window.addEventListener(ev, stop, { passive: true });
+  stopJumpFix = stop;
 }
+let stopJumpFix = null;
 
 /** 지금 읽는 절을 목차에 표시한다 */
 function watchHeadings(toc, headings) {
