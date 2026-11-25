@@ -11,8 +11,8 @@
  * 기록: 이 기기에만 둔다 (Firestore 를 쓰지 않는다). 참여자마다 따로 둔다.
  */
 
-import { el } from './dom.js?v=20261125-2102';
-import { getCurrentLearner } from './store.js?v=20261125-2102';
+import { el } from './dom.js?v=20261125-2110';
+import { getCurrentLearner } from './store.js?v=20261125-2110';
 
 const KEY = 'examprep.2026-2-2.drill';
 const files = new Map();
