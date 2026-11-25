@@ -216,6 +216,11 @@ flowchart TD
 
 ## 04. 연습 문제 정답 정리 (교재 p.103~111)
 
+> 🎬 **몽타주 영상 (7분 40초)** — 연습 문제를 Q(문제) → A(정답) 순서로 🔊 듣고 확인해요.
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_06_04_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_06_04.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### B. Mở rộng từ vựng – ngữ pháp (p.103) — 따라 읽기 문장
 1. Lan đi đâu đấy? → Lan đi thư viện. / Tôi đi sân bay. / Tôi đi về nhà. / Tôi đi làm.
 2. Anh đi đâu đấy? → Tôi (đi) đến công ty. / Tôi (đi) đến nhà bạn. / Tôi (đi) đến trường.
