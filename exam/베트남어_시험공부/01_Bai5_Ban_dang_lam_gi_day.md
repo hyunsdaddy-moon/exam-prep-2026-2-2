@@ -83,6 +83,11 @@ flowchart TD
 
 ## 02. 핵심 문법·문형 (교재 p.90·91·94)
 
+> 🎬 **몽타주 영상 (5분 38초)** — 핵심 문법·문형을 🔊 베트남어 예문 → 🇰🇷 해석 → 💡 시험 포인트로 정리해요.
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_05_02_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_05_02.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### 1) S + **đang** + V — "~하고 있다" (현재진행) ⭐ 시험 단골
 - **đang**은 동사 **앞**에 와서 "지금 ~하는 중"을 나타냅니다.
 - 질문: **S + đang làm gì?** (~는 뭐 하고 있어?) / **Bạn đang làm gì đấy?** (너 지금 뭐 하고 있어?)
