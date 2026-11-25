@@ -17,6 +17,11 @@ flowchart TD
 
 ## 01. 핵심 단어 (교재 p.112 D. Từ vựng + 본문·그림 단어)
 
+> 🎬 **핵심 단어 몽타주 영상 (3분 14초)** — 단어 48개를 🔊 베트남어 발음 → 🇰🇷 뜻 → 📝 예문 순서로 한 번에 정리해요. (묶음마다 💡 시험 포인트)
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_06_words_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_06_words.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### 1) 교재 단어장 (p.112)
 | 베트남어 | 뜻 | 예문 |
 |---|---|---|
