@@ -441,7 +441,10 @@
       "Trường Đại học Nhân văn은 Kenji의 학교예요.",
       "정답. 영어 – 베트남-미국 센터.",
       "quán cà phê Sách은 오늘 만난 곳이에요."
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie5-read"
+     }
     },
     {
      "id": "vie-q1-20",
@@ -464,7 +467,10 @@
       "Nam và Kenji … không thích đọc sách. 일치.",
       "정답. Kenji는 게임을 아주 좋아해요.",
       "Hôm nay … không đi học. 일치."
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie5-read"
+     }
     },
     {
      "id": "vie-q1-21",
@@ -487,7 +493,10 @@
       "정답. 앞 문장의 Nam và Kenji.",
       "hai(둘)이므로 한 명이 아니에요.",
       "hai(둘)이므로 세 명이 아니에요."
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie5-read"
+     }
     },
     {
      "id": "vie-q1-22",
@@ -510,7 +519,10 @@
       "게임은 좋아하는 것일 뿐 지금 하는 일이 아니에요.",
       "정답. 커피를 마시며 이야기하고 있어요.",
       "오늘은 학교에 가지 않아요(không đi học)."
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie5-read"
+     }
     },
     {
      "id": "vie-q1-23",
@@ -533,7 +545,10 @@
       "'왜냐하면'의 뜻이 아니에요.",
       "'그래서'의 뜻이 아니에요.",
       "'만약'의 뜻이 아니에요."
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie5-read"
+     }
     },
     {
      "id": "vie-q1-24",
@@ -572,7 +587,10 @@
       "gặp nhau",
       "ở",
       "quán cà phê Sách"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie5-read"
+     }
     }
    ]
   },
@@ -991,7 +1009,10 @@
       "알바하는 식당 근처",
       "가지 못함",
       "Hội thoại 2"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie6-h1"
+     }
     },
     {
      "id": "vie-q2-19",
@@ -1014,7 +1035,10 @@
       "정답",
       "Kenji의 생일",
       "물(nước)을 사러 간다"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie6-h1"
+     }
     },
     {
      "id": "vie-q2-20",
@@ -1037,7 +1061,10 @@
       "정답",
       "관련 없음",
       "Hội thoại 1"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie6-h2"
+     }
     },
     {
      "id": "vie-q2-21",
@@ -1060,7 +1087,10 @@
       "일치",
       "정답. 버스를 좋아하지 않는다",
       "일치"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie6-read"
+     }
     },
     {
      "id": "vie-q2-22",
@@ -1177,7 +1207,10 @@
       "không thích",
       "xe buýt",
       "chạy xe máy"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie6-read"
+     }
     },
     {
      "id": "vie-q2-26",
@@ -1586,7 +1619,10 @@
       "틀림",
       "Hội thoại 2 장소",
       "틀림"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie7-h1"
+     }
     },
     {
      "id": "vie-q3-18",
@@ -1609,7 +1645,10 @@
       "틀림",
       "틀림",
       "정답"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie7-h1"
+     }
     },
     {
      "id": "vie-q3-19",
@@ -1632,7 +1671,10 @@
       "정답",
       "tiệm giải khát(음료 가게)",
       "이름을 물어봄"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie7-h2"
+     }
     },
     {
      "id": "vie-q3-20",
@@ -1655,7 +1697,10 @@
       "어순 틀림",
       "질문 그대로",
       "어순 틀림"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie7-h1"
+     }
     },
     {
      "id": "vie-q3-21",
@@ -1816,7 +1861,10 @@
       "나오지 않음",
       "가게 이름",
       "듣기 인물"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie7-read"
+     }
     },
     {
      "id": "vie-q3-31",
@@ -1839,7 +1887,10 @@
       "bánh rất ngon",
       "정답",
       "남 씨는 cà phê đen nóng"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie7-read"
+     }
     },
     {
      "id": "vie-q3-32",
@@ -1862,7 +1913,10 @@
       "음료가 틀림",
       "틀림",
       "틀림"
-     ]
+     ],
+     "passageRef": {
+      "unit": "vie7-read"
+     }
     },
     {
      "type": "choice",

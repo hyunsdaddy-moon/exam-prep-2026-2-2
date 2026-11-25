@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "subject": "공통(영어·국어)",
+ "subject": "공통(영어·국어·베트남어)",
  "source": "영어_시험공부 노트의 교과서 본문(Reading Explorer)",
  "units": {
   "8A": {
@@ -247,6 +247,48 @@
    "title": "청산 작품 비교",
    "pages": "국어B 8강",
    "markdown": "**(가) 성혼, 〈말 없는 청산이요〉**\n말 없는 청산(靑山)이요, 모양 없는 유수(流水)로다.\n값 없는 청풍(淸風)과 임자 없는 명월(明月)이라.\n이 중(中)에 병(病) 없는 이 몸이 분별(分別) 없이 늙으리라.\n\n**(나) 작자 미상, 〈청산별곡〉**\n살어리 살어리랏다 청산에 살어리랏다\n머루랑 다래랑 먹고 청산에 살어리랏다\n얄리얄리 얄라셩 얄라리 얄라"
+  },
+  "vie5-read": {
+   "label": "Bài 5 · Bài đọc — Kenji, Nam và Lan",
+   "title": "Bài đọc",
+   "pages": "교재 p.97",
+   "markdown": "Kenji có hai người bạn Việt Nam là Nam và Lan. Nam và Lan đang học tiếng Anh ở Trung tâm Việt - Mỹ. Còn Kenji học tiếng Việt ở Trường Đại học Nhân văn. Lan rất thích nghe nhạc và đọc sách. Nam và Kenji cũng thích nghe nhạc nhưng không thích đọc sách. Hai bạn ấy rất thích chơi game. Hôm nay, Kenji, Nam và Lan không đi học. Họ gặp nhau ở quán cà phê Sách. Bây giờ họ đang uống cà phê và nói chuyện rất vui."
+  },
+  "vie6-h1": {
+   "label": "Bài 6 · Hội thoại 1 — Lan và Nam gặp nhau ở sân trường",
+   "title": "Hội thoại 1",
+   "pages": "교재 p.101",
+   "markdown": "**Nam:** Lan ơi, bạn đi đâu đấy?\n\n**Lan:** Lan đang đi đến thư viện. Còn Nam?\n\n**Nam:** Mình đi đến căn tin mua nước. Hôm nay Lan có đi sinh nhật Kenji không?\n\n**Lan:** Không, mình phải đi làm thêm.\n\n**Nam:** Lan làm thêm ở đâu?\n\n**Lan:** Ở một tiệm ăn gần siêu thị Aeon. Chào bạn. Hẹn gặp lại.\n\n**Nam:** Ừ. Hẹn gặp lại."
+  },
+  "vie6-h2": {
+   "label": "Bài 6 · Hội thoại 2 — Lan nói chuyện với tài xế taxi",
+   "title": "Hội thoại 2",
+   "pages": "교재 p.102",
+   "markdown": "**Tài xế taxi:** Chị đi sân bay Tân Sơn Nhất, phải không?\n\n**Lan:** Đúng rồi.\n\n**Tài xế taxi:** Chị đi du lịch à?\n\n**Lan:** Không phải. Tôi đi làm. Công ty của tôi ở gần đó.\n\n……\n\n**Lan:** Anh ơi, tôi xuống ở đây, được không?\n\n**Tài xế taxi:** Được, chị.\n\n**Lan:** Tôi mua cà phê, sau đó đi bộ đến công ty.\n\n**Tài xế taxi:** Vâng."
+  },
+  "vie6-read": {
+   "label": "Bài 6 · Bài đọc",
+   "title": "Bài đọc",
+   "pages": "교재 p.110",
+   "markdown": "Hôm nay bạn tôi đến Việt Nam. Tôi đi sân bay đón bạn. Tôi chờ bạn tôi ở sân bay. Chúng tôi gặp nhau và đến căn tin uống nước. Bạn tôi uống cà phê sữa đá, còn tôi uống trà nóng. Tôi không thích cà phê sữa đá lắm. Bây giờ, chúng tôi đang đi taxi về nhà. Bạn tôi nói, ở Thành phố Hồ Chí Minh, anh ấy rất thích chạy xe máy. Anh ấy không thích đi xe buýt."
+  },
+  "vie7-h1": {
+   "label": "Bài 7 · Hội thoại 1 — Trong một tiệm ăn gần trường đại học",
+   "title": "Hội thoại 1",
+   "pages": "교재 p.114",
+   "markdown": "**Kenji:** Mai ơi, cho mình hỏi một chút.\n\n**Mai:** Kenji muốn hỏi gì?\n\n**Kenji:** Món này tiếng Việt gọi là gì?\n\n**Mai:** À, đây là món chả giò.\n\n**Kenji:** Món này thế nào? Có ngon không, Mai?\n\n**Mai:** Ngon lắm. Kenji ăn thử đi.\n\n**Kenji:** Còn món đó gọi là gì?\n\n**Mai:** Bánh xèo.\n\n**Kenji:** Mình muốn ăn thử hai món này."
+  },
+  "vie7-h2": {
+   "label": "Bài 7 · Hội thoại 2 — Ye Ji và Long ở một tiệm giải khát",
+   "title": "Hội thoại 2",
+   "pages": "교재 p.114~115",
+   "markdown": "**Ye Ji:** Long ơi, nước này gọi là nước gì?\n\n**Long:** Đây là nước cam cà rốt.\n\n**Ye Ji:** Nước cam cà rốt thế nào?\n\n**Long:** Ngon lắm. Mình rất thích.\n\n**Ye Ji:** Còn nước đó tiếng Việt gọi là gì?\n\n**Long:** Nước đó gọi là nước dừa.\n\n**Ye Ji:** Mình muốn uống thử."
+  },
+  "vie7-read": {
+   "label": "Bài 7 · Bài đọc — Tiệm Phúc Long",
+   "title": "Bài đọc",
+   "pages": "교재 p.123",
+   "markdown": "Vợ anh Nam rất thích ăn ngọt. Hôm nay là sinh nhật cô ấy. Họ đến tiệm Phúc Long, một tiệm trà sữa lớn ở Thành phố Hồ Chí Minh. Tiệm này có bán trà sữa, cà phê, bánh mì, bánh ngọt,... Tiệm này đẹp, giá hơi mắc nhưng bánh rất ngon. Anh Nam ăn một ổ bánh mì thịt và uống một ly cà phê đen nóng. Còn vợ anh Nam ăn một cái bánh kem nhỏ và uống một ly trà sữa!"
   }
  }
 }
