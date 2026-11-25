@@ -13,13 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261125-1830';
-import { renderMarkdown } from './markdown.js?v=20261125-1830';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261125-1830';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261125-1830';
-import { explainButton } from './explain.js?v=20261125-1830';
-import { inkTools } from './ink.js?v=20261125-1830';
-import { passageBlock } from './solve.js?v=20261125-1830';
+import { el, CIRCLED, newId, showBlankAlert } from './dom.js?v=20261125-1844';
+import { renderMarkdown } from './markdown.js?v=20261125-1844';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261125-1844';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261125-1844';
+import { explainButton } from './explain.js?v=20261125-1844';
+import { inkTools } from './ink.js?v=20261125-1844';
+import { passageBlock } from './solve.js?v=20261125-1844';
 
 /* 채점 표시 — 선생님이 빨간 색연필로 그은 것처럼: 손으로 그린 동그라미(맞음)·빗금(틀림)에
  * 연필 결(알갱이)과 살짝 떨리는 선을 SVG 필터로 입힌다. 필터는 문서에 한 번만 넣는다. */
@@ -228,6 +228,30 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   let no = 0;
   let essayNo = 0;
 
+  /* 같은 지문을 보는 선택형 문제가 이어지면 시험지처럼 「[19~23] 다음 글을 읽고…」와 지문을 묶음 앞에 한 번만 펼쳐 둔다 */
+  const passageRuns = new Map(); // 묶음 첫 문항 id → { from, to }
+  const inRun = new Set();
+  {
+    const keyOf = (q) => (q.type === 'choice' && q.passageRef ? JSON.stringify(q.passageRef) : null);
+    let n = 0;
+    let run = [];
+    const flush = () => {
+      if (run.length >= 2) {
+        passageRuns.set(run[0].q.id, { from: run[0].n, to: run[run.length - 1].n });
+        run.forEach((r) => inRun.add(r.q.id));
+      }
+      run = [];
+    };
+    for (const q of qs) {
+      if (q.type !== 'choice') continue;
+      n += 1;
+      const k = keyOf(q);
+      if (k && run.length && keyOf(run[0].q) === k && (run[0].q.section || '') === (q.section || '')) run.push({ q, n });
+      else { flush(); if (k) run.push({ q, n }); }
+    }
+    flush();
+  }
+
   const histIcons = (q) => {
     const box = el('span.dq-hist');
     for (const t of tries) {
@@ -244,13 +268,20 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       lastSection = q.section;
       cols.append(el('h3.p-group', { text: q.section }));
     }
+    const runInfo = passageRuns.get(q.id);
+    if (runInfo) {
+      cols.append(el('div.p-passage-lead', {},
+        el('p.p-lead', { text: `[${runInfo.from}~${runInfo.to}] 다음 글을 읽고, 물음에 답하시오.` }),
+        passageBlock(q, true) || ''
+      ));
+    }
     const label = q.type === 'choice' ? `${++no}.` : `서술형 ${++essayNo}.`;
     const grade = el('span.dq-grade', { 'aria-live': 'polite' });
     const hist = el('div.dq-hist-row');
     const block = el(`article.p-q${q.type === 'essay' ? '.essay' : ''}`, {},
       el('div.p-stem', {}, el('b.p-no', {}, grade, label), md(q.stem), q.level && q.level !== '서술형' ? el('span.p-points', { text: `[${q.level}]` }) : null),
       hist,
-      passageBlock(q, true) || ''
+      inRun.has(q.id) ? '' : (passageBlock(q, true) || '')
     );
     qInfo.set(q.id, { label: q.type === 'choice' ? `${no}번` : `서술형 ${essayNo}번`, block });
     const feedback = el('div.dq-exp');
