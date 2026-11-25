@@ -16,8 +16,8 @@ async function loadFirebase() {
   ({ getFirestore, collection, query, where, doc, setDoc, addDoc, writeBatch, onSnapshot, deleteDoc, updateDoc } = c);
 }
 const timeout = (ms, label) => new Promise((_, reject) => setTimeout(() => reject(new Error(label)), ms));
-import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261125-2207';
-import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261125-2207';
+import { FIREBASE_CONFIG, FIRESTORE_DATABASE_ID, EXAM_ID } from './firebase-config.js?v=20261125-2210';
+import { DEFAULT_LEARNER, normalizeLearner } from './grade.mjs?v=20261125-2210';
 
 export { DEFAULT_LEARNER, normalizeLearner };
 
