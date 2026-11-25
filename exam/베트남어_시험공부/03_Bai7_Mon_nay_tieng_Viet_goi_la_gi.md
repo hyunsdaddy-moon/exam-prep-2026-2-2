@@ -288,6 +288,11 @@ flowchart TD
 
 ## 04. 연습 문제 정답 정리 (교재 p.116~123)
 
+> 🎬 **몽타주 영상 (8분 25초)** — 연습 문제를 Q(문제) → A(정답) 순서로 🔊 듣고 확인해요.
+
+<video controls preload="metadata" playsinline poster="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_07_04_poster.jpg" src="exam/%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4_%EC%8B%9C%ED%97%98%EA%B3%B5%EB%B6%80/videos/vie_07_04.mp4" style="width:100%;max-width:960px;border-radius:12px;display:block;margin:0 auto 1em;background:#000"></video>
+
+
 ### Bài tập 1.1 (p.116~117) 그림 보고 "Món này tiếng Việt gọi là …"
 보기: chả giò, hủ tiếu, bánh xèo, nước cam, nước dừa, sinh tố
 - (1) **chả giò** (2) **bánh xèo** (3) **hủ tiếu** (4) **nước cam** (5) **nước dừa** (6) **sinh tố**
