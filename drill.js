@@ -11,8 +11,8 @@
  * 기록: 이 기기에만 둔다 (Firestore 를 쓰지 않는다). 참여자마다 따로 둔다.
  */
 
-import { el } from './dom.js?v=20261125-0946';
-import { getCurrentLearner } from './store.js?v=20261125-0946';
+import { el } from './dom.js?v=20261125-0959';
+import { getCurrentLearner } from './store.js?v=20261125-0959';
 
 const KEY = 'examprep.2026-2-2.drill';
 const files = new Map();
@@ -113,7 +113,7 @@ function buildCard(item, n, marks, onMark) {
 
 function buildSet(set, onChange) {
   const marks = loadMarks();
-  const id = `drill-p${set.part}`;
+  const id = set.domId;
   const score = el('p.dr-score');
   const list = el('ol.dr-list');
   let onlyWrong = false;
@@ -182,26 +182,33 @@ function buildSet(set, onChange) {
   return { section, update };
 }
 
+/** 제목 맞추기용: 앞의 그림 글자·기호·빈칸을 떼고 소문자로 */
+const norm = (t) => String(t).normalize('NFC').replace(/^[^0-9A-Za-z가-힣]+/u, '').replace(/\s+/g, ' ').toLowerCase();
+
 /**
- * 문서에 확인 문제를 붙인다. 붙인 것마다 { id, title, part, section, done(bool) } 을 돌려준다.
- * 각 세트는 그 PART 의 끝(다음 PART 제목 앞, 바로 앞의 가로줄 앞)에 넣는다. 마지막 PART 는 문서 끝.
+ * 문서에 확인 문제를 붙인다. 붙인 것마다 { id, label, title, section, beforeId, done, link } 를 돌려준다.
+ * 세트가 붙는 자리: set.anchor(제목 앞부분, 예: "01." · "PART 1" · "7강") 또는 set.part(PART 번호)로 찾은 큰 제목(# · ##)의
+ * 절이 끝나는 곳 = 같은 높이 이상의 다음 제목 앞(바로 앞이 가로줄이면 그 앞). 다음 제목이 없으면 문서 끝.
  */
 export async function attachDrills(ctx, code, file, body, headings) {
   if (!files.has(code)) files.set(code, ctx.getJson(`data/drill/${code}.json`).catch(() => ({ docs: {} })));
   const sets = (await files.get(code)).docs?.[file.normalize('NFC')] || [];
   if (!sets.length) return [];
-  const parts = headings
-    .filter((h) => h.level <= 2)
-    .map((h) => ({ h, m: /^\s*PART\s*(\d+)/i.exec(h.node.textContent) }));
+  const big = headings.filter((h) => h.level <= 2);
   const out = [];
-  for (const set of sets) {
-    const i = parts.findIndex((p) => p.m && Number(p.m[1]) === set.part);
-    if (i < 0) continue;
-    const nextHead = parts.slice(i + 1).find((p) => p.m)?.h || null;
-    let anchor = nextHead?.node || null;
+  sets.forEach((set, n) => {
+    let target = null;
+    if (set.anchor) target = big.find((h) => norm(h.node.textContent).startsWith(norm(set.anchor)));
+    else if (set.part) target = big.find((h) => Number(/PART\s*(\d+)/i.exec(h.node.textContent)?.[1]) === set.part);
+    if (!target) return;
+    const ti = headings.indexOf(target);
+    const endHead = headings.slice(ti + 1).find((h) => h.level <= target.level) || null;
+    let anchor = endHead?.node || null;
     if (anchor && anchor.previousElementSibling?.tagName === 'HR') anchor = anchor.previousElementSibling;
-    const rec = { id: `drill-p${set.part}`, title: set.title, part: set.part, beforeId: nextHead?.id || null, done: false, link: null };
-    const built = buildSet(set, (done) => {
+    const tocNext = endHead ? headings.slice(headings.indexOf(endHead)).find((h) => h.level === 2 || h.level === 3) : null;
+    const label = set.label || (set.part ? `PART ${set.part}` : set.anchor);
+    const rec = { id: `drill-${n + 1}`, label, title: set.title, beforeId: tocNext?.id || null, done: false, link: null };
+    const built = buildSet({ ...set, domId: rec.id }, (done) => {
       rec.done = done;
       rec.link?.classList.toggle('done', done);
     });
@@ -210,6 +217,6 @@ export async function attachDrills(ctx, code, file, body, headings) {
     else body.append(built.section);
     built.update();
     out.push(rec);
-  }
+  });
   return out;
 }
