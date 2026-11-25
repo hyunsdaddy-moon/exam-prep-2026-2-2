@@ -2,5 +2,1703 @@
  "schema": 1,
  "subject": "베트남어",
  "code": "vie",
- "docs": {}
+ "docs": {
+  "베트남어_시험공부/01_Bai5_Ban_dang_lam_gi_day.md": {
+   "title": "단원 평가",
+   "questions": [
+    {
+     "id": "vie-q1-01",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'thư viện'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "식당",
+      "도서관",
+      "대학교",
+      "카페",
+      "집"
+     ],
+     "answer": 2,
+     "explanation": "thư viện은 '도서관'이에요. Tôi đọc sách ở thư viện. (나는 도서관에서 책을 읽어요.)",
+     "choiceNotes": [
+      "식당은 nhà hàng.",
+      "정답. thư viện = 도서관.",
+      "대학교는 trường đại học.",
+      "카페는 tiệm cà phê / quán cà phê.",
+      "집은 nhà."
+     ]
+    },
+    {
+     "id": "vie-q1-02",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'nhà hàng'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "집",
+      "회사",
+      "식당",
+      "도서관",
+      "구내식당"
+     ],
+     "answer": 3,
+     "explanation": "nhà hàng은 '식당(레스토랑)'이에요. nhà(집)와 헷갈리지 마세요.",
+     "choiceNotes": [
+      "집은 nhà. hàng이 붙으면 식당!",
+      "회사는 công ty.",
+      "정답. nhà hàng = 식당.",
+      "도서관은 thư viện.",
+      "구내식당은 căn tin."
+     ]
+    },
+    {
+     "id": "vie-q1-03",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'음악을 듣다'를 베트남어로 바르게 쓴 것은?",
+     "choices": [
+      "xem ti vi",
+      "đọc sách",
+      "nghe nhạc",
+      "ăn cơm",
+      "làm thêm"
+     ],
+     "answer": 3,
+     "explanation": "nghe = 듣다, nhạc = 음악 → nghe nhạc.",
+     "choiceNotes": [
+      "xem ti vi = TV를 보다.",
+      "đọc sách = 책을 읽다.",
+      "정답. nghe nhạc = 음악을 듣다.",
+      "ăn cơm = 밥을 먹다.",
+      "làm thêm = 아르바이트하다."
+     ]
+    },
+    {
+     "id": "vie-q1-04",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'làm thêm'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "공부하다",
+      "아르바이트하다",
+      "밥을 먹다",
+      "잠을 자다",
+      "커피를 마시다"
+     ],
+     "answer": 2,
+     "explanation": "làm thêm은 '아르바이트하다'예요. Tôi làm thêm ở nhà hàng.",
+     "choiceNotes": [
+      "공부하다는 học.",
+      "정답. làm thêm = 아르바이트하다.",
+      "밥을 먹다는 ăn cơm.",
+      "잠을 자다는 ngủ.",
+      "커피를 마시다는 uống cà phê."
+     ]
+    },
+    {
+     "id": "vie-q1-05",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "보통",
+     "stem": "교재 p.91 그림에서 '동작 – 장소'의 짝이 잘못된 것은?",
+     "choices": [
+      "xem ti vi – nhà",
+      "đọc sách – thư viện",
+      "ăn cơm – căn tin",
+      "học tiếng Việt – nhà hàng",
+      "uống cà phê – tiệm cà phê"
+     ],
+     "answer": 4,
+     "explanation": "học tiếng Việt(베트남어 공부)은 trường đại học(대학교)에서 해요. nhà hàng(식당)은 làm thêm(아르바이트)과 짝이에요.",
+     "choiceNotes": [
+      "집에서 TV를 본다. 맞는 짝.",
+      "도서관에서 책을 읽는다. 맞는 짝.",
+      "구내식당에서 밥을 먹는다. 맞는 짝.",
+      "정답. học tiếng Việt의 짝은 trường đại học.",
+      "카페에서 커피를 마신다. 맞는 짝."
+     ]
+    },
+    {
+     "id": "vie-q1-06",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'đói'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "목마르다",
+      "피곤하다",
+      "배고프다",
+      "어렵다",
+      "맛있다"
+     ],
+     "answer": 3,
+     "explanation": "đói = 배고프다. Bây giờ em đói lắm. (지금 저 너무 배고파요.)",
+     "choiceNotes": [
+      "목마르다는 khát.",
+      "피곤하다는 mệt.",
+      "정답. đói = 배고프다.",
+      "어렵다는 khó.",
+      "맛있다는 ngon."
+     ]
+    },
+    {
+     "id": "vie-q1-07",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'khát'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "배고프다",
+      "목마르다",
+      "피곤하다",
+      "즐겁다",
+      "어렵다"
+     ],
+     "answer": 2,
+     "explanation": "khát = 목마르다. Tôi không khát lắm. (별로 목마르지 않아요.)",
+     "choiceNotes": [
+      "배고프다는 đói.",
+      "정답. khát = 목마르다.",
+      "피곤하다는 mệt.",
+      "즐겁다는 vui.",
+      "어렵다는 khó."
+     ]
+    },
+    {
+     "id": "vie-q1-08",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "쉬움",
+     "stem": "빈칸에 알맞은 말은? — Bạn ____ làm gì đấy? (너 지금 뭐 하고 있어?)",
+     "choices": [
+      "ở",
+      "đâu",
+      "đang",
+      "lắm",
+      "không"
+     ],
+     "answer": 3,
+     "explanation": "'~하고 있다(현재진행)'는 동사 앞에 đang을 써요.",
+     "choiceNotes": [
+      "ở는 '~에서'(장소).",
+      "đâu는 '어디'.",
+      "정답. đang + 동사 = ~하고 있다.",
+      "lắm은 형용사 뒤에서 '매우'.",
+      "không은 부정·질문 끝."
+     ]
+    },
+    {
+     "id": "vie-q1-09",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "쉬움",
+     "stem": "빈칸에 알맞은 말은? — Mình xem ti vi ____ nhà. (나는 집에서 TV를 봐.)",
+     "choices": [
+      "đang",
+      "ở",
+      "rất",
+      "có",
+      "gì"
+     ],
+     "answer": 2,
+     "explanation": "장소 앞에는 ở(~에서)를 써요. ở nhà = 집에서.",
+     "choiceNotes": [
+      "đang은 동사 앞에 와요.",
+      "정답. ở + 장소 = ~에서.",
+      "rất은 형용사 앞 '매우'.",
+      "có는 có … không? 질문에 써요.",
+      "gì는 '무엇'."
+     ]
+    },
+    {
+     "id": "vie-q1-10",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "A: Bạn đọc sách ở đâu?  B: ____ 에 알맞은 대답은?",
+     "choices": [
+      "Tôi đang đọc sách.",
+      "Có, tôi đọc sách.",
+      "Tôi rất thích đọc sách.",
+      "Tôi đọc sách ở thư viện.",
+      "Tôi đọc sách tiếng Việt."
+     ],
+     "answer": 4,
+     "explanation": "ở đâu?(어디에서?)로 물었으니 장소(ở thư viện)로 대답해야 해요.",
+     "choiceNotes": [
+      "무엇을 하는지만 말하고 장소가 없어요.",
+      "Có는 có … không? 질문의 대답이에요.",
+      "좋아하는지 말하는 대답이에요.",
+      "정답. 장소 ở thư viện(도서관에서)로 대답.",
+      "무슨 책인지 말하는 대답이에요."
+     ]
+    },
+    {
+     "id": "vie-q1-11",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "A: Em ấy đang làm gì?  B: ____ 에 알맞은 대답은?",
+     "choices": [
+      "Em ấy ở nhà.",
+      "Em ấy rất vui.",
+      "Em ấy đang nghe nhạc.",
+      "Có, em ấy đang học.",
+      "Em ấy ở thư viện."
+     ],
+     "answer": 3,
+     "explanation": "đang làm gì?(뭐 하고 있어?)에는 'đang + 동작'으로 대답해요.",
+     "choiceNotes": [
+      "장소를 말하는 대답(ở đâu?의 대답).",
+      "기분을 말하는 대답.",
+      "정답. đang nghe nhạc = 음악을 듣고 있다.",
+      "Có는 예/아니오 질문의 대답이라 어색해요.",
+      "장소를 말하는 대답."
+     ]
+    },
+    {
+     "id": "vie-q1-12",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 말은? — Tiếng Việt không khó ____! (베트남어는 별로 어렵지 않아!)",
+     "choices": [
+      "hơi",
+      "rất",
+      "lắm",
+      "đang",
+      "ở"
+     ],
+     "answer": 3,
+     "explanation": "'별로 ~하지 않다'는 không + 형용사 + lắm.",
+     "choiceNotes": [
+      "hơi는 형용사 앞에 와요.",
+      "rất도 형용사 앞에 오고, 부정문 không과 같이 쓰지 않아요.",
+      "정답. không khó lắm = 별로 어렵지 않다.",
+      "đang은 동사 앞 진행형.",
+      "ở는 장소 앞."
+     ]
+    },
+    {
+     "id": "vie-q1-13",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 말은? — Con chó đang ngủ ____ ngon! (개가 아주 푹 자고 있어!)",
+     "choices": [
+      "lắm",
+      "rất",
+      "không",
+      "đâu",
+      "gì"
+     ],
+     "answer": 2,
+     "explanation": "빈칸이 형용사 ngon 앞에 있으니 rất(매우)이 알맞아요.",
+     "choiceNotes": [
+      "lắm은 형용사 뒤에 와요.",
+      "정답. rất + ngon.",
+      "không을 넣으면 뜻이 맞지 않아요.",
+      "đâu는 '어디'.",
+      "gì는 '무엇'."
+     ]
+    },
+    {
+     "id": "vie-q1-14",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "어려움",
+     "stem": "다음 중 문법적으로 틀린 문장은?",
+     "choices": [
+      "Tôi hơi mệt.",
+      "Bánh mì này rất ngon.",
+      "Em đói lắm.",
+      "Tôi không khát lắm.",
+      "Tiếng Việt không rất khó."
+     ],
+     "answer": 5,
+     "explanation": "'별로 ~않다'는 không + 형용사 + lắm. 'không rất khó'가 아니라 'không khó lắm'.",
+     "choiceNotes": [
+      "hơi + 형용사. 맞아요.",
+      "rất + 형용사. 맞아요.",
+      "형용사 + lắm. 맞아요.",
+      "không + 형용사 + lắm. 맞아요.",
+      "정답. không khó lắm 으로 고쳐야 해요."
+     ]
+    },
+    {
+     "id": "vie-q1-15",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "'Tôi đói lắm.'과 뜻이 가장 가까운 것은?",
+     "choices": [
+      "Tôi hơi đói.",
+      "Tôi rất đói.",
+      "Tôi không đói.",
+      "Tôi không đói lắm.",
+      "Tôi đang ăn."
+     ],
+     "answer": 2,
+     "explanation": "형용사 + lắm = rất + 형용사 = 매우 ~하다.",
+     "choiceNotes": [
+      "hơi는 '조금'이라 정도가 달라요.",
+      "정답. rất đói = đói lắm = 매우 배고프다.",
+      "배고프지 않다(반대).",
+      "별로 배고프지 않다.",
+      "먹고 있다(다른 뜻)."
+     ]
+    },
+    {
+     "id": "vie-q1-16",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "주어진 단어를 바르게 배열한 것은? — ăn cơm / đang / tôi / ở / căn tin",
+     "choices": [
+      "Tôi ăn cơm đang ở căn tin.",
+      "Đang tôi ăn cơm ở căn tin.",
+      "Tôi ở căn tin ăn đang cơm.",
+      "Tôi ăn đang cơm ở căn tin.",
+      "Tôi đang ăn cơm ở căn tin."
+     ],
+     "answer": 5,
+     "explanation": "주어 + đang + 동사 + 목적어 + ở + 장소.",
+     "choiceNotes": [
+      "đang은 동사 앞에 와야 해요.",
+      "주어가 맨 앞이에요.",
+      "đang 위치가 틀렸어요.",
+      "ăn cơm 사이에 đang을 넣으면 안 돼요.",
+      "정답. Tôi đang ăn cơm ở căn tin."
+     ]
+    },
+    {
+     "id": "vie-q1-17",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "주어진 단어를 바르게 배열한 것은? — ăn / ở đâu / đang / bạn?",
+     "choices": [
+      "Bạn ở đâu đang ăn?",
+      "Bạn đang ăn ở đâu?",
+      "Đang bạn ăn ở đâu?",
+      "Ở đâu bạn ăn đang?",
+      "Bạn ăn đang ở đâu?"
+     ],
+     "answer": 2,
+     "explanation": "주어 + đang + 동사 + ở đâu?  ở đâu는 문장 끝에.",
+     "choiceNotes": [
+      "ở đâu는 동사 뒤(문장 끝)에 와요.",
+      "정답. Bạn đang ăn ở đâu?",
+      "주어가 맨 앞이에요.",
+      "어순이 모두 틀렸어요.",
+      "đang은 동사 앞이에요."
+     ]
+    },
+    {
+     "id": "vie-q1-18",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "어려움",
+     "stem": "대답이 'Không. Anh ấy không làm việc.'일 때 알맞은 질문은?",
+     "choices": [
+      "Anh ấy không làm việc không?",
+      "Anh ấy làm việc ở đâu?",
+      "Anh ấy có làm việc không?",
+      "Anh ấy đang làm gì?",
+      "Anh ấy làm việc lắm không?"
+     ],
+     "answer": 3,
+     "explanation": "Có/Không으로 답하는 질문은 có + 동사 + không?",
+     "choiceNotes": [
+      "부정문에 không을 붙이는 것은 틀린 질문이에요.",
+      "장소를 묻는 질문이라 Không으로 답할 수 없어요.",
+      "정답. Anh ấy có làm việc không?",
+      "무엇을 하는지 묻는 질문이에요.",
+      "lắm은 형용사와 쓰는 말이라 어색해요."
+     ]
+    },
+    {
+     "id": "vie-q1-19",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "쉬움",
+     "stem": "읽기 본문에서 Nam과 Lan은 무엇을 어디에서 공부하고 있나?",
+     "choices": [
+      "tiếng Việt – Trường Đại học Nhân văn",
+      "tiếng Việt – Trung tâm Việt - Mỹ",
+      "tiếng Anh – Trường Đại học Nhân văn",
+      "tiếng Anh – Trung tâm Việt - Mỹ",
+      "tiếng Anh – quán cà phê Sách"
+     ],
+     "answer": 4,
+     "explanation": "Nam và Lan đang học tiếng Anh ở Trung tâm Việt - Mỹ.",
+     "choiceNotes": [
+      "이것은 Kenji의 이야기예요.",
+      "Nam과 Lan은 베트남어가 아니라 영어를 공부해요.",
+      "Trường Đại học Nhân văn은 Kenji의 학교예요.",
+      "정답. 영어 – 베트남-미국 센터.",
+      "quán cà phê Sách은 오늘 만난 곳이에요."
+     ]
+    },
+    {
+     "id": "vie-q1-20",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "읽기 본문의 내용과 일치하지 않는 것은?",
+     "choices": [
+      "Kenji học tiếng Việt ở Trường Đại học Nhân văn.",
+      "Lan rất thích đọc sách.",
+      "Nam không thích đọc sách.",
+      "Kenji không thích chơi game.",
+      "Hôm nay họ không đi học."
+     ],
+     "answer": 4,
+     "explanation": "Hai bạn ấy(Nam và Kenji) rất thích chơi game. Kenji는 게임을 아주 좋아해요.",
+     "choiceNotes": [
+      "본문과 일치.",
+      "Lan rất thích nghe nhạc và đọc sách. 일치.",
+      "Nam và Kenji … không thích đọc sách. 일치.",
+      "정답. Kenji는 게임을 아주 좋아해요.",
+      "Hôm nay … không đi học. 일치."
+     ]
+    },
+    {
+     "id": "vie-q1-21",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "어려움",
+     "stem": "본문의 'Hai bạn ấy rất thích chơi game.'에서 'Hai bạn ấy'가 가리키는 사람은?",
+     "choices": [
+      "Nam과 Lan",
+      "Kenji와 Lan",
+      "Nam과 Kenji",
+      "Lan 혼자",
+      "Kenji, Nam, Lan 셋 모두"
+     ],
+     "answer": 3,
+     "explanation": "바로 앞 문장 'Nam và Kenji cũng thích nghe nhạc…'의 두 사람이에요.",
+     "choiceNotes": [
+      "앞 문장의 주어가 아니에요.",
+      "Lan은 앞 문장에 없어요.",
+      "정답. 앞 문장의 Nam và Kenji.",
+      "hai(둘)이므로 한 명이 아니에요.",
+      "hai(둘)이므로 세 명이 아니에요."
+     ]
+    },
+    {
+     "id": "vie-q1-22",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "쉬움",
+     "stem": "본문에서 'Bây giờ họ đang làm gì?'의 답으로 알맞은 것은?",
+     "choices": [
+      "Họ đang học tiếng Anh.",
+      "Họ đang đọc sách ở thư viện.",
+      "Họ đang chơi game ở nhà.",
+      "Họ đang uống cà phê và nói chuyện.",
+      "Họ đang đi học."
+     ],
+     "answer": 4,
+     "explanation": "Bây giờ họ đang uống cà phê và nói chuyện rất vui.",
+     "choiceNotes": [
+      "오늘은 학교·센터에 가지 않았어요.",
+      "도서관 이야기는 없어요.",
+      "게임은 좋아하는 것일 뿐 지금 하는 일이 아니에요.",
+      "정답. 커피를 마시며 이야기하고 있어요.",
+      "오늘은 학교에 가지 않아요(không đi học)."
+     ]
+    },
+    {
+     "id": "vie-q1-23",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "본문 'Còn Kenji học tiếng Việt…'에서 'Còn'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "그리고 또",
+      "한편 (~는)",
+      "왜냐하면",
+      "그래서",
+      "만약"
+     ],
+     "answer": 2,
+     "explanation": "Còn은 앞사람과 다른 사람을 비교할 때 '한편 ~는'의 뜻이에요. Nam·Lan은 영어, 한편 Kenji는 베트남어.",
+     "choiceNotes": [
+      "'그리고'는 và.",
+      "정답. Còn = 한편, ~는(대조).",
+      "'왜냐하면'의 뜻이 아니에요.",
+      "'그래서'의 뜻이 아니에요.",
+      "'만약'의 뜻이 아니에요."
+     ]
+    },
+    {
+     "id": "vie-q1-24",
+     "type": "essay",
+     "section": "02. 핵심 문법·문형",
+     "level": "서술형",
+     "stem": "주어진 단어를 바르게 배열하여 베트남어 문장을 쓰시오. — đói / em / bây giờ / lắm (지금 저 너무 배고파요.)",
+     "model": "Bây giờ em đói lắm.",
+     "keywords": [
+      "Bây giờ",
+      "em đói lắm",
+      "lắm"
+     ]
+    },
+    {
+     "id": "vie-q1-25",
+     "type": "essay",
+     "section": "02. 핵심 문법·문형",
+     "level": "서술형",
+     "stem": "다음 우리말을 đang과 ở를 사용하여 베트남어로 쓰시오. — 나는 도서관에서 책을 읽고 있어요.",
+     "model": "Tôi đang đọc sách ở thư viện.",
+     "keywords": [
+      "đang",
+      "đọc sách",
+      "ở thư viện"
+     ]
+    },
+    {
+     "id": "vie-q1-26",
+     "type": "essay",
+     "section": "03. 대화·읽기 본문",
+     "level": "서술형",
+     "stem": "읽기 본문을 읽고 질문에 완전한 베트남어 문장으로 답하시오. — Họ gặp nhau ở đâu?",
+     "model": "Họ gặp nhau ở quán cà phê Sách.",
+     "keywords": [
+      "gặp nhau",
+      "ở",
+      "quán cà phê Sách"
+     ]
+    }
+   ]
+  },
+  "베트남어_시험공부/02_Bai6_Ban_di_dau_day.md": {
+   "title": "단원 평가",
+   "questions": [
+    {
+     "id": "vie-q2-01",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'sân bay'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "도서관",
+      "공항",
+      "병원",
+      "시장",
+      "회사"
+     ],
+     "answer": 2,
+     "explanation": "sân bay = 공항.",
+     "choiceNotes": [
+      "thư viện",
+      "정답. sân bay = 공항",
+      "bệnh viện",
+      "chợ",
+      "công ty"
+     ]
+    },
+    {
+     "id": "vie-q2-02",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'기다리다'를 뜻하는 베트남어는?",
+     "choices": [
+      "đón",
+      "chờ",
+      "ngồi",
+      "sống",
+      "gọi"
+     ],
+     "answer": 2,
+     "explanation": "chờ = 기다리다, đón = 마중하다.",
+     "choiceNotes": [
+      "마중하다",
+      "정답. 기다리다",
+      "앉다",
+      "살다",
+      "부르다, 전화하다"
+     ]
+    },
+    {
+     "id": "vie-q2-03",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'Tôi đi sân bay đón bạn.'에서 'đón'의 뜻은?",
+     "choices": [
+      "보내다",
+      "기다리다",
+      "마중하다",
+      "만나다",
+      "전화하다"
+     ],
+     "answer": 3,
+     "explanation": "đón = (사람을) 마중하다, 데리러 가다.",
+     "choiceNotes": [
+      "gửi 등",
+      "chờ",
+      "정답. 마중하다",
+      "gặp",
+      "gọi"
+     ]
+    },
+    {
+     "id": "vie-q2-04",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'mắc'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "피곤하다",
+      "뜨겁다",
+      "비싸다",
+      "재미있다",
+      "맛있다"
+     ],
+     "answer": 3,
+     "explanation": "mắc = (값이) 비싸다.",
+     "choiceNotes": [
+      "mệt",
+      "nóng",
+      "정답. 비싸다",
+      "hay",
+      "ngon"
+     ]
+    },
+    {
+     "id": "vie-q2-05",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "보통",
+     "stem": "단어와 뜻의 연결이 바르지 않은 것은?",
+     "choices": [
+      "xe buýt – 버스",
+      "tiệm ăn – 작은 식당",
+      "sau đó – 그 다음에",
+      "bây giờ – 어제",
+      "một chút – 조금"
+     ],
+     "answer": 4,
+     "explanation": "bây giờ = 지금.",
+     "choiceNotes": [
+      "바르다",
+      "바르다",
+      "바르다",
+      "정답. bây giờ는 '지금'",
+      "바르다"
+     ]
+    },
+    {
+     "id": "vie-q2-06",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "보통",
+     "stem": "'아르바이트하다'를 뜻하는 말은?",
+     "choices": [
+      "đi làm",
+      "làm thêm",
+      "làm việc",
+      "đi học",
+      "nấu ăn"
+     ],
+     "answer": 2,
+     "explanation": "làm thêm = 아르바이트하다.",
+     "choiceNotes": [
+      "일하러 가다",
+      "정답. 아르바이트하다",
+      "일하다",
+      "공부하러 가다",
+      "요리하다"
+     ]
+    },
+    {
+     "id": "vie-q2-07",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 말은? — Bạn đi ___ đấy?",
+     "choices": [
+      "đâu",
+      "ở đâu",
+      "gì",
+      "ai",
+      "nào"
+     ],
+     "answer": 1,
+     "explanation": "đi 같은 이동 동사 뒤에는 đâu.",
+     "choiceNotes": [
+      "정답. đi + đâu",
+      "이동 동사 뒤에는 ở 없이 đâu",
+      "무엇",
+      "누구",
+      "어느"
+     ]
+    },
+    {
+     "id": "vie-q2-08",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 말은? — Cô làm việc ___?",
+     "choices": [
+      "đâu",
+      "ở đâu",
+      "đến",
+      "đi",
+      "được"
+     ],
+     "answer": 2,
+     "explanation": "일하는 장소를 물을 때는 ở đâu.",
+     "choiceNotes": [
+      "이동 동사 뒤에만 đâu",
+      "정답. làm việc ở đâu",
+      "도착하다",
+      "가다",
+      "할 수 있다"
+     ]
+    },
+    {
+     "id": "vie-q2-09",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "어려움",
+     "stem": "빈칸에 'đâu'가 들어가는 것은?",
+     "choices": [
+      "Mẹ đang ___ ạ?",
+      "Nhà thầy ___?",
+      "Xin lỗi, bà về ___?",
+      "Đồng hồ này chị mua ___?",
+      "Quê của chị ___?"
+     ],
+     "answer": 3,
+     "explanation": "về(돌아가다)는 이동 동사 → về đâu.",
+     "choiceNotes": [
+      "있는 위치 → ở đâu",
+      "위치 → ở đâu",
+      "정답. về đâu",
+      "산 장소 → ở đâu",
+      "위치 → ở đâu"
+     ]
+    },
+    {
+     "id": "vie-q2-10",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 말은? — Hôm nay Lan ___ nhà tôi chơi.",
+     "choices": [
+      "đi",
+      "đến",
+      "về",
+      "ở",
+      "được"
+     ],
+     "answer": 2,
+     "explanation": "nhà bạn(친구·남의 집)에 갈 때는 đến.",
+     "choiceNotes": [
+      "친구 집은 예외로 đến을 쓴다",
+      "정답. đến nhà tôi",
+      "자기 집으로 돌아갈 때",
+      "~에 있다",
+      "할 수 있다"
+     ]
+    },
+    {
+     "id": "vie-q2-11",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 'đi'가 들어가야 하는 것은?",
+     "choices": [
+      "Các anh ấy ___ công ty làm việc.",
+      "Anh Michael ___ Việt Nam để học tiếng Việt.",
+      "Họ thích ___ du lịch.",
+      "Hôm nay Lan ___ nhà tôi chơi.",
+      "Tôi ___ trường lúc 7 giờ."
+     ],
+     "answer": 3,
+     "explanation": "đi + 동사(du lịch) = 여행 가다.",
+     "choiceNotes": [
+      "công ty → đến",
+      "도착해 오다 → đến",
+      "정답. đi du lịch",
+      "nhà tôi → đến",
+      "trường → đến"
+     ]
+    },
+    {
+     "id": "vie-q2-12",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "교재에서 '(đi) đến'을 쓰는 예외 장소가 아닌 것은?",
+     "choices": [
+      "trường",
+      "nhà bạn",
+      "công ty",
+      "thư viện",
+      "(세 개 모두 예외)"
+     ],
+     "answer": 4,
+     "explanation": "예외는 trường, nhà bạn, công ty. thư viện은 'đi thư viện'.",
+     "choiceNotes": [
+      "예외",
+      "예외",
+      "예외",
+      "정답. đi thư viện",
+      "잘못된 보기"
+     ]
+    },
+    {
+     "id": "vie-q2-13",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "'Tôi đi làm.'의 뜻은?",
+     "choices": [
+      "나는 일을 끝냈다.",
+      "나는 일하러 간다.",
+      "나는 회사에 산다.",
+      "나는 일을 할 수 있다.",
+      "나는 일을 좋아한다."
+     ],
+     "answer": 2,
+     "explanation": "đi + 동사 = ~하러 가다.",
+     "choiceNotes": [
+      "xong",
+      "정답. đi + V",
+      "sống",
+      "làm được",
+      "thích làm"
+     ]
+    },
+    {
+     "id": "vie-q2-14",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "'Tôi học từ 8:00 tới 10:00.'에서 'tới'와 바꿔 쓸 수 있는 말은?",
+     "choices": [
+      "đi",
+      "về",
+      "đến",
+      "ở",
+      "được"
+     ],
+     "answer": 3,
+     "explanation": "đến = tới (~까지).",
+     "choiceNotes": [
+      "가다",
+      "돌아가다",
+      "정답. đến = tới",
+      "~에서",
+      "할 수 있다"
+     ]
+    },
+    {
+     "id": "vie-q2-15",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "'그녀는 영어를 할 수 있다'를 바르게 쓴 것은?",
+     "choices": [
+      "Cô ấy được nói tiếng Anh.",
+      "Cô ấy nói được tiếng Anh.",
+      "Cô ấy nói tiếng Anh có thể.",
+      "Được cô ấy nói tiếng Anh.",
+      "Cô ấy có nói tiếng Anh."
+     ],
+     "answer": 2,
+     "explanation": "được은 동사 뒤(또는 문장 끝), có thể는 동사 앞.",
+     "choiceNotes": [
+      "được은 동사 뒤",
+      "정답. nói được tiếng Anh",
+      "có thể는 동사 앞",
+      "어순 틀림",
+      "có ~ không은 질문"
+     ]
+    },
+    {
+     "id": "vie-q2-16",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "'Chị chạy xe máy được không?'에 '못 탄다'고 답한 것은?",
+     "choices": [
+      "Tôi chạy được.",
+      "Tôi không chạy được.",
+      "Tôi được không chạy.",
+      "Tôi chạy không.",
+      "Không, tôi chạy được."
+     ],
+     "answer": 2,
+     "explanation": "부정은 không + V + được.",
+     "choiceNotes": [
+      "탈 수 있다",
+      "정답. 못 타요",
+      "어순 틀림",
+      "틀린 문장",
+      "앞뒤가 맞지 않음"
+     ]
+    },
+    {
+     "id": "vie-q2-17",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "쉬움",
+     "stem": "'Tôi ngồi đây được không?'에 대한 알맞은 대답은?",
+     "choices": [
+      "Dạ, được. Mời anh!",
+      "Tôi đi thư viện.",
+      "Đúng rồi, tôi đi du lịch.",
+      "Hẹn gặp lại.",
+      "Tôi về nhà."
+     ],
+     "answer": 1,
+     "explanation": "허락 구하기 → Dạ, được. Mời anh!",
+     "choiceNotes": [
+      "정답. 앉으세요",
+      "어디 가는지에 대한 답",
+      "맞지 않음",
+      "작별 인사",
+      "맞지 않음"
+     ]
+    },
+    {
+     "id": "vie-q2-18",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "쉬움",
+     "stem": "Hội thoại 1에서 Lan은 어디에 가고 있는가?",
+     "choices": [
+      "căn tin",
+      "thư viện",
+      "siêu thị Aeon",
+      "sinh nhật Kenji",
+      "sân bay"
+     ],
+     "answer": 2,
+     "explanation": "Lan đang đi đến thư viện.",
+     "choiceNotes": [
+      "Nam이 가는 곳",
+      "정답",
+      "알바하는 식당 근처",
+      "가지 못함",
+      "Hội thoại 2"
+     ]
+    },
+    {
+     "id": "vie-q2-19",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "Hội thoại 1의 내용과 일치하는 것은?",
+     "choices": [
+      "Nam도 도서관에 간다.",
+      "Lan은 Kenji 생일 파티에 간다.",
+      "Lan은 Aeon 마트 근처 식당에서 아르바이트한다.",
+      "오늘은 Nam의 생일이다.",
+      "Nam은 커피를 사러 간다."
+     ],
+     "answer": 3,
+     "explanation": "Ở một tiệm ăn gần siêu thị Aeon.",
+     "choiceNotes": [
+      "Nam은 매점에 간다",
+      "알바 때문에 못 간다",
+      "정답",
+      "Kenji의 생일",
+      "물(nước)을 사러 간다"
+     ]
+    },
+    {
+     "id": "vie-q2-20",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "Hội thoại 2에서 Lan이 택시에서 내린 뒤 할 일은?",
+     "choices": [
+      "여행을 간다.",
+      "공항에서 친구를 기다린다.",
+      "커피를 사고 회사까지 걸어간다.",
+      "버스를 타고 집에 간다.",
+      "식당에서 아르바이트한다."
+     ],
+     "answer": 3,
+     "explanation": "Tôi mua cà phê, sau đó đi bộ đến công ty.",
+     "choiceNotes": [
+      "du lịch가 아니라고 함",
+      "읽기 본문 내용",
+      "정답",
+      "관련 없음",
+      "Hội thoại 1"
+     ]
+    },
+    {
+     "id": "vie-q2-21",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "읽기 본문(p.110)의 내용과 일치하지 않는 것은?",
+     "choices": [
+      "글쓴이는 공항에 친구를 마중하러 갔다.",
+      "친구는 아이스 연유 커피를 마셨다.",
+      "글쓴이는 뜨거운 차를 마셨다.",
+      "친구는 버스 타는 것을 좋아한다.",
+      "지금 그들은 택시를 타고 집에 가고 있다."
+     ],
+     "answer": 4,
+     "explanation": "Anh ấy không thích đi xe buýt.",
+     "choiceNotes": [
+      "일치",
+      "일치",
+      "일치",
+      "정답. 버스를 좋아하지 않는다",
+      "일치"
+     ]
+    },
+    {
+     "id": "vie-q2-22",
+     "type": "choice",
+     "section": "04. 연습 문제 정답 정리",
+     "level": "어려움",
+     "stem": "낱말을 바르게 배열한 문장은? (chị / của / quê / ở đâu)",
+     "choices": [
+      "Chị của quê ở đâu?",
+      "Quê của chị ở đâu?",
+      "Ở đâu quê của chị?",
+      "Của chị quê ở đâu?",
+      "Quê ở đâu của chị?"
+     ],
+     "answer": 2,
+     "explanation": "'언니(당신)의 고향' = quê của chị.",
+     "choiceNotes": [
+      "소유 어순이 거꾸로",
+      "정답",
+      "의문사 위치 틀림",
+      "của가 맨 앞에 올 수 없음",
+      "어순 틀림"
+     ]
+    },
+    {
+     "id": "vie-q2-23",
+     "type": "choice",
+     "section": "04. 연습 문제 정답 정리",
+     "level": "보통",
+     "stem": "'Các chị đang đi đâu đấy?'에 알맞은 대답은?",
+     "choices": [
+      "Không. Hôm nay tôi ở nhà.",
+      "Chúng tôi đang đi chợ.",
+      "Dạ, không. Em đi ra ngoài rồi.",
+      "Không. Tôi không thích cà phê lắm.",
+      "Tôi về số 15 đường Lê Thánh Tôn."
+     ],
+     "answer": 2,
+     "explanation": "Các chị(여러분) → Chúng tôi로 답하고 장소를 말한다.",
+     "choiceNotes": [
+      "có ~ không 질문의 답",
+      "정답",
+      "Bây giờ em có ở nhà không?의 답",
+      "Anh uống cà phê không?의 답",
+      "Chị về đâu?의 답"
+     ]
+    },
+    {
+     "id": "vie-q2-24",
+     "type": "essay",
+     "section": "02. 핵심 문법·문형",
+     "level": "서술형",
+     "stem": "다음 질문에 '친구 집에 간다'라고 베트남어로 답하시오. — Anh đi đâu đấy?",
+     "model": "Tôi (đi) đến nhà bạn.",
+     "keywords": [
+      "đến",
+      "nhà bạn"
+     ]
+    },
+    {
+     "id": "vie-q2-25",
+     "type": "essay",
+     "section": "03. 대화·읽기 본문",
+     "level": "서술형",
+     "stem": "읽기 본문(p.110)을 보고 베트남어 완전한 문장으로 답하시오. — Bạn cô ấy có thích đi xe buýt không?",
+     "model": "Không, anh ấy không thích đi xe buýt. Anh ấy thích chạy xe máy.",
+     "keywords": [
+      "không thích",
+      "xe buýt",
+      "chạy xe máy"
+     ]
+    },
+    {
+     "id": "vie-q2-26",
+     "type": "essay",
+     "section": "02. 핵심 문법·문형",
+     "level": "서술형",
+     "stem": "택시 기사에게 '여기서 내려도 될까요?'라고 베트남어로 쓰시오.",
+     "model": "Anh ơi, tôi xuống ở đây, được không?",
+     "keywords": [
+      "xuống",
+      "ở đây",
+      "được không"
+     ]
+    }
+   ]
+  },
+  "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md": {
+   "title": "단원 평가",
+   "questions": [
+    {
+     "id": "vie-q3-01",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'nước dừa'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "코코넛 주스",
+      "밀크티",
+      "스무디",
+      "아이스티",
+      "오렌지 주스"
+     ],
+     "answer": 1,
+     "explanation": "nước dừa = 코코넛 주스. dừa는 코코넛.",
+     "choiceNotes": [
+      "정답. dừa = 코코넛",
+      "trà sữa",
+      "sinh tố",
+      "trà đá",
+      "nước cam"
+     ]
+    },
+    {
+     "id": "vie-q3-02",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'sinh tố'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "쌀국수",
+      "짜조",
+      "반미",
+      "스무디(과일 셰이크)",
+      "연유 커피"
+     ],
+     "answer": 4,
+     "explanation": "sinh tố = 과일 스무디.",
+     "choiceNotes": [
+      "phở",
+      "chả giò",
+      "bánh mì",
+      "정답. sinh tố = 스무디",
+      "cà phê sữa"
+     ]
+    },
+    {
+     "id": "vie-q3-03",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "쉬움",
+     "stem": "'시다(신맛)'를 베트남어로 하면?",
+     "choices": [
+      "đắng",
+      "ngon",
+      "ngọt",
+      "cay",
+      "chua"
+     ],
+     "answer": 5,
+     "explanation": "chua = 시다. Nước cam hơi chua.",
+     "choiceNotes": [
+      "쓰다",
+      "맛있다",
+      "달다",
+      "맵다",
+      "정답. 시다"
+     ]
+    },
+    {
+     "id": "vie-q3-04",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "보통",
+     "stem": "'Cà phê Starbuck mắc lắm.'에서 mắc의 뜻은?",
+     "choices": [
+      "맛있다",
+      "비싸다",
+      "쓰다",
+      "달다",
+      "크다"
+     ],
+     "answer": 2,
+     "explanation": "mắc = 비싸다(남부 말).",
+     "choiceNotes": [
+      "ngon",
+      "정답. mắc = 비싸다",
+      "đắng",
+      "ngọt",
+      "to"
+     ]
+    },
+    {
+     "id": "vie-q3-05",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "보통",
+     "stem": "'tiệm giải khát'의 뜻으로 알맞은 것은?",
+     "choices": [
+      "서점",
+      "대학교",
+      "음료 가게",
+      "백화점",
+      "식당 메뉴"
+     ],
+     "answer": 3,
+     "explanation": "tiệm giải khát = 음료(목 축이는) 가게. Hội thoại 2의 장소.",
+     "choiceNotes": [
+      "nhà sách",
+      "trường đại học",
+      "정답. 음료 가게",
+      "trung tâm thương mại",
+      "thực đơn"
+     ]
+    },
+    {
+     "id": "vie-q3-06",
+     "type": "choice",
+     "section": "01. 핵심 단어",
+     "level": "보통",
+     "stem": "그림 속 베트남식 부침개(노란 반달 모양)의 이름은?",
+     "choices": [
+      "bún chả",
+      "bánh mì",
+      "chả giò",
+      "bánh xèo",
+      "hủ tiếu"
+     ],
+     "answer": 4,
+     "explanation": "bánh xèo = 반쎄오(베트남식 부침개).",
+     "choiceNotes": [
+      "숯불고기 국수",
+      "샌드위치",
+      "튀긴 스프링롤",
+      "정답. 반쎄오",
+      "남부식 쌀국수"
+     ]
+    },
+    {
+     "id": "vie-q3-07",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "쉬움",
+     "stem": "빈칸에 알맞은 말은? 'Món này tiếng Việt ______?' – 'Món này gọi là chả giò.'",
+     "choices": [
+      "gọi là gì",
+      "ở đâu",
+      "bao nhiêu",
+      "có không",
+      "thế nào"
+     ],
+     "answer": 1,
+     "explanation": "이름을 묻는 말은 gọi là gì?",
+     "choiceNotes": [
+      "정답. 이름 묻기",
+      "장소 묻기",
+      "값·수량 묻기",
+      "문법에 맞지 않음",
+      "맛·상태를 물음"
+     ]
+    },
+    {
+     "id": "vie-q3-08",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "쉬움",
+     "stem": "빈칸에 알맞은 말은? 'Món phở này ______?' – 'Rất ngon.'",
+     "choices": [
+      "mấy",
+      "ai",
+      "gọi là gì",
+      "ở đâu",
+      "thế nào"
+     ],
+     "answer": 5,
+     "explanation": "'어때?'는 thế nào?. 대답이 맛(rất ngon)이므로.",
+     "choiceNotes": [
+      "몇",
+      "누구",
+      "이름 묻기",
+      "장소",
+      "정답. 어때?"
+     ]
+    },
+    {
+     "id": "vie-q3-09",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "'Trà sữa có ngọt không?'에 대한 알맞은 대답은?",
+     "choices": [
+      "Có trà sữa ngọt không.",
+      "Trà sữa gọi là trà sữa.",
+      "Trà sữa hơi ngọt.",
+      "Trà sữa ở đâu.",
+      "Trà sữa thế nào?"
+     ],
+     "answer": 3,
+     "explanation": "có ~ không? 질문에 'Trà sữa hơi ngọt.(조금 달아)'.",
+     "choiceNotes": [
+      "문장이 틀림",
+      "이름 대답",
+      "정답",
+      "장소 아님",
+      "질문을 다시 함"
+     ]
+    },
+    {
+     "id": "vie-q3-10",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "어순이 바른 문장은?",
+     "choices": [
+      "Em muốn thử ăn món này.",
+      "Em muốn ăn thử món này.",
+      "Em thử muốn ăn món này.",
+      "Em ăn muốn thử món này.",
+      "Thử em muốn ăn món này."
+     ],
+     "answer": 2,
+     "explanation": "thử는 동사 바로 뒤: ăn thử.",
+     "choiceNotes": [
+      "thử가 동사 앞",
+      "정답. ăn thử",
+      "어순 틀림",
+      "어순 틀림",
+      "어순 틀림"
+     ]
+    },
+    {
+     "id": "vie-q3-11",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "문장 끝 'đi'의 쓰임이 '권유(~해 봐)'인 것은?",
+     "choices": [
+      "Bạn ăn thử đi.",
+      "Họ đi Việt Nam.",
+      "Em đi học.",
+      "Tôi đi chợ.",
+      "Chị đi đâu?"
+     ],
+     "answer": 1,
+     "explanation": "문장 끝의 đi = 권유/명령.",
+     "choiceNotes": [
+      "정답. 권유",
+      "가다",
+      "가다",
+      "가다",
+      "가다"
+     ]
+    },
+    {
+     "id": "vie-q3-12",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 말은? 'Các bạn mệt rồi, phải không? ______ nghỉ một chút!'",
+     "choices": [
+      "Mình và họ",
+      "Các chị",
+      "Chúng tôi",
+      "Chúng ta",
+      "Họ"
+     ],
+     "answer": 4,
+     "explanation": "듣는 사람(các bạn)을 포함해 '같이 쉬자' → chúng ta.",
+     "choiceNotes": [
+      "어색함",
+      "관계없음",
+      "듣는 사람 제외",
+      "정답. 듣는 사람 포함",
+      "그들"
+     ]
+    },
+    {
+     "id": "vie-q3-13",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 말은? 'Tôi và em trai thích ăn pizza. ______ thích ăn ở tiệm Pizza Hut.'",
+     "choices": [
+      "Các bạn",
+      "Anh ấy",
+      "Các chị",
+      "Chúng ta",
+      "Chúng tôi"
+     ],
+     "answer": 5,
+     "explanation": "나와 동생만(듣는 사람 제외) → chúng tôi.",
+     "choiceNotes": [
+      "틀림",
+      "틀림",
+      "틀림",
+      "듣는 사람 포함이라 틀림",
+      "정답"
+     ]
+    },
+    {
+     "id": "vie-q3-14",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "어려움",
+     "stem": "'Kim chi không cay lắm.'이 대답이 되는 질문은?",
+     "choices": [
+      "Kim chi không cay thế nào?",
+      "Kim chi thế nào?",
+      "Kim chi ở đâu?",
+      "Kim chi mấy?",
+      "Kim chi gọi là gì?"
+     ],
+     "answer": 2,
+     "explanation": "맛을 묻는 질문 = Kim chi thế nào?",
+     "choiceNotes": [
+      "형용사를 질문에 넣으면 틀림",
+      "정답",
+      "장소",
+      "몇",
+      "이름 묻기"
+     ]
+    },
+    {
+     "id": "vie-q3-15",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "어려움",
+     "stem": "'Chị muốn học thử tiếng Việt.'을 의문문으로 바르게 바꾼 것은?",
+     "choices": [
+      "Chị muốn có học thử tiếng Việt không?",
+      "Chị muốn học thử tiếng Việt không?",
+      "Chị có muốn học thử tiếng Việt không?",
+      "Chị có muốn thử học tiếng Việt?",
+      "Chị học thử tiếng Việt thế nào?"
+     ],
+     "answer": 3,
+     "explanation": "có + muốn + 동사 + thử … + không?",
+     "choiceNotes": [
+      "có 위치 틀림",
+      "có가 빠짐",
+      "정답",
+      "thử 위치·không 빠짐",
+      "다른 뜻"
+     ]
+    },
+    {
+     "id": "vie-q3-16",
+     "type": "choice",
+     "section": "02. 핵심 문법·문형",
+     "level": "보통",
+     "stem": "'mình'에 대한 설명으로 알맞은 것은?",
+     "choices": [
+      "'너'라는 뜻",
+      "'이것'이라는 뜻",
+      "선생님께 쓰는 '저'",
+      "친구 사이에서 쓰는 '나'",
+      "'그들'이라는 뜻"
+     ],
+     "answer": 4,
+     "explanation": "mình = 친구끼리 쓰는 '나'. Mình rất thích.",
+     "choiceNotes": [
+      "bạn",
+      "này",
+      "틀림",
+      "정답",
+      "họ"
+     ]
+    },
+    {
+     "id": "vie-q3-17",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "쉬움",
+     "stem": "Hội thoại 1에서 Mai와 Kenji는 어디에 있나요?",
+     "choices": [
+      "대학교 근처 음식점",
+      "시장",
+      "카페",
+      "음료 가게",
+      "대학교 교실"
+     ],
+     "answer": 1,
+     "explanation": "Trong một tiệm ăn gần trường đại học.",
+     "choiceNotes": [
+      "정답",
+      "틀림",
+      "틀림",
+      "Hội thoại 2 장소",
+      "틀림"
+     ]
+    },
+    {
+     "id": "vie-q3-18",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "Hội thoại 1에서 Kenji가 먹어 보고 싶은 음식은?",
+     "choices": [
+      "bánh mì 하나",
+      "hủ tiếu와 nước dừa",
+      "bún bò Huế",
+      "phở와 bún chả",
+      "chả giò와 bánh xèo"
+     ],
+     "answer": 5,
+     "explanation": "Mình muốn ăn thử hai món này → chả giò, bánh xèo.",
+     "choiceNotes": [
+      "틀림",
+      "틀림",
+      "틀림",
+      "틀림",
+      "정답"
+     ]
+    },
+    {
+     "id": "vie-q3-19",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "Hội thoại 2의 내용과 일치하는 것은?",
+     "choices": [
+      "Long은 nước dừa가 맛없다고 했다.",
+      "Long은 nước cam cà rốt를 좋아하지 않는다.",
+      "Ye Ji는 nước dừa를 마셔 보고 싶어 한다.",
+      "Ye Ji와 Long은 음식점에 있다.",
+      "Ye Ji는 nước cam cà rốt의 이름을 알고 있었다."
+     ],
+     "answer": 3,
+     "explanation": "Ye Ji: Mình muốn uống thử. (nước dừa)",
+     "choiceNotes": [
+      "그런 말 없음",
+      "Mình rất thích.",
+      "정답",
+      "tiệm giải khát(음료 가게)",
+      "이름을 물어봄"
+     ]
+    },
+    {
+     "id": "vie-q3-20",
+     "type": "choice",
+     "section": "03. 대화·읽기 본문",
+     "level": "보통",
+     "stem": "'Kenji muốn ăn thử mấy món?'의 바른 대답은?",
+     "choices": [
+      "Kenji muốn ăn thử mấy hai món.",
+      "Kenji muốn ăn thử hai món.",
+      "Kenji muốn hai ăn thử món.",
+      "Kenji ăn thử mấy món.",
+      "Kenji muốn ăn hai thử món."
+     ],
+     "answer": 2,
+     "explanation": "대답에서는 mấy(몇)를 빼고 숫자만.",
+     "choiceNotes": [
+      "mấy를 남기면 틀림",
+      "정답",
+      "어순 틀림",
+      "질문 그대로",
+      "어순 틀림"
+     ]
+    },
+    {
+     "id": "vie-q3-21",
+     "type": "choice",
+     "section": "04. 연습 문제 정답 정리",
+     "level": "보통",
+     "stem": "단어를 바르게 배열한 것은? (gì/ họ/ ăn/ đang/ vậy?)",
+     "choices": [
+      "Họ đang ăn gì vậy?",
+      "Đang họ ăn gì vậy?",
+      "Họ gì đang ăn vậy?",
+      "Họ đang gì ăn vậy?",
+      "Họ ăn đang gì vậy?"
+     ],
+     "answer": 1,
+     "explanation": "đang은 동사 앞, gì는 동사 뒤.",
+     "choiceNotes": [
+      "정답",
+      "틀림",
+      "틀림",
+      "틀림",
+      "đang 위치 틀림"
+     ]
+    },
+    {
+     "id": "vie-q3-22",
+     "type": "choice",
+     "section": "04. 연습 문제 정답 정리",
+     "level": "보통",
+     "stem": "빈칸에 알맞은 동사는? 'Chị có thích ______ sách không?'",
+     "choices": [
+      "mua",
+      "nghe",
+      "uống",
+      "đọc",
+      "ăn"
+     ],
+     "answer": 4,
+     "explanation": "sách(책)은 đọc(읽다).",
+     "choiceNotes": [
+      "사다도 가능하나 교재 답은 đọc",
+      "음악",
+      "음료",
+      "정답",
+      "음식"
+     ]
+    },
+    {
+     "id": "vie-q3-23",
+     "type": "essay",
+     "section": "02. 핵심 문법·문형",
+     "level": "서술형",
+     "stem": "이 음식(món này)의 이름을 베트남어로 묻는 문장과, '이건 짜조(chả giò)라고 해.'라는 대답을 쓰시오.",
+     "model": "Món này tiếng Việt gọi là gì? – Món này gọi là chả giò.",
+     "keywords": [
+      "gọi là gì",
+      "gọi là",
+      "chả giò"
+     ]
+    },
+    {
+     "id": "vie-q3-24",
+     "type": "essay",
+     "section": "02. 핵심 문법·문형",
+     "level": "서술형",
+     "stem": "친구에게 '이 커피 어때?'라고 묻고, '정말 달아. 마셔 봐.'라고 대답하는 대화를 베트남어로 쓰시오. (cà phê này, ngọt 사용)",
+     "model": "Cà phê này thế nào? – Ngọt lắm. Bạn uống thử đi.",
+     "keywords": [
+      "thế nào",
+      "ngọt lắm",
+      "uống thử",
+      "đi"
+     ]
+    },
+    {
+     "id": "vie-q3-25",
+     "type": "essay",
+     "section": "02. 핵심 문법·문형",
+     "level": "서술형",
+     "stem": "듣는 사람에게 '우리 그 식당에 가자!'를 베트남어로 쓰고, chúng ta를 쓴 이유를 한 문장으로 설명하시오.",
+     "model": "Chúng ta đến nhà hàng đó đi! – 듣는 사람도 함께 가자고 제안하므로 듣는 사람을 포함하는 chúng ta를 쓴다.",
+     "keywords": [
+      "chúng ta",
+      "nhà hàng đó",
+      "đi",
+      "듣는 사람 포함"
+     ]
+    }
+   ]
+  }
+ }
 }

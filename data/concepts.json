@@ -932,6 +932,193 @@
         "A. Target Vocabulary 10개",
         "B. Unit 11 서술형 대비 핵심 문장 5선 (통암기 추천!)"
       ]
+    },
+    {
+      "id": "vie-01-01",
+      "subject": "베트남어",
+      "unit": "Bài 5. Bạn đang làm gì đấy? (너 지금 뭐 하고 있어?)",
+      "title": "핵심 단어",
+      "importance": 2,
+      "doc": "베트남어_시험공부/01_Bai5_Ban_dang_lam_gi_day.md",
+      "heading": "01. 핵심 단어 (교재 p.90·91·94·97)",
+      "parts": [
+        "동작 (무엇을 하고 있나?) — p.90",
+        "장소 (어디에서?) — p.91, p.97",
+        "정도·상태 형용사 — p.94",
+        "읽기 지문 단어 — p.97"
+      ]
+    },
+    {
+      "id": "vie-01-02",
+      "subject": "베트남어",
+      "unit": "Bài 5. Bạn đang làm gì đấy? (너 지금 뭐 하고 있어?)",
+      "title": "핵심 문법·문형",
+      "importance": 2,
+      "doc": "베트남어_시험공부/01_Bai5_Ban_dang_lam_gi_day.md",
+      "heading": "02. 핵심 문법·문형 (교재 p.90·91·94)",
+      "parts": [
+        "S + **đang** + V — \"~하고 있다\" (현재진행) ⭐ 시험 단골",
+        "V + **ở đâu?** / V + **ở** + 장소 — \"어디에서 ~해?\" / \"~에서 ~해\" ⭐ 시험 단골",
+        "**hơi / rất / lắm** — 정도 표현 ⭐⭐ 시험 단골",
+        "**có + V + không?** — \"~해? 안 해?\" (예/아니오 질문)",
+        "시간 말(**bây giờ, hôm nay**)의 위치"
+      ]
+    },
+    {
+      "id": "vie-01-03",
+      "subject": "베트남어",
+      "unit": "Bài 5. Bạn đang làm gì đấy? (너 지금 뭐 하고 있어?)",
+      "title": "대화·읽기 본문",
+      "importance": 2,
+      "doc": "베트남어_시험공부/01_Bai5_Ban_dang_lam_gi_day.md",
+      "heading": "03. 대화·읽기 본문 (교재 p.97)",
+      "parts": [
+        "Bài đọc — Kenji, Nam và Lan",
+        "본문 질문과 모범 답 (Trả lời câu hỏi)",
+        "Thực hành nghe (p.97 표) — 듣기 활동(녹음 필요)"
+      ]
+    },
+    {
+      "id": "vie-01-04",
+      "subject": "베트남어",
+      "unit": "Bài 5. Bạn đang làm gì đấy? (너 지금 뭐 하고 있어?)",
+      "title": "연습 문제 정답 정리",
+      "importance": 2,
+      "doc": "베트남어_시험공부/01_Bai5_Ban_dang_lam_gi_day.md",
+      "heading": "04. 연습 문제 정답 정리 (교재 p.90·91·94)",
+      "parts": [
+        "Bài tập 1.1 — Hỏi và trả lời (p.90) : …… đang làm gì?",
+        "Bài tập 1.1 — 2) …… ở đâu? (p.91)",
+        "Bài tập 2.1 (p.94, 4번·5번) — 대답을 보고 질문 만들기",
+        "Bài tập 2.2 — 주어진 단어로 문장 만들기 (p.94)",
+        "Bài tập 2.3 — hơi / rất / lắm 고르기 (p.94)"
+      ]
+    },
+    {
+      "id": "vie-02-01",
+      "subject": "베트남어",
+      "unit": "Bài 6. Bạn đi đâu đấy? (너 어디 가니?)",
+      "title": "핵심 단어",
+      "importance": 2,
+      "doc": "베트남어_시험공부/02_Bai6_Ban_di_dau_day.md",
+      "heading": "01. 핵심 단어 (교재 p.112 D. Từ vựng + 본문·그림 단어)",
+      "parts": [
+        "교재 단어장 (p.112)",
+        "본문·그림에 나온 장소·행동 단어"
+      ]
+    },
+    {
+      "id": "vie-02-02",
+      "subject": "베트남어",
+      "unit": "Bài 6. Bạn đi đâu đấy? (너 어디 가니?)",
+      "title": "핵심 문법·문형",
+      "importance": 2,
+      "doc": "베트남어_시험공부/02_Bai6_Ban_di_dau_day.md",
+      "heading": "02. 핵심 문법·문형 (교재 p.103, p.112~113 E. Ghi chú ngữ pháp)",
+      "parts": [
+        "đâu / ở đâu — \"어디\"",
+        "đi — \"가다\"",
+        "đến — \"도착하다, 오다, ~까지\"",
+        "V + được — \"~할 수 있다\"",
+        "..., được không? — \"~해도 돼요?\" (허락 구하기)",
+        "자주 쓰는 표현"
+      ]
+    },
+    {
+      "id": "vie-02-03",
+      "subject": "베트남어",
+      "unit": "Bài 6. Bạn đi đâu đấy? (너 어디 가니?)",
+      "title": "대화·읽기 본문",
+      "importance": 2,
+      "doc": "베트남어_시험공부/02_Bai6_Ban_di_dau_day.md",
+      "heading": "03. 대화·읽기 본문 (교재 p.101~102, p.110)",
+      "parts": [
+        "Hội thoại 1 (p.101) — Lan và Nam gặp nhau ở sân trường (란과 남이 학교 마당에서 만남)",
+        "Hội thoại 2 (p.102) — Lan nói chuyện với tài xế taxi trên đường đi làm (란이 출근길에 택시 기사와 이야기함)",
+        "Bài đọc (p.110)",
+        "본문 질문과 모범 답 (Trả lời câu hỏi)"
+      ]
+    },
+    {
+      "id": "vie-02-04",
+      "subject": "베트남어",
+      "unit": "Bài 6. Bạn đi đâu đấy? (너 어디 가니?)",
+      "title": "연습 문제 정답 정리",
+      "importance": 2,
+      "doc": "베트남어_시험공부/02_Bai6_Ban_di_dau_day.md",
+      "heading": "04. 연습 문제 정답 정리 (교재 p.103~111)",
+      "parts": [
+        "B. Mở rộng từ vựng – ngữ pháp (p.103) — 따라 읽기 문장",
+        "Bài tập 1.1 Hỏi và trả lời (p.104) — 말하기",
+        "Bài tập 1.1-2) Bạn ... được không? (p.105) — 말하기",
+        "Bài tập 1.2 Hoàn thành các mẫu hội thoại (p.106) — 예시 답",
+        "Bài tập 2.1 알맞은 대답 고르기 (p.106)",
+        "Bài tập 2.2 낱말로 문장 만들기 (p.107)"
+      ]
+    },
+    {
+      "id": "vie-03-01",
+      "subject": "베트남어",
+      "unit": "Bài 7. Món này tiếng Việt gọi là gì? (이 음식은 베트남어로 뭐라고 해요?)",
+      "title": "핵심 단어",
+      "importance": 2,
+      "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
+      "heading": "01. 핵심 단어 (교재 p.114~121)",
+      "parts": [
+        "장소·기본 표현",
+        "음식·음료 이름",
+        "맛·상태 형용사",
+        "동작 동사 (Bài tập 1.2, 2.2)"
+      ]
+    },
+    {
+      "id": "vie-03-02",
+      "subject": "베트남어",
+      "unit": "Bài 7. Món này tiếng Việt gọi là gì? (이 음식은 베트남어로 뭐라고 해요?)",
+      "title": "핵심 문법·문형",
+      "importance": 2,
+      "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
+      "heading": "02. 핵심 문법·문형 (교재 p.114~117, 120)",
+      "parts": [
+        "⭐ ~ (tiếng Việt) gọi là gì? — \"~은 (베트남어로) 뭐라고 해요?\"",
+        "⭐ ~ thế nào? — \"~은 어때요?\"",
+        "⭐ 동사 + thử — \"~해 보다\"",
+        "⭐ 동사 (+ thử) + đi — \"~해!, ~하자!\" (권유·명령)",
+        "mình — \"나\" (친구끼리)",
+        "⭐⭐ chúng tôi vs chúng ta — 둘 다 \"우리\""
+      ]
+    },
+    {
+      "id": "vie-03-03",
+      "subject": "베트남어",
+      "unit": "Bài 7. Món này tiếng Việt gọi là gì? (이 음식은 베트남어로 뭐라고 해요?)",
+      "title": "대화·읽기 본문",
+      "importance": 2,
+      "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
+      "heading": "03. 대화·읽기 본문 (교재 p.114~116)",
+      "parts": [
+        "Hội thoại 1 — Trong một tiệm ăn gần trường đại học (대학교 근처 한 음식점에서)",
+        "Hội thoại 2 — Ye Ji và Long đang ở một tiệm giải khát (예지와 롱이 음료 가게에 있다)",
+        "B. Mở rộng (p.115~116) — 듣고 따라 하기 문장",
+        "본문 질문과 모범 답 (Trả lời câu hỏi)"
+      ]
+    },
+    {
+      "id": "vie-03-04",
+      "subject": "베트남어",
+      "unit": "Bài 7. Món này tiếng Việt gọi là gì? (이 음식은 베트남어로 뭐라고 해요?)",
+      "title": "연습 문제 정답 정리",
+      "importance": 2,
+      "doc": "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md",
+      "heading": "04. 연습 문제 정답 정리 (교재 p.116~121)",
+      "parts": [
+        "Bài tập 1.1 (p.116~117) 그림 보고 \"Món này tiếng Việt gọi là …\"",
+        "Bài tập 1.2 (p.117) 친구에게 권유하기 — Bạn + 동사 + đi.",
+        "Bài tập 1.3 (p.118) 대화 만들기",
+        "Bài tập 2.1 (p.118) 대답을 보고 질문 쓰기 (thế nào?)",
+        "Bài tập 2.2 (p.119) 동사 골라 넣기",
+        "Bài tập 2.3 (p.119) 의문문으로 바꾸기 — có + muốn … thử … không?"
+      ]
     }
   ]
 }

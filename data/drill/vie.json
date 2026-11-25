@@ -1,0 +1,901 @@
+{
+ "schema": 1,
+ "subject": "베트남어",
+ "code": "vie",
+ "docs": {
+  "베트남어_시험공부/01_Bai5_Ban_dang_lam_gi_day.md": [
+   {
+    "anchor": "01.",
+    "label": "01절",
+    "title": "01절 확인 문제 — 핵심 단어",
+    "items": [
+     {
+      "id": "vie-1-1-01",
+      "k": "blank",
+      "q": "공부하다 = [[học]], 일하다 = [[làm việc]]"
+     },
+     {
+      "id": "vie-1-1-02",
+      "k": "blank",
+      "q": "책을 읽다 = [[đọc sách]], 음악을 듣다 = [[nghe nhạc]]"
+     },
+     {
+      "id": "vie-1-1-03",
+      "k": "blank",
+      "q": "TV를 보다 = [[xem ti vi]], 밥을 먹다 = [[ăn cơm]]"
+     },
+     {
+      "id": "vie-1-1-04",
+      "k": "blank",
+      "q": "아르바이트하다 = [[làm thêm]], 커피를 마시다 = [[uống cà phê]]"
+     },
+     {
+      "id": "vie-1-1-05",
+      "k": "blank",
+      "q": "집 = [[nhà]], 식당 = [[nhà hàng]], 구내식당 = [[căn tin]]"
+     },
+     {
+      "id": "vie-1-1-06",
+      "k": "blank",
+      "q": "카페 = [[tiệm cà phê]], 도서관 = [[thư viện]], 대학교 = [[trường đại học]]"
+     },
+     {
+      "id": "vie-1-1-07",
+      "k": "ox",
+      "q": "nhà hàng 은 '집'이라는 뜻이다.",
+      "a": "X",
+      "why": "nhà hàng 은 **식당**. 집은 nhà."
+     },
+     {
+      "id": "vie-1-1-08",
+      "k": "blank",
+      "q": "배고프다 = [[đói]], 피곤하다 = [[mệt]], 목마르다 = [[khát]]"
+     },
+     {
+      "id": "vie-1-1-09",
+      "k": "blank",
+      "q": "어렵다 = [[khó]], 맛있다 = [[ngon]], 즐겁다 = [[vui]]"
+     },
+     {
+      "id": "vie-1-1-10",
+      "k": "qa",
+      "q": "hơi, rất, lắm 의 뜻은?",
+      "a": "hơi = 조금, rất = 매우, lắm = 매우"
+     },
+     {
+      "id": "vie-1-1-11",
+      "k": "blank",
+      "q": "달리기하다 = [[chạy bộ]], 자다 = [[ngủ]], 회사 = [[công ty]]"
+     },
+     {
+      "id": "vie-1-1-12",
+      "k": "blank",
+      "q": "지금 = [[bây giờ]], 오늘 = [[hôm nay]], 그들 = [[họ]]"
+     }
+    ]
+   },
+   {
+    "anchor": "02.",
+    "label": "02절",
+    "title": "02절 확인 문제 — 핵심 문법·문형",
+    "items": [
+     {
+      "id": "vie-1-2-01",
+      "k": "blank",
+      "q": "현재진행 '~하고 있다'는 동사 앞에 [[đang]] 을 쓴다."
+     },
+     {
+      "id": "vie-1-2-02",
+      "k": "blank",
+      "q": "너 지금 뭐 하고 있어? = Bạn [[đang]] làm [[gì]] đấy?"
+     },
+     {
+      "id": "vie-1-2-03",
+      "k": "blank",
+      "q": "너는 어디에서 TV를 봐? = Bạn xem ti vi [[ở đâu]]?"
+     },
+     {
+      "id": "vie-1-2-04",
+      "k": "blank",
+      "q": "나는 집에서 TV를 봐. = Mình xem ti vi [[ở]] [[nhà]]."
+     },
+     {
+      "id": "vie-1-2-05",
+      "k": "ox",
+      "q": "'Tôi ăn đang cơm.'은 바른 문장이다.",
+      "a": "X",
+      "why": "đang 은 동사 앞. **Tôi đang ăn cơm.**"
+     },
+     {
+      "id": "vie-1-2-06",
+      "k": "blank",
+      "q": "hơi 와 rất 는 형용사 [[앞]] 에, lắm 은 형용사 [[뒤]] 에 온다."
+     },
+     {
+      "id": "vie-1-2-07",
+      "k": "blank",
+      "q": "베트남어는 별로 어렵지 않아. = Tiếng Việt [[không]] khó [[lắm]]."
+     },
+     {
+      "id": "vie-1-2-08",
+      "k": "ox",
+      "q": "'Tôi rất đói lắm.'은 바른 문장이다.",
+      "a": "X",
+      "why": "rất 과 lắm 은 같이 쓰지 않는다. **Tôi rất đói.** 또는 **Tôi đói lắm.**"
+     },
+     {
+      "id": "vie-1-2-09",
+      "k": "blank",
+      "q": "예/아니오 질문: Anh ấy [[có]] thích chạy bộ [[không]]?"
+     },
+     {
+      "id": "vie-1-2-10",
+      "k": "qa",
+      "q": "có … không? 질문에 '응/아니'로 대답하는 말은?",
+      "a": "Có (응) / Không (아니)"
+     },
+     {
+      "id": "vie-1-2-11",
+      "k": "ox",
+      "q": "bây giờ, hôm nay 같은 시간 말은 보통 문장 맨 앞에 둔다.",
+      "a": "O",
+      "why": "예: **Bây giờ** em đói lắm."
+     }
+    ]
+   },
+   {
+    "anchor": "03.",
+    "label": "03절",
+    "title": "03절 확인 문제 — 읽기 본문",
+    "items": [
+     {
+      "id": "vie-1-3-01",
+      "k": "blank",
+      "q": "Kenji có [[hai]] người bạn Việt Nam là Nam và Lan."
+     },
+     {
+      "id": "vie-1-3-02",
+      "k": "blank",
+      "q": "Nam và Lan đang học [[tiếng Anh]] ở [[Trung tâm Việt - Mỹ]]."
+     },
+     {
+      "id": "vie-1-3-03",
+      "k": "blank",
+      "q": "[[Còn]] Kenji học [[tiếng Việt]] ở Trường Đại học Nhân văn."
+     },
+     {
+      "id": "vie-1-3-04",
+      "k": "blank",
+      "q": "Lan rất thích [[nghe nhạc]] và [[đọc sách]]."
+     },
+     {
+      "id": "vie-1-3-05",
+      "k": "blank",
+      "q": "Nam và Kenji [[cũng]] thích nghe nhạc [[nhưng]] không thích đọc sách."
+     },
+     {
+      "id": "vie-1-3-06",
+      "k": "blank",
+      "q": "Hai bạn ấy rất thích [[chơi game]]."
+     },
+     {
+      "id": "vie-1-3-07",
+      "k": "qa",
+      "q": "'Hai bạn ấy'는 누구인가?",
+      "a": "Nam과 Kenji"
+     },
+     {
+      "id": "vie-1-3-08",
+      "k": "ox",
+      "q": "오늘 Kenji, Nam, Lan은 학교에 간다.",
+      "a": "X",
+      "why": "Hôm nay, Kenji, Nam và Lan **không đi học**."
+     },
+     {
+      "id": "vie-1-3-09",
+      "k": "blank",
+      "q": "Họ [[gặp nhau]] ở [[quán cà phê Sách]]."
+     },
+     {
+      "id": "vie-1-3-10",
+      "k": "blank",
+      "q": "Bây giờ họ đang [[uống cà phê]] và [[nói chuyện]] rất vui."
+     },
+     {
+      "id": "vie-1-3-11",
+      "k": "ox",
+      "q": "책 읽기를 좋아하는 사람은 Lan뿐이다.",
+      "a": "O",
+      "why": "Nam và Kenji **không thích đọc sách**."
+     }
+    ]
+   },
+   {
+    "anchor": "04.",
+    "label": "04절",
+    "title": "04절 확인 문제 — 연습 문제 정답",
+    "items": [
+     {
+      "id": "vie-1-4-01",
+      "k": "blank",
+      "q": "(그림: 공부하는 아이) Em ấy [[đang học]]."
+     },
+     {
+      "id": "vie-1-4-02",
+      "k": "blank",
+      "q": "Bạn làm thêm ở đâu? → Mình làm thêm ở [[nhà hàng]]."
+     },
+     {
+      "id": "vie-1-4-03",
+      "k": "blank",
+      "q": "Bạn ăn cơm ở đâu? → Mình ăn cơm ở [[căn tin]]."
+     },
+     {
+      "id": "vie-1-4-04",
+      "k": "blank",
+      "q": "Bạn đọc sách ở đâu? → Mình đọc sách ở [[thư viện]]."
+     },
+     {
+      "id": "vie-1-4-05",
+      "k": "blank",
+      "q": "Bạn học tiếng Việt ở đâu? → Mình học tiếng Việt ở [[trường đại học]]."
+     },
+     {
+      "id": "vie-1-4-06",
+      "k": "qa",
+      "q": "대답이 'Không. Anh ấy không làm việc.'일 때 질문은?",
+      "a": "Anh ấy có làm việc không?"
+     },
+     {
+      "id": "vie-1-4-07",
+      "k": "qa",
+      "q": "배열: ăn cơm / đang / tôi / ở / căn tin",
+      "a": "Tôi đang ăn cơm ở căn tin."
+     },
+     {
+      "id": "vie-1-4-08",
+      "k": "qa",
+      "q": "배열: hôm nay / anh / có / chị Lan / gặp / không?",
+      "a": "Hôm nay anh có gặp chị Lan không?"
+     },
+     {
+      "id": "vie-1-4-09",
+      "k": "qa",
+      "q": "배열: các bạn / đang / bây giờ / làm / gì?",
+      "a": "Bây giờ các bạn đang làm gì?"
+     },
+     {
+      "id": "vie-1-4-10",
+      "k": "qa",
+      "q": "배열: ăn / ở đâu / đang / bạn?",
+      "a": "Bạn đang ăn ở đâu?"
+     },
+     {
+      "id": "vie-1-4-11",
+      "k": "blank",
+      "q": "Cảm ơn chị. Tôi không khát [[lắm]]!"
+     },
+     {
+      "id": "vie-1-4-12",
+      "k": "blank",
+      "q": "Con chó đang ngủ [[rất]] ngon!"
+     }
+    ]
+   }
+  ],
+  "베트남어_시험공부/02_Bai6_Ban_di_dau_day.md": [
+   {
+    "anchor": "01.",
+    "label": "01절",
+    "title": "01절 확인 문제 — 핵심 단어",
+    "items": [
+     {
+      "id": "vie-2-1-01",
+      "k": "blank",
+      "q": "공항 = [[sân bay]]"
+     },
+     {
+      "id": "vie-2-1-02",
+      "k": "blank",
+      "q": "기다리다 = [[chờ]]"
+     },
+     {
+      "id": "vie-2-1-03",
+      "k": "blank",
+      "q": "마중하다, 데리러 가다 = [[đón]]"
+     },
+     {
+      "id": "vie-2-1-04",
+      "k": "blank",
+      "q": "(값이) 비싸다 = [[mắc]]"
+     },
+     {
+      "id": "vie-2-1-05",
+      "k": "blank",
+      "q": "지금 = [[bây giờ]]"
+     },
+     {
+      "id": "vie-2-1-06",
+      "k": "blank",
+      "q": "그 다음에 = [[sau đó]]"
+     },
+     {
+      "id": "vie-2-1-07",
+      "k": "blank",
+      "q": "버스 = [[xe buýt]], 오토바이를 타다 = [[chạy xe máy]]"
+     },
+     {
+      "id": "vie-2-1-08",
+      "k": "blank",
+      "q": "작은 식당 = [[tiệm ăn]], 식당(레스토랑) = [[nhà hàng]]"
+     },
+     {
+      "id": "vie-2-1-09",
+      "k": "blank",
+      "q": "아르바이트하다 = [[làm thêm]]"
+     },
+     {
+      "id": "vie-2-1-10",
+      "k": "blank",
+      "q": "도서관 = [[thư viện]], 매점 = [[căn tin]]"
+     },
+     {
+      "id": "vie-2-1-11",
+      "k": "ox",
+      "q": "mệt는 '피곤하다'라는 뜻이다.",
+      "a": "O",
+      "why": "mệt = 피곤하다."
+     },
+     {
+      "id": "vie-2-1-12",
+      "k": "ox",
+      "q": "hay는 이 단원 단어장에서 '비싸다'라는 뜻이다.",
+      "a": "X",
+      "why": "hay = 재미있다. 비싸다는 mắc."
+     },
+     {
+      "id": "vie-2-1-13",
+      "k": "qa",
+      "q": "'조금, 약간'을 베트남어로?",
+      "a": "một chút"
+     },
+     {
+      "id": "vie-2-1-14",
+      "k": "qa",
+      "q": "trà đá의 뜻은?",
+      "a": "아이스티(얼음 넣은 차)"
+     }
+    ]
+   },
+   {
+    "anchor": "02.",
+    "label": "02절",
+    "title": "02절 확인 문제 — 핵심 문법·문형",
+    "items": [
+     {
+      "id": "vie-2-2-01",
+      "k": "blank",
+      "q": "đi, về, đến 뒤에서 목적지를 물을 때는 [[đâu]]"
+     },
+     {
+      "id": "vie-2-2-02",
+      "k": "blank",
+      "q": "일하는 장소를 물을 때: Cô làm việc [[ở đâu]]?"
+     },
+     {
+      "id": "vie-2-2-03",
+      "k": "blank",
+      "q": "Xin lỗi, bà về [[đâu]]?"
+     },
+     {
+      "id": "vie-2-2-04",
+      "k": "blank",
+      "q": "trường, công ty, nhà bạn 앞에는 (đi) [[đến]]"
+     },
+     {
+      "id": "vie-2-2-05",
+      "k": "blank",
+      "q": "집에 갈 때: Tôi đi [[về]] nhà."
+     },
+     {
+      "id": "vie-2-2-06",
+      "k": "blank",
+      "q": "~하러 가다: [[đi]] + 동사 (예: đi làm, đi ngủ)"
+     },
+     {
+      "id": "vie-2-2-07",
+      "k": "blank",
+      "q": "đến과 같은 뜻의 말 = [[tới]]"
+     },
+     {
+      "id": "vie-2-2-08",
+      "k": "blank",
+      "q": "A부터 B까지 = [[từ]] A [[đến]] B"
+     },
+     {
+      "id": "vie-2-2-09",
+      "k": "blank",
+      "q": "할 수 있다: 동사 + [[được]], 부정: [[không]] + 동사 + được"
+     },
+     {
+      "id": "vie-2-2-10",
+      "k": "blank",
+      "q": "có thể는 동사 [[앞]]에 온다."
+     },
+     {
+      "id": "vie-2-2-11",
+      "k": "ox",
+      "q": "'Tôi lên tầng 2.'처럼 방향어(lên, xuống, vào) 앞의 đi는 생략할 수 있다.",
+      "a": "O",
+      "why": "đi + 방향어 + 장소에서 đi 생략 가능."
+     },
+     {
+      "id": "vie-2-2-12",
+      "k": "ox",
+      "q": "'Tôi đi thư viện.'은 틀린 문장이므로 'Tôi đến thư viện.'으로만 써야 한다.",
+      "a": "X",
+      "why": "thư viện은 đi와 바로 쓰는 자주 가는 장소."
+     },
+     {
+      "id": "vie-2-2-13",
+      "k": "qa",
+      "q": "'여기 앉아도 돼요?'를 베트남어로?",
+      "a": "Tôi ngồi đây được không?"
+     },
+     {
+      "id": "vie-2-2-14",
+      "k": "qa",
+      "q": "'Em nói tiếng Việt được không?'에 '네, 조금 할 수 있어요'로 답하면?",
+      "a": "Dạ, được. Em nói được một chút."
+     }
+    ]
+   },
+   {
+    "anchor": "03.",
+    "label": "03절",
+    "title": "03절 확인 문제 — 대화·읽기 본문",
+    "items": [
+     {
+      "id": "vie-2-3-01",
+      "k": "blank",
+      "q": "Nam: Lan ơi, bạn [[đi đâu]] đấy?"
+     },
+     {
+      "id": "vie-2-3-02",
+      "k": "blank",
+      "q": "Lan: Lan đang đi đến [[thư viện]]. Còn Nam?"
+     },
+     {
+      "id": "vie-2-3-03",
+      "k": "blank",
+      "q": "Nam: Mình đi đến [[căn tin]] mua nước."
+     },
+     {
+      "id": "vie-2-3-04",
+      "k": "blank",
+      "q": "Lan: Không, mình [[phải]] đi làm thêm."
+     },
+     {
+      "id": "vie-2-3-05",
+      "k": "blank",
+      "q": "Lan은 [[tiệm ăn]] gần [[siêu thị]] Aeon에서 아르바이트한다."
+     },
+     {
+      "id": "vie-2-3-06",
+      "k": "blank",
+      "q": "Chị đi sân bay Tân Sơn Nhất, [[phải không]]? — Đúng rồi."
+     },
+     {
+      "id": "vie-2-3-07",
+      "k": "blank",
+      "q": "Anh ơi, tôi [[xuống]] ở đây, được không?"
+     },
+     {
+      "id": "vie-2-3-08",
+      "k": "blank",
+      "q": "Tôi mua cà phê, [[sau đó]] đi bộ đến công ty."
+     },
+     {
+      "id": "vie-2-3-09",
+      "k": "blank",
+      "q": "Bạn tôi uống cà phê sữa đá, [[còn]] tôi uống [[trà nóng]]."
+     },
+     {
+      "id": "vie-2-3-10",
+      "k": "ox",
+      "q": "Hội thoại 1에서 오늘은 Kenji의 생일이다.",
+      "a": "O",
+      "why": "Hôm nay Lan có đi sinh nhật Kenji không?"
+     },
+     {
+      "id": "vie-2-3-11",
+      "k": "ox",
+      "q": "Hội thoại 2에서 Lan은 여행을 가려고 공항에 간다.",
+      "a": "X",
+      "why": "Không phải. Tôi đi làm. 회사가 공항 근처."
+     },
+     {
+      "id": "vie-2-3-12",
+      "k": "ox",
+      "q": "읽기 본문에서 친구는 호찌민시에서 버스 타는 것을 좋아한다.",
+      "a": "X",
+      "why": "chạy xe máy를 좋아하고 xe buýt는 좋아하지 않는다."
+     },
+     {
+      "id": "vie-2-3-13",
+      "k": "qa",
+      "q": "Công ty của Lan ở đâu?",
+      "a": "Công ty của Lan ở gần sân bay Tân Sơn Nhất."
+     },
+     {
+      "id": "vie-2-3-14",
+      "k": "qa",
+      "q": "Bây giờ họ đang đi đâu? (읽기 본문)",
+      "a": "Bây giờ họ đang đi taxi về nhà."
+     }
+    ]
+   },
+   {
+    "anchor": "04.",
+    "label": "04절",
+    "title": "04절 확인 문제 — 연습 문제 정답",
+    "items": [
+     {
+      "id": "vie-2-4-01",
+      "k": "blank",
+      "q": "2.3) Hôm nay Lan [[đến]] nhà tôi chơi."
+     },
+     {
+      "id": "vie-2-4-02",
+      "k": "blank",
+      "q": "2.3) Các anh ấy [[đến]] công ty làm việc."
+     },
+     {
+      "id": "vie-2-4-03",
+      "k": "blank",
+      "q": "2.3) Em đang [[đi]] mua bánh mì."
+     },
+     {
+      "id": "vie-2-4-04",
+      "k": "blank",
+      "q": "2.3) Họ thích [[đi]] du lịch."
+     },
+     {
+      "id": "vie-2-4-05",
+      "k": "blank",
+      "q": "2.3) Anh Michael [[đến]] Việt Nam để học tiếng Việt."
+     },
+     {
+      "id": "vie-2-4-06",
+      "k": "blank",
+      "q": "2.2) [[Quê]] của chị ở đâu?"
+     },
+     {
+      "id": "vie-2-4-07",
+      "k": "blank",
+      "q": "2.2) Nhà hàng này ngon nhưng [[hơi]] mắc."
+     },
+     {
+      "id": "vie-2-4-08",
+      "k": "blank",
+      "q": "2.2) Anh mua điện thoại này [[ở đâu]]?"
+     },
+     {
+      "id": "vie-2-4-09",
+      "k": "blank",
+      "q": "2.4) Bố ơi, mẹ đang [[ở đâu]] ạ?"
+     },
+     {
+      "id": "vie-2-4-10",
+      "k": "blank",
+      "q": "2.4) Các ông đi [[đâu]]?"
+     },
+     {
+      "id": "vie-2-4-11",
+      "k": "ox",
+      "q": "2.1) 'Hôm nay ông có đi làm không?'의 답은 'Không. Hôm nay tôi ở nhà.'이다.",
+      "a": "O",
+      "why": "c번이 정답."
+     },
+     {
+      "id": "vie-2-4-12",
+      "k": "ox",
+      "q": "'Chị của quê ở đâu?'는 바른 문장이다.",
+      "a": "X",
+      "why": "Quê của chị ở đâu?가 맞다."
+     },
+     {
+      "id": "vie-2-4-13",
+      "k": "qa",
+      "q": "4.1) Bây giờ chúng tôi ___ về nhà. (đi bộ / đi xe buýt / đi xe taxi)",
+      "a": "đi xe taxi"
+     },
+     {
+      "id": "vie-2-4-14",
+      "k": "qa",
+      "q": "2.5) 그림 '병원'을 보고: Ông ấy đang đi đâu đấy?",
+      "a": "Ông ấy đang đi bệnh viện."
+     }
+    ]
+   }
+  ],
+  "베트남어_시험공부/03_Bai7_Mon_nay_tieng_Viet_goi_la_gi.md": [
+   {
+    "anchor": "01.",
+    "label": "01절",
+    "title": "01절 확인 문제 — 핵심 단어",
+    "items": [
+     {
+      "id": "vie-3-1-01",
+      "k": "blank",
+      "q": "nước dừa = [[코코넛 주스]]"
+     },
+     {
+      "id": "vie-3-1-02",
+      "k": "blank",
+      "q": "오렌지 주스 = [[nước cam]]"
+     },
+     {
+      "id": "vie-3-1-03",
+      "k": "blank",
+      "q": "스무디 = [[sinh tố]]"
+     },
+     {
+      "id": "vie-3-1-04",
+      "k": "blank",
+      "q": "밀크티 = [[trà sữa]]"
+     },
+     {
+      "id": "vie-3-1-05",
+      "k": "blank",
+      "q": "달다 = [[ngọt]], 시다 = [[chua]]"
+     },
+     {
+      "id": "vie-3-1-06",
+      "k": "blank",
+      "q": "맵다 = [[cay]], 쓰다 = [[đắng]]"
+     },
+     {
+      "id": "vie-3-1-07",
+      "k": "qa",
+      "q": "mắc 의 뜻은?",
+      "a": "비싸다"
+     },
+     {
+      "id": "vie-3-1-08",
+      "k": "qa",
+      "q": "tiệm giải khát 의 뜻은?",
+      "a": "음료 가게"
+     },
+     {
+      "id": "vie-3-1-09",
+      "k": "blank",
+      "q": "베트남식 부침개 = [[bánh xèo]], 튀긴 스프링롤 = [[chả giò]]"
+     },
+     {
+      "id": "vie-3-1-10",
+      "k": "ox",
+      "q": "thực đơn 은 '메뉴'라는 뜻이다.",
+      "a": "O",
+      "why": "thực đơn = 메뉴(차림표)."
+     },
+     {
+      "id": "vie-3-1-11",
+      "k": "ox",
+      "q": "hủ tiếu 는 음료 이름이다.",
+      "a": "X",
+      "why": "hủ tiếu 는 남부식 쌀국수(음식)."
+     },
+     {
+      "id": "vie-3-1-12",
+      "k": "blank",
+      "q": "요리하다 = [[nấu]]"
+     }
+    ]
+   },
+   {
+    "anchor": "02.",
+    "label": "02절",
+    "title": "02절 확인 문제 — 핵심 문법·문형",
+    "items": [
+     {
+      "id": "vie-3-2-01",
+      "k": "blank",
+      "q": "이 음식은 베트남어로 뭐라고 해? = Món này tiếng Việt [[gọi là gì]]?"
+     },
+     {
+      "id": "vie-3-2-02",
+      "k": "blank",
+      "q": "이 음식 어때? = Món này [[thế nào]]?"
+     },
+     {
+      "id": "vie-3-2-03",
+      "k": "blank",
+      "q": "먹어 보다 = ăn [[thử]], 마셔 보다 = uống [[thử]]"
+     },
+     {
+      "id": "vie-3-2-04",
+      "k": "ox",
+      "q": "'Em muốn thử ăn món này.'가 이 단원의 바른 어순이다.",
+      "a": "X",
+      "why": "thử는 동사 뒤: Em muốn ăn thử món này."
+     },
+     {
+      "id": "vie-3-2-05",
+      "k": "blank",
+      "q": "먹어 봐! = Bạn ăn thử [[đi]]!"
+     },
+     {
+      "id": "vie-3-2-06",
+      "k": "ox",
+      "q": "문장 끝의 đi 는 '가다'라는 뜻이다.",
+      "a": "X",
+      "why": "문장 끝 đi = 권유/명령(~해, ~하자)."
+     },
+     {
+      "id": "vie-3-2-07",
+      "k": "blank",
+      "q": "듣는 사람을 포함하는 '우리' = [[chúng ta]], 포함하지 않는 '우리' = [[chúng tôi]]"
+     },
+     {
+      "id": "vie-3-2-08",
+      "k": "qa",
+      "q": "친구 사이에서 '나'를 뜻하는 말은?",
+      "a": "mình"
+     },
+     {
+      "id": "vie-3-2-09",
+      "k": "blank",
+      "q": "밀크티 달아? = Trà sữa [[có]] ngọt [[không]]?"
+     },
+     {
+      "id": "vie-3-2-10",
+      "k": "blank",
+      "q": "조금 달아 = [[hơi]] ngọt"
+     },
+     {
+      "id": "vie-3-2-11",
+      "k": "blank",
+      "q": "이 책 읽어 보고 싶어? = Em [[có]] muốn đọc [[thử]] quyển sách này không?"
+     }
+    ]
+   },
+   {
+    "anchor": "03.",
+    "label": "03절",
+    "title": "03절 확인 문제 — 대화·읽기 본문",
+    "items": [
+     {
+      "id": "vie-3-3-01",
+      "k": "blank",
+      "q": "Mai ơi, cho mình [[hỏi]] một chút."
+     },
+     {
+      "id": "vie-3-3-02",
+      "k": "blank",
+      "q": "À, đây là món [[chả giò]]."
+     },
+     {
+      "id": "vie-3-3-03",
+      "k": "blank",
+      "q": "Ngon lắm. Kenji ăn [[thử]] [[đi]]."
+     },
+     {
+      "id": "vie-3-3-04",
+      "k": "blank",
+      "q": "[[Còn]] món đó gọi là gì? – Bánh xèo."
+     },
+     {
+      "id": "vie-3-3-05",
+      "k": "qa",
+      "q": "Hội thoại 1의 장소는?",
+      "a": "대학교 근처 음식점 (một tiệm ăn gần trường đại học)"
+     },
+     {
+      "id": "vie-3-3-06",
+      "k": "qa",
+      "q": "Kenji는 몇 가지 음식을 먹어 보고 싶어 하나?",
+      "a": "두 가지 (hai món: chả giò, bánh xèo)"
+     },
+     {
+      "id": "vie-3-3-07",
+      "k": "blank",
+      "q": "Long ơi, nước này gọi là nước gì? – Đây là nước [[cam cà rốt]]."
+     },
+     {
+      "id": "vie-3-3-08",
+      "k": "blank",
+      "q": "Ngon lắm. Mình rất [[thích]]."
+     },
+     {
+      "id": "vie-3-3-09",
+      "k": "blank",
+      "q": "Nước đó gọi là [[nước dừa]]. – Mình muốn [[uống thử]]."
+     },
+     {
+      "id": "vie-3-3-10",
+      "k": "ox",
+      "q": "Hội thoại 2에서 Ye Ji와 Long은 음식점(tiệm ăn)에 있다.",
+      "a": "X",
+      "why": "음료 가게(tiệm giải khát)에 있다."
+     },
+     {
+      "id": "vie-3-3-11",
+      "k": "qa",
+      "q": "Ye Ji muốn uống nước gì?",
+      "a": "Ye Ji muốn uống nước dừa."
+     }
+    ]
+   },
+   {
+    "anchor": "04.",
+    "label": "04절",
+    "title": "04절 확인 문제 — 연습 문제 정답",
+    "items": [
+     {
+      "id": "vie-3-4-01",
+      "k": "blank",
+      "q": "Nước cam hơi chua. → Nước cam [[thế nào]]?"
+     },
+     {
+      "id": "vie-3-4-02",
+      "k": "ox",
+      "q": "'Kim chi không cay lắm.'의 질문으로 'Kim chi không cay thế nào?'가 맞다.",
+      "a": "X",
+      "why": "Kim chi thế nào? (또는 Kim chi có cay không?)"
+     },
+     {
+      "id": "vie-3-4-03",
+      "k": "blank",
+      "q": "Em [[uống]] nước cam hay trà sữa?"
+     },
+     {
+      "id": "vie-3-4-04",
+      "k": "blank",
+      "q": "Chúng ta đi [[xem]] phim đi!"
+     },
+     {
+      "id": "vie-3-4-05",
+      "k": "blank",
+      "q": "Tôi [[mua]] túi xách ở Vincom."
+     },
+     {
+      "id": "vie-3-4-06",
+      "k": "blank",
+      "q": "Em muốn uống thử trà sữa Ô Long. → Em [[có]] muốn uống thử trà sữa Ô Long [[không]]?"
+     },
+     {
+      "id": "vie-3-4-07",
+      "k": "blank",
+      "q": "gì/ họ/ ăn/ đang/ vậy → Họ [[đang ăn]] gì vậy?"
+     },
+     {
+      "id": "vie-3-4-08",
+      "k": "blank",
+      "q": "thử/ uống/ các chị/ đi → Các chị [[uống thử]] đi!"
+     },
+     {
+      "id": "vie-3-4-09",
+      "k": "blank",
+      "q": "đến/ đó/ nhà hàng/ chúng ta/ đi → [[Chúng ta]] đến nhà hàng đó [[đi]]!"
+     },
+     {
+      "id": "vie-3-4-10",
+      "k": "blank",
+      "q": "Gia đình tôi đến Việt Nam du lịch. [[Chúng tôi]] đang ở Sapa."
+     },
+     {
+      "id": "vie-3-4-11",
+      "k": "blank",
+      "q": "Cà phê Starbuck mắc lắm. [[Chúng ta]] đi Highlands đi!"
+     },
+     {
+      "id": "vie-3-4-12",
+      "k": "blank",
+      "q": "Cà phê sữa thế nào? – Ngọt lắm. Em [[uống]] thử đi."
+     }
+    ]
+   }
+  ]
+ }
+}
