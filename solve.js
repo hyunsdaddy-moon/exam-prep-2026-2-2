@@ -9,13 +9,13 @@
  * 입력이 있는 화면(실전)은 통째로 다시 그리지 않고 바뀐 곳만 고친다 — 쓰던 답이 날아가지 않게.
  */
 
-import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert } from './dom.js?v=20261125-2203';
-import { renderMarkdown } from './markdown.js?v=20261125-2203';
-import { explainButton } from './explain.js?v=20261125-2203';
-import { inkTools } from './ink.js?v=20261125-2203';
-import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261125-2203';
-import { loadPaper } from './study.js?v=20261125-2203';
-import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261125-2203';
+import { el, newId, CIRCLED, plainStem, versioned, showBlankAlert, a4Pages } from './dom.js?v=20261125-2207';
+import { renderMarkdown } from './markdown.js?v=20261125-2207';
+import { explainButton } from './explain.js?v=20261125-2207';
+import { inkTools } from './ink.js?v=20261125-2207';
+import { saveRecords, loadRecords, getCurrentLearner } from './store.js?v=20261125-2207';
+import { loadPaper } from './study.js?v=20261125-2207';
+import { buildHistories, wrongNotes, localDay } from './progress.mjs?v=20261125-2207';
 import {
   CONFIDENCE_LABEL,
   ERROR_LABEL,
@@ -30,7 +30,7 @@ import {
   formatDuration,
   formatClock,
   round1,
-} from './grade.mjs?v=20261125-2203';
+} from './grade.mjs?v=20261125-2207';
 
 const MODE_LABEL = { practice: '연습', exam: '실전', review: '복습', assess: '평가' };
 const STATE_MARK = { correct: '○', wrong: '×', partial: '△', pending: '…', blank: '–' };
@@ -461,21 +461,25 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   };
 
   // 평가는 학교 시험지처럼 흰 종이 2단에 그린다 (인쇄용 문제지와 같은 모양, 선지를 눌러 표시)
+  // 문제 블록은 paperBlocks 에 모았다가 A4 쪽(왼쪽 단 → 오른쪽 단 → 다음 쪽)으로 나눠 담는다
   const onPaper = !!opts.paper;
-  const flow = onPaper ? el('div.cols') : sheet;
+  const paperBlocks = [];
+  const flow = onPaper ? { append: (b) => paperBlocks.push(b) } : sheet;
+  let pages = null;
   if (onPaper) {
     const p = opts.paper;
     const today = new Date().toLocaleDateString('ko-KR');
     const field = (label, value) => el('div', {}, el('span', { text: label }), el('i', { text: value || '' }));
-    sheet.className = 'sheet exam-paper';
-    sheet.append(
+    sheet.classList.add('exam-paper', 'paper-pages');
+    pages = a4Pages(
       el('header.sheet-head', {},
         el('div.sheet-title', {}, el('small', { text: p.kicker || '' }), el('h1', {}, subject.subject, el('span', { text: ` ${p.kind || '평가'}` }))),
         p.note ? el('p.sheet-note', { text: p.note }) : null,
         el('div.sheet-fields', {}, field('과목', subject.subject), field('이름', learner), field('날짜', today), field('점수', '제출 후'))
       ),
-      flow
+      paperBlocks
     );
+    sheet.append(pages.node);
   }
 
   let shownGroup = null;
@@ -629,6 +633,7 @@ export function runExam(ctx, subject, questions, groups, limit, state, opts = {}
   ctx.onLeave(() => clearInterval(timer));
 
   ctx.show(bar, onPaper ? el('div.paper-stage', {}, el('div.wrap.exam.on-paper', {}, sheet, omr)) : el('div.wrap.exam', {}, sheet, omr));
+  pages?.layout();
   for (const q of questions) refresh(q);
   tick();
 }

@@ -683,6 +683,20 @@ button.link:hover { text-decoration: underline; }
 .sheet.mono .doc blockquote { border: 0.5pt solid #888; }
 .page-break { break-before: page; }
 
+/* A4 쪽 나누기 — 실제 시험지처럼 한 쪽 = 297mm, 왼쪽 단을 채우고 오른쪽 단, 그다음 쪽 */
+.paper-pages.exam-sheet { max-width: none; }
+.a4-pages { display: flex; flex-direction: column; align-items: center; gap: 10mm; }
+.sheet.a4 { display: flex; flex-direction: column; width: min(210mm, 100%); max-width: none; height: 297mm; min-height: 0; padding: 14mm 14mm 22mm; position: relative; }
+.sheet.a4.a4-tall { height: auto; min-height: 297mm; }
+.a4-cols { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr); gap: 0; }
+.a4-col { position: relative; min-width: 0; overflow: visible; }
+.a4-col:first-child { padding-right: 4.5mm; border-right: 0.4pt solid #bbb; }
+.a4-col:last-child { padding-left: 4.5mm; }
+.a4-col > :last-child { margin-bottom: 0; }
+.a4-no { position: absolute; left: 0; right: 0; bottom: 9mm; text-align: center; font-size: 9pt; color: var(--text-2); }
+.exam.on-paper .sheet.a4 { width: min(210mm, 100%); padding: 14mm 14mm 22mm; }
+@media (min-width: 861px) { .exam.on-paper { grid-template-columns: 210mm 170px; } }
+
 @media (max-width: 860px) {
   .sheet { padding: 8mm; min-height: 0; }
   .cols { column-count: 1; }
@@ -709,6 +723,12 @@ button.link:hover { text-decoration: underline; }
   .sheet-fields { grid-template-columns: 2fr 2fr 1.5fr 1fr; }
   /* 읽기 화면을 그대로 인쇄할 때 */
   .reader { display: block; padding: 0; }
+  /* A4 로 나눈 쪽은 쪽마다 종이 한 장 */
+  .a4-pages { display: block; }
+  .sheet.a4, .exam.on-paper .sheet.a4 { width: auto; height: 268mm; padding: 0 0 7mm; box-shadow: none; break-after: page; }
+  .sheet.a4:last-child { break-after: auto; }
+  .sheet.a4.a4-tall { height: auto; min-height: 0; }
+  .a4-no { bottom: 0; }
   .doc { max-width: none; }
   .doc h2, .doc h3 { break-after: avoid; }
   .doc .diagram, .doc figure, .doc blockquote, .doc pre, .doc tr { break-inside: avoid; }

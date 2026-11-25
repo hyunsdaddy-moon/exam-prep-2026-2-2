@@ -12,14 +12,14 @@
  * 인쇄할 때는 위쪽 막대와 단추가 사라지고 종이만 남는다 (styles.css 의 @media print).
  */
 
-import { el, CIRCLED, versioned } from './dom.js?v=20261125-2203';
-import { renderMarkdown } from './markdown.js?v=20261125-2203';
-import { loadPaper } from './study.js?v=20261125-2203';
-import { ERROR_LABEL } from './grade.mjs?v=20261125-2203';
-import { assessWrongs } from './assess.js?v=20261125-2203';
-import { unitWrongs } from './units.js?v=20261125-2203';
-import { docWrongs } from './docquiz.js?v=20261125-2203';
-import { dday } from './progress.mjs?v=20261125-2203';
+import { el, CIRCLED, versioned, a4Pages } from './dom.js?v=20261125-2207';
+import { renderMarkdown } from './markdown.js?v=20261125-2207';
+import { loadPaper } from './study.js?v=20261125-2207';
+import { ERROR_LABEL } from './grade.mjs?v=20261125-2207';
+import { assessWrongs } from './assess.js?v=20261125-2207';
+import { unitWrongs } from './units.js?v=20261125-2207';
+import { docWrongs } from './docquiz.js?v=20261125-2207';
+import { dday } from './progress.mjs?v=20261125-2207';
 
 const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 표시판', notes: '오답 노트', summary: '요약본', subnote: '서브노트' };
 
@@ -76,11 +76,14 @@ function questionFlow(questions, groups, extraOf) {
   return flow;
 }
 
-function paperSheet(exam, subject, paper) {
+function paperSheet(exam, subject, paper, mono) {
   const comp = subject.papers?.[0]?.composition;
   const minutes = subject.papers?.[0]?.minutes;
   const note = comp ? `선택형 ${comp.choice.count}문항(${comp.choice.points}점) · 서술형 ${comp.essay.count}문항(${comp.essay.points}점) · 총 ${comp.total}점${minutes ? ` · ${minutes}분` : ''}` : '';
-  return el('div.sheet', {}, sheetHead(exam, subject, '예상 문제지', note), el('div.cols', {}, questionFlow(paper.questions, paper.groups)));
+  // 실제 시험지처럼 A4 쪽마다 2단으로 나눈다 (화면 미리 보기 = 인쇄 모양)
+  const pages = a4Pages(sheetHead(exam, subject, '예상 문제지', note), questionFlow(paper.questions, paper.groups), mono ? 'sheet.mono' : 'sheet');
+  pages.node.layout = pages.layout;
+  return pages.node;
 }
 
 /** 정답과 해설. 문제를 고르면(오답 노트) 그 문제만. */
@@ -325,7 +328,7 @@ export async function renderPrint(ctx, exam, subject, kind, query, loadStudyFor)
   const docIndex = query.has('doc') ? Number(query.get('doc')) : null;
   let sheet;
   let waits = [];
-  if (kind === 'paper') sheet = paperSheet(exam, subject, paper);
+  if (kind === 'paper') sheet = paperSheet(exam, subject, paper, query.get('mono') === '1');
   else if (kind === 'answers') sheet = answersSheet(exam, subject, paper);
   else if (kind === 'omr') sheet = omrSheet(exam, subject, paper);
   else if (kind === 'notes') {
@@ -369,6 +372,7 @@ export async function renderPrint(ctx, exam, subject, kind, query, loadStudyFor)
   );
 
   ctx.show(bar, el('div.print-stage', {}, sheet));
+  sheet.layout?.();
   await Promise.all([...waits, imagesSettled(sheet)]);
   button.disabled = false;
   button.textContent = '인쇄';
