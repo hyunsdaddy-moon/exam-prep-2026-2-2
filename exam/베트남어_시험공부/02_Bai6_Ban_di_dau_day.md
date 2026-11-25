@@ -209,12 +209,26 @@ flowchart TD
 
 ### Bài tập 1.1 Hỏi và trả lời (p.104) — 말하기
 - 질문: **Bạn đi đâu đấy?**
-- 답 틀: **Tôi đi** + sân bay / bệnh viện / siêu thị, **Tôi đi** + học / làm (việc) / ăn, **Tôi đi đến** + công ty / nhà (của) bạn / trường
-- 예) Tôi đi siêu thị. / Tôi đi sân bay. / Tôi đi bệnh viện. / Tôi đi học. / Tôi đi làm. / Tôi đi đến công ty. / Tôi đi đến nhà bạn.
+- 보기: sân bay, bệnh viện, siêu thị, công ty, nhà (của) bạn, học, làm (việc), ăn
+- 그림 번호별 정답 (교재 사진 확대해 확인)
+
+| 번호 | 그림 | 정답 |
+|---|---|---|
+| (1) | 계산대가 있는 가게 | Tôi đi **siêu thị**. (마트) |
+| (2) | 비행기·관제탑 | Tôi đi **sân bay**. (공항) |
+| (3) | HOSPITAL 건물 | Tôi đi **bệnh viện**. (병원) |
+| (4) | 급식대에서 음식 받는 아이들 | Tôi đi **ăn**. (밥 먹으러) |
+| (5) | 가방 메고 학교로 걸어감 | Tôi đi **học**. (공부하러) |
+| (6) | 커피·가방 들고 서둘러 출근 | Tôi đi **làm**. (일하러) |
+| (7) | SCHOOL 건물 | Tôi đi đến **trường**. (학교) |
+| (8) | 높은 회사 건물 | Tôi đi đến **công ty**. (회사) |
+| (9) | 친구네 집 | Tôi đi đến **nhà (của) bạn**. (친구 집) |
+
+- 💡 (1)~(3) 장소는 **Tôi đi + 장소**, (4)~(6)은 **Tôi đi + 동사**(ăn·học·làm), (7)~(9)는 **Tôi đi đến + 장소**.
 
 ### Bài tập 1.1-2) Bạn ... được không? (p.105) — 말하기
 - 예시: Bạn uống bia được không? → Tôi uống được. / Tôi không uống được.
-- 그림 단어: (1) uống bia (2) ăn sầu riêng (3) nấu ăn (5) hát (6) chạy xe máy, 그리고 nói tiếng Anh
+- 그림 번호별: (1) **uống bia** (맥주) (2) **ăn sầu riêng** (두리안) (3) **nấu ăn** (요리) (4) **nói tiếng Anh** (말하는 여자) (5) **hát** (마이크) (6) **chạy xe máy** (오토바이)
 - 예) Bạn **ăn sầu riêng được không**? → Tôi ăn được. / Tôi không ăn được.
 
 ### Bài tập 1.2 Hoàn thành các mẫu hội thoại (p.106) — 예시 답

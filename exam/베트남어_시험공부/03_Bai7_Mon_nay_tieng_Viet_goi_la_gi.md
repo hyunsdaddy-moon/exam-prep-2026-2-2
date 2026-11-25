@@ -281,8 +281,20 @@ flowchart TD
 ### Bài tập 1.2 (p.117) 친구에게 권유하기 — Bạn + 동사 + đi.
 보기: ăn cơm, uống cà phê, nghe nhạc, xem thực đơn, xem phim, nói tiếng Việt, trả lời, hỏi cô giáo
 - 예: (1) **Bạn ăn cơm đi.**
-- 그림대로: (2) Bạn **uống cà phê** đi. (4) Bạn **xem phim** đi. (5) Bạn **nghe nhạc** đi. (6) Bạn **nói tiếng Việt** đi.
-- (3)·(7)·(8)은 그림으로 판단: (3) 식당에서 메뉴 보기 → Bạn **xem thực đơn** đi. (7)(8) → Bạn **hỏi cô giáo** đi. / Bạn **trả lời** đi. (그림이 작아 선생님 확인 권장)
+- 그림 번호별 정답 (교재 사진 확대해 확인)
+
+| 번호 | 그림 | 정답 |
+|---|---|---|
+| (1) | 밥 먹는 여자아이 | Bạn **ăn cơm** đi. (예시) |
+| (2) | 찻잔 든 할아버지 | Bạn **uống cà phê** đi. |
+| (3) | 식탁에 앉아 음식 떠올림 | Bạn **xem thực đơn** đi. |
+| (4) | 영화관 스크린 | Bạn **xem phim** đi. |
+| (5) | 이어폰 낀 여자아이 | Bạn **nghe nhạc** đi. |
+| (6) | 말하는 입과 말풍선 | Bạn **nói tiếng Việt** đi. |
+| (7) | 물음표 + 갸웃하는 아이 | Bạn **hỏi cô giáo** đi. |
+| (8) | 책상에서 손 든 학생 | Bạn **trả lời** đi. |
+
+- 💡 (7) 모르겠으면 → 선생님께 여쭤 봐, (8) 손 들었으면 → 대답해 봐. 둘을 바꿔 쓰지 않게 그림의 **물음표**를 기억하기.
 
 ### Bài tập 1.3 (p.118) 대화 만들기
 틀: A: Anh ơi, cho em hỏi một chút. / B: Em muốn hỏi gì? / A: Món này tiếng Việt gọi là gì? / B: À, ___ . / A: ___ thế nào? / B: ___ lắm. ___ thử đi.
