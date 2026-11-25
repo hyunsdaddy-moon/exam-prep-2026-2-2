@@ -2,15 +2,17 @@
  * 연필·지우개 — 문제 위에 마우스·손가락·펜으로 밑줄, ○, ／ 를 그린다.
  *
  *   const ink = inkTools(root, '구역 이름');   // root 안에 도구 막대를 붙인다
- *   ink.add(문제 블록, '문제 id');              // 그 블록 위에 투명한 그림판을 덮는다
+ *   ink.add(문제 블록, '문제 id');              // 그 블록에서 시작한 선을 그 문제에 저장한다
+ *
+ * - 그림판은 root 전체에 하나만 덮어서, 선이 문제 칸 밖으로 나가도 잘리지 않는다.
  *
  * - 그림은 채점과 상관없다. 연필을 끄면 지금처럼 선지를 눌러 답을 고른다.
  * - 문제마다 이 브라우저(localStorage)에 남는다. 제출한 뒤에도 남고, 「모두 지우기」로만 지운다.
  * - 좌표는 블록 너비를 1 로 삼아 저장한다 → 창 크기가 바뀌어도 같은 자리에 다시 그린다.
  */
 
-import { el } from './dom.js?v=20261125-1827';
-import { getCurrentLearner } from './store.js?v=20261125-1827';
+import { el } from './dom.js?v=20261125-1828';
+import { getCurrentLearner } from './store.js?v=20261125-1828';
 
 const COLORS = { r: '#e0281e', b: '#1f63e0', k: null }; // k(검정)는 글자색을 따른다 (어두운 화면에서도 보이게)
 const COLOR_NAME = { r: '빨강', b: '파랑', k: '검정' };
@@ -43,15 +45,17 @@ export function inkTools(root, scope) {
     }
   };
 
-  function add(node, id) {
-    const canvas = el('canvas.ink-layer', { 'aria-hidden': 'true' });
-    node.classList.add('ink-host');
-    node.append(canvas);
-    const ctx2d = canvas.getContext('2d');
-    const h = { node, id: String(id), strokes: read(id) };
-    let W = 1;
-    let scale = 1;
+  // 그림판은 시험지(root) 전체에 하나만 덮는다 → 문제 칸 경계에서 선이 잘리지 않는다.
+  // 선은 「처음 찍은 자리의 문제」에 그 문제 기준 좌표로 저장한다 → 화면 배치가 바뀌어도 문제를 따라간다.
+  // 문제 밖(머리말·여백)에서 시작한 선은 시험지 자체('_sheet')에 저장한다.
+  const canvas = el('canvas.ink-layer', { 'aria-hidden': 'true' });
+  root.classList.add('ink-host');
+  root.append(canvas);
+  const ctx2d = canvas.getContext('2d');
+  let scale = 1;
 
+  const makeHost = (node, id) => {
+    const h = { node, id: String(id), strokes: read(id) };
     h.save = () => {
       try {
         if (h.strokes.length) localStorage.setItem(keyOf(h.id), JSON.stringify(h.strokes));
@@ -60,48 +64,109 @@ export function inkTools(root, scope) {
         // 저장 공간이 없으면 이 화면에서만 보인다
       }
     };
-    const colorOf = (c) => COLORS[c] || getComputedStyle(node).color || '#1d1d1f';
-    const strokePath = (s) => {
-      const p = s.p;
-      ctx2d.strokeStyle = colorOf(s.c);
-      ctx2d.lineWidth = s.w * W;
-      ctx2d.beginPath();
-      ctx2d.moveTo(p[0] * W, p[1] * W);
-      if (p.length === 2) ctx2d.lineTo(p[0] * W + 0.01, p[1] * W); // 점 하나
-      for (let i = 2; i < p.length; i += 2) ctx2d.lineTo(p[i] * W, p[i + 1] * W);
-      ctx2d.stroke();
-    };
-    h.draw = () => {
-      ctx2d.setTransform(scale, 0, 0, scale, 0, 0);
-      ctx2d.clearRect(0, 0, canvas.width, canvas.height);
-      ctx2d.lineCap = 'round';
-      ctx2d.lineJoin = 'round';
-      for (const s of h.strokes) strokePath(s);
-    };
-    const fit = () => {
-      W = node.clientWidth || 1;
-      const H = node.clientHeight || 1;
-      const dpr = window.devicePixelRatio || 1;
-      scale = Math.min(dpr, Math.sqrt(MAX_PIXELS / (W * H)));
-      const cw = Math.round(W * scale);
-      const ch = Math.round(H * scale);
-      if (canvas.width !== cw || canvas.height !== ch) {
-        canvas.width = cw;
-        canvas.height = ch;
-      }
-      h.draw();
-    };
-    new ResizeObserver(fit).observe(node);
+    h.draw = () => drawAll();
+    return h;
+  };
+  const sheetHost = makeHost(root, '_sheet');
+  hosts.push(sheetHost);
 
-    // ── 그리기 ──
-    let cur = null; // 긋고 있는 선
-    let pid = null;
-    const at = (e) => {
-      const r = canvas.getBoundingClientRect();
-      return [+((e.clientX - r.left) / W).toFixed(4), +((e.clientY - r.top) / W).toFixed(4)];
-    };
-    const eraseAt = (x, y) => {
-      const r = ERASE_PX / W;
+  // 문제 블록의 자리(그림판 기준 px)와 너비
+  const frame = (h) => {
+    const c = canvas.getBoundingClientRect();
+    const r = h.node.getBoundingClientRect();
+    return { ox: r.left - c.left, oy: r.top - c.top, W: h.node.clientWidth || 1 };
+  };
+  const colorOf = (c) => COLORS[c] || getComputedStyle(root).color || '#1d1d1f';
+  const begin = () => {
+    ctx2d.setTransform(scale, 0, 0, scale, 0, 0);
+    ctx2d.lineCap = 'round';
+    ctx2d.lineJoin = 'round';
+  };
+  const strokePath = (s, f) => {
+    const p = s.p;
+    ctx2d.strokeStyle = colorOf(s.c);
+    ctx2d.lineWidth = s.w * f.W;
+    ctx2d.beginPath();
+    ctx2d.moveTo(f.ox + p[0] * f.W, f.oy + p[1] * f.W);
+    if (p.length === 2) ctx2d.lineTo(f.ox + p[0] * f.W + 0.01, f.oy + p[1] * f.W); // 점 하나
+    for (let i = 2; i < p.length; i += 2) ctx2d.lineTo(f.ox + p[i] * f.W, f.oy + p[i + 1] * f.W);
+    ctx2d.stroke();
+  };
+  function drawAll() {
+    ctx2d.setTransform(1, 0, 0, 1, 0, 0);
+    ctx2d.clearRect(0, 0, canvas.width, canvas.height);
+    begin();
+    for (const h of hosts) {
+      if (!h.strokes.length) continue;
+      const f = frame(h);
+      for (const s of h.strokes) strokePath(s, f);
+    }
+  }
+  const fit = () => {
+    const W = root.clientWidth || 1;
+    const H = root.clientHeight || 1;
+    const dpr = window.devicePixelRatio || 1;
+    scale = Math.min(dpr, Math.sqrt(MAX_PIXELS / (W * H)));
+    const cw = Math.round(W * scale);
+    const ch = Math.round(H * scale);
+    if (canvas.width !== cw || canvas.height !== ch) {
+      canvas.width = cw;
+      canvas.height = ch;
+    }
+    drawAll();
+  };
+  let fitQueued = false;
+  const queueFit = () => {
+    if (fitQueued) return;
+    fitQueued = true;
+    requestAnimationFrame(() => {
+      fitQueued = false;
+      fit();
+    });
+  };
+  const sizes = new ResizeObserver(queueFit);
+  sizes.observe(root);
+  // 크기는 그대로인데 자리만 옮겨지는 경우(위쪽 글이 바뀜, 그림이 늦게 뜸)도 다시 그린다
+  const moves = new MutationObserver((list) => {
+    if (list.some((m) => m.target !== canvas)) queueFit();
+  });
+  moves.observe(root, { childList: true, subtree: true, attributes: true, characterData: true });
+  root.addEventListener('load', queueFit, true);
+
+  function add(node, id) {
+    const h = node === root ? sheetHost : makeHost(node, id);
+    if (h !== sheetHost) {
+      hosts.push(h);
+      sizes.observe(node);
+    }
+    paint();
+    return h;
+  }
+
+  // ── 그리기 ──
+  let cur = null; // 긋고 있는 선
+  let curHost = null;
+  let pid = null;
+  const local = (h, e) => {
+    const r = h.node.getBoundingClientRect();
+    const W = h.node.clientWidth || 1;
+    return [+((e.clientX - r.left) / W).toFixed(4), +((e.clientY - r.top) / W).toFixed(4)];
+  };
+  // 찍은 자리를 품은 문제 (없으면 시험지)
+  const hostAt = (e) => {
+    for (const h of hosts) {
+      if (h === sheetHost) continue;
+      const r = h.node.getBoundingClientRect();
+      if (e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom) return h;
+    }
+    return sheetHost;
+  };
+  const eraseAt = (e) => {
+    let changed = false;
+    for (const h of hosts) {
+      if (!h.strokes.length) continue;
+      const [x, y] = local(h, e);
+      const r = ERASE_PX / (h.node.clientWidth || 1);
       const before = h.strokes.length;
       h.strokes = h.strokes.filter((s) => {
         for (let i = 0; i < s.p.length; i += 2) if (Math.hypot(s.p[i] - x, s.p[i + 1] - y) < r + s.w / 2) return false;
@@ -110,63 +175,67 @@ export function inkTools(root, scope) {
         return true;
       });
       if (h.strokes.length !== before) {
-        h.draw();
         h.save();
+        changed = true;
       }
-    };
+    }
+    if (changed) {
+      drawAll();
+      paint();
+    }
+  };
 
-    canvas.addEventListener('pointerdown', (e) => {
-      if (state.mode === 'off' || pid !== null) return;
-      if (e.button > 0) return;
-      e.preventDefault();
-      pid = e.pointerId;
-      canvas.setPointerCapture(pid);
-      const [x, y] = at(e);
-      if (state.mode === 'eraser') return eraseAt(x, y);
-      cur = { c: state.color, w: +(PEN_PX / W).toFixed(5), p: [x, y] };
-      h.strokes.push(cur);
-      h.draw();
-    });
-    canvas.addEventListener('pointermove', (e) => {
-      if (e.pointerId !== pid) return;
-      e.preventDefault();
-      const events = e.getCoalescedEvents ? e.getCoalescedEvents() : [e];
-      for (const ev of events.length ? events : [e]) {
-        const [x, y] = at(ev);
-        if (state.mode === 'eraser') eraseAt(x, y);
-        else if (cur) {
-          const n = cur.p.length;
-          if (Math.hypot(cur.p[n - 2] - x, cur.p[n - 1] - y) * W < 0.8) continue; // 너무 가까운 점은 버린다
-          ctx2d.setTransform(scale, 0, 0, scale, 0, 0);
-          ctx2d.lineCap = 'round';
-          ctx2d.lineJoin = 'round';
-          ctx2d.strokeStyle = colorOf(cur.c);
-          ctx2d.lineWidth = cur.w * W;
-          ctx2d.beginPath();
-          ctx2d.moveTo(cur.p[n - 2] * W, cur.p[n - 1] * W);
-          ctx2d.lineTo(x * W, y * W);
-          ctx2d.stroke();
-          cur.p.push(x, y);
-        }
+  canvas.addEventListener('pointerdown', (e) => {
+    if (state.mode === 'off' || pid !== null) return;
+    if (e.button > 0) return;
+    e.preventDefault();
+    pid = e.pointerId;
+    canvas.setPointerCapture(pid);
+    if (state.mode === 'eraser') return eraseAt(e);
+    curHost = hostAt(e);
+    const [x, y] = local(curHost, e);
+    cur = { c: state.color, w: +(PEN_PX / (curHost.node.clientWidth || 1)).toFixed(5), p: [x, y] };
+    curHost.strokes.push(cur);
+    drawAll();
+  });
+  canvas.addEventListener('pointermove', (e) => {
+    if (e.pointerId !== pid) return;
+    e.preventDefault();
+    const events = e.getCoalescedEvents ? e.getCoalescedEvents() : [e];
+    let f = null;
+    for (const ev of events.length ? events : [e]) {
+      if (state.mode === 'eraser') {
+        eraseAt(ev);
+        continue;
       }
-    });
-    const end = (e) => {
-      if (e.pointerId !== pid) return;
-      pid = null;
-      if (cur) {
-        undo.push({ host: h, stroke: cur });
-        cur = null;
-        h.save();
-        paint();
-      }
-    };
-    canvas.addEventListener('pointerup', end);
-    canvas.addEventListener('pointercancel', end);
-
-    hosts.push(h);
-    paint();
-    return h;
-  }
+      if (!cur) continue;
+      f ??= frame(curHost);
+      const [x, y] = local(curHost, ev);
+      const n = cur.p.length;
+      if (Math.hypot(cur.p[n - 2] - x, cur.p[n - 1] - y) * f.W < 0.8) continue; // 너무 가까운 점은 버린다
+      begin();
+      ctx2d.strokeStyle = colorOf(cur.c);
+      ctx2d.lineWidth = cur.w * f.W;
+      ctx2d.beginPath();
+      ctx2d.moveTo(f.ox + cur.p[n - 2] * f.W, f.oy + cur.p[n - 1] * f.W);
+      ctx2d.lineTo(f.ox + x * f.W, f.oy + y * f.W);
+      ctx2d.stroke();
+      cur.p.push(x, y);
+    }
+  });
+  const end = (e) => {
+    if (e.pointerId !== pid) return;
+    pid = null;
+    if (cur) {
+      undo.push({ host: curHost, stroke: cur });
+      curHost.save();
+      cur = null;
+      curHost = null;
+      paint();
+    }
+  };
+  canvas.addEventListener('pointerup', end);
+  canvas.addEventListener('pointercancel', end);
 
   // ── 도구 막대 ──
   const btn = (cls, label, title, onclick) => el(`button.ink-btn${cls}`, { type: 'button', title, 'aria-label': title, onclick }, label);
@@ -241,6 +310,8 @@ export function inkTools(root, scope) {
     if (root.isConnected) return;
     watch.disconnect();
     seen.disconnect();
+    sizes.disconnect();
+    moves.disconnect();
     listeners.delete(paint);
     setMode('off');
   });
