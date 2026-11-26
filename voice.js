@@ -13,7 +13,7 @@
  * 버튼을 붙이고, 보낼 글도 화면에서 읽는다. 그래서 정답·해설은 채점한 뒤에만 함께 간다.
  */
 
-import { el, CIRCLED } from './dom.js?v=20261126-0843';
+import { el, CIRCLED } from './dom.js?v=20261126-0918';
 
 const KEY = 'examprep.voiceAsk';
 const BRIDGE = 'http://127.0.0.1:47611';
@@ -30,6 +30,7 @@ const CSS = `
 .va-ask:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .va-ask.va-float { position: absolute; top: -4px; right: -2px; z-index: 3; }
 .q-head .va-ask { margin-left: auto; align-self: center; flex: none; }
+.p-stem .va-ask { flex: none; align-self: flex-start; width: 20px; height: 20px; font-size: 11px; margin-left: 2pt; }
 .va-ask.va-on { opacity: 1; background: var(--accent); border-color: var(--accent); }
 .va-pill { position: fixed; right: 16px; bottom: 16px; z-index: 60; max-width: min(360px, calc(100vw - 32px)); display: flex; align-items: center; gap: 10px; padding: 10px 12px 10px 16px; border-radius: 999px; background: rgba(29, 29, 31, .92); color: #fff; font-size: 14px; box-shadow: var(--shadow); }
 .va-pill[hidden] { display: none; }
@@ -262,7 +263,8 @@ export function initVoiceAsk() {
         e.stopPropagation();
         void ask(node);
       } });
-      const head = node.matches('.q-card') ? node.querySelector(':scope > .q-head') : null;
+      // 번호·배점 줄 끝에 한 칸으로 넣는다 — 글자 위에 겹쳐 띄우지 않는다
+      const head = node.matches('.q-card') ? node.querySelector(':scope > .q-head') : node.querySelector(':scope > .p-stem');
       if (head) head.append(btn);
       else {
         node.classList.add('va-host');

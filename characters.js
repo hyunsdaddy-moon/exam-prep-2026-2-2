@@ -6,10 +6,10 @@
  * 그림 파일: assets/characters/c01.webp … c10.webp. 고르지 않은 참여자는 기본 그림 c00.webp.
  */
 
-import { el } from './dom.js?v=20261126-0843';
-import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261126-0843';
-import { recordLearner } from './grade.mjs?v=20261126-0843';
-import { changePin, isProtected } from './lock.js?v=20261126-0843';
+import { el } from './dom.js?v=20261126-0918';
+import { loadRecords, saveRecords, getCurrentLearner } from './store.js?v=20261126-0918';
+import { recordLearner } from './grade.mjs?v=20261126-0918';
+import { changePin, isProtected } from './lock.js?v=20261126-0918';
 
 export const CHARACTERS = [
   { id: 'c01', name: '탐험가 하루', role: '모험 · 지리', color: '#e0a030', line: '지도만 있으면 어디든 간다!' },

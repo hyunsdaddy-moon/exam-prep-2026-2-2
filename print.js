@@ -12,14 +12,14 @@
  * 인쇄할 때는 위쪽 막대와 단추가 사라지고 종이만 남는다 (styles.css 의 @media print).
  */
 
-import { el, CIRCLED, versioned, a4Pages } from './dom.js?v=20261126-0843';
-import { renderMarkdown } from './markdown.js?v=20261126-0843';
-import { loadPaper } from './study.js?v=20261126-0843';
-import { ERROR_LABEL } from './grade.mjs?v=20261126-0843';
-import { assessWrongs } from './assess.js?v=20261126-0843';
-import { unitWrongs } from './units.js?v=20261126-0843';
-import { docWrongs } from './docquiz.js?v=20261126-0843';
-import { dday } from './progress.mjs?v=20261126-0843';
+import { el, CIRCLED, versioned, a4Pages } from './dom.js?v=20261126-0918';
+import { renderMarkdown } from './markdown.js?v=20261126-0918';
+import { loadPaper } from './study.js?v=20261126-0918';
+import { ERROR_LABEL } from './grade.mjs?v=20261126-0918';
+import { assessWrongs } from './assess.js?v=20261126-0918';
+import { unitWrongs } from './units.js?v=20261126-0918';
+import { docWrongs } from './docquiz.js?v=20261126-0918';
+import { dday } from './progress.mjs?v=20261126-0918';
 
 const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 표시판', notes: '오답 노트', summary: '요약본', subnote: '서브노트' };
 
