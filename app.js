@@ -7,29 +7,29 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261126-1948';
-import { el, versioned } from './dom.js?v=20261126-1948';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261126-1948';
-import { renderUnitsRoute } from './units.js?v=20261126-1948';
-import { buildDocQuiz } from './docquiz.js?v=20261126-1948';
-import { attachDrills } from './drill.js?v=20261126-1948';
-import { attachWatchBoxes } from './watch.js?v=20261126-1948';
-import { renderDashboard } from './dashboard.js?v=20261126-1948';
-import { renderGrades } from './grades.js?v=20261126-1948';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261126-1948';
-import { renderAssessRoute } from './assess.js?v=20261126-1948';
-import { renderPastRoute } from './past.js?v=20261126-1948';
-import { renderWrongbook } from './wrongbook.js?v=20261126-1948';
-import { renderBoard } from './board.js?v=20261126-1948';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261126-1948';
-import { loadStudy } from './study.js?v=20261126-1948';
-import { renderPrint, printLinks } from './print.js?v=20261126-1948';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261126-1948';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261126-1948';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261126-1948';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261126-1948';
-import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261126-1948';
-import { initVoiceAsk } from './voice.js?v=20261126-1948';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261126-1954';
+import { el, versioned } from './dom.js?v=20261126-1954';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261126-1954';
+import { renderUnitsRoute } from './units.js?v=20261126-1954';
+import { buildDocQuiz } from './docquiz.js?v=20261126-1954';
+import { attachDrills } from './drill.js?v=20261126-1954';
+import { attachWatchBoxes } from './watch.js?v=20261126-1954';
+import { renderDashboard } from './dashboard.js?v=20261126-1954';
+import { renderGrades } from './grades.js?v=20261126-1954';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261126-1954';
+import { renderAssessRoute } from './assess.js?v=20261126-1954';
+import { renderPastRoute } from './past.js?v=20261126-1954';
+import { renderWrongbook } from './wrongbook.js?v=20261126-1954';
+import { renderBoard } from './board.js?v=20261126-1954';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261126-1954';
+import { loadStudy } from './study.js?v=20261126-1954';
+import { renderPrint, printLinks } from './print.js?v=20261126-1954';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261126-1954';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261126-1954';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261126-1954';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261126-1954';
+import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261126-1954';
+import { initVoiceAsk } from './voice.js?v=20261126-1954';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -94,18 +94,31 @@ function syncBadge() {
   return el(`span.sync-badge.${status}`, { text: SYNC_LABEL[status] || status, title: '여러 기기 간 실시간 동기화 상태' });
 }
 
+/** 상단에 바로 누를 참여자 — 풀다운 대신 캐릭터 단추로 보여 준다 */
+const NAV_LEARNERS = ['문현', '문종배', '오은미'];
+
 function renderNavLearner(names) {
   if (!navLearner) return;
   if (Array.isArray(names) && names.length) lastLearnerNames = names;
   const current = getCurrentLearner();
-  const list = [...new Set([...lastLearnerNames, current])];
-  const select = el('select.learner-select', { 'aria-label': '참여자 선택' }, list.map((name) => el('option', { value: name, text: name })));
-  select.value = current;
-  select.addEventListener('change', async () => {
-    if (!(await enterLearner(select.value))) select.value = getCurrentLearner(); // 비밀번호를 못 맞히면 그대로
-    void route();
+  const list = NAV_LEARNERS.includes(current) ? NAV_LEARNERS : [...NAV_LEARNERS, current];
+  const buttons = list.map((name) => {
+    const on = name === current;
+    const btn = el('button.learner-btn', {
+      type: 'button',
+      title: on ? `${name} — 캐릭터 고르기` : `${name}(으)로 바꾸기`,
+      'aria-pressed': on ? 'true' : 'false',
+    }, avatar(name, 'xs'), el('span', { text: name }));
+    if (on) btn.classList.add('on');
+    btn.addEventListener('click', async () => {
+      if (name === getCurrentLearner()) { location.hash = '#/me'; return; } // 지금 참여자를 다시 누르면 캐릭터 고르기
+      if (!(await enterLearner(name))) return; // 비밀번호를 못 맞히면 그대로
+      renderNavLearner();
+      void route();
+    });
+    return btn;
   });
-  navLearner.replaceChildren(syncBadge(), el('a.nav-avatar', { href: '#/me', title: '캐릭터 고르기', 'aria-label': '캐릭터 고르기' }, avatar(current, 'xs')), select);
+  navLearner.replaceChildren(syncBadge(), el('div.learner-btns', { role: 'group', 'aria-label': '참여자 선택' }, buttons));
 }
 
 /** 홈의 큰 버튼들 — 상단 「메뉴」에서도 같은 목록을 고른다 */
