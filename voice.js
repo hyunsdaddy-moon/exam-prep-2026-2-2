@@ -13,11 +13,12 @@
  * 버튼을 붙이고, 보낼 글도 화면에서 읽는다. 그래서 정답·해설은 채점한 뒤에만 함께 간다.
  */
 
-import { el, CIRCLED } from './dom.js?v=20261126-0923';
+import { el, CIRCLED } from './dom.js?v=20261126-0956';
 
 const KEY = 'examprep.voiceAsk';
 const BRIDGE = 'http://127.0.0.1:47611';
-const Q_SEL = 'article.q-card, article.p-q, li.dr-card';
+// 긴 문제를 다음 단으로 이어 넣은 조각(.a4-cont)은 문제로 세지 않는다
+const Q_SEL = 'article.q-card:not(.a4-cont), article.p-q:not(.a4-cont), li.dr-card';
 const CONTEXT_SEL = '.p-context, .q-context';
 const GROUP_SEL = `${CONTEXT_SEL}, .p-group, .exam-group`;
 const MAX_TEXT = 2300;
@@ -57,7 +58,7 @@ export function readableText(node, images = []) {
   }));
   copy.querySelectorAll('.choice.on, .p-choices li.on > .p-pick').forEach((c) => c.append(' ←학생이 고른 답'));
   copy.querySelectorAll('.choice.right').forEach((c) => c.append(' ←정답'));
-  copy.querySelectorAll('.va-ask, .ex-row, .dq-hist-row, .conf-row, .segment, textarea, input, select, canvas, video, svg, script, style').forEach((n) => n.remove());
+  copy.querySelectorAll('.va-ask, .a4-cont-sum, .ex-row, .dq-hist-row, .conf-row, .segment, textarea, input, select, canvas, video, svg, script, style').forEach((n) => n.remove());
   copy.querySelectorAll('button:not(.choice):not(.p-pick)').forEach((n) => n.remove());
   copy.querySelectorAll('.katex').forEach((k) => k.replaceWith(` ${k.querySelector('annotation')?.textContent || ''} `));
   copy.querySelectorAll('img').forEach((img) => {
@@ -97,7 +98,9 @@ function contextOf(qNode, app) {
 /** 버튼이 붙은 문제 → MultyAM 에 보낼 내용 */
 export function questionPayload(qNode, app) {
   const images = [];
-  let text = readableText(qNode, images);
+  // 긴 문제는 다음 단에 이어진 조각까지 모아 읽는다
+  const parts = [qNode, ...[...app.querySelectorAll('.a4-cont')].filter((c) => c.a4Root === qNode)];
+  let text = parts.map((part) => readableText(part, images)).filter(Boolean).join('\n');
   if (text.length > MAX_QUESTION) text = `${text.slice(0, MAX_QUESTION)}…`;
   const ctx = contextOf(qNode, app);
   if (ctx) {

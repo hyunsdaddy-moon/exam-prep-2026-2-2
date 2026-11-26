@@ -693,6 +693,10 @@ button.link:hover { text-decoration: underline; }
 .a4-col:first-child { padding-right: 4.5mm; border-right: 0.4pt solid #bbb; }
 .a4-col:last-child { padding-left: 4.5mm; }
 .a4-col > :last-child { margin-bottom: 0; }
+/* 한 단보다 긴 문제·지문을 다음 단으로 이어 넣은 조각 */
+.a4-cut { margin-bottom: 0 !important; }
+.a4-cont-sum { list-style: none; cursor: default; pointer-events: none; font-weight: 400 !important; color: var(--text-3) !important; }
+.a4-cont-sum::-webkit-details-marker { display: none; }
 .a4-no { position: absolute; left: 0; right: 0; bottom: 9mm; text-align: center; font-size: 9pt; color: var(--text-2); }
 .exam.on-paper .sheet.a4 { width: min(210mm, 100%); padding: 14mm 14mm 22mm; }
 @media (min-width: 861px) { .exam.on-paper { grid-template-columns: 210mm 170px; } }
