@@ -94,12 +94,16 @@ export function a4Pages(head, blocks, pageClass = 'sheet') {
     const pages = [];
     let cols = [];
     let ci = 0;
+    // 이 쪽의 한 단 높이. 쪽을 늘리면(a4-tall) 단도 따라 늘어나므로, 늘리기 전에 재 둔 값으로 견준다 —
+    // 안 그러면 긴 문제 하나 뒤로는 무엇이든 "들어간다"가 되어 남은 문제가 한 단에 끝없이 이어진다
+    let limit = 0;
     const newPage = () => {
       cols = [el('div.a4-col'), el('div.a4-col')];
       ci = 0;
       const page = el(`div.${pageClass}.a4`, {}, pages.length ? null : head, el('div.a4-cols', {}, cols), el('div.a4-no'));
       pages.push(page);
       node.append(page);
+      limit = cols[0].clientHeight;
     };
     const next = () => {
       if (ci === 0) ci = 1;
@@ -110,13 +114,17 @@ export function a4Pages(head, blocks, pageClass = 'sheet') {
     for (const b of blocks) {
       let col = cols[ci];
       col.append(b);
-      if (bottomOf(col) <= col.clientHeight + 1 || col.children.length === 1) continue;
+      if (bottomOf(col) <= limit + 1) continue;
+      if (col.children.length === 1) {
+        pages[pages.length - 1].classList.add('a4-tall'); // 단의 첫 문제가 한 단보다 길다 — 쪽을 늘린다
+        continue;
+      }
       // 안 들어간다 → 다음 단으로. 바로 앞의 지문 제목도 함께 데려간다
       const carry = [b];
       while (isLead(carry[0].previousElementSibling) && col.children.length > carry.length + 1) carry.unshift(carry[0].previousElementSibling);
       col = next();
       col.append(...carry);
-      if (bottomOf(col) > col.clientHeight + 1) pages[pages.length - 1].classList.add('a4-tall'); // 한 단보다 긴 문제는 쪽을 늘린다
+      if (bottomOf(col) > limit + 1) pages[pages.length - 1].classList.add('a4-tall'); // 한 단보다 긴 문제는 쪽을 늘린다
     }
     pages.forEach((p, i) => { p.lastChild.textContent = `${i + 1} / ${pages.length}`; });
     window.scrollTo({ top: y });
