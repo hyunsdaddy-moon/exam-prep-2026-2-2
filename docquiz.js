@@ -13,13 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261126-1930';
-import { renderMarkdown } from './markdown.js?v=20261126-1930';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-1930';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261126-1930';
-import { explainButton } from './explain.js?v=20261126-1930';
-import { inkTools } from './ink.js?v=20261126-1930';
-import { passageBlock } from './solve.js?v=20261126-1930';
+import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261126-1948';
+import { renderMarkdown } from './markdown.js?v=20261126-1948';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-1948';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261126-1948';
+import { explainButton } from './explain.js?v=20261126-1948';
+import { inkTools } from './ink.js?v=20261126-1948';
+import { passageBlock } from './solve.js?v=20261126-1948';
 
 /* 채점 표시 — 선생님이 빨간 색연필로 그은 것처럼: 손으로 그린 동그라미(맞음)·빗금(틀림)에
  * 연필 결(알갱이)과 살짝 떨리는 선을 SVG 필터로 입힌다. 필터는 문서에 한 번만 넣는다. */
@@ -216,17 +216,29 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     el('div.dq-tools', {}, status, submitBtn, nextBtn),
     !ok ? el('p.sheet-note.dq-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 기록만 보입니다.' }) : null
   );
-  // 「PDF 저장」 — 지금 보이는 시험지(고른 답·채점 표시 포함)만 A4 로 뽑는다. 인쇄 창에서 「PDF 로 저장」을 고른다
+  // 「PDF 저장」 — 시험지만 A4 로 뽑는다. 인쇄 창에서 「PDF 로 저장」을 고른다.
+  // 고른 답·쓴 답·채점·해설·점수·기록·연필 자국은 빼고, 처음 시험을 시작할 때의 빈 시험지로 뽑는다 (사용자 결정 2026-11-26).
+  // 화면의 기록은 그대로 두고, 인쇄하는 동안만 빈 모습으로 다시 그렸다가 되돌린다
+  let blank = false;
   const pdfBtn = el('button.dq-submit.dq-pdf', { type: 'button', text: 'PDF 저장', title: '이 시험지를 PDF 파일로 저장합니다 (인쇄 창에서 「PDF 로 저장」)', onclick: () => {
     const root = document.documentElement;
     const title = document.title;
+    let restored = false;
     const done = () => {
+      if (restored) return;
+      restored = true;
       root.classList.remove('dq-print');
       document.title = title;
       window.removeEventListener('afterprint', done);
+      blank = false;
+      paintAll();
+      pages.layout();
     };
     // 파일 이름이 되는 제목 — 과목 · 평가 이름 · 단원
     document.title = [opts.subject, quiz.title || '마무리 평가', opts.docTitle].filter(Boolean).join(' ').replace(/[\\/:*?"<>|]/g, ' ');
+    blank = true;
+    paintAll();
+    pages.layout(); // 해설이 빠진 만큼 쪽을 다시 나눈다
     root.classList.add('dq-print');
     window.addEventListener('afterprint', done);
     window.print();
@@ -314,10 +326,10 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       const exBtn = explainButton(q, { label: `${no}번` });
       block.append(el('ol.p-choices.p-choose', {}, items), exBtn, feedback);
       painters.push(() => {
-        const t = current();
+        const t = blank ? null : current();
         exBtn.hidden = !t; // 풀이 해설은 제출한 뒤에만
         const a = t?.byQ.get(q.id);
-        const pick = t ? a?.picked?.[0] : draft.picks[q.id];
+        const pick = blank ? undefined : t ? a?.picked?.[0] : draft.picks[q.id];
         const graded = !!t;
         items.forEach((li, i) => {
           const n = i + 1;
@@ -339,7 +351,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
             choiceNotes(q, pick)
           );
         }
-        hist.replaceChildren(tries.length ? histIcons(q) : '');
+        hist.replaceChildren(tries.length && !blank ? histIcons(q) : '');
       });
     } else {
       const input = el('textarea.p-write', { rows: 4, placeholder: '여기에 답을 써 보세요.' });
@@ -348,11 +360,12 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
       const exBtn = explainButton(q, { label: `서술형 ${essayNo}번` });
       block.append(input, exBtn, feedback);
       painters.push(() => {
-        const t = current();
+        const t = blank ? null : current();
         exBtn.hidden = !t; // 풀이 해설은 제출한 뒤에만
         const a = t?.byQ.get(q.id);
         input.readOnly = !!t;
-        if (t && a?.text != null) input.value = a.text;
+        if (blank) input.value = '';
+        else if (t && a?.text != null) input.value = a.text;
         else if (!t) input.value = draft.texts[q.id] || '';
         const v = a?.correct === true ? 'o' : a?.correct === false ? 'x' : null;
         block.classList.toggle('is-right', v === 'o');
@@ -372,7 +385,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
             el('div.dq-marks', {}, mark('o', '○ 맞게 썼어요'), mark('x', '／ 빠뜨렸어요'))
           );
         }
-        hist.replaceChildren(tries.length ? histIcons(q) : '');
+        hist.replaceChildren(tries.length && !blank ? histIcons(q) : '');
       });
     }
     target.append(block);
@@ -387,6 +400,7 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
   const paintHead = () => {
     const t = current();
     historyBox.replaceChildren();
+    if (blank) { scoreField.textContent = ''; return; }
     if (tries.length) {
       historyBox.append(
         el('span.dq-history-label', { text: '기록' }),
