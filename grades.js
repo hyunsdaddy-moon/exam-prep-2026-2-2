@@ -6,9 +6,9 @@
  *   성적은 owner(문현)의 것이라 가족(비밀번호가 걸린 참여자)에게만 보여 준다.
  */
 
-import { el } from './dom.js?v=20261126-0709';
-import { getCurrentLearner } from './store.js?v=20261126-0709';
-import { isProtected } from './lock.js?v=20261126-0709';
+import { el } from './dom.js?v=20261126-0843';
+import { getCurrentLearner } from './store.js?v=20261126-0843';
+import { isProtected } from './lock.js?v=20261126-0843';
 
 const fmt = (n) => (n == null ? '–' : Number(n).toFixed(1));
 const signed = (n) => `${n > 0 ? '+' : n < 0 ? '−' : '±'}${Math.abs(n).toFixed(1)}`;
