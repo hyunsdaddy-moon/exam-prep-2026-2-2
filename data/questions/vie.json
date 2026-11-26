@@ -227,7 +227,7 @@
       "negative": false,
       "hasBogi": false,
       "level": "쉬움",
-      "stem": "빈칸에 알맞은 말은?\n\n> Nam và Kenji ___ thích nghe nhạc nhưng không thích đọc sách.",
+      "stem": "빈칸에 알맞은 말은?\n\n> Lan rất thích nghe nhạc và đọc sách. Nam và Kenji ___ thích nghe nhạc nhưng không thích đọc sách.",
       "choices": [
         "cũng",
         "đang",
@@ -347,7 +347,7 @@
       "negative": false,
       "hasBogi": false,
       "level": "보통",
-      "stem": "'나는 오토바이를 못 타요.'를 바르게 옮긴 것은?",
+      "stem": "'나는 (오토바이를) 못 타요.'를 교재 문형(không + 동사 + được)에 맞게 옮긴 것은?",
       "choices": [
         "Tôi chạy không được.",
         "Tôi không chạy được.",
@@ -557,7 +557,7 @@
       "negative": false,
       "hasBogi": false,
       "level": "어려움",
-      "stem": "어순이 바른 문장은?",
+      "stem": "교재 문형(동사 + thử)에 맞게 어순이 바른 문장은?",
       "choices": [
         "Chúng tôi muốn nấu thử món này.",
         "Chúng tôi nấu muốn thử món này.",

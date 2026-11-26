@@ -105,7 +105,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "보통",
-     "stem": "예/아니오 질문을 바르게 만든 것은?",
+     "stem": "교재 문형(có + 동사 + không?)에 맞게 예/아니오 질문을 만든 것은?",
      "choices": [
       "Bạn có thích cà phê không?",
       "Bạn thích cà phê không?",
@@ -390,7 +390,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "어려움",
-     "stem": "'오늘 형은 Lan 누나를 만나요?'를 바르게 옮긴 것은?",
+     "stem": "'오늘 형은 Lan 누나를 만나요?'를 교재 문형(có + 동사 + không?)에 맞게 옮긴 것은?",
      "choices": [
       "Hôm nay anh có gặp chị Lan không?",
       "Hôm nay anh không gặp chị Lan không?",
@@ -614,7 +614,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "어려움",
-     "stem": "어순이 바른 문장은?",
+     "stem": "교재 문형(동사 + thử)에 맞게 어순이 바른 문장은?",
      "choices": [
       "Mình uống muốn thử nước dừa.",
       "Mình muốn uống thử nước dừa.",

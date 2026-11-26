@@ -1070,7 +1070,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "쉬움",
-     "stem": "다음 시구에 주로 나타난 심상은?\n\n> 까마귀 가와가와 새며 울었소\n> — 김소월, 〈길〉",
+     "stem": "다음 시구에 주로 나타난 심상은?\n\n> 까마귀 가왁가왁 울며 새었소\n> — 김소월, 〈길〉",
      "choices": [
       "시각적 심상",
       "촉각적 심상",
@@ -1081,7 +1081,7 @@
      "answer": [
       3
      ],
-     "explanation": "'가와가와' 우는 까마귀 소리를 귀로 느끼게 하므로 청각적 심상이다.",
+     "explanation": "'가왁가왁' 우는 까마귀 소리를 귀로 느끼게 하므로 청각적 심상이다.",
      "video": {
       "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-kor-u4.mp4",
       "start": 8.9,
@@ -1816,7 +1816,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "어려움",
-     "stem": "다음 시구와 **같은 종류의 심상**이 쓰인 것은?\n\n> 해설피 금빛 게으른 울음을 우는 곳\n> — 정지용, 〈향수〉",
+     "stem": "다음 시구와 **감각을 옮겨 표현한 방향**(○○의 △△화)이 같은 것은?\n\n> 해설피 금빛 게으른 울음을 우는 곳\n> — 정지용, 〈향수〉",
      "choices": [
       "먼 산이 이마에 차라. (정지용, 〈춘설〉)",
       "물소리에 / 이가 시리다. (정지용, 〈조찬〉)",

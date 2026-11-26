@@ -1730,7 +1730,7 @@
      "type": "choice",
      "section": "04. 연습 문제 정답 정리",
      "level": "보통",
-     "stem": "빈칸에 알맞은 동사는? 'Chị có thích ______ sách không?'",
+     "stem": "빈칸에 알맞은 동사는? 'Chị có thích ______ sách không?' (뜻: 책 읽는 것을 좋아하세요?)",
      "choices": [
       "mua",
       "nghe",
@@ -1853,11 +1853,11 @@
       "Phúc Long",
       "Masa"
      ],
-     "answer": 1,
-     "explanation": "Vợ anh Nam rất thích ăn ngọt. Hôm nay là sinh nhật cô ấy.",
+     "answer": 2,
+     "explanation": "Vợ anh Nam rất thích ăn ngọt. Hôm nay là sinh nhật cô ấy. — cô ấy(그녀)는 vợ anh Nam(남 씨의 아내)이므로 아내의 생일이다.",
      "choiceNotes": [
-      "정답. 남 씨의 아내",
-      "남 씨가 아님",
+      "남 씨가 아니라 남 씨 아내의 생일",
+      "정답. cô ấy = vợ anh Nam (남 씨의 아내)",
       "나오지 않음",
       "가게 이름",
       "듣기 인물"

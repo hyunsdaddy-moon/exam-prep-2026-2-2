@@ -92,7 +92,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "어려움",
-     "stem": "평면 위의 다섯 점 $A, B, C, D, E$가 이 순서대로 볼록오각형의 꼭짓점을 이룬다. 다섯 선분 $\\overline{AC}, \\overline{CE}, \\overline{EB}, \\overline{BD}, \\overline{DA}$를 그어 별 모양을 만들었더니 별의 끝에 있는 다섯 각의 크기가 다음과 같았다.\n\n> $\\angle CAD = 32^\\circ$, $\\angle DBE = 28^\\circ$, $\\angle ACE = 40^\\circ$, $\\angle ADB = 36^\\circ$\n\n이때 $\\angle BEC$의 크기는?",
+     "stem": "평면 위의 다섯 점 $A, B, C, D, E$가 이 순서대로 볼록오각형의 꼭짓점을 이룬다. 다섯 선분 $\\overline{AC}, \\overline{CE}, \\overline{EB}, \\overline{BD}, \\overline{DA}$를 그어 별 모양을 만들었더니 별의 끝에 있는 다섯 각 중 네 각의 크기가 다음과 같았다.\n\n> $\\angle CAD = 32^\\circ$, $\\angle DBE = 28^\\circ$, $\\angle ACE = 40^\\circ$, $\\angle ADB = 36^\\circ$\n\n이때 $\\angle BEC$의 크기는?",
      "choices": [
       "$28^\\circ$",
       "$32^\\circ$",
@@ -257,23 +257,18 @@
      "negative": false,
      "hasBogi": false,
      "level": "보통",
-     "stem": "원 $O$에서 $\\angle AOB = 150^\\circ$이고 $\\overparen{AB}$의 길이는 $10\\text{ cm}$, 부채꼴 $AOB$의 넓이는 $45\\text{ cm}^2$이다. 같은 원에서 $\\overparen{CD}$의 길이가 $4\\text{ cm}$일 때, $\\angle COD$의 크기와 부채꼴 $COD$의 넓이를 차례대로 옳게 짝 지은 것은?",
+     "stem": "원 $O$에서 $\\angle AOB = 150^\\circ$이고 $\\overparen{AB}$의 길이는 $10\\pi\\text{ cm}$, 부채꼴 $AOB$의 넓이는 $60\\pi\\text{ cm}^2$이다. 같은 원에서 $\\overparen{CD}$의 길이가 $4\\pi\\text{ cm}$일 때, $\\angle COD$의 크기와 부채꼴 $COD$의 넓이를 차례대로 옳게 짝 지은 것은?",
      "choices": [
-      "$60^\\circ$, $18\\text{ cm}^2$",
-      "$60^\\circ$, $20\\text{ cm}^2$",
-      "$75^\\circ$, $18\\text{ cm}^2$",
-      "$75^\\circ$, $22.5\\text{ cm}^2$",
-      "$90^\\circ$, $27\\text{ cm}^2$"
+      "$60^\\circ$, $24\\pi\\text{ cm}^2$",
+      "$60^\\circ$, $20\\pi\\text{ cm}^2$",
+      "$75^\\circ$, $24\\pi\\text{ cm}^2$",
+      "$75^\\circ$, $30\\pi\\text{ cm}^2$",
+      "$90^\\circ$, $36\\pi\\text{ cm}^2$"
      ],
      "answer": [
       1
      ],
-     "explanation": "한 원에서 호의 길이와 부채꼴의 넓이는 모두 중심각의 크기에 정비례한다. $150 : x = 10 : 4$에서 $x = 60$이고, 넓이는 $45 \\times \\dfrac{4}{10} = 18\\text{ (cm}^2)$이다.",
-     "video": {
-      "src": "https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/sol-videos-v1/sol-un-mat-u1.mp4",
-      "start": 258.85,
-      "end": 292.6
-     }
+     "explanation": "한 원에서 호의 길이와 부채꼴의 넓이는 모두 중심각의 크기에 정비례한다. $150 : x = 10\\pi : 4\\pi$에서 $x = 60$이고, 넓이는 $60\\pi \\times \\dfrac{4}{10} = 24\\pi\\text{ (cm}^2)$이다. (이 원의 반지름은 $12\\text{ cm}$이다.)"
     },
     {
      "id": "mat-u1-09",
