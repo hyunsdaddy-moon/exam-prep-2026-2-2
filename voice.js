@@ -9,11 +9,16 @@
  *   켜지 않은 기기에서는 아무것도 하지 않는다 — 내 컴퓨터 주소를 부르면 브라우저가
  *   "로컬 네트워크 접근" 허락을 묻기 때문에, 다른 사람의 기기에서는 부르지 않는다.
  *
+ * 통화 중에는 AI 가 이 화면을 보고 움직일 수도 있다 (화면 보기·조작):
+ *   1.2초마다 지금 화면(보이는 문제·그림 주소·열린 해설)을 MultyAM 에 알리고, AI 가 시킨 조작을 받아 와 실행한다.
+ *   할 수 있는 조작은 runCommand 에 적힌 것뿐이다 — 보기·문제 이동·스크롤·해설·지문·화면 이동.
+ *   **답을 고르거나 제출하는 조작은 일부러 만들지 않았다.**
+ *
  * 다른 모듈을 고치지 않는다: 화면에 그려진 문제(article.q-card · article.p-q · li.dr-card)를 찾아
  * 버튼을 붙이고, 보낼 글도 화면에서 읽는다. 그래서 정답·해설은 채점한 뒤에만 함께 간다.
  */
 
-import { el, CIRCLED } from './dom.js?v=20261126-1015';
+import { el, CIRCLED } from './dom.js?v=20261126-1028';
 
 const KEY = 'examprep.voiceAsk';
 const BRIDGE = 'http://127.0.0.1:47611';
@@ -33,6 +38,7 @@ const CSS = `
 .q-head .va-ask { margin-left: auto; align-self: center; flex: none; }
 .p-stem .va-ask { flex: none; align-self: flex-start; width: 20px; height: 20px; font-size: 11px; margin-left: 2pt; }
 .va-ask.va-on { opacity: 1; background: var(--accent); border-color: var(--accent); }
+.va-flash { outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 4px; border-radius: 6px; transition: outline-color .4s; }
 .va-pill { position: fixed; right: 16px; bottom: 16px; z-index: 60; max-width: min(360px, calc(100vw - 32px)); display: flex; align-items: center; gap: 10px; padding: 10px 12px 10px 16px; border-radius: 999px; background: rgba(29, 29, 31, .92); color: #fff; font-size: 14px; box-shadow: var(--shadow); }
 .va-pill[hidden] { display: none; }
 .va-pill.va-error { background: #8a1c12; }
@@ -95,6 +101,12 @@ function contextOf(qNode, app) {
   return last && last.matches(CONTEXT_SEL) ? last : null;
 }
 
+/** 문제 번호표 — '3번', '서술형 1번' */
+function labelOf(qNode) {
+  const label = (qNode.querySelector('.q-no, .p-no, .dr-no')?.textContent || '').replace(/\s+/g, ' ').trim().replace(/\.$/, '');
+  return /^(서술형 )?\d+$/.test(label) ? `${label}번` : label.slice(0, 40);
+}
+
 /** 버튼이 붙은 문제 → MultyAM 에 보낼 내용 */
 export function questionPayload(qNode, app) {
   const images = [];
@@ -109,10 +121,9 @@ export function questionPayload(qNode, app) {
     if (passage.length > room) passage = `${passage.slice(0, Math.max(0, room))}…`;
     if (passage) text = `[지문] ${passage}\n[문제] ${text}`;
   }
-  const label = (qNode.querySelector('.q-no, .p-no, .dr-no')?.textContent || '').replace(/\s+/g, ' ').trim().replace(/\.$/, '');
   return {
     subject: document.title.replace(/\s*—\s*시험 준비\s*$/, '').slice(0, 60),
-    label: /^\d+$/.test(label) ? `${label}번` : label.slice(0, 40),
+    label: labelOf(qNode),
     text,
     images: [...new Set(images)].slice(0, 4),
     url: location.href.slice(0, 480),
@@ -206,12 +217,126 @@ export function initVoiceAsk() {
     pollTimer = active() ? setTimeout(poll, 1200) : 0;
   };
 
+  /* ── 통화 중 화면 보기·조작 ── */
+  let results = []; // 방금 한 조작의 결과 — 다음 알림 때 함께 보낸다
+  const questions = () => [...app.querySelectorAll(Q_SEL)];
+  const inView = (n) => { const r = n.getBoundingClientRect(); return r.bottom > 60 && r.top < window.innerHeight - 20; };
+  /** 지금 문제 — 🎙 를 누른 문제가 화면에 남아 있으면 그것, 아니면 화면 가운데에 가장 가까운 문제 */
+  const currentNode = () => {
+    if (askedNode?.isConnected && inView(askedNode)) return askedNode;
+    const mid = window.innerHeight / 2;
+    let best = null;
+    let gap = Infinity;
+    for (const n of questions()) {
+      const r = n.getBoundingClientRect();
+      if (!r.height) continue;
+      const d = r.top <= mid && r.bottom >= mid ? 0 : Math.min(Math.abs(r.top - mid), Math.abs(r.bottom - mid));
+      if (d < gap) { gap = d; best = n; }
+    }
+    return best;
+  };
+  const buildScreen = () => {
+    const all = questions();
+    const cur = currentNode();
+    const payload = cur ? questionPayload(cur, app) : null;
+    const dialog = document.querySelector('dialog.ex-dialog[open]');
+    return {
+      url: location.href.slice(0, 480),
+      title: document.title.slice(0, 110),
+      view: all.length === 0 ? '문제가 없는 화면' : all.length === 1 ? '한 문제씩 푸는 화면' : `시험지 화면 (${all.length}문항)`,
+      current: payload ? { label: payload.label, text: payload.text, images: payload.images } : undefined,
+      visible: all.filter((n) => n !== cur && inView(n)).slice(0, 5).map((n) => ({ label: labelOf(n), text: readableText(n).slice(0, 400) })),
+      labels: all.slice(0, 90).map(labelOf),
+      dialog: dialog ? readableText(dialog).slice(0, 1500) : '',
+      results,
+    };
+  };
+  const focusOn = (node) => {
+    askedNode?.querySelector('.va-ask')?.classList.remove('va-on');
+    askedNode = node;
+    node.querySelector('.va-ask')?.classList.add('va-on');
+    node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    node.classList.add('va-flash');
+    setTimeout(() => node.classList.remove('va-flash'), 1600);
+  };
+  /** AI 가 시킨 조작 하나. 여기 적힌 것만 한다 — 답 고르기·제출은 없다 */
+  const runCommand = (c) => {
+    const all = questions();
+    const cur = currentNode();
+    const i = cur ? all.indexOf(cur) : -1;
+    switch (c.action) {
+      case 'look':
+        return [true, ''];
+      case 'goto': {
+        const want = String(c.arg || '').replace(/\s+/g, '');
+        const node = all.find((n) => labelOf(n).replace(/\s+/g, '') === `${want}번`);
+        if (!node) return [false, `${c.arg}번 문제가 이 화면에 없다`];
+        focusOn(node);
+        return [true, ''];
+      }
+      case 'next':
+      case 'prev': {
+        const step = c.action === 'next' ? 1 : -1;
+        if (all.length > 1) {
+          const node = all[i + step];
+          if (!node) return [false, step > 0 ? '마지막 문제다' : '첫 문제다'];
+          focusOn(node);
+          return [true, ''];
+        }
+        if (step < 0) return [false, '한 문제씩 푸는 화면에서는 앞 문제로 돌아갈 수 없다'];
+        // 한 문제씩: 「다음 문제」·「건너뛰기」만 누른다 (결과 보기·채점은 누르지 않는다)
+        const btn = [...app.querySelectorAll('button')].find((b) => ['다음 문제', '건너뛰기'].includes(b.textContent.trim()) && !b.disabled);
+        if (!btn) return [false, '다음 문제로 가는 단추가 없다 (마지막 문제이거나 채점 전이다)'];
+        btn.click();
+        return [true, ''];
+      }
+      case 'scroll':
+        window.scrollBy({ top: (c.arg === 'up' ? -0.7 : 0.7) * window.innerHeight, behavior: 'smooth' });
+        return [true, ''];
+      case 'explain': {
+        const btn = cur?.querySelector('.ex-btn') || [...app.querySelectorAll('.a4-cont')].find((p) => p.a4Root === cur)?.querySelector('.ex-btn');
+        if (!btn) return [false, '이 문제에는 지금 누를 풀이 해설 단추가 없다 (채점한 뒤에 생기는 화면이 있다)'];
+        btn.click();
+        return [true, '해설 창을 열었다'];
+      }
+      case 'close': {
+        const d = document.querySelector('dialog.ex-dialog[open]');
+        if (!d) return [false, '열려 있는 해설 창이 없다'];
+        d.close();
+        return [true, ''];
+      }
+      case 'passage': {
+        const box = cur?.querySelector('details.q-context') || (cur && [...app.querySelectorAll('details.q-context')].filter((d) => d.compareDocumentPosition(cur) & Node.DOCUMENT_POSITION_FOLLOWING).pop());
+        if (!box) return [false, '이 문제에는 접어 둔 지문이 없다'];
+        box.open = !box.open;
+        box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        return [true, box.open ? '지문을 펼쳤다' : '지문을 접었다'];
+      }
+      case 'go':
+        if (!/^#\/[^\s]*$/.test(c.arg || '')) return [false, '갈 수 없는 주소다'];
+        location.hash = c.arg;
+        return [true, ''];
+      default:
+        return [false, '할 수 없는 조작이다'];
+    }
+  };
+  const CMD_NAME = { look: '보기', next: '다음', prev: '이전', goto: '문제', scroll: '스크롤', explain: '해설', close: '닫기', passage: '지문', go: '이동' };
+
   async function poll() {
     clearTimeout(pollTimer);
     try {
-      const s = await call('/voice/status');
-      if (s.app !== 'multyam') throw new Error('not multyam');
+      // 통화 중에는 화면을 알리고 조작을 받아 온다. 통화가 없을 때는 상태만 묻는다
+      const live = status.phase !== 'idle' && !sending;
+      let s = live ? await call('/voice/sync', { screen: buildScreen() }) : await call('/voice/status');
+      if (live && !s.phase) s = await call('/voice/status'); // 화면 알림을 모르는 예전 MultyAM — 상태만 묻는다
+      if (s.app !== 'multyam' && !s.phase) throw new Error('not multyam');
       connected = true;
+      if (live) results = [];
+      for (const c of Array.isArray(s.commands) ? s.commands.slice(0, 5) : []) {
+        let out;
+        try { out = runCommand(c); } catch { out = [false, '조작하다 오류가 났다']; }
+        results.push({ cmd: `${CMD_NAME[c.action] || c.action}${c.arg ? ` ${c.arg}` : ''}`, ok: out[0], note: out[1] });
+      }
       status = s;
     } catch {
       connected = false;
