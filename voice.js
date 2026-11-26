@@ -18,7 +18,7 @@
  * 버튼을 붙이고, 보낼 글도 화면에서 읽는다. 그래서 정답·해설은 채점한 뒤에만 함께 간다.
  */
 
-import { el, CIRCLED } from './dom.js?v=20261126-1748';
+import { el, CIRCLED } from './dom.js?v=20261126-1824';
 
 const KEY = 'examprep.voiceAsk';
 const BRIDGE = 'http://127.0.0.1:47611';
@@ -268,6 +268,18 @@ export function initVoiceAsk() {
     }
     return best;
   };
+  /** 학생이 마우스로 끌어 고른 글 — 이 사이트 안의 글만, 300자까지 */
+  const selectionInfo = () => {
+    const sel = window.getSelection?.();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return undefined;
+    const node = sel.getRangeAt(0).commonAncestorContainer;
+    const host = node.nodeType === 1 ? node : node.parentElement;
+    if (!host || !(app.contains(host) || host.closest('dialog')) || host.closest('input, textarea, .va-pill')) return undefined;
+    const text = sel.toString().replace(/\s+/g, ' ').trim().slice(0, 300);
+    if (!text) return undefined;
+    const q = host.closest(Q_SEL) || (sel.anchorNode?.parentElement?.closest(Q_SEL) ?? null);
+    return { text, label: q ? labelOf(q) : '' };
+  };
   const buildScreen = () => {
     const all = questions();
     const cur = currentNode();
@@ -281,6 +293,7 @@ export function initVoiceAsk() {
       visible: all.filter((n) => n !== cur && inView(n)).slice(0, 5).map((n) => ({ label: labelOf(n), text: readableText(n).slice(0, 400) })),
       labels: all.slice(0, 90).map(labelOf),
       dialog: dialog ? readableText(dialog).slice(0, 1500) : '',
+      selection: selectionInfo(),
       results,
     };
   };
