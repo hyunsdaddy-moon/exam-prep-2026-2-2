@@ -372,7 +372,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "보통",
-     "stem": "p.104 그림 (7) 학교 건물, (8) 회사 건물을 보고 바르게 말한 것은?",
+     "stem": "p.104 그림 (7) 학교 건물, (8) 회사 건물을 보고 바르게 말한 것은?\n\n![교재 p.104 그림](exam/베트남어_시험공부/images/vie_p104.webp)",
      "choices": [
       "Tôi đi trường. / Tôi đi công ty.",
       "Tôi đi đến trường. / Tôi đi đến công ty.",
@@ -400,7 +400,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "보통",
-     "stem": "p.104 그림 (4) **급식대에서 음식을 받는 아이들**을 보고 'Bạn đi đâu đấy?'에 알맞게 답한 것은?",
+     "stem": "p.104 그림 (4) **급식대에서 음식을 받는 아이들**을 보고 'Bạn đi đâu đấy?'에 알맞게 답한 것은?\n\n![교재 p.104 그림](exam/베트남어_시험공부/images/vie_p104.webp)",
      "choices": [
       "Tôi đi làm.",
       "Tôi đi học.",
@@ -456,7 +456,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "보통",
-     "stem": "p.105 그림 (4) **손짓하며 말하는 여자**를 보고 만든 질문으로 알맞은 것은?",
+     "stem": "p.105 그림 (4) **손짓하며 말하는 여자**를 보고 만든 질문으로 알맞은 것은?\n\n![교재 p.105 그림](exam/베트남어_시험공부/images/vie_p105.webp)",
      "choices": [
       "Bạn uống bia được không?",
       "Bạn hát được không?",
@@ -718,7 +718,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "보통",
-     "stem": "p.117 그림 (3) **식당 식탁에 앉아 무엇을 먹을지 떠올리는 사람**에게 권하는 말로 알맞은 것은?",
+     "stem": "p.117 그림 (3) **식당 식탁에 앉아 무엇을 먹을지 떠올리는 사람**에게 권하는 말로 알맞은 것은?\n\n![교재 p.117 그림 (Bạn … đi.)](exam/베트남어_시험공부/images/vie_p117_ban.webp)",
      "choices": [
       "Bạn uống cà phê đi.",
       "Bạn nghe nhạc đi.",
@@ -746,7 +746,7 @@
      "negative": false,
      "hasBogi": false,
      "level": "보통",
-     "stem": "p.117 그림 (7) **물음표를 띄우고 갸웃하는 아이**, (8) **책상에서 손 든 학생**에게 알맞은 말을 차례로 고른 것은?",
+     "stem": "p.117 그림 (7) **물음표를 띄우고 갸웃하는 아이**, (8) **책상에서 손 든 학생**에게 알맞은 말을 차례로 고른 것은?\n\n![교재 p.117 그림 (Bạn … đi.)](exam/베트남어_시험공부/images/vie_p117_ban.webp)",
      "choices": [
       "Bạn nghe nhạc đi. / Bạn trả lời đi.",
       "Bạn hỏi cô giáo đi. / Bạn trả lời đi.",
@@ -774,7 +774,7 @@
      "negative": true,
      "hasBogi": false,
      "level": "쉬움",
-     "stem": "p.117 그림과 권유하는 말이 **잘못** 짝지어진 것은?",
+     "stem": "p.117 그림과 권유하는 말이 **잘못** 짝지어진 것은?\n\n![교재 p.117 그림 (Bạn … đi.)](exam/베트남어_시험공부/images/vie_p117_ban.webp)",
      "choices": [
       "(5) 이어폰 낀 아이 — Bạn nói tiếng Việt đi.",
       "(2) 찻잔 든 할아버지 — Bạn uống cà phê đi.",

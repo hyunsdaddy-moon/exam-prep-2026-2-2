@@ -638,6 +638,11 @@ button.link:hover { text-decoration: underline; }
 .sheet .table-wrap { border: 0; border-radius: 0; margin: 0; overflow: visible; }
 .p-text pre, .p-context pre { font-size: 8.5pt; background: none; border: 0.5pt solid #888; padding: 5pt 7pt; white-space: pre-wrap; }
 .p-text code { background: none; padding: 0; font-size: 0.95em; }
+/* 문제 글 속 그림 (교재 그림 등) — 단 너비에 맞추고, 쪽 사이에서 잘리지 않게 */
+.p-text figure, .q-stem figure { margin: 6pt 0 4pt; break-inside: avoid; }
+.p-text figure img, .q-stem figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; border: 0.5pt solid #ccc; }
+.q-stem figure img { max-width: min(100%, 560px); }
+.p-text figcaption, .q-stem figcaption { font-size: 8.5pt; color: #666; text-align: center; margin-top: 2pt; }
 .p-choices { list-style: none; margin: 4pt 0 0; padding: 0 0 0 13pt; }
 .p-choices li { display: flex; gap: 5pt; margin: 1.5pt 0; }
 .p-choices li > span { flex: none; }
