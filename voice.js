@@ -18,7 +18,7 @@
  * 버튼을 붙이고, 보낼 글도 화면에서 읽는다. 그래서 정답·해설은 채점한 뒤에만 함께 간다.
  */
 
-import { el, CIRCLED } from './dom.js?v=20261126-1824';
+import { el, CIRCLED } from './dom.js?v=20261126-1833';
 
 const KEY = 'examprep.voiceAsk';
 const BRIDGE = 'http://127.0.0.1:47611';
@@ -245,9 +245,9 @@ export function initVoiceAsk() {
     errorTimer = setTimeout(() => { errorTimer = 0; paint(); }, 7000);
   };
 
-  const schedulePoll = () => {
+  const schedulePoll = (delay = 1200) => {
     clearTimeout(pollTimer);
-    pollTimer = active() ? setTimeout(poll, 1200) : 0;
+    pollTimer = active() ? setTimeout(poll, delay) : 0;
   };
 
   /* ── 통화 중 화면 보기·조작 ── */
@@ -297,11 +297,12 @@ export function initVoiceAsk() {
       results,
     };
   };
+  // AI 가 시킨 이동은 미끄러지지 않고 바로 옮긴다 — 옮기자마자 알리는 화면이 정확하다
   const focusOn = (node) => {
     askedNode?.querySelector('.va-ask')?.classList.remove('va-on');
     askedNode = node;
     node.querySelector('.va-ask')?.classList.add('va-on');
-    node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    node.scrollIntoView({ block: 'center', behavior: 'auto' });
     node.classList.add('va-flash');
     setTimeout(() => node.classList.remove('va-flash'), 1600);
   };
@@ -337,7 +338,7 @@ export function initVoiceAsk() {
         return [true, ''];
       }
       case 'scroll':
-        window.scrollBy({ top: (c.arg === 'up' ? -0.7 : 0.7) * window.innerHeight, behavior: 'smooth' });
+        window.scrollBy({ top: (c.arg === 'up' ? -0.7 : 0.7) * window.innerHeight, behavior: 'auto' });
         return [true, ''];
       case 'explain': {
         const btn = cur?.querySelector('.ex-btn') || [...app.querySelectorAll('.a4-cont')].find((p) => p.a4Root === cur)?.querySelector('.ex-btn');
@@ -368,8 +369,24 @@ export function initVoiceAsk() {
   };
   const CMD_NAME = { look: '보기', next: '다음', prev: '이전', goto: '문제', scroll: '스크롤', explain: '해설', close: '닫기', passage: '지문', go: '이동' };
 
+  /** 받아 온 조작을 하고 결과를 모은다. 한 것이 있으면 true */
+  const runCommands = (s) => {
+    const list = Array.isArray(s?.commands) ? s.commands.slice(0, 5) : [];
+    for (const c of list) {
+      let out;
+      try { out = runCommand(c); } catch { out = [false, '조작하다 오류가 났다']; }
+      results.push({ cmd: `${CMD_NAME[c.action] || c.action}${c.arg ? ` ${c.arg}` : ''}`, ok: out[0], note: out[1] });
+    }
+    return list.length > 0;
+  };
+
+  let polling = false;
   async function poll() {
+    if (polling) return; // 붙잡힌 알림이 돌아오면 이어서 본다 — 두 줄로 겹쳐 돌지 않게
+    polling = true;
     clearTimeout(pollTimer);
+    let ran = false;
+    const sent = [...results];
     try {
       // 통화 중에는 화면을 알리고 조작을 받아 온다. 통화가 없을 때는 상태만 묻는다
       const live = status.phase !== 'idle' && !sending;
@@ -377,21 +394,35 @@ export function initVoiceAsk() {
       if (live && !s.phase) s = await call('/voice/status'); // 화면 알림을 모르는 예전 MultyAM — 상태만 묻는다
       if (s.app !== 'multyam' && !s.phase) throw new Error('not multyam');
       connected = true;
-      if (live) results = [];
-      for (const c of Array.isArray(s.commands) ? s.commands.slice(0, 5) : []) {
-        let out;
-        try { out = runCommand(c); } catch { out = [false, '조작하다 오류가 났다']; }
-        results.push({ cmd: `${CMD_NAME[c.action] || c.action}${c.arg ? ` ${c.arg}` : ''}`, ok: out[0], note: out[1] });
-      }
+      if (live) results = results.filter((r) => !sent.includes(r)); // 알린 결과만 지운다
+      ran = runCommands(s);
       status = s;
     } catch {
       connected = false;
       status = { phase: 'idle' };
     }
+    polling = false;
     paint();
     decorate();
-    schedulePoll();
+    // 새 MultyAM 은 조작이 올 때까지 알림을 붙잡았다 돌려준다(hold) — 받자마자 다시 알린다.
+    // 조작을 했으면 화면이 바뀔 틈만 주고 결과를 알린다. 예전 MultyAM 은 1.2초마다
+    schedulePoll(status.hold && status.phase !== 'idle' ? (ran ? 250 : 60) : 1200);
   }
+
+  // 통화 중에 학생이 화면을 옮기거나 글을 고르면, 붙잡힌 알림을 기다리지 않고 바로 한 번 더 알린다
+  let nudgeTimer = 0;
+  const nudge = () => {
+    if (!status.hold || status.phase === 'idle' || sending) return;
+    clearTimeout(nudgeTimer);
+    nudgeTimer = setTimeout(async () => {
+      try {
+        const s = await call('/voice/sync', { screen: buildScreen(), nowait: true });
+        if (runCommands(s)) schedulePoll(250);
+      } catch { /* 다음 알림이 다시 본다 */ }
+    }, 200);
+  };
+  window.addEventListener('scroll', nudge, { passive: true });
+  document.addEventListener('selectionchange', nudge);
 
   async function ask(node) {
     if (sending) return;

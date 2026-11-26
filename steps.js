@@ -8,9 +8,9 @@
  * 기록은 새로 만들지 않는다. 이미 있는 풀이 기록(merged)과 이 기기의 확인 문제 표시만 읽는다.
  */
 
-import { getCurrentLearner } from './store.js?v=20261126-1824';
-import { summarize } from './grade.mjs?v=20261126-1824';
-import { syncDrillMarks } from './drill.js?v=20261126-1824';
+import { getCurrentLearner } from './store.js?v=20261126-1833';
+import { summarize } from './grade.mjs?v=20261126-1833';
+import { syncDrillMarks } from './drill.js?v=20261126-1833';
 
 const DRILL_KEY = 'examprep.2026-2-2.drill';
 const DOCQUIZ_ROUND = 40; // docquiz.js 와 같은 값
