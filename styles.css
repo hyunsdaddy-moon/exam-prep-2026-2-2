@@ -219,6 +219,14 @@ a.chip:hover { text-decoration: none; background: var(--line-soft); }
 .doc th, .doc td { padding: 10px 14px; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
 .doc th { background: var(--bg-soft); font-weight: 600; white-space: nowrap; }
 .doc tr:last-child td { border-bottom: 0; }
+/* 베트남어 단어표: 뜻 칸 아래 접히는 연상 암기법 */
+.doc details.mnemo { margin-top: 6px; font-size: 13px; line-height: 1.5; }
+.doc details.mnemo > summary { display: inline-block; cursor: pointer; list-style: none; padding: 1px 9px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent-text, var(--accent)); font-weight: 600; font-size: 12px; user-select: none; }
+.doc details.mnemo > summary::-webkit-details-marker { display: none; }
+.doc details.mnemo[open] > summary { background: var(--accent); color: #fff; }
+.doc details.mnemo[open] { padding: 8px 10px; margin-top: 6px; border-radius: 10px; background: var(--bg-soft); color: var(--text); white-space: normal; }
+.doc details.mnemo[open] > summary { margin-bottom: 6px; }
+@media print { .doc details.mnemo { display: none; } }
 .doc .diagram { background: var(--bg-soft); border-radius: var(--radius-s); padding: 20px; margin: 0 0 20px; overflow-x: auto; text-align: center; }
 .doc .diagram svg { max-width: 100%; height: auto; }
 .doc figure { margin: 28px 0; }

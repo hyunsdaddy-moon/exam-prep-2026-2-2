@@ -21,65 +21,65 @@ flowchart TD
 
 
 ### 1) 동작 (무엇을 하고 있나?) — p.90
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **học** | 공부하다 | Em ấy đang học. (그 아이는 공부하고 있어요.) |
-| **làm việc** | 일하다 | Anh ấy đang làm việc. (그는 일하고 있어요.) |
-| **ăn cơm** | 밥을 먹다 | Chị ấy đang ăn cơm. (그녀는 밥을 먹고 있어요.) |
-| **đọc sách** | 책을 읽다 | Em ấy đang đọc sách. (그 아이는 책을 읽고 있어요.) |
-| **nghe nhạc** | 음악을 듣다 | Em ấy đang nghe nhạc. (그 아이는 음악을 듣고 있어요.) |
-| **xem ti vi** | TV를 보다 | Em ấy đang xem ti vi. (그 아이는 TV를 보고 있어요.) |
-| **làm thêm** | 아르바이트하다 | Tôi làm thêm ở nhà hàng. (나는 식당에서 아르바이트해요.) |
-| **uống cà phê** | 커피를 마시다 | Tôi uống cà phê ở tiệm cà phê. (나는 카페에서 커피를 마셔요.) |
-| **học tiếng Việt** | 베트남어를 공부하다 | Tôi học tiếng Việt ở trường đại học. |
-| ngủ | 자다 | Con chó đang ngủ rất ngon. (개가 아주 푹 자고 있어요.) |
-| lên mạng mua sắm | 인터넷 쇼핑하다 | Anh ấy đang lên mạng mua sắm. |
-| học tiếng Anh | 영어를 공부하다 | Nam và Lan đang học tiếng Anh. |
-| chạy bộ | 달리기하다, 조깅하다 | Anh ấy thích chạy bộ. (그는 달리기를 좋아해요.) |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **học** | 혹 | 공부하다 <details class="mnemo"><summary>💡 외우기</summary>공부를 너무 열심히 해서 책상에 머리를 박고 '혹'이 났다! 혹 = 공부하다</details> | Em ấy đang học. (그 아이는 공부하고 있어요.) |
+| **làm việc** | 람 비엑 | 일하다 <details class="mnemo"><summary>💡 외우기</summary>일을 너무 많이 해서 '남(람)의 비애(비엑)'까지 느끼는 회사원, 람 비엑 = 일하다</details> | Anh ấy đang làm việc. (그는 일하고 있어요.) |
+| **ăn cơm** | 안 껌 | 밥을 먹다 <details class="mnemo"><summary>💡 외우기</summary>배고파서 밥상 '안'으로 달려가 씹던 '껌'부터 뱉고 밥을 먹는다! 안 껌 = 밥을 먹다</details> | Chị ấy đang ăn cơm. (그녀는 밥을 먹고 있어요.) |
+| **đọc sách** | 독 싸익 | 책을 읽다 <details class="mnemo"><summary>💡 외우기</summary>'독'서실에서 책을 읽으며 '싸익' 페이지를 넘긴다, 독 싸익 = 책을 읽다</details> | Em ấy đang đọc sách. (그 아이는 책을 읽고 있어요.) |
+| **nghe nhạc** | 응애 냑 | 음악을 듣다 <details class="mnemo"><summary>💡 외우기</summary>아기가 '응애' 울다가 음악을 들려주니 '냑냑' 신나게 웃는다, 응애 냑 = 음악을 듣다</details> | Em ấy đang nghe nhạc. (그 아이는 음악을 듣고 있어요.) |
+| **xem ti vi** | 쌤 띠 비 | TV를 보다 <details class="mnemo"><summary>💡 외우기</summary>'쌤'이 쉬는 시간에 '띠비(TV)'를 몰래 본다! 쌤 띠 비 = TV를 보다</details> | Em ấy đang xem ti vi. (그 아이는 TV를 보고 있어요.) |
+| **làm thêm** | 람 템 | 아르바이트하다 <details class="mnemo"><summary>💡 외우기</summary>알바생이 '남(람)는 템(아이템)' 사려고 아르바이트한다, 람 템 = 아르바이트하다</details> | Tôi làm thêm ở nhà hàng. (나는 식당에서 아르바이트해요.) |
+| **uống cà phê** | 우옹 까 페 | 커피를 마시다 <details class="mnemo"><summary>💡 외우기</summary>커피가 너무 써서 '우웅~' 하며 카페(까 페)에서 마신다, 우옹 까 페 = 커피를 마시다</details> | Tôi uống cà phê ở tiệm cà phê. (나는 카페에서 커피를 마셔요.) |
+| **học tiếng Việt** | 혹 띠엥 비엣 | 베트남어를 공부하다 <details class="mnemo"><summary>💡 외우기</summary>공부(혹)해서 베트남 말(띠엥 비엣)을 배운다, 혹 띠엥 비엣 = 베트남어를 공부하다</details> | Tôi học tiếng Việt ở trường đại học. |
+| ngủ | 응우 | 자다 <details class="mnemo"><summary>💡 외우기</summary>밤 12시, 졸린 동생이 '응우~' 하고 기지개를 켜더니 바로 잠들었다, 응우 = 자다</details> | Con chó đang ngủ rất ngon. (개가 아주 푹 자고 있어요.) |
+| lên mạng mua sắm | 렌 망 무어 쌈 | 인터넷 쇼핑하다 <details class="mnemo"><summary>💡 외우기</summary>인터넷에 올라가(렌) 망(網)에서 뭐(무어) 살까(쌈) 고르는 중, 렌 망 무어 쌈 = 인터넷 쇼핑하다</details> | Anh ấy đang lên mạng mua sắm. |
+| học tiếng Anh | 혹 띠엥 아잉 | 영어를 공부하다 <details class="mnemo"><summary>💡 외우기</summary>공부(혹)해서 영어(띠엥 아잉)를 잘하면 '아잉~' 하고 칭찬받는다, 혹 띠엥 아잉 = 영어를 공부하다</details> | Nam và Lan đang học tiếng Anh. |
+| chạy bộ | 짜이 보 | 달리기하다, 조깅하다 <details class="mnemo"><summary>💡 외우기</summary>달리다가 '짜이(차이)' 나게 앞서가는 걸 '보'여주자! 짜이 보 = 달리기하다, 조깅하다</details> | Anh ấy thích chạy bộ. (그는 달리기를 좋아해요.) |
 
 ### 2) 장소 (어디에서?) — p.91, p.97
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **nhà** | 집 | Mình xem ti vi ở nhà. (나는 집에서 TV를 봐.) |
-| **nhà hàng** | 식당, 레스토랑 | Tôi làm thêm ở nhà hàng. |
-| **căn tin** | 구내식당(매점) | Tôi đang ăn cơm ở căn tin. |
-| **tiệm cà phê** | 카페, 커피숍 | Tôi uống cà phê ở tiệm cà phê. |
-| **thư viện** | 도서관 | Tôi đọc sách ở thư viện. |
-| **trường đại học** | 대학교 | Tôi học tiếng Việt ở trường đại học. |
-| công ty | 회사 | Anh ấy đang ở công ty. |
-| Trung tâm Việt - Mỹ | 베트남-미국 센터(어학원) | Nam và Lan học tiếng Anh ở Trung tâm Việt - Mỹ. |
-| quán cà phê | 카페 | Họ gặp nhau ở quán cà phê Sách. |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **nhà** | 냐 | 집 <details class="mnemo"><summary>💡 외우기</summary>학교 끝나고 집에 오니 고양이가 '냐~' 하고 반겨 준다, 우리 집 냐! 냐 = 집</details> | Mình xem ti vi ở nhà. (나는 집에서 TV를 봐.) |
+| **nhà hàng** | 냐 항 | 식당, 레스토랑 <details class="mnemo"><summary>💡 외우기</summary>집(냐)에 항상(항) 밥이 없으면 식당에 간다, nhà 집 vs nhà hàng 식당! 냐 항 = 식당</details> | Tôi làm thêm ở nhà hàng. |
+| **căn tin** | 깐 띤 | 구내식당(매점) <details class="mnemo"><summary>💡 외우기</summary>매점에서 '깐 땅콩' 하나 사서 '띤띤' 씹는다, 깐 띤 = 구내식당, 매점</details> | Tôi đang ăn cơm ở căn tin. |
+| **tiệm cà phê** | 띠엠 까 페 | 카페, 커피숍 <details class="mnemo"><summary>💡 외우기</summary>가게(띠엠) 중에 커피(까 페) 파는 가게, 띠엠 까 페 = 카페, 커피숍</details> | Tôi uống cà phê ở tiệm cà phê. |
+| **thư viện** | 트 비엔 | 도서관 <details class="mnemo"><summary>💡 외우기</summary>도서관에선 트림도 '비엔(비밀)'처럼 몰래 조용히 해야 한다! 트 비엔 = 도서관</details> | Tôi đọc sách ở thư viện. |
+| **trường đại học** | 쯔엉 다이 혹 | 대학교 <details class="mnemo"><summary>💡 외우기</summary>학교(쯔엉) 중에 크고(다이) 공부(혹)하는 곳, 쯔엉 다이 혹 = 대학교</details> | Tôi học tiếng Việt ở trường đại học. |
+| công ty | 꽁 띠 | 회사 <details class="mnemo"><summary>💡 외우기</summary>아빠가 회사에서 '꽁'짜 '티'셔츠를 받아 오셨다, 회사 최고! 꽁 띠 = 회사</details> | Anh ấy đang ở công ty. |
+| Trung tâm Việt - Mỹ | 쭝 떰 비엣 미 | 베트남-미국 센터(어학원) <details class="mnemo"><summary>💡 외우기</summary>센터(쭝 떰)에서 베트남(비엣)과 미국(미)을 함께 배운다, 쭝 떰 비엣 미 = 베트남-미국 센터</details> | Nam và Lan học tiếng Anh ở Trung tâm Việt - Mỹ. |
+| quán cà phê | 꽌 까 페 | 카페 <details class="mnemo"><summary>💡 외우기</summary>골목 가게(꽌)에서 커피(까 페)를 파니까 카페, 꽌 까 페 = 카페 (tiệm cà phê도 카페)</details> | Họ gặp nhau ở quán cà phê Sách. |
 
 > ⚠️ **nhà**(집) ≠ **nhà hàng**(식당). hàng 하나 붙으면 완전히 다른 곳!
 
 ### 3) 정도·상태 형용사 — p.94
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **hơi** | 조금, 약간 (형용사 **앞**) | Tôi hơi mệt. (나는 조금 피곤해.) |
-| **rất** | 매우, 아주 (형용사 **앞**) | Bánh mì này rất ngon. (이 빵은 아주 맛있어.) |
-| **lắm** | 매우, 아주 (형용사 **뒤**) | Em đói lắm. (저 너무 배고파요.) |
-| đói | 배고프다 | Bây giờ em đói lắm. |
-| mệt | 피곤하다 | Hôm nay tôi hơi mệt. |
-| khát | 목마르다 | Tôi không khát lắm. (별로 목마르지 않아요.) |
-| khó | 어렵다 | Tiếng Việt không khó lắm. (베트남어는 별로 어렵지 않아.) |
-| ngon | 맛있다 / (잠을) 푹 | Bánh mì này rất ngon. |
-| vui | 즐겁다 | Họ nói chuyện rất vui. |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **hơi** | 허이 | 조금, 약간 (형용사 **앞**) <details class="mnemo"><summary>💡 외우기</summary>약간 놀라서 '허이?' 하고 살짝 고개를 든다, 허이 = 조금, 약간 (형용사 앞)</details> | Tôi hơi mệt. (나는 조금 피곤해.) |
+| **rất** | 젓 | 매우, 아주 (형용사 **앞**) <details class="mnemo"><summary>💡 외우기</summary>새우'젓'처럼 매우매우 짜다! 형용사 앞에 붙여서 rất ngon = 매우 맛있다, 젓 = 매우</details> | Bánh mì này rất ngon. (이 빵은 아주 맛있어.) |
+| **lắm** | 람 | 매우, 아주 (형용사 **뒤**) <details class="mnemo"><summary>💡 외우기</summary>'남(람)'다 싶을 만큼 매우 많다, 형용사 뒤에 붙는 람 = 매우, 아주</details> | Em đói lắm. (저 너무 배고파요.) |
+| đói | 도이 | 배고프다 <details class="mnemo"><summary>💡 외우기</summary>점심 전 4교시, 배가 고파서 '도'저히 못 참겠'이'! 배꼽시계 울림, 도이 = 배고프다</details> | Bây giờ em đói lắm. |
+| mệt | 멧 | 피곤하다 <details class="mnemo"><summary>💡 외우기</summary>시험공부로 밤새서 '멧'돼지처럼 침대에 털썩 쓰러졌다, 너무 피곤해! 멧 = 피곤하다</details> | Hôm nay tôi hơi mệt. |
+| khát | 캇 | 목마르다 <details class="mnemo"><summary>💡 외우기</summary>목이 말라서 물 마시고 '캇!' 하고 시원한 소리를 낸다, 캇 = 목마르다</details> | Tôi không khát lắm. (별로 목마르지 않아요.) |
+| khó | 커 | 어렵다 <details class="mnemo"><summary>💡 외우기</summary>수학 마지막 문제가 너무 어려워서 '커억!' 하고 숨이 막혔다, 커 = 어렵다</details> | Tiếng Việt không khó lắm. (베트남어는 별로 어렵지 않아.) |
+| ngon | 응온 | 맛있다 / (잠을) 푹 <details class="mnemo"><summary>💡 외우기</summary>쌀국수 한 입 먹고 '응! 온'몸이 녹을 만큼 맛있다! 잠도 푹 잔다, 응온 = 맛있다 / 푹</details> | Bánh mì này rất ngon. |
+| vui | 부이 | 즐겁다 <details class="mnemo"><summary>💡 외우기</summary>방학식 날 너무 즐거워서 친구들과 '부이부이' 엉덩이 춤을 췄다, 부이 = 즐겁다</details> | Họ nói chuyện rất vui. |
 
 ### 4) 읽기 지문 단어 — p.97
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **người bạn** | 친구 | Kenji có hai người bạn Việt Nam. |
-| **còn** | 한편, ~는(대조) | Còn Kenji học tiếng Việt. (한편 Kenji는 베트남어를 공부해.) |
-| **cũng** | ~도 또한 | Nam và Kenji cũng thích nghe nhạc. |
-| **nhưng** | 그러나, 하지만 | …nhưng không thích đọc sách. |
-| **thích** | 좋아하다 | Lan rất thích nghe nhạc. |
-| chơi game | 게임하다 | Hai bạn ấy rất thích chơi game. |
-| **gặp nhau** | 서로 만나다 | Họ gặp nhau ở quán cà phê. |
-| **nói chuyện** | 이야기하다 | Họ đang nói chuyện rất vui. |
-| đi học | 학교에 가다 | Hôm nay họ không đi học. |
-| **hôm nay** | 오늘 | Hôm nay, Kenji, Nam và Lan không đi học. |
-| **bây giờ** | 지금 | Bây giờ họ đang uống cà phê. |
-| **họ** | 그들 | Họ đang làm gì? (그들은 뭐 하고 있어?) |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **người bạn** | 응어이 반 | 친구 <details class="mnemo"><summary>💡 외우기</summary>사람(응어이) 중에 내 반쪽(반) 같은 소중한 사람이 바로 친구, 응어이 반 = 친구</details> | Kenji có hai người bạn Việt Nam. |
+| **còn** | 꼰 | 한편, ~는(대조) <details class="mnemo"><summary>💡 외우기</summary>나는 피자, '꼰(한편)' 너는? 하고 꼰지르듯 대조한다, 꼰 = 한편, ~는</details> | Còn Kenji học tiếng Việt. (한편 Kenji는 베트남어를 공부해.) |
+| **cũng** | 꿍 | ~도 또한 <details class="mnemo"><summary>💡 외우기</summary>친구가 빙판에서 '꿍' 넘어지자 나도 또한 '꿍'! 둘 다 엉덩방아, 꿍 = ~도 또한</details> | Nam và Kenji cũng thích nghe nhạc. |
+| **nhưng** | 녕 | 그러나, 하지만 <details class="mnemo"><summary>💡 외우기</summary>'안녕~' 하고 인사했지만 하지만 아직 집에 가기 싫다, '녕' = 그러나, 하지만</details> | …nhưng không thích đọc sách. |
+| **thích** | 틱 | 좋아하다 <details class="mnemo"><summary>💡 외우기</summary>좋아하는 아이돌만 보면 심장이 '틱틱' 뛰고 눈이 반짝인다, 틱 = 좋아하다</details> | Lan rất thích nghe nhạc. |
+| chơi game | 쩌이 겜 | 게임하다 <details class="mnemo"><summary>💡 외우기</summary>놀기(쩌이) 좋아하는 내가 제일 신나는 건 겜(게임)! 쩌이 겜 = 게임하다</details> | Hai bạn ấy rất thích chơi game. |
+| **gặp nhau** | 갑 냐우 | 서로 만나다 <details class="mnemo"><summary>💡 외우기</summary>복도에서 '갑'자기 서로 만나서 둘 다 '냐우~' 고양이 인사를 했다, 갑 냐우 = 서로 만나다</details> | Họ gặp nhau ở quán cà phê. |
+| **nói chuyện** | 노이 쭈옌 | 이야기하다 <details class="mnemo"><summary>💡 외우기</summary>수다쟁이 친구가 '노'는 '이'야기를 '쭈욱' 끝없이 이어간다, 노이 쭈옌 = 이야기하다</details> | Họ đang nói chuyện rất vui. |
+| đi học | 디 혹 | 학교에 가다 <details class="mnemo"><summary>💡 외우기</summary>가방 메고 '디'딩동 학교에 가서 공부(혹)한다, 가다(디)+공부(혹), 디 혹 = 학교에 가다</details> | Hôm nay họ không đi học. |
+| **hôm nay** | 홈 나이 | 오늘 <details class="mnemo"><summary>💡 외우기</summary>오늘은 '홈(집)'에서 '나이'스하게 뒹굴뒹굴 쉬는 날! 홈 나이 = 오늘</details> | Hôm nay, Kenji, Nam và Lan không đi học. |
+| **bây giờ** | 버이 저 | 지금 <details class="mnemo"><summary>💡 외우기</summary>'버'스가 '이'제 '저'기 온다, 바로 지금 뛰어! 버이 저 = 지금</details> | Bây giờ họ đang uống cà phê. |
+| **họ** | 허 | 그들 <details class="mnemo"><summary>💡 외우기</summary>그들이 한꺼번에 우르르 몰려와서 나는 '허!' 하고 깜짝 놀랐다, 허 = 그들</details> | Họ đang làm gì? (그들은 뭐 하고 있어?) |
 
 ## 02. 핵심 문법·문형 (교재 p.90·91·94)
 

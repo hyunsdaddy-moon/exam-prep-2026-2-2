@@ -23,60 +23,60 @@ flowchart TD
 
 
 ### 1) 교재 단어장 (p.112)
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **bây giờ** | 지금 | **Bây giờ** chúng tôi đang đi taxi về nhà. (지금 우리는 택시 타고 집에 가는 중이다.) |
-| **chạy xe máy** | 오토바이를 타다(몰다) | Anh ấy rất thích **chạy xe máy**. (그는 오토바이 타는 걸 아주 좋아한다.) |
-| **chờ** | 기다리다 | Tôi **chờ** bạn tôi ở sân bay. (나는 공항에서 친구를 기다린다.) |
-| **đón** | (사람을) 마중하다, 데리러 가다 | Tôi đi sân bay **đón** bạn. (나는 친구를 마중하러 공항에 간다.) |
-| **được** | ~할 수 있다, ~해도 되다 | Tôi ngồi đây **được không**? (여기 앉아도 돼요?) |
-| **gọi** | 부르다, 전화하다 | |
-| **hay** | 재미있다 | |
-| **hẹn** | 약속하다 | **Hẹn** gặp lại. (또 만나자.) |
-| **lại** | 다시 | Hẹn gặp **lại**. (다시 만나요.) |
-| **mắc** | (값이) 비싸다 | Nhà hàng này ngon nhưng hơi **mắc**. (이 식당은 맛있지만 좀 비싸다.) |
-| **mệt** | 피곤하다 | |
-| **một chút** | 조금, 약간 | Em nói được **một chút**. (저는 조금 말할 수 있어요.) |
-| **nấu** | 요리하다, (밥을) 짓다 | Hôm nay mẹ có **nấu** cơm không? |
-| **nhà hàng** | 식당, 레스토랑 | |
-| **ngồi** | 앉다 | Tôi **ngồi** đây được không? |
-| **nóng** | 뜨겁다, 덥다 | Tôi uống trà **nóng**. (나는 뜨거운 차를 마신다.) |
-| **sân bay** | 공항 | Chị đi **sân bay** Tân Sơn Nhất, phải không? |
-| **sau đó** | 그 다음에, 그 후 | Tôi mua cà phê, **sau đó** đi bộ đến công ty. |
-| **siêu thị** | 슈퍼마켓, 마트 | Ở một tiệm ăn gần **siêu thị** Aeon. |
-| **sống** | 살다 | |
-| **thích** | 좋아하다 | Tôi không **thích** cà phê sữa đá lắm. |
-| **tiệm ăn** | (작은) 식당 | Lan làm thêm ở một **tiệm ăn**. |
-| **tiếng Anh** | 영어 | Cô ấy nói được **tiếng Anh**. |
-| **trà đá** | 아이스티(얼음 넣은 차) | |
-| **xe buýt** | 버스 | Anh ấy không thích đi **xe buýt**. |
-| **xong** | 끝내다, 다 하다 | |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **bây giờ** | 버이 저 | 지금 <details class="mnemo"><summary>💡 외우기</summary>'버'스가 '이'제 '저'기 온다, 바로 지금 뛰어! 버이 저 = 지금</details> | **Bây giờ** chúng tôi đang đi taxi về nhà. (지금 우리는 택시 타고 집에 가는 중이다.) |
+| **chạy xe máy** | 짜이 쌔 마이 | 오토바이를 타다(몰다) <details class="mnemo"><summary>💡 외우기</summary>오토바이를 타면 '짜'릿하게 '쌔'(새)처럼 '마이' 달린다, 짜이 쌔 마이 = 오토바이를 타다</details> | Anh ấy rất thích **chạy xe máy**. (그는 오토바이 타는 걸 아주 좋아한다.) |
+| **chờ** | 쩌 | 기다리다 <details class="mnemo"><summary>💡 외우기</summary>엄마를 기다리다 지쳐서 '쩌~기 언제 와?' 하고 계속 묻는다, 쩌 = 기다리다</details> | Tôi **chờ** bạn tôi ở sân bay. (나는 공항에서 친구를 기다린다.) |
+| **đón** | 돈 | (사람을) 마중하다, 데리러 가다 <details class="mnemo"><summary>💡 외우기</summary>친구를 데리러 공항에 '돈' 들고 마중 나간다, 돈 = 마중하다, 데리러 가다</details> | Tôi đi sân bay **đón** bạn. (나는 친구를 마중하러 공항에 간다.) |
+| **được** | 드억 | ~할 수 있다, ~해도 되다 <details class="mnemo"><summary>💡 외우기</summary>'드디어 억!' 하고 해냈다, 할 수 있다! 드억 = ~할 수 있다, ~해도 되다</details> | Tôi ngồi đây **được không**? (여기 앉아도 돼요?) |
+| **gọi** | 고이 | 부르다, 전화하다 <details class="mnemo"><summary>💡 외우기</summary>보고 싶은 친구 이름을 '고이' 불러 보고 바로 전화를 건다, 고이 = 부르다, 전화하다</details> | |
+| **hay** | 하이 | 재미있다 <details class="mnemo"><summary>💡 외우기</summary>수업이 너무 재미있어서 친구랑 '하이~' 하이파이브를 했다! 하이 = 재미있다</details> | |
+| **hẹn** | 핸 | 약속하다 <details class="mnemo"><summary>💡 외우기</summary>친구랑 약속하고 '핸'드폰 달력에 바로 저장! 약속은 핸드폰에, 핸 = 약속하다</details> | **Hẹn** gặp lại. (또 만나자.) |
+| **lại** | 라이 | 다시 <details class="mnemo"><summary>💡 외우기</summary>콘서트에서 앵콜! 한 번 더 '라이'브로 다시 불러 주세요! 라이 = 다시</details> | Hẹn gặp **lại**. (다시 만나요.) |
+| **mắc** | 막 | (값이) 비싸다 <details class="mnemo"><summary>💡 외우기</summary>신발 가격표를 보고 너무 비싸서 숨이 '막' 막혔다, 막 = (값이) 비싸다</details> | Nhà hàng này ngon nhưng hơi **mắc**. (이 식당은 맛있지만 좀 비싸다.) |
+| **mệt** | 멧 | 피곤하다 <details class="mnemo"><summary>💡 외우기</summary>시험공부로 밤새서 '멧'돼지처럼 침대에 털썩 쓰러졌다, 너무 피곤해! 멧 = 피곤하다</details> | |
+| **một chút** | 못 쭛 | 조금, 약간 <details class="mnemo"><summary>💡 외우기</summary>매운 음식을 '못' 먹겠다며 혀끝으로 '쭛' 조금만 맛본다, 못 쭛 = 조금, 약간</details> | Em nói được **một chút**. (저는 조금 말할 수 있어요.) |
+| **nấu** | 너우 | 요리하다, (밥을) 짓다 <details class="mnemo"><summary>💡 외우기</summary>요리하는 '너'를 보고 '우'와~ 냄새 진짜 좋다! 너우 = 요리하다, (밥을) 짓다</details> | Hôm nay mẹ có **nấu** cơm không? |
+| **nhà hàng** | 냐 항 | 식당, 레스토랑 <details class="mnemo"><summary>💡 외우기</summary>집(냐)에 항상(항) 밥이 없으면 식당에 간다, nhà 집 vs nhà hàng 식당! 냐 항 = 식당</details> | |
+| **ngồi** | 응오이 | 앉다 <details class="mnemo"><summary>💡 외우기</summary>너무 다리 아파서 '응, 오이'처럼 축 늘어져 의자에 털썩 앉는다, 응오이 = 앉다</details> | Tôi **ngồi** đây được không? |
+| **nóng** | 농 | 뜨겁다, 덥다 <details class="mnemo"><summary>💡 외우기</summary>호치민 한낮에 너무 더워서 땀이 '농'구공만큼 흐른다, 농 = 뜨겁다, 덥다</details> | Tôi uống trà **nóng**. (나는 뜨거운 차를 마신다.) |
+| **sân bay** | 썬 바이 | 공항 <details class="mnemo"><summary>💡 외우기</summary>공항에서 '썬'글라스 끼고 '바이바이' 손 흔들며 비행기 타러 간다, 썬 바이 = 공항</details> | Chị đi **sân bay** Tân Sơn Nhất, phải không? |
+| **sau đó** | 싸우 도 | 그 다음에, 그 후 <details class="mnemo"><summary>💡 외우기</summary>'싸우'고 나서 그 다음에 '도'로 화해한다, 싸우 도 = 그 다음에, 그 후</details> | Tôi mua cà phê, **sau đó** đi bộ đến công ty. |
+| **siêu thị** | 씨에우 티 | 슈퍼마켓, 마트 <details class="mnemo"><summary>💡 외우기</summary>슈퍼에서 '씨'앗 '에'다 '우'유, '티'까지 산다, 씨에우 티 = 슈퍼마켓, 마트</details> | Ở một tiệm ăn gần **siêu thị** Aeon. |
+| **sống** | 쏭 | 살다 <details class="mnemo"><summary>💡 외우기</summary>베트남에서 '쏭(song)', 노래를 부르며 즐겁게 산다, 쏭 = 살다 (xong 끝내다와 성조 구별)</details> | |
+| **thích** | 틱 | 좋아하다 <details class="mnemo"><summary>💡 외우기</summary>좋아하는 아이돌만 보면 심장이 '틱틱' 뛰고 눈이 반짝인다, 틱 = 좋아하다</details> | Tôi không **thích** cà phê sữa đá lắm. |
+| **tiệm ăn** | 띠엠 안 | (작은) 식당 <details class="mnemo"><summary>💡 외우기</summary>가게(띠엠)에서 먹는다(안)! 골목의 작은 밥집, 띠엠 안 = (작은) 식당</details> | Lan làm thêm ở một **tiệm ăn**. |
+| **tiếng Anh** | 띠엥 아잉 | 영어 <details class="mnemo"><summary>💡 외우기</summary>영어를 잘하면 선생님이 '아잉~ 잘했어' 하고 칭찬해 주신다, 띠엥 아잉 = 영어</details> | Cô ấy nói được **tiếng Anh**. |
+| **trà đá** | 짜 다 | 아이스티(얼음 넣은 차) <details class="mnemo"><summary>💡 외우기</summary>얼음 넣은 차를 마시면 '짜'릿하게 속이 '다' 시원하다, 짜 다 = 아이스티</details> | |
+| **xe buýt** | 쌔 뷧 | 버스 <details class="mnemo"><summary>💡 외우기</summary>버스가 '쌔'(새)처럼 '뷧' 하고 빠르게 지나가 버렸다, 쌔 뷧 = 버스</details> | Anh ấy không thích đi **xe buýt**. |
+| **xong** | 쏭 | 끝내다, 다 하다 <details class="mnemo"><summary>💡 외우기</summary>숙제를 '쏭' 하고 순식간에 끝내 버렸다! 이제 놀자, 쏭 = 끝내다, 다 하다</details> | |
 
 ### 2) 본문·그림에 나온 장소·행동 단어
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **thư viện** | 도서관 | Lan đang đi đến **thư viện**. |
-| **căn tin** | 매점, 구내식당 | Mình đi đến **căn tin** mua nước. |
-| **bệnh viện** | 병원 | Ông ấy đang đi **bệnh viện**. |
-| **chợ** | 시장 | Chúng tôi đang đi **chợ**. |
-| **công ty** | 회사 | Công ty của tôi ở gần đó. |
-| **trường** | 학교 | Tôi (đi) đến **trường**. |
-| **nhà bạn** | 친구 집 | Tôi (đi) đến **nhà bạn**. |
-| **về nhà** | 집에 돌아가다 | Tôi đi **về nhà**. |
-| **đi làm** | 일하러 가다, 출근하다 | Tôi **đi làm**. |
-| **đi học** | 공부하러 가다, 등교하다 | Các em ấy **đi học**. |
-| **làm thêm** | 아르바이트하다 | Lan **làm thêm** ở đâu? |
-| **sinh nhật** | 생일 | Hôm nay là **sinh nhật** của Kenji. |
-| **đi du lịch** | 여행 가다 | Chị **đi du lịch** à? |
-| **đi bộ** | 걸어가다 | sau đó **đi bộ** đến công ty |
-| **xuống** | 내리다 | Tôi **xuống** ở đây, được không? |
-| **tài xế (taxi)** | (택시) 기사 | |
-| **uống bia** | 맥주를 마시다 | Bạn uống bia được không? |
-| **ăn sầu riêng** | 두리안을 먹다 | |
-| **nói tiếng Anh** | 영어를 말하다 | |
-| **nấu ăn** | 요리하다 | |
-| **hát** | 노래하다 | |
-| **cà phê sữa đá** | 아이스 연유 커피 | Bạn tôi uống **cà phê sữa đá**. |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **thư viện** | 트 비엔 | 도서관 <details class="mnemo"><summary>💡 외우기</summary>도서관에선 트림도 '비엔(비밀)'처럼 몰래 조용히 해야 한다! 트 비엔 = 도서관</details> | Lan đang đi đến **thư viện**. |
+| **căn tin** | 깐 띤 | 매점, 구내식당 <details class="mnemo"><summary>💡 외우기</summary>매점에서 '깐 땅콩' 하나 사서 '띤띤' 씹는다, 깐 띤 = 매점, 구내식당</details> | Mình đi đến **căn tin** mua nước. |
+| **bệnh viện** | 베잉 비엔 | 병원 <details class="mnemo"><summary>💡 외우기</summary>'배'가 아파서 '잉잉~' 울며 엄마 손 잡고 병원에 간다, 베잉 비엔 = 병원</details> | Ông ấy đang đi **bệnh viện**. |
+| **chợ** | 쩌 | 시장 <details class="mnemo"><summary>💡 외우기</summary>시장 아주머니가 '쩌~기 싸요, 쩌기!' 하고 손짓하며 외친다, 쩌 = 시장</details> | Chúng tôi đang đi **chợ**. |
+| **công ty** | 꽁 띠 | 회사 <details class="mnemo"><summary>💡 외우기</summary>아빠가 회사에서 '꽁'짜 '티'셔츠를 받아 오셨다, 회사 최고! 꽁 띠 = 회사</details> | Công ty của tôi ở gần đó. |
+| **trường** | 쯔엉 | 학교 <details class="mnemo"><summary>💡 외우기</summary>아침마다 학교 종이 '쯔엉~ 쯔엉~' 울리면 지각할까 봐 뛴다, 쯔엉 = 학교</details> | Tôi (đi) đến **trường**. |
+| **nhà bạn** | 냐 반 | 친구 집 <details class="mnemo"><summary>💡 외우기</summary>집(냐)에 놀러 갔더니 친구(반)가 반겨 준다, 집+친구, 냐 반 = 친구 집</details> | Tôi (đi) đến **nhà bạn**. |
+| **về nhà** | 베 냐 | 집에 돌아가다 <details class="mnemo"><summary>💡 외우기</summary>'배'고파서 수업 끝나자마자 집(냐)으로 달려 돌아간다, 베 냐 = 집에 돌아가다</details> | Tôi đi **về nhà**. |
+| **đi làm** | 디 람 | 일하러 가다, 출근하다 <details class="mnemo"><summary>💡 외우기</summary>일하러 '디'딩동 '남(람)' 회사로 간다, 디 람 = 일하러 가다, 출근하다</details> | Tôi **đi làm**. |
+| **đi học** | 디 혹 | 공부하러 가다, 등교하다 <details class="mnemo"><summary>💡 외우기</summary>공부(혹)하러 '디'딩동 학교에 간다, 디 혹 = 공부하러 가다, 등교하다</details> | Các em ấy **đi học**. |
+| **làm thêm** | 람 템 | 아르바이트하다 <details class="mnemo"><summary>💡 외우기</summary>알바생이 '남(람)는 템(아이템)' 사려고 아르바이트한다, 람 템 = 아르바이트하다</details> | Lan **làm thêm** ở đâu? |
+| **sinh nhật** | 씽 녓 | 생일 <details class="mnemo"><summary>💡 외우기</summary>생일 케이크 촛불이 '씽' 꺼지면 '녓(넷)'살 더 먹는다? 씽 녓 = 생일</details> | Hôm nay là **sinh nhật** của Kenji. |
+| **đi du lịch** | 디 주 릭 | 여행 가다 <details class="mnemo"><summary>💡 외우기</summary>'디'딩동 짐 싸서 '주'말에 '릭'(리조트)으로 놀러 간다! 디 주 릭 = 여행 가다</details> | Chị **đi du lịch** à? |
+| **đi bộ** | 디 보 | 걸어가다 <details class="mnemo"><summary>💡 외우기</summary>가다(디) + 걷기(보)! '디보디보' 하며 한 걸음씩 걸어서 간다, 디 보 = 걸어가다</details> | sau đó **đi bộ** đến công ty |
+| **xuống** | 쑤옹 | 내리다 <details class="mnemo"><summary>💡 외우기</summary>버스가 서자 미끄럼틀 타듯 '쑤웅~' 하고 계단을 내린다, 쑤옹 = 내리다</details> | Tôi **xuống** ở đây, được không? |
+| **tài xế (taxi)** | 따이 쎄 | (택시) 기사 <details class="mnemo"><summary>💡 외우기</summary>택시 기사님이 '타!(따이)' 하고 '쎄'게 출발한다, 따이 쎄 = (택시) 기사</details> | |
+| **uống bia** | 우옹 비어 | 맥주를 마시다 <details class="mnemo"><summary>💡 외우기</summary>어른들이 '우옹~' 하며 시원하게 비어(beer)를 마신다, 우옹 비어 = 맥주를 마시다</details> | Bạn uống bia được không? |
+| **ăn sầu riêng** | 안 써우 지엥 | 두리안을 먹다 <details class="mnemo"><summary>💡 외우기</summary>두리안 냄새에 '안 써우(싸우)'고 '지엥(징)'하게 참고 먹는다, 안 써우 지엥 = 두리안을 먹다</details> | |
+| **nói tiếng Anh** | 노이 띠엥 아잉 | 영어를 말하다 <details class="mnemo"><summary>💡 외우기</summary>영어로 말하면(노이) '아잉~' 하고 칭찬받는다, 노이 띠엥 아잉 = 영어를 말하다</details> | |
+| **nấu ăn** | 너우 안 | 요리하다 <details class="mnemo"><summary>💡 외우기</summary>요리하는(너우) 엄마 옆에서 먹을(안) 걸 기다린다, 너우+안, 너우 안 = 요리하다</details> | |
+| **hát** | 핫 | 노래하다 <details class="mnemo"><summary>💡 외우기</summary>무대에서 노래하는 가수 실력이 진짜 '핫'하다! 박수 짝짝, 핫 = 노래하다</details> | |
+| **cà phê sữa đá** | 까 페 쓰어 다 | 아이스 연유 커피 <details class="mnemo"><summary>💡 외우기</summary>커피(까 페)에 우유(쓰어)와 얼음(다)을 '다' 넣었다, 까 페 쓰어 다 = 아이스 연유 커피</details> | Bạn tôi uống **cà phê sữa đá**. |
 
 ## 02. 핵심 문법·문형 (교재 p.103, p.112~113 E. Ghi chú ngữ pháp)
 

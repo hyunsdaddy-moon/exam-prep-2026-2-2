@@ -7,29 +7,29 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261126-1051';
-import { el, versioned } from './dom.js?v=20261126-1051';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261126-1051';
-import { renderUnitsRoute } from './units.js?v=20261126-1051';
-import { buildDocQuiz } from './docquiz.js?v=20261126-1051';
-import { attachDrills } from './drill.js?v=20261126-1051';
-import { attachWatchBoxes } from './watch.js?v=20261126-1051';
-import { renderDashboard } from './dashboard.js?v=20261126-1051';
-import { renderGrades } from './grades.js?v=20261126-1051';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261126-1051';
-import { renderAssessRoute } from './assess.js?v=20261126-1051';
-import { renderPastRoute } from './past.js?v=20261126-1051';
-import { renderWrongbook } from './wrongbook.js?v=20261126-1051';
-import { renderBoard } from './board.js?v=20261126-1051';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261126-1051';
-import { loadStudy } from './study.js?v=20261126-1051';
-import { renderPrint, printLinks } from './print.js?v=20261126-1051';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261126-1051';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261126-1051';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261126-1051';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261126-1051';
-import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261126-1051';
-import { initVoiceAsk } from './voice.js?v=20261126-1051';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261126-1353';
+import { el, versioned } from './dom.js?v=20261126-1353';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261126-1353';
+import { renderUnitsRoute } from './units.js?v=20261126-1353';
+import { buildDocQuiz } from './docquiz.js?v=20261126-1353';
+import { attachDrills } from './drill.js?v=20261126-1353';
+import { attachWatchBoxes } from './watch.js?v=20261126-1353';
+import { renderDashboard } from './dashboard.js?v=20261126-1353';
+import { renderGrades } from './grades.js?v=20261126-1353';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261126-1353';
+import { renderAssessRoute } from './assess.js?v=20261126-1353';
+import { renderPastRoute } from './past.js?v=20261126-1353';
+import { renderWrongbook } from './wrongbook.js?v=20261126-1353';
+import { renderBoard } from './board.js?v=20261126-1353';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261126-1353';
+import { loadStudy } from './study.js?v=20261126-1353';
+import { renderPrint, printLinks } from './print.js?v=20261126-1353';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261126-1353';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261126-1353';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261126-1353';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261126-1353';
+import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261126-1353';
+import { initVoiceAsk } from './voice.js?v=20261126-1353';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');

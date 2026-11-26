@@ -13,9 +13,9 @@
  *       (Firestore 규칙을 바꾸지 않으려고 영상 시청 'v:' 과 같은 방식으로 끼워 넣었다.)
  */
 
-import { el } from './dom.js?v=20261126-1051';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-1051';
-import { recordLearner } from './grade.mjs?v=20261126-1051';
+import { el } from './dom.js?v=20261126-1353';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-1353';
+import { recordLearner } from './grade.mjs?v=20261126-1353';
 
 const KEY = 'examprep.2026-2-2.drill';
 const files = new Map();

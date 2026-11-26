@@ -23,107 +23,107 @@ flowchart TD
 
 
 ### 1) 장소·기본 표현
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **món (ăn)** | 음식, 요리 | Món này ngon lắm. (이 음식 정말 맛있어.) |
-| **thức uống** | 음료, 마실 것 | Cách nói về các món ăn, thức uống. (음식과 음료에 대해 말하는 법) |
-| **nước** | 물; 음료(주스 등) | Nước này gọi là nước gì? (이 음료는 뭐라고 해?) |
-| **gọi là** | ~라고 부르다 | Món này gọi là chả giò. (이 음식은 짜조라고 해.) |
-| **tiếng Việt** | 베트남어 | Món này tiếng Việt gọi là gì? |
-| **tiệm ăn** | (작은) 음식점 | Trong một tiệm ăn gần trường đại học. (대학교 근처 한 음식점에서) |
-| **tiệm giải khát** | 음료 가게, 카페 | Ye Ji và Long đang ở một tiệm giải khát. |
-| **quán cà phê** | 카페 | Quán cà phê đó thế nào? |
-| **nhà hàng** | 식당, 레스토랑 | Chúng ta đến nhà hàng đó đi! |
-| **thực đơn** | 메뉴(차림표) | Bạn xem thực đơn đi. |
-| **cho mình hỏi một chút** | 좀 물어볼게 | Mai ơi, cho mình hỏi một chút. |
-| **mình** | 나 (친구 사이) | Mình muốn ăn thử hai món này. |
-| **thử** | (동사 뒤) ~해 보다 | Mình muốn uống thử. (마셔 보고 싶어.) |
-| **thích** | 좋아하다 | Mình rất thích. (나 정말 좋아해.) |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **món (ăn)** | 몬 (안) | 음식, 요리 <details class="mnemo"><summary>💡 외우기</summary>맛있는 요리를 보면 '몬'참겠다! 음식 앞에서는 아무도 못 참아서 món은 음식이다.</details> | Món này ngon lắm. (이 음식 정말 맛있어.) |
+| **thức uống** | 특 우옹 | 음료, 마실 것 <details class="mnemo"><summary>💡 외우기</summary>'특'별한 '우옹'(우유+옹달샘) 음료! 마실 것은 특별하게 thức uống이라고 외우자.</details> | Cách nói về các món ăn, thức uống. (음식과 음료에 대해 말하는 법) |
+| **nước** | 느억 | 물; 음료(주스 등) <details class="mnemo"><summary>💡 외우기</summary>목이 말라 '느억느억' 물을 들이켰다! 물이나 주스는 모두 nước(느억)이다.</details> | Nước này gọi là nước gì? (이 음료는 뭐라고 해?) |
+| **gọi là** | 고이 라 | ~라고 부르다 <details class="mnemo"><summary>💡 외우기</summary>'고이' 간직한 강아지를 '라'라라 부르며 이름을 부른다. ~라고 부르다는 gọi là!</details> | Món này gọi là chả giò. (이 음식은 짜조라고 해.) |
+| **tiếng Việt** | 띠엥 비엣 | 베트남어 <details class="mnemo"><summary>💡 외우기</summary>베트남어 발음이 '띠엥' 하고 튕겨 나가자 친구가 '비엣'(비켜)! 하고 웃었다.</details> | Món này tiếng Việt gọi là gì? |
+| **tiệm ăn** | 띠엠 안 | (작은) 음식점 <details class="mnemo"><summary>💡 외우기</summary>작은 음식점에서 '띠엠'(팀) 친구들이 '안'(앉아서) 밥을 먹는다. 작은 식당은 tiệm ăn!</details> | Trong một tiệm ăn gần trường đại học. (대학교 근처 한 음식점에서) |
+| **tiệm giải khát** | 띠엠 자이 칻 | 음료 가게, 카페 <details class="mnemo"><summary>💡 외우기</summary>목마른 '띠엠'(팀)원이 '자이 칻'(자, 이 컵!) 하고 음료 가게로 달려간다.</details> | Ye Ji và Long đang ở một tiệm giải khát. |
+| **quán cà phê** | 꽌 까 페 | 카페 <details class="mnemo"><summary>💡 외우기</summary>카페 문을 '꽌'(쾅) 열고 들어가 '까 페'(카페)라고 외쳤다. 카페는 quán cà phê!</details> | Quán cà phê đó thế nào? |
+| **nhà hàng** | 냐 항 | 식당, 레스토랑 <details class="mnemo"><summary>💡 외우기</summary>레스토랑에 고양이가 '냐' 하고 들어오자 사장님이 '항'(흥)! 식당은 nhà hàng이다.</details> | Chúng ta đến nhà hàng đó đi! |
+| **thực đơn** | 특 던 | 메뉴(차림표) <details class="mnemo"><summary>💡 외우기</summary>메뉴판을 펼치니 '특'별 메뉴가 '던'(돈)가스! 차림표는 thực đơn이다.</details> | Bạn xem thực đơn đi. |
+| **cho mình hỏi một chút** | 쪼 밍 호이 못 쭛 | 좀 물어볼게 <details class="mnemo"><summary>💡 외우기</summary>'쪼'(좀) 물어볼게! '밍'(민)지가 '호이' 손 흔들며 '못 쭛'(못 찾겠어) 하고 묻는다.</details> | Mai ơi, cho mình hỏi một chút. |
+| **mình** | 밍 | 나 (친구 사이) <details class="mnemo"><summary>💡 외우기</summary>친구끼리 나를 가리킬 때 '밍'(민망)하게 웃으며 내 가슴을 콕! 나는 mình이다.</details> | Mình muốn ăn thử hai món này. |
+| **thử** | 트 | (동사 뒤) ~해 보다 <details class="mnemo"><summary>💡 외우기</summary>새 음식을 맛볼 때 혀를 '트'(틔워) 한 번 해 본다! ~해 보다는 thử(트).</details> | Mình muốn uống thử. (마셔 보고 싶어.) |
+| **thích** | 틱 | 좋아하다 <details class="mnemo"><summary>💡 외우기</summary>좋아하는 아이돌을 보면 심장이 '틱'(틱틱) 뛴다! 좋아하다는 thích(틱).</details> | Mình rất thích. (나 정말 좋아해.) |
 
 ### 2) 음식·음료 이름
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **chả giò** | 짜조(튀긴 스프링롤) | À, đây là món chả giò. |
-| **bánh xèo** | 반쎄오(베트남식 부침개) | Còn món đó gọi là gì? – Bánh xèo. |
-| **phở** | 쌀국수(퍼) | Món phở này thế nào? |
-| **bún chả** | 분짜(숯불고기 국수) | Món này tiếng Việt gọi là bún chả. |
-| **bún bò Huế** | 분보후에(후에식 매운 소고기 국수) | Bún bò Huế cay lắm. |
-| **hủ tiếu** | 후띠우(남부식 쌀국수) | Món này gọi là hủ tiếu. |
-| **bún đậu** | 분더우(쌀국수+두부 튀김) | Em thích ăn bún đậu không? |
-| **bánh mì** | 반미(베트남 샌드위치), 빵 | Bánh mì ngon lắm. |
-| **cơm gà** | 닭고기 덮밥 | Các bạn có ăn cơm gà không? |
-| **nước cam** | 오렌지 주스 | Nước cam hơi chua. |
-| **nước cam cà rốt** | 오렌지 당근 주스 | Đây là nước cam cà rốt. |
-| **nước dừa** | 코코넛 주스 | Nước đó gọi là nước dừa. |
-| **sinh tố** | 스무디(과일 셰이크) | Món này tiếng Việt gọi là sinh tố. |
-| **trà sữa** | 밀크티 | Trà sữa hơi ngọt. |
-| **trà đá** | 아이스티(차가운 차) | Cơm gà và trà đá. |
-| **cà phê sữa** | 연유 커피 | Cà phê sữa ngọt lắm. |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **chả giò** | 짜 저 | 짜조(튀긴 스프링롤) <details class="mnemo"><summary>💡 외우기</summary>짜조를 한 입 물었더니 '짜'(짜고) '저'(저절로) 손이 간다! 튀긴 롤은 chả giò.</details> | À, đây là món chả giò. |
+| **bánh xèo** | 바잉 쌔오 | 반쎄오(베트남식 부침개) <details class="mnemo"><summary>💡 외우기</summary>반쎄오를 '바잉'(반)으로 접으니 속이 '쌔오'(새우)로 가득! 바삭한 부침개 bánh xèo.</details> | Còn món đó gọi là gì? – Bánh xèo. |
+| **phở** | 퍼 | 쌀국수(퍼) <details class="mnemo"><summary>💡 외우기</summary>쌀국수를 국자로 '퍼'서 담는다! 국물을 푹푹 퍼 먹는 쌀국수는 phở(퍼)다.</details> | Món phở này thế nào? |
+| **bún chả** | 분 짜 | 분짜(숯불고기 국수) <details class="mnemo"><summary>💡 외우기</summary>숯불고기 국수를 먹다가 '분'(분명히) '짜'(짜)다고 했는데 또 먹는다! bún chả.</details> | Món này tiếng Việt gọi là bún chả. |
+| **bún bò Huế** | 분 보 후에 | 분보후에(후에식 매운 소고기 국수) <details class="mnemo"><summary>💡 외우기</summary>매운 국수 먹고 '분'(분노)한 얼굴로 '보'니 '후에'(후에) 입에서 불이 난다!</details> | Bún bò Huế cay lắm. |
+| **hủ tiếu** | 후 띠에우 | 후띠우(남부식 쌀국수) <details class="mnemo"><summary>💡 외우기</summary>남부 쌀국수를 '후'루룩 먹고 '띠에우'(티 안 나게) 한 그릇 더! hủ tiếu.</details> | Món này gọi là hủ tiếu. |
+| **bún đậu** | 분 더우 | 분더우(쌀국수+두부 튀김) <details class="mnemo"><summary>💡 외우기</summary>두부 튀김 국수를 먹고 '분'(분명) '더우'(더워)서 땀이 줄줄! bún đậu다.</details> | Em thích ăn bún đậu không? |
+| **bánh mì** | 바잉 미 | 반미(베트남 샌드위치), 빵 <details class="mnemo"><summary>💡 외우기</summary>빵을 '바잉'(반) 갈라 '미'(미소)를 넣으면 반미 완성! 베트남 샌드위치 bánh mì.</details> | Bánh mì ngon lắm. |
+| **cơm gà** | 껌 가 | 닭고기 덮밥 <details class="mnemo"><summary>💡 외우기</summary>닭고기 덮밥 먹다가 '껌'(검)은 닭이 '가'(가)버렸다! 닭고기 덮밥은 cơm gà.</details> | Các bạn có ăn cơm gà không? |
+| **nước cam** | 느억 깜 | 오렌지 주스 <details class="mnemo"><summary>💡 외우기</summary>오렌지 주스를 '느억느억' 마시니 너무 시어서 눈이 '깜'(깜빡)! nước cam.</details> | Nước cam hơi chua. |
+| **nước cam cà rốt** | 느억 깜 까 좃 | 오렌지 당근 주스 <details class="mnemo"><summary>💡 외우기</summary>오렌지 주스에 당근을 넣으니 눈이 '깜'빡, 토끼가 '까 좃'(까 줘)! 하고 조른다.</details> | Đây là nước cam cà rốt. |
+| **nước dừa** | 느억 즈어 | 코코넛 주스 <details class="mnemo"><summary>💡 외우기</summary>코코넛 주스를 '느억느억' 마시고 '즈어'(좋아)! 하고 외쳤다. nước dừa다.</details> | Nước đó gọi là nước dừa. |
+| **sinh tố** | 씽 또 | 스무디(과일 셰이크) <details class="mnemo"><summary>💡 외우기</summary>과일 스무디를 마시니 기분이 '씽'씽, '또' 마시고 싶다! 스무디는 sinh tố.</details> | Món này tiếng Việt gọi là sinh tố. |
+| **trà sữa** | 짜 쓰어 | 밀크티 <details class="mnemo"><summary>💡 외우기</summary>밀크티가 너무 '짜'(짜)다며 '쓰어'(써)! 하고 우유를 더 넣었다. 밀크티는 trà sữa.</details> | Trà sữa hơi ngọt. |
+| **trà đá** | 짜 다 | 아이스티(차가운 차) <details class="mnemo"><summary>💡 외우기</summary>아이스티에 얼음이 '짜'르르 '다'(다) 녹았다! 차가운 차는 trà đá(짜 다).</details> | Cơm gà và trà đá. |
+| **cà phê sữa** | 까 페 쓰어 | 연유 커피 <details class="mnemo"><summary>💡 외우기</summary>연유 커피를 '까 페'(카페)에서 마셨는데 연유가 없으면 '쓰어'(써)! cà phê sữa.</details> | Cà phê sữa ngọt lắm. |
 
 ### 3) 맛·상태 형용사
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **ngon** | 맛있다 | Ngon lắm. (정말 맛있어.) |
-| **ngọt** | 달다 | Trà sữa rất ngọt. |
-| **chua** | 시다 | Nước cam hơi chua. |
-| **cay** | 맵다 | Kim chi không cay lắm. |
-| **đắng** | 쓰다 | Cà phê này có đắng lắm không? |
-| **đẹp** | 예쁘다, 멋지다 | Quán đó đẹp lắm. |
-| **tốt** | 좋다 | Cái điện thoại đó rất tốt. |
-| **khó** | 어렵다 | Quyển sách này rất khó. |
-| **to** | 크다 | Cái túi xách đó hơi to. |
-| **mắc** | 비싸다(남부 말) | Cà phê Starbuck mắc lắm. |
-| **mệt** | 피곤하다 | Các bạn mệt rồi, phải không? |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **ngon** | 응온 | 맛있다 <details class="mnemo"><summary>💡 외우기</summary>맛있는 걸 먹으면 '응~온'(응, 온몸이) 녹는다! 맛있다는 ngon(응온).</details> | Ngon lắm. (정말 맛있어.) |
+| **ngọt** | 응옷 | 달다 <details class="mnemo"><summary>💡 외우기</summary>단 사탕을 먹고 '응옷'(응, 오!) 하고 감탄했다! 꿀처럼 달다는 ngọt이다.</details> | Trà sữa rất ngọt. |
+| **chua** | 쭈어 | 시다 <details class="mnemo"><summary>💡 외우기</summary>신 레몬을 먹고 입을 '쭈어'(쭈욱) 오므렸다! 시다는 chua(쭈어).</details> | Nước cam hơi chua. |
+| **cay** | 까이 | 맵다 <details class="mnemo"><summary>💡 외우기</summary>매운 고추를 먹고 '까이'(까악)! 소리를 질렀다. 맵다는 cay(까이).</details> | Kim chi không cay lắm. |
+| **đắng** | 당 | 쓰다 <details class="mnemo"><summary>💡 외우기</summary>약이 너무 써서 '당'(당장) 사탕을 찾아 입에 넣었다! 맛이 쓰다는 đắng(당).</details> | Cà phê này có đắng lắm không? |
+| **đẹp** | 뎁 | 예쁘다, 멋지다 <details class="mnemo"><summary>💡 외우기</summary>예쁜 옷을 입고 '뎁'(데뷔)하는 아이돌처럼 멋지다! 예쁘다는 đẹp(뎁).</details> | Quán đó đẹp lắm. |
+| **tốt** | 똣 | 좋다 <details class="mnemo"><summary>💡 외우기</summary>좋은 성적을 받고 기분이 '똣'(똑) 소리 나게 좋다! 좋다는 tốt(똣).</details> | Cái điện thoại đó rất tốt. |
+| **khó** | 코 | 어렵다 <details class="mnemo"><summary>💡 외우기</summary>어려운 문제를 보면 '코'를 찡그리고 한숨을 쉬게 된다! 어렵다는 khó(코).</details> | Quyển sách này rất khó. |
+| **to** | 또 | 크다 <details class="mnemo"><summary>💡 외우기</summary>크다! 큰 떡볶이를 먹고 '또' 먹고 싶다고 외쳤다. 크다는 to(또).</details> | Cái túi xách đó hơi to. |
+| **mắc** | 막 | 비싸다(남부 말) <details class="mnemo"><summary>💡 외우기</summary>너무 비싸서 가격표를 보고 '막'(막) 놀라 뒤로 넘어졌다! 남부에서 비싸다는 mắc(막).</details> | Cà phê Starbuck mắc lắm. |
+| **mệt** | 멧 | 피곤하다 <details class="mnemo"><summary>💡 외우기</summary>너무 피곤해서 '멧'(멧돼지)처럼 쓰러져 잤다! 피곤하다는 mệt(멧).</details> | Các bạn mệt rồi, phải không? |
 
 ### 4) 동작 동사 (Bài tập 1.2, 2.2)
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **ăn cơm** | 밥 먹다 | Bạn ăn cơm đi. |
-| **uống cà phê** | 커피 마시다 | Bạn uống cà phê đi. |
-| **nghe nhạc** | 음악 듣다 | Họ không thích nghe nhạc. |
-| **xem phim** | 영화 보다 | Chúng ta đi xem phim đi! |
-| **đọc sách** | 책 읽다 | Chị có thích đọc sách không? |
-| **mua** | 사다 | Tôi mua túi xách ở Vincom. |
-| **nấu** | 요리하다 | Chúng tôi muốn nấu thử món này. |
-| **trả lời** | 대답하다 | Bạn trả lời đi. |
-| **hỏi cô giáo** | 선생님께 묻다 | Bạn hỏi cô giáo đi. |
-| **nghỉ** | 쉬다 | Chúng ta nghỉ một chút! |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **ăn cơm** | 안 껌 | 밥 먹다 <details class="mnemo"><summary>💡 외우기</summary>밥 먹을 때는 '안'(안) '껌'(껌) 씹어요! 밥 먹다는 ăn cơm(안 껌).</details> | Bạn ăn cơm đi. |
+| **uống cà phê** | 우옹 까 페 | 커피 마시다 <details class="mnemo"><summary>💡 외우기</summary>커피를 마시고 '우옹'(우와)! '까 페'(카페) 커피 최고! 커피 마시다는 uống cà phê.</details> | Bạn uống cà phê đi. |
+| **nghe nhạc** | 응애 냑 | 음악 듣다 <details class="mnemo"><summary>💡 외우기</summary>아기가 '응애' 울다가 음악을 듣고 '냑'(냠냠) 웃는다! 음악 듣다는 nghe nhạc.</details> | Họ không thích nghe nhạc. |
+| **xem phim** | 쌤 핌 | 영화 보다 <details class="mnemo"><summary>💡 외우기</summary>'쌤'(선생님)이 '핌'(핌 핌) 웃으며 영화를 보신다! 영화 보다는 xem phim.</details> | Chúng ta đi xem phim đi! |
+| **đọc sách** | 독 싸익 | 책 읽다 <details class="mnemo"><summary>💡 외우기</summary>'독'서실에서 책을 '싸익'(싹) 읽었다! 책 읽다는 đọc sách(독 싸익).</details> | Chị có thích đọc sách không? |
+| **mua** | 무어 | 사다 <details class="mnemo"><summary>💡 외우기</summary>시장에서 엄마가 '무어'(뭐) 살까? 하고 물으신다! 사다는 mua(무어).</details> | Tôi mua túi xách ở Vincom. |
+| **nấu** | 너우 | 요리하다 <details class="mnemo"><summary>💡 외우기</summary>요리하다가 냄비가 '너우'(너무) 뜨거워서 깜짝 놀랐다! 요리하다는 nấu(너우).</details> | Chúng tôi muốn nấu thử món này. |
+| **trả lời** | 짜 러이 | 대답하다 <details class="mnemo"><summary>💡 외우기</summary>선생님 질문에 '짜'잔! '러이'(얼른) 대답했다. 대답하다는 trả lời.</details> | Bạn trả lời đi. |
+| **hỏi cô giáo** | 호이 꼬 자오 | 선생님께 묻다 <details class="mnemo"><summary>💡 외우기</summary>'호이' 손을 들고 '꼬'마가 '자오'(자, 오세요) 선생님께 질문한다! hỏi cô giáo.</details> | Bạn hỏi cô giáo đi. |
+| **nghỉ** | 응이 | 쉬다 <details class="mnemo"><summary>💡 외우기</summary>숙제 끝! '응이~' 하고 소파에서 기지개 켜며 푹 쉰다. 쉬다는 nghỉ(응이).</details> | Chúng ta nghỉ một chút! |
 
 ### 5) 교재 단어장 D. Từ vựng (p.124) — 위 표에 없는 단어
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **bán** | 팔다 | Tiệm này có bán trà sữa, cà phê. (이 가게는 밀크티, 커피를 팔아.) |
-| **gọi** | 부르다; **(음식을) 주문하다** | Anh Nam gọi món gì? (남 씨는 무슨 음식을 주문해요?) |
-| **cho** | ~하게 해 주다 | Cho mình hỏi một chút. (좀 물어보게 해 줘.) |
-| **bánh kem** | 케이크(생크림 케이크) | Vợ anh Nam ăn một cái bánh kem nhỏ. |
-| **bánh ngọt** | 빵·과자·케이크(단 빵) | Tiệm này có bán bánh ngọt. |
-| **bia** | 맥주 | Anh có uống bia không? |
-| **cà rốt** | 당근 | nước cam cà rốt (오렌지 당근 주스) |
-| **đen** | 검다 | cà phê đen (블랙커피) |
-| **nước suối** | 생수(먹는 샘물) | Cho tôi một chai nước suối. |
-| **nhà sách** | 서점 | Chúng tôi đang đi nhà sách. |
-| **nhỏ** | 작다 | một cái bánh kem nhỏ (작은 케이크 하나) |
-| **to / lớn** | 크다 | một tiệm trà sữa lớn (큰 밀크티 가게) |
-| **nhưng** | 그러나, 하지만 | Giá hơi mắc nhưng bánh rất ngon. |
-| **tối nay** | 오늘 저녁 | Tối nay chúng ta đi xem phim, phải không? |
-| **vợ** | 아내 | Vợ anh Nam rất thích ăn ngọt. |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **bán** | 반 | 팔다 <details class="mnemo"><summary>💡 외우기</summary>시장에서 수박을 '반'으로 잘라 손님에게 판다! 아저씨가 팔다는 bán(반).</details> | Tiệm này có bán trà sữa, cà phê. (이 가게는 밀크티, 커피를 팔아.) |
+| **gọi** | 고이 | 부르다; **(음식을) 주문하다** <details class="mnemo"><summary>💡 외우기</summary>식당에서 '고이'(곱게) 손 들고 음식을 주문한다! 부르다, 주문하다는 gọi.</details> | Anh Nam gọi món gì? (남 씨는 무슨 음식을 주문해요?) |
+| **cho** | 쪼 | ~하게 해 주다 <details class="mnemo"><summary>💡 외우기</summary>'쪼'(좀) 하게 해 주세요! 하고 부탁한다. ~하게 해 주다는 cho(쪼).</details> | Cho mình hỏi một chút. (좀 물어보게 해 줘.) |
+| **bánh kem** | 바잉 깸 | 케이크(생크림 케이크) <details class="mnemo"><summary>💡 외우기</summary>케이크를 '바잉'(반) 자르다가 크림이 '깸'(깨질까) 조심! 생크림 케이크 bánh kem.</details> | Vợ anh Nam ăn một cái bánh kem nhỏ. |
+| **bánh ngọt** | 바잉 응옷 | 빵·과자·케이크(단 빵) <details class="mnemo"><summary>💡 외우기</summary>단 빵을 '바잉'(반) 먹고 '응옷'(응, 오!) 달다! 단 빵과 과자는 bánh ngọt.</details> | Tiệm này có bán bánh ngọt. |
+| **bia** | 비어 | 맥주 <details class="mnemo"><summary>💡 외우기</summary>맥주는 영어 '비어'(beer)와 똑같다! 어른만 마시는 맥주는 bia(비어).</details> | Anh có uống bia không? |
+| **cà rốt** | 까 좃 | 당근 <details class="mnemo"><summary>💡 외우기</summary>토끼가 당근을 '까 좃'(까 줘)! 하고 조른다. 당근은 cà rốt(까 좃).</details> | nước cam cà rốt (오렌지 당근 주스) |
+| **đen** | 댄 | 검다 <details class="mnemo"><summary>💡 외우기</summary>까만 밤 정전에 더듬더듬 벽에 손을 '댄'다! 온통 깜깜해서 검다는 đen(댄).</details> | cà phê đen (블랙커피) |
+| **nước suối** | 느억 쑤오이 | 생수(먹는 샘물) <details class="mnemo"><summary>💡 외우기</summary>생수를 '느억느억' 마시니 목이 '쑤오이'(시원)! 먹는 샘물은 nước suối.</details> | Cho tôi một chai nước suối. |
+| **nhà sách** | 냐 싸익 | 서점 <details class="mnemo"><summary>💡 외우기</summary>고양이가 '냐' 하며 서점에서 책을 '싸익'(싹) 읽는다! 서점은 nhà sách.</details> | Chúng tôi đang đi nhà sách. |
+| **nhỏ** | 뇨 | 작다 <details class="mnemo"><summary>💡 외우기</summary>작은 병아리가 '뇨'(뇨롱) 하고 작은 목소리로 운다! 작다는 nhỏ(뇨).</details> | một cái bánh kem nhỏ (작은 케이크 하나) |
+| **to / lớn** | 또 / 런 | 크다 <details class="mnemo"><summary>💡 외우기</summary>큰 공을 '또' '런'(Run)! 들고 달린다. 크다는 to 또는 lớn.</details> | một tiệm trà sữa lớn (큰 밀크티 가게) |
+| **nhưng** | 니응 | 그러나, 하지만 <details class="mnemo"><summary>💡 외우기</summary>공부하려 했지만 '니응'(니는) 게임만 한다! 그러나는 nhưng(니응).</details> | Giá hơi mắc nhưng bánh rất ngon. |
+| **tối nay** | 또이 나이 | 오늘 저녁 <details class="mnemo"><summary>💡 외우기</summary>오늘 저녁 '또이'(또) '나이'(나 이) 치킨 먹어! 오늘 저녁은 tối nay.</details> | Tối nay chúng ta đi xem phim, phải không? |
+| **vợ** | 버 | 아내 <details class="mnemo"><summary>💡 외우기</summary>아빠가 아내에게 '버'(바보)라고 애교 부리며 꽃을 건넨다! 아내는 vợ(버).</details> | Vợ anh Nam rất thích ăn ngọt. |
 
 ### 6) 읽기·듣기(p.122~123)에 나온 단어
-| 베트남어 | 뜻 | 예문 |
-|---|---|---|
-| **sinh nhật** | 생일 | Hôm nay là sinh nhật cô ấy. (오늘은 그녀의 생일이야.) |
-| **ăn ngọt** | 단것을 먹다 | Vợ anh Nam rất thích ăn ngọt. |
-| **giá** | 가격 | Giá hơi mắc. (가격이 좀 비싸.) |
-| **ly** | 잔, 컵 | một ly cà phê đen nóng (뜨거운 블랙커피 한 잔) |
-| **ổ** | (빵을 세는 말) 개 | một ổ bánh mì thịt (고기 반미 하나) |
-| **nóng** | 뜨겁다 | cà phê đen nóng (뜨거운 블랙커피) |
-| **cô ấy** | 그녀 | Hôm nay là sinh nhật cô ấy. |
-| **Thành phố Hồ Chí Minh** | 호찌민시 | một tiệm trà sữa lớn ở Thành phố Hồ Chí Minh |
-| **rau / cá** | 채소 / 생선 | Ăn rau. Ăn cá. |
-| **bánh sinh nhật** | 생일 케이크 | Đi mua bánh sinh nhật. |
-| **chồng** | 남편 | Người chồng không muốn làm gì? |
-| **nấu ăn** | 요리하다 | Bạn nấu ăn thế nào? |
-| **về nhà** | 집에 돌아가다 | Đi nhà hàng → về nhà |
+| 베트남어 | 발음 | 뜻 | 예문 |
+|---|---|---|---|
+| **sinh nhật** | 씽 녓 | 생일 <details class="mnemo"><summary>💡 외우기</summary>생일이라 기분이 '씽'씽, 선물에 '녓'(넋) 나갔다! 생일은 sinh nhật.</details> | Hôm nay là sinh nhật cô ấy. (오늘은 그녀의 생일이야.) |
+| **ăn ngọt** | 안 응옷 | 단것을 먹다 <details class="mnemo"><summary>💡 외우기</summary>단것을 '안' 먹는다더니 '응옷'(응, 오!) 하고 사탕을 먹었다! ăn ngọt.</details> | Vợ anh Nam rất thích ăn ngọt. |
+| **giá** | 자 | 가격 <details class="mnemo"><summary>💡 외우기</summary>가격표를 보고 '자'로 재듯 꼼꼼히 비교하며 고민한다! 가격은 giá(자).</details> | Giá hơi mắc. (가격이 좀 비싸.) |
+| **ly** | 리 | 잔, 컵 <details class="mnemo"><summary>💡 외우기</summary>컵에 '리'(리)본을 달아 예쁜 잔을 선물로 만들었다! 잔, 컵은 ly(리).</details> | một ly cà phê đen nóng (뜨거운 블랙커피 한 잔) |
+| **ổ** | 오 | (빵을 세는 말) 개 <details class="mnemo"><summary>💡 외우기</summary>빵을 세며 '오'! 한 개, 두 개, 많이 샀네! 빵 세는 말은 ổ(오).</details> | một ổ bánh mì thịt (고기 반미 하나) |
+| **nóng** | 넝 | 뜨겁다 <details class="mnemo"><summary>💡 외우기</summary>뜨거운 국을 먹고 혀가 데어 '넝'(넉)다운 되었다! 뜨겁다는 nóng(넝).</details> | cà phê đen nóng (뜨거운 블랙커피) |
+| **cô ấy** | 꼬 어이 | 그녀 <details class="mnemo"><summary>💡 외우기</summary>그녀를 부를 때 '꼬'마 '어이'! 하지 말고 예의 있게. 그녀는 cô ấy.</details> | Hôm nay là sinh nhật cô ấy. |
+| **Thành phố Hồ Chí Minh** | 타잉 포 호 찌 밍 | 호찌민시 <details class="mnemo"><summary>💡 외우기</summary>'타잉'(탕) '포'(퍼)를 '호'호 불며 '찌 밍'(찐 맛) 호찌민시 쌀국수!</details> | một tiệm trà sữa lớn ở Thành phố Hồ Chí Minh |
+| **rau / cá** | 자우 / 까 | 채소 / 생선 <details class="mnemo"><summary>💡 외우기</summary>채소는 '자우'(자, 우리) 먹자! 생선은 '까'(까서) 먹자! rau / cá.</details> | Ăn rau. Ăn cá. |
+| **bánh sinh nhật** | 바잉 씽 녓 | 생일 케이크 <details class="mnemo"><summary>💡 외우기</summary>생일 케이크를 '바잉'(반) 자르니 기분이 '씽'씽, 맛에 '녓'(넋)이 나간다!</details> | Đi mua bánh sinh nhật. |
+| **chồng** | 쫑 | 남편 <details class="mnemo"><summary>💡 외우기</summary>남편이 '쫑'쫑 따라다니며 아내의 짐을 들어 준다! 남편은 chồng(쫑).</details> | Người chồng không muốn làm gì? |
+| **nấu ăn** | 너우 안 | 요리하다 <details class="mnemo"><summary>💡 외우기</summary>요리하다가 '너우'(너무) 맛있어서 '안'(안) 나눠 준다! 요리하다는 nấu ăn.</details> | Bạn nấu ăn thế nào? |
+| **về nhà** | 베 냐 | 집에 돌아가다 <details class="mnemo"><summary>💡 외우기</summary>집에 돌아가 '베'개를 안고 고양이가 '냐'! 집에 돌아가다는 về nhà.</details> | Đi nhà hàng → về nhà |
 
 ## 02. 핵심 문법·문형 (교재 p.114~117, 120, 125~126)
 
