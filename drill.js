@@ -8,11 +8,14 @@
  *   글자 안의 **굵게** 를 쓸 수 있다.
  *
  * 푸는 법: 가려진 칸을 눌러 정답을 본 뒤, 스스로 ○(맞혔다)·×(틀렸다)를 매긴다.
- * 기록: 이 기기에만 둔다 (Firestore 를 쓰지 않는다). 참여자마다 따로 둔다.
+ * 기록: 이 기기(localStorage)에 바로 두고, 서버에도 'read' 기록으로 남겨 기기끼리 맞춘다.
+ *       concept = "d:<문항 id>:<o|x|->" ('-' = 지움). 같은 문항은 가장 나중 기록이 이긴다.
+ *       (Firestore 규칙을 바꾸지 않으려고 영상 시청 'v:' 과 같은 방식으로 끼워 넣었다.)
  */
 
-import { el } from './dom.js?v=20261126-0512';
-import { getCurrentLearner } from './store.js?v=20261126-0512';
+import { el } from './dom.js?v=20261126-0709';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-0709';
+import { recordLearner } from './grade.mjs?v=20261126-0709';
 
 const KEY = 'examprep.2026-2-2.drill';
 const files = new Map();
@@ -25,12 +28,65 @@ function loadMarks() {
     return {};
   }
 }
-function saveMarks(marks) {
+function writeMarks(marks) {
   try {
     const all = JSON.parse(localStorage.getItem(KEY) || '{}');
     all[getCurrentLearner()] = marks;
     localStorage.setItem(KEY, JSON.stringify(all));
   } catch { /* 저장 못 해도 푸는 데는 지장 없다 */ }
+}
+/** 이 기기에 저장하고, 바뀐 문항만 서버 기록으로도 보낸다 */
+function saveMarks(marks, subject) {
+  const before = loadMarks();
+  writeMarks(marks);
+  const changed = new Set([...Object.keys(before), ...Object.keys(marks)]);
+  const recs = [];
+  for (const id of changed) {
+    if ((before[id] || '') === (marks[id] || '')) continue;
+    recs.push({ type: 'read', concept: `${PREFIX}${id}:${marks[id] || '-'}`, subject: subject || null });
+  }
+  if (recs.length) void saveRecords(recs);
+}
+
+const PREFIX = 'd:';
+const SYNCED_KEY = 'examprep.2026-2-2.drill.synced';
+let syncing = null;
+
+/**
+ * 서버 기록과 이 기기의 표시를 맞춘다 (화면을 열 때 한 번).
+ *  - 처음 한 번: 이 기기에만 있던 예전 표시를 서버로 올린다.
+ *  - 그다음: 서버 기록(아직 못 보낸 것 포함)의 문항별 마지막 표시가 정답이다.
+ */
+export function syncDrillMarks() {
+  if (syncing) return syncing;
+  syncing = (async () => {
+    const learner = getCurrentLearner();
+    const loaded = await loadRecords();
+    const latest = new Map();
+    const recs = (loaded.records || [])
+      .filter((r) => r && r.type === 'read' && typeof r.concept === 'string' && r.concept.startsWith(PREFIX) && recordLearner(r) === learner)
+      .sort((a, b) => String(a.at).localeCompare(String(b.at)));
+    for (const r of recs) {
+      const m = /^d:(.+):([ox-])$/.exec(r.concept);
+      if (m) latest.set(m[1], m[2]);
+    }
+    const local = loadMarks();
+    let flag = {};
+    try { flag = JSON.parse(localStorage.getItem(SYNCED_KEY) || '{}'); } catch { flag = {}; }
+    if (!flag[learner]) {
+      // 예전 표시 올리기: 서버에 아직 없는 문항만
+      const up = Object.entries(local).filter(([id, m]) => (m === 'o' || m === 'x') && !latest.has(id));
+      if (up.length) await saveRecords(up.map(([id, m]) => ({ type: 'read', concept: `${PREFIX}${id}:${m}`, subject: null })));
+      for (const [id, m] of up) latest.set(id, m);
+      flag[learner] = new Date().toISOString();
+      try { localStorage.setItem(SYNCED_KEY, JSON.stringify(flag)); } catch { /* 다음에 다시 */ }
+    }
+    const merged = {};
+    for (const [id, m] of latest) if (m === 'o' || m === 'x') merged[id] = m;
+    writeMarks(merged);
+    return merged;
+  })().finally(() => { syncing = null; });
+  return syncing;
 }
 
 /** '**굵게**' 만 알아듣는 작은 글자 그리기 */
@@ -134,7 +190,7 @@ function buildSet(set, onChange) {
     const now = loadMarks();
     if (m) now[itemId] = m;
     else delete now[itemId];
-    saveMarks(now);
+    saveMarks(now, set.subject);
     update();
   };
 
@@ -146,7 +202,7 @@ function buildSet(set, onChange) {
   resetBtn.addEventListener('click', () => {
     const now = loadMarks();
     for (const it of set.items) delete now[it.id];
-    saveMarks(now);
+    saveMarks(now, set.subject);
     onlyWrong = false;
     wrongBtn.textContent = '× 만 다시';
     for (const c of cards) { c.reset(); c.hidden = false; }
@@ -166,7 +222,7 @@ function buildSet(set, onChange) {
         c.hidden = !wrong;
         if (wrong) { c.reset(); delete now[c.dataset.id]; }
       }
-      saveMarks(now);
+      saveMarks(now, set.subject);
     }
     update();
   });
@@ -194,6 +250,7 @@ export async function attachDrills(ctx, code, file, body, headings) {
   if (!files.has(code)) files.set(code, ctx.getJson(`data/drill/${code}.json`).catch(() => ({ docs: {} })));
   const sets = (await files.get(code)).docs?.[file.normalize('NFC')] || [];
   if (!sets.length) return [];
+  await syncDrillMarks().catch(() => null); // 다른 기기에서 매긴 것도 보이게
   const big = headings.filter((h) => h.level <= 2);
   const out = [];
   sets.forEach((set, n) => {
@@ -208,7 +265,7 @@ export async function attachDrills(ctx, code, file, body, headings) {
     const tocNext = endHead ? headings.slice(headings.indexOf(endHead)).find((h) => h.level === 2 || h.level === 3) : null;
     const label = set.label || (set.part ? `PART ${set.part}` : set.anchor);
     const rec = { id: `drill-${n + 1}`, label, title: set.title, beforeId: tocNext?.id || null, done: false, link: null };
-    const built = buildSet({ ...set, domId: rec.id }, (done) => {
+    const built = buildSet({ ...set, domId: rec.id, subject: code }, (done) => {
       rec.done = done;
       rec.link?.classList.toggle('done', done);
     });

@@ -8,8 +8,9 @@
  * 기록은 새로 만들지 않는다. 이미 있는 풀이 기록(merged)과 이 기기의 확인 문제 표시만 읽는다.
  */
 
-import { getCurrentLearner } from './store.js?v=20261126-0512';
-import { summarize } from './grade.mjs?v=20261126-0512';
+import { getCurrentLearner } from './store.js?v=20261126-0709';
+import { summarize } from './grade.mjs?v=20261126-0709';
+import { syncDrillMarks } from './drill.js?v=20261126-0709';
 
 const DRILL_KEY = 'examprep.2026-2-2.drill';
 const DOCQUIZ_ROUND = 40; // docquiz.js 와 같은 값
@@ -45,7 +46,7 @@ export async function loadSubjectSteps(ctx, s, docs, merged, paper) {
     json(ctx, `data/docquiz/${s.code}.json`, { docs: {} }),
     json(ctx, `data/units/${s.code}.json`, { units: [] }),
   ]);
-  const marks = drillMarks();
+  const marks = await syncDrillMarks().catch(() => drillMarks());
   const sessions = [...(merged?.sessions?.values?.() || [])].filter((x) => x.subject === s.code);
   const attemptsBy = new Map();
   for (const a of merged?.attempts || []) {
