@@ -962,6 +962,20 @@ button.dq-try:hover { border-color: #111; }
 .dq-submit:disabled { opacity: 0.6; cursor: default; }
 .dq-tools .dq-submit + .dq-submit { margin-left: 0; }
 .dq-foot-tools { margin-top: 14pt; padding-top: 10pt; border-top: 0.8pt solid #d0d7de; }
+.dq-submit.dq-pdf { color: #0a4fa3; background: #fff; box-shadow: inset 0 0 0 0.8pt #0a4fa3; }
+.dq-submit.dq-pdf:hover:not(:disabled) { background: #eef4fc; }
+/* 「PDF 저장」을 눌렀을 때만: 시험지 쪽만 남기고 화면과 같은 A4 한 장씩 (종이 여백 없이 쪽 안 여백을 그대로 쓴다) */
+@media print {
+  html.dq-print .doc > :not(.dq), html.dq-print .dq > h2, html.dq-print .dq-tools, html.dq-print .dq-warn, html.dq-print .dq-hist-row, html.dq-print .va-ask { display: none !important; }
+  html.dq-print, html.dq-print body { margin: 0 !important; padding: 0 !important; }
+  html.dq-print main, html.dq-print #app, html.dq-print .reader, html.dq-print .doc, html.dq-print .dq, html.dq-print .dq-pages { display: block !important; margin: 0 !important; padding: 0 !important; max-width: none !important; width: auto !important; }
+  html.dq-print .doc .dq-paper.a4 { width: 210mm; height: 297mm; margin: 0; padding: 12mm 12mm 22mm; box-shadow: none; break-after: page; break-inside: avoid; overflow: hidden; }
+  html.dq-print .doc .dq-paper.a4.a4-tall { height: auto; min-height: 297mm; overflow: visible; }
+  html.dq-print .doc .dq-paper.a4:last-child { break-after: auto; }
+  html.dq-print .a4-no { bottom: 9mm; }
+}
+@page dqpaper { size: A4; margin: 0; }
+html.dq-print .doc .dq-paper.a4 { page: dqpaper; }
 .dq-warn { color: #d70015; }
 .dq-hist-row:empty { display: none; }
 .dq-hist-row { margin: 2pt 0 0 13pt; }

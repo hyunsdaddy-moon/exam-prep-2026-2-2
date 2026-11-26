@@ -13,13 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261126-1833';
-import { renderMarkdown } from './markdown.js?v=20261126-1833';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-1833';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261126-1833';
-import { explainButton } from './explain.js?v=20261126-1833';
-import { inkTools } from './ink.js?v=20261126-1833';
-import { passageBlock } from './solve.js?v=20261126-1833';
+import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261126-1926';
+import { renderMarkdown } from './markdown.js?v=20261126-1926';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261126-1926';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261126-1926';
+import { explainButton } from './explain.js?v=20261126-1926';
+import { inkTools } from './ink.js?v=20261126-1926';
+import { passageBlock } from './solve.js?v=20261126-1926';
 
 /* 채점 표시 — 선생님이 빨간 색연필로 그은 것처럼: 손으로 그린 동그라미(맞음)·빗금(틀림)에
  * 연필 결(알갱이)과 살짝 떨리는 선을 SVG 필터로 입힌다. 필터는 문서에 한 번만 넣는다. */
@@ -216,7 +216,23 @@ export async function buildDocQuiz(ctx, code, file, opts = {}) {
     el('div.dq-tools', {}, status, submitBtn, nextBtn),
     !ok ? el('p.sheet-note.dq-warn', { text: '서버에서 기록을 읽지 못했습니다. 이 브라우저에 보관된 기록만 보입니다.' }) : null
   );
-  const footTools = el('div.dq-tools.dq-foot-tools', {}, footStatus, footSubmitBtn, footNextBtn);
+  // 「PDF 저장」 — 지금 보이는 시험지(고른 답·채점 표시 포함)만 A4 로 뽑는다. 인쇄 창에서 「PDF 로 저장」을 고른다
+  const pdfBtn = el('button.dq-submit.dq-pdf', { type: 'button', text: 'PDF 저장', title: '이 시험지를 PDF 파일로 저장합니다 (인쇄 창에서 「PDF 로 저장」)', onclick: () => {
+    const root = document.documentElement;
+    const title = document.title;
+    const done = () => {
+      root.classList.remove('dq-print');
+      document.title = title;
+      window.removeEventListener('afterprint', done);
+    };
+    // 파일 이름이 되는 제목 — 과목 · 평가 이름 · 단원
+    document.title = [opts.subject, quiz.title || '마무리 평가', opts.docTitle].filter(Boolean).join(' ').replace(/[\\/:*?"<>|]/g, ' ');
+    root.classList.add('dq-print');
+    window.addEventListener('afterprint', done);
+    window.print();
+    setTimeout(done, 60000); // afterprint 가 오지 않는 브라우저에서도 원래대로
+  } });
+  const footTools = el('div.dq-tools.dq-foot-tools', {}, footStatus, pdfBtn, footSubmitBtn, footNextBtn);
 
   /* ── 문제 ── */
   const ink = { pending: [], add(b, id) { this.pending.push([b, id]); } }; // 연필·지우개 — 시험지가 만들어진 뒤 붙인다

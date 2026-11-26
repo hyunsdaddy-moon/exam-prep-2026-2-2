@@ -5,13 +5,13 @@
  * 문제마다 「질문하기」를 누르면 질문 게시판에 그 문제를 붙여 글을 쓴다.
  */
 
-import { el, plainStem } from './dom.js?v=20261126-1833';
-import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261126-1833';
-import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261126-1833';
-import { STATUS_LABEL } from './notes.js?v=20261126-1833';
-import { unitWrongs } from './units.js?v=20261126-1833';
-import { assessWrongs } from './assess.js?v=20261126-1833';
-import { docWrongs, choiceNotes } from './docquiz.js?v=20261126-1833';
+import { el, plainStem } from './dom.js?v=20261126-1926';
+import { md, contextBlock, passageBlock, choiceList, answerText } from './solve.js?v=20261126-1926';
+import { ERROR_LABEL, CONFIDENCE_LABEL } from './grade.mjs?v=20261126-1926';
+import { STATUS_LABEL } from './notes.js?v=20261126-1926';
+import { unitWrongs } from './units.js?v=20261126-1926';
+import { assessWrongs } from './assess.js?v=20261126-1926';
+import { docWrongs, choiceNotes } from './docquiz.js?v=20261126-1926';
 
 const FILTERS = [
   ['all', '전체'],
