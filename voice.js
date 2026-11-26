@@ -18,7 +18,7 @@
  * 버튼을 붙이고, 보낼 글도 화면에서 읽는다. 그래서 정답·해설은 채점한 뒤에만 함께 간다.
  */
 
-import { el, CIRCLED } from './dom.js?v=20261126-1353';
+import { el, CIRCLED } from './dom.js?v=20261126-1748';
 
 const KEY = 'examprep.voiceAsk';
 const BRIDGE = 'http://127.0.0.1:47611';
@@ -39,7 +39,7 @@ const CSS = `
 .p-stem .va-ask { flex: none; align-self: flex-start; width: 20px; height: 20px; font-size: 11px; margin-left: 2pt; }
 .va-ask.va-on { opacity: 1; background: var(--accent); border-color: var(--accent); }
 .va-flash { outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 4px; border-radius: 6px; transition: outline-color .4s; }
-.va-pill { position: fixed; right: 16px; bottom: 16px; z-index: 60; max-width: min(360px, calc(100vw - 32px)); display: flex; align-items: center; gap: 10px; padding: 10px 12px 10px 16px; border-radius: 999px; background: rgba(29, 29, 31, .92); color: #fff; font-size: 14px; box-shadow: var(--shadow); }
+.va-pill { position: fixed; right: 16px; bottom: 16px; z-index: 60; transform-origin: 100% 100%; max-width: min(360px, calc(100vw - 32px)); display: flex; align-items: center; gap: 10px; padding: 10px 12px 10px 16px; border-radius: 999px; background: rgba(29, 29, 31, .92); color: #fff; font-size: 14px; box-shadow: var(--shadow); }
 .va-pill[hidden] { display: none; }
 .va-pill.va-error { background: #8a1c12; }
 .va-pill-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -186,6 +186,37 @@ export function initVoiceAsk() {
   const pill = el('div.va-pill', { hidden: true, role: 'status', 'aria-live': 'polite' }, el('span.va-dot'), text, hang);
   document.body.append(pill);
 
+  // 화면 확대(⌘+ 쪽 확대, 트랙패드 두 손가락 확대)를 해도 통화 표시줄은 늘 같은 크기로
+  // 보이는 화면의 오른쪽 아래에 둔다 — 확대한 만큼 거꾸로 줄이고, 보이는 영역 모서리에 붙인다
+  const pageZoom = () => {
+    const ratio = window.outerWidth && window.innerWidth ? window.outerWidth / window.innerWidth : 1;
+    const dpr = window.devicePixelRatio || 1;
+    let best = ratio > 0.2 && ratio < 6 ? ratio : 1;
+    let gap = Infinity;
+    for (const base of [1, 1.25, 1.5, 2, 3]) { // 화면 본래 배율 후보 — 창 비율과 가장 가까운 것
+      const z = dpr / base;
+      if (Math.abs(z - ratio) < gap) { gap = Math.abs(z - ratio); best = z; }
+    }
+    return gap < 0.15 ? best : (ratio > 0.2 && ratio < 6 ? ratio : 1);
+  };
+  const fitPill = () => {
+    if (pill.hidden) return;
+    const vv = window.visualViewport;
+    const pinch = vv ? vv.scale || 1 : 1;
+    const k = 1 / (pageZoom() * pinch);
+    const de = document.documentElement;
+    const visW = vv ? vv.width : de.clientWidth;
+    const right = vv ? de.clientWidth - (vv.offsetLeft + vv.width) : 0;
+    const bottom = vv ? de.clientHeight - (vv.offsetTop + vv.height) : 0;
+    pill.style.right = `${right + 16 * k}px`;
+    pill.style.bottom = `${bottom + 16 * k}px`;
+    pill.style.maxWidth = `${Math.max(160, Math.min(360, visW / k - 32))}px`;
+    pill.style.transform = Math.abs(k - 1) < 0.01 ? '' : `scale(${k})`;
+  };
+  window.addEventListener('resize', fitPill);
+  window.visualViewport?.addEventListener('resize', fitPill);
+  window.visualViewport?.addEventListener('scroll', fitPill);
+
   const active = () => sending || status.phase !== 'idle';
 
   const paint = () => {
@@ -200,6 +231,7 @@ export function initVoiceAsk() {
     pill.classList.toggle('va-live', status.phase === 'live' && !!status.ready);
     hang.hidden = sending || status.phase === 'ending';
     text.replaceChildren(line, sub ? el('small', { text: sub }) : '');
+    fitPill();
   };
 
   const showError = (message) => {
@@ -209,6 +241,7 @@ export function initVoiceAsk() {
     pill.classList.remove('va-live');
     hang.hidden = true;
     text.replaceChildren(message);
+    fitPill();
     errorTimer = setTimeout(() => { errorTimer = 0; paint(); }, 7000);
   };
 
