@@ -11,8 +11,8 @@
  * - 좌표는 블록 너비를 1 로 삼아 저장한다 → 창 크기가 바뀌어도 같은 자리에 다시 그린다.
  */
 
-import { el } from './dom.js?v=20261126-1926';
-import { getCurrentLearner } from './store.js?v=20261126-1926';
+import { el } from './dom.js?v=20261126-1930';
+import { getCurrentLearner } from './store.js?v=20261126-1930';
 
 const COLORS = { r: '#e0281e', b: '#1f63e0', k: null }; // k(검정)는 글자색을 따른다 (어두운 화면에서도 보이게)
 const COLOR_NAME = { r: '빨강', b: '파랑', k: '검정' };

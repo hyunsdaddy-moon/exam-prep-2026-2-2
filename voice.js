@@ -18,7 +18,7 @@
  * 버튼을 붙이고, 보낼 글도 화면에서 읽는다. 그래서 정답·해설은 채점한 뒤에만 함께 간다.
  */
 
-import { el, CIRCLED } from './dom.js?v=20261126-1926';
+import { el, CIRCLED } from './dom.js?v=20261126-1930';
 
 const KEY = 'examprep.voiceAsk';
 const BRIDGE = 'http://127.0.0.1:47611';
@@ -46,6 +46,10 @@ const CSS = `
 .va-pill-text small { display: block; opacity: .75; font-size: 12px; overflow: hidden; text-overflow: ellipsis; }
 .va-dot { width: 9px; height: 9px; border-radius: 50%; background: #8e8e93; flex: none; }
 .va-pill.va-live .va-dot { background: #30d158; animation: va-pulse 1.4s ease-in-out infinite; }
+.va-mute { font: inherit; font-size: 13px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, .18); border: 0; border-radius: 999px; padding: 6px 10px; cursor: pointer; flex: none; white-space: nowrap; }
+.va-mute[aria-pressed="true"] { background: #fff; color: #9a4a00; }
+.va-pill.va-muted { background: rgba(154, 74, 0, .95); }
+.va-pill.va-muted .va-dot { background: #ffd60a; animation: none; }
 .va-hang { font: inherit; font-size: 13px; font-weight: 600; color: #fff; background: #d70015; border: 0; border-radius: 999px; padding: 6px 12px; cursor: pointer; flex: none; }
 @keyframes va-pulse { 50% { opacity: .35; } }
 @media (prefers-reduced-motion: reduce) { .va-pill.va-live .va-dot { animation: none; } }
@@ -143,11 +147,12 @@ async function call(path, body) {
   return j;
 }
 
-function statusLine(s, sending) {
+function statusLine(s, sending, muted) {
   if (sending) return ['MultyAM 에 연결하는 중…'];
   if (s.phase === 'ending') return ['통화를 끊는 중…'];
   if (s.phase !== 'live') return ['통화를 여는 중… (10초쯤 걸려요)'];
   if (!s.ready) return ['준비 중… 잠시만 기다려요', s.label];
+  if (muted) return ['🔇 내 말 안 들음', `AI 는 하던 일 계속해요${s.label ? ` · ${s.label}` : ''}`];
   return [`${s.activity || '듣는 중'}${s.elapsed ? ` · ${s.elapsed}` : ''} — 말로 물어보세요`, s.heard ? `“${s.heard}”` : s.label];
 }
 
@@ -183,7 +188,21 @@ export function initVoiceAsk() {
     hang.disabled = true;
     call('/voice/hangup', {}).catch(() => {}).finally(() => { hang.disabled = false; poll(); });
   } });
-  const pill = el('div.va-pill', { hidden: true, role: 'status', 'aria-live': 'polite' }, el('span.va-dot'), text, hang);
+  // 🔇 — 일을 시켜 놓고 혼잣말·옆 사람과 이야기해도 AI 에게 가지 않게 (MultyAM 이 통화의 마이크를 끈다).
+  // AI 는 하던 일을 계속하고 목소리도 들린다. 통화 화면에 바뀐 상태가 뜨기까지 잠깐 걸려, 누른 뒤 3초는 누른 쪽을 믿는다
+  let muteWant = null;
+  const isMuted = () => (muteWant && Date.now() < muteWant.until ? muteWant.on : !!status.muted);
+  const mute = el('button.va-mute', { type: 'button', onclick: () => {
+    const on = !isMuted();
+    muteWant = { on, until: Date.now() + 3000 };
+    paint();
+    call('/voice/mute', { on }).then((r) => {
+      if (r && r.ok) return;
+      muteWant = null;
+      showError(r && r.error === 'not found' ? 'MultyAM 을 새로 고쳐야 음소거를 쓸 수 있어요' : '음소거를 바꾸지 못했어요');
+    }).catch(() => { muteWant = null; showError('MultyAM 에 닿지 않아요'); }).finally(() => schedulePoll(300));
+  } });
+  const pill = el('div.va-pill', { hidden: true, role: 'status', 'aria-live': 'polite' }, el('span.va-dot'), text, mute, hang);
   document.body.append(pill);
 
   // 화면 확대(⌘+ 쪽 확대, 트랙패드 두 손가락 확대)를 해도 통화 표시줄은 늘 같은 크기로
@@ -227,8 +246,15 @@ export function initVoiceAsk() {
       askedNode?.querySelector('.va-ask')?.classList.remove('va-on');
       return;
     }
-    const [line, sub] = statusLine(status, sending);
-    pill.classList.toggle('va-live', status.phase === 'live' && !!status.ready);
+    const live = status.phase === 'live' && !!status.ready && !sending;
+    const muted = live && isMuted();
+    const [line, sub] = statusLine(status, sending, muted);
+    pill.classList.toggle('va-live', live);
+    pill.classList.toggle('va-muted', muted);
+    mute.hidden = !live;
+    mute.textContent = muted ? '🎙 다시 듣기' : '🔇 음소거';
+    mute.setAttribute('aria-pressed', String(muted));
+    mute.title = muted ? '다시 내 말을 AI 에게 보내기' : '내 말을 AI 에게 보내지 않기 (AI 는 하던 일 계속)';
     hang.hidden = sending || status.phase === 'ending';
     text.replaceChildren(line, sub ? el('small', { text: sub }) : '');
     fitPill();
@@ -238,7 +264,8 @@ export function initVoiceAsk() {
     clearTimeout(errorTimer);
     pill.hidden = false;
     pill.classList.add('va-error');
-    pill.classList.remove('va-live');
+    pill.classList.remove('va-live', 'va-muted');
+    mute.hidden = true;
     hang.hidden = true;
     text.replaceChildren(message);
     fitPill();
