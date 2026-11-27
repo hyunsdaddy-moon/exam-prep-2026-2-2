@@ -7,29 +7,30 @@
  * 화면 주소는 #/ , #/s/<과목 코드> , #/s/<과목 코드>/<문서 번호> 셋이다.
  */
 
-import { renderMarkdown, headingKey } from './markdown.js?v=20261126-1954';
-import { el, versioned } from './dom.js?v=20261126-1954';
-import { renderSolveRoute, renderHistory } from './solve.js?v=20261126-1954';
-import { renderUnitsRoute } from './units.js?v=20261126-1954';
-import { buildDocQuiz } from './docquiz.js?v=20261126-1954';
-import { attachDrills } from './drill.js?v=20261126-1954';
-import { attachWatchBoxes } from './watch.js?v=20261126-1954';
-import { renderDashboard } from './dashboard.js?v=20261126-1954';
-import { renderGrades } from './grades.js?v=20261126-1954';
-import { renderVersus, renderVersusBar } from './versus.js?v=20261126-1954';
-import { renderAssessRoute } from './assess.js?v=20261126-1954';
-import { renderPastRoute } from './past.js?v=20261126-1954';
-import { renderWrongbook } from './wrongbook.js?v=20261126-1954';
-import { renderBoard } from './board.js?v=20261126-1954';
-import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261126-1954';
-import { loadStudy } from './study.js?v=20261126-1954';
-import { renderPrint, printLinks } from './print.js?v=20261126-1954';
-import { ring, conceptLegend, renderNotes } from './notes.js?v=20261126-1954';
-import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261126-1954';
-import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261126-1954';
-import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261126-1954';
-import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261126-1954';
-import { initVoiceAsk } from './voice.js?v=20261126-1954';
+import { renderMarkdown, headingKey } from './markdown.js?v=20261128-0659';
+import { el, versioned } from './dom.js?v=20261128-0659';
+import { renderSolveRoute, renderHistory } from './solve.js?v=20261128-0659';
+import { renderUnitsRoute } from './units.js?v=20261128-0659';
+import { buildDocQuiz } from './docquiz.js?v=20261128-0659';
+import { attachDrills } from './drill.js?v=20261128-0659';
+import { attachWatchBoxes } from './watch.js?v=20261128-0659';
+import { renderDashboard } from './dashboard.js?v=20261128-0659';
+import { renderGrades } from './grades.js?v=20261128-0659';
+import { renderVersus, renderVersusBar } from './versus.js?v=20261128-0659';
+import { renderAssessRoute } from './assess.js?v=20261128-0659';
+import { renderPastRoute } from './past.js?v=20261128-0659';
+import { renderWrongbook } from './wrongbook.js?v=20261128-0659';
+import { renderBoard } from './board.js?v=20261128-0659';
+import { renderCharacterSelect, refreshProfiles, avatar } from './characters.js?v=20261128-0659';
+import { loadStudy } from './study.js?v=20261128-0659';
+import { renderPrint, printLinks } from './print.js?v=20261128-0659';
+import { ring, conceptLegend, renderNotes } from './notes.js?v=20261128-0659';
+import { saveRecords, loadRecords, getCurrentLearner, setCurrentLearner, addLearner, setLearnerOrder, subscribeCloud, getSyncStatus } from './store.js?v=20261128-0659';
+import { enterLearner, changePin, isProtected, needsUnlock, renderLock } from './lock.js?v=20261128-0659';
+import { dday, CONCEPT_LABEL } from './progress.mjs?v=20261128-0659';
+import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261128-0659';
+import { renderMine } from './mine.js?v=20261128-0659';
+import { initVoiceAsk } from './voice.js?v=20261128-0659';
 
 const app = document.getElementById('app');
 const navLinks = document.getElementById('nav-links');
@@ -127,7 +128,8 @@ const MENU = [
   ['#/assess', '수준 평가'],
   ['#/past', '기출문제'],
   ['#/notes', '오답 노트'],
-  ['#/dashboard', '내 진도'],
+  ['#/mine', '나의 진도'],
+  ['#/dashboard', '함께 비교'],
   ['#/versus', '대결'],
   ['#/board', '질문 게시판'],
   ['#/me', '캐릭터 고르기']
@@ -1004,6 +1006,7 @@ async function route() {
   if (parts[0] === 'me' && parts.length === 1) return renderCharacterSelect(ctx);
   if (parts[0] === 'notes' && parts.length === 1) return renderWrongbook(ctx, data.exam, await loadStudy(ctx, data.exam.subjects, data.concepts), query);
   if (parts[0] === 'board' && parts.length === 1) return renderBoard(ctx, data.exam, query);
+  if (parts[0] === 'mine' && parts.length === 1) return renderMine(ctx, data.exam, data, { docsOf, readingDocs, conceptsOf, loadStudy, renderNavLearner, setNav, show, subjectIcon });
   if (parts[0] === 'dashboard' && parts.length === 1) return renderDashboard(ctx, data.exam, data);
   if (parts[0] === 'grades' && parts.length === 1) return renderGrades(ctx, data.exam, query);
   if (parts[0] === 'versus' && parts.length === 1) return renderVersus(ctx, data.exam);
@@ -1054,7 +1057,7 @@ async function start() {
     if (ev?.source === 'ready' && ev.changed === false) return; // 먼저 그린 화면과 클라우드 기록이 같다
     refreshVersusBar(800);
     const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/').filter(Boolean);
-    const liveView = parts.length === 0 || (parts[0] === 'assess' && parts.length === 1) || (parts[0] === 'units' && parts.length === 1) || (parts[0] === 'notes' && parts.length === 1) || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
+    const liveView = parts.length === 0 || (parts[0] === 'assess' && parts.length === 1) || (parts[0] === 'units' && parts.length === 1) || (parts[0] === 'notes' && parts.length === 1) || (parts[0] === 'mine' && parts.length === 1) || (parts[0] === 's' && (parts.length === 2 || (parts.length === 3 && parts[2] === 'notes')));
     const tag = document.activeElement?.tagName;
     if (!liveView || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.querySelector('.learner-drag-ghost')) return;
     clearTimeout(refreshTimer);

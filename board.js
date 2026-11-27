@@ -7,9 +7,9 @@
  * 「해결됨」 표시는 누구나 바꿀 수 있다.
  */
 
-import { el } from './dom.js?v=20261126-1954';
-import { getCurrentLearner, subscribePosts, addPost, setPostSolved, deletePost } from './store.js?v=20261126-1954';
-import { avatar } from './characters.js?v=20261126-1954';
+import { el } from './dom.js?v=20261128-0659';
+import { getCurrentLearner, subscribePosts, addPost, setPostSolved, deletePost } from './store.js?v=20261128-0659';
+import { avatar } from './characters.js?v=20261128-0659';
 
 const VIEWS = [
   ['open', '답을 기다리는 질문'],

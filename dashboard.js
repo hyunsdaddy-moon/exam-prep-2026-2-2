@@ -8,12 +8,12 @@
  *   (개념 진도율은 과목 페이지와 같은 값 — 개념 읽기·예상 문제 풀이로 계산)
  */
 
-import { el, CIRCLED, plainStem } from './dom.js?v=20261126-1954';
-import { loadRecords } from './store.js?v=20261126-1954';
-import { mergeRecordsForLearner, summarize } from './grade.mjs?v=20261126-1954';
-import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261126-1954';
-import { loadStudy } from './study.js?v=20261126-1954';
-import { avatar, refreshProfiles } from './characters.js?v=20261126-1954';
+import { el, CIRCLED, plainStem } from './dom.js?v=20261128-0659';
+import { loadRecords } from './store.js?v=20261128-0659';
+import { mergeRecordsForLearner, summarize } from './grade.mjs?v=20261128-0659';
+import { watchCounts, videoKey, MAX_WATCH } from './watch.js?v=20261128-0659';
+import { loadStudy } from './study.js?v=20261128-0659';
+import { avatar, refreshProfiles } from './characters.js?v=20261128-0659';
 
 const COMPARE = ['문종배', '문현'];
 const UNIT_ROUND_BASE = 10;
@@ -389,7 +389,7 @@ function buildQuizCompareCard(item, nameA, nameB) {
 }
 
 export async function renderDashboard(ctx, exam, data) {
-  document.title = `내 진도 — ${exam.title}`;
+  document.title = `함께 비교 — ${exam.title}`;
   ctx.setNav('dashboard');
   const [nameA, nameB] = COMPARE;
   const [loaded, study] = await Promise.all([loadRecords(), loadStudy(ctx, exam.subjects, data.concepts)]);
@@ -534,7 +534,7 @@ export async function renderDashboard(ctx, exam, data) {
 
   ctx.show(
     el('section.hero.db-hero', {},
-      el('p.eyebrow', { text: `내 진도 · ${nameA} · ${nameB} 함께 비교` }),
+      el('p.eyebrow', { text: `함께 비교 · ${nameA} · ${nameB}` }),
       el('div.db-hero-pair', {},
         el('div.db-hero-one.a', {}, avatar(nameA, 'sm'), el('span.db-hero-name', { text: nameA }), el('b.db-hero-num', { text: `${sumA.overall}%` })),
         el('span.db-hero-vs', { text: 'vs' }),
