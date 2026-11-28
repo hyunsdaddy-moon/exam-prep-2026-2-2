@@ -16,6 +16,9 @@ for c in kor mat sci soc mor eng vie; do
 done
 python3 tools/merge-all-books.py   # 전 과목 한 권(양면 인쇄용)
 cp "$SRC/전과목_공부책.pdf" "$TMP/book-all.pdf"; files+="$TMP/book-all.pdf"
+cp "$SRC/전과목_공부책.pdf" books/all.pdf   # 웹에서 보기·인쇄용 (사이트 안) — 바뀌었으면 git 배포 필요
+
 gh release view $TAG >/dev/null 2>&1 || gh release create $TAG --title "종이 공부책 (A4 PDF)" --notes "과목별 공부책: 단원 정리 + 서브노트. 웹앱 첫 화면에서 내려받기." --latest=false
 gh release upload $TAG $files --clobber
+git status --short books/all.pdf | grep -q . && echo '※ books/all.pdf 가 바뀌었습니다 — 배포(커밋·push)해야 「웹에서 보기」에 반영됩니다.'
 gh release view $TAG --json assets -q '.assets[] | "\(.name) \(.size)"'

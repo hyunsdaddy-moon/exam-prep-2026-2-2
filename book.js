@@ -11,11 +11,11 @@
  * 헤드리스 크롬으로 PDF 를 뽑을 때는 html[data-print-ready="1"] 이 붙은 뒤를 쓴다 (tools/make-books.sh).
  */
 
-import { el, CIRCLED, versioned } from './dom.js?v=20261128-1510';
-import { renderMarkdown } from './markdown.js?v=20261128-1510';
-import { loadPaper } from './study.js?v=20261128-1510';
-import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1510';
-import { passageBlock } from './solve.js?v=20261128-1510';
+import { el, CIRCLED, versioned } from './dom.js?v=20261128-1557';
+import { renderMarkdown } from './markdown.js?v=20261128-1557';
+import { loadPaper } from './study.js?v=20261128-1557';
+import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1557';
+import { passageBlock } from './solve.js?v=20261128-1557';
 
 const PAST_COUNT = 2;
 const encPath = (p) => p.normalize('NFC').split('/').map(encodeURIComponent).join('/');
@@ -316,7 +316,8 @@ export function bookDownloads(exam) {
         )),
         el('div.bk-dl-all', {},
           el('a.pill', { href: BOOK_URL('all'), download: '전과목_공부책.pdf', target: '_blank', rel: 'noopener', text: '📚 전 과목 한 권으로 ⬇' }),
-          el('span', { text: '과학·국어·도덕·사회·수학·영어·베트남어 순 · 양면 인쇄용(과목 첫 장은 늘 앞면) · 약 46MB' })
+          el('a.pill.ghost', { href: 'books/all.pdf', target: '_blank', rel: 'noopener', text: '👀 웹에서 보기 · 🖨 인쇄' }),
+          el('span', { text: '과학·국어·도덕·사회·수학·영어·베트남어 순 · 양면 인쇄용(과목 첫 장은 늘 앞면) · 약 46MB. 「웹에서 보기」는 새 탭의 PDF 화면에서 오른쪽 위 🖨 로 인쇄하세요.' })
         )
       )
     )
