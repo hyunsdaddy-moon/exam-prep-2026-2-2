@@ -13,12 +13,12 @@
  * 기록은 새로 만들지 않고 읽기만 한다.
  */
 
-import { el } from './dom.js?v=20261128-1224';
-import { dday } from './progress.mjs?v=20261128-1224';
-import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261128-1224';
-import { drillMarksFor } from './drill.js?v=20261128-1224';
-import { getCurrentLearner } from './store.js?v=20261128-1224';
-import { avatar } from './characters.js?v=20261128-1224';
+import { el } from './dom.js?v=20261128-1237';
+import { dday } from './progress.mjs?v=20261128-1237';
+import { loadSubjectSteps, pickNextStep } from './steps.js?v=20261128-1237';
+import { drillMarksFor } from './drill.js?v=20261128-1237';
+import { getCurrentLearner } from './store.js?v=20261128-1237';
+import { avatar } from './characters.js?v=20261128-1237';
 
 export const WEIGHTS = { s1: 0.5, s2: 0.3, s3: 0.2 };
 export const PEOPLE = ['문현', '문종배'];

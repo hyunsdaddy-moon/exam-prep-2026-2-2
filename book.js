@@ -11,11 +11,11 @@
  * 헤드리스 크롬으로 PDF 를 뽑을 때는 html[data-print-ready="1"] 이 붙은 뒤를 쓴다 (tools/make-books.sh).
  */
 
-import { el, CIRCLED, versioned } from './dom.js?v=20261128-1224';
-import { renderMarkdown } from './markdown.js?v=20261128-1224';
-import { loadPaper } from './study.js?v=20261128-1224';
-import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1224';
-import { passageBlock } from './solve.js?v=20261128-1224';
+import { el, CIRCLED, versioned } from './dom.js?v=20261128-1237';
+import { renderMarkdown } from './markdown.js?v=20261128-1237';
+import { loadPaper } from './study.js?v=20261128-1237';
+import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1237';
+import { passageBlock } from './solve.js?v=20261128-1237';
 
 const PAST_COUNT = 2;
 const encPath = (p) => p.normalize('NFC').split('/').map(encodeURIComponent).join('/');
@@ -298,4 +298,23 @@ export async function renderBook(ctx, exam, subject, which) {
   button.textContent = '인쇄';
   document.documentElement.dataset.printReady = '1';
   ctx.onLeave(() => delete document.documentElement.dataset.printReady);
+}
+
+/* ── 첫 화면: 종이 공부책 내려받기 ─────────────────────────── */
+/** PDF 는 GitHub Release books-v1 (tools/make-books.mjs → tools/upload-books.sh) */
+const BOOK_URL = (code) => `https://github.com/hyunsdaddy-moon/exam-prep-2026-2-2/releases/download/books-v1/book-${code}.pdf`;
+export function bookDownloads(exam) {
+  return el('section.bk-dl', {},
+    el('div.wrap', {},
+      el('div.bk-dl-card', {},
+        el('div.bk-dl-head', {},
+          el('h2', { text: '📄 종이 공부책 내려받기' }),
+          el('p', { text: '과목마다 단원 정리 + 서브노트를 A4 한 권으로 묶은 PDF입니다. 프린트해서 종이로 보세요.' })
+        ),
+        el('div.bk-dl-list', {}, exam.subjects.map((s) =>
+          el('a.pill.ghost', { href: BOOK_URL(s.code), download: `${s.subject}_공부책.pdf`, target: '_blank', rel: 'noopener', text: `${s.subject} ⬇` })
+        ))
+      )
+    )
+  );
 }

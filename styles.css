@@ -1739,3 +1739,10 @@ body.ink-on .ink-host { user-select: none; -webkit-user-select: none; }
   .bk-book { page: book; }
   .bk-cover { min-height: 255mm; }
 }
+
+/* ── 첫 화면: 종이 공부책 내려받기 ── */
+.bk-dl { padding: 0 0 40px; }
+.bk-dl-card { padding: 22px 24px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line-soft); box-shadow: var(--shadow); }
+.bk-dl-head h2 { margin: 0; font-size: 24px; letter-spacing: -0.02em; }
+.bk-dl-head p { margin: 6px 0 14px; color: var(--text-2); font-size: 14px; }
+.bk-dl-list { display: flex; flex-wrap: wrap; gap: 10px; }
