@@ -1,5 +1,5 @@
 #!/bin/zsh
-# 종이 공부책 PDF(../인쇄용_책/<과목>_공부책.pdf)를 GitHub Release books-v1 에 올린다 (같은 이름은 덮어씀).
+# 종이 공부책 PDF(../인쇄용_책/<과목>_공부책.pdf)와 전 과목 합본(book-all.pdf)을 GitHub Release books-v1 에 올린다 (같은 이름은 덮어씀).
 #   쓰는 법: tools/upload-books.sh      ← node tools/make-books.mjs 로 다시 뽑은 뒤
 #   첫 화면 「종이 공부책」 단추가 releases/download/books-v1/book-<코드>.pdf 를 내려받는다.
 set -e
@@ -14,6 +14,8 @@ for c in kor mat sci soc mor eng vie; do
   [[ -f $f ]] || { echo "없음: $f"; continue; }
   cp "$f" "$TMP/book-$c.pdf"; files+="$TMP/book-$c.pdf"
 done
+python3 tools/merge-all-books.py   # 전 과목 한 권(양면 인쇄용)
+cp "$SRC/전과목_공부책.pdf" "$TMP/book-all.pdf"; files+="$TMP/book-all.pdf"
 gh release view $TAG >/dev/null 2>&1 || gh release create $TAG --title "종이 공부책 (A4 PDF)" --notes "과목별 공부책: 단원 정리 + 서브노트. 웹앱 첫 화면에서 내려받기." --latest=false
 gh release upload $TAG $files --clobber
 gh release view $TAG --json assets -q '.assets[] | "\(.name) \(.size)"'

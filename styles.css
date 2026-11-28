@@ -1746,3 +1746,5 @@ body.ink-on .ink-host { user-select: none; -webkit-user-select: none; }
 .bk-dl-head h2 { margin: 0; font-size: 24px; letter-spacing: -0.02em; }
 .bk-dl-head p { margin: 6px 0 14px; color: var(--text-2); font-size: 14px; }
 .bk-dl-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.bk-dl-all { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line-soft); }
+.bk-dl-all span { color: var(--text-2); font-size: 13px; }
