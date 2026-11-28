@@ -12,14 +12,14 @@
  * 인쇄할 때는 위쪽 막대와 단추가 사라지고 종이만 남는다 (styles.css 의 @media print).
  */
 
-import { el, CIRCLED, versioned, a4Pages } from './dom.js?v=20261128-0712';
-import { renderMarkdown } from './markdown.js?v=20261128-0712';
-import { loadPaper } from './study.js?v=20261128-0712';
-import { ERROR_LABEL } from './grade.mjs?v=20261128-0712';
-import { assessWrongs } from './assess.js?v=20261128-0712';
-import { unitWrongs } from './units.js?v=20261128-0712';
-import { docWrongs } from './docquiz.js?v=20261128-0712';
-import { dday } from './progress.mjs?v=20261128-0712';
+import { el, CIRCLED, versioned, a4Pages } from './dom.js?v=20261128-1042';
+import { renderMarkdown } from './markdown.js?v=20261128-1042';
+import { loadPaper } from './study.js?v=20261128-1042';
+import { ERROR_LABEL } from './grade.mjs?v=20261128-1042';
+import { assessWrongs } from './assess.js?v=20261128-1042';
+import { unitWrongs } from './units.js?v=20261128-1042';
+import { docWrongs } from './docquiz.js?v=20261128-1042';
+import { dday } from './progress.mjs?v=20261128-1042';
 
 const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 표시판', notes: '오답 노트', summary: '요약본', subnote: '서브노트' };
 
@@ -27,7 +27,7 @@ const KINDS = { paper: '문제지', answers: '정답 및 해설', omr: '답안 �
 const SUBJECT_COLOR = { sci: '#0f8a5f', kor: '#c2410c', mor: '#7c3aed', soc: '#b45309', mat: '#0a5fd0', eng: '#be185d', vie: '#0f766e' };
 
 /** 인쇄용 마크다운 조각. 답 쓰는 밑줄은 따로 그리므로 지운다. */
-function md(text, cls = 'md') {
+export function md(text, cls = 'md') {
   const box = el(`div.${cls}`);
   renderMarkdown(String(text || '').replace(/_{6,}/g, ''), box, { breaks: true });
   return box;
@@ -47,9 +47,9 @@ function sheetHead(exam, subject, kind, note) {
 }
 
 /** 문제 하나 (문제지·오답 노트 공용) */
-function printQuestion(q, extra) {
+export function printQuestion(q, extra) {
   const node = el(`article.p-q${q.type === 'essay' ? '.essay' : ''}`, {},
-    el('div.p-stem', {}, el('b.p-no', { text: `${qLabel(q)}.` }), md(q.stem, 'md p-text'), el('span.p-points', { text: `[${pts(q.points)}]` }))
+    el('div.p-stem', {}, el('b.p-no', { text: `${qLabel(q)}.` }), md(q.stem, 'md p-text'), q.points != null ? el('span.p-points', { text: `[${pts(q.points)}]` }) : null)
   );
   if (q.type === 'choice') {
     // 표로 적힌 선지는 지문의 표에 이미 있다
@@ -62,7 +62,7 @@ function printQuestion(q, extra) {
 }
 
 /** 문제들을 지문과 함께 차례로 늘어놓는다 */
-function questionFlow(questions, groups, extraOf) {
+export function questionFlow(questions, groups, extraOf) {
   const flow = [];
   let shown = null;
   for (const q of questions) {
@@ -87,7 +87,7 @@ function paperSheet(exam, subject, paper, mono) {
 }
 
 /** 정답과 해설. 문제를 고르면(오답 노트) 그 문제만. */
-function answerBlocks(questions) {
+export function answerBlocks(questions) {
   const choice = questions.filter((q) => q.type === 'choice');
   const blocks = [];
   if (choice.length) {
@@ -99,7 +99,7 @@ function answerBlocks(questions) {
     el('div.cols', {},
       questions.map((q) =>
         el('article.p-a', {},
-          el('div.p-a-head', {}, el('b', { text: q.type === 'essay' ? `서술형 ${q.no}` : `${q.no}번` }), q.type === 'choice' ? el('span.p-answer', { text: `답) ${circled(q.answer)}` }) : el('span.p-points', { text: `[${pts(q.points)}]` })),
+          el('div.p-a-head', {}, el('b', { text: q.type === 'essay' ? `서술형 ${q.no}` : `${q.no}번` }), q.type === 'choice' ? el('span.p-answer', { text: `답) ${circled(q.answer)}` }) : q.points != null ? el('span.p-points', { text: `[${pts(q.points)}]` }) : null),
           md(q.type === 'essay' ? q.modelAnswer : q.explanation, 'md p-text')
         )
       )
@@ -172,7 +172,7 @@ const encPath = (p) => p.normalize('NFC').split('/').map(encodeURIComponent).joi
 const shortDay = (at) => String(at || '').slice(5, 10).replace('-', '/');
 
 /** 요점 정리: 과목의 「핵심 요약」 문서를 큰 제목(##)마다 한 덩어리로 묶어 꾸민다 */
-async function subnoteSummary(subject) {
+export async function subnoteSummary(subject) {
   const doc = (subject.docs || []).find((d) => d.role === 'summary');
   if (!doc) return { node: el('p.sheet-empty', { text: '이 과목에는 핵심 요약 문서가 없습니다.' }), waits: [], count: 0 };
   const res = await fetch(versioned(`exam/${encPath(doc.file)}`));
@@ -309,7 +309,7 @@ async function subnoteSheet(ctx, exam, subject, study, all) {
 }
 
 /** 그림이 모두 불러와질 때까지 (실패한 그림도 끝난 것으로 친다) */
-function imagesSettled(root) {
+export function imagesSettled(root) {
   return Promise.all(
     [...root.querySelectorAll('img')].map((img) => (img.complete ? null : new Promise((resolve) => {
       img.addEventListener('load', resolve, { once: true });

@@ -1688,3 +1688,54 @@ body.ink-on .ink-host { user-select: none; -webkit-user-select: none; }
 .my-home-subjects li { display: grid; grid-template-columns: 60px 1fr 30px; align-items: center; gap: 8px; font-size: 13px; color: var(--text-2); }
 .my-home-subjects li b { text-align: right; color: var(--text); font-weight: 600; }
 .my-home-note { margin: 12px 0 0; font-size: 12px; color: var(--text-3); }
+
+/* ── 과목 책 (#/s/<과목>/book/q · a) ───────────────────────── */
+@page book { size: A4; margin: 13mm 13mm 15mm; @bottom-center { content: counter(page); font-size: 9pt; color: #666; } }
+.bk-book { min-height: 0; }
+.bk-cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; text-align: center; border: 2pt solid #111; padding: 20mm 16mm; box-sizing: border-box; }
+.bk-kicker { font-size: 12pt; color: var(--text-2); margin: 0; }
+.bk-cover h1 { font-size: 54pt; letter-spacing: -0.03em; margin: 8pt 0 2pt; }
+.bk-kind { font-size: 22pt; font-weight: 600; margin: 0 0 22mm; }
+.bk-answers .bk-kind { color: #b00020; }
+.bk-toc { text-align: left; margin: 0 auto 22mm; padding: 0; list-style: none; counter-reset: toc; font-size: 13pt; min-width: 60%; }
+.bk-toc li { counter-increment: toc; padding: 5pt 0; border-bottom: 0.6pt dotted #999; }
+.bk-toc li::before { content: "PART " counter(toc) "  "; font-weight: 700; color: var(--text-2); }
+.bk-name { display: flex; align-items: flex-end; gap: 8pt; width: 60%; margin: 0 auto; font-size: 12pt; }
+.bk-name i { flex: 1; border-bottom: 0.8pt solid #111; height: 18pt; }
+.bk-part { break-before: page; border-bottom: 2pt solid #111; padding: 0 0 8pt; margin: 0 0 14pt; }
+.bk-part-no { display: inline-block; font-size: 9pt; font-weight: 700; color: #fff; background: #111; padding: 2pt 8pt; border-radius: 3pt; }
+.bk-part h1 { font-size: 24pt; margin: 6pt 0 2pt; letter-spacing: -0.02em; }
+.bk-part p { margin: 0; color: var(--text-2); font-size: 10pt; }
+.bk-chapter { break-before: page; }
+.bk-part + .bk-chapter, .bk-chapter.first { break-before: auto; }
+.bk-chapter-title { font-size: 17pt; margin: 0 0 10pt; padding: 0 0 5pt; border-bottom: 1pt solid #111; }
+.bk-meta { font-size: 9.5pt; color: var(--text-2); margin: -4pt 0 10pt; }
+.bk-sec { margin: 16pt 0 8pt; padding: 4pt 8pt; background: var(--bg-soft); border-left: 3pt solid #111; break-after: avoid; }
+.bk-sec h2 { font-size: 12.5pt; margin: 0; }
+.bk-sec p { font-size: 9pt; color: var(--text-2); margin: 1pt 0 0; }
+.bk-block { break-before: auto; }
+.bk-doc { font-size: 10.5pt; max-width: none; }
+.bk-doc h1 { font-size: 18pt; margin: 0 0 8pt; }
+.bk-doc h2 { font-size: 14pt; margin: 16pt 0 6pt; padding-top: 8pt; break-after: avoid; }
+.bk-doc h3 { font-size: 11.5pt; margin: 10pt 0 4pt; break-after: avoid; }
+.bk-doc p, .bk-doc ul, .bk-doc ol { margin: 0 0 6pt; }
+.bk-doc figure img, .bk-doc img { max-width: 100%; max-height: 120mm; width: auto; object-fit: contain; border-radius: 0; cursor: default; }
+.bk-doc details.mnemo { display: none; }
+.bk-video { font-size: 9pt; color: var(--text-2); border: 0.6pt dashed #999; padding: 3pt 8pt; margin: 4pt 0 8pt; }
+.bk-drills { list-style: none; padding: 0; margin: 0; font-size: 9.5pt; }
+.bk-drill { display: grid; grid-template-columns: 20pt 1fr; gap: 0 2pt; break-inside: avoid; margin: 0 0 6pt; }
+.bk-drill-no { font-weight: 700; }
+.bk-drill .md > :last-child { margin-bottom: 0; }
+.bk-ox, .bk-drill .p-lines { grid-column: 2; }
+.bk-ox { font-size: 9pt; color: var(--text-2); text-align: right; }
+.p-lines.short i { height: 15pt; }
+.bk-past { margin: 0 0 6mm; break-inside: avoid; text-align: center; }
+.bk-past img { max-width: 100%; max-height: 262mm; width: auto; height: auto; }
+.bk-past + .bk-past { break-before: page; }
+.bk-subnote { width: auto; min-height: 0; padding: 0; margin: 0; box-shadow: none; }
+.bk-book .q-passage > summary { list-style: none; font-weight: 700; font-size: 9.5pt; }
+.bk-book .q-passage > summary::-webkit-details-marker { display: none; }
+@media print {
+  .bk-book { page: book; }
+  .bk-cover { min-height: 255mm; }
+}
