@@ -11,11 +11,11 @@
  * 헤드리스 크롬으로 PDF 를 뽑을 때는 html[data-print-ready="1"] 이 붙은 뒤를 쓴다 (tools/make-books.sh).
  */
 
-import { el, CIRCLED, versioned } from './dom.js?v=20261128-1237';
-import { renderMarkdown } from './markdown.js?v=20261128-1237';
-import { loadPaper } from './study.js?v=20261128-1237';
-import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1237';
-import { passageBlock } from './solve.js?v=20261128-1237';
+import { el, CIRCLED, versioned } from './dom.js?v=20261128-1239';
+import { renderMarkdown } from './markdown.js?v=20261128-1239';
+import { loadPaper } from './study.js?v=20261128-1239';
+import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1239';
+import { passageBlock } from './solve.js?v=20261128-1239';
 
 const PAST_COUNT = 2;
 const encPath = (p) => p.normalize('NFC').split('/').map(encodeURIComponent).join('/');
@@ -314,6 +314,31 @@ export function bookDownloads(exam) {
         el('div.bk-dl-list', {}, exam.subjects.map((s) =>
           el('a.pill.ghost', { href: BOOK_URL(s.code), download: `${s.subject}_공부책.pdf`, target: '_blank', rel: 'noopener', text: `${s.subject} ⬇` })
         ))
+      )
+    )
+  );
+}
+
+/** #/books — 메뉴 「종이 공부책」: 내려받기 + 과목별 미리 보기(웹에서 바로 인쇄) */
+export function renderBooks(ctx, exam) {
+  document.title = `종이 공부책 — ${exam.title}`;
+  ctx.setNav(null);
+  ctx.show(
+    el('section.hero', {},
+      el('p.eyebrow', { text: exam.title }),
+      el('h1', { text: '종이 공부책' }),
+      el('p.sub', { text: 'PDF로 내려받아 프린트하거나, 웹에서 바로 보고 인쇄하세요.' })
+    ),
+    bookDownloads(exam),
+    el('section.bk-dl', {},
+      el('div.wrap', {},
+        el('div.bk-dl-card', {},
+          el('div.bk-dl-head', {},
+            el('h2', { text: '👀 웹에서 미리 보기' }),
+            el('p', { text: '내려받지 않고 화면에서 보거나, 위쪽 「인쇄」 단추로 바로 프린트할 수 있습니다.' })
+          ),
+          el('div.bk-dl-list', {}, exam.subjects.map((s) => el('a.pill.ghost', { href: `#/s/${s.code}/book/r`, text: s.subject })))
+        )
       )
     )
   );
