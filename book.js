@@ -1,6 +1,7 @@
 /*
  * 시험 준비 웹앱 — 과목 책 (종이로 뽑아 보는 A4 문제책 · 해설책)
  *
+ *   #/s/<과목>/book/r   공부책   단원 정리 + 서브노트(요점 정리)만 — 문제 없음 (종이로 뽑는 기본)
  *   #/s/<과목>/book/q   문제책   PART 1 공부하기(단원 정리 + 확인 문제 + 마무리 평가)
  *                               PART 2 실전 연습(단원평가 1~5) · PART 3 예상 문제 · PART 4 기출문제(최근 2회) · PART 5 서브노트(요점 정리)
  *   #/s/<과목>/book/a   해설책   PART 1~3 의 정답과 해설 (기출은 학교 정답지로)
@@ -10,11 +11,11 @@
  * 헤드리스 크롬으로 PDF 를 뽑을 때는 html[data-print-ready="1"] 이 붙은 뒤를 쓴다 (tools/make-books.sh).
  */
 
-import { el, CIRCLED, versioned } from './dom.js?v=20261128-1042';
-import { renderMarkdown } from './markdown.js?v=20261128-1042';
-import { loadPaper } from './study.js?v=20261128-1042';
-import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1042';
-import { passageBlock } from './solve.js?v=20261128-1042';
+import { el, CIRCLED, versioned } from './dom.js?v=20261128-1224';
+import { renderMarkdown } from './markdown.js?v=20261128-1224';
+import { loadPaper } from './study.js?v=20261128-1224';
+import { md, printQuestion, answerBlocks, subnoteSummary, imagesSettled } from './print.js?v=20261128-1224';
+import { passageBlock } from './solve.js?v=20261128-1224';
 
 const PAST_COUNT = 2;
 const encPath = (p) => p.normalize('NFC').split('/').map(encodeURIComponent).join('/');
@@ -136,7 +137,7 @@ function bookFlow(questions, groups = new Map()) {
 
 /* ── 부별 내용 ─────────────────────────── */
 
-async function studyPart(ctx, subject, answers) {
+async function studyPart(ctx, subject, answers, readOnly = false) {
   const [drill, quiz] = await Promise.all([
     json(ctx, `data/drill/${subject.code}.json`, { docs: {} }),
     json(ctx, `data/docquiz/${subject.code}.json`, { docs: {} }),
@@ -153,9 +154,9 @@ async function studyPart(ctx, subject, answers) {
       chapter.append(node);
       if (wait) waits.push(wait);
     }
-    const dr = drillBlock(drill.docs?.[file] || [], answers);
+    const dr = readOnly ? null : drillBlock(drill.docs?.[file] || [], answers);
     if (dr) chapter.append(dr);
-    if (qs.length) {
+    if (qs.length && !readOnly) {
       chapter.append(el('section.bk-block', {},
         sectionHead(answers ? '마무리 평가 정답과 해설' : '마무리 평가', answers ? null : `선택형 ${qs.filter((q) => q.type === 'choice').length}문항 · 서술형 ${qs.filter((q) => q.type === 'essay').length}문항`),
         answers ? answerBlocks(qs) : el('div.cols', {}, bookFlow(qs))
@@ -164,7 +165,7 @@ async function studyPart(ctx, subject, answers) {
     chapters.push(chapter);
   }
   if (!chapters.length) return null;
-  return { node: el('section.bk-part-wrap', {}, partHead(1, answers ? '공부하기 — 정답' : '공부하기', answers ? null : '단원 정리를 읽고 → 확인 문제 → 마무리 평가'), chapters), waits };
+  return { node: el('section.bk-part-wrap', {}, partHead(1, answers ? '공부하기 — 정답' : '공부하기', answers ? null : readOnly ? '단원 정리' : '단원 정리를 읽고 → 확인 문제 → 마무리 평가'), chapters), waits };
 }
 
 async function mockPart(ctx, subject, answers) {
@@ -223,20 +224,43 @@ async function subnotePart(subject) {
   return { node: el('section.bk-part-wrap', {}, partHead(5, '서브노트', '시험 직전에 보는 요점 정리'), el('div.sheet.summary.subnote.bk-subnote', {}, node)), waits };
 }
 
+/** WebP 그림을 흰 바탕 JPEG 로 바꿔 끼운다 — 크롬 PDF 인쇄가 일부 WebP(예: 도덕 웹툰)에서 끝나지 않는다 */
+async function webpToJpeg(root) {
+  for (const img of root.querySelectorAll('img')) {
+    if (!/\.webp(\?|$)/i.test(img.currentSrc || img.src) || !img.naturalWidth) continue;
+    try {
+      const c = document.createElement('canvas');
+      c.width = img.naturalWidth;
+      c.height = img.naturalHeight;
+      const g = c.getContext('2d');
+      g.fillStyle = '#fff';
+      g.fillRect(0, 0, c.width, c.height);
+      g.drawImage(img, 0, 0);
+      const url = c.toDataURL('image/jpeg', 0.9);
+      await new Promise((r) => { img.onload = r; img.onerror = r; img.src = url; });
+    } catch { /* 그대로 둔다 */ }
+  }
+}
+
 /* ── 화면 ─────────────────────────── */
 
 export async function renderBook(ctx, exam, subject, which) {
+  // r = 공부책(단원 정리 + 서브노트, 문제 없음) · q = 문제책(문제 모두) · a = 해설책
   const answers = which === 'a';
-  const label = answers ? '해설책' : '문제책';
+  const reading = which === 'r';
+  const label = answers ? '해설책' : reading ? '공부책' : '문제책';
   document.title = `${subject.subject} ${label} — ${exam.title}`;
   ctx.setNav(subject.code);
   delete document.documentElement.dataset.printReady;
 
-  const parts = (await Promise.all(answers
+  const parts = (await Promise.all(reading
+    ? [studyPart(ctx, subject, false, true), subnotePart(subject)]
+    : answers
     ? [studyPart(ctx, subject, true), mockPart(ctx, subject, true), paperPart(ctx, subject, true)]
     : [studyPart(ctx, subject, false), mockPart(ctx, subject, false), paperPart(ctx, subject, false), pastPart(ctx, subject), subnotePart(subject)]
   )).filter(Boolean);
 
+  parts.forEach((p, i) => { const no = p.node.querySelector('.bk-part-no'); if (no) no.textContent = `PART ${i + 1}`; });
   const toc = parts.map((p) => p.node.querySelector('.bk-part h1')?.textContent).filter(Boolean);
   const cover = el('section.bk-cover', {},
     el('p.bk-kicker', { text: exam.title }),
@@ -253,7 +277,8 @@ export async function renderBook(ctx, exam, subject, which) {
       el('a.back', { href: `#/s/${subject.code}`, text: subject.subject }),
       el('div.title', { text: `${label} (A4)` }),
       el('div.print-kinds', {},
-        el('a', { href: `#/s/${subject.code}/book/q`, text: '문제책', 'aria-current': answers ? null : 'page' }),
+        el('a', { href: `#/s/${subject.code}/book/r`, text: '공부책', 'aria-current': reading ? 'page' : null }),
+        el('a', { href: `#/s/${subject.code}/book/q`, text: '문제책', 'aria-current': which === 'q' ? 'page' : null }),
         el('a', { href: `#/s/${subject.code}/book/a`, text: '해설책', 'aria-current': answers ? 'page' : null })
       ),
       button
@@ -268,6 +293,7 @@ export async function renderBook(ctx, exam, subject, which) {
   for (let i = 0; i < 60 && book.querySelector('.q-passage > p.meta'); i++) await new Promise((r) => setTimeout(r, 250));
   await imagesSettled(book);
   book.querySelectorAll('details.q-passage').forEach((d) => { d.open = true; });
+  await webpToJpeg(book);
   button.disabled = false;
   button.textContent = '인쇄';
   document.documentElement.dataset.printReady = '1';
