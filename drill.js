@@ -13,9 +13,9 @@
  *       (Firestore 규칙을 바꾸지 않으려고 영상 시청 'v:' 과 같은 방식으로 끼워 넣었다.)
  */
 
-import { el } from './dom.js?v=20261128-0659';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261128-0659';
-import { recordLearner } from './grade.mjs?v=20261128-0659';
+import { el } from './dom.js?v=20261128-0712';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261128-0712';
+import { recordLearner } from './grade.mjs?v=20261128-0712';
 
 const KEY = 'examprep.2026-2-2.drill';
 const files = new Map();
@@ -87,6 +87,22 @@ export function syncDrillMarks() {
     return merged;
   })().finally(() => { syncing = null; });
   return syncing;
+}
+
+/** 아무 참여자의 확인 문제 표시(o·x)를 기록에서 읽기만 한다 — 나의 진도에서 두 사람을 함께 셀 때 */
+export async function drillMarksFor(learner) {
+  const loaded = await loadRecords();
+  const latest = new Map();
+  const recs = (loaded.records || [])
+    .filter((r) => r && r.type === 'read' && typeof r.concept === 'string' && r.concept.startsWith(PREFIX) && recordLearner(r) === learner)
+    .sort((a, b) => String(a.at).localeCompare(String(b.at)));
+  for (const r of recs) {
+    const m = /^d:(.+):([ox-])$/.exec(r.concept);
+    if (m) latest.set(m[1], m[2]);
+  }
+  const out = {};
+  for (const [id, m] of latest) if (m === 'o' || m === 'x') out[id] = m;
+  return out;
 }
 
 /** '**굵게**' 만 알아듣는 작은 글자 그리기 */

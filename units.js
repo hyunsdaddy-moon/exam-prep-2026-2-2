@@ -12,10 +12,10 @@
  *       단원 평가는 몇 번이든 다시 볼 수 있고, 카드에는 첫 점수 · 최고 점수 · 최근 점수를 보여 준다.
  */
 
-import { el, newId } from './dom.js?v=20261128-0659';
-import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261128-0659';
-import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261128-0659';
-import { runExam, renderResult, readExamState } from './solve.js?v=20261128-0659';
+import { el, newId } from './dom.js?v=20261128-0712';
+import { loadRecords, getCurrentLearner, getSavedLearners } from './store.js?v=20261128-0712';
+import { mergeRecords, recordLearner, listLearners, summarize } from './grade.mjs?v=20261128-0712';
+import { runExam, renderResult, readExamState } from './solve.js?v=20261128-0712';
 
 const ROUND_BASE = 10;
 const unitNo = (id) => Number(String(id).replace(/^u/, ''));

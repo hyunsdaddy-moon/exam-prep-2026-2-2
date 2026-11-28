@@ -8,9 +8,9 @@
  * 기록은 새로 만들지 않는다. 이미 있는 풀이 기록(merged)과 이 기기의 확인 문제 표시만 읽는다.
  */
 
-import { getCurrentLearner } from './store.js?v=20261128-0659';
-import { summarize } from './grade.mjs?v=20261128-0659';
-import { syncDrillMarks } from './drill.js?v=20261128-0659';
+import { getCurrentLearner } from './store.js?v=20261128-0712';
+import { summarize } from './grade.mjs?v=20261128-0712';
+import { syncDrillMarks } from './drill.js?v=20261128-0712';
 
 const DRILL_KEY = 'examprep.2026-2-2.drill';
 const DOCQUIZ_ROUND = 40; // docquiz.js 와 같은 값
@@ -39,14 +39,15 @@ function scoreList(sessions, scoreOf) {
  * @param docs     docsOf(s) — 문서 번호(docIndex)는 이 순서
  * @param merged   study.merged (지금 참여자의 sessions · attempts)
  * @param paper    예상 문제지 문항 { questions }
+ * @param opts.marks  다른 참여자의 확인 문제 표시 (없으면 지금 참여자 것)
  */
-export async function loadSubjectSteps(ctx, s, docs, merged, paper) {
+export async function loadSubjectSteps(ctx, s, docs, merged, paper, { marks: givenMarks = null } = {}) {
   const [drill, quiz, units] = await Promise.all([
     json(ctx, `data/drill/${s.code}.json`, { docs: {} }),
     json(ctx, `data/docquiz/${s.code}.json`, { docs: {} }),
     json(ctx, `data/units/${s.code}.json`, { units: [] }),
   ]);
-  const marks = await syncDrillMarks().catch(() => drillMarks());
+  const marks = givenMarks || await syncDrillMarks().catch(() => drillMarks());
   const sessions = [...(merged?.sessions?.values?.() || [])].filter((x) => x.subject === s.code);
   const attemptsBy = new Map();
   for (const a of merged?.attempts || []) {

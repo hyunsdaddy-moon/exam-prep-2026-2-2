@@ -13,13 +13,13 @@
  *   고르는 중인 답(아직 제출 전)은 이 브라우저에만 둔다.
  */
 
-import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261128-0659';
-import { renderMarkdown } from './markdown.js?v=20261128-0659';
-import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261128-0659';
-import { mergeRecordsForLearner } from './grade.mjs?v=20261128-0659';
-import { explainButton } from './explain.js?v=20261128-0659';
-import { inkTools } from './ink.js?v=20261128-0659';
-import { passageBlock } from './solve.js?v=20261128-0659';
+import { el, CIRCLED, newId, showBlankAlert, a4Pages } from './dom.js?v=20261128-0712';
+import { renderMarkdown } from './markdown.js?v=20261128-0712';
+import { getCurrentLearner, loadRecords, saveRecords } from './store.js?v=20261128-0712';
+import { mergeRecordsForLearner } from './grade.mjs?v=20261128-0712';
+import { explainButton } from './explain.js?v=20261128-0712';
+import { inkTools } from './ink.js?v=20261128-0712';
+import { passageBlock } from './solve.js?v=20261128-0712';
 
 /* 채점 표시 — 선생님이 빨간 색연필로 그은 것처럼: 손으로 그린 동그라미(맞음)·빗금(틀림)에
  * 연필 결(알갱이)과 살짝 떨리는 선을 SVG 필터로 입힌다. 필터는 문서에 한 번만 넣는다. */
